@@ -18,7 +18,7 @@ This repositry contains:
 1. Clone the repositry
 ```bash
 git clone https://github.com/iafcy/Meta-Analysis
-cd MetaAnalysis
+cd Meta-Analysis
 ```
 2. Create virtual environment and download libraries
 ```bash
