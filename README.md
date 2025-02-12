@@ -116,4 +116,5 @@ evaluate_grade(dir)
 If you want to test a model which is not from OpenAI, Anthropic or Huggingface, you need to modify `model.py`.
 1. Create a class in `model.py` that inherit from the `Bot` class
 2. Overwrite the `query` method, where the input is the prompt message, and the output is the response (string) of the model
-3. Instantiate the model, pass it to `predict_<task_name>` and `evaluate_<task_name>` to run the experiment.
+3. Overwrite the `get_llamaindex_llm` and `get_llamaindex_embedding` methods, which are used to initialize model and embedding model for llamaindex.
+4. Instantiate the model, pass it to `predict_<task_name>` and `evaluate_<task_name>` to run the experiment.

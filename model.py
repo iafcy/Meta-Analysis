@@ -4,7 +4,11 @@ from transformers import AutoTokenizer
 from transformers import AutoModelForCausalLM
 from transformers import pipeline
 from dotenv import load_dotenv
-from os import getenv
+import os
+from llama_index.llms.openai import OpenAI as LlamaIndexOpenAI
+from llama_index.llms.anthropic import Anthropic as LlamaIndexAnthropic
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding  
+from llama_index.llms.huggingface import HuggingFaceLLM
 load_dotenv()
 
 class Bot():
@@ -16,11 +20,17 @@ class Bot():
     def query(self, messages):
         raise NotImplementedError
     
+    def get_llamaindex_llm(self):
+        raise NotImplementedError
+    
+    def get_llamaindex_embedding(self):
+        raise NotImplementedError
+    
 class GPT(Bot):
     def __init__(self, model_name='gpt-4o', temperature=0.0, max_tokens=2048):
         super().__init__(model_name, temperature, max_tokens)
 
-        self.client = OpenAI(api_key=getenv('OPENAI_API_KEY'))
+        self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
     def query(self, messages):
         response = self.client.chat.completions.create(
@@ -32,12 +42,23 @@ class GPT(Bot):
         response = response.choices[0].message.content
 
         return response
+    
+    def get_llamaindex_llm(self):
+        return LlamaIndexOpenAI(
+            api_key=os.getenv('OPENAI_API_KEY'),
+            max_tokens=self.max_tokens,
+            temperature=self.temperature,
+            model=self.model_name
+        )
+
+    def get_llamaindex_embedding(self):
+        return None
 
 class Claude(Bot):
     def __init__(self, model_name='claude-3-5-sonnet-20241022', temperature=0.0, max_tokens=2048):
         super().__init__(model_name, temperature, max_tokens)
 
-        self.client = anthropic.Anthropic()
+        self.client = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
 
     def query(self, messages):
         response = self.client.messages.create(
@@ -49,6 +70,17 @@ class Claude(Bot):
         response = response.content.text
 
         return response
+    
+    def get_llamaindex_llm(self):
+        return LlamaIndexAnthropic(
+            api_key=os.getenv('ANHROPIC_API_KEY'),
+            max_tokens=self.max_tokens,
+            temperature=self.temperature,
+            model=self.model_name
+        )
+
+    def get_llamaindex_embedding(self):
+        return None
     
 class HuggingFace(Bot):
     def __init__(self, model_name='Qwen/Qwen2.5-72B-Instruct', temperature=0.0, max_tokens=2048):
@@ -76,3 +108,20 @@ class HuggingFace(Bot):
         )[0]['generated_text']
 
         return response
+    
+    def get_llamaindex_llm(self):
+        return HuggingFaceLLM(
+            generate_kwargs={
+                'do_sample': self.temperature > 0,
+                'max_tokens': self.max_tokens,
+                'temperature': self.temperature,
+            },
+            model=self.model,
+            tokenizer=self.tokenizer,
+            completion_to_prompt=self.tokenizer.apply_chat_template,
+        )
+
+    def get_llamaindex_embedding(self):
+        return HuggingFaceEmbedding(
+            model_name='BAAI/bge-large-en'
+        )
