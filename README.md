@@ -17,7 +17,7 @@ This repositry contains:
 ### Installation
 1. Clone the repositry
 ```bash
-git clone https://github.com/iafcy/MetaAnalysis
+git clone https://github.com/iafcy/Meta-Analysis
 cd MetaAnalysis
 ```
 2. Create virtual environment and download libraries
