@@ -1,6 +1,18 @@
-# Meta-Analysis
+<div align= "center">
+    <h1>Meta-Analysis</h1>
+</div>
 
-## Code
+<p align="center">
+   <a href="https://huggingface.co/collections/iafcy/meta-analysis-67acaf78f9de76315b8fe199" target="_blank">🤗 Dataset</a>
+</p>
+
+## 📖 Overview
+
+This repositry contains:
+- Code implementation for running experiments for LLM on Meta-Analysis
+- Test dataset in `./data`. The full dataset, including training, testing and validation is available on [Huggingface 🤗](https://huggingface.co/collections/iafcy/meta-analysis-67acaf78f9de76315b8fe199).
+
+## 💻️ Code
 
 ### Installation
 1. Clone the repositry
