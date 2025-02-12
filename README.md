@@ -5,8 +5,8 @@
 ### Installation
 1. Clone the repositry
 ```bash
-git clone https://github.com/<username>/<repo>.git
-cd <repo>
+git clone https://github.com/iafcy/MetaAnalysis
+cd MetaAnalysis
 ```
 2. Create virtual environment and download libraries
 ```bash
