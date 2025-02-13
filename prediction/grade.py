@@ -5,6 +5,7 @@ import time
 from timeit import default_timer as timer
 from model import Bot
 from prompt import generate_grade_prompt
+from util import seconds_to_time_str
 
 def load_data_to_prompt():
     with open('./data/grade_test.json', 'r') as file:
@@ -30,7 +31,7 @@ def predict_grade(model: Bot, output_dir: str):
 
         end_time = timer()
 
-        meta_analysis['time_used'] = time.strftime('%H:%M:%S', time.gmtime(end_time - start_time))
+        meta_analysis['time_used'] = seconds_to_time_str(end_time - start_time)
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)

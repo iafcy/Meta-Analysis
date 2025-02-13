@@ -70,7 +70,7 @@ model = HuggingFace(model_name='Qwen/Qwen2.5-72B-Instruct')
 
 To generate predictions, you need to  specific the initialized model and the directory where the prediction results will be saved.
 Executing the `predict_<task_name>` function will generate a JSON file with the test data and the predictions from the model.
-Then, you can execute the `evaluate_<task_name>` function to calculate and view the performance.
+Then, you can execute the `evaluate_<task_name>` function to calculate and print the performance.
 
 ##### Base to Key
 ```python

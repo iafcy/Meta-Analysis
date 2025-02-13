@@ -1,9 +1,11 @@
 import json
+from util import time_str_to_seconds, seconds_to_time_str
 
 def evaluate_qa(dir: str):
     results = json.load(open(f'{dir}/qa.json'))
 
     accuracy = []
+    time_used = []
 
     for meta_analysis in results['results']:
         correct = 0
@@ -16,13 +18,17 @@ def evaluate_qa(dir: str):
         meta_analysis['accuracy'] = ma_accuracy
 
         accuracy.append(ma_accuracy)
+        time_used.append(time_str_to_seconds(meta_analysis['time_used']))
 
     accuracy = sum(accuracy) / len(accuracy)
+    time_used = sum(time_used) / len(time_used)
 
     results['accuracy'] = accuracy
+    results['time_used'] = seconds_to_time_str(time_used)
 
     print(f'Base to key - {results["model_name"]}')
-    print(f'Average accuracy: {accuracy:.4f}')
+    print(f'Average accuracy                   : {accuracy:.4f}')
+    print(f'Average time used per Meta-analysis: {results["time_used"]}')
 
     with open(f'{dir}/qa.json', 'w') as f:
         json.dump(results, f, indent=4)

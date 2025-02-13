@@ -1,4 +1,5 @@
 import json
+from util import time_str_to_seconds, seconds_to_time_str
 
 def evaluate_cc(dir: str):
     results = json.load(open(f'{dir}/cc.json'))
@@ -6,6 +7,7 @@ def evaluate_cc(dir: str):
     precision = []
     recall = []
     f1 = []
+    time_used = []
 
     for meta_analysis in results['results']:
         subgroup_performance = {}
@@ -57,19 +59,23 @@ def evaluate_cc(dir: str):
         precision.append(ma_precision)
         recall.append(ma_recall)
         f1.append(ma_f1)
+        time_used.append(time_str_to_seconds(meta_analysis['time_used']))
 
     precision = sum(precision) / len(precision)
     recall = sum(recall) / len(recall)
     f1 = sum(f1) / len(f1)
+    time_used = sum(time_used) / len(time_used)
 
     results['precision'] = precision
     results['recall'] = recall
     results['f1'] = f1
+    results['time_used'] = seconds_to_time_str(time_used)
 
     print(f'Characteristics classification - {results["model_name"]}')
-    print(f'Average precision: {precision:.4f}')
-    print(f'Average recall   : {recall:.4f}')
-    print(f'Average f1       : {f1:.4f}')
+    print(f'Average precision                  : {precision:.4f}')
+    print(f'Average recall                     : {recall:.4f}')
+    print(f'Average f1                         : {f1:.4f}')
+    print(f'Average time used per Meta-analysis: {results["time_used"]}')
 
     with open(f'{dir}/cc.json', 'w') as f:
         json.dump(results, f, indent=4)
