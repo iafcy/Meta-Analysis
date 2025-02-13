@@ -102,7 +102,7 @@ class HuggingFace(Bot):
         response = self.pipe(
             messages,
             do_sample=self.temperature > 0,
-            max_tokens=self.max_tokens,
+            max_new_tokens=self.max_tokens,
             temperature=self.temperature,
             return_full_text=False
         )[0]['generated_text']
@@ -113,9 +113,9 @@ class HuggingFace(Bot):
         return HuggingFaceLLM(
             generate_kwargs={
                 'do_sample': self.temperature > 0,
-                'max_tokens': self.max_tokens,
                 'temperature': self.temperature,
             },
+            max_new_tokens=self.max_tokens,
             model=self.model,
             tokenizer=self.tokenizer,
             completion_to_prompt=self.tokenizer.apply_chat_template,
