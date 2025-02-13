@@ -110,6 +110,12 @@ class HuggingFace(Bot):
         return response
     
     def get_llamaindex_llm(self):
+        def completion_to_prompt(completion):
+            return self.tokenizer.apply_chat_template([{"role": "user", "content": completion},], tokenize=False)
+
+        def messages_to_prompt(messages):
+            return self.tokenizer.apply_chat_template(messages, tokenize=False)
+
         return HuggingFaceLLM(
             generate_kwargs={
                 'do_sample': self.temperature > 0,
@@ -118,7 +124,8 @@ class HuggingFace(Bot):
             max_new_tokens=self.max_tokens,
             model=self.model,
             tokenizer=self.tokenizer,
-            completion_to_prompt=self.tokenizer.apply_chat_template,
+            completion_to_prompt=completion_to_prompt,
+            messages_to_prompt=messages_to_prompt
         )
 
     def get_llamaindex_embedding(self):
