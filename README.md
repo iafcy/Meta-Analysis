@@ -47,13 +47,14 @@ pip install -r requirements.txt
 #### Set up models
 1. Copy .env_sample
 ```bash
-cp .env_sample .env
+cp .env.sample .env
 ```
 
 2. Fill in your API keys
 ```
 OPENAI_API_KEY=<your_openai_api_key>
 ANTHROPIC_API_KEY=<your_anthropic_api_key>
+LLAMA_CLOUD_API_KEY=<your_llam_cloud_api_key> # For LlamaParse
 ```
 
 #### Generate predictions
@@ -77,9 +78,8 @@ Then, you can execute the `evaluate_<task_name>` function to calculate and print
 from experiment import *
 dir = 'test'
 
-# predictions saved in ./test/b2k.json
-predict_b2k(model, dir)
-evaluate_b2k(dir)
+predict_b2k(model, dir) # predictions saved in ./test/b2k.json
+evaluate_b2k(dir) # performance will be printed and saved to ./test/b2k.json
 ```
 
 ##### Quality Assessment
@@ -87,9 +87,8 @@ evaluate_b2k(dir)
 from experiment import *
 dir = 'test'
 
-# predictions saved in ./test/qa.json
-predict_qa(model, dir)
-evaluate_qa(dir)
+predict_qa(model, dir) # predictions saved in ./test/qa.json
+evaluate_qa(dir) # performance will be printed and saved to ./test/qa.json
 ```
 
 ##### Characteristics Classification
@@ -97,9 +96,8 @@ evaluate_qa(dir)
 from experiment import *
 dir = 'test'
 
-# predictions saved in ./test/cc.json
-predict_cc(model, dir)
-evaluate_cc(dir)
+predict_cc(model, dir) # predictions saved in ./test/cc.json
+evaluate_cc(dir) # performance will be printed and saved to ./test/cc.json
 ```
 
 ##### GRADE
@@ -107,9 +105,8 @@ evaluate_cc(dir)
 from experiment import *
 dir = 'test'
 
-# predictions saved in ./test/grade.json
-predict_grade(model, dir)
-evaluate_grade(dir)
+predict_grade(model, dir) # predictions saved in ./test/grade.json
+evaluate_grade(dir) # performance will be printed and saved to ./test/grade.json
 ```
 
 #### Test your LLM
