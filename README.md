@@ -100,6 +100,15 @@ predict_cc(model, dir) # predictions saved in ./test/cc.json
 evaluate_cc(dir) # performance will be printed and saved to ./test/cc.json
 ```
 
+##### Find Ratio
+```python
+from experiment import *
+dir = "test"
+
+predict_find_ratio(model. dir) # predictions saved in ./test/find_ratio.json
+evaluate_find_ratio(dir) # performance will be printed and saved to ./test/find_ratio.json
+```
+
 ##### GRADE
 ```python
 from experiment import *
