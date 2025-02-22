@@ -1,0 +1,783 @@
+OPEN ACCESS
+
+EDITED BY
+Robin McKinney,
+Brown University, United States
+
+REVIEWED BY
+Joseph Y. Ting,
+University of Alberta, Canada
+Roberto Murgas Torrazza,
+Secretaría Nacional de Ciencia,
+Tecnología e Innovación, Panama
+
+*CORRESPONDENCE
+Xiaolu Ma
+[maxiaolu_zjuch@zju.edu.cn](mailto:maxiaolu_zjuch@zju.edu.cn)
+
+SPECIALTY SECTION
+This article was submitted to
+Neonatology,
+a section of the journal
+Frontiers in Pediatrics
+
+RECEIVED 21 April 2022
+
+ACCEPTED 27 June 2022
+
+PUBLISHED 22 July 2022
+
+CITATION
+Wang C, Ma X, Xu Y, Chen Z, Shi L and
+Du L (2022) A prediction model
+of pulmonary hypertension in preterm
+infants with bronchopulmonary
+dysplasia.
+_Front. Pediatr. 10:925312._
+[doi: 10.3389/fped.2022.925312](https://doi.org/10.3389/fped.2022.925312)
+
+COPYRIGHT
+© 2022 Wang, Ma, Xu, Chen, Shi and
+Du. This is an open-access article
+distributed under the terms of the
+[Creative Commons Attribution License](http://creativecommons.org/licenses/by/4.0/)
+[(CC BY). The use, distribution or](http://creativecommons.org/licenses/by/4.0/)
+reproduction in other forums is
+permitted, provided the original
+author(s) and the copyright owner(s)
+are credited and that the original
+publication in this journal is cited, in
+accordance with accepted academic
+practice. No use, distribution or
+reproduction is permitted which does
+not comply with these terms.
+
+
+[PUBLISHED 22 July 2022](https://www.frontiersin.org/journals/pediatrics#editorial-board)
+
+[DOI 10.3389/fped.2022.925312](https://doi.org/10.3389/fped.2022.925312)
+
+# A prediction model of pulmonary hypertension in preterm infants with bronchopulmonary dysplasia
+
+#### Chenhong Wang[1,2], Xiaolu Ma[1,2]*, Yanping Xu[1,2], Zheng Chen[1,2], Liping Shi[1,2] and Lizhong Du[1,2]
+
+1Neonatal Intensive Care Unit, Children’s Hospital, Zhejiang University School of Medicine,
+Hangzhou, China, [2]National Clinical Research Center for Child Health, National Children’s Regional
+Medical Center, Hangzhou, China
+
+Objective: Pulmonary hypertension (PH) is a severe cardiovascular
+complication of bronchopulmonary dysplasia (BPD) that contributes to
+the high mortality rates for preterm infants. The objective of this study is to
+establish a prediction model of BPD-associated PH (BPD-PH) by integrating
+multiple predictive factors for infants with BPD.
+
+Method: A retrospective investigation of the perinatal clinical records
+and data of echocardiography in all the preterm infants with BPD was
+performed from January 2012 to December 2019. A prediction model of
+BPD-PH was established based on the univariate and multivariate logistic
+regression analysis of the clinical data and evaluated by using the area
+under the receiver operating characteristic (ROC) curve (AUC), combined
+with the Hosmer–Lemeshow (HL) test. Internal validation was performed with
+bootstrap resampling.
+
+Result: A total of 268 infants with BPD were divided into the BPD-PH group
+and the no-PH group. Multivariate logistic regression analysis showed that
+the independent predictive factors of BPD-PH were moderate to severe BPD,
+small for gestational age, duration of hemodynamically significant patent
+ductus arteriosus ≥ 28 days, and early PH. A prediction model was established
+based on the β coefficients of the four predictors. The area under the
+ROC curve of the prediction model was 0.930. The Hosmer–Lemeshow test
+(p = 0.976) and the calibration curve showed good calibration.
+
+Conclusion: The prediction model based on the four risk factors predicts the
+development of BPD-PH with high sensitivity and specificity and might help
+clinicians to make individualized interventions to minimize the disease risk.
+
+KEYWORDS
+
+preterm infant, bronchopulmonary dysplasia, pulmonary hypertension, prediction
+model, nomogram
+
+
+-----
+
+## Introduction
+
+During the past three decades, since great progress in
+perinatal-neonatal medicine has been made in China, the
+survival of extremely premature infants has markedly increased.
+However, the developing lungs are susceptible to various
+injuries, which cause a rising incidence of bronchopulmonary
+dysplasia (BPD) (1). In China, based on previously published
+studies, the incidence of BPD in extremely premature infants
+with a gestational age of less than 28 weeks has increased from
+19.3% in 2011 to 51.7% in 2019 (2, 3).
+Survivors with BPD are at risk of cardiovascular
+complications because of the disruption of vascular growth
+and signaling (4, 5). Pulmonary hypertension (PH) is common
+in infants with moderate or severe BPD, with the reported
+incidence ranging from 8 to 38% (6–9). PH contributes
+significantly to high mortality and is associated with dependency
+on respiratory support, prolonged hospitalization, impaired
+neurodevelopment, and significant medical costs in infants with
+BPD (10, 11). In our previously published data, the mortality of
+BPD infants complicated with PH was 40.5% (12).
+The pathogenesis of BPD-associated PH (BPD-PH) is
+complicated, including multiple factors, such as perinatal
+stress, abnormal lung development, and postnatal conditions.
+Therefore, identification of the risk factors is important for
+early prevention. However, a single predictive factor is difficult
+to apply in clinical practice due to its inconsistent standards,
+low sensitivity, and specificity. A prediction model developed
+by integrating multiple predictive factors may improve the
+accuracy of prediction. To test the hypothesis, we performed this
+retrospective study.
+
+## Materials and methods
+
+### Study population and data collection
+
+Preterm infants admitted to the Level III neonatal intensive
+care unit (NICU) at Children’s Hospital of Zhejiang University
+School of Medicine between January 2012 and December 2019
+who were diagnosed with BPD were eligible for this study. We
+excluded infants with congenital heart diseases [except patent
+ductus arteriosus (PDA), atrial septal defect, or patent foramen
+ovale], other major congenital anomalies, incomplete data, or
+death before 36 weeks’ postmenstrual age (PMA). This study was
+approved by the Ethics Committees of our hospital with a waiver
+of parental consent.
+Clinical data were collected retrospectively from the
+electronic NICU database. Prenatal data included maternal
+demographics, oligohydramnios (defined as amniotic fluid
+index ≤ 5), prolonged rupture of membrane, pregnancyrelated complications, antenatal corticosteroids use, and mode
+
+
+of delivery. Neonatal data included gestational age (GA), birth
+weight (BW), sex, the Apgar score at 1 and 5 min, small
+for gestational age (SGA) status, cumulative days of invasive
+mechanical ventilation (IMV) before 36 weeks’ PMA, and comorbidity about respiratory distress syndrome (RDS) with
+surfactant use, hemodynamically significant PDA (hsPDA),
+pneumonia with positive respiratory culture, culture proven
+sepsis, PDA ligation, severe intraventricular hemorrhage (IVH),
+and necrotizing enterocolitis (NEC).
+
+### Definitions
+
+Pulmonary hypertension was evaluated non-invasively with
+echocardiography by a board-certified pediatric sonographer
+in cardiology and diagnosed based on either of the following
+criteria (7, 13, 14), including the estimated systolic pulmonary
+arterial pressure (sPAP) > 50% of the systemic arterial pressure,
+end-systolic flattened or left-deviated of the interventricular
+septum (IVS) with or without right ventricular dilatation,
+bidirectional or right-to-left shunt at the patent foramen ovale,
+or ductus arteriosus. When there was a tricuspid regurgitation
+(TR), sPAP was calculated by adding right atrial pressure
+(5 mmHg) to the right ventricle pressure gradient, which
+was estimated by the Bernoulli equation. In the absence of a
+measurable TR, we relied upon a PDA/patent foramen ovale
+gradient to estimate sPAP. Early PH was defined as having
+evidence of PH based on the assessment of echocardiography
+between 72 h and 14 days (15), while BPD-PH was defined
+as having evidence of PH beyond 36 weeks’ PMA in preterm
+infants with BPD (7).
+Bronchopulmonary dysplasia was diagnosed based on the
+2019 criteria proposed by Jensen (16). BPD severity was
+categorized according to the following modes of respiratory
+support administered at 36 weeks PMA, grade 1, nasal cannula
+at flow rates ≤ 2 L/min; grade 2, nasal cannula at flow
+rates > 2 L/min or non-invasive positive airway pressure;
+and grade 3, IMV.
+Hemodynamically significant PDA was defined as the PDA
+diameter exceeding 1.5 mm combined with diastolic flow
+reversal in the descending aorta and the ratio of the left atrium
+to aorta greater than 1.5, as well as the clinical findings of
+pulmonary overcirculation, left heart overload, and/or poor
+systemic perfusion (17). SGA was defined as a birth weight
+less than the 10th percentile for gestational age (18). NEC
+was defined as modified Bells’ stage II criteria or greater (19).
+Pneumonia includes both congenital and hospital acquired
+pneumonia, which is defined as having chest X-ray findings with
+positive tracheal aspirate culture. Sepsis was defined as infants
+with a positive blood culture who were treated with antibiotics
+for at least 5 days. Severe IVH was defined as Papile’s Grade III
+or greater (20).
+
+
+-----
+
+### Echocardiography screening protocol for hemodynamically significant PDA and pulmonary hypertension
+
+All the preterm infants who were admitted before 2 weeks
+of life were evaluated by an echocardiogram 2–3 times a week
+for the hemodynamic status of PDA, pulmonary hypertension,
+and cardiac function. After 2 weeks of age, the frequency of
+echocardiogram was changed to 1–2 times a week. For all the
+preterm infants who developed increasing oxygen or respiratory
+support requirements in the late stage of life (usually after
+4 weeks of life), PH was screened by an echocardiogram.
+When PH was confirmed, a series of echocardiograms were
+repeated every 1 or 2 weeks to monitor the dynamic change
+of PH and the response to interventions. If PH resolved,
+the echocardiogram was repeated monthly until weaning off
+respiratory support for 6 months.
+
+### Statistical analyses
+
+Data were presented as mean ± standard deviation (SD),
+median [interquartile range (IQR)], or number (percentage)
+where appropriate. Univariate analyses were performed using
+an independent t-test or non-parametric tests for continuous
+variables, and the Chi-square or Fisher’s exact test for
+categorical variables. Multivariate logistic regression was
+performed to identify the risk factors associated with BPD-PH.
+A prediction model and nomogram were established based on
+the multivariate logistic regression analysis of BPD-PH.
+
+
+The area under the receiver operating characteristic (ROC)
+curve (AUC) was measured to assess the discriminative
+performance of the prediction model. A calibration curve was
+generated for the evaluation of calibration, combined with the
+Hosmer–Lemeshow (HL) test. An insignificant HL test statistic
+implies good calibration. In addition, the prediction model was
+subjected to 1,000 bootstrap resamples for internal validation to
+assess their predictive accuracies.
+Statistical analysis was performed with SPSS Statistics
+for Windows, version 20.0 (IBM Corp, Armonk, NY,
+United States). The graphics of the nomogram and calibration
+curve were performed with R 4.0.4 (The R Foundation
+for Statistical Computing, Vienna, Austria) with the rms
+statistical packages.
+
+## Results
+
+During the study period, 336 preterm infants were
+diagnosed with BPD based on the 2019 criteria. In this study,
+68 cases were excluded because of major congenital anomalies
+or incomplete data. A total of 268 preterm infants with BPD
+were enrolled, with 59 (22.0%) infants who developed BPD-PH
+beyond 36 weeks’ PMA in the BPD-PH group and 209 (78%)
+infants without PH in the no-PH group (Figure 1). The median
+age at admission was 21 days of life in the BPD-PH group and
+4 days of life in the no-PH group. The incidences of PH in grade
+1, grade 2, and grade 3 BPD infants were 5.0% (7/139), 20.9%
+(19/91), and 86.8% (33/38), respectively.
+1. Univariate analyses of maternal and neonatal
+characteristics between the two groups
+
+
+-----
+
+TABLE 1 Maternal and neonatal characteristics between two groups.
+
+
+**Variables** **BPD-PH**
+**(n = 59)**
+
+
+**no-PH**
+**(n = 209)**
+
+
+**_P_**
+
+
+Gestational age (weeks), mean 27.7 ± 1.7 28.4 ± 1.6 0.009*
+(SD)
+
+Birth weight (g), mean (SD) 970 ± 224 1150 ± 250 0.000*
+
+Male gender, n (%) 36 (61.0) 141 (67.5) 0.355**
+
+SGA, n (%) 10 (16.9) 10 (4.8) 0.004**
+
+Apgar score at 5 min, median 8 (6, 9) 8 (6, 9) 0.350***
+(IQR)
+
+Delivery by C-section, n (%) 28 (47.5) 85 (40.7) 0.373**
+
+Oligohydramnios, n (%) 4 (6.8) 17 (8.1) 0.732**
+
+PROM > 24 h, n (%) 17 (28.8) 49 (23.4) 0.397**
+
+pregnancy-induced hypertension, 12 (20.3) 16 (7.7) 0.008**
+_n (%)_
+
+Antenatal corticosteroids, n (%) 13 (22.0) 75 (35.9) 0.059**
+
+**BPD, n (%)**
+
+Grade 1 7 (5.0) 132 (95.0) 0.000**
+
+Grade 2 19 (20.9) 72 (79.1)
+
+Grade 3 33 (86.8) 5 (13.2)
+
+RDS and surfactant use, n (%) 53 (89.8) 154 (73.7) 0.008**
+
+Early PH, n (%) 43 (72.9) 63 (30.1) 0.000**
+
+**Duration of hsPDA, n (%)**
+
+_< 7 days_ 8 (13.6) 96 (45.9) 0.000**
+
+7-13 days 2 (3.4) 21 (10.0)
+
+14-27 days 4 (6.8) 31 (14.8)
+
+≥ 28 days 45 (76.3) 61 (29.2)
+
+PDA ligation, n (%) 26 (44.1) 34 (16.3) 0.000**
+
+pneumonia, n (%) 54 (91.5) 135 (64.6) 0.000**
+
+NEC (II–III), n (%) 6 (10.2) 11 (5.3) 0.222**
+
+Culture proven sepsis, n (%) 21 (35.6) 62 (29.7) 0.426**
+
+IVH (III–IV), n (%) 8 (13.6) 10 (4.8) 0.034**
+
+Duration of IMV before 36 weeks 25 (9,42) 7 (1,18) 0.000***
+PMA (day), median (IQR)
+
+SD, standard deviation; SGA, small for gestational age; IQR, interquartile range; PROM,
+premature rupture of membrane; BPD, bronchopulmonary dysplasia; RDS, neonatal
+respiratory distress syndrome; PH, pulmonary hypertension; hsPDA, hemodynamically
+significant patent ductus arteriosus; NEC, necrotizing enterocolitis; IVH, intraventricular
+hemorrhage; IMV, invasive mechanical ventilation. *The t-test for metric variable if data
+are normally distributed; **the Chi-square test (big sample size) and Fisher’s exact test
+(small sample size) for categorical variables; ***the Mann–Whitney U-test for metric
+variables if data are not normally distributed.
+
+The characteristics and related risk factors were compared
+between the two groups (Table 1). Infants from the BPD-PH
+group were born at a lower gestational age with smaller birth
+weights than the infants from the no-PH group (p < 0.05). The
+incidences of pregnancy-induced hypertension (PIH), grade 3
+BPD, early PH, SGA, RDS with surfactant use, pneumonia,
+severe IVH, and PDA ligation were significantly higher in the
+BPD-PH group (p < 0.05). The duration of hsPDA and IMV
+before 36 weeks’ PMA was much longer in infants with BPD-PH
+than in those without PH (p < 0.05).
+
+2. Selected factors for the prediction model of BPD-PH
+
+
+TABLE 2 The multivariate logistic regression analysis to estimate
+risk for BPD-PH.
+
+**Variables** **β** **OR** **95.0% CI** **_P_**
+
+Constant −4.617 0.010
+
+SGA 1.594 4.924 1.007–24.074 0.013
+
+Early PH 1.205 3.337 1.358–8.202 0.009
+
+BPD
+
+Grade 2 1.201 3.325 1.237–8.935 0.017
+
+Grade 3 4.792 120.533 29.266–496.421 0.000
+
+Duration of hsPDA ≥ 28 days 2.068 7.911 2.898–21.593 0.000
+
+SGA, small for gestational age, PH, pulmonary hypertension, BPD, bronchopulmonary
+dysplasia, hsPDA, hemodynamically significant patent ductus arteriosus.
+
+After univariable analysis, the variables of GA, BW, SGA,
+PIH, BPD, RDS with surfactant use, early PH, severe IVH, the
+duration of hsPDA, PDA ligation, pneumonia, and the duration
+of IMV before 36 weeks’ PMA were entered into the multivariate
+logistic regression analysis.
+Multivariate logistic regression analysis showed that the
+independent predictive factors of BPD-PH were SGA, early PH,
+moderate to severe BPD (Grade 2 and 3 BPD), and the duration
+of hsPDA ≥ 28 days (Table 2).
+
+3. The predictive nomogram for the probability of BPD-PH
+On the basis of the final regression analysis, a prediction
+model was established that incorporated the β coefficients of the
+predictors,
+
+_p_
+logit �p� = ln
+1 − _p_ [= −][4][.][617][+][1][.][594][ ×][ SGA][+][1][.][205][ ×]
+
+Early PH+1.201 × Grade 2 BPD+4.792 ×
+
+Grade 3 BPD+2.068 × duration of hsPDA
+
+where, p represented the probability of developing BPD-PH.
+Other values of the predictors are as follows, SGA (no = 0,
+yes = 1), early PH (no = 0, yes = 1), Grade 2 BPD (no = 0, yes = 1),
+Grade 3 BPD (no = 0, yes = 1), and the duration of hsPDA
+(< 28 days = 0, ≥ 28 days = 1). A nomogram was developed
+based on the prediction model to improve the convenience of
+the model in clinical practice (Figure 2).
+The area under the ROC curve (AUC) of the prediction
+model was 0.930 (95% CI, 0.895–0.965) (Figure 3). The
+Hosmer–Lemeshow test revealed no statistical significance
+(p = 0.976), suggesting a good fitting of the model. The
+calibration curve of the prediction model (Figure **4)**
+demonstrated good calibration. The cutoff probability in
+this model is 0.173, with a sensitivity of 89.8% and a specificity
+of 79.4%, respectively.
+
+## Discussion
+
+Since PH is serious comorbidity of BPD with high
+mortality (31) and a lack of evidence-based therapies, it is of
+
+
+-----
+
+great importance to identify the risk factors and start early
+interventions to improve the long-term outcome. In this study,
+we established and assessed a prediction model for individually
+
+
+predicting patients with BPD who are likely to develop BPD-PH.
+The prediction model incorporated demographic and clinical
+characteristics and showed good discrimination and calibration
+performance. We further developed a nomogram, thus making
+it a convenient and valuable tool for clinical practice.
+Several published studies have examined a wide variety of
+risk factors for the development of pulmonary hypertension in
+infants with BPD (6, 8, 21). Nagiub et al. (22) performed a
+meta-analysis to further analyze the effect size of risk factors
+for BPD-PH and showed that the duration of mechanical
+ventilation, prolonged NICU stay, oligohydramnios, the use of
+high frequency ventilation, SGA, sepsis, and severity of BPD
+were significant risk factors; while birth weight and gestational
+age were inversely related.
+However, it is difficult to quantify the risk of developing
+BPD-PH according to one single predictive factor due to
+its low sensitivity and specificity. More importantly, PH
+that complicates BPD is frequently multifactorial, including
+perinatal stress, abnormal lung development, and postnatal
+diseases. Thus, how to transform these risk factors into a riskbased scoring system could help develop an evidence-based
+screening strategy for infants at high risk.
+Prediction models by integrating multiple predictive factors
+have been used frequently in other conditions, whereas, there
+are few studies about prediction models for developing PH
+in infants with BPD. In the study by Trittmann et al. (23),
+they created a predictive model by combining both clinical and
+
+
+-----
+
+genetic data to predict the development of PH in patients with
+BPD. An ROC analysis showed the AUC of the prediction model
+of clinical data only, clinical and genetic data combined were
+0.65 and 0.73, respectively. Due to the small cohort size of 20
+cases of BPD-PH and 59 cases of BPD, the application of their
+model is limited and further validation in a larger independent
+prospective BPD cohort is needed. Compared with this study,
+our prediction model has relatively higher discrimination, with
+an AUC of 0.930.
+In our prediction model, grade 3 BPD is the greatest
+contributor to the risk of BPD-PH, followed by the duration
+of hsPDA exposure, SGA, and early PH. The impact of the
+severity of BPD on BPD-PH was variable in previous studies.
+A few studies could not find an association between PH and the
+severity of BPD (24). In contrast, Arjaans et al. (25) revealed
+that infants with severe BPD were most at risk of developing
+PH, with a relative risk (RR) doubled (RR 2.7, 95% CI 1.7, 4.2).
+Our study reconfirms severe BPD as a strong risk factor for the
+development of PH, compared with mild or moderate BPD.
+As a provincial referral center, all the cases were transferred
+from the maternal hospital or local hospital. Prolonged
+mechanical ventilation requirement and hsPDA unresponsive
+to pharmacologic therapy were common reasons for transport.
+The longer duration of hsPDA exposure is associated with
+the increasing risk of BPD in extremely preterm infants (26),
+which elucidates that hsPDA may delay lung disease recovery.
+
+
+Whether continued hsPDA exposure in infants with severe BPD
+may exacerbate BPD-PH is uncertain. Some studies reported
+no relationship between hsPDA and the development of BPDPH (8, 9). However, in these reports, hsPDA was considered a
+categorical variable (present or absent) with no consideration
+of its duration. In our study, we found infants in the BPD-PH
+group were transferred to our unit much later than infants in
+the no-PH group, which means infants with BPD-PH had longer
+exposure to hsPDA. This also explained why univariable analysis
+showed the PDA ligation rate was much higher in the BPD-PH
+group than in the no-PH group because 76.3% of infants in the
+BPD-PH group had hsPDA exposure for ≥ 28 days.
+Small for gestational age (SGA) has been identified to
+be a significant risk factor across some studies. Check et al.
+(21) further evaluated the associations between birth weight
+percentile and pulmonary hypertension at 36 weeks PMA in
+infants with moderate or severe BPD. In this study, infants with
+birth weights below the 25th percentile cutoff were at a higher
+risk of developing BPD-PH.
+An early injury to the developing lung can impair
+angiogenesis and alveolarization, which results in the
+simplification of distal lung airspace and the clinical
+manifestations of BPD and PH. Previous prospective and
+retrospective studies in preterm infants have revealed that early
+PH is strongly associated with a high risk for the subsequent
+development of BPD at 36 weeks PMA (7, 27), but the results
+
+
+-----
+
+were conflicting on the association between early PH and
+the development of late PH (15, 28). However, evidence
+about the relationship between early PH and late BPD-PH
+is limited. In our cohort, early PH within 14 days of life is
+identified to be the independent risk factor of BPD-PH, which
+might improve the earlier detection and management of
+patients with BPD-PH.
+Antenatal corticosteroids are well-known interventions that
+decrease the severity of RDS; however, the recent metaanalysis of the Cochrane Database shows that it is unclear if
+antenatal corticosteroids have any effect on the risk of BPD
+compared with placebo or no treatment (29). Neither of the
+two meta-analyses by Nagiub et al. (22) and Arjaans et al.
+(25) showed any effect of antenatal corticosteroids on BPD-PH.
+In our study, though infants with BPD-PH had received less
+antenatal corticosteroids, the p-value was above 0.05, we did
+not apply antenatal corticosteroids to the multivariate logistic
+regression analysis.
+Presentations of BPD-PH are usually non-specific and easy
+to be neglected. Hence, active screening and treatment are
+recommended to minimize morbidity and mortality. Consensus
+recommendations for PH screening in infants with BPD have
+been developed by the Pediatric Pulmonary Hypertension
+Network (PPHNet), a multidisciplinary panel of PH experts
+(30). However, with the prediction model, it is possible to
+estimate the risk of BPD-PH precisely and optimize the
+utilization of medical resources. For patients with high risk, early
+and frequent screenings for PH may be considered individually.
+In addition, risk factors should be controlled more actively,
+such as the prompt treatment of hsPDA and optimization of
+respiratory support for those infants.
+There are several limitations to our study. First, there
+might be selection bias in this retrospective study because
+we excluded infants without complete data or died before
+36 weeks’ PMA. Echocardiograms were performed to evaluate
+the hemodynamic status of PDA every 2 or 3 days for
+very premature infants until PDA became hemodynamically
+insignificant. HsPDA exposure is a continuous variable,
+but we had to divide the cohort into four subgroups
+because of our inability to precisely calculate the duration of
+hsPDA (days). Second, only internal validation was performed
+because of the single-center study, in which the differences
+in epidemiology and clinical behavior that exist between
+different centers were not considered. Furthermore, genomic
+characteristics were not considered in our study. Genetic data
+combining clinical characteristics may improve the prediction
+model performance.
+In conclusion, the prediction model based on the four
+risk factors predicts the development of BPD-PH with
+high sensitivity and specificity. External validation through
+multicenter prospective studies is necessary to further assess the
+generalizability of the prediction model.
+
+
+## Data availability statement
+
+The original contributions presented in this study are
+included in the article/supplementary material, further inquiries
+can be directed to the corresponding author.
+
+## Author contributions
+
+CW had primary responsibility for protocol development,
+preliminary data analysis, and writing of the manuscript. CW
+and YX participated in patient screening, enrollment, and
+data collection. ZC and LS participated in the design of the
+protocol and data analyses. XM supervised the design and
+execution of the study and contributed to the revision of
+the manuscript. LD supervised the design and performed the
+final data analyses. All authors contributed to the article and
+approved the submitted version.
+
+## Funding
+
+This work was supported by grants from the Key
+Program of the Independent Design Project of the
+National Clinical Research Center for Child Health
+(G20B0007) and the National Natural Science Foundation
+of China (81873845).
+
+## Acknowledgments
+
+The authors thank Yu Zhang for statistics and graphics
+support.
+
+## Conflict of interest
+
+The authors declare that the research was conducted in
+the absence of any commercial or financial relationships
+that could be construed as a potential conflict
+of interest.
+
+## Publisher’s note
+
+All claims expressed in this article are solely those of the
+authors and do not necessarily represent those of their affiliated
+organizations, or those of the publisher, the editors and the
+reviewers. Any product that may be evaluated in this article, or
+claim that may be made by its manufacturer, is not guaranteed
+or endorsed by the publisher.
+
+
+-----
+
+## References
+
+1. Stenmark KR, Abman SH. Lung vascular development: implications for the
+pathogenesis of bronchopulmonary dysplasia. Annu Rev Physiol. (2005) 67:623–61.
+[doi: 10.1146/annurev.physiol.67.040403.102229](https://doi.org/10.1146/annurev.physiol.67.040403.102229)
+
+2. Collaborative Study Group for Bronchopulmonary Dysplasia of Prematurity
+in China. [Incidence and risk factors of bronchopulmonary dysplasia in premature
+infants in 10 hospitals in China]. Zhonghua Er Ke Za Zhi. (2011) 49:655–62.
+[doi: 10.3760/cma.j.issn.0578-1310.2011.09.004](https://doi.org/10.3760/cma.j.issn.0578-1310.2011.09.004)
+
+3. Jiangsu Multicenter Study Collaborative Group for Breastmilk Feeding in
+Neonatal Intensive Care Units. Clinical characteristics and risk factors of very
+low birth weight and extremely low birth weight infants with bronchopulmonary
+dysplasia: multicenter retrospective analysis. Zhonghua Er Ke Za Zhi. (2019)
+[57:33–9. doi: 10.3760/cma.j.issn.0578-1310.2019.01.009](https://doi.org/10.3760/cma.j.issn.0578-1310.2019.01.009)
+
+4. Mourani PM, Abman SH. Pulmonary hypertension and vascular abnormalities
+[in bronchopulmonary dysplasia. Clin Perinatol. (2015) 42:839–55. doi: 10.1016/j.](https://doi.org/10.1016/j.clp.2015.08.010)
+[clp.2015.08.010](https://doi.org/10.1016/j.clp.2015.08.010)
+
+5. Alvira CM. Aberrant pulmonary vascular growth and remodeling in
+[bronchopulmonary dysplasia. Front Med (Lausanne). (2016) 3:21. doi: 10.3389/](https://doi.org/10.3389/fmed.2016.00021)
+[fmed.2016.00021](https://doi.org/10.3389/fmed.2016.00021)
+
+6. Vayalthrikkovil S, Vorhies E, Stritzke A, Bashir RA, Mohammad K,
+Kamaluddeen M, et al. Prospective study of pulmonary hypertension in preterm
+[infants with bronchopulmonary dysplasia. Pediatr Pulmonol. (2019) 54:171–8. doi:](https://doi.org/10.1002/ppul.24211)
+[10.1002/ppul.24211](https://doi.org/10.1002/ppul.24211)
+
+7. Mirza H, Ziegler J, Ford S, Padbury J, Tucker R, Laptook A.
+Pulmonary hypertension in preterm infants: prevalence and association
+with bronchopulmonary dysplasia. _J_ _Pediatr._ (2014) 165: 909–14.e1.
+[doi: 10.1016/j.jpeds.2014.07.040](https://doi.org/10.1016/j.jpeds.2014.07.040)
+
+8. Kim DH, Kim HS, Choi CW, Kim EK, Kim BI, Choi JH. Risk factors
+for pulmonary artery hypertension in preterm infants with moderate or
+[severe bronchopulmonary dysplasia. Neonatology. (2012) 101:40–6. doi: 10.1159/](https://doi.org/10.1159/000327891)
+[000327891](https://doi.org/10.1159/000327891)
+
+9. Choi EK, Jung YH, Kim HS, Shin SH, Choi CW, Kim EK, et al. The impact
+of atrial left-to-right shunt on pulmonary hypertension in preterm infants with
+moderate or severe bronchopulmonary dysplasia. Pediatr Neonatol. (2015) 56:317–
+[23. doi: 10.1016/j.pedneo.2014.12.006](https://doi.org/10.1016/j.pedneo.2014.12.006)
+
+10. Nakanishi H, Uchiyama A, Kusuda S. Impact of pulmonary hypertension
+on neurodevelopmental outcome in preterm infants with bronchopulmonary
+[dysplasia: a cohort study. J Perinatol. (2016) 36:890–6. doi: 10.1038/jp.2016.108](https://doi.org/10.1038/jp.2016.108)
+
+11. Choi EK, Shin SH, Kim EK, Kim HS. Developmental outcomes of preterm
+infants with bronchopulmonary dysplasia-associated pulmonary hypertension at
+[18-24 months of corrected age. BMC Pediatrics. (2019) 19:26. doi: 10.1186/s12887-](https://doi.org/10.1186/s12887-019-1400-3)
+[019-1400-3](https://doi.org/10.1186/s12887-019-1400-3)
+
+12. Wang CH, Shi LP, Ma XL, Du LZ. [Clinical features and prognosis of
+bronchopulmonary dysplasia complicated by pulmonary hypertension in preterm
+[infants]. Zhongguo Dang Dai Er Ke Za Zhi. (2018) 20:893–6. doi: 10.7499/j.issn.](https://doi.org/10.7499/j.issn.1008-8830.2018.11.003)
+[1008-8830.2018.11.003](https://doi.org/10.7499/j.issn.1008-8830.2018.11.003)
+
+13. del Cerro MJ, Sabaté Rotés A, Cartón A, Deiros L, Bret M, Cordeiro M,
+et al. Pulmonary hypertension in bronchopulmonary dysplasia: clinical findings,
+[cardiovascular anomalies and outcomes. Pediatr Pulmonol. (2014) 49:49–59. doi:](https://doi.org/10.1002/ppul.22797)
+[10.1002/ppul.22797](https://doi.org/10.1002/ppul.22797)
+
+14. Kumar VHS. Diagnostic approach to pulmonary hypertension in premature
+[neonates. Children (Basel). (2017) 4:75. doi: 10.3390/children4090075](https://doi.org/10.3390/children4090075)
+
+15. Mourani PM, Sontag MK, Younoszai A, Miller JI, Kinsella JP, Baker CD, et al.
+Early pulmonary vascular disease in preterm infants at risk for bronchopulmonary
+[dysplasia. Am J Respir Crit Care Med. (2015) 191:87–95. doi: 10.1164/rccm.201409-](https://doi.org/10.1164/rccm.201409-1594OC)
+[1594OC](https://doi.org/10.1164/rccm.201409-1594OC)
+
+16. Jensen EA, Dysart K, Gantz MG, McDonald S, Bamat NA, Keszler M,
+et al. The diagnosis of bronchopulmonary dysplasia in very preterm infants. An
+
+
+[evidence-based approach. Am J Respir Crit Care Med. (2019) 200:751–9. doi: 10.](https://doi.org/10.1164/rccm.201812-2348OC)
+[1164/rccm.201812-2348OC](https://doi.org/10.1164/rccm.201812-2348OC)
+
+17. Jain A, Shah PS. Diagnosis, evaluation, and management of patent ductus
+[arteriosus in preterm neonates. JAMA Pediatrics. (2015) 169:863–72. doi: 10.1001/](https://doi.org/10.1001/jamapediatrics.2015.0987)
+[jamapediatrics.2015.0987](https://doi.org/10.1001/jamapediatrics.2015.0987)
+
+18. Fenton TR, Kim JH. A systematic review and meta-analysis to revise the
+[Fenton growth chart for preterm infants. BMC Pediatrics. (2013) 13:59. doi: 10.](https://doi.org/10.1186/1471-2431-13-59)
+[1186/1471-2431-13-59](https://doi.org/10.1186/1471-2431-13-59)
+
+19. Neu J. Necrotizing enterocolitis: the search for a unifying pathogenic theory
+[leading to prevention. Pediatr Clin N Am. (1996) 43:409–32. doi: 10.1016/s0031-](https://doi.org/10.1016/s0031-3955(05)70413-2)
+[3955(05)70413-2](https://doi.org/10.1016/s0031-3955(05)70413-2)
+
+20. Valdez Sandoval P, Hernández Rosales P, Quiñones Hernández DG,
+Chavana Naranjo EA, García Navarro V. Intraventricular hemorrhage and
+posthemorrhagic hydrocephalus in preterm infants: diagnosis, classification, and
+[treatment options. Childs Nerv Syst. (2019) 35:917–27. doi: 10.1007/s00381-019-04](https://doi.org/10.1007/s00381-019-04127-x)
+[127-x](https://doi.org/10.1007/s00381-019-04127-x)
+
+21. Check J, Gotteiner N, Liu X, Su E, Porta N, Steinhorn R, et al. Fetal
+growth restriction and pulmonary hypertension in premature infants with
+[bronchopulmonary dysplasia. J Perinatol. (2013) 33:553–7. doi: 10.1038/jp.2012.](https://doi.org/10.1038/jp.2012.164)
+164
+
+22. Nagiub M, Kanaan U, Simon D, Guglani L. Risk factors for development of
+pulmonary hypertension in infants with bronchopulmonary dysplasia: systematic
+[review and meta-analysis. Paediatr Respir Rev. (2017) 23:27–32. doi: 10.1016/j.prrv.](https://doi.org/10.1016/j.prrv.2016.11.003)
+[2016.11.003](https://doi.org/10.1016/j.prrv.2016.11.003)
+
+23. Trittmann JK, Bartenschlag A, Zmuda EJ, Frick J, Stewart WCL, Nelin
+LD. Using clinical and genetic data to predict pulmonary hypertension in
+[bronchopulmonary dysplasia. Acta paediatrica. (2018) 107:2158–64. doi: 10.1111/](https://doi.org/10.1111/apa.14600)
+[apa.14600](https://doi.org/10.1111/apa.14600)
+
+24. Weismann CG, Asnes JD, Bazzy-Asaad A, Tolomeo C, Ehrenkranz RA,
+Bizzarro MJ. Pulmonary hypertension in preterm infants: results of a prospective
+[screening program. J Perinatol. (2017) 37:572–7. doi: 10.1038/jp.2016.255](https://doi.org/10.1038/jp.2016.255)
+
+25. Arjaans S, Zwart EAH, Ploegstra MJ, Bos AF, Kooi EMW, Hillege HL, et al.
+Identification of gaps in the current knowledge on pulmonary hypertension in
+extremely preterm infants: a systematic review and meta-analysis. Paediatr Perinat
+_[Epidemiol. (2018) 32:258–67. doi: 10.1111/ppe.12444](https://doi.org/10.1111/ppe.12444)_
+
+26. Mirza H, Garcia J, McKinley G, Hubbard L, Sensing W, Schneider J, et al.
+Duration of significant patent ductus arteriosus and bronchopulmonary dysplasia
+[in extremely preterm infants. J Perinatol. (2019) 39:1648–55. doi: 10.1038/s41372-](https://doi.org/10.1038/s41372-019-0496-5)
+[019-0496-5](https://doi.org/10.1038/s41372-019-0496-5)
+
+27. Berenz A, Vergales JE, Swanson JR, Sinkin RA. Evidence of early pulmonary
+hypertension is associated with increased mortality in very low birth weight infants.
+_[Am J Perinatol. (2017) 34:801–7. doi: 10.1055/s-0037-1598246](https://doi.org/10.1055/s-0037-1598246)_
+
+28. Kaluarachchi DC, Woo KM, Colaizy TT. Role of early pulmonary
+hypertension as a risk factor for late pulmonary hypertension in extremely preterm
+[infants. Am J Perinatol. (2018) 35:120–6. doi: 10.1055/s-0037-1606189](https://doi.org/10.1055/s-0037-1606189)
+
+29. McGoldrick E, Stewart F, Parker R, Dalziel SR. Antenatal corticosteroids for
+accelerating fetal lung maturation for women at risk of preterm birth. Cochrane
+_[Database Syst Rev. (2020) 12:Cd004454. doi: 10.1002/14651858.CD004454.](https://doi.org/10.1002/14651858.CD004454.pub4)_
+[pub4](https://doi.org/10.1002/14651858.CD004454.pub4)
+
+30. Krishnan U, Feinstein JA, Adatia I, Austin ED, Mullen MP, Hopper RK,
+et al. Evaluation and management of pulmonary hypertension in children with
+[bronchopulmonary dysplasia. J Pediatr. (2017) 188: 24–34 e1. doi: 10.1016/j.jpeds.](https://doi.org/10.1016/j.jpeds.2017.05.029)
+[2017.05.029](https://doi.org/10.1016/j.jpeds.2017.05.029)
+
+31. Khemani E, McElhinney DB, Rhein L, Andrade O, Lacro RV, Thomas
+KC, et al. Pulmonary artery hypertension in formerly premature infants with
+bronchopulmonary dysplasia: clinical features and outcomes in the surfactant era.
+_[Pediatrics. (2007) 120:1260–9. doi: 10.1542/peds.2007-0971](https://doi.org/10.1542/peds.2007-0971)_
+
+
+-----
+

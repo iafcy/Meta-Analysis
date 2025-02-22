@@ -1,0 +1,1472 @@
+Article 
+Development of an Empathy-Centric Counseling Chatbot 
+System Capable of Sentimental Dialogue Analysis 
+
+
+
+
+
+
+
+
+
+Abstract: College students encounter various types of stresses in school due to schoolwork, personal 
+relationships, health issues, and future career concerns. Some students are susceptible to the strikes 
+of failures and are inexperienced with or fearful of dealing with setbacks. When these negative 
+emotions gradually accumulate without resolution, they can cause long-term negative effects on stu- 
+dents’ physical and mental health. Some potential health problems include depression, anxiety, and 
+disorders such as eating disorders. Universities commonly offer counseling services; however, the 
+demand often exceeds the counseling capacities due to limited numbers of counsellors/psychologists. 
+Thus, students may not receive immediate counseling or treatments. If students are not treated, some 
+repercussions may lead to severe abnormal behavior and even suicide. In this study, combining 
+immersive virtual reality (VR) technique with psychological knowledge base, we developed a VR 
+empathy-centric counseling chatbot (VRECC) that can complementarily support troubled students 
+when counsellors cannot provide immediate support. Through multi-turn (verbal or text) conver- 
+sations with the chatbot, the system can demonstrate empathy and give therapist-like responses to 
+the users. During the study, more than 120 students were required to complete a questionnaire and 
+34 subjects with an above-median stress level were randomly drawn for the VRECC experiment. We 
+observed decreasing average stress level and psychological sensitivity scores among subjects after the 
+experiment. Although the system did not yield improvement in life-impact scores (e.g., behavioral 
+and physical impacts), the signiﬁcant outcomes of lowering stress level and psychological sensitivity 
+have given us a very positive outlook for continuing to integrate VR, AI sentimental natural language 
+process, and counseling chatbot for advanced VRECC research in helping students improve their 
+psychological well-being and life quality at schools. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+According to Taiwan Suicide Prevention Center statistics, approximately 4000 people 
+aged 15 to 24 in Taiwan attempted suicide per year during the years of 2012 to 2016 [1]. 
+The numbers have continued to grow in the past ﬁve years, and reached an all-time high 
+(10,659) in 2020, among which 2371 were students [1]. Some studies depicted that the 
+psychological disturbances of college students come from academic pressure, interpersonal 
+relationships, personality traits, career plans, family issues, etc. Academic pressure is the 
+most reported factor that leads to mental distress, followed by interpersonal relationships 
+and personality traits [1]. 
+Starting in 2020, the outbreak of COVID-19 has drastically changed the lifestyle of 
+society. According to the survey conducted by the John Tung Foundation, more than 
+1/5 of participants were dissatisﬁed with the changes caused by the pandemic. The 
+
+
+
+
+
+
+
+top four negative emotions participants experienced were worry (38%), anxiety (23%), 
+nervousness (22%), and panic (9%), which can lead to long-term psychological illnesses, 
+e.g., hopelessness, depression, and anxiety, if not treated in time. These mental health issues 
+may increase suicidal tendencies. Thus, it is crucial that schools, especially universities, 
+provide sufﬁcient counseling services to those in need [2]. However, most universities’ 
+therapist–student ratios are low. The students must wait in line for an appointment, and 
+some of them are not aware of how to consult other health centers to prevent the syndrome 
+from worsening. In order to cope with the shortages of counsellors/therapists, several 
+companies have launched online solutions to provide in-time consultation aiming to assist 
+in complementary counseling supports to students. Companies such as Woebot, Wysa, X2, 
+and Youper are startups currently in the market to provide such services. Their systems 
+adopt artiﬁcial intelligence integrated with background (psychotherapy) knowledge related 
+to mental health issues. Despite providing the abovementioned one-on-one counseling 
+solutions, these systems currently lack the functions of interacting and sharing distress with 
+others in a group counseling setting. Even in a one-on-one counseling setting, although they 
+have the ability to understand users’ basic concerns and questions, these systems’ ability to 
+understand natural language in sentimental dialogs and to answer users’ questions with 
+empathy-centric responses are very limited. Thus, this research focuses on closing the 
+research gap by developing an empathy-centric counseling chatbot system that is capable 
+of sentimental dialogue analysis. 
+In short, this research aims to alleviate students’ distresses and psychological symp- 
+toms by providing empathy-centric counseling using the chatbot system and making 
+students feel relieved through the virtual interactive conversations. In this research, we 
+adopted a VR group-counseling chatbot (VRGCC) framework, preliminarily presented 
+in our recent publication [3]. We further improved the original VRGCC system by incor- 
+porating the empathy-centric counseling knowledge for the chatbot development. The 
+newly developed system, namely the VR empathy-centric counseling chatbot (VRECC), 
+recognizes sentiments of questions and is capable of empathy-centric dialogues. BERT 
+models for sentiment- and issue-related classiﬁcations of question sentences and the di- 
+alog management module were trained and developed to accomplish empathy-centric 
+counseling tasks. VRECC was tested and veriﬁed through pre-and post-experiment psycho- 
+logical questionnaires. The experiment results showed that stress levels and psychological 
+sensitivity were signiﬁcantly reduced after the subjects received VRECC treatments. 
+
+This chapter reviews past literature on related topics. Section 2.1 explores common 
+psychotherapy approaches applied to student stress. Section 2.2 reviews the applications of 
+immersive technology (AR/VR) in health-related sectors. In Section 2.3, chatbot applica- 
+tions in counseling and related VR-enabled chatbots are brieﬂy introduced and reviewed. 
+
+This section reviews common psychotherapy approaches and how they can be applied 
+to alleviate student stress. The American Psychological Association classiﬁes psychotherapy 
+approaches into ﬁve categories, including psychoanalysis and psychodynamic therapies, 
+behavior therapy, cognitive therapy, humanistic therapy, and integrative or holistic ther- 
+apy [4]. Psychodynamic therapy was originally conceptualized by Austrian psychologist 
+Sigmund Freud. It emphasizes the subconscious mind and explores how past experiences 
+and personalities inﬂuence present thoughts, feelings, relationships, and behaviors [5]. 
+Behavior therapy, also known as “behavior modiﬁcation”, uses ﬁndings and methods from 
+experimental psychology’s study of learning processes to change maladaptive behaviors. 
+The abnormal behaviors manifested in psychological disorders can be acquired as normal 
+behaviors, and the disorders can be corrected through the basic principles of conditioning, 
+learning, and observational learning [6]. Cognitive therapy is based on theoretical assump- 
+tions about human cognitive processes that inﬂuence emotions and behaviors, and uses 
+
+
+cognitive and behavioral techniques to change maladaptive cognitions. It utilizes cognitive 
+reconstruction, psychological coping, and problem-solving techniques for counseling and 
+treatment [7]. Humanistic therapy is an extension of person-centered therapy, which fo- 
+cuses on exploring the nature of human beings. It is a way to explore the mind, body, and 
+spirit, including thoughts, emotions, and behaviors, and to integrate healthy relationships 
+with others and society to make life more fulﬁlling. The emphasis is on positive growth and 
+development and the therapist’s own attitudes such as congruence, genuineness, uncondi- 
+tional positive regard, and empathic understanding rather than therapeutic techniques. [8]. 
+Integrative or holistic therapy means that the therapist integrates elements of multiple 
+approaches to tailor the treatment plan to the needs of each client. Therapists instruct 
+patients on how to solve problems by correcting their thinking and behavioral reactions [9]. 
+College students face (and bear) many sources of pressure from teachers, peers (class- 
+mates), and other personal relations (e.g., families, signiﬁcant others, etc.). DeAnnah’s 
+research divides the factors affecting students’ mental health into three levels, i.e., individ- 
+ual, interpersonal, and institutional. The individual level is similar to the coping abilities of 
+students, and the interpersonal, including intergroup awareness, and institutional levels 
+are related to the school organization, i.e., the tension of the entire campus. The data come 
+from 2203 students enrolled in the university. The results show that the comprehensive 
+impacts of the individual and institutional levels are related to the mental health of students. 
+Therefore, the students’ limited coping abilities and the tense campus atmosphere have 
+led to psychological distress for college students [10]. In order to explore whether general 
+life satisfaction is negatively related to college students’ stress, Weinstein conducted three 
+surveys on a sample of college students, including a simple demographic survey, a life 
+satisfaction scale [11], and a college student stress scale [12]. The life satisfaction and college 
+student stress scores were signiﬁcantly negatively correlated within the sample, which 
+indicates that college students’ life satisfaction is adversely affected by college pressure [13]. 
+Another study attempted to explore the association between student stress and mental 
+disorders. A total of 20,842 respondents from the World Health Organization World Mental 
+Health International College Student Initiative were collected, including students from 
+24 universities in 9 countries. The study put forward six issues that may cause stress in 
+students, including ﬁnancial status, health, love life, family relations, work/school relations, 
+and family experience. At the same time, mental disorders were divided into six categories: 
+major depressive disorder, bipolar disorder, generalized anxiety disorder, panic disorder, 
+alcohol use disorder, and drug use disorder. The relationship between stress issues and 
+mental disorders was evaluated based on the stress perception of students’ responses. 
+The results showed that 93.7% of students said they felt stress in at least one area, and a 
+signiﬁcant correlation was found between the degree of stress and the increased chance 
+of mental illness [14]. For stress-level determination, Tonacci’s study showed that using 
+machine learning to analyze physiological signals related to autonomic nervous system 
+(ANS) activity, such as electrocardiograms (ECG) and galvanic skin response (GSR), can 
+yield the same results as self-reporting [15]. 
+In order to reduce student stress and improve the effectiveness of counseling, many 
+studies have proposed various counseling services. Several studies have investigated 
+the effects of biofeedback on the treatment of stress and anxiety. Results showed that 
+participants who received biofeedback and counseling had more reductions in anxiety 
+symptoms than those who only received counseling [16,17]. Another study on complemen- 
+tary alternative therapy resources suggests that yoga can be effective in helping with stress 
+management [18]. In addition, several studies have examined the impact of counseling 
+on students’ schooling. Studies have shown a signiﬁcant correlation between counseling 
+experiences and student retention [19,20], demonstrating the importance of counseling 
+services for students. 
+
+
+
+This section reviews the advantages of immersive technology in health care appli- 
+cations and some implementations of augmented reality and/or virtual reality (AR/VR) 
+for psychotherapy systems. The beneﬁts of immersive virtual environments in the ﬁeld 
+of psychotherapy have been demonstrated in a number of studies. For example, Persky’s 
+study used the Scopus database for literature retrieval and analysis and showed that immer- 
+sive technologies have more advantages than traditional processing methods, including a 
+higher degree of user realism and easier experimental control [21]. 
+Another study was done in an AR environment setting [22], where a Kinect sensor 
+was connected with an iPad to establish a clinical consulting system. Patients can take 
+advantage of this AR system as long as they want to seek medical consultation at home. 
+Because of its low cost and portability, the AR system can greatly beneﬁt patients and allow 
+physicians to visually explain complex medical conditions to the patients [22]. 
+Prior research conducted exposure therapy in a VR environment setting and designed 
+seven VR driving condition scenarios such as day and night, mountain road, highway, etc. 
+The experiments would simultaneously collect physiological signals of subjects through 
+biosensors. By meticulously designing multiple experiments, VR can simulate many 
+different driving-related anxiety scenarios for better treatment. The subjects provided a 
+decent evaluation of the immersive experiences The results showed that the VR system 
+was an effective driving phobia treatment [23]. In addition, other research performed meta- 
+analyses and found that VR can be used as an effective intervention to distract patients 
+with needle-related surgery and relieve pain in children [24]. While aging problems have 
+occurred in many countries across the globe, emphasis on the healthcare of the elderly using 
+immersive technologies has become a new research area. Elderly people are susceptive 
+to falling, which damages their bodies and mind. In one study, the results showed that 
+VR can be served as auxiliary means of physical therapy for fall prevention and remote 
+rehabilitation for the elderly population [25]. 
+
+This section reviews existing counseling chatbots and some related VR-enabled chatbot 
+applications. Woebot is a chatbot that caters to the users’ mental health. Its foundation is 
+rooted in Cognitive Behavioral Therapy (CBT), Interpersonal Psychotherapy (IPT), and 
+Dialectical Behavioral Therapy (DBT). The company claimed that users can establish close 
+bonds with Woebot within three to ﬁve days, and the bond did not appear to diminish 
+over time [26]. Of the experimental subjects, 85% were willing to interact with Woebot 
+daily, and 76% felt better after taking measures suggested by Woebot. There was also a 22% 
+average reduction in depression symptoms in two weeks [27]. Consequently, chatbots have 
+demonstrated themselves as effective tools for combating certain types of psychological 
+diseases. Minjeong Kang’s research customizes the chatbot to process personalities such 
+as steadiness and conscientiousness [28]. Other studies built an online chatbot that can 
+distinguish emotions from conversations. It can extract useful words and analyze any 
+depression or anxiety indication to prevent future mental illness [29]. 
+A major trend is to combine chatbots with VR human–computer interface (HCI) for dif- 
+ferent applications. For instance, Tsaramirsis et al. developed a VR asynchronous distance 
+learning software and found that students using the software for learning outperformed 
+those using traditional videos used for learning [30]. VR chatbots can also be used for job 
+interview simulations. The chatbot is trained in advance using questions and answers and 
+associated word pairs, and then generates conversations based on the user’s responses to 
+provide a human-like experience [31]. 
+
+The goal of this study is to develop a platform that combines VR and empathy-centric 
+psychological counseling. Students can use VR devices to connect to the system, register 
+for an account, and then start using the counseling services. Our system consists of 
+
+
+three components, including a questionnaire to measure users’ stress status, a chatbot to 
+talk with users, and a chat room where users can interact with each other and talk freely 
+with counselors. An additional ofﬂine questionnaire was added to the study to collect the 
+stress levels and areas in need of assistance from university students beforehand, which 
+was used as a reference for the system construction. We ﬁrst designed the questionnaire 
+and built the platform, and then invited the higher scorers of the ofﬂine questionnaire 
+to participate in the VR platform test to verify the effectiveness of the platform. In order 
+to protect the rights of the users, a professional psychological counselor was involved 
+throughout the entire process, and the users could stop the experiment voluntarily if they 
+were uncomfortable. The counselor could also stop the experiment depending on the 
+user’s condition. 
+
+The structure of the questionnaire design is shown in Figure 1. Stress is a normal 
+physical and psychological response to the various demands we place on ourselves. Stress 
+is a subjective feeling, and different people react differently to the same event. Some 
+studies mention that stress has an effect on people’s psychology, behavior, physicality, and 
+cognition [32–35], and some studies have used these factors as aspects of stress scales [36]. 
+American addiction centers suggests that stress can also have an impact on a person’s 
+social level [37]. In this study, these factors [32–37] were combined and categorized to 
+comprehensively consider the stress situation of students. One can also refer to the Ques- 
+tionPro Survey Software website [38] for more details on questionnaire design. In this 
+research, the questionnaire “Survey for school stress—Virtual Reality Counseling Chatbot 
+System” consisted of three aspects, i.e., the Stress Level, Psychological Sensitivity, and 
+Life Impact of subjects. The Stress Level part had scaled questions using a 10-point Likert 
+scale to measure each subject’s stress levels and stress coping abilities. The Psychological 
+Sensitivity (the diversity of emotional effects) and Life Impact parts, which contained a 
+series of questions utilizing a 5-point Likert scale, were developed to measure the impact of 
+stress on mindset and various crucial effects on life (e.g., the behavioral, physical, cognitive, 
+and social effects). 
+
+
+This section will introduce the essential parts of the counseling chatbot methodol- 
+ogy, including Section 3.2.1 the description of empathy-centric psychological knowledge, 
+Section 3.2.2 the chatbot technology and module implementation, and Section 3.2.3 the issue 
+and sentiment classiﬁcation (of question sentences) using an NLP machine learning model. 
+
+
+
+Person-centered therapy was developed by Carl Rogers [39]. It is a non-directive 
+orientation that emphasizes the client’s nature toward self-actualization, their own creation 
+of self-growth, and their ability to actively heal themselves. Rogers believed that the attitude 
+of the therapist, the personality traits, and the relationship between the therapist and the 
+client are the main factors in the effectiveness of therapy. The counseling process is client- 
+centered, focusing on the client’s tendency to self-actualize, which is believed to be the 
+spontaneous force that leads to change. The counselor’s skills are not the main focus; rather, 
+the human attitude and stance are more important. In counseling, empathy expresses the 
+advisor’s respect and regard for the client, whose experience may be completely different 
+from that of the advisor. Clients need to feel supported, understood, and respected. 
+Roger divided empathy into four levels, as in Figure 2. The primary level of empathy is 
+deﬁned as responding to the client’s explicitly expressed meaning and feelings with a simple 
+repetition of basic understanding. The second level of empathy is to respond to the implicit, 
+half-expressed, or implied feelings of the person with corresponding emotional words to 
+acknowledge them and bring their true feelings to the surface. The third level of empathy 
+is for recognizing the client’s confusing and contradictory feelings that subconsciously 
+obscure what the client really cares about, and then capturing the core of the emotion and 
+responding to the client’s desire with afﬁrmations. The highest level of empathy is for 
+when the person is suppressing their feelings or not feeling them in the conversation, and 
+guessing their intentions from what they are describing, capturing the core of the emotion, 
+and responding to it directly or indirectly in a way that is acceptable to the person [40]. 
+
+This study refers to Roger’s concept of empathy as the basis for the counseling re- 
+sponses. The system uses a classiﬁer to classify the user’s utterances for intention and 
+sentiment in order to achieve the purpose of issue detection and sentiment response. 
+
+The architecture of the chatbot in this study is shown in Figure 3. After the user speaks, 
+the Automatic Speech Recognition (ASR) module converts speech into text as input to the 
+Natural Language Understanding (NLU) module. The NLU module converts the text into 
+useful information and sends it to the Dialog Management (DM) module. The DM module 
+functions include Dialog State Tracking and generating dialog Policy. The Dialog State 
+will be saved and updated in Tracker, and the Policy module can determine the Action 
+based on the Dialog State saved in Tracker. The Action can generate a message (Natural 
+Language Generation, NLG) to be exported to the user. Finally, the Text-To-Speech (TTS) 
+module reads the text message (in voice) to the user, completing one iteration of chatbot. 
+The details of individual module operations are described in the following paragraph. For 
+detailed implementations of the chatbot modules described above, please refer to web 
+resources describing Google Cloud Platform (GCP) [41], Cloud Speech (-to-text) API [42], 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+presses the advisor’s respect and regard for the client, whose experience may be com- 
+pletely different from that of the advisor. Clients need to feel supported, understood, and 
+respected. 
+Roger divided empathy into four levels, as in Figure 2. The primary level of empathy 
+is defined as responding to the client’s explicitly expressed meaning and feelings with a 
+simple repetition of basic understanding. The second level of empathy is to respond to the 
+implicit, half-expressed, or implied feelings of the person with corresponding emotional 
+words to acknowledge them and bring their true feelings to the surface. The third level of 
+empathy is for recognizing the client’s confusing and contradictory feelings that subcon- 
+sciously obscure what the client really cares about, and then capturing the core of the 
+emotion and responding to the client’s desire with affirmations. The highest level of em- 
+pathy is for when the person is suppressing their feelings or not feeling them in the con- 
+versation, and guessing their intentions from what they are describing, capturing the core 
+of the emotion, and responding to it directly or indirectly in a way that is acceptable to the 
+person [40]. 
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+In this stage, we clearly deﬁne the speciﬁc problem, identify what task the problem 
+belongs to in machine learning, and select the corresponding machine learning model. In 
+this study, we wanted to investigate the user’s sentiment and issue during the conversation, 
+and the sentiment and issue can be deﬁned in advance; therefore, we chose Supervised 
+Learning and pre-deﬁned the label of the data. 
+
+
+
+The dataset used in this study was obtained from the CounselChat website [46]. 
+The CounselChat website is a website that matches users with counselors. Users can 
+anonymously post their concerns or questions for help on the site, and counselors can 
+respond publicly (with their clinic and contact numbers), allowing users to choose a 
+counselor who is suitable for them based on the responses. A study obtained all the 
+data from the founder of the CounselChat website [47], which was used as the dataset 
+for training the model in this study. The data were cleaned and labeled. The cleaned 
+data consisted of four columns, namely user questions and counselor responses from the 
+CounselChat website, and manually added sentiment and issue labels. User questions 
+were categorized into six issues, namely Studies, Family, Relationship, Finance, Work, and 
+Health. Sentiment labels were compiled from three previous studies, as described and listed 
+in Table 1, namely NRC [48], PANAS [49], and AEQ [50]. In order to classify sentiments 
+comprehensively, this study organizes and integrates the sentiments in descriptive terms 
+from these studies as the sentiment categories. Nonetheless, the sentiment categories and 
+analysis for counseling dialogs can be further investigated in future research. 
+
+
+
+The architecture of the chatbot in this study is shown in Figure 3. After the user 
+speaks, the Automatic Speech Recognition (ASR) module converts speech into text as in- 
+put to the Natural Language Understanding (NLU) module. The NLU module converts 
+the text into useful information and sends it to the Dialog Management (DM) module. The 
+DM module functions include Dialog State Tracking and generating dialog Policy. The 
+Dialog State will be saved and updated in Tracker, and the Policy module can determine 
+the Action based on the Dialog State saved in Tracker. The Action can generate a message 
+(Natural Language Generation, NLG) to be exported to the user. Finally, the Text-To- 
+Speech (TTS) module reads the text message (in voice) to the user, completing one itera- 
+tion of chatbot. The details of individual module operations are described in the following 
+paragraph. For detailed implementations of the chatbot modules described above, please 
+refer to web resources describing Google Cloud Platform (GCP) [41], Cloud Speech (-to- 
+text) API [42], Cloud Text-to-Speech API [43], open python library Rasa Core and NLU 
+[44], and SpaCy open-source NLP library [45]. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Use 
+Model 
+
+Define 
+Problem 
+Build 
+Dataset 
+Train 
+Model 
+Evaluate 
+Model 
+
+Problem 
+Dataset 
+Model 
+Model 
+Model 
+ 
+ 
+ 
+
+Cloud Text-to-Speech API [43], open python library Rasa Core and NLU [44], and SpaCy 
+open-source NLP library [45]. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+Define 
+Build 
+Train 
+Evaluate 
+ 
+ 
+ 
+
+
+In order to explore users’ emotion and understand users’ concern, machine learning is 
+applied to the classiﬁcation of sentiment and issue. There are ﬁve steps of machine learning, 
+as shown in Figure 4: Deﬁne Problem, Build Dataset, Train Model, Evaluate Model, and 
+Use Model. 
+
+Model, and Use Model. 
+ 
+
+In order to explore users’ emotion and understand users’ concern, machine learning 
+is applied to the classification of sentiment and issue. There are five steps of machine 
+learning, as shown in Figure 4: Define Problem, Build Dataset, Train Model, Evaluate 
+Use 
+
+
+
+
+
+
+
+
+Distress, upset, hostile, irritable, scared, jittery, afraid, ashamed, 
+guilty, nervous. 
+
+
+
+Anger, anxiety (fear, scared, jittery, nervous), hopelessness, 
+shame, upset (sadness), distress, guilty, boredom, indifference 
+The negative sentiments in this study were categorized as Anger, Anxiety (fear, scared, 
+jittery, nervous), Hopelessness, Shame, Upset (sadness), Distress, Guilty, Boredom, and 
+Indifference. For further simplifying the sentiments, circular space of the circumplex 
+model [51] and the distribution of 197 emotions proposed by Liu [52] were used. Circular 
+space of the circumplex model is shown in Figure 5. The space is divided into four 
+quadrants, with the y-axis representing the arousal level and the x-axis representing the 
+valence positive or negative. Nine negative sentiments correspond to ﬁve categories on 
+the left side of the circular space of the circumplex model. In summary, the predeﬁned 
+categories of issues and sentiments in this study are shown in Figure 6. 
+categories of issues and sentiments in this study are shown in Figure 6. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The negative sentiments in this study were categorized as Anger, Anxiety (fear, 
+scared, jittery, nervous), Hopelessness, Shame, Upset (sadness), Distress, Guilty, Bore- 
+dom, and Indifference. For further simplifying the sentiments, circular space of the cir- 
+cumplex model [51] and the distribution of 197 emotions proposed by Liu [52] were used. 
+Circular space of the circumplex model is shown in Figure 5. The space is divided into 
+four quadrants, with the y-axis representing the arousal level and the x-axis representing 
+the valence positive or negative. Nine negative sentiments correspond to five categories 
+on the left side of the circular space of the circumplex model. In summary, the predefined 
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hopelessness 
+Distress 
+Upset 
+Boredom 
+Indifference 
+Guilty 
+Shame 
+
+
+
+Pre-trained BERT 
+In this study, we used pre-trained BERT as the basis for two-stage migration learning, 
+using the model for ﬁne-tuning the following supervised tasks. The full name of BERT 
+is Bidirectional Encoder Representations from Transformers, which is a language repre- 
+sentation model trained by Google in an unsupervised manner using a large amount of 
+unmarked text; its architecture is the Encoder in Transformer. Google pre-trained BERT 
+to perform two tasks: the Masked Language Model (MLM) and Next Sentence Prediction 
+(NSP). The MLM is trained in such a way that it can predict the missing parts of a sen- 
+tence. Compared to the traditional Language Model (LM), the MLM implements two-way 
+contextual word representation. 
+
+
+
+
+
+
+
+BERT uses the concept of the MLM and the framework of the Transformer Encoder to 
+get rid of the dilemma that previous language models can only estimate the probability of 
+the next word from a single direction (left-to-right or right-to-left) and train a bidirectional 
+language representation model with the following equation as the objective function: 
+
+
+
+
+The second task of pre-training BERT, NSP, is to determine whether the second sentence 
+is connected to the ﬁrst sentence in the original text. In summary, in the MLM task, learning 
+to ﬁll in the missing words allows BERT to better model the representation of each word 
+in different contexts, while the NSP task helps BERT model the relationship between 
+two sentences. 
+BertForSequenceClassiﬁcation 
+For ﬁne-tuning the model, bert-base-uncased tokenizer, which consists of about 
+30,000 tokens, and BertForSequenceClassiﬁcation is applied. The dropout and linear clas- 
+siﬁer are added to BERT, with the logits for predicting categories as output. Then, the 
+objective function of the downstream task is used to train the classiﬁer from scratch and 
+ﬁne-tune the parameters of BERT. The Adam optimizer was chosen for training, and the 
+hyperparameters were as suggested by the authors of BERT: Batch size = 16, Learning rate 
+= 2 × 10−5, Epochs = 4, and epsilon = 1 × 10−8. 
+• 
+
+Since the distribution of data set categories in this study is heterogeneous, the Mathews 
+Correlation Coefﬁcient (MCC) was used to evaluate the test set performance. 
+In the 
+multiclass case, the Matthews correlation coefﬁcient can be deﬁned based on the confusion 
+matrix of K classes. To simplify the deﬁnition, consider the following intermediate variables: 
+
+
+
+
+tk = ∑K 
+i Cik, the number of times k classes actually occurred, 
+pk = ∑K 
+i Cki, the number of times class k was predicted, 
+c = ∑K 
+k Ckk, the total number of correctly predicted samples, 
+s = ∑K 
+i 
+
+
+
+
+
+
+
+
+
+
+k p2 
+k 
+
+k pk × tk 
+(cid:16) 
+
+k t2 
+k 
+
+
+
+
+We designed a module to satisfy the need for various communication tasks with real 
+therapists in our system. Therapists can join this chatroom to counsel the user one-on-one 
+or lead all the users to participate in group therapy. The communication capabilities were 
+implemented using the Photon engine, which is an online server provider that can be inte- 
+grated with Unity. Real-time verbal or text interactions with each user are supported and 
+realized with the help of a Photon engine. Each user, including the therapist, is represented 
+as an individual-chosen avatar in the virtual classroom. By choosing an avatar, people can 
+express their thoughts much more freely without worrying about being recognized. 
+
+To verify the effectiveness of the system, participants were invited to use the VR 
+chatbot system, and their scores on pre- and post-test questionnaires were compared to 
+measure whether the system could help them reduce their stress. Each participant ﬁlled 
+out a questionnaire in advance, and if they were screened to participate in the VR chatbot 
+experiment, the participant underwent two sessions of the VR chatbot experiment at least 
+one week apart. During the experiments, participants were able to log in to the platform 
+as a virtual avatar and interact with the chatbot. After two sessions of using the chatbot, 
+the participants ﬁlled out the questionnaire again to assess the difference in questionnaire 
+score before and after using the chatbot as an evaluation of the effectiveness of the VR 
+chatbot counseling. 
+The participant selection process included two ﬁlters. First, subjects with incom- 
+plete questionnaires were excluded. The subjects were then split according to their stress 
+levels in the ﬁrst part of the questionnaire using a median split, and the group with the 
+higher scores was randomly invited to participate in the virtual reality counseling chatbot 
+(VRECC) experiment. 
+
+The system framework is illustrated in Figure 7. The core module consists of three 
+components: a stress questionnaire to measure the user’s stress, mental state, and life prob- 
+lems, a counseling chatbot to talk to the user, and a chatroom for the user to communicate 
+with a real counselor. These three modules are implemented in an interface created by unity 
+and connected to a server. During the use of the modules, the system collects, analyzes, 
+and stores the user input in a database. 
+The participants’ selection ﬂow in this experiment is shown in Figure 8, with a total 
+of 176 valid questionnaires collected (i.e., 178 questionnaires surveyed and 2 incomplete 
+questionnaires excluded). The median split was applied to screen subjects with above- 
+median stress levels (n = 101) [53]. Subjects with above-median stress level scores were 
+randomly drawn and invited to participate in the two-time/session VRECC experiments. 
+
+This section introduces the experiment procedure shown in Figure 9. First, we con- 
+ducted a pre-test questionnaire survey to different backgrounds of students in university to 
+evaluate their scores in terms of stress level, psychological sensitivity, and life impact. This 
+research evaluated the students whose stress levels were higher than the median score of all 
+the questionnaire takers. Next, the randomly selected subjects/participants went through 
+the introduction and disclaimer of this VRECC experiment. Afterwards, they started using 
+the VRECC chatbot system. The participants underwent several rounds of asking and an- 
+swering questions. They could either interact with the chatbot through speaking or typing. 
+The chatbot would direct the participants to talk about their recent psychological distress, 
+and they could work on how to relieve the symptoms together. During the interaction 
+process, the user can feel consolation because of the sympathy and encouragement dialogue 
+provided by the chatbot. We then asked the user to re-test the chatbot system again after 
+one week. The one-week interval was designed to ensure better therapy reﬂection and 
+experience of the chatbot system. When the participants had accomplished operating the 
+chatbot system twice, they completed the post-test questionnaire. This research analyzed 
+the performance of using the system in the following sections. 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+municate with a real counselor. These three modules are implemented in an interface cre- 
+ated by unity and connected to a server. During the use of the modules, the system col- 
+lects, analyzes, and stores the user input in a database. 
+group counseling chatroom. 
+ 
+
+
+
+
+Figure 7. The system framework integrating the online questionnaire, counseling chatbot, and 
+The participants’ selection flow in this experiment is shown in Figure 8, with a total 
+of 176 valid questionnaires collected (i.e., 178 questionnaires surveyed and 2 incomplete 
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+Figure 7. The system framework integrating the online questionnaire, counseling chatbot, and group 
+counseling chatroom. 
+
+questionnaires excluded). The median split was applied to screen subjects with above- 
+median stress levels (n = 101) [53]. Subjects with above-median stress level scores were 
+randomly drawn and invited to participate in the two-time/session VRECC experiments. 
+
+
+
+In this study, a total of 176 valid initial questionnaires were collected. The subjects were 
+split using the median stress level in the questionnaire and the group with above-median 
+scores (101 subjects) was identiﬁed. From the above-median (stress level score ≥ 6) group, 
+17 male participants and 17 female participants were randomly drawn and recruited for 
+the VRECC experiments. They also completed the post-experiment questionnaires after 
+the two-time VRECC experiment. This section reports the analytical results of the subjects’ 
+questionnaire scores in various aspects (e.g., stress level, psychological sensitivity, and life 
+impact) to evaluate the effectiveness of the VRECC system. 
+
+Total of 178 randomly selected subjects completed the Student Stress Survey, and 
+two incomplete questionnaires were excluded (i.e., 176 valid questionnaires were collected). 
+Using the stress level as a criterion, these subjects were divided into two groups: 101 subjects 
+were in the above-median stress score group, and 75 were in the below-median score group. 
+Of the 101 subjects in the above-median stress score group, 34 were randomly selected and 
+recruited as the treatment group (TG) to participate in VRECC experiments. The 75 subjects 
+with below-median stress scores were treated as the control group (CG). 
+The demographic information of participants in the TG (Table 2) shows that the 
+average age of the participants was 22.77 years old, with the youngest being 20 years 
+old and the oldest being 26 years old. Among the VRECC participants, half were male 
+and half were female. The majority of the participants were in their ﬁrst year of their 
+master’s degree (41.18%), followed by the second year of their master’s degree (20.59%), 
+indicating that more than 60% of the respondents were in graduate school. In terms of the 
+departments, Industrial Engineering accounted for the most participants (73.53%), followed 
+by the Science and Management Department (5.88%). As for stress level, 17 participants 
+(50.00%) rated their stress level as 6, 16 participants (47.06%) rated their stress level as 7, and 
+the remaining 2 participants (5.88%) rated their stress level as 8. For stress coping ability, 
+the highest number of subjects (32.35%) rated themselves as 7, followed by 5 (23.53%). 
+
+The 95% conﬁdence intervals for the mean values of TG_PRE, TG_POST, and CG are 
+shown in the interval plots for each aspect of the questionnaire. The results showed that 
+in the interval plots of Stress level and Psychological sensitivity, TG_PRE, TG_POST, and 
+CG showed a decreasing trend as shown in Figures 10 and 11. However, there was no 
+decreasing trend in Life impact in Figure 12. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+During the interaction process, the user can feel consolation because of the sympathy and 
+encouragement dialogue provided by the chatbot. We then asked the user to re-test the 
+chatbot system again after one week. The one-week interval was designed to ensure better 
+therapy reflection and experience of the chatbot system. When the participants had ac- 
+complished operating the chatbot system twice, they completed the post-test question- 
+naire. This research analyzed the performance of using the system in the following sec- 
+tions. 
+
+
+
+
+
+
+
+
+
+ 
+ 
+Major/De- 
+partment 
+ 
+Industrial engineering 
+Technology management 
+Chemical engineering 
+Electronics 
+Economics 
+Engineering sys science 
+Early childhood education 
+Computer science 
+Others 
+Others 
+6 
+7 
+8 
+25 
+2 
+1 
+1 
+1 
+1 
+1 
+1 
+1 
+73.53 
+5.88 
+2.94 
+2.94 
+2.94 
+2.94 
+2.94 
+2.94 
+2.94 
+
+6 
+7 
+8 
+17 
+16 
+2 
+50.00 
+47.06 
+5.88 
+The 95% confidence intervals for the mean values of TG_PRE, TG_POST, and CG are 
+shown in the interval plots for each aspect of the questionnaire. The results showed that 
+in the interval plots of Stress level and Psychological sensitivity, TG_PRE, TG_POST, and 
+
+CG showed a decreasing trend as shown in Figures 10 and 11. However, there was no 
+decreasing trend in Life impact in Figure 12. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+# of 
+Participants 
+
+
+
+
+
+
+
+
+Male 
+Female 
+Undergraduate (2nd) 
+Undergraduate (3rd) 
+Undergraduate (4th) 
+Graduate (1st) 
+Graduate (2nd) 
+Doctorate 
+
+
+
+17 
+17 
+2 
+2 
+6 
+14 
+7 
+3 
+
+
+
+
+
+50.00 
+50.00 
+5.88 
+5.88 
+17.65 
+41.18 
+20.59 
+8.82 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Computer science 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1 
+1 
+17 
+16 
+2 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.94 
+2.94 
+50.00 
+47.06 
+5.88 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+Figure 13. (a) Interval plot for Behavioral impact of TG_PRE, TG_POST, and CG; (b) Interval plot for 
+Physical impact of TG_PRE, TG_POST, and CG; (c) Interval plot for Cognitive change of TG_PRE, 
+TG_POST, and CG; (d) Interval plot for “Social mode change” of TG_PRE, TG_POST, and CG. 
+
+ 
+ 
+
+
+
+ 
+ 
+ 
+
+
+ 
+ 
+
+According to the questionnaire design, Life impact can be further divided into Behav- 
+ioral impact, Physical impact, Cognitive change, and “Social mode change”. The respective 
+interval plots are shown in Figure 13. 
+
+
+
+
+
+ 
+ 
+
+According to the questionnaire design, Life impact can be further divided into Be- 
+havioral impact, Physical impact, Cognitive change, and “Social mode change”. The re- 
+spective interval plots are shown in Figure 13. 
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+To examine the effectiveness of the experiment on both Stress level and Psychological 
+sensitivity, further analysis was conducted. The paired sample t-test was used to examine 
+the difference in mean questionnaire scores between the TG before and after the experiment. 
+That is, TG_PRE and TG_POST. The independent sample t-test was used to examine the 
+difference in mean questionnaire scores between TG_PRE and CG, and TG_POST and CG. 
+The results show that there is a signiﬁcant difference in Stress level between TG_PRE and 
+CG, TG_PRE and TG_POST, and TG_POST and CG (p-value = 0.000). As for Psychological 
+sensitivity, there was no signiﬁcant difference between TG_PRE and CG, TG_PRE and 
+TG_POST, or TG_POST and CG. 
+
+The interval graphs (Figures 10 and 11) of stress level and psychological sensitivity il- 
+lustrate that the counseling chatbot system helped reduce the stress level and psychological 
+sensitivity of the participants, which demonstrated the effectiveness of VRECC adoption in 
+the experiment. The t-test results also showed that there was a signiﬁcant reduction in the 
+Stress level of participants after VRECC sessions (i.e., after the psychotherapy counseling 
+interventions), although the average stress score of the TG remained higher than the aver- 
+age score of the CG. Chen’s study showed that the more counseling sessions participants 
+received, the higher their level of self-involvement (and improvement may follow) [54]. 
+In Orlinsky’s study, it was further found that participants’ self-involvement was directly 
+proportional to the effectiveness of the counseling interventions [55]. That is, although 
+there was a decrease in participants’ stress, participating in only a few counseling sessions 
+(in our experiments, only two sessions per subject) will not lower stress to the level of the 
+CG’s, which was proven in our survey analytical results. 
+However, according to the interval plot of Life impact, the intervention has not been 
+effective on the subjects’ overall Life impact aspects (e.g., behavioral, physical, and cognitive 
+measures). Judging from these aspects (behavioral, physical, and cognitive questions) of 
+Life impact, the test results of people that had a higher pressure score before the experiment 
+were not improving and even somewhat deteriorating after receiving VRECC treatment. 
+Part of the reason might be the side effects of receiving psychotherapy. Treatment of anxiety 
+and trauma is well-known for having the risk of temporarily worsening symptoms [56]. 
+As a result, some of the subjects might experience unpleasant side effects. Lorenz has 
+performed experiments that further investigated the speciﬁc side effects after receiving 
+counseling. In the study, 14% of participants reported feeling ashamed of using therapy, 
+and 6% of participants reported new symptoms emerging [57]. In addition, disclosing 
+thoughts and feelings to instant messengers was demonstrated to be not as effective as face- 
+to-face disclosure [58]. It can be inferred that VRECC might not be as helpful as receiving 
+face-to-face therapy for these people; therefore, they did not improve their rating in the 
+questionnaire. In addition, according to Kim’s research, the agent’s voice in psychological 
+counseling affects the effectiveness of counseling. The results of the study showed that 
+the responses with older voices convinced users that the counselor was more professional 
+than those with younger voices [59]. The use of young female voices in this study may 
+be one of the reasons why the system was not effective, and future studies may try using 
+older voice responses. However, there is no research that clearly indicates the effectiveness 
+of counseling for different orientations, so the ineffectiveness of the three aspects of Life 
+impact (behavioral, physical, and cognitive questions) in this study cannot be explained, 
+and follow-up studies can be conducted in this direction. 
+Concerning the chatbot implementation, applying the emotional understanding of 
+words as part of the empathic responses into the chatbot dialog dataset presents an imi- 
+tation pattern closer to the in-person counseling sessions. The participants’ stress levels 
+decreased in the experiment, reﬂecting that the empathic conversations effectively created a 
+supportive environment. Another interesting outcome is that their psychological sensitivity 
+dropped slightly (but not signiﬁcantly), which indicates a possible need for more counsel- 
+ing sessions involving a real counselor in-person or online (such as our study in VR group 
+
+
+counseling [3]) when subjects are not totally at ease in an imitating session with a virtual 
+counselor (chatbot). Further, there may be more elements in the counseling language, such 
+as the variables and effectiveness of certain emotional and empathic vocabulary usages, to 
+be considered in further study. 
+Lastly, the participants of VRECC who lacked improvements were largely male (more 
+than twice the number of female subjects). This ﬁnding also coincides with some research 
+showing that female patients generally experience more effective improvement than male 
+patients during internet-based cognitive behavior therapies [60]. This could imply that 
+women may be more willing to express their feelings and receive feedback than men. 
+Again, future research should be carried out to investigate the clinical adoptions of effective 
+VRECC to patients with diversiﬁed demographic backgrounds. 
+
+Sentiment analysis and response provides a new way for counseling chatbots to help 
+students reduce stress. Virtual reality allows the user to be distant or to not show up in 
+person, reducing the difﬁculty of counseling. The study allowed users to chat with the 
+counseling chatbot and feel empathized with and healed by the process, thus achieving 
+the goal of counseling. The strength of the VRECC system is that it allows users to receive 
+counseling at any time and in any place, making it a ﬂexible aid for counselors. 
+We completed the initial development of the VRECC system, including the question- 
+naire module, the counseling chatbot module, and the chatroom module, and conducted 
+an experiment to verify the effectiveness of the system. The experiment examined whether 
+TG participants experienced a reduction in stress burden after VRECC. Two groups were 
+created from the questionnaire results of 176 subjects using median stress levels: one group 
+with higher stress levels and the other with lower stress levels. From the 101 people on the 
+waiting list with higher stress levels, 34 were randomly selected to participate in the VRECC 
+experiment as TG. At the end of the experiment, the participants in the TG were asked 
+to ﬁll out the same stress questionnaire. According to the results, there was a signiﬁcant 
+improvement in stress level after VRECC, but it still could not be reduced to the same 
+level as that of the CG. For Psychological sensitivity and Social impact, although there 
+was no signiﬁcant difference, there was a decreasing trend. However, there was no effect 
+in other aspects of Life impact such as Behavioral, Physical, and Cognitive measures. In 
+conclusion, the results of this study demonstrate the effectiveness of VRECC in reducing 
+students’ stress levels. Despite the signiﬁcant progress made in this study on student 
+stress reduction, VRECC is still far from satisfactory in terms of Life impact. For future 
+research, it is a challenge to explore the effectiveness of counseling on different aspects and 
+to introduce more counseling materials and techniques into the VRECC system. Although 
+VRECC shows promising effectiveness in counseling treatments, this study still has its 
+limitations and requires further research. For some people, there is still a gap between 
+counseling performed by a VR chatbot and having real conversations with a counselor. It is 
+always a challenge to overcome the authenticity issue of VR applications, and VRECC is 
+no exception. We look forward to further expanding the counseling knowledgebase and 
+adopting more sophisticated NLP language modeling techniques to improve therapist-like 
+dialogs for handling different psychologically induced scenarios. In addition, we will con- 
+tinue the research efforts of improving a realistic VR environment and present an authentic 
+psychotherapy experience for users. Most importantly, we will increase the effectiveness 
+of adopting VRECC as a supporting tool for the increasing need for student counseling 
+practices on campus. Furthermore, in the plan for a comprehensive VRECC development, 
+the advanced modules and their seamless integration of the VR empathy-centric chatbot, 
+virtual group counselling, and the psychological online survey will be the continuing 
+research focus. The intelligent and integrated system will serve as a virtual assistant to 
+the therapists who will lead the group therapies and perform counseling virtually (online), 
+eliminating constraints such as location, scheduling, and privacy issues. The conversations 
+and underlying emotions of group therapy participants during the session can be simul- 
+
+
+taneously input into the supporting empathy chatbot to support the therapist with better 
+counseling dialogs. 
+Author Contributions: Conceptualization, A.J.C.T. and C.V.T.; methodology, A.J.C.T., A.P.C.L., C.V.T. 
+and K.Y.K.H.; software, A.P.C.L. and K.L.K.T.; validation, C.V.T. and K.Y.K.H.; formal analysis, 
+A.P.C.L., K.Y.K.H. and A.J.C.T.; investigation, A.P.C.L. and K.L.K.T.; resources, A.J.C.T.; data curation, 
+A.P.C.L. and K.L.K.T.; writing—original draft preparation, A.J.C.T. and A.P.C.L.; writing—review 
+and editing, C.V.T. and K.Y.K.H.; visualization, A.P.C.L. and K.L.K.T.; supervision, A.J.C.T.; project 
+administration, A.J.C.T.; funding acquisition, A.J.C.T. and C.V.T. All authors have read and agreed to 
+the published version of the manuscript. 
+Funding: This research was funded by the Ministry of Science and Technology grant (MOST-110- 
+2221-E-007-113-MY3) and the National Tsing Hua University multi-disciplinary research grant. 
+Institutional Review Board Statement: This clinical experiment design was thoroughly reviewed 
+and approved by the Research Ethics Committee of National Tsing Hua University. The approval 
+number is 11009HE102. 
+
+
+
+
+
+
+
+
+8. 
+9. 
+Cohen, M. Student Guide to Surviving Stress and Anxiety in College & Beyond. Available online: https://www.learnpsychology. 
+org/student-stress-anxiety-guide/ (accessed on 10 May 2021). 
+Ye, Y.X.; Dai, Y.J.; Xie, B.T.; Jian, D.K. Survey of Life Changes and Mood during the COVID-19 Epidemic. Available online: 
+http://www.etmh.org/CustomPage/HtmlEditorPage.aspx?MId=1346&ML=3 (accessed on 20 May 2021). 
+Lin, A.P.; Trappey, C.V.; Luan, C.-C.; Trappey, A.J.; Tu, K.L. A Test Platform for Managing School Stress Using a Virtual Reality 
+Group Chatbot Counseling System. Appl. Sci. 2021, 11, 9071. [CrossRef] 
+APA. Different Approaches to Psychotherapy. Available online: https://www.apa.org/topics/psychotherapy/approaches 
+(accessed on 8 November 2021). 
+Summers, R.F.; Barber, J.P. Psychodynamic Therapy: A Guide to Evidence-Based Practice; Guilford Press: New York, NY, USA, 2010. 
+5. 
+6. Wolpe, J. The Practice of Behavior Therapy; Pergamon Press: Oxford, UK, 1990. 
+7. 
+Beck, A.T.; Weishaar, M. Cognitive therapy. In Comprehensive Handbook of Cognitive Therapy; Springer: Berlin/Heidelberg, Germany, 
+1989; pp. 21–36. 
+Raskin, N.J.; Rogers, C.R. Person-Centered Therapy; American Psychological Association: Washington, DC, USA, 2005. 
+Craske, M.G.; Meuret, A.E.; Ritz, T.; Treanor, M.; Dour, H.J. Treatment for anhedonia: A neuroscience driven approach. Depress. 
+Anxiety 2016, 33, 927–938. [CrossRef] [PubMed] 
+
+
+11. Diener, E.; Emmons, R.A.; Larsen, R.J.; Grifﬁn, S. The satisfaction with life scale. J. Personal. Assess. 1985, 49, 71–75. [CrossRef] 
+12. 
+Feldt, R.C. Development of a brief measure of college stress: The college student stress scale. Psychol. Rep. 2008, 102, 855–860. 
+[CrossRef] 
+13. Weinstein, L.; Laverghetta, A. College student stress and satisfaction with life. Coll. Stud. J. 2009, 43, 1161–1162. 
+14. Karyotaki, E.; Cuijpers, P.; Albor, Y.; Alonso, J.; Auerbach, R.P.; Bantjes, J.; Bruffaerts, R.; Ebert, D.D.; Hasking, P.; Kiekens, G. 
+Sources of stress and their associations with mental disorders among college students: Results of the world health organization 
+world mental health surveys international college student initiative. Front. Psychol. 2020, 11, 1759. [CrossRef] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22. Zhang, Q.; Karunanithi, M.; Kang, C. Immersive Augmented Reality (I Am Real)—Remote Clinical Consultation. In Proceedings 
+of the 2019 IEEE EMBS International Conference on Biomedical & Health Informatics (BHI), Chicago, IL, USA, 19–22 May 
+2019; pp. 1–4. [CrossRef] 
+
+
+
+
+
+
+
+
+tional Agent: Cross-sectional, Retrospective Observational Study. JMIR Form. Res. 2021, 5, e27868. [CrossRef] 
+Fitzpatrick, K.K.; Darcy, A.; Vierhile, M. Delivering Cognitive Behavior Therapy to Young Adults With Symptoms of Depression 
+and Anxiety Using a Fully Automated Conversational Agent (Woebot): A Randomized Controlled Trial. JMIR Ment. Health 2017, 
+4, e19. [CrossRef] 
+28. Minjeong, K. A Study of Chatbot Personality based on the Purposes of Chatbot. J. Korea Contents Assoc. 2018, 18, 319–329. 
+29. Yin, J.; Chen, Z.; Zhou, K.; Yu, C. A Deep Learning Based Chatbot for Campus Psychological Therapy. arXiv 2019, arXiv:1910.06707. 
+30. Tsaramirsis, G.; Buhari, S.M.; Al-Shammari, K.O.; Ghazi, S.; Nazmudeen, M.S.; Tsaramirsis, K. Towards simulation of the 
+classroom learning experience: Virtual reality approach. In Proceedings of the 2016 3rd International Conference on Computing 
+for Sustainable Global Development (INDIACom), New Delhi, India, 16–18 March 2016; pp. 1343–1346. 
+Stanica, I.; Dascalu, M.; Bodea, C.N.; Moldoveanu, A.D.B. VR Job Interview Simulator: Where Virtual Reality Meets Artiﬁcial 
+Intelligence for Education. In Proceedings of the 2018 Zooming Innovation in Consumer Technologies Conference (ZINC), Novi 
+Sad, Serbia, 30–31 May 2018; pp. 9–12. 
+
+
+
+
+https://www.studenthealth.gov.hk/tc_chi/health/health_ph/health_ph_stress.html (accessed on 21 April 2022). 
+Schneiderman, N.; Ironson, G.; Siegel, S.D. Stress and health: Psychological, behavioral, and biological determinants. Annu. Rev. 
+Clin. Psychol. 2005, 1, 607–628. [CrossRef] [PubMed] 
+Scott, S.B.; Graham-Engeland, J.E.; Engeland, C.G.; Smyth, J.M.; Almeida, D.M.; Katz, M.J.; Lipton, R.B.; Mogle, J.A.; Munoz, E.; 
+Ram, N.; et al. The Effects of Stress on Cognitive Aging, Physiology and Emotion (ESCAPE) Project. BMC Psychiatry 2015, 15, 146. 
+[CrossRef] [PubMed] 
+
+
+
+of-stress-on-the-body (accessed on 21 April 2022). 
+Fan, H.-C. Explanation of Fan’s Stress Scale. Wu-Nan Book Inc. (Publisher): Taipei, Taiwan. Available online: http://ocw.lib.ntnu. 
+edu.tw/course/view.php?id=276 (accessed on 21 April 2022). 
+Friedman, W.J. Types of Stress and Their Symptoms. Available online: https://www.mentalhelp.net/blogs/types-of-stress-and- 
+their-symptoms/ (accessed on 21 April 2022). 
+
+
+39. Corey, G. Theories and Practice of Counseling & Psychotherapy, 10th ed.; Brooks/Cole: Salt Lake City, UT, USA, 2020. 
+40. Ho, P.C.-C.; Lin, Y.-H. Theory and Practice of Counseling and Psychotherapy; Wu-Nan Book Inc. (Publisher): Tappei, Taiwan, 2013. 
+41. Cloud Computing Services. Available online: https://cloud.google.com/ (accessed on 19 April 2022). 
+42. Automatic Speech Recognition. Available online: https://cloud.google.com/speech-to-text (accessed on 19 April 2022). 
+43. Lifelike Speech Synthesis. Available online: https://cloud.google.com/text-to-speech (accessed on 19 April 2022). 
+44. RASA. Available online: https://rasa.com/ (accessed on 19 April 2022). 
+45. 
+46. CounselChat. Available online: https://counselchat.com/ (accessed on 28 November 2021). 
+47. Bertagnolli, N. Counsel Chat: Bootstrapping High-Quality Therapy Data. Available online: https://towardsdatascience.com/ 
+
+
+
+
+
+
+
+
+51. Russell, J.A. A circumplex model of affect. J. Personal. Soc. Psychol. 1980, 39, 1161. [CrossRef] 
+52. Liu, Z.; Xu, A.; Guo, Y.; Mahmud, J.; Liu, H.; Akkiraju, R. Seemo: A Computational Approach to See Emotions. In Proceedings 
+of the 2018 CHI Conference on Human Factors in Computing Systems, Montreal, QC, Canada, 21–27 April 2018; pp. 1–12. 
+[CrossRef] 
+
+
+
+Iacobucci, D.; Posavac, S.S.; Kardes, F.R.; Schneider, M.J.; Popovich, D.L. The median split: Robust, reﬁned, and revived. J. 
+Consum. Psychol. 2015, 25, 690–704. [CrossRef] 
+
+
+
+
+
+
+
+
+[CrossRef] 
+Iacovelli, A.M.; Johnson, C. Disclosure through face-to-face and instant messaging modalities: Psychological and physiological 
+effects. J. Soc. Clin. Psychol. 2012, 31, 225–250. [CrossRef] 
+
+
+Rating. Appl. Sci. 2021, 11, 2893. [CrossRef] 
+Spek, V.; Nyklíˇcek, I.; Cuijpers, P.; Pop, V. Predictors of outcome of group and internet-based cognitive behavior therapy. J. Affect. 
+Disord. 2008, 105, 137–145. [CrossRef] [PubMed] 

@@ -1,0 +1,625 @@
+International Journal of
+Environmental Research
+and Public Health
+Article
+Spatial Analysis of Ambient PM Exposure and
+2.5
+Bladder Cancer Mortality in Taiwan
+Hsin-LingYeh1,Shang-WeiHsu2,Yu-ChiaChang2,Ta-ChienChan3,Hui-ChenTsou1,
+Yen-ChenChang1andPo-HuangChiang1,4,*
+1 InstituteofPopulationHealthSciences,NationalHealthResearchInstitutes,Zhunan350,Taiwan;
+hsinlingyeh@nhri.org.tw(H.-L.Y.);candy10819@nhri.org.tw(H.-C.T.);ycchang@nhri.org.tw(Y.-C.C.)
+2 DepartmentofHealthcareAdministration,AsiaUniversity,Taichung413,Taiwan;
+victor_h@asia.edu.tw(S.-W.H.);ycchang@asia.edu.tw(Y.-C.C.)
+3 ResearchCenterforHumanitiesandSocialSciences,AcademiaSinica,Taipei115,Taiwan;
+dachianpig@gmail.com
+4 DepartmentofPublicHealth,ChinaMedicalUniversity,Taichung400,Taiwan
+* Correspondence:chiangp@nhri.org.tw;Tel.:+886-37-246-166(ext.36302)
+AcademicEditor:JasonK.Levy
+Received:21February2017;Accepted:5May2017;Published:10May2017
+Abstract: Fine particulate matter (PM ) is an air pollutant that is receiving intense regulatory
+2.5
+attention in Taiwan. In previous studies, the effect of air pollution on bladder cancer has been
+explored. This study was conducted to elucidate the effect of atmospheric PM and other local
+2.5
+riskfactorsonbladdercancermortalitybasedonavailable13-yearmortalitydata. Geographically
+weighted regression (GWR) was applied to estimate and interpret the spatial variability of the
+relationshipsbetweenbladdercancermortalityandambientPM concentrations,andothervariables
+2.5
+werecovariatesusedtoadjustfortheeffectofPM . AfterapplyingaGWRmodel,theconcentration
+2.5
+ofambientPM showedapositivecorrelationwithbladdercancermortalityinmalesinnorthern
+2.5
+TaiwanandfemalesinmostofthetownshipsinTaiwan.ThisisthefirsttimePM hasbeenidentified
+2.5
+asariskfactorforbladdercancerbasedonthestatisticalevidenceprovidedbyGWRanalysis.
+Keywords: fineparticles;airpollution;GeographicInformationSystems;BladderCancer;smoking
+1. Introduction
+Particulate matter (PM) is microscopic solid or liquid matter suspended in the atmosphere.
+Subtypesofatmosphericparticulatematterincludesuspendedparticulatematter(SPM),thoracicand
+respirableparticles[1],inhalablecoarseparticles,whichareparticleswithadiameterbetween2.5and
+10micrometers(µm),fineparticleswithadiameterof2.5µmorless[2](PM ),ultrafineparticles
+2.5
+(PM ), and soot. PM is found in secondary production through photochemical reactions from
+10 2.5
+hydrocarbonsandoxidesofnitrogenintheair[2]orintheemissionofmotorvehicles[3]. PM also
+2.5
+hasbeenconfirmedtobeassociatedwithhealthrisksincludingelevatedmorbidity[4–8]inhuman
+populationsaroundtheworld. Numerousepidemiologicalstudieshaveshownassociationsbetween
+PM exposure and respiratory-related mortality, and cardiovascular-related diseases [9,10]. Few
+2.5
+studieshaveexploredtheeffectofairpollutiononbladdercancerspecifically.AstudyinSpainpointed
+outthatlong-termexposuretopolycyclicaromatichydrocarbons(PAHs)anddieselengineemissions
+fromindustriesnearresidentialareaswasassociatedwithhigherriskofbladdercancer[11]. InTaiwan,
+onematchedcase-controlstudyfoundadose-dependenteffectofexposuretoNO ,SO ,andPM
+2 2 10
+onbladdercancermortality[12]. InBrazil,acorrelationwasobservedbetweenPM exposureand
+10
+bladdercancerincidence[13]. IntheUnitedStates,airpollutionozonedayswerepositivelyassociated
+withincreasedbladdercancermortality[14]. Increasedhealthrisksofbladdercancerfromexposure
+Int.J.Environ.Res.PublicHealth2017,14,508;doi:10.3390/ijerph14050508 www.mdpi.com/journal/ijerph
+Int.J.Environ.Res.PublicHealth2017,14,508 2of14
+toPM inairwerefoundinmostofthesestudies. However,noreporthasyetfoundanassociation
+10
+betweenexposuretothesmallerPM andbladdercancermortality,althoughinthefieldofoccupation
+2.5
+medicine,anassociationwasfoundbetweenbladdercancerincidenceandPAHexposure[15,16],and
+theconcentrationofPAHsinairwasfoundtobecorrelatedtoPM . Thus,PM mightplayarolein
+2.5 2.5
+theetiologyofbladdercancer.
+Previous studies indicated that risk factors associated with bladder cancer include cigarette
+smoking,occupationalexposureinthetextileindustry[17],arsenicindrinkingwater,environmental
+pollution,sex,andsocioeconomicstatus[18,19]. Theage-adjustedbladdercancermortalityinTaiwan
+rangedfrom2.18to2.73per100,000populationduring2000–2012,andtheage-adjustedbladdercancer
+incidencerangedfrom5.93to8.06per100,000population[20]. Boththemortalityandincidenceof
+bladdercancerweredecliningduringthis13-yearperiod. However,thegeographicallyspecificrisks
+ofbladdercancermortalitypersistedinsomeareassuchaswhereBlackfootdisease(BFD)isendemic,
+andexposuretoarsenicinwellwatersasaspecificriskfactoriswelldocumented[18,19]. Thus,this
+studywasconductedtoelucidatetheeffectoflocalriskfactorsonbladdercancermortalitybasedon
+theavailable13-yearmortalitydata. Toshowthespatialheterogeneityriskfactors,geographically
+weightedregression(GWR)wasemployedindataanalysis.
+2. MaterialsandMethods
+All the data and variables used were retrieved and derived from government statistical data
+publishedonwebsites,thusinformedconsentwasnotneeded. Allresultswerepresentedbysex.
+2.1. Age-AdjustedMortalityRates
+Theage-adjustedbladdercancermortalityratesatthetownshiplevelweredownloadedfrom
+thewebsiteoftheHealthPromotionAdministration,MinistryofHealthandWelfareofTaiwan[20].
+The World Health Organization’s world standard population in 2000 was used as the reference
+population. Thereare352townshipsin19citiesorcounties,onthemainislandofTaiwan. Inorder
+to focus on the effect of PM and other risk factors rather than arsenic exposure, we excluded
+2.5
+fourBFD-endemictownshipslocatedinsouthwesternTaiwan. Theremaining348townshipswere
+includedforfurtheranalysis, ontheassumptionthatthearsenicconcentrationsindrinkingwater
+aresimilarinthesetownships. TheInternationalClassificationofDiseases,NinthRevision(ICD-9)
+codes188wereusedforthedefinitionsofbladdercancer. TheringmaptoolboxofArcGISwasapplied
+todisplaythespatio-temporaldistributionofbladdercancermortalityrateof19citiesorcounties
+(including352townships)from2000to2012simultaneously[21].
+2.2. SmokingRates
+The smoking rates were accessed from “Adult Smoking Behavior Surveillance System” of
+Taiwan [22]. The average smoking rate (% smokers among total population) was computed for
+eachcityorcounty;thelimitationsofthesedatahavebeendiscussedelsewhere[23].
+2.3. PM Concentration
+2.5
+The daily levels of PM at 73 monitoring stations from 2006 to 2011 were acquired from the
+2.5
+EnvironmentalProtectionAdministration(EPA)[23]. Theannualaverageconcentrationofambient
+PM (µg/m3)wascomputedforeachstation. ThentheempiricalBayesianKriging[24]inArcGIS
+2.5
+(ArcMap,version10.3;ESRIInc.,Redlands,CA,USA)wasusedtointerpolatetheannualconcentrations
+throughoutTaiwan,andthezonalstatisticsfunctionwasusedtocalculatetheaverageconcentration
+foreachtownship. Finally,weaveragedtheannualPM concentrationsforeachtownship.
+2.5
+Int.J.Environ.Res.PublicHealth2017,14,508 3of14
+2.4. DensityofHealthCareFacilities
+The density of health care facilities of each township was used as the proxy indicator
+for the spatial disparity of health care resources diversity. The mean number of the
+National-Health-Insurance-contractedhospitalsorclinicsduring2008–2012ineachtownshipwas
+retrieved as the numerator of the density of health care facilities, and the denominator was the
+area(km2)ofeachtownship. TheNationalHealthInsuranceofTaiwanisacompulsoryuniversal
+single-payersocialhealthinsurancesystem,whichcoversover99%ofthepopulationinTaiwan[25].
+2.5. AreaDeprivationIndex(ADI)
+The area deprivation index (ADI) of this present study was composed of the standardized
+proportion of elementary occupations (including simple farming, forestry, fishing, and animal
+husbandry) and the standardized drop-out rate of students aged 15 to 17 from school. The ADI
+formula has been used in Taiwan as a proxy indicator for socioeconomic status [26]. Data were
+acquiredfromthepopulationandhousingcensusdataoftheyear2010[27].
+2.6. PercentageofAboriginalandElderlyPopulation
+Thepercentageofaboriginalpopulationatthetownshiplevelfrom2008to2011wasdirectly
+downloaded from the social-economic database of the Ministry of the Interior, Republic of China
+(Taiwan)[28]. Thepercentageoftheelderlypopulation(aged65orolder)atthetownshiplevelwas
+computedfromthehouseholdregistrationdataoftownshipsfrom2000to2012.
+2.7. PercentageofWorkersinTextileIndustry
+Thepercentageofworkersinthetextileindustryatthecityorcountylevelin2006wastaken
+fromtheindustry,commerce,andservicecensus[27].
+2.8. StatisticalAnalysis
+To understand the relationship between bladder cancer mortality and possible risk factors
+includingsmoking,PM ,densityofhealthcarefacilities,areadeprivationindex,andpercentages
+2.5
+ofaborigines,elderly,andtextileworkersamongthepopulation,GWRwascarriedouttoestimate
+andinterpretthespatialvariabilityoftheirrelationships[23,29,30]. GWRisapowerfulmethodfor
+exploringspatialheterogeneity,throughextendingtraditionalregressionbyallowinglocalvariations
+inratesofchangesothatthecoefficientsinthemodelareestimatedatspecificlocations[31]. Unlike
+conventionalordinaryleast-squaresregressionanalysis(OLS),GWRmodelisatypeoflocalstatistic
+inwhichtheparameterestimationsvaryoverspace,andhenceeachareahasdifferentcoefficients.
+Theassumptionofspatialnon-stationarityismadeinGWR,whichmeansthecorrelationsbetween
+the independent variable and dependent variables are not the same for every area [30]. First of
+all,Rsoftware3.2.1(RDevelopmentCoreTeam,Vienna,Austria)[32]wasusedtoruntheOLSto
+determinethecorrelationsbetweenbladdercancermortalityandtheriskfactorsconsidered. Then,free
+softwareGWR4.0(RitsumeikanUniversity,Kyoto,Japan)[33]wasusedtoruntheGWRanalysis [34].
+ThecoefficientsofeachexplanatoryvariableandtheR-squareinbothOLSandGWRaresummarized
+intheresults. Theresidualmapsandthespatialdistributionofthesignificantexplanatoryvariables
+afteraGWRanalysiswillbedisplayedintheresultswithArcGIS(ArcMap,version10.3;ESRIInc.,
+Redlands,CA,USA).ALocalMoran’sI(LocalIndicatorsofSpatialAssociation,LISA)clustermapof
+theresidualswascreatedforidentifyingtheclusterswhichcannotbeexplainedbythecurrentrisk
+factors[23]. TheLISAmethodshowsfourtypesofstatisticallysignificanthigh/lowclusters,inwhich
+ahighvalueissurroundedprimarilybyhighvaluescalledahigh-highcluster,andsoon. Finally,we
+findthesignificantpredictorsofbladdercancermortalitybyusingtheresultsofdifferenceofcriterion
+afterGWR.Anegativevalueofdifferenceofcriterionsuggestsspatialvariabilityintermsofmodel
+selectioncriteria.
+Int.J.Environ.Res.PublicHealth2017,14,508 4of14
+3. Results
+Theage-adjustedbladdercancermortalityrateinmalessignificantlydeclinedgraduallyfrom
+3.66per100,000in2000to3.01per100,000in2012(p<0.05)andtheresultforfemalesalsosignificantly
+declinedfrom1.65per100,000in2000to1.49per100,000in2012(Figure1,p<0.05). Onaverage,the
+moII nrnttt ..a JJl.. iEEtnyn vv iiirrnoo nnm.. RR eae ssl.. e PPsuu bbwll ii cca HHsee aatllwtt hh o22 00t11i77m,, 11e44 ,,s 55 00h88i g herthanthemortalityinfemales. InFigure2, thering44 oomff 11a44p s
+present the age-adjusted mortality rates of bladder cancer in 19 cities or counties across 13 years.
+years. The spatial distribution shows that in southwestern Taiwan, especially Chiayi county and
+years. The spatial distribution shows that in southwestern Taiwan, especially Chiayi county and
+ThespatialdistributionshowsthatinsouthwesternTaiwan,especiallyChiayicountyandTainancity,
+Tainan city, there were persistently higher mortality rates than other cities or counties. The reason is
+Tainan city, there were persistently higher mortality rates than other cities or counties. The reason is
+therewerepersistentlyhighermortalityratesthanothercitiesorcounties. Thereasonisthatthere
+that there were four BFD endemic townships in those two regions, as we mentioned in the method
+that there were four BFD endemic townships in those two regions, as we mentioned in the method
+werefourBFDendemictownshipsinthosetworegions,aswementionedinthemethodsection. Thus,
+section. Thus, we excluded those four townships to avoid the confounding effect in the following
+section. Thus, we excluded those four townships to avoid the confounding effect in the following
+weexcludedthosefourtownshipstoavoidtheconfoundingeffectinthefollowinganalysis.
+analysis.
+analysis.
+Figure 1. Temporal trend of age-adjusted mortality of bladder cancer in Taiwan, 2000–2012 (Performs
+FigFuirgeur1e. 1T.e Tmepmoproarlatlr etrnedndo foaf gage-ea-addjujussteteddm moorrttaalliittyy ooff bbllaaddddeerr ccaanncceerr inin TTaaiwiwanan, 2,020000–02–021021 (2P(ePrfeorrfmorsm s
+chi-squared test for trend in proportions).
+chic-hsqi-usqaureadretde sttesfot rfotrr etrnedndin inp rporpooprotritoionns)s.).
+Figure 2. Spatio-temporal distribution of bladder cancer age-adjusted mortality rates with ring map
+FigFuirgeur2e. S2p. Saptiaot-itoe-mtepmoproarladl idstirsitbriubtuiotinono fobf lbaldaddedrerc acnacnecrera gage-ea-addjujussteteddm moorrttaalilittyy rraatteess wwiitthh rriinngg mmaapp in
+in city or county level during 2000–2012. (A) Male (B) Female.
+cityino critcyo uorn ctyoulenvtye lledvuerli dnugr2in0g0 02–020001–22.0(1A2.) (MA)a Mlea(lBe) (BFe) mFeamlea.le.
+In Table 1, the OLS model was applied to demonstrate the relationship between bladder cancer
+In Table 1, the OLS model was applied to demonstrate the relationship between bladder cancer
+aa gg ee -- aa dd jj uu ss tt ee dd mm oo rr tt aa ll ii tt yy aa nn dd tt hh ee rr ii ss kk ff aa cc tt oo rr ss .. FF oo rr mm aa ll ee ss ,, aa mm bb ii ee nn tt PP MM 22 .. 55 cc oo nn cc ee nn tt rr aa tt ii oo nn aa nn dd ee ll dd ee rr ll yy
+population showed significant positive correlations with bladder cancer mortality (p < 0.05), and the
+population showed significant positive correlations with bladder cancer mortality (p < 0.05), and the
+ADI and percentage of the aborigines had significant inverse correlation with bladder cancer
+ADI and percentage of the aborigines had significant inverse correlation with bladder cancer
+mm oo rr tt aa ll ii tt yy (( pp << 00 .. 00 55 )) .. TT hh ee oo vv ee rr aa ll ll aa dd jj uu ss tt ee dd RR -- ss qq uu aa rr ee ww aa ss 99 .. 22 %% .. FF oo rr ff ee mm aa ll ee ss ,, ss mm oo kk ii nn gg rr aa tt ee ,, aa mm bb ii ee nn tt PP MM 22 .. 55
+Int.J.Environ.Res.PublicHealth2017,14,508 5of14
+InTable1,theOLSmodelwasappliedtodemonstratetherelationshipbetweenbladdercancer
+age-adjusted mortality and the risk factors. For males, ambient PM concentration and elderly
+2.5
+population showed significant positive correlations with bladder cancer mortality (p < 0.05), and
+the ADI and percentage of the aborigines had significant inverse correlation with bladder cancer
+mortality(p<0.05). TheoveralladjustedR-squarewas9.2%. Forfemales,smokingrate,ambientPM
+2.5
+concentration,andhealthcarefacilitiesdensitydisplayedsignificantpositivecorrelationswithbladder
+cancer mortality (p < 0.05), but the percentage of aboriginal population demonstrated significant
+inverse correlation with bladder cancer mortality (p < 0.05). The overall adjusted R-square was
+13.2%. Thevarianceinflationfactor(VIF)valueswereallbelow7.5,whichindicatesthattherewasno
+collinearityproblem.
+Table1.Explanatoryfactorsforbladdercancerage-adjustedmortalityratesbyordinaryleastsquares
+modelattownshiplevel,Taiwan,2000–2012.(Blackfootdisease(BFD)-endemictownshipexcluded,
+N=348).
+Variables Coefficient S.E. p-Value VIF
+Male
+Areadeprivationindex −0.181 0.079 0.022* 1.267
+Smokingrates(%) 0.050 0.034 0.146 1.551
+PM concentration(µg/m3) 0.045 0.012 <0.001* 1.155
+2.5
+Aborigines(%) −0.010 0.004 0.020* 1.307
+Healthcarefacilities(perkm2) 0.003 0.007 0.708 1.227
+Workersintextileindustry(%) 0.006 0.022 0.805 1.364
+Elderlypopulation(%,age≥65) 0.172 0.067 0.011* 1.289
+AdjustedR-square 9.2%
+Female
+Areadeprivationindex −0.062 0.050 0.216 1.451
+Smokingrates(%) 0.064 0.039 0.100 2.294
+PM concentration(µg/m3) 0.036 0.010 0.001* 2.042
+2.5
+Aborigines(%) −0.011 0.003 <0.001* 1.332
+Healthcarefacilities(perkm2) 0.010 0.004 0.021* 1.144
+Workersintextilesindustry(%) 0.008 0.013 0.566 1.234
+Elderlypopulation(%,age≥65) 0.025 0.028 0.381 1.480
+AdjustedR-square 13.2%
+*p-value<0.05,statisticalsignificance.PM2.5,Fineparticulatematter;VIF,varianceinflationfactor.
+Weusedthequartilemethodtorepresentthedistributionofcoefficientsacrossthe348townships
+inTable2. ThesummarystatisticsofthecoefficientsafterapplyingGWRforeverytownshiparelisted.
+Forthemales,themediansofthreefactors’coefficientsincludingsmokingrate,healthcarefacilities
+density, and the population of elderly are all positively correlated with bladder cancer mortality.
+TheoveralladjustedR-squarewas16.2%. Forthefemales,themediansofsmokingrate,PM ,health
+2.5
+care facilities density, percentage of working in textile industry, and the percentage of the elderly
+populationwereallpositivelycorrelatedwithbladdercancermortality. TheoveralladjustedR-square
+was20%.
+TheresidualmapsafterGWR(adjustedforalltheabovevariables)areshowninFigure3. They
+indicatethatthestandardresidualinmanytownshipsremainedlargerthan2. Thus,weusedlocal
+Moran’sItoidentifythelocalhigh-highclustersofresiduals. Forbothmalesandfemales(Figure4),
+thehigh-highclusterswereallinsouthernTaiwan,includingKaohsiungCityandTainanCity.
+Int. J. Environ. Res. Public Health 2017, 14, 508 6 of 14
+Table 2. The explanatory factors for bladder cancer age-adjusted mortality rates by geographically
+weighted regression at township level, Taiwan, 2000–2012 (BFD-endemic townships excluded).
+1st 3rd
+Variables N Median R. STD.
+Quartile Quartile
+Int.J.Environ.Res.PublicHealth2017,14,508 6of14
+Male
+Area deprivation index 348 −0.363 −0.114 −0.068 0.219
+SmToakbinleg2 r.aTtehse (e%xp) lanatoryfactorsfor3b4l8a dderca−n0c.e0r7a0g e-adjus0te.0d2m2 ortalityr0a.0te6s1b ygeograp0h.i0c9al7ly
+PMw 2.5e icgohntecdenrtergarteisosnio (nμagt/tmow3)n shipleve3l4,T8a iwan,2−000.00–2200 12(BFD−0-e.0n0d2e mictow0n.s0h5ip6 sexcluded)0..056
+Aborigines (%) 348 −0.017 −0.016 −0.013 0.003
+Variables N 1stQuartile Median 3rdQuartile R.STD.
+Health care facilities (per km2) 348 −0.005 0.007 0.013 0.013
+WMoarlkeers in textiles industry (%) 348 −0.024 −0.014 0.011 0.026
+EAldreeralyd epporipvuatliaotnioinn d(e%x, age ≥ 65) 334488 0−.10.2316 3 0.−1403.1 14 0.2−300. 068 0.00.28119
+ASdmjuosktiendg Rra-tseqsu(%ar)e 1364.28% −0 .070 0 .022 0.061 0. 097
+PM concentration(µg/m3) 348 −0.020 −0.002 0.056 0.056
+Fema2.l5e
+Aborigines(%) 348 −0.017 −0.016 −0.013 0.003
+A Hre ea a ld thep car ri eva fat cio iln iti ein sd (pe ex r k m2) 33 44 88 − −0. 01 .01 03 5 −0.0 06 .00 0 7 0.02 08 .0 13 0. 01 .00 15 3
+SmWoorkkienrgs irnatteexs t(il%es) industry(%) 334488 0−.00.4022 4 0.−0502.0 14 0.0605.0 11 0.00.01276
+PEMld 2.e
+5
+rcloynpcoepnutlraattiioonn( %(μ,gag/me≥3) 65) 334488 00.0.10271 0.001.124 3 0.0202.2 30 0.00.01811
+AAbdojruigstiendeRs -(s%qu) are 163.24%8 −0.015 −0.009 −0.008 0.005
+HFeeamltahl ecare facilities (per km2) 348 0.013 0.015 0.018 0.004
+WAorrekaedresp irniv taetxiotinlein idnedxustry (%) 334488 0−.00.0151 3 0.−0008.0 60 0.0106.0 28 0.00.10085
+ESldmeorklyin pgorpatuelsa(t%io)n (%, age ≥ 65) 334488 00.0.00492 0.001.015 2 0.0102.0 65 0.00.00137
+APdMju2s.5tecdon Rce-snqtruaatiroen (µg/m3) 23408% 0.0 07 0 .012 0.022 0. 011
+Aborigines(%) 348 −0.015 −0.009 −0.008 0.005
+Healthcarefacilities(perkm2) Note: 3 R 48. STD. = Ro 0b .u 01st 3 standard er 0r .0o 1r. 5 0.018 0.004
+WTorhkee rrseisnidteuxatill eminapdus satfrtye(r% G)WR (ad34ju8sted for a0l.l0 t0h5e above va0r.0ia0b8les) are sh0.o0w16n in Figur0e.0 308. They
+Elderlypopulation(%,age≥65) 348 0.009 0.011 0.012 0.003
+indicate that the standard residual in many townships remained larger than 2. Thus, we used local
+AdjustedR-square 20%
+Moran’s I to identify the local high-high clusters of residuals. For both males and females (Figure 4),
+Note:R.STD.=Robuststandarderror.
+the high-high clusters were all in southern Taiwan, including Kaohsiung City and Tainan City.
+Figure3.Theresidualmapsforbladdercancerage-adjustedmortalityratesbygeographicallyweighted
+regressionfrom2000to2012.(A)Male(B)Female.
+Int. J. Environ. Res. Public Health 2017, 14, 508 7 of 14
+Figure 3. The residual maps for bladder cancer age-adjusted mortality rates by geographically
+Int.J.Environ.Res.PublicHealth2017,14,508 7of14
+weighted regression from 2000 to 2012. (A) Male (B) Female.
+FFiigguurree 44.. LLooccaall MMoorraann’’ss II ooff tthhee rreessiidduuaallss bbyy ggeeooggrraapphhiiccaallllyy wweeiigghhtteedd rreeggrreessssiioonn ffrroomm 22000000 ttoo 22001122..
+((AA)) MMaallee ((BB)) FFeemmaallee..
+In order to show the effects of the significant risk factors for the mortality rates of bladder cancer,
+Inordertoshowtheeffectsofthesignificantriskfactorsforthemortalityratesofbladdercancer,
+we displayed the spatial distribution of four significant predictors of bladder cancer mortality in
+wedisplayedthespatialdistributionoffoursignificantpredictorsofbladdercancermortalityinmales
+males (Figure 5). In males, the smoking rate and PM2.5 both had higher positive correlations with
+(Figure5). Inmales,thesmokingrateandPM bothhadhigherpositivecorrelationswithbladder
+2.5
+bladder cancer mortality in northern Taiwan; although the area deprivation index showed negative
+cancermortalityinnorthernTaiwan;althoughtheareadeprivationindexshowednegativecorrelation
+correlation with bladder cancer mortality, especially in southern Taiwan. However, the population
+with bladder cancer mortality, especially in southern Taiwan. However, the population of elderly
+of elderly males showed positive correlation with bladder cancer mortality, especially in central and
+malesshowedpositivecorrelationwithbladdercancermortality,especiallyincentralandsouthern
+southern Taiwan. In females (Figure 6), smoking rate, PM2.5, health care facilities density, and the
+Taiwan. Infemales(Figure6),smokingrate,PM ,healthcarefacilitiesdensity,andthepopulationof
+2.5
+population of elderly all showed positive correlations with bladder cancer mortality; area deprivation
+elderlyallshowedpositivecorrelationswithbladdercancermortality;areadeprivationindexshowed
+index showed a positive effect only in northern Taiwan, while the percentage of female aborigines
+apositiveeffectonlyinnorthernTaiwan,whilethepercentageoffemaleaboriginesshowedanegative
+showed a negative effect throughout all of Taiwan.
+effectthroughoutallofTaiwan.
+4. Discussion
+This paper presents a 13-year spatial-temporal distribution of age-adjusted bladder cancer
+mortality, and identifies possible cluster areas for future epidemiologic investigation. In this study,
+we first excluded the arsenic exposure in four BFD townships to disentangle the effects between PM
+2.5
+and arsenic exposure on bladder cancer mortality. Spatial variation of the risk factors indeed existed
+in this study. Thus, the overall R-square performance was elevated 7% from OLS to GWR. Although
+the temporal trend of bladder cancer mortality was declining, we still found some local clustering
+townships in southern Taiwan which could not be explained by the current explanatory variables.
+In accordance with previous studies, this study has found that elderly male subjects were more
+prone to develop bladder cancer than females. Aside from age and sex, there are several other risk
+factors for bladder cancer, including smoking, industrial exposure, certain medicines or herbal
+dietary supplements, arsenic in drinking water, lack of fluids intake, etc. [35]. Among the risk factors
+analyzed in this study, the smoking rates of both sexes were positively correlated with bladder cancer
+Int. J. Environ. Res. Public Health 2017, 14, 508 8 of 14
+mortality. However, the spatial effects of smoking rate were different. In males, the effect in northern
+Taiwan was higher, but in females, the effect in southern Taiwan was higher. In the results of one
+meta-analysis [36], cigarette smoking had a higher probability of inducing a more malignant type of
+Int.J.Environ.Res.PublicHealth2017,14,508 8of14
+urothelial carcinoma and an increased risk of dying due to bladder cancer.
+FFiigguurree 55.. GeGogeoragprhapichailc adlistdriisbturitbiountiso onfs thofe stheleecsteedle cstiegdnifsiicgannitfi pcarendticptroerds icotfo mrsaloef bmlaadldeerb lcaadndceerr
+cmaonrctearlimty.o (rAta)l iAtyr.ea( AD)epArrievaatDioenp Irnivdaetxio (nADInId);e (xB)( ASmDIo)k;i(nBg) rSamteos;k (iCng) PrMate 2.s
+5
+;co(Cnc)ePnMtra2.t5iocno;n (cDe)n Etrladteiorlny;
+(pDo)pEulldateirolny. population.
+IInntt.. JJ.. EEnnvviirroonn.. RReess.. PPuubblliicc HHeeaalltthh 22001177,, 1144,, 550088 99o off1 144
+Figure 6. Geographical distributions of the selected significant predictors of female bladder cancer
+Figure6. Geographicaldistributionsoftheselectedsignificantpredictorsoffemalebladdercancer
+mm oo rr tt aa ll ii tt yy .. (( AA )) AA rr ee aa D De ep pr ri iv va at ti io on n I In nd de ex x; ; ( (B B) ) S Sm mo ok kin ing g ra rate ts e; s ( ;C (C) P )M PM2.5 con coce nn cetr na tt ri ao tn io; ( nD ;) ( DA )b Aor big oi rn ige is n; e(E s;)
+2.5
+Health care facilities; (F) Elderly population.
+(E)Healthcarefacilities;(F)Elderlypopulation.
+4. DisP cM us2s.5i oh nad significant positive correlation with bladder cancer mortality in the OLS analysis.
+From the GWR analysis, PM2.5 had higher positive correlation with bladder cancer mortality in males
+in noTrhthiserpna pTeariwparne saenndts feam1a3l-eyse ianr csepnattriaall -Tteamiwpaonr.a Ilnd fiesmtriableust,i obnladofdearg cea-andcejurs mteodrtballaitdyd ienr mcaonsct eorf
+mthoer ttaolwityn,sahnipdsi dsheonwtifieeds ap poosssiibtilveec cluosrrteerlaatrioeans wfoitrhf uPtMur 2e .5.e Ipni doneme oiof ltohgei cprinevveiosutisg asttuiodni.eIsn, btlhaidsdsteurd cya,nwceer
+fimrsotretaxlcitluy dine dAtmheeraircsae wniacse fxopuonsdu rteo ibnef hoiugrhBeFr Din taorweanss hwiipths thoigdhis penotpaunlgalteiotnh edeenffseictyts, bsuetgwgeesetninPgM th2.a5t
+aan pdoasrssiebnlei ccaeuxpseo smuirgehotn beb laaidr dpeorllcuatniocner [3m7o].r Rtaelistuyl.tSs poaf toianlev caarsiea-tcioonntorfotl hseturdisyk ifna cTtaoirwsainnd aelesod sehxoiswteedd
+itnhtaht iNssOtu 2,d SyO. 2T, haunsd, tPhMe 1o
+0
+vaellr ahlaldR -ssigqnuiafriecapnetr efoffremctasn ocne bwlaadsdeleerv caatnedce7r %mforrotmalitOyL [S12t]o. GWR.Although
+theteTmhpeo GraWltRr ernedsuoltf ibnldadicdaetersc tahnacte hremalotrht aclaitrye fwacaislidtye cdliennisnigty, wis epsotsiiltlifvoeulyn dcosroremlaetelodc awlicthlu bstlaedridnegr
+tcoawnncesrh impsorintasliotyu tihne brnotTha siwexaens. wThhiics hmcaoyu blde naotttribbeuetexdp ltaoi nheidghblyy tuhrebacunrizreendt aerxepalsa wnaittho rhyigvha rdiaebnlseisty. of
+healtIhncaacrceo irndsatintucetiwonitsh [3p8r]e avniodu asisrt puodlileust,iothni s[3s7tu].d yhasfoundthatelderlymalesubjectsweremore
+proneTthoed AevDeIl oopf bthlaed pdreersceannt csetrutdhya ncafnem reaplerse.seAnsti dtheef ruormbaangiezaatniodns elexv,ethl eorfe taorwenssehvieprsa linot hTeariwriasnk,
+fbaectcoarussfeo ritb ilnacdlduedrecda nthceer ,sitnacnlduadridnigzesmd opkrionpgo,ritniodnu sotrfi aelleemxpeonstuarrey, coecrctuapinatmioendsi cainneds tohreh setrabnadladridetiazreyd
+ssucphpoloelm dernotps,-oaurste rnaitcei nofd srtinukdienngtsw aagteerd, l1a5ck too f1fl7u. iTdhsei nhtiagkhee,re tAc.D[3I 5i]s., Athmeo lnegsst htheer iuskrbfaanctiozrastiaonna loyfz tehde
+itnotwhnisshstiupd, ya,ntdh ethsem foewkienrg proaltleustaonftbso tthhesreex aersew freorme pinodsiutisvterileysc aonrrde tlarateffdicw. Tithhisb mladigdhetr ecxapnlcaeirn mwohryta AliDtyI.
+is negatively correlated with bladder cancer mortality in males. Females from less urbanized
+townships having higher bladder cancer mortality could be attributable to indoor PM2.5 exposure.
+Int.J.Environ.Res.PublicHealth2017,14,508 10of14
+However,thespatialeffectsofsmokingrateweredifferent. Inmales,theeffectinnorthernTaiwanwas
+higher,butinfemales,theeffectinsouthernTaiwanwashigher. Intheresultsofonemeta-analysis[36],
+cigarettesmokinghadahigherprobabilityofinducingamoremalignanttypeofurothelialcarcinoma
+andanincreasedriskofdyingduetobladdercancer.
+PM hadsignificantpositivecorrelationwithbladdercancermortalityintheOLSanalysis. From
+2.5
+theGWRanalysis,PM hadhigherpositivecorrelationwithbladdercancermortalityinmalesin
+2.5
+northernTaiwanandfemalesincentralTaiwan. Infemales,bladdercancermortalityinmostofthe
+townshipsshowedapositivecorrelationwithPM . Inoneofthepreviousstudies,bladdercancer
+2.5
+mortalityinAmericawasfoundtobehigherinareaswithhighpopulationdensity,suggestingthata
+possiblecausemightbeairpollution[37]. Resultsofonecase-controlstudyinTaiwanalsoshowed
+thatNO ,SO ,andPM allhadsignificanteffectsonbladdercancermortality[12].
+2 2 10
+TheGWRresultindicatesthathealthcarefacilitydensityispositivelycorrelatedwithbladder
+cancermortalityinbothsexes. Thismaybeattributedtohighlyurbanizedareaswithhighdensityof
+healthcareinstitutions[38]andairpollution[37].
+The ADI of the present study can represent the urbanization level of townships in Taiwan,
+because it included the standardized proportion of elementary occupations and the standardized
+schooldrop-outrateofstudentsaged15to17. ThehigherADIis, thelesstheurbanizationofthe
+township,andthefewerpollutantstherearefromindustriesandtraffic.ThismightexplainwhyADIis
+negativelycorrelatedwithbladdercancermortalityinmales. Femalesfromlessurbanizedtownships
+havinghigherbladdercancermortalitycouldbeattributabletoindoorPM exposure. Otherthan
+2.5
+gas and electricity, wood and charcoal were also commonly used decades ago as cooking fuels in
+ruraltownshipsinTaiwan,andcharcoalisstillpopularforbarbecuesinrestaurantsandathomeon
+certainholidays.ThesefuelscanproducevastamountsofindoorPM [39].However,therelationship
+2.5
+betweenADIandbladdercancermortalityisworthclarifyingusingadifferentstudydesign.
+5. Limitations
+Thisstudydemonstratedcorrelationsbetweensomevariablesandbladdercancermortality. Like
+mostotherstudies,weassumedthevaluesatmonitoringstationswerehighlycorrelatedwithvalues
+atbreathingzones[40,41],andallsubjectsareassumedtohavehadthesameexposuresinthesame
+area, estimated by mean concentrations. There are some limitations in this study. First, because
+of the long latency of bladder cancer and the fact that the bladder cancer mortality data precede
+the period for which monitored PM data became available, we have to assume that the relative
+2.5
+magnitudeofexposureconcentrationsamongthesetownshipsremainedconstantoverpastdecades.
+ThisassumptionseemsreasonablebecausemostoftheincreaseinPM isduetotherapidincreasein
+2.5
+motorvehicles,andtherelativerateofincreaseofmotorvehicleownershipamongthesetownships
+shouldremainroughlysimilarovertheyears. Thesecondlimitationisalackofpersonalmedication
+information. TraditionalChinesemedicinesanddietarysupplementscontainingaristolochicacidhave
+beenlinkedwithanincreasedriskofurothelialcancers,includingbladdercancer[42,43],andthese
+medicineswerenotbannedinTaiwanuntil2013.
+Type2diabetesisoneoftheleadingcausesofdeathinTaiwan. Oralantidiabeticagentsareoften
+prescribed to patients suffering type 2 diabetes to control blood glucose concentration. Results of
+population-basedcohortstudiesshowthatpioglitazone,anantidiabeticmedication,isassociatedwith
+anincreasedriskofbladdercancer[44,45]. Inaddition,thespatialunitofsmokingrateswasthecity
+orcountylevelratherthantownship. Therefore,theheterogeneitieswithinacityorcountywouldbe
+underestimatedduetothislimitationofthedata. However,wetriedtoevaluatetheresultbyusing
+lungcancermortalitywhichisbasedontownshiptoreplacesmokingrates. Bothresultsweresimilar
+(TablesA1andA2). Forafuturestudy,weplantouselungcancerdatatoadjustthesmokingrateto
+thetownshiplevel. Otherlifestylefactorssuchasintakeoffruitsandvegetables,takingvitaminsand
+antioxidantsupplements,andphysicalactivity,whicharefactorsprotectingagainstbladdercancer,
+havebeenreviewedrecently[46]. Furthermore,thereisalackofrelevanthealthdata,suchasdisease
+Int.J.Environ.Res.PublicHealth2017,14,508 11of14
+historyandobesity. Aftercontrollingforage,sex,andsmokingstatus,subjectswithkidneydisease
+hadhigherbladdercancermortality[47]. Resultsofameta-analysisbySunetal.[48]showedthat
+individualswithBMI≥30hadhigherriskofbladdercancerdeath.
+6. Conclusions
+ThisstudydisplaysthetemporalandspatialdistributionofbladdercancermortalityinTaiwan.
+WecomparedtheresultoftraditionallinearmodelOLSandGWR.Thecoefficientofdetermination
+(adjusted R-square) was higher in the GWR model. Apparently, GWR can explain the correlation
+between disease mortality and environment risk factors by considering the spatial heterogeneity.
+AfterapplyingaGWRmodel,theconcentrationofambientPM showedpositivecorrelationwith
+2.5
+bladdercancermortalityinmalesinnorthernTaiwan,andfemalesinmostofthetownshipsinTaiwan.
+Havingexaminedtheresults,therearestillsomeabnormalclustersinsouthernTaiwan. Thiswillneed
+furtherresearchtoclarifytherelationshipbetweenlocalriskfactorsandbladdercancermortality.
+Acknowledgments:ThisresearchwassupportedbygrantsfromtheNationalHealthResearchInstitutes,R.O.C.
+(PH-106-PP-18).WewouldliketoexpressourappreciationtoD.P.H.HsiehandChaoW.Chenforadvices.Wealso
+liketoexpressoursinceregratitudetoKentM.SuárezforhisEnglishediting.
+Author Contributions: Hsin-Ling Yeh performed the statistical analysis, wrote and revised the manuscript.
+Shang-WeiHsuandYu-ChiaChanghelpedinterpretthefindings.Ta-ChienChanandPo-HuangChianghelped
+anddesignthespatialanalysis,andinterpretthefindings.Hui-ChenTsouandYen-ChenChangperformedthe
+statisticalandspatialanalyses.Allauthorsreadandapprovedthefinalmanuscript.
+ConflictsofInterest:Theauthorsdeclarenoconflictofinterest.
+AppendixA
+TableA1. Theexplanatoryfactorsforbladdercancerage-adjustedmortalityratesbyordinaryleast
+squaresmodelattownshiplevel,Taiwan,2000–2012(BFD-endemictownshipexcluded,N=348).
+Variables Coefficient S.E. p-Value VIF
+Male
+Areadeprivationindex −0.192 0.078 0.014* 1.267
+Lungcancermortality 0.042 0.012 <0.001* 1.145
+PM concentration(µg/m3) 0.048 0.012 <0.001* 1.163
+2.5
+Aborigines(%) −0.008 0.004 0.043* 1.293
+Healthcarefacilities(perkm2) 0.003 0.006 0.067 1.159
+Workersintextileindustry(%) −0.029 0.021 0.168 1.212
+Elderlypopulation(%,age≥65) 0.185 0.065 0.004* 1.224
+AdjustedR-square 11.7%
+Female
+Areadeprivationindex −0.049 0.049 0.314 1.442
+Lungcancermortality 0.058 0.013 <0.001* 1.217
+PM concentration(µg/m3) 0.026 0.008 <0.001* 1.194
+2.5
+Aborigines(%) −0.015 0.003 <0.001* 1.513
+Healthcarefacilities(perkm2) 0.010 0.004 0.019* 1.135
+Workersintextilesindustry(%) 0.000 0.013 0.975 1.158
+Elderlypopulation(%,age≥65) 0.016 0.027 0.567 1.446
+AdjustedR-square 17%
+*p-value<0.05,statisticalsignificance.
+Int.J.Environ.Res.PublicHealth2017,14,508 12of14
+TableA2.Theexplanatoryfactorsforbladdercancerage-adjustedmortalityratesbygeographically
+weightedregressionattownshiplevel,Taiwan,2000–2012(BFD-endemictownshipsexcluded).
+Variables N 1stQuartile Median 3rdQuartile R.STD.
+Male
+Areadeprivationindex 348 −0.330 −0.135 −0.058 0.201
+Lungcancermortality 348 0.017 0.045 0.069 0.039
+PM concentration(µg/m3) 348 −0.016 0.003 0.061 0.057
+2.5
+Aborigines(%) 348 −0.015 −0.012 −0.010 0.004
+Healthcarefacilities(perkm2) 348 −0.006 −0.001 0.016 0.016
+Workersintextilesindustry(%) 348 −0.038 −0.021 0.046 0.062
+Elderlypopulation(%,age≥65) 348 −0.141 0.091 0.213 0.262
+AdjustedR-square 21.5%
+Female
+Areadeprivationindex 348 −0.088 −0.044 0.023 0.083
+Lungcancermortality 348 0.049 0.050 0.054 0.003
+PM concentration(µg/m3) 348 0.002 0.008 0.016 0.010
+2.5
+Aborigines(%) 348 −0.018 −0.012 −0.011 0.005
+Healthcarefacilities(perkm2) 348 0.013 0.015 0.018 0.004
+Workersintextileindustry(%) 348 −0.002 −0.001 0.003 0.004
+Elderlypopulation(%,age≥65) 348 0.009 0.010 0.010 0.001
+AdjustedR-square 22.5%
+Note:R.STD.=Robuststandarderror.
+References
+1. Brown,J.S.;Gordon,T.;Price,O.;Asgharian,B.Thoracicandrespirableparticledefinitionsforhumanhealth
+riskassessment.Part.FibreToxicol.2013,10,12.[CrossRef][PubMed]
+2. UnitedStatesEnvironmentalProtectionAgency.ParticulateMatter:BasicInformation.U.S.Environmental
+ProtectionAgency.Availableonline:https://www.epa.gov/pm-pollution(accessedon26March2017).
+3. Yang, H.H.; Lee, S.A.; Hsieh, D.P.; Chao, M.R.; Tunq, C.Y. PM and associated polycyclic aromatic
+2.5
+hydrocarbon and mutagenicity emissions from motorcycles. Bull Environ. Contam. Toxicol. 2008, 81,
+412–415.[CrossRef][PubMed]
+4. Zheng, X.Y.; Ding, H.; Jiang, L.N.; Chen, S.W.; Zheng, J.P.; Qiu, M.; Zhou, Y.X.; Chen, Q.; Guan, W.J.
+Associationbetweenairpollutantsandasthmaemergencyroomvisitsandhospitaladmissionsintimeseries
+studies:Asystematicreviewandmeta-analysis.PLoSONE2015,10,e0138146.[CrossRef][PubMed]
+5. Lin,Y.K.;Chen,C.F.;Yeh,H.C.;Wang,Y.C.Emergencyroomvisitsassociatedwithparticulateconcentration
+andAsianduststormsinmetropolitanTaipei.J.Expo.Sci.Environ.Epidemiol.2015,26,189–196.[CrossRef]
+[PubMed]
+6. DeFranco,E.;Hall,E.;Hossain,M.;Chen,A.;Haynes,E.N.;Jones,D.;Ren,S.;Lu,L.;Muglia,L.Airpollution
+andstillbirthrisk:Exposuretoairborneparticulatematterduringpregnancyisassociatedwithfetaldeath.
+PLoSONE2015,10,e0120594.[CrossRef][PubMed]
+7. Yorifuji,T.;Kashima,S.;Doi,H.Associationsofacuteexposuretofineandcoarseparticulatematterand
+mortalityamongolderpeopleinTokyo,Japan.Sci.TotalEnviron.2016,542,354–359.[CrossRef][PubMed]
+8. Atkinson,R.W.;Kang,S.;Anderson,H.R.;Mills,I.C.;Walton,H.A.Epidemiologicaltimeseriesstudiesof
+PM anddailymortalityandhospitaladmissions:Asystematicreviewandmeta-analysis.Thorax2014,69,
+2.5
+660–665.[CrossRef][PubMed]
+9. Thurston,G.D.;Ahn,J.;Cromar,K.R.;Shao,Y.;Reynolds,H.R.;Jerrett,M.;Lim,C.C.;Shanley,R.;Park,Y.;
+Hayes,R.B.AmbientparticulatematterairpollutionexposureandmortalityintheNIH-AARPdietand
+healthcohort.Environ.HealthPerspect.2015,124,484–490.[CrossRef][PubMed]
+10. Adar,S.D.;Filigrana,P.A.;Clements,N.;Peel,J.L.Ambientcoarseparticulatematterandhumanhealth:
+Asystematicreviewandmeta-analysis.Curr.Environ.HealthRep.2014,1,258–274.[CrossRef][PubMed]
+Int.J.Environ.Res.PublicHealth2017,14,508 13of14
+11. Castano-Vinyals, G.; Cantor, K.P.; Malats, N.; Tardon, A.; Garcia-Closas, R.; Serra, C.; Carrato, A.;
+Rothman, N.; Vermeulen, R.; Silverman, D.; et al. Air pollution and risk of urinary bladder cancer in
+acase-controlstudyinSpain.Occup.Environ.Med.2008,65,56–60.[CrossRef][PubMed]
+12. Liu,C.C.;Tsai,S.S.;Chiu,H.F.;Wu,T.N.;Chen,C.C.;Yang,C.Y.Ambientexposuretocriteriaairpollutants
+andriskofdeathfrombladdercancerinTaiwan.Inhal.Toxicol.2009,21,48–54.[CrossRef][PubMed]
+13. Yanagi,Y.;Assuncao,J.V.;Barrozo,L.V.TheImpactofatmosphericparticulatematteroncancerincidence
+andmortalityinthecityofSaoPaulo,Brazil.Cad.SaudePublica2012,28,1737–1748.[CrossRef][PubMed]
+14. Smith, N.D.; Prasad, S.M.; Patel, A.R.; Weiner, A.B.; Pariser, J.J.; Razmaria, A.; Maene, C.; Schuble, T.;
+Pierce,B.;Steinberg,G.D.BladdercancermortalityintheUnitedStates:Ageographicandtemporalanalysis
+ofsocioeconomicandenvironmentalfactors.J.Urol.2015,195,290–296.[CrossRef][PubMed]
+15. Zeegers, M.P.A.; Swaen, G.M.H.; Kant, I.; Goldbohm, R.A.; van den Brandt, P.A. Occupational risk
+factorsformalebladdercancer: ResultsfromapopulationbasedcasecohortstudyinTheNetherlands.
+Occup.Environ.Med.2001,58,590–596.[CrossRef][PubMed]
+16. Burstyn, I.; Kromhout, H.; Johansen, C.; Langard, S.; Kauppinen, T.; Shaham, J.; Ferro, G.; Boffetta, P.
+Bladder cancer incidence and exposure to polycyclic aromatic hydrocarbons among asphalt pavers.
+Occup.Environ.Med.2007,64,520–526.[CrossRef][PubMed]
+17. Mastrangelo,G.;Fedeli,U.;Fadda,E.;Milan,G.;Lange,J.H.Epidemiologicevidenceofcancerriskintextile
+industryworkers:Areviewandupdate.Toxicol.Ind.Health2002,18,171–181.[CrossRef][PubMed]
+18. Burger,M.;Catto,J.W.;Dalbagni,G.;Grossman,H.B.;Herr,H.;Karakiewicz,P.;Kassouf,W.;Kiemeney,L.A.;
+LaVecchia,C.;Shariat,S.;etal.Epidemiologyandriskfactorsofurothelialbladdercancer.Eur.Urol.2013,
+63,234–241.[CrossRef][PubMed]
+19. Malats,N.;Real,F.X.Epidemiologyofbladdercancer.Hematol.Oncol.Clin.N.Am.2015,29,177–189.
+20. AdministrationofHealthPromotion,MinistryofHealthandWelfare,ROC(Taiwan).CancerRegistration:
+OnlineInteractiveQuerySystem.Availableonline:http://cris.hpa.gov.tw(accessedon10August2015).
+21. Chan,T.C.;Wang,C.M.;Lee,Y.M.LookingatTemporalChanges-UseThisPythonToolforCreatingRingMaps;
+ArcUser:Redlands,CA,USA,2013;pp.42–44.
+22. Administration of Health Promotion, Ministry of Health and Welfare, ROC (Taiwan). Adult Smoking
+BehaviorSurveillanceSystem.Availableonline:http://www.mohw.gov.tw/CHT/DOS/DisplayStatisticFile.
+aspx?d=12043&s=1(accessedon10August2015).
+23. Chan,T.C.;Chiang,P.H.;Su,M.D.;Wang,H.W.;Liu,M.S.GeographicDisparityinChronicObstructive
+PulmonaryDisease(COPD)mortalityratesamongtheTaiwanpopulation. PLoSONE2014,9,e0098170.
+[CrossRef][PubMed]
+24. Pilz,J.;Spock,G.WhydoweneedandhowshouldweimplementBayesiankrigingmethods.Stoch.Environ.
+Res.RiskAssess.2008,22,621–632.[CrossRef]
+25. Lee,Y.C.;Huang,Y.T.;Tsai,Y.W.;Huang,S.M.;Kuo,K.N.;Mckee,M.;Nolte,E.Theimpactofuniversal
+nationalhealthinsuranceonpopulationhealth:TheexperienceofTaiwan.BMCHealthServ.Res.2010,10,
+225.[CrossRef][PubMed]
+26. Lee,I.C.;Lin,H.C.;Chiang,T.L.Areadeprivation,socioeconomicstatus,andsmokingbehavioramongmale
+adultsinTaiwan.TaiwanJ.PublicHealth2003,22,10–16.
+27. DirectorateGeneralofBudget,AccountingandStatistics,ExecutiveYuan,ROC(Taiwan). TheIndustry,
+CommerceandServiceCensus.Availableonline:http://www.dgbas.gov.tw/ct_view.asp?xItem=37563&
+ctNode=3267(accessedon10August2015).
+28. Ministry of the Interior, ROC (Taiwan). The Social-Economic Database System. Available online:
+http://210.65.89.57/STAT/Web/Portal/STAT_PortalHome.aspx(accessedon10August2015).
+29. Dijkstra,A.;Janssen,F.;DeBakker,M.;Bos,J.;Lub,R.;VanWissen,L.J.;Hak,E.Usingspatialanalysisto
+predicthealthcareuseatthelocallevel:Acasestudyoftype2diabetesmedicationuseanditsassociation
+withdemographicchangeandsocioeconomicstatus.PLoSONE2013,8,e0072730.[CrossRef][PubMed]
+30. Fotheringham,A.S.;Brunsdon,C.Localformsofspatialanalysis.Geogr.Anal.1999,31,340–358.[CrossRef]
+31. Brunsdon,C.;Fotheringham,A.S.;Charlton,M.Geographicallyweightedregression:Amethodforexploring
+spatialnonstationarity.Geogr.Anal.1996,28,281–289.[CrossRef]
+32. R Development Core Team. R: A Language and Environment for Statistical Computing; R Foundation for
+StatisticalComputing:Vienna,Austria,2013.
+Int.J.Environ.Res.PublicHealth2017,14,508 14of14
+33. Nakaya, T.; Fotheringham, A.S.; Charlton, M.; Brunsdon, C. Semiparametric Geographically Weighted
+GeneralisedLinearModellinginGWR4.0.Availableonline:http://eprints.maynoothuniversity.ie/4846/1/
+MC_Semiparametric.pdf(accessedon2August2015).
+34. Nakaya,T.;Fotheringham,A.S.;Brunsdon,C.;Charlton,M.Geographicallyweightedpoissonregressionfor
+diseaseassociationmapping.Stat.Med.2005,24,2695–2717.[CrossRef][PubMed]
+35. AmericanCancerSociety. BladderCancer. Availableonline: http://www.cancer.org/acs/groups/cid/
+documents/webcontent/003085-pdf.pdf(accessedon1August2016).
+36. Van Osch, F.H.; Jochems, S.H.; van Schooten, F.J.; Bryan, R.T.; Zeegers, M.P. Significant role for
+lifetimecigarettesmokinginworseningbladdercanceranduppertracturothelialcarcinomaprognosis:
+Ameta-analysis.J.Urol.2015,195,872–879.[CrossRef][PubMed]
+37. Colli,J.;Lee,B.R.;Thomas,R.PopulationdensitiesinrelationtobladdercancermortalityratesinAmerica
+from1950to1994.Int.Urol.Nephrol.2012,44,443–449.[CrossRef][PubMed]
+38. Li,H.C.;Hsiao,Y.L.;Tang,C.H.;Jian,W.S.;Miao,N.F.Doctorshoppingbehavioramongcancerpatients:
+Anationwidepopulation-basedstudyinTaiwan.J.Exp.Clin.Med.2013,5,172–176.[CrossRef]
+39. Li,T.; Cao,S.;Fan,D.; Zhang,Y.;Wang,B.; Zhao,X.; Duan,X.Householdconcentrationsandpersonal
+exposureofPM amongurbanresidentsusingdifferentcookingfuels.Sci.TotalEnviron.2016,548,6–12.
+2.5
+[CrossRef][PubMed]
+40. Chiang,P.H.;Chen,C.W.;Hsieh,D.P.;Chan,T.C.;Chiang,H.C.;Wen,C.P.Lungcancerriskinfemalesdueto
+exposurestoPM inTaiwan.OpenEpidemiol.J.2014,7,6–16.[CrossRef]
+2.5
+41. Janssen,N.A.;Lanki,T.;Hoek,G.;Vallius,M.;deHartog,J.J.;VanGrieken,R.;Pekkanen,J.;Brunekreef,B.
+Associationsbetweenambient,personal,andindoorexposuretofineparticulatematterconstituentsin
+DutchandFinnishpanelsofcardiovascularpatients. Occup. Environ. Med. 2005,62,868–877. [CrossRef]
+[PubMed]
+42. Lai,M.N.;Wang,S.M.;Chen,P.C.;Chen,Y.Y.;Wang,J.D.Population-basedcase-controlstudyofChinese
+herbalproductscontainingaristolochicacidandurinarytractcancerrisk. J.Natl. CancerInst. 2010,102,
+179–186.[CrossRef][PubMed]
+43. Chen,C.H.;Dickman,K.G.;Moriya,M.;Zavadil,J.;Sidorenko,V.S.;Edwards,K.L.;Pu,Y.S.Aristolochic
+acid-associatedurothelialcancerinTaiwan. Proc. Natl. Acad. Sci. USA2012,109,8241–8246. [CrossRef]
+[PubMed]
+44. Tuccori,M.;Filion,K.B.;Yin,H.;Oriana,H.Y.;Platt,R.W.;Azoulay,L.Pioglitazoneuseandriskofbladder
+cancer:Populationbasedcohortstudy.BMJ2016,352,i1541.[CrossRef][PubMed]
+45. Korhonen,P.;Heintjes,E.M.;Williams,R.;Hoti,F.;Christopher,S.;Majak,M.;Bahmanyar,S.Pioglitazone
+useandriskofbladdercancerinpatientswithtype2diabetes:Retrospectivecohortstudyusingdatasets
+fromfourEuropeancountries.BMJ2016,354,i3903.[CrossRef][PubMed]
+46. Al-Zalabani,A.H.;Stewart,K.F.;Wesselius,A.;Schols,A.M.;Zeegers,M.P.Modifiableriskfactorsforthe
+prevention of bladder cancer: A systematic review of meta-analyses. Eur. J. Epidemiol. 2016, 31, 1–41.
+[CrossRef][PubMed]
+47. Washio,M.;Mori,M.;Mikami,K.;Miki,T.;Watanabe,Y.;Nakao,M.;Tamakoshi,A.Riskfactorsforupper
+andlowerurinarytractcancerdeathinaJapanesepopulation:FindingsfromtheJapancollaborativecohort
+studyforevaluationofcancerrisk.AsianPac.J.CancerPrev.APJCP2016,17,3545.[PubMed]
+48. Sun, J.W.; Zhao, L.G.; Yang, Y.; Ma, X.; Wang, Y.Y.; Xiang, Y.B. Obesity and risk of bladder cancer:
+Adose-responsemeta-analysisof15cohortstudies.PLoSONE2015,10,e0119313.[CrossRef][PubMed]
+©2017bytheauthors.LicenseeMDPI,Basel,Switzerland.Thisarticleisanopenaccess
+articledistributedunderthetermsandconditionsoftheCreativeCommonsAttribution
+(CCBY)license(http://creativecommons.org/licenses/by/4.0/).

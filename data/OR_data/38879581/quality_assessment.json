@@ -1,0 +1,167 @@
+{
+    "columns": [
+        {
+            "title": "Selection | Representativeness of the exposed cohort",
+            "details": "1 if the exposure level in the study population can represent environmental air pollution in the source population, otherwise 0",
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "title": "Selection | Selection of the non-exposed cohort",
+            "details": null,
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "title": "Selection | Ascertainment of exposure",
+            "details": "1 if the study used methods beyond air monitors to measure the air pollution concentration, otherwise 0",
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "title": "Selection | Demonstration that outcome of interest was not present at start of study",
+            "details": "1 if the study removed participants who were diagnosed with cancer before enrolment, otherwise 0",
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "title": "Comparability | Comparability of cohorts on the basis of the design or analysis",
+            "details": "1 if the study accounted for age, sex, and smoking history in statistical analysis, and 2 stars if the study accounted for additional variables, otherwise 0",
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1,
+                    2
+                ]
+            }
+        },
+        {
+            "title": "Outcome | Assessment of outcome",
+            "details": null,
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "title": "Outcome | Was follow-up long enough for outcomes to occur",
+            "details": "1 if the study followed participants > 5 years.",
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1
+                ]
+            }
+        },
+        {
+            "title": "Outcome | Adequacy of follow up of cohorts",
+            "details": null,
+            "option": {
+                "type": "score",
+                "range": [
+                    0,
+                    1
+                ]
+            }
+        }
+    ],
+    "truth": [
+        {
+            "index": 38,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 39,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 42,
+            "values": [1, 1, 1, 0, 2, 1, 1, 0]
+        },
+        {
+            "index": 33,
+            "values": [0, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 35,
+            "values": [1, 1, 1, 1, 0, 1, 1, 0]
+        },
+        {
+            "index": 37,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 36,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 34,
+            "values": [1, 1, 1, 0, 2, 1, 1, 1]
+        },
+        {
+            "index": 32,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 31,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 30,
+            "values": [1, 1, 1, 0, 2, 1, 1, 1]
+        },
+        {
+            "index": 45,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 48,
+            "values": [0, 1, 1, 0, 0, 1, 1, 1]
+        },
+        {
+            "index": 49,
+            "values": [1, 1, 1, 0, 2, 1, 1, 1]
+        },
+        {
+            "index": 52,
+            "values": [0, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 61,
+            "values": [1, 1, 0, 1, 2, 1, 1, 0]
+        },
+        {
+            "index": 62,
+            "values": [0, 1, 1, 1, 2, 1, 1, 1]
+        },
+        {
+            "index": 60,
+            "values": [1, 1, 1, 1, 2, 1, 1, 1]
+        }
+    ]
+}

@@ -1,0 +1,219 @@
+ParkinsonismandRelatedDisorders99(2022)43–46
+Contents lists available at ScienceDirect
+Parkinsonism and Related Disorders
+journal homepage: www.elsevier.com/locate/parkreldis
+Short Communication
+Can AI make people happy? The effect of AI-based chatbot on smile and
+speech in Parkinson’s disease
+Mayuko Ogawaa,b,1, Genko Oyamaa,b,c,d,e,f,*,1, Ken Moritog, Masatomo Kobayashih,
+Yasunori Yamadah, Kaoru Shinkawah, Hikaru Kamoa, Taku Hatanoa,b,d,
+Nobutaka Hattoria,b,c,d,e,f,i
+aDepartment of Neurology, Juntendo University Graduate School of Medicine, Tokyo, Japan
+bDepartment of Neurodegenerative and Demented Disorders, Juntendo University Graduate School of Medicine, Tokyo, Japan
+cDepartment of Home Medical Care System Based on Information and Communication Technology, Juntendo University Graduate School of Medicine, Tokyo, Japan
+dDepartment of Drug Development for Parkinson’s Disease, Juntendo University Graduate School of Medicine, Tokyo, Japan
+eDepartment of Patient Reported Outcome Based Integrated Data Analysis in Neurological Disorders, Juntendo University Graduate School of Medicine, Tokyo, Japan
+fDepartment of Research and Therapeutics for Movement Disorders, Juntendo University Graduate School of Medicine, Tokyo, Japan
+gGLORY Ltd., Tokyo, Japan
+hIBM Research, Tokyo, Japan
+iNeurodegenerative Disorders Collaborative Laboratory, RIKEN Center for Brain Science, Saitama, Japan
+A R T I C L E I N F O A B S T R A C T
+Keywords: Introduction: Approaches for objectively measuring facial expressions and speech may enhance clinical and
+Parkinson’s disease research evaluation in telemedicine, which is widely employed for Parkinson’s disease (PD). This study aimed to
+Telemedicine assess the feasibility and efficacy of using an artificial intelligence-based chatbot to improve smile and speech in
+Facial expression
+PD. Further, we explored the potential predictive value of objective face and speech parameters for motor
+Speech
+symptoms, cognition, and mood.
+Methods: In this open-label randomized study, we collected a series of face and conversational speech samples
+from 20 participants with PD in weekly teleconsultation sessions for 5 months. We investigated the effect of daily
+chatbot conversations on smile and speech features, then we investigated whether smile and speech features
+could predict motor, cognitive, and mood status.
+Results: A repeated-measures analysis of variance revealed that the chatbot conversations had a significant
+interaction effect on the mean and standard deviation of the smile index during smile sections (both P =.02),
+maximum duration of the initial rise of the smile index (P =.04), and frequency of filler words (P =.04), but no
+significant interaction effects were observed for clinical measurements including motor, cognition, depression,
+and quality of life. Explorative analysis using statistical and machine-learning models revealed that the smile
+indices and several speech features were associated with motor symptoms, cognition, and mood in PD.
+Conclusion: An artificial intelligence-based chatbot may positively affect smile and speech in PD. Smile and
+speech features may capture the motor, cognitive, and mental status of patients with PD.
+1. Introduction evaluation in telemedicine.
+Automated recognition of facial expressions and speech is a cutting-
+Telemedicine and telehealth using video-conferencing systems edge technology that has recently emerged. Facial expression recogni-
+afford a solution to improve access to specialists for patients with Par- tion technology is widely used in various situations, such as security
+kinson’s disease (PD). A large portion of telemedicine visits is composed systems, although ethical concerns have been raised [2]. Automatic
+of conversation [1]. Therefore, technologies for the objective measure- speech recognition (ASR) and natural language processing (NLP) have
+ment of facial expressions and voice may enhance clinical and research evolved based on the extensive development of machine-learning
+* Corresponding author. Department of Neurology, Juntendo University School of Medicine, 2-1-1 Hongo, Bunkyo-ku, Tokyo, 113-8421, Japan.
+E-mail address: g_oyama@juntendo.ac.jp (G. Oyama).
+1 These authors contributed equally to this work.
+https://doi.org/10.1016/j.parkreldis.2022.04.018
+Received 22 February 2022; Received in revised form 27 April 2022; Accepted 28 April 2022
+Availableonline5May2022
+1353-8020/©2022TheAuthors.PublishedbyElsevierLtd.ThisisanopenaccessarticleundertheCCBYlicense(http://creativecommons.org/licenses/by/4.0/).
+M. Ogawa et al. P a r k i n s o n i s m a n d R e l a t e d D i s o r d ers99(2022)43–46
+approaches, which enable use in various situation, such as creating voice parameters for motor symptoms, cognition, and mood.
+translation engines. In medicine, application of speech analysis tech-
+nologies has been harnessed for the early detection of dementia [3], and 2. Methods
+speech analysis in PD [4–6]. In PD, an increase in the frequency of filler
+words, pitch variability, and Mel-Frequency Cepstrum Coefficients Twenty patients with PD (11 men and 9 women) were recruited from
+(MFCCs) have been reported to be associated with disease severity [4]. the outpatient clinic of Juntendo University Hospital. Inclusion criteria
+Decreased speech rate associated with disease duration [5]. Shimmer were: (1) a diagnosis of clinically established or probable PD according
+and jitter increased with the Unified Parkinson’s Disease Rating Scale to the Movement Disorder Society (MDS) clinical diagnostic criteria for
+(UPDRS) score, representing a reduction in voice quality measured by PD; (2) native Japanese speaker; and (3) patients aged between 20 and
+the cycle-to-cycle variability in amplitude and pitch, respectively [6]. 80 years who signed a written consent form after receiving a complete
+Artificial intelligence (AI)-based chatbots, a technology using ASR and explanation of the research. Exclusion criteria were: (1) cognitive
+NLP to simulate conversations with users in natural language, are widely impairment, operationalized as a Mini-Mental State Examination
+employed (e.g., Apple’s Siri and Amazon’s Alexa). Chatbots may offer (MMSE) score of <20; (2) severe speech problems undetectable by a
+scalability and 24-h availability to plug the gaps between patients and tablet microphone; and (3) individuals who were unable to complete the
+clinicians by gathering patients’ health-related information during daily study for any reason.
+life for chronic diseases, including PD [7]. This study comprised a trial phase and a randomized phase (Fig. 1A).
+In this study, we developed an AI-based chatbot app for iPad to assist In the trial phase, the content of the chatbot was revised based on
+telemedicine for PD that collects patients’ health information, including feedback from the participants and neurologists, and finalized after
+motor and non-motor problems and general information regarding their conclusion of the trial phase. In the 5-month randomized phase, par-
+daily life (e.g., their hobbies, favorite foods, weekend activities, and ticipants were randomized at a 1:1 ratio to an intervention group that
+private topics) through daily conversations, and a video-conferencing received both daily chatbot and weekly video-conferencing sessions or a
+app that collects face and voice data remotely. This study aimed to control group that received weekly video-conferencing sessions only.
+assess the feasibility and efficacy of using an artificial intelligence-based Simple randomization was performed using a random number table
+chatbot to improve smile and speech in PD. We hypothesized that generated by a computer.
+chatbots would have a positive effect on smile and speech. In addition, For each chatbot session, participants had a multi-turn conversation
+we aimed to explore the potential predictive value of objective face and with the chatbot app comprising at least five pairs of questions and
+Fig. 1. Study design. A) Study protocol. In the trial phase, participants used an AI-based chatbot app daily for 1–4 months after providing written consent to
+participate. During the trial phase, participants participated in weekly video-conferencing sessions with a neurologist and daily conversations with an AI-based
+chatbot at least once. In the 5-month randomized phase, participants were randomized at a 1:1 ratio to an intervention group that received both daily AI-based
+chatbot and weekly video-conferencing sessions or a control group that received weekly video-conferencing sessions only. Simple randomization was performed
+using a random number table generated by a computer. During each chatbot session, audio samples were recorded, and video and audio samples were recorded
+during each video-conferencing session.
+B) The smile index. The smile index was calculated from the degree of deference from baseline based on the GLORY CO Ltd facial recognition library. The system
+calculated the total smile index based on the differences from the references, which were also calculated from the database. The smile index ranged from 0 (straight
+face) to 100 (smile). We determined the “smile section” based on differential calculus of the time-series data of the smile index during video-conferencing sessions.
+44
+M. Ogawa et al. P a r k i n s o n i s m a n d R e l a t e d D i s o r d ers99(2022)43–46
+responses. The conversation content simulated a typical teleconsultation in the intervention group completed 58 ±155 chatbot sessions at home
+and included general conditions, changes in symptoms, and problems (Supplemental Table 2). Video and audio data from 396 video-
+recently experienced in daily life. The chatbot also asked about partic- conferencing sessions were collected. Video and audio samples that
+ipants’ hobbies, favorite foods, and relevant topics to create a favorable failed to meet the criteria were excluded, and 323 video samples and
+atmosphere. Finally, the chatbot generated a report about the session on 298 audio samples were included in the analysis. In addition, 39 samples
+the dashboard for neurologists. Detail of apps is available in supple- from the in-person clinical assessment, and 356 samples from chatbot
+mentary data. sessions were included in the explorative analysis.
+In each video-conferencing session with a neurologist, the partici- Repeated-measures ANOVA revealed no significant main effects of
+pant had at least 5 min of conversation. The neurologist asked patients group or time and no significant interaction effect of group ×time for all
+about general conditions, changes in symptoms, and problems recently clinical measures (P >.05 for MDS-UPDRS part I to IV, MMSE-J, MoCA-
+experienced in daily life. This session did not include any clinical de- J, BDI-II, and PDQ-39 summary index). Repeated-measures ANOVA
+cisions, such as changing medications. For the intervention group, the revealed a significant interaction effect of group × time on the mean
+neurologist could see the dashboard screen depicting an overview of the smile index during the smile section (F(1,18) =5.96, P =.02), standard
+participants’ chatbot sessions. deviation of smile index during the smile section (F(1,18) =5.39, p =.02),
+Participants underwent an in-person clinical assessment by a and maximum duration of the initial rise of smile index (F(1,18) =4.44, P
+neurologist at the time of recruitment, before and after the intervention =.04). Specifically, in the intervention group, these features increased
+(visit 1–3, respectively). The following scales were administered when by 11.0%, 10.2%, and 67.7%, respectively, while in the control group,
+the participants were on medications: the MDS-sponsored revision of the they decreased by 7.9%, 6.7%, and 36.8%, respectively. There were no
+UPDRS (MDS-UPDRS), MMSE and Japanese version of Montreal significant effects of group or time on the other facial expression features
+Cognitive Assessment (MoCA-J), Beck Depression Inventory-II (BDI-II), (P >.05).
+and Parkinson’s Disease Questionnaire-39 (PDQ-39). Facial expressions Repeated-measures ANOVA revealed a significant interaction effect
+were videotaped using an iPad Air 2 (Apple Inc., Cupertino, CA, USA) of group ×time on filler words (F(1,18) =4.98, P =.04). Specifically, the
+and c922 pro stream webcam (Logitech International S.A., Switzerland) frequency of filler words decreased by 8.6% and increased by 22.8% in
+as reference data for subsequent analysis, which were placed in front of the intervention and control groups, respectively. Significant main ef-
+the patients at 50–55 cm apart at face height. We recorded two sets of fects of time on pitch variability (F(1,18) =7.2, p =.02), shimmer (F(1,18)
+“straight face” and “smile face”, which were obtained by instructing = 11.4, P = .003), and jitter (F(1,18) = 7.0, P = .02) were observed.
+participants to imitate the sample picture of a smile. Participants could Specifically, these speech features decreased by 4.2–5.4% in the latter
+see their faces during the recording with the iPad monitor. sessions. No significant main effect of group was noted for the other
+This study was conducted in accordance with the ethical standards of speech features (P >.05).
+the Declaration of Helsinki. This study was approved by the Institutional Explorative analysis revealed that the multiple regression models
+Review Board of Juntendo University Hospital (#19-005). using smile features predicted MoCA-J (r =0.41, P =.010), MMSE (r =
+The detail of video and audio data analysis is available on supple- 0.45, P = .004), part IV of MDS-UPDRS (r = 0.50, P = .001), MDS-
+mentary data. To assess facial expression features, we developed a UPDRS I.1 (cognition; r = 0.53, P < .001), and MDS-UPDRS III.14
+“smile index.” We calculated nine facial expression features including (general bradykinesia; r =0.62, P <.001). The classification accuracies
+the mean, maximum, and standard deviation of all smile indices during of the machine-learning models using video-conferencing speech were
+each smile section and the mean, maximum, and minimum duration of >80%. The accuracies using AI-based chatbot speech were ≥75% for all
+smiles and the initial rise of the smile index (Fig. 1B). three aspects. The detail of the result of explorative analysis is in sup-
+We extracted primary and exploratory sets of speech features from plementary data.
+audio samples. The primary set comprised five speech features associ-
+ated with PD severity in the literature as potential measures of the ef- 4. Discussion
+fects of interventions on PD, including the frequency of filler words,
+speech rate, pitch variability, jitter, and shimmer. Filler words such as This study demonstrated that an AI-based chatbot had significant
+“uh” were automatically detected using IBM Watson Speech to Text. The positive effects on smile parameters as well as speech features repre-
+exploratory set comprised 75 speech features associated with motor, senting the frequency of filler words but did not significantly affect
+cognitive, and mood disorders, including PD, dementia, and depression clinical measurements in patients with PD. Among speech features, pitch
+(Supplementary data). variability, shimmer, and jitter decreased regardless of intervention.
+We applied repeated-measures analysis of variance (ANOVA) for Furthermore, explorative analysis revealed that facial expression and
+clinical, facial expression, and speech measurements with a 2 ×2 mixed speech parameters were associated with motor symptoms, cognition,
+design, with group (intervention and control) as the between-subject and mood in patients with PD.
+factor and time (pre- and post-intervention) as the within-subject fac- Chatbot itself may positively affect facial expressions in PD, and our
+tor, after assessing normality of the data using the Shapiro-Wilk test (P analysis identified significant effect of the AI-based chatbot intervention
+>.05). Speech and facial expression measures were grouped into former on filler word frequency among previously reported speech features in
+and latter groups, which were considered pre- and post-intervention, PD [4–6]. This imply that quantitative evaluation might capture the
+respectively. The level of statistical significance, P, was set at 0.05 small changes that cannot be detected by conventional scales that
+(two-sided). All analyses were performed with R 4.0.5, Python 3.6.6, physicians or patients rated. Our results also imply that regular weekly
+SciPy 1.1.0, and scikit-learn 0.23.2. The detail of exploratory analysis is talking sessions with doctors also resulted in positive effects and imply
+available on supplementary data. that daily conversations may improve emotion regardless of the mode of
+delivery. These results suggest that using chatbots may enhance pa-
+3. Results tients’ smile and speech without the need for healthcare workers to
+allocate substantial time resources, although the clinical significance of
+Supplemental Table 1 shows the clinical characteristics of the par- these changes should be validated in future studies.
+ticipants. None of the participants had medical conditions which could A question is whether smile and speech can detect or predict motor
+affect speech and facial expression. Except for one participant that could symptoms, cognition, and depression. The smile index in the in-person
+not attend visit 3, all participants completed the clinical assessments at facial expression test was significantly associated with motor symp-
+all three visits. During the randomized phase, participants in both toms and cognition, which is in line with previous reports [8,9].
+groups completed 13–20 video-conferencing sessions. Each participant Nevertheless, the mechanisms of mimetic expression are complex and
+45
+M. Ogawa et al. P a r k i n s o n i s m a n d R e l a t e d D i s o r d ers99(2022)43–46
+multifactorial. They involve facial muscle bradykinesia as well as the joint-research course supported by GLORY Ltd., Kirin Company Ltd.,
+associated reduction in facial emotion recognition. Patients with PD had Mitsubishi UFJ Lease & Finance Company Ltd. The Department of Home
+decreased global facial expressions, especially anger, disgust, fear, and Medical Care System based on Information and Communication Tech-
+neutral expressions; in contrast, surprise, sadness, and happiness were nology is a joint-research course supported by Sunwels Co., Ltd. The
+relatively preserved [10]. Moreover, facial expressions can differ among Department of Drug Development for Parkinson’s Disease, Juntendo
+cultures [11]. As such, this hypothesis remains controversial, and University Faculty of Medicine is a course supported by Ohara Phar-
+further investigations are warranted. Machine-learning models based on maceutical Co., Ltd. and PARKINSON Laboratories Co., Ltd. GO has
+video-conferencing speech samples achieved accuracies of 80–90% for received speaker honoraria from Medtronic, Boston Scientific, Otsuka
+all motor, cognitive, and mental aspects. Our models could predict all of Pharmaceutical Co. Ltd., Sumitomo Dainippon Pharma Co. Ltd., Eisai
+these aspects using a single source of conversational speech. This may be Co., Ltd., Takeda Pharmaceutical Company Ltd., Kyowa Hakko Kirin Co.
+because conversations in teleconsultations contain specific speech ele- Ltd., and AbbVie, Inc. NH received speaker honoraria from AbbVie GK,
+ments capable of capturing each aspect by nature. For future perspec- EA Pharma, Eisai Co., Ltd., Otsuka Pharmaceutical Co., Ltd., Ono
+tives, using predictive models from facial and speech features obtained Pharmaceutical Co., Ltd., OHARA Pharmaceutical Co., Ltd, Kyowa Kirin
+remotely may enhance telehealth to detect or predict subtle changes in Co., Ltd., Senju Pharmaceutical Co., Ltd., Sumitomo Dainippon Pharma
+clinical symptoms. Co., Ltd., Takeda Pharma Co., Ltd., Medtronic, Inc., Novartis Pharma K.
+This was a single-center pilot study with a small sample size without K.
+ethnic diversity. Therefore, our result cannot be generalized and needs
+further studies. However, our data may suggest that an AI-based chatbot Appendix A. Supplementary data
+had a positive effect on patients’ smile and speech, and that the evalu-
+ation of facial expressions and speech features remotely may provide Supplementary data to this article can be found online at https://doi.
+information on motor, cognitive, and mental status of patients with PD. org/10.1016/j.parkreldis.2022.04.018.
+Collectively, our findings highlight AI-based chatbots as promising tools
+in telehealth. References
+Study funding [1] S. Sekimoto, G. Oyama, S. Chiba, M. Nuermaimaiti, F. Sasaki, N. Hattori,
+Holomedicine: proof of the concept of interactive three-dimensional telemedicine,
+movement disorders, Off. J. Mov. Disord. Soc. 35 (10) (2020) 1719–1720.
+This study was supported by Grants-in Aid from the Research Com- [2] D. Castelvecchi, Is facial recognition too biased to be let loose? Nature 587 (7834)
+mittee of CNS Degenerative Diseases; Research on Policy Planning and (2020) 347–349.
+[3] N. Clarke, P. Foltz, P. Garrard, How to do things with (thousands of) words:
+Evaluation for Rare and Intractable Diseases; Health, Labour and Wel-
+computational approaches to discourse analysis in Alzheimer’s disease, Cortex,
+fare Sciences Research Grants; and the Ministry of Health, Labour and J. Devoted Stud. Nervous Syst. Behav. 129 (2020) 446–463.
+Welfare, Japan (20FC1049), and grants from the Japan Society for the [4] A. Tsanas, M.A. Little, P.E. McSharry, L.O. Ramig, Nonlinear speech analysis
+algorithms mapped to a standard metric achieve clinically useful quantification of
+Promotion of Science, Grants-in-Aid for Scientific Research (C)
+average Parkinson’s disease symptom severity, J. R. Soc. Interface 8 (59) (2011)
+(#21K12711). The funders had no role in the study design, data 842–855.
+collection or analysis, decision to publish, or manuscript preparation. [5] S. Skodda, Aspects of speech rate and regularity in Parkinson’s disease, J. Neurol.
+The Department of Neurodegenerative and Demented Disorders was Sci. 310 (1–2) (2011) 231–236.
+[6] A. Tsanas, M.A. Little, P.E. McSharry, L.O. Ramig, Accurate telemonitoring of
+supported by grants from GLORY Ltd., Kirin Company Ltd., Mitsubishi Parkinson’s disease progression by noninvasive speech tests, IEEE Trans. Biomed.
+UFJ Lease & Finance Company Ltd. Eng. 57 (4) (2010) 884–893.
+[7] D. Ireland, J. Liddle, S. McBride, H. Ding, C. Knuepffer, Chat-bots for people with
+Parkinson’s disease: science fiction or reality? Stud. Health Technol. Inf. 214
+Author contributions (2015) 128–133.
+[8] T. Maycas-Cepeda, P. Lo´pez-Ruiz, C. Feliz-Feliz, L. Go´mez-Vicente, R. García-
+The conception and design of the study, or acquisition of data, or Cobos, R. Arroyo, P.J. García-Ruiz, Hypomimia in Parkinson’s disease: what is it
+telling us? Front. Neurol. 11 (1775) (2021).
+analysis and interpretation of data: GO, MO, KM, MK, YY, KS, HK, TH,
+[9] L. Ricciardi, M. Bologna, F. Morgante, D. Ricciardi, B. Morabito, D. Volpe,
+and NH, (2) drafting the article or revising it critically for important D. Martino, A. Tessitore, M. Pomponi, A.R. Bentivoglio, R. Bernabei, A. Fasano,
+intellectual content: MO, GO, KM, MK, YY, KS, HK, TH, NH. (3) final Reduced facial expressiveness in Parkinson’s disease: a pure motor disorder?
+J. Neurol. Sci. 358 (1–2) (2015) 125–130.
+approval of the version to be submitted: All authors. [10] S. Argaud, M. V´erin, P. Sauleau, D. Grandjean, Facial emotion recognition in
+Parkinson’s disease: a review and new hypotheses, Movement disorders, Off. J.
+Declaration of competing interest Mov. Disord. Soc. 33 (4) (2018) 554–567.
+[11] W. Sato, S. Hyniewska, K. Minemoto, S. Yoshikawa, Facial expressions of basic
+emotions in Japanese laypeople, Front. Psychol. 10 (2019) 259.
+The Department of Neurodegenerative and Demented Disorders is a
+46

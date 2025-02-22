@@ -1,0 +1,684 @@
+International Journal of Chronic Obstructive Pulmonary Disease Dovepress
+openaccesstoscientificandmedicalresearch
+OpenAccessFullTextArticle ORIGINAL RESEARCH
+Statistical Process Control Improves The Feasibility
+Of Remote Physiological Monitoring In Patients
+With Chronic Obstructive Pulmonary Disease
+ThisarticlewaspublishedinthefollowingDovePressjournal:
+InternationalJournalofChronicObstructivePulmonaryDisease
+Christopher B Cooper1 Background: Exacerbations of chronic obstructive pulmonary disease (COPD) occur with
+Worawan Sirichana1,2 increasing frequency as the disease progresses and account for poor health status, worse
+Eric V Neufeld 1 prognosis, andhigherhealthcare expenditure.
+Michael Taylor3 Methods:Wedevelopedanetworkedsystemforremotephysiologicalmonitoring(RPM)at
+Xiaoyan Wang4 homeandoptimizeditwithstatisticalprocesscontrol(SPC)withthegoalofearlierdetection
+Brett A Dolezal1 ofCOPDexacerbations.Weenrolled17patientswithmoderatetosevereCOPDwithamean
+(SD) age of 71.1 (7.2) years. We obtained daily symptom scores, treatment adherence and
+1ExercisePhysiologyResearch activitylevelsusingaprogrammabledevice,andmeasureddailyslowandforcedspirometry
+Laboratory,DepartmentsofMedicine
+(FEV , FVC, PEF), inspiratory capacity (IC) and oxygenation (SpO ). To identify exacer-
+andPhysiology,DavidGeffenSchoolof 1 2
+Medicine,UniversityofCalifornia,Los bations,wedevelopedrollingpredictionintervalsforFVC,FEV ,ICandSpO usingSPC.
+1 2
+Angeles,CA,USA;2Divisionof
+Results:Thetimetakentoperformdailymonitoringwasreducedfrom12.7(5.4)minutesto
+PulmonaryandCriticalCareMedicine,
+6.5 (2.6) minutes through software refinements during the study. Adherence to forced and
+DepartmentofMedicine,Chulalongkorn
+University,Bangkok,Thailand;3eResearch slow spirometry was 62.6% and 62.4%, respectively. The within-subject coefficients of
+TechnologyInc.,Philadelphia,PA,USA;
+variation for FEV , PEF and IC were 12.2%, 16.2%, and 13.1%, respectively. Event rates
+4DivisionofGeneralInternalMedicine 1
+andHealthServicesResearch,David per patient-year for exacerbations were: self-reported 0.42, 2/3 Anthonisen Criteria (AC)
+GeffenSchoolofMedicine,Universityof 0.42,modifiedAC2.23,systemic corticosteroid use0.56,andantibiotic use0.56.
+California,LosAngeles,CA,USA
+Conclusion: We successfully implemented a networked system for RPM of symptoms,
+treatmentadherence,andphysiologyathomeinpatientswithCOPD.Wedemonstratedthat
+SPCimprovesthefeasibilityofRPMinCOPDpatientswhichmayincreasethelikelihoodof
+detecting COPDexacerbations.
+Keywords:chronicobstructivepulmonarydiseaseexacerbations,earlydetection,treatment
+adherence, homemonitoring
+Introduction
+Chronic Obstructive Pulmonary Disease (COPD) is a major health problem and a
+leading cause of disability and mortality throughout the
+world.1–3
+The disease is
+characterized by chronic airway inflammation and airflow obstruction that is par-
+tially reversible on administration of inhaled bronchodilator therapy. Disease pro-
+gression is usually defined by progressive worsening of airflow obstruction or the
+Correspondence:ChristopherBCooper rateofdeclineinforcedexpiratoryvolumein1second(FEV ).However,itiswell
+DavidGeffenSchoolofMedicine, 1
+UniversityofCalifornia,10833LeConte recognizedthatFEV alonedoesnotfullycharacterizethediseaseandthatthereare
+1
+Avenue,37-131CHSBuilding,Los
+many phenotypes and extra-pulmonary comorbidities. Disease progression is also
+Angeles,CA90095-1690,USA
+Tel+13104703983 characterized by an increasing frequency of exacerbations and these exacerbations
+Fax+13102068211
+Emailccooper@mednet.ucla.edu are associated with significant morbidity, mortality and increased healthcare
+submityourmanuscript|www.dovepress.com InternationalJournalofChronicObstructivePulmonaryDisease2019:142485–2496 2485
+DovePress ©2019Cooperetal.ThisworkispublishedandlicensedbyDoveMedicalPressLimited.Thefulltermsofthislicenseareavailableathttps://www.dovepress.com/terms.
+phpandincorporatetheCreativeCommonsAttribution–NonCommercial(unported,v3.0)License(http://creativecommons.org/licenses/by-nc/3.0/).Byaccessingthe
+http://doi.org/10.2147/COPD.S207626
+workyouherebyaccepttheTerms.Non-commercialusesoftheworkarepermittedwithoutanyfurtherpermissionfromDoveMedicalPressLimited,providedtheworkisproperlyattributed.For
+permissionforcommercialuseofthiswork,pleaseseeparagraphs4.2and5ofourTerms(https://www.dovepress.com/terms.php).
+Cooperetal Dovepress
+utilization. There is also some evidence to suggest that Materials And Methods
+those patients with more frequent exacerbations tend to Study Design
+have a more rapid decline in lung function and clear
+This was a prospective study to develop and evaluate a
+evidence that patients with lower FEV tend to have
+1 system for daily remote monitoring of COPD patients
+more exacerbations.4,5 Exacerbations are also associated
+including physiological measurements and questionnaires.
+with poor quality of life6 and earlier recognition and
+intervention in exacerbations could improve outcomes
+Study Population, Inclusion And Exclusion
+and result in a better quality of life.7 Appropriate exacer-
+Criteria
+bation management, prevention and early intervention are
+the goals for COPD treatment. There are many interven- We enrolled 17 subjects who lived within a reasonable
+tions that aim to reduce exacerbation frequency in COPD, travelingdistancetoUniversityofCalifornia,LosAngeles
+for example, vaccinations and maintenance therapy with (UCLA).Theenrollmentcriteriawereasfollows:age>40
+inhaled medications. A proactive management strategy yearsandaclinicaldiagnosisofmoderatetosevereCOPD
+that focusses on early detection of exacerbations could in accordance with the American Thoracic Society (ATS)
+lead to earlier treatment which could, in turn, lessen the definition,14 a smoking history >10 pack-years, post-
+severity and consequences of the exacerbation. bronchodilator FEV 1/FVC <70% and FEV 1 <70% based
+Information technology offers interesting possibilities in
+onNHANESIIIreferencevalues.15Subjectswereexpected
+termsof telemedicineorremotepatientmonitoringat home. to be taking inhaled maintenance therapy for COPD and
+Remotemonitoringhasbeendeployedinpatientswithchronic their domestic situation had to beconsidered conducive to
+heart failure aiming to reduce healthcare utilization and remote patient monitoring. Subjects were excluded if they
+improve quality of life.8,9 Since COPD is complex disease had concurrent pulmonary disease other than COPD, e.g.,
+with multiple physiological changes during an exacerbation, lungcancer,activetuberculosis,bronchiectasisunrelatedto
+remotepatientmonitoringshouldincludebothsymptomsand
+COPD,pulmonaryfibrosis,orcysticfibrosis.Weexcluded
+physiological measurements. Daily spirometry has been per- those with any other disease that carried a prognosis less
+formed at home in several studies.10,11 FEV , forced vital than 2 years, those with a recent history of myocardial
+1
+capacity (FVC) and peak expiratory flow (PEF) have been infarction(within6weeksofenrollment),aCOPDexacer-
+shown to be decreased during periods of exacerbations.12,13 bation within 6 weeks of enrollment or had a known or
+However,inspiratorycapacity(IC)wasnotroutinelyusedfor suspected history of drug or alcohol abuse within 2 years
+daily monitoring due to inadequate data on reliability and priortotheinitialvisit.Thisinvestigationwasapprovedby
+reproducibility. Thus, remote patient monitoring remains a the UCLA Institutional Review Board and all participants
+challengeinCOPDwithaneedtodevelopnetworkmanage- provided written informed consent. The study was con-
+mentandtoevaluatefeasibilityandadherencetomonitoring. ductedinaccordancewiththeDeclarationofHelsinki.
+Thequestionsthatneedtobeansweredare:howoftenshould
+patientsbemonitoredtodetectsymptomsofclinicaldeteriora- Baseline Assessment
+tion and which parameter(s) should be included in remote All subjects performed baseline assessments at the UCLA
+patient monitoring? Ultimately, one would hope that remote ExercisePhysiologyResearchLaboratorywhichincluded:
+patient monitoringcouldbe usedtoinvestigate interventions (i) Medical history and physical examination, (ii) docu-
+thatcouldbedeployedtominimizeexacerbationseverityand mentation of COPD medications, and (iii) 12-lead supine
+perhaps decrease hospitalization and other aspects of health- electrocardiogram.
+careutilization. Spirometry was performed in accordance with new
+Our aim was to study the feasibility of remote physio- ATS/ERS standards16,17 in the seated position with nose
+logical monitoring (RPM) in COPD in terms of data cap- clipappliedafterthesubjecthadrestedforatleast10min.
+ture and data reliability. In the course of the study, we Forced and slow spirometry maneuvers were performed
+introduced statistical process control (SPC), an approach underthesupervisionofcertifiedpulmonaryfunctiontech-
+used in engineering for quality assurance, to help identify nologistusingaportableelectronicspirometer(SpiroPro®.
+significant signals or predictors. We have demonstrated ERT,Inc.Philadelphia,PA).Duringthebaselinevisit,sub-
+thatstatisticalprocesscontrol(SPC)canimproveitseffec- jectsweretrainedtousethespirometerthemselvesandalso
+tiveness in monitoring COPD patients. learnedhowtotransferdataviamodem.
+2486 submityourmanuscript|www.dovepress.com InternationalJournalofChronicObstructivePulmonaryDisease2019:14
+DovePress
+Dovepress Cooperetal
+Generalhealth-relatedqualityoflifewasdeterminedat 1–3 days through a secure UCLA network system to the
+baselineandfinalvisitsusingtheMedicalOutcomesTrust UCLA Exercise Physiology Research Laboratory.
+Short Form 12 questionnaire (SF-12).18 Disease-specific After about 6 months of experience with the study
+quality of life (for COPD patients) was determined using procedures, we were able to analyze feedback from our
+the COPD Assessment Test (CAT).19 The St. George subjects on the ease of performing the stipulated maneu-
+Respiratory Questionnaire was also administered to assess vers. It was evident that the standard requirement of per-
+the quality of life.20 forming at least three acceptable tests according to the
+ATS/ERS standard17 was too arduous on a daily basis
+and was compromising patient adherence to the protocol.
+Remote Patient Monitoring
+At this stage, we modified the analytical software using
+Daily Routine
+and introduced statistical process control (SPC). This
+Subjects who participated in the study were asked to per-
+changeallowedsubjectstoperformonlyoneortwoforced
+form daily monitoring using SpiroPro®. This device is an
+maneuvers each day of monitoring provided that one of
+FDA-approved handheld spirometer that was also pro-
+the maneuvers was technically acceptable and could be
+grammed with electronic diaries, questionnaires and the
+evaluated along with sequential maneuvers performed on
+capability for recording pulse oximetry. Measured values
+precedingdays(Figure2).DetailsoftheSPCdeployedare
+were FEV 1, FVC, PEF, IC and pulse oximetry (SpO 2). showninAppendixA.Therefinedanalyticalsoftwarewas
+Novel questionnaires included questions on daily symp-
+available 10 months after the start of the study for all
+toms such as cough, breathlessness, wheezing, sputum subjects undergoing remote monitoring. There were five
+volume and purulence (CLEAR-Sx), daily physical activ- subjects that used both the old and new analytical
+ities (CLEAR-Ex), and questions on daily medications software.
+(CLEAR-Rx).Healthcareutilization,intermsofphysician
+Activity Monitoring
+visits, emergency department visits and hospitalizations,
+For each subject assigned to remote monitoring, we
+was also captured electronically duringmonthly telephone
+trackeddailyphysicalactivityusingacommerciallyavail-
+follow-upbythestudycoordinator.Theexpectedmonitor-
+able tri-axial accelerometer (GENEActiv®. Kimbolton,
+ing routine is shown diagrammatically in Figure 1.
+UK). Data were continuously recorded for 24 hrs, every
+Subjects were required to transfer data via modem every
+day, at 40 Hz frequency and analyzed in 60-s epochs. The
+sum of vector magnitudes was computed with gravity
+subtracted (SVMgs).
+(cid:3)pffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi (cid:3)
+(cid:3) (cid:3)
+SVMgs¼∑(cid:3) x2þy2þz2(cid:2)g(cid:3)
+TheGENEActiv®accelerometerswereexchangedevery2
+weeks by mail with pre-addressed and pre-paid envelopes
+and data were extracted with the goal of continuing until
+12 months of data had been accumulated.
+Monthly Telephone Contact
+During the study, a study coordinator from the UCLA
+ExercisePhysiologyResearchLaboratorymadeamonthly
+phone call to each subject. Data obtained from these
+monthly phone calls included the CAT questionnaire,
+changes of medication, and any self-reported exacerbation
+events which had necessitated healthcare utilization.
+Figure1Schemafordailyremotepatientmonitoring.
+Notes:Patientswereaskedtoseatthemselvesatatableinfrontofthemonitoring
+equipment.Theythenappliedthefingerpulseoximeter.Theywerethentakenthrougha Defi
+nition Of Predictors
+seriesofscreenswhichpresentedquestionsabouttheirsymptoms(CLEAR-Sx),treat-
+mentadherence(CLEAR-Rx)andphysicalactivity(CLEAR-Ex).Next,theyperformedan Predictors were considered to be significant findings from
+inspiratorycapacitymaneuverfollowedbyaforcedvitalcapacitymaneuver.Finally,they
+removedthepulseoximeter.Thetargetcompletiontimewassetat10mins. remote monitoring. Since this was primarily a feasibility
+InternationalJournalofChronicObstructivePulmonaryDisease2019:14 submityourmanuscript|www.dovepress.com 2487
+DovePress
+Cooperetal Dovepress
+Figure2Diagrammaticrepresentationofthestatisticalprocesscontrolmonitoringalgorithm.
+Notes:The7-dayrollingaverageforeachphysiologicalvariablewastrackedalongwiththestandarddeviationandpredictioninterval.Wheneveradailyrecordedvalueexceeded
+the2-sided95%predictioninterval,thenitwasconsideredtechnicallyunacceptableandrepeated.Thelowerofthetwovalueswasthencaptured.Wheneveradailyrecordedvalue
+fellbelowthe1-sided95%predictioninterval,thenitwasrepeatedandifstillbelowthe1-sided95%predictioninterval,thenitwasconsideredtobeaclinicalevent.
+study, the interpretation of the data remained exploratory. consecutive days. The latter criterion represents a one-
+We used several thresholds to define prediction events sided 95% prediction interval.
+from responses to questionnaires or from physiological
+Inactivity
+measures.
+Self-reported lack of any physical activity for two conse-
+Pulse Oximetry cutive days from responses to the CLEAR-Ex.
+A fall in SpO below 90% for 2 consecutive days or a fall
+2
+belowthe7-dayrollingaverageminus4%for2consecutive Discontinuation Of Maintenance Therapy
+days.Takingintoaccounttheknownaccuracyoftheinstru- Self-reportedfailuretotakeprescribedlong-actinginhaled
+ments,a4%fallinSpO isconsideredclinicallymeaningful. maintenance therapy (LAMA and/or LABA) for two con-
+2
+secutive days by CLEAR-Rx.
+Spirometry
+A fall in FEV , FVC, PEF or IC lower than the 7-day Use Of Short-Acting Inhaled Bronchodilators
+1
+rollingaverage minus oneSDfortwoconsecutive days or An increase in self-reported use of short-acting inhaled
+lowerthanthe7-dayrollingaverageminus1.645SDfor2 bronchodilators (SABA or SAMA) by two actuations
+2488 submityourmanuscript|www.dovepress.com InternationalJournalofChronicObstructivePulmonaryDisease2019:14
+DovePress
+Dovepress Cooperetal
+above the 7-day average for that subject at the time of Use Of Systemic Corticosteroid
+enrolmentintothestudybyCLEAR-Sx(periodofclinical Self-reporteduseofsystemiccorticosteroidssuchaspredni-
+stability). soneforworseningrespiratorysymptomsfromresponsesto
+The end of positive predictor signal was identified if theCLEAR-Sx.
+the value for each predictor had returned to within the
+prediction interval based on the previous 7-day average, Data Analysis
+for 2 consecutive days. Descriptive Statistics
+Meanandstandarddeviationwasusedtodescribebaseline
+fi demographic and clinical characteristics.
+De nition Of Outcomes
+The outcome of interest which we wished to detect by Feasibility
+remote monitoring was exacerbations. However, these Theoperationalfeasibilityofremotemonitoringsystemwas
+could be defined in several different ways. analyzedbycompliancerate(numberofdayswithsuccess-
+fullytransferreddatadividedbythetotalnumberofdaysof
+Self-Reported Exacerbation remotepatientmonitoring).Inaddition,timespentperform-
+A reported exacerbation was an event reported by the ingdailymaneuverswascaptured.
+subject during monthly telephone calls with the study
+Adherence
+coordinator. Typically, these events were associated
+A daily adherence score was calculated by summation of
+with reported changes in medications such as inhaled
+successfully transferred values for each monitoring man-
+bronchodilators, antibiotics or systemic corticosteroids.
+Office visits, emergency department visits and hospita- euver (SpO 2, slow vital capacity, forced vital capacity,
+CLEAR-Sx, CLEAR-Ex, CLEAR-Rx). One point was
+lization were also included in this category of out-
+allocated for each successfully transferred data element
+comes. However, only one enrolled subject-reported
+giving a maximum possible score of 6 for each day of
+hospitalizations (three times) but this subject did not
+monitoring. The maneuvers included in the analysis are:
+receive RPM.
+(a) Oxygen saturation recorded or not (1=recorded,
+Anthonisen Criteria
+0=not recorded);
+An increase over two consecutive days in three out of three
+(b) Slow spirometry recorded or not (1=recorded,
+symptoms(breathlessness,sputumvolumeandsputumpuru-
+0=not recorded);
+lence) as captured by CLEAR-Sx using the 7-day rolling
+(c) Forced spirometry recorded or not (1=recorded,
+average plus 1.645 SD as the threshold (Anthonisen
+0=not recorded);
+Class1).21Anincreaseovertwoconsecutivedaysinatleast
+(d) Daily symptoms recorded or not (1=recorded,
+two out of three symptoms (breathlessness, sputum volume
+0=not recorded);
+andsputumpurulence)ascapturedbyCLEAR-Sxusingthe7-
+(e) Daily activity recorded or not (1=recorded, 0=not
+day rolling average plus 1.645 SD as the threshold
+recorded);
+(AnthonisenClass2).
+(f) Dailytreatmentrecordedornot(1=recorded,0=not
+recorded)
+Modified Anthonisen Criteria
+An increased over two consecutive days of two major Comparison Of Analytical Software Versions
+symptoms (breathlessness, sputum volume and sputum For each maneuver and adherence score, a two-way fre-
+purulence) or increased one major symptom plus one quency table was generated according to whether data
+minor symptom (cough or wheezing) as captured by were recorded or not and whether the analytical software
+CLEAR-Sx using the 7-day rolling average plus 1.645 was old or new (refined). Counts and percentages were
+SD as the threshold (Modified Anthonisen Criteria). reported. A Chi-squared test was performed to test if the
+different versions of the software were associated with
+Use Of Antibiotic different compliances.
+Self-reported use of any antibiotic for worsening respira- Asubsetanalysiswasperformedonfivesubjectsinour
+tory symptoms from responses to the CLEAR-Sx. study who used both versions of the software. A paired
+InternationalJournalofChronicObstructivePulmonaryDisease2019:14 submityourmanuscript|www.dovepress.com 2489
+DovePress
+Cooperetal Dovepress
+t-test was used to compare the percentages of recorded Table1BaselineAssessmentsForSubjectsUndergoingRemote
+maneuvers or averaged adherence scores between the new PatientMonitoring
+and the old software. The paired subset analysis allowed Measure Baseline(n=17)
+us to further assess any difference in study compliance
+Age(years) 71.1(7.2)
+betweentheoldandnewversionsofsoftwarebyeliminat-
+Sex(male,N,%) 5(29.4%)
+ing possible individual differences that occur between FEV (L) 1.54(0.73)
+1
+subjects. FEV %predicted 56.8(15.9)
+1
+FVC(L) 3.04(1.09)
+FVC%predicted 86.8(14.1)
+Results
+PEF(L/m) 4.84(2.59)
+Study Population PEF%predicted 70.0(27.3)
+CAT* 13(5–25)
+We enrolled 17 subjects for remote patient monitoring
+SF-12 36.4(4.7)
+(RPM). Six subjects did not provide any data and three
+SGRQ 28.0(13.9)
+discontinued monitoring partway through the 12-month
+Notes:Dataarepresentedasmean(SD).*Dataarepresentedasmedian(range).
+target monitoring period. These subjects collectively pro-
+Abbreviations:FEV1,forcedexpiratoryvolumeinonesecond;FVC,forcedvital
+vided 2618 days of data home monitoring or 7.17 patient-
+capacity;PEF,peakexpiratoryflow;CAT,ChronicObstructivePulmonaryDisease
+(COPD)AssessmentTest;SF-12,ShortForm12questionnaire;SGRQ,St.George’s
+years. Interestingly, 12 of the 17 subjects were women RespiratoryQuestionnaire.
+which might suggest that men are less likely to agree to
+home monitoring. After 10 months of monitoring, we Daily physical activity(ΣA) was quantitatedasthe sum
+began using a refined version of the analytical software. of vector magnitude units with gravity subtracted(SVMgs)
+The reason for this change was based on challenges with from the tri-axial accelerometers (GENEActiv, Kimbolton,
+patient adherence to the stringent criteria which had been UK).Themean(SD)ΣAwas114.2(18.7)g·min.Themean
+applied for the performance of spirometry (described (SD)activitytimeperday(non-sedentary)was162.8(57.7)
+below).17 Following the change, four enrolled subjects minutesand99%ofthistimewasclassifiedaslightintensity
+were monitored using only the new software. The total (1.5–2.9METs). There was nocorrelationbetweenΣAand
+monitoring time was 1398 patient-days with the old soft- CAT(r=0.042,P=0.800)orbetweenΣAandbaselineFEV
+1
+ware and 1220 patient-days with the new software. Nine (r=0.148,P=0.363).Unfortunately,wecouldnotidentify
+subjects withdrew from the study; five withdrew their activitypatternsimmediatelybeforeorafteranexacerbation
+consent before starting remote monitoring and one was event since there was poor subject adherence with wearing
+lost to follow up. There were three subjects who began theaccelerometerinrelationtoanyoftheseevents.
+RPM but dropped out during the study. We included their
+incomplete monitoring data in our analysis. Adherence To Daily Monitoring
+During the initial 10-month phase of this study, we found
+Baseline Characteristics adherencetotheremotemonitoringroutinetobelessthan
+The baseline characteristics for the subjects are shown in satisfactory. Allocating one point for complete data trans-
+Table1.Theirmean(SD)agewas71.1(7.2)yearsandfive fer for each of oxygen saturation, forced spirometry, slow
+(29.4%) were men. Baseline FEV was 1.54 (0.73) L or spirometry, CLEAR-Sx, CLEAR-Rx and CLEAR-Ex, we
+1
+56.8 (15.9) % predicted. FVC was 3.04 (1.09) L or 86.8 observed an average score of only 3.3 points (out of a
+(14.1)%predicted.FEV /FVCwas50.7%.Inotherwords, possible total score of 6) over 1,398 days of monitoring
+1
+on average, the subjects had moderate COPD by GOLD (Table 2). At this point, we refined the software used for
+spirometricclassification.Themedian(range)scoreforthe collation and analysis of the data based on principles of
+COPD Assessment Test (CAT) was 13 (range 5–25) posi- SPC(Appendix A).With these refinements, theadherence
+tioningmostofthesubjectsashighlysymptomaticaccord- score increased to 4.3 points (Table 2) and the proportion
+ing to the latest GOLD grading.14 Health status scores ofmonitoringdayswithhigheradherencescoresincreased
+were 36.4 (4.7) by the Short Form-12 and 28.0 (13.9) by substantially(AppendixB).Forexample,theproportionof
+theStGeorge’sRespiratory Questionnaire (SGRQ).These monitored days with an adherence score of 6 increased
+findings categorize the subjects as having mildly to mod- from 50.1% to 69.4%. Completion of each component of
+erately compromised health status. monitoring before and after the introduction of the refined
+2490 submityourmanuscript|www.dovepress.com InternationalJournalofChronicObstructivePulmonaryDisease2019:14
+DovePress
+Dovepress Cooperetal
+Table 2 Summary Of Adherence To Each Component Of (P<0.001, Table 3). Adherence to daily medication report-
+Remote Monitoring ing by CLEAR-Rx increased from 55.0% to 72.1%
+OldSoftware NewSoftware (P<0.001, Table 3). Adherence to daily physical activity
+(1398Patient-Days) (1220Patient-Days) reporting by CLEAR-Ex increased from 54.7% to 72.1%
+(P<0.001, Table 3). Adherence to slow spirometry
+SpO 755(54.0%) 849(69.6%)
+2
+CLEAR-Sx 768(54.9%) 880(72.1%) increased from 53.9% to 72.1% (P<0.001, Table 3).
+CLEAR-Rx 768(55.0%) 880(72.1%) Adherence to forced spirometry increased from 54.5% to
+CLEAR-Ex 764(54.7%) 880(72.1%) 72.0% (P<0.001, Table 3).
+Slowspirometry 754(53.9%) 880(72.1%) Lookingatthesubsetoffivesubjectswhoexperienced
+Forcedspirometry 762(54.5%) 878(72.0%)
+both the old and new versions of the analytical software,
+Adherencescore 3.3(2.9) 4.3(2.7)
+we also saw significant improvements in adherence for all
+(total=6)
+components of monitoring (P<0.001, Table 4). Subset
+Abbreviations: SpO2, oxygen saturation; CLEAR-Sx, daily symptom reporting;
+CLEAR-Rx,dailymedicationreporting;CLEAR-Ex,dailyphysicalactivity. adherence to pulse oximetry increased from 49.0 (14.2)
+% to 84.1 (8.4) % (P = 0.006, Table 5). Subset adherence
+software was examined using Chi-squared tests. to daily symptom reporting by CLEAR-Sx increased from
+Adherence to pulse oximetry increased from 54.0% to 50.0 (14.2) % to 87.0 (9.8) % (P=0.011, Table 5). Subset
+69.6% (P<0.001, Table 3). Adherence to daily symptom adherence to daily medication reporting by CLEAR-Rx
+reporting by CLEAR-Sx increased from 54.9% to 72.1% increased from 50.0 (14.2) % to 87.0 (9.8) % (P=0.011,
+Table 3Breakdown OfAdherenceToEachComponent OfRemoteMonitoring
+ComponentOfRemoteMonitoring Reported OldSoftware(%) NewSoftware(%) Chi-SquaredP-value
+OxygenSaturation(SpO ) No 643(46.0%) 371(30.4%) <0.001
+2
+Yes 755(54.0%) 849(69.6%)
+TotalDaysmonitored 1,398 1,220
+DailySymptomReporting(CLEAR-Sx) No 630(45.1%) 340(27.9%) <0.001
+Yes 768(54.9%) 880(72.1%)
+TotalDaysMonitored 1,398 1,220
+DailyMedicationReporting(CLEAR-Rx) No 630(45.1%) 340(27.9% <0.001
+Yes 768(54.9%) 880(72.1%)
+TotalDaysMonitored 1,398 1,220
+DailyPhysicalActivityReporting(CLEAR-Ex) No 634(45.4%) 340(27.9%) <0.001
+Yes 764(54.7%) 880(72.1%)
+TotalDaysMonitored 1,398 1,220
+SlowSpirometryMonitoring No 644(46.1%) 340(27.9%) <0.001
+Yes 754(53.9%) 880(72.1%)
+TotalDaysMonitored 1,398 1,220
+ForcedSpirometryMonitoring No 636(45.5%) 342(28.0%) <0.001
+Yes 762(54.5%) 878(72.0%)
+TotalDaysMonitored 1,398 1,220
+Notes:Overall,participantsonnewsoftwaredemonstratedbetter:
+●
+Oxygensaturationmonitoringcompliance(69.59%reported)thanthoseontheoldsoftware(54.01%reported)(P<0.0001).
+●
+Dailysymptomreportingcompliance(72.13%reported)thanthoseontheoldsoftware(54.94%reported)(P<0.0001).
+●
+Dailytreatmentreportingcompliance(72.13%reported)thanthoseontheoldsoftware(54.94%reported)(P<0.0001).
+●
+Dailyactivityreportingcompliance(72.13%reported)thanthoseontheoldsoftware(54.65%reported)(P<0.0001).
+●
+Slowspirometrymonitoringcompliance(72.13%reported)thanthoseontheoldsoftware(53.93%reported)(P<0.0001).
+●
+Forcedspirometrymonitoringcompliance(71.97%reported)thanthoseontheoldsoftware(54.51%reported)(P<0.0001).
+InternationalJournalofChronicObstructivePulmonaryDisease2019:14 submityourmanuscript|www.dovepress.com 2491
+DovePress
+Cooperetal Dovepress
+Table 4SummaryOfSubsetDaily AdherenceScores currently available technologies, remote patient monitor-
+ing might be viewed as a valuable means of short-term
+Subject Software Days Adherence P-value
+ID Version Monitored Score/Day monitoring in selected patients such as those recently dis-
+charged from hospital after a COPD exacerbation.22
+1004 New 64 5.34 0.009
+Our study was successful in several respects. Firstly,
+Old 287 3.95
+wewereabletorefinethesoftwareforremotedatacapture
+1006 New 50 5.68
+which improved overall patient adherence to data record-
+Old 313 2.34
+ing from 50.1% to 69.4% and reduced the time spent to
+1010 New 67 5.54
+complete the daily monitoring routine from 12.7 ± 5.4 to
+Old 283 3.44
+6.5 ± 6.2 mins (P<0.001). Adherence to pulse oximetry,
+1015 New 249 5.16
+symptomreporting,medicationreporting,physicalactivity
+Old 117 1.93
+reporting, slow spirometry and forced spirometry all
+1017 New 280 4.24 increasedsignificantly(P<0.001).Secondly,wediscovered
+Old 102 3.21
+the value of SPC as a means of identifying criteria for
+Notes:Asubsetanalysiswasperformedusingdatafromfiveparticipantswhoused
+prediction events and were able to replace the overly
+bothversionsofthesoftware.Apairedt-testwasusedtocompareifthepercen-
+tageofrecordedmaneuversoraveragedadherencescorewasdifferentbetween burdensome ATS criteria for the performance of
+thenewandtheoldsoftware.Theseparticipantshadamean(SD)adherencescore
+spirometry17 with a statistically defensible routine for
+of5.19(0.57)forthenewsoftwareversus2.97(0.82)fortheoldsoftware(P=0.01).
+daily monitoring that views all daily measurements as a
+continuous data set. Thirdly, we were able to determine
+Table 5). Subset adherence to daily physical activity
+event rates (per patient-year) for each of our predictors as
+reporting by CLEAR-Ex increased from 49.7 (14.3) % to
+well as for exacerbations defined by several different cri-
+87.0(9.8)%(P=0.012,Table5).Subsetadherencetoslow
+teria.Fourthly,wewereabletoassociatecertainpredictors
+spirometry increased from 49.0 (13.7) % to 87.0 (9.8) %
+derived from remote monitoring with exacerbations.
+(P=0.010,Table5).Subsetadherencetoforcedspirometry
+Statistical process control involves the use of simple
+increased from 49.7 (12.4) % to 86.9 (9.9) % (P=0.006,
+statistical tools, such as histograms and flow charts, to
+Table 5).In addition toimproved adherence, time spent to
+determine control limits.23 The advantages of this metho-
+completethedailymonitoringroutinewas decreasedfrom
+12.7 ± 5.4 (4.0–38.0) minutes to 6.5 ± 6.2 (3.0–12.0) dology are that it enables the determination of a stable
+baseline from a longitudinal data set and then sets control
+minutes (P<0.001).
+limitstodetectdeviationsfromthebaseline.24Application
+Occurrence Of Exacerbations of SPC enabled us to set clinically meaningful thresholds
+aroundourdataandtoexamineinteractionsbetweenthese
+Event rates per patient-year for exacerbations were: self-
+reported0.42,2/3AnthonisenCriteria(AC)0.42,modified thresholds. Most importantly, SPC allowed us to interpret
+daily spirometric values as a continuous data set without
+AC 2.23, systemic corticosteroid use 0.56, and antibiotic
+needing to apply the traditional ATS criteria for the per-
+use 0.56.
+formance of spirometry as might be applicable to a single
+Discussion set of measurements at a single point in time.17 This
+The CLEAR study was primarily a feasibility study of changewasmainlyresponsibleforthereduceddailymon-
+remote monitoring of COPD patients in their homes, in itoring time and the increased patient adherence to captur-
+which we evaluated the possibility of capturing daily ing the various data elements.
+symptoms, treatment adherence, self-reported activity, Early detection of COPD exacerbations by remote
+spirometry,oxygenationandphysicalactivity byaccelero- patient monitoring was a goal of this research study. To
+metry. We recruited a total of 17 subjects undergoing date, there have been various attempts to accomplish this
+home monitoring. These subjects collectively provided goalbutthereisasyetnoconsensusandtowhatshouldbe
+2,618 days of data from home monitoring or 7.17 measured and what thresholds should be chosen to trigger
+patient-years. We monitored some patients for up to 12 an intervention. One study monitored breathing frequency
+monthsbutformosttheburdenofdailymonitoringdidnot for 3 months in 89 COPD patients.25 The investigators
+allow this goal to be accomplished. Therefore, given identified Increases in breathing frequency of 4.4/minute
+2492 submityourmanuscript|www.dovepress.com InternationalJournalofChronicObstructivePulmonaryDisease2019:14
+DovePress
+Dovepress Cooperetal
+Table 5Breakdown OfSubsetAdherenceToEachComponent OfRemote Monitoring
+ComponentOfRemote Subject Software Days Reported Reported P-value
+Monitoring ID Version Monitored (n) (%)
+OxygenSaturation(SpO ) 1004 New 64 57 89.1 0.006
+2
+Old 287 191 66.6
+1006 New 50 44 88.0
+Old 313 119 38.0
+1010 New 67 61 91.0
+Old 283 161 56.9
+1015 New 249 204 81.9
+Old 117 37 31.6
+1017 New 280 197 70.4
+Old 102 53 52.0
+DailySymptomReporting(CLEAR-Sx) 1004 New 64 57 89.1 0.011
+Old 287 192 66.9
+1006 New 50 48 96.0
+Old 313 120 38.3
+1010 New 67 62 92.5
+Old 283 162 57.2
+1015 New 249 216 86.7
+Old 117 38 32.5
+1017 New 280 198 70.7
+Old 102 56 54.9
+DailySymptomReporting(CLEAR-Rx) 1004 New 64 57 89.1 0.011
+Old 287 192 66.9
+1006 New 50 48 96.0
+Old 313 120 38.3
+1010 New 67 62 92.5
+Old 283 162 57.2
+1015 New 249 216 86.7
+Old 117 38 32.5
+1017 New 280 198 70.7
+Old 102 56 54.9
+DailySymptomReporting(CLEAR-Ex) 1004 New 64 57 89.1 0.012
+Old 287 191 66.6
+1006 New 50 48 96.0
+Old 313 117 37.4
+1010 New 67 62 92.5
+Old 283 162 57.2
+1015 New 249 216 86.7
+Old 117 38 32.5
+1017 New 280 198 70.7
+Old 102 56 54.9
+(Continued)
+InternationalJournalofChronicObstructivePulmonaryDisease2019:14 submityourmanuscript|www.dovepress.com 2493
+DovePress
+Cooperetal Dovepress
+Table 5(Continued).
+ComponentOfRemote Subject Software Days Reported Reported P-value
+Monitoring ID Version Monitored (n) (%)
+SlowSpirometryMonitoring 1004 New 64 57 89.1 0.010
+Old 287 181 63.1
+1006 New 50 48 96.0
+Old 313 121 38.7
+1010 New 67 62 92.5
+Old 283 163 57.6
+1015 New 249 216 86.7
+Old 117 36 30.8
+1017 New 280 198 70.7
+Old 102 56 54.9
+ForcedSpirometryMonitoring 1004 New 64 57 89.1 0.006
+Old 287 187 65.2
+1006 New 50 48 96.0
+Old 313 135 43.1
+1010 New 67 62 92.5
+Old 283 164 58.0
+1015 New 249 216 86.7
+Old 117 39 33.3
+1017 New 280 197 70.4
+Old 102 50 49.0
+Notes:Foreachcomponentofremotemonitoring,asubsetanalysiswasperformedusingdatafromfiveparticipantswhousedbothversionsofthesoftware.Apairedt-test
+wasusedtocompareifthepercentageofrecordedmaneuversoraveragedadherencescorewasdifferentbetweenthenewandtheoldsoftware.
+●
+Oxygensaturationmonitoring:mean(SD)adherencescoreof84.1(8.4)%forthenewsoftwareversus49.0(14.2)%fortheoldsoftware(P=0.006).
+●
+Dailysymptomsreporting:mean(SD)adherencescoreof87.0(9.8)%forthenewsoftwareversus50.0(14.2)%fortheoldsoftware(P=0.011).
+●
+Dailytreatmentreporting:mean(SD)adherencescoreof87.0(9.8)%forthenewsoftwareversus50.0(14.2)%fortheoldsoftware(P=0.011).
+●
+Dailyactivityreporting:mean(SD)adherencescoreof87.0(9.8)%forthenewsoftwareversus49.7(14.3)%fortheoldsoftware(P=0.012).
+●
+Slowspirometrymonitoring:mean(SD)adherencescoreof87.0(9.8)%forthenewsoftwareversus49.0(13.7)%fortheoldsoftware(P=0.010).
+●
+Forcedspirometrymonitoring:mean(SD)adherencescoreof86.9(9.9)%forthenewsoftwareversus49.7(12.4)%fortheoldsoftware(P=0.006).
+24 hrs before hospitalization and 2.3/minute 48 hrs before convincingly to longer-term outcomes such as disease
+hospitalization. progression, debility and death. Our study was obviously
+In our study, the most frequently occurring of the small and only exploratory and much larger-scale investi-
+chosen predictors were a fall on SpO below 90% and gations will be needed to establish these connections, if
+2
+increased used of rescue inhaled short-acting bronchodila- they exist.
+tor therapy. Interestingly, these predictors were fairly sim-
+ple and raise the question as to what spirometry may add Conclusion
+in terms of assessing exacerbations. However, all of the In summary, we successfully implemented remote moni-
+predictors, including decreases in oxygenation, spirometry toringforCOPDpatientsintheirhomes.Wehavedemon-
+andphysical activity, and increases in inhaled short-acting strated the feasibility of the approach and improved the
+bronchodilator use occurred more often than did exacer- functionality of the apparatus used for this purpose. We
+bationsdefinedusingconventionalcriteria.Thereal-world have suggested various parameters that could be used to
+experience of the COPD patient is probably more accu- monitor COPD patients and suggested methods to define
+rately characterized by this spectrum of daily measures events from these measures. For example, we recommend
+than by conventional definitions of exacerbations. Indeed, the use of statistical process control to reduce the burden
+daily monitoring could provide evidence that links more of repeated spirometric maneuvers. Due to the relatively
+2494 submityourmanuscript|www.dovepress.com InternationalJournalofChronicObstructivePulmonaryDisease2019:14
+DovePress
+Dovepress Cooperetal
+small number of enrolled subjects and even smaller num- 8.Bui AL, Fonarow GC. Home monitoring for heart failure manage-
+ment. J Am Coll Cardiol. 2012;59(2):97–104. doi:10.1016/j.
+ber of exacerbations, we were unable to evaluate the
+jacc.2011.09.044
+effects of remote patient monitoring on the cost of health- 9.PandorA,GomersallT,StevensJW,etal.Remotemonitoringafter
+careutilization.Remotemonitoringinthehomemightnot recenthospitaldischargeinpatients withheart failure: asystematic
+review and network meta-analysis. Heart. 2013;99(23):1717–1726.
+work for all COPD patients; however, we believe there is
+doi:10.1136/heartjnl-2013-303811
+value in developing these techniques in high-risk patients 10.Lindgren BR, Finkelstein SM, Prasad B, et al. Determination of
+reliabilityandvalidityinhomemonitoringdataofpulmonaryfunc-
+such as those with a history of repeated exacerbations and
+tion tests following lung transplantation. Res Nurs Health. 1997;20
+those who have recently been discharged from hospital (6):539–550.
+11.MadsenF,UlrikCS,DirksenA,etal.Patient-administeredsequential
+following a COPD exacerbation. A randomized controlled
+spirometryinhealthyvolunteersandpatientswithalpha1-antitrypsin
+trialwouldbeneededtoestablishthatthebenefitfromthis deficiency. Respir Med. 1996;90(3):131–138. doi:10.1016/s0954-
+6111(96)90154-7
+kind of monitoring is at least equivalent if not better to
+12.SeemungalTA,DonaldsonGC,BhowmikA,JeffriesDJ,Wedzicha
+other home monitoring already being used. JA. Time course and recovery of exacerbations in patients with
+chronicobstructivepulmonarydisease.AmJRespirCritCareMed.
+2000;161(5):1608–1613.doi:10.1164/ajrccm.161.5.9908022
+Disclosure 13.SundZM,PowellT,GreenwoodR,JaradNA.Remotedailyreal-time
+monitoring in patients with COPD–a feasibility study using a novel
+During this study, CBC received consulting fees from device. Respir Med. 2009;103(9):1320–1328. doi:10.1016/j.rmed.2009.
+eResearch Technologies Inc (ERT) for serving as Medical 03.017
+14.Vestbo J, Hurd SS, Agusti AG, et al. Global strategy for the diag-
+Director of their Clinical Services Division, also reports
+nosis,management,andpreventionofchronicobstructivepulmonary
+grants from eResearch Technologies, personal fees from disease: GOLD executive summary. Am J Respir Crit Care Med.
+GlaxoSmithKline, non-financial support from Equinox 2013;187(4):347–365.doi:10.1164/rccm.201204-0596PP
+15.HankinsonJL,OdencrantzJR,FedanKB.Spirometricreferencevalues
+Fitness Clubs, personal fees from PulmonX, outside the
+fromasampleofthegeneralU.S.population.AmJRespirCritCare
+submitted work. Mr Michael Taylor reports Previously Med.1999;159(1):179–187.doi:10.1164/ajrccm.159.1.9712108
+16.MillerMR,CrapoR,HankinsonJ,etal.Generalconsiderationsfor
+employed by the company whose product was used in the
+lung function testing. The European Respiratory Journal. 2005;26
+investigation. This investigation was funded by ERT, Inc. (1):153–161.doi:10.1183/09031936.05.00034505
+Theauthorsreportnootherconflictsofinterestinthisstudy. 17.MillerMR,HankinsonJ,BrusascoV,etal.Standardisationofspiro-
+metry. Eur Respir J. 2005;26(2):319–338. doi:10.1183/09031936.
+05.00034805
+18.Ware J Jr., Kosinski M, Keller SD. A 12-Item Short-Form Health
+References
+Survey:constructionofscalesandpreliminarytestsofreliabilityand
+validity. Med Care. 1996;34(3):220–233. doi:10.1097/00005650-
+1.American Lung Association, Epidemiology and Statistics Unit
+199603000-00003
+Research and Health Education Division. Trends in COPD (chronic
+19.JonesPW,HardingG,BerryP,WiklundI,ChenWH,KlineLeidyN.
+bronchitisandemphysema):morbidityandmortality.2013.Available DevelopmentandfirstvalidationoftheCOPDAssessmentTest.Eur
+from: http://www.lung.org/finding-cures/our-research/trend-reports/ RespirJ.2009;34(3):648–654.doi:10.1183/09031936.00102509
+copd-trend-report.pdf.AccessedJanuary6,2014.
+20.JonesPW,QuirkFH,BaveystockCM,LittlejohnsP.Aself-complete
+2.GlobalInitiativeforChronicObstructiveLungDisease.Globalstrategy measure of health status for chronic airflow limitation. The St.
+fordiagnosis,management,andpreventionofchronicobstructivepul- George’s Respiratory Questionnaire. Am Rev Respir Dis. 1992;145
+monarydisease.2013.Availablefrom:http://www.goldcopd.org/uploads/ (6):1321–1327.doi:10.1164/ajrccm/145.6.1321
+users/files/GOLD_Report_2013_Feb20.pdf.AccessedJanuary6,2014. 21.AnthonisenNR,ManfredaJ,WarrenCP,HershfieldES,HardingGK,
+3.World Health Organization. World health statistics 2008. 2008. Nelson NA. Antibiotic therapy in exacerbations of chronic obstruc-
+Available from: http://www.who.int/whosis/whostat/EN_WHS08_ tive pulmonary disease. Ann Intern Med. 1987;106(2):196–204.
+Full.pdf.AccessedJanuary6,2014. doi:10.7326/0003-4819-106-2-196
+4.AnzuetoA,LeimerI,KestenS.ImpactoffrequencyofCOPDexacer- 22.DingH,KarunanithiM,KanagasingamY,VignarajanJ,MoodleyY.A
+bationsonpulmonaryfunction,healthstatusandclinicaloutcomes.IntJ pilotstudyofamobile-phone-basedhomemonitoringsystemtoassistin
+ChronObstructPulmonDis.2009;4:245–251.
+remoteinterventionsincasesofacuteexacerbationofCOPD.JTelemed
+5.Halpin DM, Decramer M, Celli B, Kesten S, Liu D, Tashkin DP. Telecare.2014;20(3):128–134.doi:10.1177/1357633X14527715
+Exacerbation frequency and course of COPD. Int J Chron Obstruct 23.PfadtA,WheelerDJ.Usingstatisticalprocesscontroltomakedata-
+PulmonDis.2012;7:653–661.doi:10.2147/COPD.S34186 based clinical decisions. J Appl Behav Anal. 1995;28(3):349–370.
+6.Cote CG, Dordelly LJ, Celli BR. Impact of COPD exacerbations on doi:10.1901/jaba.1995.28-349
+patient-centered outcomes. Chest. 2007;131(3):696–704. doi:10.1378/ 24.Pfadt A, Cohen IL, Sudhalter V, Romanczyk RG, Wheeler DJ.
+chest.06-1610 Applyingstatisticalprocesscontroltoclinicaldata:anillustration.J
+7.Wilkinson TM, Donaldson GC, Hurst JR, Seemungal TA, Wedzicha ApplBehavAnal.1992;25(3):551–560.doi:10.1901/jaba.1992.25-551
+JA. Early therapy improves outcomes of exacerbations of chronic 25.YanezAM,GuerreroD,PerezdeAlejoR,etal.Monitoringbreathing
+obstructive pulmonary disease. Am J Respir Crit Care Med. rate at home allows early identification of COPD exacerbations.
+2004;169(12):1298–1303.doi:10.1164/rccm.200310-1443OC Chest.2012;142(6):1524–1529.doi:10.1378/chest.11-2728
+InternationalJournalofChronicObstructivePulmonaryDisease2019:14 submityourmanuscript|www.dovepress.com 2495
+DovePress
+Cooperetal Dovepress
+Dovepress
+InternationalJournalofChronicObstructivePulmonaryDisease
+Publish your work in this journal
+TheInternationalJournalofCOPDisaninternational,peer-reviewed protocols. This journal is indexed on PubMed Central, MedLine
+journal of therapeutics and pharmacology focusing onconciserapid andCAS.Themanuscriptmanagementsystemiscompletelyonline
+reporting of clinical studies and reviews in COPD. Special focus is and includes a very quick and fair peer-review system, which is
+giventothepathophysiologicalprocessesunderlyingthedisease,inter- alleasytouse.Visithttp://www.dovepress.com/testimonials.phpto
+ventionprograms,patientfocusededucation,andselfmanagement readrealquotesfrompublishedauthors.
+Submityourmanuscripthere:https://www.dovepress.com/international-journal-of-chronic-obstructive-pulmonary-disease-journal
+2496 submityourmanuscript|www.dovepress.com InternationalJournalofChronicObstructivePulmonaryDisease2019:14
+DovePress

@@ -1,0 +1,418 @@
+2017 IEEE-RAS 17th International Conference on
+Humanoid Robotics (Humanoids)
+Birmingham, UK, November 15-17, 2017
+A Pilot Study on Using an Intelligent Life-like Robot as a Companion
+for Elderly Individuals with Dementia and Depression
+1 1 2 1,2
+Hojjat Abdollahi , Ali Mollahosseini , Josh T. Lane , and Mohammad H. Mahoor
+Abstract—This paper presents the design, development, peoplewithdementia.Thereisanemergingresearchfieldin
+methodology, and the results of a pilot study on using an roboticsthataimstousesocialrobotstoengageeffectivelyin
+intelligent, emotive and perceptive social robot (aka Compan-
+socialandconversationalinteractionwithelderlyindividuals
+ionbot) for improving the quality of life of elderly people with
+with dementia to improve their socio-emotional behaviors,
+dementiaand/ordepression.RyanCompanionbotprototypedin
+this project, is a rear-projected life-like conversational robot. cognitive functions and well-being. We conducted a pilot
+Ryan is equipped with features that can (1) interpret and study to demonstrate the feasibility of using Ryan Compan-
+respond to users’ emotions through facial expressions and ionbot, a perceptive and empathic conversational humanoid
+spoken language, (2) proactively engage in conversations with
+robot, to improve the quality of life of elderly individuals
+users, and (3) remind them about their daily life schedules
+with moderate dementia and/or depression. In this study,
+(e.g. taking their medicine on time). Ryan engages users in
+cognitive games and reminiscence activities. We conducted a we are using spoken dialog combined with a rich list of
+pilotstudywithsixelderlyindividualswithmoderatedementia other stimuli such as eye gaze, head movement, and facial
+and/or depression living in a senior living facility in Denver. expressions as the primary form of communication between
+Each individual had 24/7 access to a Ryan in his/her room for
+the subject and the robot. Specifically, the objective of this
+a period of 4-6 weeks. Our observations of these individuals,
+study is to evaluate the following fundamental research
+interviewswiththemandtheircaregivers,andanalysesoftheir
+interactions during this period revealed that they established questions:
+rapport with the robot and greatly valued and enjoyed having 1) Long-Term Companionship: Would enriching the
+a Companionbot in their room. robot with a number of different features keep the
+subjects engaged over an extend period of time?
+I. INTRODUCTION
+2) Likability and Acceptance: Is interacting with SAR
+Developing and studying robots as an assistive tool for enjoyable for elderly individuals and do they accept a
+health-care professionals is a growing area of research due robot as a companion?
+to the rapid growth in the number of elderly people and 3) RobotFeatures:Dotheresultsofthepilotstudyshow
+the demand for specialized caregivers. Socially Assistive that each individual looked for different features (e.g.,
+Robotics (SAR) [1] focus on improving elderly people’s spoken dialog system, cognitive games, family photo
+quality of life, mental health, and socio-emotional well- album narration, music playing, etc.) in the robot?
+being.Socialrobotsareusedascompanions[2]ortherapeu-
+The remainder of this paper is organized as follows.
+tic play partners [3]. The essential feature that defines SAR
+Section II reviews the related work on SAR and employing
+isusingsocialinteractionsratherthanphysicalinteractionto
+social robots in elder care. Section III introduces Ryan
+help the user [4]. The focus of this paper is on SAR and the
+Companionbot, and explains the software and hardware
+companionship it provide for elderly people with moderate
+aspect of Ryan. Section IV explains the experiment setting
+depression and/or dementia.
+and the methodology of our pilot study to evaluate the
+Dementia is an overall term for diseases that deterio-
+above fundamental research questions. Section V presents
+rate individuals’ memory and other mental skills. Dementia
+the results and analysis of the experiments. The results are
+can significantly reduce elderly individuals’ ability to live
+categorized in four subsection: long-term companionship,
+independently and safely in their homes. It is one of the
+likability and acceptance, caregivers’ feedback, and robot
+costliest diseases and requires hours of specialized care-
+features. Finally, Section VI concludes the paper.
+giving for each person [5]. Associated to the decline in
+cognitive abilities, depression is one of the symptoms of II. RELATEDWORK
+dementia [6]. UsingSARtohelpelderlyindividualshasrecentlybecome
+There is thus a critical and growing demand in the more relevant due to the increase in the number of elderly
+community to find effective ways to provide care for elderly people,thedecreaseinthecostoftechnology,andtherecent
+advances in artificial intelligence [7]. Residents of nursing
+Emailaddresses:HojjatAbdollahi:habdolla@du.edu,AliMollahosseini: homes are living alone with disabilities while in most cases
+ali.mollahosseini@du.edu, Josh T. Lane: josh.lane@dreamfacetech.com,
+their cognitive abilities are degrading due to old age or
+MohammadH.Mahoor:mmahoor@du.edu
+various type of dementia [8]. Studies suggest that social
+1Department of Electrical and Computer Engineering, University of support for elderly individuals could improve their cognitive
+Denver,CO,USA
+2DreamFace Technologies, LLC., Lone Tree, CO, USA function [9]. Using SARs with a focus on the socialization
+http://dreamfacetech.com/ aspect of Human-Robot Interaction (HRI) is a viable option
+978-1-5386-4678-6/17/$31.00 ©2017 IEEE 541
+to reduce the burden on caregivers while providing compan-
+ionshipforelderlypeople,improvingtheirqualityoflife,and
+avoiding depression and further degradation of their mental
+abilities.
+Wada et al. [10] used the robot Paro to study the long-
+term effect of social robots on residents of a senior care
+center.Theresultsindicatedthatelderlyresidentsestablished
+a relationship with the robot, developed stronger social ties
+among themselves, and also maintained a lower stress level.
+However, Paro lacks the ability to talk and communicate. It
+is shown that for a social robot to be accepted more easily Fig. 1: Ryan hardware
+itshould becommunicative[11]and mustemploya formof
+communication with which humans are habituated [12].
+Another key aspect to having a robot as a companion, is robotafterhislatewife.Leavingtherobotinelderlypeople’s
+continuous (uninterrupted) companionship, meaning having home and having 24/7 access to the robot may cause them
+access to the robot at all times. Autonomy plays a crucial to lose motivation. To provoke subjects to act on intrinsic
+role in achieving an uninterrupted companionship. Most of motivation, we had to define tasks and modify Ryan to be
+the studies carried out with social robots on elder care are enjoyable and not repetitive.
+eitherdoneinaWizard-Of-Oz(WOO)manner[13],orwere After a while that the human exhausts all of the features
+limited to a specific scenario [14]. Vardoulakis et al. [13] of the robot, they will lose interest in interacting with the
+designedanexperimenttostudylong-termsocialcompanion robot. Itis shownthat the noveltyeffect ofSARs disappears
+for older adults. They used a WOO method, and the subject quickly [19]. As the novelty aspect wears off, the social
+hadarobotathis/herhomeforoneweek.Butsincetherobot effect might decrease as well [20]. By endowing Ryan
+wascontrolledremotelybyanoperator,thesubjectinteracted with a character and a sense of humor on top of various
+withtherobotforonlyonehoureveryday.EmployingWOO other features implemented into Ryan, we keep the subjects
+methodforcesthesubjectstousetherobotataspecifictime interested to interact with the robot for a long period.
+ofthedayforashortperiodwhichresemblesvisitingafriend In the next sections, we will explain the hardware and
+thanhavingacompanionathome.SocialrobotssuchasParo software aspect of the Ryan.
+are autonomous and provide continuous companionship, but
+A. Hardware
+lack the ability of having a robust social interaction such as
+spoken dialog and an expressive face. RyanCompanionbothardwareisdesignedwiththreemain
+Deep social interaction is required when dealing with components(Figure1):1)theheadprojectionsystem,2)the
+elderly individuals with dementia. Different robots such as neck mechanism, and 3) the torso.
+Aibo,Paro,andBandithavebeenusedinstudiesonthecare 1) Head Projection System: Using a large number of
+ofelderlypeoplewithdementia[15].Mostoftherobotsthat actuators to build a human-like robotic face capable of
+have been used in these studies have not been built with showing different emotions and visual speech is difficult
+the social aspect in mind. But to be able to communicate and expensive [21]. To avoid tremendous effort required to
+with elderly people with dementia and try to engage them develop a robotic head capable of having accurate visual
+in conversations and games, we need a robot that has been speech, state-of-the-art character animation technology was
+designed to accomplish these social goals. In the following used to produce an avatar. Using rear projection optics, the
+section, we will introduce a robot designed to be social. head projection system displays the animated avatar onto
+a mask. This system also allows us to further customize
+III. RYAN,THECOMPANIONBOT
+the appearance of the robot. Please consult the work by
+The robot used in this study is Ryan Companionbot [16] Mollahosseini et al. [21] for more details on the projection
+which is based on the Expressionbot [17]. Ryan has been system.
+developedinDreamFaceTechnologies,LLC.withthesocial 2) Neck Mechanism: The movement of the head for
+aspectofHRIinmind.Thisrobothasanemotiveandexpres- tracking faces and head gestures is controlled by the neck
+sive face with accurate visual speech. Ryan can maintain a mechanism, a two degree of freedom pan/tilt unit. Having
+spoken dialog, recognize expressions on the user’s face, and only two degrees of freedom keeps the system simple and
+it is equipped with a screen on its torso with features such suffices for face tracking. The neck has a range of motion
+as cognitive games, music player, narrated photo album, and of 30◦of flexion and extension (±30◦ pitch) and 180◦lateral
+video player. rotation (±90◦yaw). This range allows the head to track the
+To keep the subject engaged for an extensive period of user anywhere in front of the robot.
+time, SARs must be personalized [18]. Thus, Ryan was 3) Torso: The main computer, a RGBD camera, a touch
+customizedforeachsubject.Toincreaseintimacyandinvoke screendisplay,andthepowersuppliesareenclosedinsidethe
+rapport, subjects were allowed to choose the name for the torso.Addingatouchscreentotherobotaddedanewwayof
+robot. It is worth mentioning that one subject named the interactingwithRyan(touch)andalsoitaddedthefeatureto
+542
+(a)MainMenu (b)HearingEar (c)ShapeUp
+Fig. 3: A subject interacting with the robot in her home.
+Fig. 2: Cognitive Games
+and the users could answer the questions either via voice
+be able to display more information to the user. The display
+commands or by pushing the buttons on the screen.
+was used for cognitive games, music player, video player,
+There is evidence that life story, photo albums, and
+and the narrated photo album. The RGBD camera enables
+reminiscence work, particularly when done one-on-one, can
+us to have a 3D view of the environment for better tracking
+improvemood,well-beingandsomementalabilitiessuchas
+the user and also for future studies on activity recognition.
+memory[26].Foreachsubjectwecollectedabout15-20old
+photos and the stories about the event in the photos either
+B. Software
+from the participant or their close relatives. The photos are
+To make Ryan an intelligent and sociable robot that can
+shown on the torso screen one-by-one and the robot reads
+understand human language and can communicate through
+the story back to the user. Sometimes simple questions are
+spoken dialog, a series of features have been implemented
+asked to engage the user in the conversation.
+on the robot. Ryan must be able to find the user in the
+Reminiscence and memory work also involves talking
+environment, read the user’s facial expression, understand
+about things from the past, using prompts such as photos,
+user’s speech, generate an appropriate response, and say it
+familiarobjectsorplayingmusic.Avideoplayerapplication
+to the user through audio, accompanied with visual speech
+was created to randomly select and play videos from a list
+while showing a relevant expression on the face. Ryan is
+of YouTube video clips. The list contained URLs of short
+also able to communicate with the users through the touch
+(4-5 minutes) YouTube videos queried based on the users’
+screen on the torso.
+topics of interests (e.g. healthy foods, sports, and nature).
+The Microsoft Kinect sensor V2.0 [22] acts as the eyes
+of the system to constantly monitor user’s activities and IV. PILOTSTUDY
+its face detection feature enables Ryan to find the subject To assess Ryan’s feasibility as a Companionbot, we con-
+in the room. For facial emotion recognition, Ryan uses ductedapilotstudywithsixelderlyindividualswithdemen-
+the Intel RealSense SDK [23] which provides seven basic tia and depression living in the Eaton Senior Community in
+facial expressions. Intel RealSense SDK is also used as Denver, Colorado [28].The robotwas leftin theirhome and
+the speech to text engine. Ryan uses the speech emotion they had access to the robot at all times. Figure 3 shows a
+recognition Aylien [24] system which is an online natural subject interacting with the robot.
+language processing service for sentiment analysis of the
+A. Subjects
+user’s speech. A retrieval-based open dialog management
+systems available on the web (ChatBot/Pandorabots [25]) is A group of six volunteered elderly individuals were se-
+used as the dialog manager. lected for this study. The selection criteria included those
+To reduce subjects’ cognitive abilities deterioration, we elderly who live alone, were in the early-mild stage of
+equipped Ryan with cognitive games focused on patients dementia and may suffer from depression. Other selection
+with dementia. Drugs are not the only method to treat criteria included the availability for a period of at least four
+mental diseases such as dementia, Alzheimer’s disease, and weekstohouseandinteractwiththerobot.Selectedsubjects
+depression. There exist alternative therapeutic methods such wereconsentedpriortoparticipatinginthestudyandfamily
+as talking therapies, life story and reminiscence work, and members of the subjects were also informed to insure they
+cognitive stimulation therapy for these diseases [26]. are aware of the study.
+We designed four games (Figure 2). These games are The Saint Louis University Mental Status (SLUMS) Ex-
+based on the Montessori-based activities [27] to help people amination [29] and the Patient Health Questionnaire (PHQ-
+suffering from dementia combat the disease. These visual 9) [30] were completed by each patient and scored by
+games are simple and interactive with different levels of the caregiver prior to the experiment. The SLUMS, devel-
+complexity. The game instructions were given by Ryan oped at the Division of Geriatric Medicine, Saint Louis
+543
+TABLE I: Participants demographics, SLUMS and PHQ-
+250
+9 Scores. Highlighted cells mean that the symptoms (i.e.
+200
+Dementia and Depression) exist in the patient.
+150
+100
+SLUMS PHQ-9 Living
+Sbj Age Gender Score Score Resident 50 Series1
+1 63 F 19 17 Independent 0
+1 7 14 21 28
+2 86 M 21 1 Independent
+3 78 F 29 15 Independent
+Fig. 4: The average number of dialogs between participants
+4 73 F 17 3 Assisted
+5 71 F 25 7 Assisted and Ryan has not decayed over a period of four weeks (One
+6* 79 F 28 16 Assisted subject interacted with the robot for three weeks).
+*Subject6participated24dayssinceshebecameillandhospitalized
+attheendofpilotstudy
+topics such as sports, emotional states, technology, or other
+University School of Medicine, is a favorable screening topics. Each conversation contains several dialogs between
+tool for detecting mild cognitive impairment. The PHQ-9 thesubjectsandRyan.Wedefinedadialogasanexchangeof
+contains nine questions and is a brief and useful instrument one inquiry and response between the subject and Ryan. On
+for screening, monitoring, and measuring the severity of average the subjects and Ryan had 198 (σ=49.2) dialogs per
+depression. The SLUMS scores for people with high school day, with the average length of 9.2 words per each dialog.
+educations are interpreted as follows: 27-30: Normal, 21- Figure 4 shows the average number of dialogs of all
+26: Mild Neurocognitive Disorder, 1-20: Dementia. The participantsovertheperiodoffourweeks.SinceSN6became
+PHQ-9 severity scores are mapped as the following: score ill and hospitalized at the end of the pilot study, she only
+5-9: Minimal Symptoms, score 10-14: Minor depression, participated 24 days. Therefore, the average shown for the
+score15-19:Majordepression,moderatelysevere,score>20: last 4 days are data from 5 subjects. The average number
+Majordepression,severe.TableIshowsthedemographicsof of dialogs time series (shown in Fig. 4) is then smoothed
+the patients that participated in our pilot studies. using a moving average with the window size of five, due to
+variation between consecutive days and subjects schedule.
+B. Method
+As shown, the average number of dialogs per day for all
+In order to measure how effectively Ryan can provide subjects did not decay over four weeks. In other words, The
+companionship for elderly individuals with dementia, we subjectskepttheirinterestinhavingconversationswithRyan
+conducted a one-on-one (robot vs human) pilot study in the even after a long period of time.
+Eaton Senior Community Center. Three Ryan Companion- The subjects also spent approximately two hours and ten
+botsweremanufacturedforthestudy.Eachsubjecthad24/7 minutesperdayinteractingwithRyanindifferenttaskssuch
+access to Ryan in their rooms for a period of 4-6 weeks. as playing cognitive games, having conversations, viewing
+The robot was left in the room of the elderly participant, family photo albums, listening to music, etc. Taking into
+and he/she treated Ryan Companionbot as his/her guest. To account that although the subjects were living in a senior
+avoid any maintenance issues, the research team monitored living facility, where the residents had regular wellness pro-
+the status of the robots remotely. gramsandgroupactivities(suchasplayinggames,excessing,
+Each subject was interviewed to obtain their daily sched- occupationalandphysicaltherapy),theystillwereinterested
+ules, a set of photos for the album, topics of interest for in spending time with Ryan, and five of them asked for
+YouTube video search, and a collection of favorite music having Ryan in their room for a more extended time. The
+andsongs.Ryanswerecustomizedforeachparticipant.They result of our pilot study indicated that elderly individuals
+could call the robot with any name at their preferences. were interested in having a robot as their companion. They
+Participants’dailyschedule,includingreminderstotaketheir have spent great amount of time with the robot and their
+medications, were set manually for each subject. interests in speaking with the robot did not decay over time.
+During the study, all subjects’ interactions with Ryan, the
+facial emotion of the users, the conversations between Ryan B. Likability and Acceptance
+and the participants as well as the sentiment of the speech At the end of the study, we asked each participant to
+were logged. We analyzed the log files and computed a completeanexitsurveyof16questionsabouttheexperiences
+measurement to evaluate user interactions with Ryan during they had with Ryan according to the 5-point Likert scale
+the pilot study. (1-Strongly disagree, 5-Strongly agree). These included six
+questions about user interaction and companionship of Ryan
+V. RESULTS
+(i.e., how enjoyable they found interacting and having con-
+A. Long-Term Companionship versations with the robot), and ten questions about features
+In order to measure whether Ryan can be a companion of of Ryan (e.g., ability to show facial expressions, cognitive
+elderly individuals in long-term, the conversations between games, memory photo album, music and video players).
+Ryan and the participants were recorded over the period Table II shows the exit survey questions and participants’
+of the experiment. The conversations were on different averageandstandarddeviationscoresaccompaniedbyCron-
+544
+TABLE II: The mean rank and questions of the exit survey evaluating users’ likability and acceptance of interacting with
+Ryan and its features (1-strongly disagree, 5-strongly agree)
+Avg.Score Cronbach’s
+Question ±(STD) alpha
+Q1.Ienjoyedinteractingwiththerobot. 4.17±0.75
+Q2.Theconversationwiththerobotwasinteresting. 4.00±0.89
+QuestionsAbout Q3.Talkingwiththerobotwasliketalkingtoaperson. 3.00±1.54
+UserInteraction Q4.IfeelhappierwhenIhadtherobotasmycompany. 3.67±1.03 0.930
+withRyan Q5.Iwouldliketohavethisrobotinmyhomeagain. 3.33±1.50
+Q6.Ifeellessdepressedaftertalkingtotherobot. 3.33±1.36
+Q7.Ilikedtherobot’sfacialexpressions. 4.17±0.75
+Q8.Ilikedtherobotmirroringmyfacialexpressions. 3.50±1.04
+Q9.Therobotreminderhelpedmetobeonschedule. 4.00±0.63
+Q10.Ienjoyedtherobotplayingmyfavoritemusic. 4.17±0.40
+QuestionsAbout Q11.Ienjoyedtherobotplayingvideosforme. 3.83±0.75
+FeatureofRyan Q12.Thevideoswereeffectiveandaffectedmylifestyle. 3.50±1.51 0.924
+Q13.Ienjoyedplayingthegames. 3.33±1.50
+Q14.Thegameshelpedmetrainmybrain,thoughtheyweresimple. 3.17±1.32
+Q15.Thegameswerechallenging. 2.00±1.54
+Q16.Ienjoyedwatchingmyphotoalbumshownbytherobot. 4.33±0.81
+bach’s Alpha [31] score for the internal consistency and
+reliability of each category of questions.
+It can be seen that participants gave strong positive re-
+sponses (score > 3.5) to most questions on interacting with
+Ryan, such as “I enjoyed interacting with the robot”, “The
+conversation with the robot was interesting.” As expected,
+the participant did not believe that “talking with the robot
+was like talking to a person” with an average score of 3±
+1.54, however, overall felt happier when they had the robot
+as their company with an average score of 3.67± 1.03.
+Fig.5:Percentage(%)oftimeeachuserspentinthedifferent
+The survey also indicated that the participants liked the
+robot’s features such as its facial expression (4.17 ± 0.75), activities.
+reminder(4.00±0.63),playingmusic(4.17±0.40),playing
+videos (3.83 ± 0.75) and watching their photo album (4.33
+± 0.81) . The games were not challenging enough for the C. Caregiver’s Feedback
+participants with the average score of 2.00 ± 1.54, but they The users’ caregiver, a licensed practical nurse with 20
+still found value in playing them, since they “helped me years of experience, provided feedback on the outcome of
+train my brain.” The games were designed for elderly in the pilot study for each participant. The caregiver closely
+a high level of dementia based on the Montessori-based monitored SN1, SN3 and SN6 who were diagnosed with
+activities to help people suffering from dementia combat the depression. She confirmed that Ryan elevated the users
+disease. The authors believe that the games were simple and mood.Inherwords:“SN6hasbeensomuchhappier”,“SN4
+interactive,buttheybecameboringforthepeoplewithearly- wouldbreakoutinabigsmilewhenweaskedherabouther
+mild stages of dementia (See Table I for the SLUM score of experiences”, and “You can see the improvement in [SN3’s]
+the participants). level of depression after the hip surgery thanks to that sassy
+In summary, the survey revealed that the subjects liked roommate [Ryan]”. The caregiver noted that the robot was
+interactingwithRyanandacceptedtherobotasacompanion able to establish a deep connection with the subjects.
+although it cannot replace human companionship. They also
+D. Robot Features
+believed the robot helped them maintain their schedule,
+improved their mood, and stimulated them mentally. The In order to analyze users’ interactions and measure which
+common sentiment among users after the pilot study was feature were most appealing for the users, the usage of
+bestdescribedbyoneuser’scomment,“She[Ryan]wasjust robot’s features were recorded over time. Figure 5 shows
+enjoyable. We were SAD to see her go.” The Eaton staff the percentage of time that each subject spent with different
+and family members expressed enthusiastic support for the activities (i.e. Games, Conversation, Video, Photo Album,
+project because it had a consistently positive impact on each and Music).
+of the individuals who interacted with Ryan. For instance, Asthefigureshows,eachparticipanthadvariousinterests
+the son of one of the participants said “[Ryan] has brought and found value in different activities, as supported by the
+colorandlaughterintomymom’slife.Shelaughswhenever users’ self-report and caregivers’ observations. For example,
+she talks about it!” subjectsSN6andSN3preferredthemusicplayerwhileSN2,
+545
+SN4, and SN5 enjoyed the conversation with the robot the [10] K.Wada,T.Shibata,T.Saito,andK.Tanie,“Effectsofrobotassisted
+most. On average, each user spent approximately two hours activity to elderly people who stay at a health service facility for
+the aged,” in Intelligent Robots and Systems, 2003.(IROS 2003).
+andtenminutesperdayinteractingwithRyan;timethatthey
+Proceedings. 2003 IEEE/RSJ International Conference on, vol. 3.
+otherwise would have likely spent alone. IEEE,2003,pp.2847–2852.
+[11] M. Heerink, B. Kro¨se, B. Wielinga, V. Evers, et al., “Studying the
+VI. CONCLUSION acceptanceofaroboticagentbyelderlyusers,”InternationalJournal
+ofAssistiveRoboticsandMechatronics,vol.7,no.3,pp.33–43,2006.
+This paper presented the design, development, and suc-
+[12] N. C. Kra¨mer, A. von der Pu¨tten, and S. Eimler, “Human-agent
+cessfulintegrationofaCompanionbottoimprovethequality and human-robot interaction theory: similarities to and differences
+of life of elderly individuals with dementia and depres- fromhuman-humaninteraction,”inHuman-computerinteraction:The
+agencyperspective. Springer,2012,pp.215–240.
+sion. Three fundamental research questions were posed and
+[13] L.P.Vardoulakis,L.Ring,B.Barry,C.L.Sidner,andT.Bickmore,
+addressed in this paper: 1) Long-Term Companionship: “Designing relational agents as long term social companions for
+Wouldenrichingtherobotwithanumberofdifferentfeatures olderadults,”LectureNotesinComputerScience(includingsubseries
+LectureNotesinArtificialIntelligenceandLectureNotesinBioinfor-
+keep the subjects engaged over an extend period of time?
+matics),vol.7502LNAI,p.289302,2012.
+2) Likability and Acceptance: Would elderly individuals [14] J. Pineau, M. Montemerlo, M. Pollack, N. Roy, and S. Thrun,
+accept a robot as a companion? Is interaction with the robot “Towardsroboticassistantsinnursinghomes:Challengesandresults,”
+Robotics and Autonomous Systems, vol. 42, no. 3-4, p. 271281, Mar
+enjoyable to them? 3) Robot Features: Do the results of
+2003. [Online]. Available: http://dx.doi.org/10.1016/S0921-8890(02)
+thepilotstudyshowthateachindividuallookedfordifferent 00381-0
+features in the robot? Our experimental results and analysis [15] E. Mordoch, A. Osterreicher, L. Guse, K. Roger, and G. Thompson,
+“Useofsocialcommitmentrobotsinthecareofelderlypeoplewith
+of the collected data indicated that elderly individuals were
+dementia: A literature review,” Maturitas, vol. 74, no. 1, pp. 14–20,
+interested in having a robot as their companion and their 2013.
+interest did not decay over time. The subjects liked inter- [16] “Dreamface technologies — social robotics.” [Online]. Available:
+http://dreamfacetech.com/ryan-2/
+acting with Ryan and accepted the robot as a companion
+[17] A. Mollahosseini, G. Graitzer, E. Borts, S. Conyers, R. M. Voyles,
+although it cannot replace human companionship. The pro- R.Cole,andM.H.Mahoor,ExpressionBot:Anemotivelifelikerobotic
+posed emotionally intelligent conversational Companionbot faceforface-to-facecommunication. IEEE,Nov2014,p.10981103.
+[18] G. Castellano, R. Aylett, K. Dautenhahn, A. Paiva, P. W. McOwan,
+with a variety of engaging activities can fully engage users
+and S. Ho, “Long-term affect sensitive and socially interactive com-
+and be a promising tool to improve the quality of life of panions,”inProceedingsofthe4thInternationalWorkshoponHuman-
+elderly individuals with dementia and depression. ComputerConversation,2008.
+[19] Z.-J. You, C.-Y. Shen, C.-W. Chang, B.-J. Liu, and G.-D. Chen, “A
+VII. ACKNOWLEDGMENT robotasateachingassistantinanenglishclass,”inAdvancedLearning
+Technologies,2006.SixthInternationalConferenceon. IEEE,2006,
+ThisresearchispartiallysupportedbygrantsIIP-1548956
+pp.87–91.
+and CNS-1427872 from the National Science Foundation. [20] Y.Fernaeus,M.Hkansson,M.Jacobsson,andS.Ljungblad,Howdo
+youplaywitharobotictoyanimal?Along-termstudyofPleo. ACM
+REFERENCES Press,2010,p.3948.
+[21] A. Mollahosseini, G. Graitzer, E. Borts, S. Conyers, R. M. Voyles,
+[1] D.Feil-SeiferandM.J.Mataric,“Definingsociallyassistiverobotics,” R. Cole, and M. H. Mahoor, “Expressionbot: An emotive lifelike
+in Rehabilitation Robotics, 2005. ICORR 2005. 9th International robotic face for face-to-face communication,” in Humanoid Robots
+Conferenceon. IEEE,2005,pp.465–468. (Humanoids), 2014 14th IEEE-RAS International Conference on.
+[2] W. Taggart, S. Turkle, and C. D. Kidd, “An interactive robot in a IEEE,2014,pp.1098–1103.
+nursing home : Preliminary remarks field setting : Nursing homes,” [22] “Kinect for windows sdk,” http://kinectforwindows.org, accessed:
+Towards Social Mechanisms of Android Science: A COGSCI Work- 2017-10-05.
+shop,p.16,2005. [23] “Intel realsense sdk for windows,” https://software.intel.com/en-us/
+[3] I.Leite,S.Mascarenhas,C.Martinho,R.Prada,andA.Paiva,“why intel-realsense-sdk,accessed:2017-10-05.
+cant we be friends? an empathic game companion for long-term [24] “Aylientextapi.”[Online].Available:http://aylien.com/text-api
+interaction,”p.315321,2010. [25] “Pandorabots.”[Online].Available:http://www.pandorabots.com/
+[4] S.M.Rabbitt,A.E.Kazdin,andB.Scassellati,“Integratingsocially [26] V. Lawrence, J. Fossey, C. Ballard, E. Moniz-Cook, and J. Murray,
+assistive robotics into mental healthcare interventions: Applications “Improving quality of life for people with dementia in care homes:
+andrecommendationsforexpandeduse,”ClinicalPsychologyReview, making psychosocial interventions work,” The British Journal of
+vol.35,p.3546,2015. Psychiatry,vol.201,no.5,pp.344–351,2012.
+[5] A.Abbott,“Dementia:aproblemforourage,”Nature,vol.475,no. [27] K. S. Judge, C. J. Camp, and S. Orsulic-Jeras, “Use of montessori-
+7355,pp.S2–S4,2011. based activities for clients with dementia in adult day care: Effects
+[6] P. Marti, M. Bacigalupo, L. Giusti, C. Mennecozzi, and T. Shi- on engagement,” American Journal of Alzheimer’s Disease, vol. 15,
+bata, “Socially assistive robotics in the treatment of behavioural and no.1,pp.42–46,2000.
+psychological symptoms of dementia,” in Biomedical Robotics and [28] “Eaton senior communities,” http://www.eatonsenior.org/, accessed:
+Biomechatronics, 2006. BioRob 2006. The First IEEE/RAS-EMBS 2017-03-09.
+InternationalConferenceon. IEEE,2006,pp.483–488. [29] S. Tariq, N. Tumosa, J. Chibnall, H. Perry III, and J. Morley, “The
+[7] I. Leite, “Long-term interactions with empathic social robots,” AI saintlouisuniversitymentalstatus(slums)examinationfordetecting
+Matters,vol.1,no.3,pp.13–15,2015. mild cognitive impairment and dementia is more sensitive than the
+[8] A. A. Kotwal, J. Kim, L. Waite, and W. Dale, “Social function mini-mentalstatusexamination(mmse)–apilotstudy,”AmJGeriatr
+and cognitive status: Results from a us nationally representative Psychiatry,vol.14,no.11,pp.900–10,2006.
+survey of older adults,” Journal of General Internal Medicine, [30] K. Kroencke, R. Spitzer, and J. Williams, “The phq-9: validity of
+vol. 31, no. 8, p. 854862, Apr 2016. [Online]. Available: a brief depression severity measure [electronic version],” Journal of
+http://dx.doi.org/10.1007/s11606-016-3696-0 GeneralInternalMedicine,vol.16,no.9,pp.606–13,2001.
+[9] M. Zamora-Macorra, E. F. A. de Castro, J. A. A´vila-Funes, B. S. [31] L.J.Cronbach,“Coefficientalphaandtheinternalstructureoftests,”
+Manrique-Espinoza,R.Lo´pez-Ridaura,A.L.Sosa-Ortiz,P.L.Shields,
+psychometrika,vol.16,no.3,pp.297–334,1951.
+andD.S.M.delCampo,“Theassociationbetweensocialsupportand
+cognitivefunctioninmexicanadultsaged50andolder,”Archivesof
+GerontologyandGeriatrics,vol.68,pp.113–118,2017.
+546

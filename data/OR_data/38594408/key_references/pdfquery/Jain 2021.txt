@@ -1,0 +1,1068 @@
+Original Investigation | Dermatology 
+Development and Assessment of an Artificial Intelligence–Based Tool 
+for Skin Condition Diagnosis by Primary Care Physicians and Nurse Practitioners 
+in Teledermatology Practices 
+Ayush Jain, MS; David Way, ME; Vishakha Gupta, MS; Yi Gao, PhD; Guilherme de Oliveira Marinho, BS; Jay Hartford, MS; Rory Sayres, PhD; Kimberly Kanada, MD; 
+Clara Eng, PhD; Kunal Nagpal, MS; Karen B. DeSalvo, MD, MPH, MSc; Greg S. Corrado, PhD; Lily Peng, MD, PhD; Dale R. Webster, PhD; R. Carter Dunn, MS, MBA; 
+David Coz, MS; Susan J. Huang, MD; Yun Liu, PhD; Peggy Bui, MD, MBA; Yuan Liu, PhD 
+
+
+
+
+
+
+
+
+
+
+
+Author affiliations and article information are 
+listed at the end of this article. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+With 2 billion people affected globally,1 skin conditions are a leading cause of morbidity. The 
+examination of some skin conditions by dermatologists results in significantly higher diagnostic 
+accuracy2-4 and is associated with better clinical outcomes5 than nondermatologist examination. 
+However, owing to lack of access to dermatologists, only 28% of skin cases are seen by a specialist6; 
+therefore, nonspecialists play a pivotal role in the assessment of skin lesions and initiation of clinical 
+management and referrals.7 The diagnostic accuracy of nonspecialists is reportedly only 24% to 
+70%,4,8-10 suggesting that currently available resources, such as dermatology textbooks, medical 
+information portals, and online image search engines, remain insufficient to guide nonspecialists. 
+Several algorithms incorporating artificial intelligence (AI) have been developed to help 
+interpret both clinical11-15 and dermoscopic16-23 images for a variety of skin conditions, and the effect 
+of AI-based support on dermoscopic images has been studied.15,24 However, an open question 
+remains as to whether AI assistance can help primary care physicians (PCPs) and nurse practitioners 
+
+
+
+
+
+
+
+
+
+deemed exempt from informed consent because all data and images were deidentified. The 
+Standards for Reporting of Diagnostic Accuracy (STARD)25 reporting guideline was followed for 
+this study. 
+The AI Tool 
+Liu et al26 previously described an AI algorithm that provides a differential diagnosis given clinical 
+photographs of skin conditions and the medical history (eTable 1 in the Supplement). Their AI model 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Study Design 
+To evaluate whether this tool could assist primary care clinicians in diagnosing skin conditions, we 
+
+
+
+
+using the AI assistant with 2 sample cases (independent of the study cases). Additional details of this 
+training27 can be found in the Onboarding Process section in the eMethods in the Supplement. 
+
+to validate the AI algorithm.26 Specifically, the prior study used a validation set A and a subset 
+(validation set B) enriched for rarer conditions via random sampling stratified by condition. Validation 
+
+
+NPs in this study previously reviewed these cases, and the AI algorithm used was identical to the one 
+used in the previous study.26 
+
+
+
+
+
+
+AI assistant: 
+• ≤5 Top-matching skin conditions 
+
+
+
+(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:9)(cid:10)(cid:11)(cid:3)(cid:7)(cid:12)(cid:10)(cid:13)(cid:9)(cid:6)(cid:9)(cid:12)(cid:10)(cid:14) 
+(cid:15)(cid:16)(cid:16)(cid:17)(cid:15)(cid:16)(cid:16)(cid:18)(cid:15)(cid:19)(cid:3)(cid:20)(cid:5)(cid:14)(cid:5)(cid:21)(cid:3)(cid:16)(cid:22)(cid:21)(cid:21)(cid:3)(cid:16)(cid:5)(cid:23)(cid:7)(cid:9)(cid:10)(cid:12)(cid:24)(cid:5)(cid:19)(cid:3)(cid:25)(cid:7)(cid:6)(cid:9)(cid:10)(cid:9)(cid:7)(cid:3)(cid:26)(cid:22)(cid:23)(cid:5)(cid:6)(cid:12)(cid:14)(cid:9)(cid:14) 
+Reader 
+cohort 1 
+Reader 
+cohort 2 
+First group of clinicians 
+(PCPs) 
+Reader 
+cohort 1 
+
+
+
+Reader 
+cohort 2 
+Second group of clinicians 
+(NPs) 
+
+
+
+Reader 
+cohort 1 
+Reader 
+cohort 2 
+Scrolling shows more conditions 
+and information 
+The AI assistant shows as many as 5 top predictions of skin conditions, with the 
+confidence in each prediction shown as colored dots and additional information (eg, 
+sample images from an atlas) available with a click. More details are available in eFigure 1 
+in the Supplement. The study was designed as a multiple-reader, multiple-case (MRMC) 
+study comprising 1048 cases. Two groups of clinicians (primary care physicians [PCPs] 
+and nurse practitioners [NPs]) reviewed each case with or without AI assistance. The 
+modality alternated every 50 cases. For every case, each clinician was instructed to rank 
+as many as 3 differential diagnoses using a search-as-you-type interface and selecting 
+matching skin conditions from a list of 3961 conditions. If their desired skin condition was 
+not present, clinicians could provide free-text entries. All skin conditions were mapped 
+to a list of 419 conditions. SCC indicates squamous cell carcinoma; SCCIS, SCC in situ. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(cid:26)(cid:22)(cid:23)(cid:5)(cid:6)(cid:9)(cid:10)(cid:12)(cid:7)(cid:28)(cid:6)(cid:22)(cid:3)(cid:24)(cid:5)(cid:21)(cid:9)(cid:11)(cid:10)(cid:5)(cid:10)(cid:7)(cid:28)(cid:19)(cid:3)(cid:12)(cid:27)(cid:6)(cid:22)(cid:10)(cid:3)(cid:7)(cid:8)(cid:5)(cid:23)(cid:5)(cid:7)(cid:6)(cid:22)(cid:23)(cid:9)(cid:29)(cid:22)(cid:13)(cid:3)(cid:30)(cid:28)(cid:3)(cid:6)(cid:22)(cid:10)(cid:13)(cid:22)(cid:23)(cid:19)(cid:3)(cid:31)(cid:9)(cid:10) (cid:3)(cid:14)(cid:7)(cid:5)(cid:21)(cid:28)(cid:19)(cid:3)(cid:30)(cid:21)(cid:22)(cid:22)(cid:13)(cid:9)(cid:10)(cid:11)(cid:3)(cid:10)(cid:12)(cid:13)!(cid:21)(cid:22)(cid:14)(cid:3)(cid:5)(cid:10)(cid:13)(cid:3) 
+(cid:31)(cid:21)(cid:5)"!(cid:22)(cid:14)(cid:19)(cid:3)(cid:12)(cid:27)(cid:6)(cid:22)(cid:10)(cid:3)(cid:27)(cid:12)!(cid:10)(cid:13)(cid:3)(cid:12)(cid:10)(cid:3)(cid:8)(cid:22)(cid:5)(cid:13)(cid:19)(cid:3)(cid:10)(cid:22)(cid:7) (cid:3)(cid:13)(cid:12)(cid:23)(cid:14)(cid:5)(cid:21)(cid:3)(cid:8)(cid:5)(cid:10)(cid:13)(cid:14)(cid:17)(cid:27)(cid:12)(cid:23)(cid:22)(cid:5)(cid:23)(cid:24)(cid:14)(cid:19)(cid:3)(cid:5)(cid:10)(cid:13)(cid:3)(cid:21)(cid:22)(cid:11)(cid:14)(cid:19)(cid:3)(cid:5)(cid:10)(cid:13)(cid:3)(cid:7)(cid:12)(cid:10)(cid:14)(cid:6)(cid:9)(cid:6)!(cid:6)(cid:9)(cid:10)(cid:11)(cid:3)(cid:6)(cid:8)(cid:22)(cid:3) 
+(cid:14)(cid:22)(cid:7)(cid:12)(cid:10)(cid:13)(cid:3)(cid:24)(cid:12)(cid:14)(cid:6)(cid:3)(cid:7)(cid:12)(cid:24)(cid:24)(cid:12)(cid:10)(cid:3)(cid:6)(cid:28)(cid:31)(cid:22)(cid:3)(cid:12)(cid:27)(cid:3)(cid:14) (cid:9)(cid:10)(cid:3)(cid:7)(cid:5)(cid:10)(cid:7)(cid:22)(cid:23)#(cid:3)(cid:15)(cid:16)(cid:16)(cid:18)(cid:15)(cid:19)(cid:3)(cid:12)(cid:23)(cid:3)(cid:20)(cid:12)$(cid:22)(cid:10)(cid:3)(cid:13)(cid:9)(cid:14)(cid:22)(cid:5)(cid:14)(cid:22)(cid:19)(cid:3)$(cid:8)(cid:9)(cid:7)(cid:8)(cid:3)(cid:12)(cid:27)(cid:6)(cid:22)(cid:10)(cid:3)(cid:31)(cid:23)(cid:22)(cid:14)(cid:22)(cid:10)(cid:6)(cid:14) 
+(cid:5)(cid:14)(cid:3)(cid:14)(cid:7)(cid:5)(cid:21)(cid:28)(cid:19)(cid:3)(cid:31)(cid:9)(cid:10) %(cid:30)(cid:23)(cid:12)$(cid:10)(cid:3)(cid:31)(cid:21)(cid:5)"!(cid:22)(cid:19)(cid:3)(cid:23)(cid:22)(cid:31)(cid:23)(cid:22)(cid:14)(cid:22)(cid:10)(cid:6)(cid:14)(cid:3)(cid:10)(cid:12)(cid:10)(cid:9)(cid:10)&(cid:5)(cid:14)(cid:9)&(cid:22)(cid:3)’(cid:9)(cid:10)(cid:3)(cid:14)(cid:9)(cid:6)!(cid:19)(cid:3)(cid:10)(cid:12)(cid:6)(cid:3)(cid:31)(cid:22)(cid:10)(cid:22)(cid:6)(cid:23)(cid:5)(cid:6)(cid:9)(cid:10)(cid:11)(cid:3)(cid:13)(cid:22)(cid:23)(cid:24)(cid:9)(cid:14)((cid:3)(cid:14)(cid:6)(cid:5)(cid:11)(cid:22)(cid:3) 
+(cid:12)(cid:27)(cid:3)(cid:15)(cid:16)(cid:16)(cid:3)(cid:6)(cid:8)(cid:5)(cid:6)(cid:3)(cid:24)(cid:5)(cid:28)(cid:3)(cid:31)(cid:23)(cid:12)(cid:11)(cid:23)(cid:22)(cid:14)(cid:14)(cid:3)(cid:6)(cid:12)(cid:3)(cid:9)(cid:10)&(cid:5)(cid:14)(cid:9)&(cid:22)(cid:3)(cid:13)(cid:9)(cid:14)(cid:22)(cid:5)(cid:14)(cid:22)(cid:3)(cid:9)(cid:27)(cid:3)(cid:21)(cid:22)(cid:27)(cid:6)(cid:3)!(cid:10)(cid:6)(cid:23)(cid:22)(cid:5)(cid:6)(cid:22)(cid:13)# 
+
+
+
+(cid:18)(cid:24)(cid:5)(cid:11)(cid:22)(cid:14)(cid:3)(cid:12)(cid:27)(cid:3)(cid:15)(cid:16)(cid:16)(cid:17)(cid:15)(cid:16)(cid:16)(cid:18)(cid:15)(cid:3)(cid:14)(cid:9)(cid:24)(cid:9)(cid:21)(cid:5)(cid:23)(cid:3)(cid:6)(cid:12)(cid:3)(cid:31)(cid:5)(cid:6)(cid:9)(cid:22)(cid:10)(cid:6)+(cid:14) 
+(cid:31)(cid:23)(cid:22)(cid:14)(cid:22)(cid:10)(cid:6)(cid:5)(cid:6)(cid:9)(cid:12)(cid:10) 
+
+
+
+Characteristic 
+Years 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Full study (n = 1048)a 
+2017-2018 
+Cases with diagnoses from 
+histologic findings (n = 152)b 
+2017-2018 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abbreviations: IQR, interquartile range; NA, not 
+applicable; SCC/SCCIS, squamous cell carcinoma/ 
+squamous cell carcinoma in situ; SK/ISK, seborrheic 
+keratosis/irritated seborrheic keratosis. 
+
+
+
+were excluded from the biopsy analysis. A total of 141 
+cases had growths and 53 were malignant. 
+c Enrichment was performed to avoid skew toward 
+common conditions (eg, acne and eczema) as 
+described previously and additionally to include all 
+available cases with biopsy confirmation. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+memory effect associated with a crossover study (where memorable cases may inflate the diagnostic 
+performance when reviewed a second time by the same readers).28,29 
+
+
+
+
+Reference Diagnoses 
+Reference diagnoses were provided by a panel of dermatologists.26 Briefly, 3 US board-certified 
+dermatologists (from a pool of 12) independently reviewed each case. The dermatologists 
+
+
+
+
+diagnoses than diagnoses obtained by individual dermatologist review (eTable 2 in the 
+Supplement).26,30 This approach assigns a vote to each diagnosis based on its ranking: the first 
+diagnosis in a dermatologist’s differential was given a weight of 1/1 = 1; the secondary diagnosis was 
+
+
+
+
+
+
+
+
+Study End Points 
+Our study was designed to evaluate 2 prespecified primary end points: (1) the agreement rate of the 
+
+
+
+
+
+
+
+
+
+Finally, 2 additional metrics (top-3 agreement and average overlap)31 were used for more 
+comprehensive evaluation of cases in which additional follow-up may be needed to arrive at a 
+
+
+
+Statistical Analysis 
+Data were analyzed from May 26, 2020, to January 27, 2021. To compare clinicians reviewing cases 
+with AI assistance and reviewing cases without, we used a permutation test32 with 1000 iterations. 
+In each iteration, we permuted the assignment of whether reads were assisted or unassisted (ie, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+reference diagnosis remained largely unchanged with AI assistance, increasing by 2% (95% CI, −1% 
+to 5%), from 63% to 66% (eFigures 4 and 5 in the Supplement).26 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2. Comparison of Clinicians’ Diagnostic Agreement Rate With Dermatologists When Assisted 
+by Artificial Intelligence (AI) vs Unassisted 
+
+Agreement with reference diagnoses for all cases, 
+assisted vs unassisted diagnoses 
+
+
+Every clinician (primary care physicians [PCPs] or nurse 
+practitioners [NPs]) provided their differential 
+diagnosis (several rank-ordered conditions), which 
+were then mapped to 419 skin conditions. Only 
+agreement in the top differential diagnosis (how often 
+the clinicians’ primary diagnosis agreed with the top 
+diagnosis of a panel of dermatologists [top-1 
+agreement]) is considered, with additional details in 
+eFigures 4 and 5 in the Supplement. Panels A and B 
+cover all 1048 cases, whereas panels C and D cover 141 
+cases with growths and biopsy confirmation. A, Top-1 
+agreement increased with AI assistance (P < .001 for 
+both PCPs and NPs). B, For top-1 agreement for 
+unassisted vs assisted modalities for each individual 
+clinician, a value above the diagonal indicates that the 
+clinician had a higher agreement with dermatologists 
+when assisted by AI. C and D, A similar analysis 
+evaluated diagnostic accuracy for growths with biopsy 
+confirmation on the 3-way classification of malignant, 
+precancerous, and benign. Error bars represent 95% 
+CIs. Additional analysis of assistance stratified by AI 
+agreement with the reference diagnoses is presented 
+in eFigures 6 and 7 in the Supplement. 
+
+0.4 
+Top-1 agreement, rate (unassisted) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Agreement with reference diagnoses for all 
+biopsy specimens 
+Agreement with reference diagnoses for all biopsy 
+specimens, assisted vs unassisted diagnoses 
+
+0.4 
+Top-1 agreement, rate (unassisted) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PCPs 
+NPs 
+
+PCPs 
+NPs 
+
+
+
+Figure 3. Comparing Simulated Clinical Decisions by Clinicians When Assisted by Artificial Intelligence 
+vs Unassisted 
+
+
+A, Rate of biopsy for all cases. B, Rate of referrals for all 
+cases. C, Diagnostic accuracy among nonreferred 
+cases. D, Diagnostic accuracy among referred cases. 
+Top-3 agreement rates for cases for whom the primary 
+care physicians (PCPs) and nurse practitioners (NPs) 
+did and did not indicate a referral are presented in 
+eFigure 11 in the Supplement. Error bars represent 
+95% CIs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Agreement with reference diagnoses among 
+nonreferred cases 
+Agreement with reference diagnoses among 
+referred cases 
+A, Confidence of the primary care physicians (PCPs) 
+and nurse practitioners (NPs) as a stacked bar plot. NA 
+indicates cases for which the clinician could not 
+provide a diagnosis. B, Comparison of the differences 
+in case review time for the full set of 1048 cases as a 
+box plot. The box edges represent quartiles, whereas 
+the whiskers extend to the last observed points that 
+fall within 1.5 times the interquartile range from the 
+quartiles. Outliers beyond the whiskers are indicated 
+with dots; a total of 182 (0.4% of the reads) outliers 
+beyond 900 seconds are excluded from the 4 box 
+plots for ease of visualization. The median time for 
+diagnosis increased from 89 to 94 seconds for PCPs 
+and from 77 to 84 seconds for NPs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 4. Comparing Clinicians’ Confidence and Case Review Time When Assisted by Artificial Intelligence 
+vs Unassisted 
+
+
+
+
+
+
+
+
+
+
+Confidence of 
+top diagnosis 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+independently practicing primary care to diagnose and triage skin conditions more effectively. 
+Cutaneous disease is the chief complaint in 12% to 21% of primary care visits,33-36 and access to 
+dermatologists is limited. Nonspecialists have suboptimal diagnostic accuracy and have been shown 
+to perform more biopsies while diagnosing fewer malignant neoplasms than dermatologists.37 
+Therefore, improving the diagnostic accuracy of nonreferred cases while reducing unnecessary 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+straightforward. In either case, the telemedicine format could be particularly useful in the COVID-19 
+era39 for populations at high risk of complications in the event of infection due to in-person care. The 
+AI tool could also be used in an in-person clinic setting because AI interpretation of images is feasible 
+
+
+
+
+
+Association40 and the American Academy of Dermatology,41 this tool was specifically designed to 
+augment clinicians’ diagnostic ability. To improve trust and empower readers to evaluate suggestion 
+
+
+
+
+Other studies have explored the potential of AI-based dermatology tools. Han et al15 found a 7% 
+increase in diagnostic accuracy when 2 dermatologists and 2 residents reviewed 2201 cases a second 
+time with AI assistance. Assistance-associated improvements were also seen for 21 dermatologists 
+and 26 residents on 240 images for detection of malignant neoplasms.15 Tschandl et al24 highlighted 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Limitations 
+This study has some limitations. First, these were teledermatology cases that were a mix of cases that 
+
+potentially increased case difficulty and case enrichment may have affected clinician diagnostic 
+performance. Second, in terms of Fitzpatrick skin types42 (which categorize skin tone and propensity 
+to tan), types I and V are underrepresented, and type VI is absent in this data set.26 Because disease 
+can present differently across skin types, the further study of additional skin types is warranted. 
+
+
+
+
+crossed setups could be explored, although biases from anticipation of AI assistance or incomplete 
+washout will need to be averted.28 Finally, the “store-and-forward” nature of these cases restricted 
+the ability of the clinicians to ask follow-up questions and perform tests. As such, the insights here are 
+
+
+
+
+
+
+
+ARTICLE INFORMATION 
+Accepted for Publication: February 1, 2021. 
+
+Open Access: This is an open access article distributed under the terms of the CC-BY-NC-ND License. © 2021 Jain 
+A et al. JAMA Network Open. 
+Corresponding Author: Yun Liu, PhD, Google Health, 3400 Hillview Ave, Palo Alto, CA 94304 (liuyun@ 
+google.com). 
+Author Affiliations: Google Health, Palo Alto, California (Jain, Way, Gupta, Gao, de Oliveira Marinho, Hartford, 
+Sayres, Eng, Nagpal, DeSalvo, Corrado, Peng, Webster, Dunn, Coz, Yun Liu, Bui, Yuan Liu); Google Health via 
+Advanced Clinical, Deerfield, Illinois (Kanada, Huang); Division of Hospital Medicine, University of California, San 
+Francisco (Bui). 
+Author Contributions: Drs Bui and Yuan Liu contributed equally to the study. Mr Jain and Dr Yun Liu had full 
+access to all the data in the study and takes responsibility for the integrity of the data and the accuracy of the data 
+analysis. 
+Concept and design: Jain, Way, de Oliveira Marinho, Sayres, Eng, Corrado, Peng, Webster, Dunn, Coz, Huang, Yun 
+Liu, Bui, Yuan Liu. 
+
+
+
+
+
+
+Acquisition, analysis, or interpretation of data: Jain, Way, Gupta, Gao, Hartford, Sayres, Kanada, Nagpal, DeSalvo, 
+Dunn, Coz, Huang, Yun Liu, Bui, Yuan Liu. 
+
+Critical revision of the manuscript for important intellectual content: Jain, Way, Gao, Sayres, Kanada, Eng, Nagpal, 
+DeSalvo, Corrado, Peng, Webster, Dunn, Coz, Huang, Yun Liu, Bui, Yuan Liu. 
+
+
+Administrative, technical, or material support: Way, Gupta, de Oliveira Marinho, Hartford, Kanada, Eng, DeSalvo, 
+Peng, Dunn, Coz, Huang, Yun Liu, Bui, Yuan Liu. 
+
+Conflict of Interest Disclosures: Mr Jain reported a patent pending and ownership of Alphabet stock. Mr Way 
+reported a patent pending and ownership of Alphabet stock. Mrs Gupta reported a patent pending and ownership 
+of Alphabet stock. Dr Gao reported ownership of Alphabet stock. Mr de Oliveira Marinho reported ownership of 
+Alphabet stock. Mr Hartford reported ownership of Alphabet stock. Dr Sayres reported a patent pending and 
+ownership of Alphabet stock. Dr Kanada reported paid consulting for Google during the conduct of the study. Dr 
+Eng reported a patent pending and ownership of Alphabet stock. Mr Nagpal reported ownership of Alphabet 
+stock. Dr DeSalvo reported ownership of Alphabet stock. Dr Corrado reported ownership of Alphabet stock. Dr 
+Peng reported ownership of Alphabet stock. Dr Webster reported ownership of Alphabet stock. Mr Dunn reported 
+a patent pending and ownership of Alphabet stock. Mr Coz reported a patent pending and ownership of Alphabet 
+stock. Dr Huang reported paid consulting for Google during the conduct of the study. Dr Yun Liu reported multiple 
+patents pending and ownership of Alphabet stock. Dr Bui reported a patent pending and ownership of Alphabet 
+stock. Dr Yuan Liu reported a patent pending and ownership of Alphabet stock. No other disclosures were 
+reported. 
+
+Role of the Funder/Sponsor: Google LLC was involved in the design and conduct of the study; collection, 
+management, analysis, and interpretation of the data; preparation, review, or approval of the manuscript; and 
+decision to submit the manuscript for publication. 
+Additional Contributions: Sara Gabriele, BS, David Yen, BA, T. Saensuksopa, MHCI, ME, Carrie J. Cai, PhD, William 
+Chen, BA, Quang Duong, PhD, Miles Hutson, BS, Dennis Ai, MS, Aaron Loh, MS, Bilson Campana, PhD, Jonathan 
+Deaton, MS, Vivek Natarajan, MS, Ignacio Blanco, BS, Christopher Semturs, MS, Jessica Gallegos, MBA, Anita Misra, 
+BTech, Roy Lee, BS, and all employees of Google LLC provided technical advice, discussion, and support. Peter 
+Schalock, MD, and Sabina Bis, MD, both consultants for Google Health via Advanced Clinical, assisted with mapping 
+free-text diagnoses to the structured list of 419 conditions. Justin Ko, MD, MBA, and Steven Lin, MD, Stanford 
+Health Care, provided helpful discussions. No one was financially compensated for the stated contribution aside 
+from their standard salary and associated compensation. 
+REFERENCES 
+1. GBD 2017 Disease and Injury Incidence and Prevalence Collaborators. Global, regional, and national incidence, 
+prevalence, and years lived with disability for 354 diseases and injuries for 195 countries and territories, 1990-2017: 
+a systematic analysis for the Global Burden of Disease Study 2017. Lancet. 2018;392(10159):1789-1858. doi:10. 
+1016/S0140-6736(18)32279-7 
+2. Chen SC, Pennie ML, Kolm P, et al. Diagnosing and managing cutaneous pigmented lesions: primary care 
+physicians versus dermatologists. J Gen Intern Med. 2006;21(7):678-682. doi:10.1111/j.1525-1497.2006.00462.x 
+3. Goulding JMR, Levine S, Blizard RA, Deroide F, Swale VJ. Dermatological surgery: a comparison of activity and 
+outcomes in primary and secondary care. Br J Dermatol. 2009;161(1):110-114. doi:10.1111/j.1365-2133.2009. 
+09228.x 
+4. Federman DG, Concato J, Kirsner RS. Comparison of dermatologic diagnoses by primary care practitioners and 
+dermatologists: a review of the literature. Arch Fam Med. 1999;8(2):170-172. doi:10.1001/archfami.8.2.170 
+5. Pennie ML, Soon SL, Risser JB, Veledar E, Culler SD, Chen SC. Melanoma outcomes for Medicare patients: 
+association of stage and survival with detection by a dermatologist vs a nondermatologist. Arch Dermatol. 2007; 
+143(4):488-494. doi:10.1001/archderm.143.4.488 
+6. Feldman SR, Fleischer AB Jr, Williford PM, White R, Byington R. Increasing utilization of dermatologists by 
+managed care: an analysis of the National Ambulatory Medical Care Survey, 1990-1994. J Am Acad Dermatol. 
+1997;37(5, pt 1):784-788. doi:10.1016/S0190-9622(97)70118-X 
+
+
+
+
+
+
+7. Viola KV, Tolpinrud WL, Gross CP, Kirsner RS, Imaeda S, Federman DG. Outcomes of referral to dermatology for 
+suspicious lesions: implications for teledermatology. Arch Dermatol. 2011;147(5):556-560. doi:10.1001/ 
+archdermatol.2011.108 
+8. Moreno G, Tran H, Chia ALK, Lim A, Shumack S. Prospective study to assess general practitioners’ 
+dermatological diagnostic skills in a referral setting. Australas J Dermatol. 2007;48(2):77-82. doi:10.1111/j.1440- 
+0960.2007.00340.x 
+9. Tran H, Chen K, Lim AC, Jabbour J, Shumack S. Assessing diagnostic skill in dermatology: a comparison between 
+general practitioners and dermatologists. Australas J Dermatol. 2005;46(4):230-234. doi:10.1111/j.1440-0960. 
+2005.00189.x 
+10. Federman DG, Kirsner RS. The abilities of primary care physicians in dermatology: implications for quality of 
+care. Am J Manag Care. 1997;3(10):1487-1492. 
+11. Esteva A, Kuprel B, Novoa RA, et al. Dermatologist-level classification of skin cancer with deep neural networks. 
+Nature. 2017;542(7639):115-118. doi:10.1038/nature21056 
+12. Han SS, Park GH, Lim W, et al. Deep neural networks show an equivalent and often superior performance to 
+dermatologists in onychomycosis diagnosis: automatic construction of onychomycosis datasets by region-based 
+convolutional deep neural network. PLoS One. 2018;13(1):e0191493. doi:10.1371/journal.pone.0191493 
+13. Sun X, Yang J, Sun M, Wang K. A benchmark for automatic visual classification of clinical skin disease images. 
+In: Liebe B, Matas J, Seba N, Welling M, eds. Computer Vision–ECCV 2016. Springer; 2016:206-222. Lecture Notes in 
+Computer Science; vol 9910. https://link.springer.com/chapter/10.1007/978-3-319-46466-4_13 
+
+15. Han SS, Park I, Eun Chang S, et al. Augmented intelligence dermatology: deep neural networks empower 
+medical professionals in diagnosing skin cancer and predicting treatment options for 134 skin disorders. J Invest 
+Dermatol. 2020;140(9):1753-1761. doi:10.1016/j.jid.2020.01.019 
+16. Cruz-Roa AA, Arevalo Ovalle JE, Madabhushi A, González Osorio FA. A deep learning architecture for image 
+representation, visual interpretability and automated basal-cell carcinoma cancer detection. Med Image Comput 
+Comput Assist Interv. 2013;16(pt 2):403-410. doi:10.1007/978-3-642-40763-5_50 
+17. Codella NCF, Gutman D, Emre Celebi M, et al. Skin lesion analysis toward melanoma detection: a challenge at 
+the 2017 International Symposium on Biomedical Imaging (ISBI), hosted by the International Skin Imaging 
+Collaboration (ISIC). In: 2018 IEEE 15th International Symposium on Biomedical Imaging (ISBI 2018). IEEE; 2018. https:// 
+faculty.uca.edu/ecelebi/documents/ISBI_2018.pdf 
+18. Yuan Y, Chao M, Lo YC. Automatic skin lesion segmentation using deep fully convolutional networks with 
+jaccard distance. IEEE Trans Med Imaging. 2017;36(9):1876-1886. doi:10.1109/TMI.2017.2695227 
+19. Haenssle HA, Fink C, Schneiderbauer R, et al; Reader Study Level-I and Level-II Groups. Man against machine: 
+diagnostic performance of a deep learning convolutional neural network for dermoscopic melanoma recognition 
+in comparison to 58 dermatologists. Ann Oncol. 2018;29(8):1836-1842. doi:10.1093/annonc/mdy166 
+20. Brinker TJ, Hekler A, Enk AH, et al. Deep learning outperformed 136 of 157 dermatologists in a head-to-head 
+dermoscopic melanoma image classification task. Eur J Cancer. 2019;113:47-54. doi:10.1016/j.ejca.2019.04.001 
+21. Maron RC, Weichenthal M, Utikal JS, et al. Systematic outperformance of 112 dermatologists in multiclass skin 
+cancer image classification by convolutional neural networks. Eur J Cancer. 2019;119:57-65. doi:10.1016/j.ejca. 
+2019.06.013 
+22. Okuboyejo DA, Olugbara OO, Odunaike SA. Automating skin disease diagnosis using image classification. In: 
+Ao SI, Douglas C, Grundfest WS, Brugstone J, eds. Proceedings of the World Congress on Engineering and Computer 
+Science. Vol 2. Newstand Limited; 2013:850-854. http://www.iaeng.org/publication/WCECS2013/ 
+23. Tschandl P, Codella N, Akay BN, et al. Comparison of the accuracy of human readers versus machine-learning 
+algorithms for pigmented skin lesion classification: an open, web-based, international, diagnostic study. Lancet 
+Oncol. 2019;20(7):938-947. doi:10.1016/S1470-2045(19)30333-X 
+24. Tschandl P, Rinner C, Apalla Z, et al. Human-computer collaboration for skin cancer recognition. Nat Med. 
+2020;26(8):1229-1234. doi:10.1038/s41591-020-0942-0 
+25. Bossuyt PM, Reitsma JB, Bruns DE, et al; STARD Group. STARD 2015: an updated list of essential items for 
+reporting diagnostic accuracy studies. BMJ. 2015;351:h5527. doi:10.1136/bmj.h5527 
+26. Liu Y, Jain A, Eng C, et al. A deep learning system for differential diagnosis of skin diseases. Nat Med. 2020;26 
+(6):900-908. doi:10.1038/s41591-020-0842-3 
+
+
+
+
+
+
+27. Cai CJ, Winter S, Steiner D, Wilcox L, Terry M. “Hello AI”: uncovering the onboarding needs of medical 
+practitioners for human-AI collaborative decision-making. In: Lampinen A, Gergle D, Shamma DA. Proceedings of 
+the ACM on Human-Computer Interaction. Association for Computing Machinery; 2019;3(CSCW):1-24. doi:10. 
+1145/3359206 
+28. Gallas BD, Chan HP, D’Orsi CJ, et al. Evaluating imaging and computer-aided detection and diagnosis devices 
+at the FDA. Acad Radiol. 2012;19(4):463-477. doi:10.1016/j.acra.2011.12.016 
+29. Eadie LH, Taylor P, Gibson AP. Recommendations for research design and reporting in computer-assisted 
+diagnosis to facilitate meta-analysis. J Biomed Inform. 2012;45(2):390-397. doi:10.1016/j.jbi.2011.07.009 
+30. Barnett ML, Boddupalli D, Nundy S, Bates DW. Comparative accuracy of diagnosis by collective intelligence of 
+multiple physicians vs individual physicians. JAMA Netw Open. 2019;2(3):e190096. doi:10.1001/ 
+jamanetworkopen.2019.0096 
+31. Eng C, Liu Y, Bhatnagar R. Measuring clinician-machine agreement in differential diagnoses for dermatology. Br 
+J Dermatol. 2020;182(5):1277-1278. doi:10.1111/bjd.18609 
+32. Droge B. Phillip Good: permutation, parametric, and bootstrap tests of hypotheses. Metrika. 2006;64(2): 
+249-250. doi:10.1007/s00184-006-0088-1 
+33. Lowell BA, Froelich CW, Federman DG, Kirsner RS. Dermatology in primary care: prevalence and patient 
+disposition. J Am Acad Dermatol. 2001;45(2):250-255. doi:10.1067/mjd.2001.114598 
+34. Verhoeven EWM, Kraaimaat FW, van Weel C, et al. Skin diseases in family medicine: prevalence and health care 
+use. Ann Fam Med. 2008;6(4):349-354. doi:10.1370/afm.861 
+35. Sari F, Brian B, Brian M. Skin disease in a primary care practice. Skinmed. 2005;4(6):350-353. doi:10.1111/j.1540- 
+9740.2005.04267.x 
+36. Britt H, Miller GC, Henderson J, et al. General Practice Activity in Australia 2015-16: BEACH: Bettering the 
+Evaluation and Care of Health. Family Medicine Research Centre; 2016. 
+37. Anderson AM, Matsumoto M, Saul MI, Secrest AM, Ferris LK. Accuracy of skin cancer diagnosis by physician 
+assistants compared with dermatologists in a large health care system. JAMA Dermatol. 2018;154(5):569-573. doi: 
+10.1001/jamadermatol.2018.0212 
+38. Lim HW, Collins SAB, Resneck JS Jr, et al. The burden of skin disease in the United States. J Am Acad 
+Dermatol. 2017;76(5):958-972.e2. doi:10.1016/j.jaad.2016.12.043 
+39. Gupta R, Ibraheim MK, Doan HQ. Teledermatology in the wake of COVID-19: advantages and challenges to 
+continued care in a time of disarray. J Am Acad Dermatol. 2020;83(1):168-169. doi:10.1016/j.jaad.2020.04.080 
+40. American Medical Association. Augmented intelligence in health care policy report. June 2018. Accessed June 
+3, 2020. https://www.ama-assn.org/system/files/2019-01/augmented-intelligence-policy-report.pdf 
+41. American Academy of Dermatology. American Academy of Dermatology position statement on augmented 
+intelligence (AuI). May 18, 2019. Accessed June 3, 2020. https://server.aad.org/Forms/Policies/Uploads/PS/PS- 
+Augmented%20Intelligence.pdf 
+42. Sachdeva S. Fitzpatrick skin typing: applications in dermatology. Indian J Dermatol Venereol Leprol. 2009;75 
+(1):93-96. doi:10.4103/0378-6323.45238 
+SUPPLEMENT. 
+eMethods. Procedures and Metrics 
+eFigure 1. Detailed User Interface of the Artificial Intelligence (AI)–Based Assistive Tool 
+eFigure 2. States Where Readers Are Licensed to Practice 
+eFigure 3. Summary of Prior Clinical Experience of Primary Care Physician (PCP) and Nurse Practitioner (NP) 
+Readers 
+eFigure 4. Diagnostic Accuracy of Primary Care Physicians (PCPs) and Nurse Practitioners (NPs) 
+eFigure 5. Sensitivity for the Top 26 Most Common Skin Conditions, With vs Without Artificial Intelligence (AI) 
+Assistance 
+eFigure 6. Impact of Artificial Intelligence (AI) Assistance Stratified by the Position of the Correct Diagnosis in the 
+Assistant’s Interface 
+eFigure 7. Impact of Artificial Intelligence (AI) Assistance Stratified by the AI’s Confidence Level (as Indicated by 5 
+Dots in the Assistant’s Interface) 
+eFigure 8. Impact of Case Difficulty (as Measured by Interdermatologist Agreement Within the Panel Providing the 
+Reference Diagnosis) on the Performance of Unassisted and Assisted Readers 
+eFigure 9. Changes During the Course of the Study for Top-1 Agreement, Top-3 Agreement, Average Overlap, and 
+Median Diagnosis Time 
+
+
+
+
+
+
+eFigure 10. Impact of Artificial Intelligence (AI) Assistance Stratified by Estimated Fitzpatrick Skin Type for Top-1 
+Agreement, Top-3 Agreement, and Average Overlap 
+eFigure 11. Changes in Top-3 Diagnostic Accuracy by Primary Care Physicians (PCPs) and Nurse Practitioners (NPs) 
+Without Artificial Intelligence (AI) Assistance vs When Using AI Assistance on Nonreferred Cases and Referred 
+Cases 
+eFigure 12. Breakdown of Accuracy of Cases Based on Confidence of Primary Care Physicians (PCPs) and Nurse 
+Practitioners (NPs) 
+eFigure 13. Sample Cases Evaluated Against Reference Diagnoses Provided by a Panel of 3 Dermatologists 
+eFigure 14. Sample Cases Evaluated Against Biopsy-Provided Diagnoses 
+eFigure 15. Reader Perceptions of the Value of Training Materials and Labeling Tool 
+eFigure 16. Reader Perceptions of the Value of Artificial Intelligence (AI) Assistance 
+eFigure 17. Perceived Usefulness of Different Features in the Artificial Intelligence (AI)-Based Assistance for 
+Primary Care Physician (PCP) and Nurse Practitioner (NP) Readers 
+eTable 1. Clinical Metadata Used in This Study for Both AI Algorithm Input and Presented to Clinicians 
+eTable 2. Improvement in Top-1 Agreement and Average Overlap Between 2 Dermatologist Panels Using the 
+Aggregated (“Voting”)-Based Approach 
+eTable 3. Additional Metrics (Top-1 and Top-3 Agreement, Average Overlap, and Kappa) for Measuring Agreement 
+Rates of PCPs and NPs, Respectively, With the Dermatologist Panel 
+eTable 4. Subgroup Analysis for 3 Categories of Skin Condition for Growths, Erythematosquamous and 
+Papulosquamous Skin Disease, and Hair Loss 
+eTable 5. Rates of Recommending a Biopsy and Referral for PCPs and NPs 
+
+
+
+

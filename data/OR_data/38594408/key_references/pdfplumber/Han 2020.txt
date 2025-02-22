@@ -1,0 +1,652 @@
+ORIGINAL ARTICLE
+Augmented Intelligence Dermatology: Deep
+Neural Networks Empower Medical
+Professionals in Diagnosing Skin Cancer
+and Predicting Treatment Options for 134
+Skin Disorders
+Seung Seog Han1,8, Ilwoo Park2,8, Sung Eun Chang3,8, Woohyung Lim4, Myoung Shin Kim5,
+Gyeong Hun Park6, Je Byeong Chae7, Chang Hun Huh7 and Jung-Im Na7
+Although deep learning algorithms have demonstrated expert-level performance, previous efforts were
+mostly binary classifications of limited disorders. We trained an algorithm with 220,680 images of 174
+disordersandvalidateditusingEdinburgh(1,300images;10disorders)andSNUdatasets(2,201images;134
+disorders). The algorithm could accurately predict malignancy, suggest primary treatment options, render
+multi-class classification among 134 disorders, and improve the performance ofmedicalprofessionals. The
+areaunderthecurvesformalignancydetectionwere0.928(cid:1)0.002(Edinburgh)and0.937(cid:1)0.004(SNU).The
+area under the curves of primary treatment suggestion (SNU) were 0.828 (cid:1) 0.012, 0.885 (cid:1) 0.006, 0.885 (cid:1)
+0.006, and 0.918 (cid:1) 0.006 for steroids, antibiotics, antivirals, and antifungals, respectively. For multi-class
+classification, the mean top-1 and top-5 accuracies were 56.7 (cid:1) 1.6% and 92.0 (cid:1) 1.1% (Edinburgh) and
+44.8 (cid:1) 1.2% and 78.1 (cid:1) 0.3% (SNU), respectively. With the assistance of our algorithm, the sensitivity and
+specificity of 47 clinicians (21 dermatologists and 26 dermatology residents) for malignancy prediction
+(SNU;240images)wereimproved by 12.1%(P<0.0001)and1.1%(P <0.0001),respectively.Themalignancy
+predictionsensitivityof23non-medicalprofessionalswassignificantlyincreasedby83.8%(P<0.0001).The
+top-1 and top-3 accuracies of four doctors in the multi-class classification of 134 diseases (SNU; 2,201
+images)wereincreasedby7.0%(P¼0.045)and10.1%(P¼0.0020),respectively.Theresultssuggestthatour
+algorithm may serve as augmented intelligence that can empower medical professionals in diagnostic
+dermatology.
+JournalofInvestigativeDermatology(2020)-,-e-;doi:10.1016/j.jid.2020.01.019
+INTRODUCTION Rajpurkar et al., 2018). Several recent studies have used
+One of the most successful deep learning architectures— CNNsindiagnosticdermatologyandreporteddermatologist-
+convolutional neural network (CNN) has consistently levelperformanceindiagnosingskincancer.However,most
+demonstrated its outstanding performance in medical studies have been limited to specific binary tasks, such as
+research (Chilamkurthy et al., 2018; Gulshan et al., 2016; differentiating melanoma from nevus (Brinker et al., 2019;
+Haenssle et al., 2018; Tschandl et al., 2019b; Yu et al.,
+2018), or multi-class classification of limited number of
+1IDermatologyClinic,Seoul,Korea;2DepartmentofRadiology,Chonnam
+skintumors(Hanetal.,2018a;Maronetal.,2019;Tschandl
+NationalUniversityMedicalSchoolandHospital,Gwangju,Korea;
+3DepartmentofDermatology,AsanMedicalCenter,UlsanUniversity etal.,2019a).TheperformanceofCNNneedstobetestedin
+CollegeofMedicine,Seoul,Korea;4LGSciencepark,Seoul,Korea; an environment similar to real practice, which requires dis-
+5DepartmentofDermatology,SanggyePaikHospital,InjeUniversity
+tinguishing skin cancer from numerous other skin disorders
+CollegeofMedicine,Seoul,Korea;6DepartmentofDermatology,Dongtan
+including inflammatory and infectious conditions. In addi-
+SacredHeartHospital,HallymUniversityCollegeofMedicine,Dongtan,
+Korea;and7DepartmentofDermatology,SeoulNationalUniversity tion,therobustnessandrepeatabilityofthisapproachrequire
+BundangHospital,Seongnam,Korea further validations (Brinker et al., 2018; Narla et al., 2018;
+8Theseauthorscontributedequallytothisworkasco-firstauthors. Topol, 2019).
+Correspondence:Jung-ImNa,DepartmentofDermatology,SeoulNational This study utilized CNN architectures that were trained
+UniversityBundangHospital,82Gumi-Ro173Beon-Gil,Seongnam, with 220,680 images consisting of 174 disease classes
+Gyeonggi463-707,Korea.E-mail:jina1@snu.ac.kr
+(Table 1). Both binary classification (predicting malignancy
+Abbreviations: AUC,areaunderthecurve;CNN,convolutionalneural and suggesting treatment option) and multi-class classifica-
+network
+tionof134skindisorderswereperformedwiththealgorithm,
+Received3September2019;revised2December2019;accepted13January
+and the performance was compared with that of clinicians
+2020;acceptedmanuscriptpublishedonlineXXXX;correctedproof
+publishedonlineXXXX and algorithm-assisted clinicians.
+ª2020TheAuthors.PublishedbyElsevier,Inc.onbehalfoftheSocietyforInvestigativeDermatology. www.jidonline.org 1
+SS Han et al.
+Augmented IntelligenceDermatologyinClassifying134SkinDisorders
+Table 1. Summary of the Training and Validation Data and the Corresponding Demographic Information
+Variable/Dataset ASAN1 Normal2 MED-NODE2 Web2 SNU3 Edinburgh3
+No.ofimages 120,780 48,271 170 51,459 2,201 1,300
+No.ofunique 20,765 5,849 e e 1,608 e
+individuals
+Age(mean(cid:1)SD) 41.8(cid:1)21.6 39.4(cid:1)21.3 e e 42.4(cid:1)23.6 e
+%ofmale 44.4% 43.4% e e 45.9% e
+Race >99%,Asian >99%,Asian MainlyCaucasian Mainly >99%,Asian Mainly
+Caucasian Caucasian
+No.ofdisorders 174 Normal,or Melanomaand 174 134 10
+nonspecific nevus
+Diagnosismethod Clinicaldiagnosisand/or Imagefinding Biopsy Imagefinding Clinicaldiagnosisand/or Biopsy
+biopsy biopsy
+Usage Training Training Training Training Validation Validation
+1Patientdemographics,includingageandsex,wereavailablefromaretrospectivechartreviewfor96.8%oftheASANdatasetand65.5%ofthenormal
+dataset.Clinicalimageswerecollectedafterthechartreview,andalldatawerefullyanonymized.
+2DemographicinformationwasnotavailablefortheEdinburgh,MED-NODE,andWebdatasets.
+3TheSNUdatasetconsistedofdatafromthreeuniversityhospitals(SeoulNationalUniversityBundangHospital,InjeUniversitySanggyePaikHospital,and
+HallymUniversityDongtanHospital).
+RESULTS 47 medical professionals improved from 77.4 (cid:1) 10.7% to
+Binaryclassificationemalignancypredictionandtreatment 86.8(cid:1)8.7% (P<0.0001)andfrom92.9(cid:1)2.4% to93.9(cid:1)
+suggestion 2.3% (P < 0.0001), respectively. Similarly, the sensitivity of
+Using both the SNU dataset, which consisted of 2,201 im- the malignancy diagnosis of 23 non-medical professionals
+agesrepresenting134diseases(5malignanciesand129non- improvedmarkedlyfrom47.6(cid:1)33.1%to87.5(cid:1)17.2%(P<
+malignancies),andtheEdinburghdataset,whichconsistedof 0.0001) without a loss in specificity. Similar to the malig-
+1,300 images representing 10 disorders (four malignancies nancy test, the F1 score of the 47 medical professionals in
+and six non-malignancies), the ability of our algorithm for predicting a primary treatment method significantly
+malignancy diagnosis was validated in a situation that was improvedfrom0.50(cid:1)0.08to0.61(cid:1)0.05forsteroids,from
+representativeofarealclinicalpractice,wherecliniciansare 0.47(cid:1)0.10to0.55(cid:1)0.08forantibiotics,from0.70(cid:1)0.09
+required to differentiate malignancy from several types of to0.75(cid:1)0.08forantifungals,andfrom0.48(cid:1)0.11to0.54
+other skin diseases. The area under the curves (AUCs) for (cid:1)0.09forantiviralswiththeassistanceofthealgorithm(P<
+predictingmalignancywere0.937(cid:1)0.004(SNU)and0.928 0.0001 for four treatments, Figure 1bee).
+(cid:1) 0.002 (Edinburgh), which were determined by using the In the prediction of malignancy, medical professionals
+malignancy output (Table 2). The test for predicting a treat- modified 5.1 (cid:1) 2.7% of their answers after reviewing the
+ment option among four primary medications (steroids, an- result of the algorithm. A total of 74.0 (cid:1) 15.0% of their
+tibiotics, antivirals, and antifungals) using the SNU dataset modified answers became correct (26.0 (cid:1) 15.0% became
+demonstrated the potential of ouralgorithmto be appliedto incorrect). The non-medical professionals modified 19.6 (cid:1)
+treatment suggestionwith the mean AUCs of 0.893 (cid:1) 0.006 10.2% of their answers. As a result, 72.0 (cid:1) 16.2% of their
+(Table 2). modifiedanswersbecamecorrect,whereas28.0(cid:1)16.2%of
+The performance of our model for predicting malignancy them were incorrect. For the treatment prediction test, the
+and treatment option among 134 diseases was compared medicalprofessionalsmodified8.8(cid:1)4.9%,7.3(cid:1)4.2%,4.0
+with those of 47 medical professionals (21 board-certified (cid:1) 2.4%, and 4.4 (cid:1) 2.4% of their answers for predicting
+dermatologists and 26 dermatology residents) using steroids, antibiotics, antivirals, and antifungals, respectively.
+randomly selected 240 images from the SNU dataset. Over- As a result, 70.1 (cid:1) 14.9% (steroids), 64.2 (cid:1) 15.0% (antibi-
+all, in both the malignancy and treatment predictions, the otics), 66.5 (cid:1) 20.8% (antivirals), and 67.0 (cid:1) 20.6% (anti-
+algorithm showed the similar performance as that of the fungals)ofthemodifiedanswersbecamecorrect.Overall,the
+dermatology residents but slightly lower than those of diagnostic accuracy of the test participants for both the ma-
+the dermatologists (Figure 1). lignancy and treatment prediction improved with the assis-
+The efficacy of our algorithm to augment the diagnostic tance of the algorithm.
+accuracyof test participantswas evaluated byusing the 240
+images from the SNU dataset. After the initial test, the test Multi-class classificationof134diseases
+participants were informed of the result of the algorithm for Using the SNU dataset (2,201 images), the mean top-1, 3,
+each test image and their answers were modified. For the and 5 accuracies for the classification of 134 diseases were
+detection of malignancy, the individual performance of 47 44.8 (cid:1) 1.2%, 69.0 (cid:1) 0.9%, and 78.1 (cid:1) 0.3%, respectively
+medical professionals assessed by F1 score showed a signif- (Table2).The classificationperformancefor eachof the134
+icant improvement from 0.66 (cid:1) 0.08 to 0.75 (cid:1) 0.06 (P < diseasesarelistedinSupplementaryTableS1.Thealgorithm
+0.0001) with the assistance of the model (Figure 1a). The wasabletodifferentiatebetweeneczematousandinfectious
+sensitivity and specificity of the malignancy diagnosis of the conditions, as well as classify very rare skin lesions, such as
+2 JournalofInvestigativeDermatology(2020),Volume-
+SS Han et al.
+AugmentedIntelligenceDermatologyinClassifying134SkinDisorders
+Table 2. Summary of Binary Classification (Malignancy Prediction and Treatment Suggestion) and Multi-Class
+Classification (Diagnosis of 134 Disorders)
+StatisticalParameter AnalysisMethod Result
+Malignancyprediction(binaryclassification)
+SNU(2,201images) AUC Malignancyoutput 0.937(cid:1)0.004
+Edinburgh(1,300images) AUC Malignancyoutput 0.928(cid:1)0.002
+Treatmentprediction(binaryclassification)
+SNU(2,201images) AUC Steroidsoutput 0.828(cid:1)0.012
+SNU(2,201images) AUC Antibioticsoutput 0.885(cid:1)0.006
+SNU(2,201images) AUC Antiviralsoutput 0.944(cid:1)0.006
+SNU(2,201images) AUC Antifungalsoutput 0.918(cid:1)0.006
+Diseaseclassification(multi-classclassification)
+SNU(2,201images) Top-1accuracy Target-classoutput 44.8(cid:1)1.2%
+Top-3accuracy Target-classoutput 69.0(cid:1)0.9%
+Top-5accuracy Target-classoutput 78.1(cid:1)0.3%
+AUC1 Target-classoutput 0.978(cid:1)0.001
+Edinburgh(1,300images) Top-1accuracy Target-classoutput 56.7(cid:1)1.6%
+Top-3accuracy Target-classoutput 83.6(cid:1)0.9%
+Top-5accuracy Target-classoutput 92.0(cid:1)1.1%
+AUC1 Target-classoutput 0.939(cid:1)0.003
+TheSNUdatasetconsistedof2,201imagesof134disordersandtheEdinburghdatasetconsistedof1,300imagesof10tumorousskindiseases.Asan
+analyticmetric,thefollowingparameterswereused:
+malignancyoutput¼asumofmodeloutputsforfivemalignanttumorousdisorders
+steroidsoutput¼asumofmodeloutputsfor59disordersrequiringasteroidstreatment
+antibioticsoutput¼asumofmodeloutputsfor21disordersrequiringanantibioticstreatment
+antiviralsoutput¼asumofmodeloutputsforfivedisordersrequiringanantiviralstreatment
+antifungalsoutput¼asumofmodeloutputsforeightdisordersrequiringanantifungalstreatment.
+Abbreviation:AUC,areaunderthecurve.
+1TheAUCsforeachdiseasewerecalculatedbyconvertingthemulti-classmodeloutputsintoabinaryclassification:onevsrestofthe173diseases.
+lichen amyloidosis (Figure 2f). For the same SNU dataset and a 89.5%specificity for melanoma detection,whichwas
+(2,201 images), the mean top-1 and 3 accuracies of four superiortotheperformanceofdermatologists.Tschandletal.
+doctors (two dermatologists and two dermatology residents) (2019b)showedthatthealgorithmhadanaccuracysimilarto
+were 49.9 (cid:1) 7.0% and 67.2 (cid:1) 5.4%, respectively 62 human experts for a combined evaluation of both der-
+(Supplementary Table S1). moscopic and close-up images of nonpigmented lesions .
+We also tested whether our algorithm could be used to Tschandl et al. (2019a) also showed that machine learning
+augment the diagnostic accuracy of the test participants in classifiers outperformed human experts in the diagnosis of
+the multi-class diagnosis task of 134 disorders by using the pigmented skin lesions of dermoscopy. Brinker et al. (2019)
+SNU dataset (2,201 images). The mean top-1 and 3 accu- reported the CNN trained with open-source dermoscopic
+racies of four doctors showed 7.0 (cid:1) 4.5% (P ¼ 0.045) and images performed on par with 145 dermatologists on a
+10.1 (cid:1) 2.5% (P ¼ 0.0020) improvements, respectively, with clinicalimageclassificationtask. Recently, Choetal.(2019)
+the reference of the top-1, 2, and 3 diagnoses predicted by showedthatCNNwasequivalenttothedermatologistswhen
+the algorithm (Supplementary Table S1). classifying malignancy with unified composition images of
+the lip.
+DISCUSSION For the CNN models to be practically useful, it is impor-
+Several studies have compared the performance of artificial tant to develop an algorithm with both specific binary task
+intelligence with those of dermatologists in terms of classi- and multi-classification capabilities. A binary classifier
+fying skin cancer and other skin lesions by using a digital alone,suchasonetrainedformelanomaversusnevi,could
+camera and dermoscopy images. Using the Edinburgh and leadtowrongconclusionsifinputsotherthanmelanomaor
+Stanford Hospital datasets for validation, Esteva et al. (2017) nevi, such as nail hematoma or melanonychia, are given.
+showedthataCNNcandiagnosecarcinomaandmelanoma Our model renders results for the multi-classification and
+withanAUCof0.96,whichwasonparwiththeperformance the binary task (malignancyor not) at the same time. In the
+of dermatologists. Haenssle et al. (2018) compared a CNN’s specificbinaryclassificationofmelanomaversusnevus,the
+diagnostic performance with 58 dermatologists by using performance of the model (AUC ¼ 0.971 (cid:1) 0.003; 76
+dermoscopicimagesofmelanomaandnevi,andshowedthat melanoma and 331 nevi of the Edinburgh dataset;
+most dermatologists were outperformed by the CNN. Supplementary Figure S1) was superior to that of derma-
+Fujisawa et al. (2019)trainedandvalidated a CNN byusing tologists. However, the model performance showed a rela-
+Tsukuba Hospital’s dataset and showed a 96.3% sensitivity tive decline in the 134 multi-class diagnosis, in which the
+www.jidonline.org 3
+a
+Malignancy Zoomed-in malignancy
+100 100
+90
+80
+TEST = SNU dataset 2201 or 240 images 80
+60 Analysis = Malignancy Output
+Al (240 images) 70
+Al (2201 images)
+Reader test (240 images)
+DER (n=21) 60
+Resident (n=26)
+Non-medical (n=23) Al-assisted DER 50
+Al-assisted Resident
+Al-assisted Non-medical
+40
+0 10 20 30 40 50 60
+Zoomed-in steroids
+100
+90
+80
+70
+60
+50
+40
+0 10 20 30 40 50 60
+Zoomed-in antibiotics
+100
+90
+80
+70
+60
+50
+40
+0 10 20 30 40 50 60
+number of classes was increased dramatically and the were limited to 14 (Rajpurkar et al., 2018) or less(De Fauw
+background of imagescontainedvarious structures, suchas et al., 2018; Esteva et al., 2017; Han et al., 2018a; Maron
+ones in Figure 2a. et al., 2019). In nine disease-groups classification, Esteva
+Although there have been a few efforts (De Fauw et al., et. al.(2017) demonstrated a 53.3 and 55.0% top-1 accu-
+2018; Esteva et al., 2017; Han et al., 2018a; Rajpurkar racyoftwodermatologists,whereastheiralgorithmshowed
+et al., 2018) in comparing the performance between CNN a 55.4% top-1 accuracy (Esteva et al., 2017). For clinical
+models and human experts in multi-classification medical imagesof10tumorousdiseases,Hanet.al.(2018a)showed
+diagnosis,thenumberofdiseaseclassesinmedicalresearch 57.3%and55.7%top-1accuraciesfortheirinternaldataset
+ytivitisneS
+40
+20
+0
+0 20 40 60 80 100
+1-Specificity
+b
+Steroids
+100
+80
+60 ytivitisneS
+TEST = SNU dataset
+2201 or 240 images
+Analysis = Steroids Output
+Al (240 images)
+40 Al (2201 images)
+Reader test (240 images)
+DER (n=21)
+20 Resident (n=26)
+Al-assisted DER
+Al-assisted Resident
+0
+0 20 40 60 80 100
+1-Specificity
+c
+Antibiotics
+100
+80
+60 ytivitisneS
+SS Han et al.
+Augmented IntelligenceDermatologyinClassifying134SkinDisorders
+Figure1. Performanceofthe
+algorithmandcomparisonwith
+humantestsformalignancy
+predictionamong134diseasesand
+fourtreatmentoptionstest.TheSNU
+dataset,whichconsistedof2,201
+imagesaccountingfor134diseases,
+wasusedforthepredictionof(a)
+malignancyandtreatmentselection
+testsfor(bee)fourprimary
+medications.Thealgorithmwas
+validatedusingboth2,201and240
+testimages,whereashumantestswere
+performedusingthelatter240images.
+Steroids,antibiotics,antivirals,and
+antifungalsoutputweredefinedasthe
+sumsofoutputsforthediseaseswhose
+primarytreatmentofchoicebelongs
+tooneofthefourtreatmentchoices
+(SupplementaryTable1;CategoryI).
+Theperformanceofthealgorithm,
+whichisrepresentedbyROCcurves,
+wastestedagainsttheresultsobtained
+from21dermatologistsand26
+dermatologyresidents.Inaddition,23
+non-medicalprofessionals
+participatedinthemalignancytest.
+Foreachtestimage,theywereaskedif
+thelesionwasmalignant,andwhich
+ofthefourmedicationstheywould
+usetotreatthelesionwith.Overall,
+theperformanceofthealgorithmwas
+similartothatofthedermatologic
+residentsbutslightlylowerthanthatof
+thedermatologists.Thedotsrepresent
+individualperformanceoftest
+participants,whereascrosses(þ)
+indicatetheaverageperformanceof
+them.Thezoomed-inROCcurvesfor
+eachgraphislocatedintheright
+column.AI,ouralgorithm;DER,
+dermatologists;ROC,receiver
+operatorcharacteristic.
+TEST = SNU dataset
+2201 or 240 images
+Analysis = Antibiotics Output
+40 Al (240 images)
+Al (2201 images)
+Reader test (240 images)
+20 DER (n=21)
+Resident (n=26)
+Al-assisted DER
+Al-assisted Resident
+0
+0 20 40 60 80 100
+1-Specificity
+4 JournalofInvestigativeDermatology(2020),Volume-
+d
+Antivirals Zoomed-in antivirals
+100 100
+90
+80
+80
+60
+70
+60
+50
+40
+and the Edinburgh dataset, respectively. Our study repre- preliminaryresultssuggestthatouralgorithmmaybeutilized
+sents an unprecedented challenge with the multi-class fortheselectionofappropriatetreatmentplans.
+classification task of 134 diseases and demonstrated the Basedonthealgorithmsusedinthisstudy,wehavecreated
+top-1and3accuracyof44.8%and69.0%forthealgorithm, awebsite, Model Dermatology (http://modelderm.com), that
+respectively, while the mean top-1 and 3 accuracy of four isaccessibleusingbothPCsandsmartphones.Itreportsboth
+doctorswas49.9%and67.2%,respectively(Supplementary topaccuraciesfortheclassificationamongthe174disorders
+Tables S2 and S3). These multi-classification results may and binary results for predicting malignancy (i.e., requiring
+have been underestimated because the 134 diseases biopsy or not) and four treatment options.
+includedtheclassesthatcouldhavebeenlumpedtogether.
+For example, tinea cruris and tinea corporis were catego- Augmented intelligencetoempower thediagnostic
+rized as separate classes, and pigmented basal cell carci- performanceofmedicalprofessionals
+noma was regarded as an incorrect answer for the case of Weshowedthattheperformanceofdermatologistsimproved
+melanoma. with the assistance of the algorithm for the predictions of
+One of the most interesting findings of our study was that malignancy and treatment options as well as multi-disease
+thealgorithmcanbeusedtoprovideanappropriatetreatment classification tasks. In the prediction of malignancy, the
+strategy.Someskinlesionsareverysimilarunderclinicaland mean sensitivity and specificity of 21 dermatologists signifi-
+visual evaluations, making it difficult to determine a proper cantly improved from 76.7 (cid:1) 8.1% to 84.9 (cid:1) 8.0%
+treatment plan. For example, because eczematous and in- (P < 0.0001) and from 93.9 (cid:1) 2.0% to 94.9 (cid:1) 1.9%
+fectiousconditionsaresimilarinappearance(Figure2aed),it (P ¼ 0.0062), respectively (Figure 1a). The F-score of the 21
+isverychallengingtodetermineappropriatemedicationsfor dermatologistsalsoexhibitedasignificantimprovementfrom
+thesediseases.Whenwetrainedthealgorithmtoperformthe 0.66(cid:1)0.06to0.75(cid:1)0.06(P<0.0001)withtheassistance
+classification into four categories (steroids, antibiotics, anti- of the algorithm. The same trends were observed in the
+fungals, and antivirals), the algorithm produced accurate treatment prediction tasks where the algorithm significantly
+treatment predictions with the mean AUC of 0.893 (cid:1) 0.006 improved the F1 score of 47 doctors (P < 0.0001;
+(Table 2). Although further validation is warranted, our Figure 1bee). In the multi-disease classification test using
+ytivitisneS TEST = SNU dataset
+2201 or 240 images
+Analysis = Antivirals Output
+40 Al (240 images)
+Al (2201 images)
+Reader test (240 images)
+DER (n=21)
+20
+Resident (n=26)
+Al-assisted DER
+Al-assisted Resident
+0
+0 20 40 60 80 100 0 10 20 30 40 50 60
+1-Specificity
+e
+Antifungals Zoomed-in antifungals
+100 100
+90
+80
+80
+60
+70
+60
+50
+40
+ytivitisneS
+SS Han et al.
+AugmentedIntelligenceDermatologyinClassifying134SkinDisorders
+Figure1. Continued
+TEST = SNU dataset
+2201 or 240 images
+Analysis = Antifungals Output
+40 Al (240 images)
+Al (2201 images)
+Reader test (240 images)
+DER (n=21)
+20
+Resident (n=26)
+Al-assisted DER
+Al-assisted Resident
+0
+0 20 40 60 80 100 0 10 20 30 40 50 60
+1-Specificity
+www.jidonline.org 5
+SS Han et al.
+Augmented IntelligenceDermatologyinClassifying134SkinDisorders
+Figure2. Representativeexamplesofmulti-classdiagnosisusingthealgorithm.Theresultsfromthealgorithmindicatedthattheconvolutionalneuralnetwork
+trainedinthisstudycanbeusedformulti-classdiagnosis(134disorders)ofvariouscutaneousdiseases.Theconfirmeddiagnosisofeachdisease,thetop-1,2,
+and3predictionsandthecorrespondingoutputsfromthemodelaredemonstratedasfollows:(a)contactdermatitis,prediction¼seborrheicdermatitis(0.39)/
+squamouscellcarcinoma(0.09)/lupuserythematosus(0.08);(b)impetigo,prediction¼impetigo(0.92)/herpessimplex(0.04)/wart(0.01);(c)staphylococcal
+scaldedskinsyndrome,prediction¼pustularpsoriasis(0.43)/staphylococcalscaldedskinsyndrome(0.35)/contactdermatitis(0.12);(d)eczemaherpeticum,
+prediction¼eczemaherpeticum(0.93)/nummulareczema(0.02)/impetigo(0.01);(e)prurigopigmentosa,prediction¼prurigopigmentosa(0.19)/psoriasis
+(0.18)/bullousdisease(0.17);(f)lichenamyloidosis,prediction¼lichenamyloidosis(0.96)/Rhielmelanosis(0.01)/prurigopigmentosa(0.01);(g)confluent
+reticulatedpapillomatosis,prediction¼confluentreticulatedpapillomatosis(0.72)/Beckernevus(0.13)/vitiligo(0.04);(h)erythemaabigne,prediction¼
+erythemaabigne(0.54)/hemangioma(0.20)/portwinestain(0.07).(a)Contactdermatitisand(b)impetigoarelesionswithasimilarappearancewithanoozing
+erythematouspatch.Althoughthealgorithmdidnotmatchtherightanswerin(a),eczemaoftheeariseasilyconfusedwithotherinfectiousconditions,andthe
+algorithmpreferentiallypredictedtheconditionasseborrheicdermatitis,whichisacommoneczematousconditionaroundear.Incontrast,thelesionsin(bed)
+representinfectiousconditionsthatarefrequentlymisdiagnosedascontactdermatitis;however,thealgorithmdiagnosedthemcorrectlyas(b)impetigoand(d)
+eczemaherpeticum.Inthecaseof(c),staphylococcalscaldedskinsyndromewasnotpredictedasatop-1,butatop-2choice;however,allthreepredictions
+wouldbeplausiblediagnosesbyaclinicianforthegivenimage.Theimagesshownin(eeh)representtheexamplesofuncommondisorders.Pruritusisachief
+complaintinboth(e)prurigopigmentosaand(f)lichenamyloidosis.Intheabsenceofanexaminationbydermatologists,however,onlycontactdermatitisis
+usuallyconsideredforpruritus.(g)Confluentreticulatedpapillomatosisand(h)erythemaabignerepresentotherraredisordersthatexhibitnonpruritic
+reticulatedpatches.Thealgorithmproducedacorrectdifferentialdiagnosisfortheseraredermatologicdisordersbasedonthecharacteristicfindingsfromthese
+rarelesions.
+2,201 images consisting of 134 disorders, the top-1 and 3 This study demonstrated that the algorithm plus dermatol-
+accuracies of four doctors improved significantly with the ogists produced the maximal effectiveness in predicting ma-
+assistance of the algorithm (P ¼ 0.045 for top-1 and P ¼ lignancy as well as deciding on the treatment options. This
+0.0020 for top-3). observation suggests that the deep learning algorithm devel-
+Althoughthealgorithmdemonstratedaperformancecom- oped in this study may represent an “Augmented Intelli-
+parable to that of dermatologic residents, the dermatologists gence,” thereby serving as an ancillary tool to enhance the
+alsobenefitedfromtheassistancefromthealgorithm,which diagnostic accuracy of clinicians. Similar efforts to enhance
+may be explained by the difference in diagnostic and error human performance with computer supports have been
+profilesbetweenthealgorithmandhumanexperts.Asshown demonstrated by using machine learning techniques in
+in Figure 3a and b, the results from the algorithm may have dermatology (Cho et al., 2019; Farberg et al., 2017) or deep
+assisted doctors in evaluating the ambiguous images resem- learning algorithms in pathology (Litjens et al., 2016; Wang
+blingeczema,whichledtoanimprovementinperformance. et al., 2016a). To maximize the efficiency of using the algo-
+In contrast, the errors by the algorithm owing to suboptimal rithm as an ancillary tool, further research is needed to
+imagequalities,suchasblurryimagesorshadowsinFigure2a, analyze the algorithm’s diagnostic patterns and identify the
+mayhavebeenavoidedbyclinicians.Inourpreviousstudyon features that the model uses to derive its outcome.
+onychomycosis, the CNN algorithm was more efficient in Lastly, we expect that our algorithm may be able to
+analyzing ambiguous, difficult-to-answer images than der- encouragethepublictovisitspecialistsforcancerouslesions
+matologists(Hanetal.,2018).Similarly,thedifferenceinthe that might have been otherwise neglected. Figure 3c repre-
+patternsoferrorsthatweremoresusceptibletothealgorithm sents the typical case of pigmented basal cell carcinoma,
+andhumanhasbeenreportedintheImageNetstudies(Dodge whichisoftenmisidentifiedasnevusand,thus,neglectedby
+andKaram,2017;Russakovskyetal.,2015). the public. A total of 73.9% (17 out of 23) non-medical
+6 JournalofInvestigativeDermatology(2020),Volume-
+SS Han et al.
+AugmentedIntelligenceDermatologyinClassifying134SkinDisorders
+Figure3. Augmentedintelligenceasanancillarytool:representativeexamplesofhowtheassistanceofalgorithmresultedincorrectorincorrectanswers.(a)
+Intraepithelialcarcinoma;model’malignancyoutput¼1.00;(b)intraepithelialcarcinoma;model’malignancyoutput¼0.91;(c)basalcellcarcinoma;model’
+malignancyoutput¼1.00;(d)insectbite;model’malignancyoutput¼0.77.Atotalof21dermatologists,26residents,and23non-medicalprofessionalswere
+testedwith240testimagesandtheirperformanceswerecomparedwiththeresultsofourconvolutionalneuralnetworkmodelformalignancyprediction.In
+addition,afterreviewingthepredictionofthemodelforthesametestset,theyweregivenanopportunitytomodifytheiranswers.Withassistancefromthe
+algorithm,46.8%(22outof47)and31.9%(15outof47)ofthedoctorsmodifiedtheiranswerstothecorrectdiagnosisfor(a)and(b),respectively.Atotalof
+73.9%(17outof23)ofthenon-professionalsbenefitedfromtheassistanceofthealgorithmfortheimagein(c).Figure(d)representsthecasewherethe
+assistancefromthealgorithmdirectedthetestparticipantstowardincorrectchoices.Inthisinstance,themodelarrivedatthediagnosisofmalignancyand
+27.7%(13outof47)ofdoctorsand65.2%(15outof23)ofnon-medicalprofessionalsfollowedthealgorithm’ssuggestionandmadeanincorrectprediction.
+Thisillustratesoneofthecurrentlimitationsofouralgorithmandsignifiesthatitneedstobeusedwithproperguidancefromclinicians.
+professionalsmodifiedtheiranswersfromnon-malignancyto other lesions on the patient, and the texture of the lesion
+malignancyforthisimagewithassistancefromthealgorithm. assessed by physical contact.
+Finally, although 174 disorderswere used for training and
+Limitations ofthisstudy 134 disorders for validation in this study, there still exist
+Although our study demonstrated the potential of the deep numerous skin diseases that were omitted. Our training
+learning models to be used for screening melanoma and dataset lacked the images of mild inflammatory lesions that
+other dermatologic disorders, our algorithm still presents were not of clinical interest. Given that the prevalence of
+several limitations, especially to be used as a standalone these conditions compared to skin cancer is high, frequent
+diagnostic tool. First, the outcome of a deep learning algo- false positives attributed to these lesions could potentially
+rithmcanbesignificantlyaffectedbythecompositionof the cause unnecessary visits to the physician’s office if our al-
+inputimages(Navarrete-Dechentetal.,2018).Skindisorders gorithm is used without a proper guidance from clinicians.
+havetheirowncharacteristiclocationsandcompositionsfor Thecollectionofbroaderspectrumoftrainingdatashouldbe
+optimal diagnosis, which are recognized by specialists, but pursued to overcome this issue. The coordinated efforts to
+not by non-medical professionals. For example, scabies is archive publicly available datasets such as ISIC (https://isic-
+characteristically found between finger webs or under archive.com), HAM10000, and Seven-Point Checklist
+breasts,andtheimagesofscabiesinourtrainingdataechoed Dermatology dataset are expected to contribute to the
+this characteristic because they were collected by dermatol- accumulation and sharing of dermatologic data (Codella
+ogists. However, the images submitted by nonexperts may et al., 2018; Giotis et al., 2015; Kawahara et al., 2018;
+containtheregionsotherthanthesetypicallocationsbecause Tschandl et al., 2018).
+whenscabiesdevelops,itisalsofoundonotherpartsofbody.
+Second, because our algorithm was trained and tested by CONCLUSIONS
+using high-quality images, its performance is generally sub- Wehavedemonstratedthatdeeplearningalgorithmstrained
+optimal if the input images are of low quality (Dodge and with the substantial numbers of both Asian and Caucasian
+Karam, 2017). Current artificial intelligence technologies populationscanbeusedformalignancydiagnosis,treatment
+may not be able to distinguish between blurry shadows on suggestion, and classification of 134 diseases with a perfor-
+normalskinandirregularbordersinamalignancyunlessitis mance that is comparable to that of the experts. In addition,
+trained by using data with such substandard qualities. As we demonstrated that the CNN model can serve as an
+shown in Figure 2a, where the squamous cell carcinoma ancillary tool that empowers the performance of medical
+output was increased owing to the presence of an ear in the professionals in diagnosing cutaneous skin diseases.
+image, the algorithm often produced a misdiagnosis as ma- For optimal results, the submission of an image with
+lignancy for images that contained ears and noses presum- adequate quality is required to minimize the possibility of
+ably because of a shading or curved shape on these potentialfalsepositives,especiallythosecausedbyshadedor
+anatomical structures. blurry images. Future studies are warranted to evaluate the
+Third,adiagnosismadewithonlyoneimagewiththemost utilityandperformanceofouralgorithmsinaclinicalsetting
+optimal composition may present inherent limitations (Topol, 2019).
+compared to diagnoses made in a clinical setting. In a real
+practice, a dermatological diagnosis is made based on the MATERIALS AND METHODS
+combination of multiple sources of information including A total of 224,181 clinical photographs were obtained with ap-
+past medical history, symptoms, appearance compared to provals of Asan Institutional Review Board (No. 2017-0087) and
+www.jidonline.org 7
+SS Han et al.
+Augmented IntelligenceDermatologyinClassifying134SkinDisorders
+Seoul National University Bundang Hospital Institutional Review incrementandtheoutputsthatweregreaterthanthethresholdwere
+Board (No. B-1802-451-005). In total, 220,680 images from four consideredaspositivepredictions.
+datasets (ASAN, Web, MED-NODE [Giotis et al., 2015], and For the binary classification of malignancy and treatment deter-
+Normal)wereusedfortrainingtheCNNs(Table1). mination,atotalof240images(40imagespereachofthe6group)
+Forthevalidationofour CNNmodels,twodatasets (Edinburgh randomly selected from the SNU dataset were used for the human
+andSNU)wereused.TheEdinburghandSNUdatasetswereused tests.Thetestimageswerecategorizedintooneofthefollowingsix
+to represent the dataset consisting of Caucasian and Asian pop- groups: malignant nodule, benign lesions requiring antifungals,
+ulations,respectively.Theformerconsistedof1,300imagesof10 those requiring antivirals, those requiring antibiotics, or those
+tumorous skin diseases and is commercially available (https:// requiringsteroidstreatment,andotherbenignlesions.Atotalof21
+licensing.eri.ed.ac.uk/i/software/dermofit-image-library.html), dermatologists, 26 residents, and 23 non-medical professionals
+whereas the latter consisted of clinical photographs obtained in participatedinthereadertests.Aftertheinitialtest,thetestpartici-
+the Department of Dermatology at Seoul National University pantswereinformedoftheresultsobtainedbyusingthealgorithm
+Bundang Hospital, Inje University Sanggye Paik Hospital, and andthetestwasrepeated.
+Hallym University Dongtan Hospital. Out of 174 skin diseases Forthe multi-disease classification of134 disorders, twoderma-
+used for training the model, 134 general skin disorders were tologists and two dermatology residents participated in the reader
+selected for validation from the SNU dataset. The excluded 40 test,inwhichtheywereaskedtoprovidetheirtop-1and3choices
+diseaseswereeitherasignorrarediseasessuchasulcer,purpura, among134diseasesforthe2,201imagesfromtheSNUdataset.The
+dilatedpore,andsenileglutealdermatosis.Atleast10imagesper listof134diseaseswasgiventothetestparticipants.Followingthe
+diseasewereobtainedintheSNUdataset.Atotalof10tumorous completionoftheentiretestset,thetestparticipantswereinformed
+disorders in the SNU dataset contained at least 30 biopsy- ofthealgorithms’top-1,2,and3diagnosesforeachtestimageand
+confirmed images per class. In total, 2,201 images with either theyrepeatedtheentiretestset.
+pathological confirmation (1,057 images) or clinical diagnosis A two-tailed paired t-test was performed to determine if there
+identified on medical charts (1,144 images) were included in the weresignificantdifferencesinthetestperformancebeforeandafter
+SNU dataset. the assistance from the algorithm (Supplementary Table S4). We
+WithBerkeleyVisionandLearningCenter(BVLC)Caffe(Jiaetal., used R version 3.5.3 (pROC package version 1.14) for calculating
+2014),wefine-tunedtheImageNetpretrainedmodelsofSENet(He the result oft-test and theAUCof receiver operating characteristic
+et al., 2015, Hu et al., 2018), SE-ResNet-50 (He et al., 2015, Hu curve.TheAUCsforeachdiseasewerecalculatedbyconvertingthe
+et al., 2018), andvisual geometry group (VGG)-19 (Simonyan and multi-classmodeloutputsintoabinaryclassification:oneversusrest
+Zisserman, 2014) (Supplementary Methods). The algorithm was ofthe173diseases.Incalculatingtopaccuracy,ifthetopprediction
+trained with 174 disease classes and produced 174 outputs for a of algorithm did not belong the 134 classes in the validation, then
+giventestimage. the prediction was counted as incorrect. To calculate mean accu-
+Toappropriatelyaddressaspecificbinaryclassificationinmulti- racy, a macro-average was computed independently for each class
+class outputmodels, wecreated theclusters ofoutputs thatshared andthentheaveragewastaken.
+the same traits by using the disease categorization based on the
+Dataavailabilitystatement
+classificationlistedinSupplementaryTableS1,CategoryI:
+Theimages usedtotrainand testtheneuralnetworksdescribed in
+(cid:3) malignancy output ¼ a sum of model outputs for five malignant the manuscript are subject to privacy regulations and cannot be
+made available in totality. We provided images in the validation
+tumorous disorders (melanoma, basal cell carcinoma, squamous
+datasets(SNU)asthumbnails.The240testimagesusedforthehu-
+cellcarcinoma,intraepithelialcarcinoma,andkeratoacanthoma)
+(cid:3) benignoutput¼asumofmodeloutputsfor40benigntumorous mantestareavailablefordownloadasfull-sizefiles(https://doi.org/1
+0.6084/m9.figshare.6454973). The test subset may be available
+disorders(seborrheickeratosis,wart,etc.)
+(cid:3) steroids output ¼ a sum of model outputs for 59 disorders upon a reasonable request and an approval from the originating
+universityhospitals.
+requiring a steroids treatment (atopic dermatitis, contact derma-
+titis,etc.) ORCIDs
+(cid:3) antibiotics output ¼ a sum of model outputs for 21 disorders SeungSeogHan:https://orcid.org/0000-0002-0500-3628
+IlwooPark:https://orcid.org/0000-0001-6022-8363
+requiringanantibioticstreatment(cellulitis,impetigo,etc.)
+WoohyungLim:https://orcid.org/0000-0003-0525-9065
+(cid:3) antivirals output ¼ a sum of model outputs for five disorders
+MyoungShinKim:https://orcid.org/0000-0002-0660-8098
+requiring an antivirals treatment (herpes simplex, herpes zoster, GyeongHunPark:https://orcid.org/0000-0001-8890-8678
+etc.) JeByeongChae:https://orcid.org/0000-0002-0968-3819
+(cid:3) antifungals output ¼ a sum of model outputs for eight disorders ChangHunHuh:https://orcid.org/0000-0003-3944-7777
+SungEunChang:https://orcid.org/0000-0003-4225-0414
+requiring an antifungals treatment (tinea pedis, tinea versicolor, Jung-ImNa:https://orcid.org/0000-0002-5717-2490
+etc.)
+CONFLICTOFINTEREST
+Oneofthestudyauthors(WoohyungLim)isemployedbyLGSciencepark.
+Theseoutputswereusedfortheanalysisofbinaryclassifications.
+However, the company did not have any role in the study design, data
+Forexample,weusedsteroidsoutputasatarget-classoutputforthe collection and analysis, the decision to publish, or the preparation of this
+binary classification of steroid prediction. In the multi-class classi- manuscript.
+fication,weusedtheindividualdiseaseclassoutputasatarget-class
+ACKNOWLEDGMENTS
+output.Inordertodrawareceiveroperatingcharacteristiccurve,a
+Theauthorswouldliketothanktheprofessorsandclinicianswhoparticipated
+thresholdforthetargetclasswasvariedfrom0to1byaverysmall inthetests.TheauthorsalsothankKimSohyunfortheassistancewiththe
+8 JournalofInvestigativeDermatology(2020),Volume-
+SS Han et al.
+AugmentedIntelligenceDermatologyinClassifying134SkinDisorders
+surveypartoftheinvestigation.TheauthorsaregratefultoParkJeoongSung diabetic retinopathy in retinal fundus photographs. JAMA 2016;316:
+forhiseffortstoimprovethestabilityofthewebDEMO. 2402e10.
+The co-first author (IlwooPark) wassupported bythe National Research
+HaenssleHA,FinkC,SchneiderbauerR,TobererF,BuhlT,BlumA,etal.Man
+FoundationofKoreagrantfundedbytheMinistryofScienceandICT(No.
+againstmachine:diagnosticperformanceofadeeplearningconvolutional
+2017R1C1B5018396) along with grants from the Chonnam National Uni-
+neuralnetworkfordermoscopicmelanomarecognitionincomparisonto
+versityHospitalBiomedicalResearchInstitute(CRI18019-1andCRI18094-2). 58dermatologists.AnnOncol2018;29:1836e42.
+ForanyadditionalcorrespondencequeriespleasecontactSungEunChang
+Han SS, Kim MS, Lim W, Park GH, Park I, Chang SE. Classification of the
+(csesnumd@gmail.com).
+clinicalimagesforbenignandmalignantcutaneoustumorsusingadeep
+AUTHORCONTRIBUTIONS
+learningalgorithm.JInvestDermatol2018a;138:1529e38.
+Conceptualization:SSH,IP,JN;DataCuration:MSK,GHP,JBC,CHH,SEC, HanSS,ParkGH,LimW,KimMS,NaJI,ParkI,etal.Deepneuralnetworks
+JN;FormalAnalysis:SSH,GHP;FundingAcquisition:IP;Investigation:SSH, showan equivalent and oftensuperior performance to dermatologistsin
+JBC,JN;Methodology:SSH,IP,SEC,JN;ProjectAdministration:SSH,SEC,JN; onychomycosis diagnosis: automatic construction of onychomycosis
+Resources:MSK,GHP,JBC,CHH,SEC,JN;Software:SSH,WL;Supervision: datasets by region-based convolutional deep neural network. PLoS one
+SSH, SEC, JN; Validation: SSH,IP, MSK,GHP, JBC, SEC, JN; Visualization: 2018b;13:e0191493.
+SSH, IP, WL, JBC; Writing - Original Draft Preparation: SSH, IP; Writing -
+HeK,ZhangX,RenS,SunJ.Delvingdeepintorectifiers:surpassinghuman-
+ReviewandEditing:SSH,IP,SEC,JN
+levelperformanceonimagenetclassification.In:ProceedingsoftheIEEE
+internationalconferenceoncomputervision2015. Piscataway,NJ:IEEE;
+SUPPLEMENTARYMATERIAL
+2015.p.1026e34.
+Supplementarymaterialislinkedtotheonlineversionofthepaperatwww. HuJ,ShenL,SunG.Squeeze-and-excitationnetworks.In:Proceedingsofthe
+jidonline.org,andathttps://doi.org/10.1016/j.jid.2020.01.019. IEEE conference on computer vision and pattern recognition 2018. Pis-
+cataway,NJ:IEEE;2018.p.7132e41.
+Jia Y, Shelhamer E, DonahueJ, KarayevS,Long J, GirshickR, et al. Caffe:
+REFERENCES
+convolutional architecture for fast feature embedding. In: MM’ 14: Pro-
+Brinker TJ, Hekler A, Enk AH, Klode J, Hauschild A, Berking C, et al. ceedingsofthe22ndACMinternationalconferenceonMultimedia.New
+A convolutional neural network trained with dermoscopic images per- York,NY:ACM;2014.p.675e8.
+formed on par with 145 dermatologists in a clinical melanoma image KawaharaJ,DaneshvarS,ArgenzianoG,HamarnehG.7-PointChecklistand
+classificationtask.EurJCancer2019;111:148e54.
+SkinLesionClassificationusingmulti-taskmulti-modalneuralnets.IEEEJ
+BrinkerTJ,HeklerA,UtikalJS,GrabeN,SchadendorfD,KlodeJ,etal.Skin BiomedHealthInform2019;23:538e46.
+cancerclassification using convolutional neural networks: systematic re- LitjensG,Sa´nchezCI,TimofeevaN,HermsenM,NagtegaalI,KovacsI,etal.
+view.JMedInternetRes2018;20:e11936. Deep learning as a tool for increased accuracy and efficiency of histo-
+Chilamkurthy S, Ghosh R, Tanamala S, Biviji M, Campeau NG, pathologicaldiagnosis.SciRep2016;6:26286.
+Venugopal VK, et al. Deep learning algorithms for detection of critical MaronRC,WeichenthalM,UtikalJS,HeklerA,BerkingC,HauschildA,etal.
+findings in head CT scans: a retrospective study. Lancet 2018;392: Systematicoutperformanceof112dermatologistsinmulticlassskincancer
+2388e96.
+image classification by convolutional neural networks. Eur J Cancer
+Cho SI, Sun S, Mun JH, Kim C, Kim SY, Cho S, et al. Dermatologist-level 2019;119:57e65.
+classificationofmalignantlipdiseasesusingadeepconvolutionalneural NarlaA,KuprelB,SarinK,NovoaR,KoJ.Automatedclassificationofskin
+network.BrJDermatol2019.https://doi.org/10.1111/bjd.18459(accessed lesions:frompixelstopractice.JInvestDermatol2018;138:2108e10.
+September1,2019).
+Navarrete-Dechent C, Dusza SW, Liopyris K, Marghoob AA, Halpern AC,
+CodellaNC,GutmanD,CelebiME,HelbaB,MarchettiMA,DuszaSW,etal. Marchetti MA. Automated dermatological diagnosis: hype or reality?
+Skinlesionanalysistowardmelanomadetection:Achallengeatthe2017 JInvestDermatol2018;138:2277e9.
+internationalsymposiumonbiomedicalimaging(ISBI),hostedbythein-
+RajpurkarP,IrvinJ,BallRL,ZhuK,YangB,MehtaH,etal.Deeplearningfor
+ternationalskinimagingcollaboration(ISIC).2018IEEE15thInternational
+chestradiographdiagnosis:aretrospectivecomparisonoftheCheXNeXt
+Symposium on Biomedical Imaging (ISBI 2018). Piscataway, NJ: IEEE;
+2018.p.168e72. algorithmtopracticingradiologists.PLoSMed2018;15:e1002686.
+RussakovskyO,DengJ,SuH,KrauseJ,SatheeshS,MaS,etal.Imagenetlarge
+De Fauw J, Ledsam JR, Romera-Paredes B, Nikolov S, Tomasev N,
+scalevisualrecognitionchallenge.IntJComputVis2015;115:211e52.
+Blackwell S, et al. Clinicallyapplicable deep learning for diagnosis and
+referralinretinaldisease.NatMed2018;24:1342e50. SimonyanK,ZissermanA.Verydeepconvolutionalnetworksforlarge-scale
+image recognition. Paper presented at: ICLR 2015. 7e9 May 2015; San
+Dodge S, Karam L. A study and comparison of human and deep learning
+Diego,CA.
+recognitionperformanceundervisualdistortions.201726thinternational
+conference on computer communication and networks (ICCCN). Pisct- TopolEJ.High-performancemedicine:theconvergenceofhumanandarti-
+away,NJ:IEEE;2017.p.1e7. ficialintelligence.NatMed2019;25:44e56.
+EstevaA,KuprelB,NovoaRA,KoJ,SwetterSM,BlauHM,etal.Dermatol- TschandlP,CodellaN,AkayBN,ArgenzianoG,BraunRP,CaboH,etal.
+ogist-levelclassificationofskincancerwithdeepneuralnetworks.Nature Comparisonoftheaccuracyofhumanreadersversusmachine-learning
+2017;542:115e8. algorithms for pigmented skin lesion classification: an open, web-
+based, international, diagnostic study. Lancet Oncol 2019a;20:
+Farberg AS, Winkelmann RR, TuckerN, White R, Rigel DS. The impact of
+938e47.
+quantitativedataprovidedbyamulti-spectraldigitalskinlesionanalysis
+device on dermatologists’decisions to biopsy pigmented lesions. J Clin TschandlP,RosendahlC,AkayBN,ArgenzianoG,BlumA,BraunRP,etal.
+AesthetDermatol2017;10:24e6. Expert-level diagnosis of nonpigmented skin cancer by combined con-
+volutionalneuralnetworks.JAMADermatol2019b;155:58e65.
+FujisawaY,OtomoY,OgataY,NakamuraY,FujitaR,IshitsukaY,etal.Deep
+learning-based,computer-aidedclassifierdevelopedwithasmalldatasetof TschandlP,RosendahlC,KittlerH.TheHAM10000dataset,alargecollection
+clinical images surpasses board-certified dermatologists in skin tumor ofmulti-sourcedermatoscopicimagesofcommonpigmentedskinlesions.
+diagnosis.BrJDermatol2019;180:373e81. SciData2018;5:180161.
+GiotisI,Molders N,LandS,BiehlM,JonkmanMF,PetkovN,etal.MED- WangD,KhoslaA,GargeyaR,IrshadH,BeckAH.Deeplearningforiden-
+NODE: a computer-assisted melanoma diagnosis system using non- tifyingmetastaticbreastcancer.arXivpreprint2016a;arXiv:1606.05718.
+dermoscopicimages.ExpertSystAppl2015;42:6578e85.
+Yu C, Yang S, Kim W, Jung J, Chung KY, Lee SW, et al. Acral melanoma
+GulshanV,PengL,CoramM,StumpeMC,WuD,NarayanaswamyA,etal. detection using a convolutional neural network for dermoscopy images.
+Developmentandvalidationofadeeplearningalgorithmfordetectionof PLoSone2018;13:e0193321.
+www.jidonline.org 9

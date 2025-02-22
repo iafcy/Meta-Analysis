@@ -1,0 +1,789 @@
+sensors
+Article
+Smartphone App with an Accelerometer Enhances
+Patients’ Physical Activity Following Elective
+Orthopedic Surgery: A Pilot Study
+HannekeC.vanDijk-Huisman1,2,* ,AnoukT.R.Weemaes1,2,TimA.E.J.Boymans3,
+AntoineF.Lenssen1,2andRobA.deBie2,4
+1 DepartmentofPhysicalTherapy,MaastrichtUniversityMedicalCenter,
+6229HXMaastricht,TheNetherlands;anouk.weemaes@mumc.nl(A.T.R.W.);af.lenssen@mumc.nl(A.F.L.)
+2 CAPHRISchoolforPublicHealthandPrimaryCare,MaastrichtUniversity,
+6200MDMaastricht,TheNetherlands;ra.debie@maastrichtuniversity.nl
+3 DepartmentofOrthopaedicSurgeryandTraumatology,MaastrichtUniversityMedicalCenter,
+6229HX,Maastricht,TheNetherlands;t.boymans@mumc.nl
+4 DepartmentofEpidemiology,FacultyofHealth,MedicineandLifeSciences,SchoolforPublicHealthand
+PrimaryCare,MaastrichtUniversity,6211LKMaastricht,TheNetherlands
+* Correspondence: hanneke.huisman@mumc.nl;Tel.:+31-(0)4-3387-7146
+(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1)
+(cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)
+Received: 15June2020;Accepted: 30July2020;Published: 2August2020
+Abstract: Lowphysicalactivity(PA)levelsarecommoninhospitalizedpatients. Digitalhealthtools
+couldbevaluableinpreventingthenegativeeffectsofinactivity. WethereforedevelopedHospital
+Fit; whichisasmartphoneapplicationwithanaccelerometer, designedforhospitalizedpatients.
+Itenablesobjectiveactivitymonitoringandprovidespatientswithinsightsintotheirrecoveryprogress
+and offers a tailored exercise program. The aim of this study was to investigate the potential of
+HospitalFittoenhancePAlevelsandfunctionalrecoveryfollowingorthopedicsurgery. PAwas
+measuredwithanaccelerometerpostoperativelyuntildischarge. Thecontrolgroupreceivedstandard
+physiotherapy,whiletheinterventiongroupusedHospitalFitinadditiontophysiotherapy. Thetime
+spentactiveandfunctionalrecovery(modifiedIowaLevelofAssistanceScale)onpostoperativeday
+one(POD1)weremeasured. Ninety-sevenpatientsundergoingtotalkneeorhiparthroplastywere
+recruited. HospitalFituse,correctedforage,resultedinpatientsstandingandwalkingonPOD1for
+anaverageincreaseof28.43min(95%confidenceinterval(CI):5.55–51.32). Theoddsofachieving
+functionalrecoveryonPOD1,correctedfortheAmericanSocietyofAnesthesiologistsclassification,
+were3.08timeshigher(95%CI:1.14–8.31)withHospitalFituse. Asmartphoneappcombinedwith
+anaccelerometerdemonstratesthepotentialtoenhancepatients’PAlevelsandfunctionalrecovery
+duringhospitalization.
+Keywords: activity monitoring; physical activity; functional recovery; hospitalization; mHealth;
+wearablesensors;arthroplasty;physiotherapy
+1. Introduction
+Electivejointreplacementisaneffectiveandsuccessfulinterventioninpatientssufferingfrom
+end-stageosteoarthritis[1–4]. Duetotherisingprevalenceofosteoarthritis,thenumberoftotalknee
+arthroplasty(TKA)andtotalhiparthroplasty(THA)proceduresperformedannuallyisincreasing
+steadily. TheAmericanJointReplacementRegistry(AJJR)showsthat139,582primaryTKAprocedures
+and93,122primaryTHAprocedureswereundertakenintheUnitedStatesofAmericain2018[5].
+TheperioperativecareprocessaroundTKAandTHAprocedureshasgreatlyimprovedinrecent
+years due to advances in surgical techniques and the introduction of clinical care pathways [6–8].
+Sensors2020,20,4317;doi:10.3390/s20154317 www.mdpi.com/journal/sensors
+Sensors2020,20,4317 2of18
+Clinicalcarepathwaysaredirectedatpreparingthepatientfordischargeassoonaspossibleafter
+surgery,withoutcompromisingoutcomes[3,8,9]. Postoperativemobilizationonthedayofsurgery
+withinapathway-controlledfast-trackprogramisassociatedwithareducedlengthofstay(LOS),
+enhancedfunctionalrecovery,reducedpain,andlowermortalityrates[8,10,11].
+Althoughthebeneficialeffectsofphysicalactivity(PA)duringhospitalizationarewelldocumented,
+patients continue to spend between 92% and 96% of their time lying or sitting [12–14]. Therefore,
+strategies aimed at increasing the amount of time spent standing and walking are needed [15].
+PostoperativephysiotherapyisaimedatenhancingPAlevelsandfunctionalrecoveryofactivities
+ofdailylivingwhichareessentialinordertofunctionindependentlyathome[9,16–18]. However,
+physiotherapistslackobjectiveinsightintotheamountoftimepatientsareactive. Inordertoadvise
+patientseffectivelyontheirPAbehavior,continuousPAmonitoringwithreal-timefeedbackshouldbe
+implementedinstandardcare.
+mHealthcouldprovideasolutiontothisissue[19]. mHealthhasbeendefinedbytheWHOas
+“medical and public health practice supported by mobile devices, such as smartphones, tablets or
+wirelesspatient-monitoringsensors”[19,20]. mHealthhasbeendevelopedformanydifferentpurposes.
+Ithasbeenappliedforthemanagementofbloodpressure,managementofglucoselevels,falldetection,
+mentalhealth,medicationmanagementandPAmonitoring[19,21]. PAcanbemonitoredbyconnecting
+externalwearabledevicessuchasaccelerometers,gyroscopesorpedometers,toasmartphoneortablet
+viaBluetooth[21,22]. Wearablesensorscanalsobeembeddedinasmartphoneorsmartwatch[21,23].
+TheseremotemeasurementtechnologiesenablecontinuousPAmonitoringandhavetheadvantage
+ofprovidingpatientsandhealthcareprovidersreal-timefeedback. Priorstudieshavedemonstrated
+thatsmartphoneapplicationscombinedwithanactivitytrackerareabletoincreasetheamountof
+PAoftheuser[24,25]. Dependingontheintendeduse,additionalfunctionalitiessuchaseducational
+material,exerciseprogramsorcapturingpatientreportedoutcomes(PROMs),couldalsobeaddedto
+mHealthtoolstoenhancethepossibilities.
+mHealth tools support the prevention and treatment of low levels of PA as well as stimulate
+functionalrecovery. Theyhavethepotentialtoincreasepatientawareness,supportpersonalizedcare,
+andstimulateself-management. Furthermore,theycanmotivatepatientsintheabsenceofhealthcare
+providersandmakethemmoreactiveandeffectivemanagersoftheirrecovery[24,26,27].
+Withintheorthopedicrehabilitationpathway,mHealthtoolsarebeingusedtomonitorPAin
+supportofoutpatientphysiotherapy[28–30]. TheuseofmHealthtomonitorPAhasalsobeenshown
+tobebeneficialtootherareasofresearch. mHealthtoolshavedemonstratedtheirabilitytostimulate
+thePAofpatientswithcoronaryheartdisease(CHD)[23,31],chronicobstructivepulmonarydisease
+(COPD)[26],typeIIdiabetes[26]andcanmotivatetheelderlytoundertakePAswhenimplementedin
+acarehome[19].
+Sofar,nomHealthtoolisavailablethatoffershospitalizedpatientsandtheirphysiotherapists
+essentialstrategiestoenhancetheirPAlevelsandsupporttheirrecoveryprocess. Mostaccelerometry-
+based activity monitors are validated in healthy adults and lack the sensitivity to measure slow
+gait[32,33]. Duetothefrequentuseofwalkingaidsaswellasslowandimpairedgait,thealgorithmof
+mostoftheavailableactivitymonitorsisnotvalidatedintermsofbeingusedinhospitalizedpatients.
+Therefore, the Department of Physiotherapy of Maastricht University Medical Center (MUMC+)
+and Maastricht Instruments B.V. developed Hospital Fit (HFITAPP0, Maastricht Instruments B.V.,
+the Netherlands). Hospital Fit is designed to be used in hospitalized patients and consists of a
+smartphoneapplicationconnectedtoanaccelerometer. Thealgorithmoftheaccelerometerhasbeen
+validatedtodifferentiatelyingandsittingfromstandingandwalkinginhospitalizedpatients[34–36].
+It provides patients and physiotherapists feedback on the number of minutes spent standing and
+walkingperday. Additionally,itprovidespatientsinsightintotheirownrecoveryprogress,anda
+tailoredexerciseprogramsupportedbyvideos. HospitalFithasbeenimplementedinthestandard
+physiotherapytreatmentofpatientsfollowingTKAandTHAinMaastrichtUniversityMedicalCenter
+sinceFebruary2019.
+Sensors2020,20,4317 3of18
+TheprimaryaimofthispilotstudywastogetafirstimpressionofwhetherintroducingHospital
+FitaspartofstandardphysiotherapytreatmentshasledtoachangeintheamountofPAofhospitalized
+patientswhohadundergoneelectiveTKAorTHA.ThesecondaryaimwastoexplorewhetherHospital
+Fithasledtoachangeinthetimeuntilfunctionalrecoveryisachievedinthispopulation.
+2. MaterialsandMethods
+2.1. StudyDesign
+Thissinglecenterpilotstudy,withanon-randomizedquasi-experimentaldesign,wasconducted
+atMaastrichtUniversityMedicalCenterinMaastricht,theNetherlands,betweenJanuary2017and
+May2019.
+2.2. StudyPopulation
+PatientsscheduledforanelectiveTKAorTHAattheorthopedicwardofMaastrichtUniversity
+Medical Center were invited to participate. Patients scheduled for surgery between January 2017
+and December 2018 were recruited for the control group. During this period, Hospital Fit was
+beingdeveloped. Duetothelimitednumberofaccelerometersavailable,onlyonepatientperweek
+was recruited. In December 2018, the development of Hospital Fit was completed. A one-month
+implementationphasefollowedinJanuary2019,duringwhichnopatientswereenrolled. Patients
+scheduled for surgery between February 2019 and May 2019 were recruited for the intervention
+group. Aftertheimplementationphase,sufficientaccelerometershadbecomeavailable,enablingthe
+recruitmentofconsecutivepatientsintheinterventiongroup. Nootherchangesweremadeinthe
+clinicalcarepathwayduringthestudyperiod.
+Patientsreceivedverbalandwritteninformationaboutthestudyatpreoperativephysiotherapy
+screenings,scheduledsixweeksbeforesurgery. Aresearchphysiotherapistcontactedthepatients
+againonthedayoftheirsurgery,andwritteninformedconsentwasobtainedbeforestudyinitiation.
+Theconfidentialprocessingofdataandanonymitywereguaranteed.
+Patientswereeligibleiftheymetthefollowinginclusioncriteria: receivingphysiotherapyafter
+elective TKA or THA, able to walk independently two weeks prior to surgery as scored on the
+functionalambulationcategories(FAC>3)[37],theywereexpectedtobedischargedtotheirown
+home,aged18yearsandolder,andhadasufficientunderstandingoftheDutchlanguage. Exclusion
+criteriawere: thepresenceofcontraindicationstowalkingorwearinganaccelerometerontheupper
+leg,admissiontotheintensivecareunit,impairedcognition(delirium/dementia)asreportedbythe
+attendingdoctor,alifeexpectancyoflessthanthreemonths,andpreviousparticipationinthisstudy.
+ThisstudywasperformedincompliancewiththeDeclarationofHelsinkiandwasapprovedbythe
+MedicalEthicsCommitteeoftheUniversityHospitalMaastrichtandMaastrichtUniversity(METC
+azM/UM),registrationnumber2017-0175.
+2.3. Procedure
+Patients were enrolled after signing informed consent. All patients followed a standardized
+clinical care pathway for TKA or THA. Preoperatively, paracetamol, gabapentin, naproxen and a
+gastricprotectorwereadministered. Surgerywasperformedunderspinalorgeneralanesthesiain
+combinationwithalocalinfiltrationanalgesia(ropivacaine,morphine-sulphate,adrenaline). InTKA
+procedures,amedialparapatellarapproachwasusedwithaposteriorstabilizedimplant. InTHA
+procedures, a posterior approach of the hip joint was used. Pain medication was continued until
+discharge—withtheadditionofoxycodone. Postoperativephysiotherapywasadministeredtoall
+participating patients, starting within four hours after surgery. The physiotherapy treatment was
+aimedatincreasingPAlevelsandenhancingfunctionalrecovery. Patientsreceivedphysiotherapy
+twicedaily(30minpersession)untilfunctionalrecoverywasachieved,asmeasuredwiththemodified
+IowaLevelofAssistanceScale(mILAS)[38]. Patientsinthecontrolgroupreceivedpostoperative
+Sensors2020,20,4317 4of18
+Sensors 2020, 20, x FOR PEER REVIEW 4 of 18
+physiotherapyandhadtheirPAlevelsmonitoredwithanaccelerometerwithoutreceivingfeedback.
+Preacteieivnitnsgin fetehdebinactekr. vPeanttiieonntsg irno uthper eincteeivrveedntthioens agmroeupph ryescieoitvheedr atphye tsraematem pehnyt,sibouthteHraopspyi ttarelaFtimtwenats,
+ubsuetd Hionsapditdailt iFoint .was used in addition.
+2.3.1. DeviceDescription
+2.3.1. Device Description
+The PA levels were assessed with the MOX activity monitor (MOX; Maastricht Instruments
+The PA levels were assessed with the MOX activity monitor (MOX; Maastricht Instruments B.V.,
+B.V.,theNetherlands(Figure1)). Thedevicecontainedatri-axialaccelerometersensor(ADXL362;
+the Netherlands (Figure 1)). The device contained a tri-axial accelerometer sensor (ADXL362; Analog
+AnalogDevices,Norwood,MA,USA)inasmallwaterproofhousing(35×35×10mm,11g). Raw
+Devices, Norwood, MA, USA) in a small waterproof housing (35 × 35 × 10 mm, 11 g). Raw acceleration
+accelerationdata(±8g)weremeasuredinthreeorthogonalsensoraxes(X,YandZ)ata25Hzsampling
+data (±8 g) were measured in three orthogonal sensor axes (X, Y and Z) at a 25 Hz sampling rate. The
+rate. Theaccelerometerwasfactorycalibratedagainstgravityforeachaxis. Therawacceleration
+accelerometer was factory calibrated against gravity for each axis. The raw acceleration data were
+data were converted to a PA classification using a previously described embedded algorithm [34].
+converted to a PA classification using a previously described embedded algorithm [34]. After sensor
+Aftersensornoisereduction,thedataweresegmentedintoone-secondlongwindowsusingafixed
+noise reduction, the data were segmented in to one-second long windows using a fixed non-
+non-overlappingslidingwindow. Basedontheamountofactivity,eachwindowwasclassifiedas
+overlapping sliding window. Based on the amount of activity, each window was classified as
+dynamicorstatic. Forthestaticwindows,thesensororientationwasassessed. Basedonacut-offvalue
+dynamic or static. For the static windows, the sensor orientation was assessed. Based on a cut-off
+of0.8gthestaticwindowswereclassifiedasstandingorsedentary. Eachminutetheclassifiedresults
+value of 0.8 g the static windows were classified as standing or sedentary. Each minute the classified
+weresenttotheHospitalFitsmartphoneapplicationviaaBluetoothprotocol.
+results were sent to the Hospital Fit smartphone application via a Bluetooth protocol.
+FFiigguurree 11.. TThhee MMOOXX aaccttiivviittyy mmoonniittoorr..
+2.3.2. HospitalFit
+2.3.2. Hospital Fit
+Hospital Fit consists of a smartphone-based app which is connected to the MOX Activity
+Hospital Fit consists of a smartphone-based app which is connected to the MOX Activity
+MonitorviaBluetooth. Itcontainsaseparateinterfaceforpatientsandphysiotherapists, enabling
+Monitor via Bluetooth. It contains a separate interface for patients and physiotherapists, enabling
+extensiveoptionsforphysiotherapists. Duringthefirsttreatment,thephysiotherapistappliedthe
+extensive options for physiotherapists. During the first treatment, the physiotherapist applied the
+accelerometerandinstalledtheapponthepatients’smartphone. Thephysiotherapistsubsequently
+accelerometer and installed the app on the patients’ smartphone. The physiotherapist subsequently
+initiatedaconnectionbetweentheaccelerometerandtheappbystartinganewmeasurementinthe
+initiated a connection between the accelerometer and the app by starting a new measurement in the
+physiotherapistinterface.
+physiotherapist interface.
+ThePAoverviewprovidespatientsandtheirphysiotherapistsreal-timefeedbackonthenumber
+The PA overview provides patients and their physiotherapists real-time feedback on the number
+of minutes spent standing and walking per day. An overview was provided per day (Figure 2A),
+of minutes spent standing and walking per day. An overview was provided per day (Figure 2A),
+withthepossibilitytolookbackatthePAlevelsofpreviousdays. Additionally,aweeklyoverview
+with the possibility to look back at the PA levels of previous days. Additionally, a weekly overview
+wasprovidedtoenablethemonitoringoftheprogressinPAlevelsovertime(Figure2B).
+was provided to enable the monitoring of the progress in PA levels over time (Figure 2B).
+SSeennssoorrss 22002200,, 2200,, 4x3 F1O7R PEER REVIEW 55 ooff 1188
+(A) (B)
+FFiigguurree 22.. OOvveerrvviieeww ooff tthhee ttoottaall nnuummbbeerr ooff mmiinnuutteess ssppeenntt ssttaannddiinngg aanndd wwaallkkiinngg ppeerr ddaayy ((AA)) aanndd ppeerr
+wweeeekk ((BB))..
+TThhee rreeccoovveerryy aasssseessssmmeenntt ggaavvee ppaattiieennttss tthhee ooppttiioonn ooff ggaaiinniinngg iinnssiigghhtt iinnttoo tthheeiirr oowwnn rreeccoovveerryy
+pprrooggrreessss.. TThhee eexxtteenntt ooff ffuunnccttiioonnaall rreeccoovveerryy ccaann bbee eevvaalluuaatteedd bbyy tthhee pphhyyssiiootthheerraappiisstt dduurriinngg eevveerryy
+ttrreeaattmmeenntt.. TThhe eaabbiliiltiyty oof fppaatiteienntsts ttoo ppeerrffoorrmm tthhee aaccttiivviittiieess ooff ddaaiillyy lliivviinngg wwaass ssccoorreedd oonn tthhee
+pphhyyssiiootthheerraappiisstt iinntteerrffaaccee bbaasseedd oonn tthhee mmIILLAASS ((FFiigguurree 33AA)).. TThhee mmIILLAASS aasssseesssseess tthhee aabbiilliittyy ooff ppaattiieennttss
+ttoo ppeerrffoorrmm sseevveerraall aaccttiivviittiieess ooff ddaaiillyy lliivviinngg ((ttrraannssffeerr ffrroomm tthhee ssuuppiinnee ppoossiittiioonn ttoo ssiittttiinngg aanndd vviiccee vveerrssaa,,
+ssiitt--ttoo--ssttaanndd,, wwaallkkiinngg,, aanndd ssttaaiirr cclliimmbbiinngg)) aanndd rraatteess tthhee aammoouunntt ooff aassssiissttaannccee aanndd ttyyppee ooff wwaallkkiinngg aaiidd
+nneeeeddeedd.. TThhee ddeeggrreeee oof fasassissitsatnancec eneneedeedde dtot opepreforfromrm eaechac thastka sskafsealyfe wlyaws sacsosrceodr (e0d–6(0 p–o6inptosi nsctosrsec opreer
+piteermit)e. mTh).e Tthoetatlo stacolrsecso rreasnrgaen gfreofmro m0 t0o to303, 0w,withit hzezreoro rreeflfleecctitningg iinnddeeppeennddeennccee ffoorr aallll iitteemmss.. SSttaaiirr
+cclliimmbbiinngg wwaass oonnllyy aasssseesssseedd iiff tthhee ppaattiieenntt nneeeeddeedd ttoo cclliimmbb ssttaaiirrss aatt hhoommee;; ootthheerrwwiissee tthhiiss iitteemm wwaass
+ssccoorreedd aass zzeerroo [[3388]].. BBeeccaauussee aacccceelleerroommeetteerrss aarree nnoott aabbllee ttoo mmeeaassuurree tthhee aammoouunntt ooff aassssiissttaannccee oorr tthhee
+ttyyppee ooff wwaallkkiinngg aaiidd nneeeeddeedd dduurriinngg PPAA,, ssccoorriinngg tthhee eexxtteenntt ooff ffuunnccttiioonnaall rreeccoovveerryy hhaadd ttoo bbee ppeerrffoorrmmeedd
+bbyy tthhee pphhyyssiiootthheerraappiisstt.. IIff nneecceessssaarryy,, tthhee eexxtteenntt ooff ffuunnccttiioonnaall rreeccoovveerryy ccoouulldd bbee aaddaapptteedd mmuullttiippllee ttiimmeess
+ppeerr ddaayy..
+TThhee mmIILLAASS--ssccoorree wwaass ttrraannssffoorrmmeedd iinnttoo aa ppeerrcceennttaaggee ssccoorree iinn tthhee aapppp,, wwiitthh 110000%% iinnddiiccaattiinngg
+ccoommpplleettee iinnddeeppeennddeennccyy.. TThhee ppeerrcceennttaaggee ssccoorreess wweerree pprroovviiddeedd ppeerr aaccttiivviittyy,, sshhoowwiinngg wwhhiicchh aaccttiivviittiieess
+nneeeedd iimmpprroovveemmeenntt iinn oorrddeerr ttoo rreeaacchh ffuunnccttiioonnaall rreeccoovveerryy.. TThhee ppeerrcceennttaaggee ssccoorreess aarree ssuuppppoorrtteedd bbyy aa
+ggrraapphh,, sshhoowwiinnggp prrooggrreessssi ninf ufunnctcitoinoanlarle rceocvoevreyryov oevretrim tiem(eF i(gFuigreur3eB )3.BM).o Mreodree tdaielteadiliendfo irnmfoartmioantioonnt ohne
+athmeo aumnotuofnat sosfi satsasniscteanneceed neededisepdr iosv pidroevdidpeedr apcetriv aictyti,vsiutyp,p sourptepdobrtyeda bgrya ap hgrsahpohw sihnogwthinegp trhoeg rpersosgorveessr
+toivmeer ptiemraec tpiverit yac(tFiivgiutyre (3FCig)u.Treh e3Cph).y Tsihoeth perhaypsiisotthinetrearpfaicste einntaebrlfeasceth eeneaxbtleenst tohfef uenxctteinotn aolf refuconvcteiroyntaol
+breecsocvoerreyd taos bwee lslcaosrepdr oavsi dwinegll aans opvreorvviideiwn.g Tahne opvaetirevnietwin.t eTrhfaec epaotnielyntp irnotveirdfaecsea nonolvye rpvrioevwidoefs thane
+eoxvteernvtieowff uofn cthtieo nexatlernetc oovf efuryn.ctional recovery.
+SSeennssoorrss 22002200,, 2200,, 4x3 F1O7R PEER REVIEW 66 ooff 1188
+(A) (B)
+(C)
+FFiigguurree 33.. RReeccoovveerryy aasssseessssmmeenntt wwiitthh tthhee ooppttiioonn ooff ssccoorriinngg tthhee eexxtteenntt ooff ffuunnccttiioonnaall rreeccoovveerryy bbaasseedd oonn
+tthhee mmooddiififieedd IIoowwaa LLeevveell ooff AAssssiissttaannccee SSccaallee ((AA));; aann oovveerrvviieeww ooff tthhee eexxtteenntt ooff ffuunnccttiioonnaall rreeccoovveerryy ((BB));;
+tthhee aammoouunntt ooff aassssiissttaannccee nneeeeddeedd aanndd pprrooggrreessss oovveerr ttiimmee ppeerr aaccttiivviittyy ((CC))..
+FFuurrtthheerrmmoorree,,t htheep hpyhsyiostiohtehraerpaisptiisnt teinrftaecrfeaccoen tcaoinntsatihnes otphteio onpotfiocrne aotfin cgraeaptaintige nat- sppaetcieifinct-esxpeercciifsiec
+pexroegrcriasme psruopgproamrte dsubpypovridteedo sb.yH voidspeiotsa.l HFiotscpointatal inFist acodnattaaibnass ea odfa2ta5bvaisdee oosf a2i5m veiddeaotse nahimanecdi nagt
+feunnhcatniocninagl rfuecnocvtieornya,lu rpepcoevrearnyd, ulpopweerr alnedg lsotwreenrg tlehg, astnrdenpghthy,s iacnadl fipthnyessisca(lF fiigtuneress4 ()F.igTuhree 4v)i.d Tehose
+svuidpepoosr tsiunpgpfuorntcintigo nfualnrcetcioonvaelr yrewcoevreerdye wsigenree ddeessipgenceidal leyspfoercihaollsyp fitoarl ihzoesdppitaatliieznetds panatdiesnhtosw anpda tsihenowts
+hpoawtientots thraonwsf etor tfrraonmsfethr efrsoump itnhee psouspiitnioen ptoosistiitotnin tgo asnitdtinvgic aenvde rvsiac,e svite-rtsoa-,s tsaint-dto,-wstaanlkd,, awnadlkc,l iamnbd
+sctlaimirsb wstiatihrsd wiff iethre dnitffteyrpeenst otyfpwesa lokfi nwgaalkidinsg. Taihdes.v Tidheeo vsidsueposp osurtpepdotrhteedp thhyes piohtyhseiroatphyertarpeayt mtreeanttmaenndt
+wanedre waeimre eadimaetds taimt sutilmatuinlagtisneglf s-melfa-nmaagneamgeenmt.enAt. fAtefrteera ecahchtr teraetamtmenetn,t,t htheep phhyyssiiootthheerraappiisstt sseelleecctteedd
+aapppprroopprriiaattee vviiddeeooss,, tthheerreebbyy ccrreeaattiinngg aa ppeerrssoonnaalliizzeedd eexxeerrcciissee pprrooggrraamm.. IIff pprreeffeerrrreedd,, aa nnoottee ccoonnttaaiinniinngg
+ppeerrssoonnaalliizzeedd iinnffoorrmmaattiioonn oonn tthhee nnuummbbeerr oof frereppeetittiitoionns soro rinitnetnesnistyit yofo tfhteh eexeexrecirsceis ceocuoldu lbdeb aedaddedde ads
+awsewll.e lTl.heT hpehpyshiyosthioetrhaepriaspt icstoucoldu laddaadpat ptthteh eexeexrecricsies epprorgorgarmam aas soofftteenn aass nneecceessssaarryy.. TThhee ppaattiieenntt
+iinntteerrffaaccee eennaabblleedd tthhee ppaattiieenntt ttoo vviieeww tthhee vviiddeeooss aass oofftteenn aass tthheeyy pprreeffeerrrreedd.. DDuurriinngg eeaacchh ttrreeaattmmeenntt
+sseessssiioonn,, tthheep phhyyssioioththeerarappisitsta nanddp aptaietinetnetv eavlualauteadtetdh ethaem aomuonutnoft PoAf ,PeAx,t eenxtteonftf uonf cftuionncatilorneaclo vreecroyvaenrdy
+tahnede txheer ceixseerpcrisoeg prarmog.ram.
+Sensors 2020, 20, x FOR PEER REVIEW 7 of 18
+Sensors2020,20,4317 7of18
+Sensors 2020, 20, x FOR PEER REVIEW 7 of 18
+Figure 4. Exercise videos.
+Figure4. Exercisevideos.
+2.4. Outcome Measures Figure 4. Exercise videos.
+2.4. OutcomeMeasures
+22..44..1 O. Puthcyosmicea Ml Aeacstuivreitsy
+2.4.1. PhysicalActivity
+The primary outcome measure was the time spent physically active (total number of minutes
+2.4.1. Physical Activity
+standTinhge parnidm awryalkoiuntgc)o mpeerm deaays.u Trehew taismteh esptiemnte sstpaenndtinpgh yasnicda lwlyaalkcitnivge w(toasta clonnusmidbeererdo fthmei nmuotesst
+simtapnodTrithnaegn tpa roniudmtcaworyaml koei unstigcno)cmep eehr omdspeaaiyts.aulirTzehe wde atpisma tteiheens pttsiem nspet essntpaden nldat irnpgghey aasnmicdaoluwlyna talskc otinifv geti wm(toaest alycl ionnnugsm iadnbeedrre sdoitftt ihmnegin.m uTothesest
+iMsmtaOpnoXdr iatnacgnti tvaointuydt c mwomoanlekitsioninrg ch)e aphs eobrse pedintaa yvl.ia zlTeiddhaept eatditmi etnoe tdssipsfpfeenernte dnsttlaiaanrtgdee ilnyagmin oagnu adnnt dsw osaiftlttkiiminngeg f lrywoimnasg sactnaonnddssiiidnttegirn aegdn.d Tt hwheea MlmkiOonsXgt
+aiinmc thpivooisrtptyaitnmatl oioznueidttco oprmahtaeies nsbitnsec.e eInt hhvoaasslpi adi tahatilegidzhe tvdoa pldiadiff tiiteeyrn ettnos teisasptteiemnldya itlnea gtrhgaeen tdaimmseiot tusipnnetgsn ftor oof nmt itmhsteea anlycdtiinivngigt iaeansnd da nswdit tapilnokgsin.t ugTrheines
+hiMno Osap Xciot aancltitrziovelidlteypd ma ltaoiebnnoittrsoa.rtI ohtrahysa sbseeatetihnni vggah alnivddaal itidendi ft yrteote od-lieifvsfetiinrmegn acttoieanttdhe ieltyitoiinmngse a[s3np5de,3 ns6itt]to.i nngth feroamct isvtaitniedsinangd anpdo swtuarleksining
+ainc hoonDstrpuoirtllaienldigz elatdhb epo rafatiirteosntr yttsr.se eIatt tthminaegs naat nh sdigesihns ivofarneli,e d-tlihitvyei tnaogc eccseotlinemrdoaimttieoe tntheser[ t3wi5m,a3es6 s]a.ptetancth oend thtoe athctei vuitpiepse arn lde gp owstiuthr eas
+hiny ap ocDaolnuletrrriongleglnetdihc lepaabfitorcrshat t(ottrerenya tcsmeetnettininmtg esaetnesrdssi o ipnnr ,forxtehieme-laiavlc itcnoeg lt ehcroeo npmdaeittteieollrna,ws o[a3ns5 t,ha3te6t ]an. cohne-dopteorathteed ulepgp)e. rThleeg powsiitthiona
+hofy tphoeDa alulcercriegnlegen rtoichmep eafttiecrrsh ti s(tt verenisauctmeanleitznimetd es tienesr sFsioipgnru,o rxtehi m5e. aalctcoeltehreopmaetteellra ,woans thatetancohne-do pteor attheed ulepgp).erT hleegp owsiitthio na
+ohfytphoeaallcecregleenroicm peattecrhi s(tveins ucaenlitziemdeitnerFsi gpurorexi5m.al to the patella, on the non-operated leg). The position
+of the accelerometer is visualized in Figure 5.
+(A) (B)
+FFiigguurree 55.. LLaatteerraall vviieeww ((AA)) aanndd ffrroonnttaall vviieeww ((BB)) ooff tthhee ppllaacceemmeenntt ooff tthhee MMOOXX aaccttiivviittyy mmoonniittoorr wwiitthh tthhee
+(A) (B)
+ppaattiieenntt iinn aa sseeaatteeddp poosistiitoionn..A Arrrorowwssi nidndiciactaeteth tehelo lcoactaiotnioonf othf ethhey hpyopalolearllgeerngiecnpica tpchatachnd ansedn ssoenrsoonr tohne
+utFhipegp uuerprepl 5eeg.r L, lwaetghe,r iwcahlh viisiceh1w 0i s(c A1m0) pacmnrod xp firrmooaxnlitmatola vtlh iteeow pt h(aBete )pl olaaft. ethllea .p lacement of the MOX activity monitor with the
+patient in a seated position. Arrows indicate the location of the hypoallergenic patch and sensor on
+PPthAAe wuwpapasesmr lmoengo,i tnwoirthoeicdrhe2 di4s h1204p cemhr dppareoyr.x iDmdaaayyl st. ow Dthiatehy ps≥ a 2twe0lilhath.o f≥w20ea rht imofe wweearer ctoimnseid wereerdev acloindsmideearseudr evmaelindt
+dmaeyassaunredmweenrte idnaclyusd eadndin twheeraen ailnycslius.dAedft eirnt htehlea statnreaalytmsise.n tAseftsesri onth,eth elaasctc etlreeraotmmeetnetr wseasssrieomn,o vthede
+aanccdeltPehrAeo rmawweatestr r imw-aoaxsnia irtleoamrcecodev lee2dr4o amhne dtpe terhrde adrtaaayw(.F tiDrgiau-ayrxesi a6wl) awitchec ree≥le2ur0op mlho eatodefer d wdtaeotaaar (cFtoiimmguepr uewt 6eer)r. we ecroen usipdleoraedde dv atoli da
+cmoemapsuurteemr. ent days and were included in the analysis. After the last treatment session, the
+accelerometer was removed and the raw tri-axial accelerometer data (Figure 6) were uploaded to a
+computer.
+Sensors2020,20,4317 8of18
+SSeennssoorrss 22002200,, 2200,, xx FFOORR PPEEEERR RREEVVIIEEWW 88 ooff 1188
+FFFiiiggguuurrreee 666... EEExxxaaammmpppllleee ooofff ttthhheee rrraaawww tttrrriii---aaaxxxiiiaaalll aaacccccceeellleeerrrooommmeeettteeerrr dddaaatttaaa ooofff ooonnneee sssuuubbbjjjeeecccttt fffooorrr ooonnneee mmmeeeaaasssuuurrreeemmmeeennnttt dddaaayyy...
+OOOnnneee mmmeeeaaasssuuurrreeemmmeeennnttt dddaaayyy (((222444 hhh))) iiisss rrreeeppprrreeessseeennnttteeeddd ooonnn ttthhheee xxx---aaaxxxiiisss... GGG---fffooorrrccceeesss pppeeerrr ssseeennnsssooorrr aaaxxxeeesss (((XXX,,, YYY aaannnddd ZZZ))) aaarrreee
+rrreeeppprrreeessseeennnttteeeddd ooonnn ttthhheee yyy---aaaxxxiiisss...
+MMMAAATTTLLLAAABBB (((vvveeerrrsssiiiooonnn 999..55.5 ((RR(R2202 010 181 8b8 b)b ) N) NNaattaiicctki kc,, k MM, aM assssaaasccshhauc uhsseu ettsttess:t : tTTsh: heeT MMheaatthM hWWatoohrrWkksso IIrnnkccs..:: I NNncaa.tt:iicckN k,, a MMticAAk,,, UUMSSAA A;, ;
+U2200S11A88); ) 2ww0a1 as8 s )uuwsseeadds uttoos eccdaalltccouucllaaattleec u ttlhhaeet e ttoothttaaell tno nut uammlnbbueerrm oobffe mr moiinf nuumttei enss u sstppees ennsttp se sttnaatnnsddtia innnggd iaannngdda wwndaallwkkiiannlggk ipn peg err p ddeaaryyd.. aAAy.
+Asscchhsceehmmeam attiiacct ioocvvoeevrrve vriiev ewwie wooff o tthf het eh ddeaadttaa a t pparrpoorccoeecssessis innsgi gn ig iss issshhsoohwwonw n in inni Fn FiigF gui ugrrueer 77e.. 7 .
+FFFiiiggguuurrreee 777... DDDaaatttaaa ppprrroooccceeessssssiiinnnggg———aaa sssccchhheeemmmaaatttiiiccc ooovvveeerrrvvviiieeewww ooofff ttthhheee ppphhhyyysssiiicccaaalll aaaccctttiiivvviiitttyyy ccclllaaassssssiiiffifiicccaaatttiiiooonnn aaalllgggooorrriiittthhhmmm fffooorrr
+ttthhheee aaacccccceeellleeerrrooommmeeettteeerrr wwwooorrrnnn ooonnn ttthhheee uuuppppppeeerrr llleeeggg lllooocccaaatttiiiooonnn...
+2.4.2. FunctionalRecovery
+22..44..22.. FFuunnccttiioonnaall RReeccoovveerryy
+Thesecondaryoutcomemeasurewastheachievementoffunctionalrecoveryonpostoperativeday
+TThhee sseeccoonnddaarryy oouuttccoommee mmeeaassuurree wwaass tthhee aacchhiieevveemmeenntt ooff ffuunnccttiioonnaall rreeccoovveerryy oonn ppoossttooppeerraattiivvee
+one(POD1). Functionalrecoverywasassessedbythephysiotherapistduringeachtreatmentsession
+ddaayy oonnee ((PPOODD11)).. FFuunnccttiioonnaall rreeccoovveerryy wwaass aasssseesssseedd bbyy tthhee pphhyyssiiootthheerraappiisstt dduurriinngg eeaacchh ttrreeaattmmeenntt
+usingthemILASandwasreportedintheelectronichealthrecord. Intheinterventiongroup,itwasalso
+sseessssiioonn uussiinngg tthhee mmIILLAASS aanndd wwaass rreeppoorrtteedd iinn tthhee eelleeccttrroonniicc hheeaalltthh rreeccoorrdd.. IInn tthhee iinntteerrvveennttiioonn ggrroouupp,,
+reportedintheapp. TheachievementoffunctionalrecoveryonPOD1wasdefinedashavingreacheda
+iitt wwaass aallssoo rreeppoorrtteedd iinn tthhee aapppp.. TThhee aacchhiieevveemmeenntt ooff ffuunnccttiioonnaall rreeccoovveerryy oonn PPOODD11 wwaass ddeeffiinneedd aass
+totalmILAS-scoreofzeroonorbeforePOD1,usingadichotomizedoutcome(0=mILAS=0>POD1;
+hhaavviinngg rreeaacchheedd aa ttoottaall mmIILLAASS--ssccoorree ooff zzeerroo oonn oorr bbeeffoorree PPOODD11,, uussiinngg aa ddiicchhoottoommiizzeedd oouuttccoommee ((00 ==
+1=mILAS=0≤POD1). ThemILASshowsahighreliability,validityandresponsivenesswhenused
+mmIILLAASS == 00 >> PPOODD11;; 11 == mmIILLAASS == 00 ≤≤ PPOODD11)).. TThhee mmIILLAASS sshhoowwss aa hhiigghh rreelliiaabbiilliittyy,, vvaalliiddiittyy aanndd
+tomeasurefunctionalrecoveryintheacutephaseafterTKAorTHA[38].
+rreessppoonnssiivveenneessss wwhheenn uusseedd ttoo mmeeaassuurree ffuunnccttiioonnaall rreeccoovveerryy iinn tthhee aaccuuttee pphhaassee aafftteerr TTKKAA oorr TTHHAA [[3388]]..
+TThhee iinnddeeppeennddeenntt vvaarriiaabblleess mmeeaassuurreedd wweerree:: HHoossppiittaall FFiitt uussee ((ccoonnttrrooll vveerrssuuss tthhee iinntteerrvveennttiioonn
+ggrroouupp)),, aaggee,, sseexx,, bbooddyy mmaassss iinnddeexx ((BBMMII)),, ttyyppee ooff ssuurrggeerryy ((TTKKAA oorr TTHHAA)),, aanndd ccoommoorrbbiiddiittiieess aasssseesssseedd
+Sensors2020,20,4317 9of18
+The independent variables measured were: Hospital Fit use (control versus the intervention
+group),age,sex,bodymassindex(BMI),typeofsurgery(TKAorTHA),andcomorbiditiesassessedby
+theAmericanSocietyofAnesthesiologists(ASA)classification(ASA-class≤2versusASA-class=3;
+a higher score indicates being less fit for surgery). The medical and demographic data measured
+were the type of walking aid used and LOS, with the day of surgery being defined as day one.
+Allmeasurementswereextractedfromtheelectronichealthrecord.
+2.5. SampleSizeCalculation
+Basedonasignificancelevelof0.05,apowerof0.80,aneffectsizeof0.20,andfivedeterminants,
+asamplesizeofn=75wasneeded. Duetoalackofrepresentabledataavailabletodeterminetheeffect
+size,itwasdeterminedbasedonCohen’sruleofthumb,indicatingamediumtolargeeffectsize[39].
+Accountingfora20%drop-outrate,weaimedtoenrolln=94patientsinthisstudy. Theratiobetween
+patientsincludedinthecontrolandinterventiongroupwassetat2:1,respectively. Thedataanalysis
+wasperformedaccordingtotheintention-to-treatprinciple. Missingvalueswerenotsubstitutedand
+drop-outswerenotreplaced.
+2.6. DataAnalysis
+Descriptivestatisticsarepresentedasmeans,andstandarddeviations(SD)or95%confidence
+intervals(CI)forcontinuousvariables. Themedianandinterquartileranges(IQR)wereusedtopresent
+not normally distributed data. The frequencies and percentages were used to present categorical
+variables. Amultiplelinearregressionanalysiswasperformedtodeterminetheassociationbetweenthe
+timespentphysicallyactiveperdayandHospitalFituse,correctedforpotentialconfoundingfactors
+(age,sex,BMI,ASA-class,andtypeofsurgery). Aunivariateregressionanalysiswasperformedto
+determinetheassociationbetweenthetimespentphysicallyactiveperdayandHospitalFituse. Next,
+potentialconfoundingvariableswereadded(entermethod)toexploretheassociationbetweenHospital
+Fituseandthetimespentphysicallyactiveperday,correctedforconfoundingvariables. Variablesthat
+resultedina≥10%changeintheregressioncoefficientofthemaindeterminant(HospitalFituse)were
+eligibleforinclusioninthemodel. Thevariablecontributingthemostwasincludedinthemultiple
+regression model first, followed by the next variable leading to the highest percentage (≥10%) of
+changeinthemainregressioncoefficient. Thisprocesswasrepeateduntiltherewerenomorepotential
+confounding factors, resulting in the final model [40]. A multiple logistic regression analysis was
+performedadditionally,todeterminetheassociationbetweentheachievementoffunctionalrecovery
+onPOD1andHospitalFituse,correctedforpotentialconfoundingfactors. Thesameprocedurewas
+performed as in the linear regression analysis and the same potential confounding variables were
+explored. Assumptionswerecheckedforbothregressionanalysesbyresidualplotsandstatistics.
+Forallstatisticalanalyses,thelevelofsignificancewassetatp<0.05. Allstatisticalanalyseswere
+performedusingSPSS(version23.0.0.2;IBMCorporationArmonk,NY,USA).
+3. Results
+In total, 97 patients were willing and able to participate. The baseline characteristics of both
+groupsarelistedinTable1. Ofthesepatients, nine(9.3%)wereexcludedbecauseofmissingdata
+(no valid measurement day of ≥20 h of wear time due to a delayed postoperative fixation of the
+accelerometer(n=5)ordischargeonPOD1(n=1)),andaccelerometermalfunctioning(n=3).
+Sensors2020,20,4317 10of18
+Table1. Characteristicsofstudyparticipants.
+ControlGroup(n=64) InterventionGroup(n=33)
+Age,years(median,IQR) 66.60(10.62) 65.10(13.72)
+Sex(n,%)
+Female 24(38) 18(55)
+Male 40(63) 15(45)
+BMI,kg/m2(median,IQR) 27.73(4.72) 27.47(4.70)
+Typeofsurgery(n,%):
+Totalkneearthroplasty 49(77) 15(45)
+Totalhiparthroplasty 15(23) 18(55)
+ASA-class(n,%):
+ASA1–2 53(83) 26(79)
+ASA3 11(17) 7(21)
+Walkingaid(n,%):
+Twocrutches 53(83) 31(94)
+Onecrutch 1(2) -
+Walkingframe 5(8) 1(3)
+Walker 5(8) 1(3)
+LOS,days(median,IQR) 3.00(1) 3.00(0)
+IQR=interquartilerange,BMI=bodymassindex,ASA=AmericanSocietyofAnesthesiologists,LOS=lengthof
+stayinhospital,withthedayofsurgerybeingdefinedasdayone.
+Thisleft88cases(90.7%)foranalysis,61(69%)inthecontrolgroupand27(31%)intheintervention
+group. Inthecontrolgroup,themedianage(interquartilerange(IQR))was67.19(11.35)yearsand46
+patients(72%)hadundergoneTKA.Thecontrolgroupconsistedof23women(38%)and38men(62%).
+FiftypatientshadanASA-classof1to2(82%)and11patients(18%)hadanASA-classof3. Themedian
+(IQR)LOSwas3.00(1)days. Intheinterventiongroup,themedianage(IQR)was63.73(16.62)years
+and14patients(52%)hadundergoneTKA.Theinterventiongroupconsistedof16women(59%)and
+11men(41%). NineteenpatientshadanASA-classof1to2(70%)andeightpatients(30%)hadan
+ASA-classof3. Themedian(IQR)LOSwas3.00(0)days. Themissingvalueswerenegligible;data
+ontheachievementoffunctionalrecoveryonPOD1(n=4)weremissing. Differencesinthebaseline
+characteristicswereaccountedforintheregressionanalyses.
+Amedian(IQR)numberof1.00(0)validmeasurementdays(≥20hweartime)wascollected.
+PA data for 84 patients (95%) was available on POD1 (n = 61 control group, n = 23 intervention
+group). Onpostoperativedaytwo(POD2),themajorityofpatientsweredischarged(n=61,69%),
+anddataforonly23patients(26%)wereavailable(n=17controlgroup,n=6interventiongroup).
+Frompostoperativedaythreeuntildayseven,dataofthevalidmeasurementdayswereavailablefor
+justonepatient(interventiongroup). Duetothelargereductioninvalidmeasurementdaysfrom
+POD2onwards,dataofthesedayswerenotincludedintheanalysis.
+TheresultsoftheunivariatelinearregressionanalysisareshowninTable2. Theresultsshowthat
+HospitalFituseledtoanincreaseof32.10(95%CI:9.35–54.84)minutesstandingandwalkingonPOD1.
+PatientswhodidnotuseHospitalFitstoodandwalkedonaverage70.89(95%CI:59.00–82.80)minutes
+onPOD1comparedto102.99(95%CI:82.77–123.21)minutesinpatientswhousedHospitalFit.
+Table2. Univariatelinearregressionanalysis—theassociationbetweenthetimespentphysicallyactive
+onpostoperativedayone(POD1)andHospitalFituse.
+95%ConfidenceIntervalforB
+B Std. Error p-Value
+LowerBound UpperBound
+Constant 70.89 5.98 0.000 59.00 82.80
+HospitalFituse 32.10 11.43 0.006 9.35 54.84
+POD1=postoperativedayone.
+Sensors2020,20,4317 11of18
+To correct for the influence of potential confounders (age, sex, BMI, ASA-class, and type of
+surgery),theassociationbetweenHospitalFituseandthetimespentphysicallyactiveperdaywas
+explored. Theadditionofageresultedina11.41%changeintheregressioncoefficientofthemain
+determinant(HospitalFituse)andwasthereforeaddedtothemodel. Theremainingvariableswere
+then added to the model corrected for age, but each resulted in a <10% change in the regression
+coefficientofthemaindeterminantandwerethereforenotincluded. Theresultsofthemultiplelinear
+regressionanalysisareshowninTable3. Theresultsshowthat,correctedforage,patientswhoused
+HospitalFitstoodandwalkedonaverage28.43min(95%CI:5.55–51.32)moreonPOD1thanpatients
+whodidnotuseHospitalFit. Themodelshowsthatanincreaseinageledtoadecreaseinthenumber
+ofminutesstandingandwalkingonPOD1.
+Table3. Multiplelinearregressionanalysis—theassociationbetweenthetimespentphysicallyactive
+onPOD1andHospitalFituse,correctedforage.
+95%ConfidenceIntervalforB
+B Std. Error p-Value
+LowerBound UpperBound
+Constant 124.25 31.80 0.000 60.98 187.52
+HospitalFituse 28.43 11.50 0.016 5.55 51.32
+Age −0.81 0.48 0.092 −1.76 0.13
+POD1=postoperativedayone.
+Theresultsoftheunivariatelogisticregressionanalysis(Table4)showthattheoddsofachieving
+functionalrecoveryonPOD1were2.72timeshigher(95%CI:1.05–7.049)forpatientswhousedHospital
+FitthanforpatientswhodidnotuseHospitalFit.
+Table4. Univariatelogisticregressionanalysis—theassociationbetweentheachievementoffunctional
+recoveryonPOD1andHospitalFituse.
+Std. Odds 95%ConfidenceIntervalforOddsRatio
+B p-Value
+Error Ratio
+LowerBound UpperBound
+Constant −0.31 0.26 0.243 0.735 - -
+HospitalFituse 1.00 0.49 0.039 2.720 1.050 7.049
+POD1=postoperativedayone.
+TheinfluenceofpotentialconfoundersontheassociationbetweentheHospitalFituseandtime
+spentphysicallyactiveperdaywasexplored. AdditionofASA-classresultedinthelargestchange
+of12.38%intheregressioncoefficientofthemaindeterminant(HospitalFituse)andwasaddedto
+themodel. TheremainingvariableswerethenaddedtothemodelcorrectedforASA-class,buteach
+resultedina<10%changeintheregressioncoefficientofthemaindeterminantandweretherefore
+notincluded. Theresultsofthemultiplelogisticregressionanalysis(Table5)showthat,correctedfor
+ASA-class,theoddsofachievingfunctionalrecoveryonPOD1were3.08timeshigher(95%CI:1.14–8.31)
+forpatientswhousedHospitalFitthanforpatientswhodidnotuseHospitalFit. IncludingASA-class
+inthemodelshowsthatalowerASA-classincreasedtheoddsratioforafunctionalrecoveryonPOD1.
+Table5. Multiplelogisticregressionanalysis—theassociationbetweentheachievementoffunctional
+recoveryonPOD1andHospitalFituse,correctedforASA-class.
+Std. Odds 95%ConfidenceIntervalforOddsRatio
+B p-Value
+Error Ratio
+LowerBound UpperBound
+Constant −0.91 0.58 0.112 0.401 - -
+HospitalFituse 1.13 0.51 0.026 3.080 1.14 8.31
+ASA-class 0.71 0.59 0.228 2.03 0.64 6.39
+POD1=postoperativedayone,ASA=AmericanSocietyofAnesthesiologists.
+Sensors2020,20,4317 12of18
+4. Discussion
+InthispilotstudyweaimedtogainafirstimpressionofwhetherHospitalFithasthepotential
+toimprovetheamountofPAandtimeuntilfunctionalrecoveryisachievedinhospitalizedpatients
+followingorthopedicsurgery. Theresultsshowanincreaseinthetimespentstandingandwalking,
+aswellashigheroddsoffunctionalrecoveryonPOD1fromtheintroductionofHospitalFit. Although
+theguidelinesontherecommendedamountofPAduringhospitalizationdonotyetexist,anaverage
+improvementof28min(39%)standingandwalkingonPOD1canbeconsideredaclinicallyrelevant
+contributiontopreventthenegativeeffectsofinactivity.
+The relatively large confidence intervals indicate a large variation in PA levels during
+hospitalization. TheselargedifferencesinthePAlevelsofhospitalizedpatientsareseeninmanyother
+studiesaswell[13,14,41,42]. PAlevelscanbeinfluencedbymanydifferentfactorssuchassymptoms,
+themotivationofthepatient,awarenessoftheimportanceofPA,theavailabilityofhealthcarestaffto
+assistpatientsduringwalking,ortheavailabilityofadequatewalkingaids[15,43,44]. Thesefactors
+areexpectedtoresultinlargedifferencesinPAlevelsbetweenpatients.
+WearabletechnologyisincreasinglybeingusedinTKAandTHAresearch,withtheassessmentof
+PA,functionalparameters,andgaitanalysisasprimarymodesofinvestigation. Nostandardoutcome
+measureortestingmethodologyhasbeenestablishedinwearable-basedPAmonitoringfollowing
+TKAorTHA[45]. Technology,testingprotocolandsensor-basedoutcomevariablesmayvaryand
+mayaffectthequalityandreliabilityofthedatabeingcollected[46–49].
+LimitedresearchhasbeenconductedonmonitoringPAduringtheearlyrecoveryphasefollowing
+TKAorTHA[45]. Eightstudieshavebeenperformed,withsensor-basedoutcomevariablesvarying
+considerablybetweenstudies[28,50–56]. Twostudiesinvestigatedtheamountoftimespentactive
+(standingandwalking)asoutcomevariablesinthemonitoringofPAofhospitalizedpatientsfollowing
+TKA[50,51]. Schotanusetal.[50]showedthatpatientswithinanenhancedrecoverypathwayspent9%
+oftheirwakinghoursstandingandwalkingonPOD1. OnPOD2,thisincreasedtowards11%,witha
+planneddischargewithinthreedayspost-operation. PAwasmeasuredwithatriaxialaccelerometer
+(GCDataconcetsLLC,Waveland,USA)attachedtothenon-operatedthigh. Nodetailswereprovided
+regardingthevalidityofthealgorithmtodifferentiatelyingandsittingfromstandingandwalkingin
+hospitalizedpatients. Duetothelackofinsightintothenumberofwakinghours,theresultscannot
+be compared to our study. In agreement with our study, they concluded that accelerometry is an
+addedvaluefortheobjectiveanalysisofPAduringtheearlyrecoveryphaseinpatientsafterTKA[50].
+Fenten et al. [51] compared the amount of time spent active per day between patients receiving
+periarticularlocalanestheticinfiltration(LIA),andpatientsreceivingLIAoftheposteriorkneecapsule
+incombinationwithafemoralnerveblock(FNB)catheter. PAwasmonitoredwithanaccelerometer,
+attachedtothenon-operatedthigh. Nodetailswereprovidedregardingtheaccelerometertypeorthe
+validityofthealgorithmtodifferentiatelyingandsittingfromstandingandwalkinginhospitalized
+patients. PAwasmonitoredbetween8amand8pmonthedayofsurgeryandonPOD1. Themean
+timespentactive(SD)onPOD1was20.5(14.9)minutesintheFNBgroupversus27.7(14.1)minutesin
+theLIAgroup[51]. AlthoughthepostoperativephysiotherapytreatmentandLOSwerecomparable,
+ourstudyshowshigheramountsoftimespentactiveonPOD1. PatientswhodidnotuseHospitalFit
+spent70.89(95%CI:58.93–82.86)minutesactivecomparedto102.99(95%CI:82.77–123.21)minutesin
+patientswhousedHospitalFit. Thesedifferencesmightbeexplainedbythefactthat,inourstudy,
+PAwasmonitoredcontinuouslyfor24hperdayandpatientsscheduledforaprolongedstayinan
+outpatientrehabclinicwereexcluded. Sofar,nostudieshaveinvestigatedtheamountoftimespent
+activeinhospitalizedpatientsfollowingTHA.
+OneofthemainaimsofHospitalFitistodecreasethenegativeeffectsofsedentarybehaviorin
+hospitalizedpatientsthroughstimulatingtheamountoftimespentactive. Ashospitalizedpatients
+spendover92%oftheirtimelyingorsitting[12–14],thenumberofminutesspentstandingandwalking
+perdayisdeemedthemostappropriatesensor-basedoutcomevariableforHospitalFit. Additionally,
+itisapracticaloutcomevariablesinceitiseasilyinterpretedbypatientsandphysiotherapists.
+Sensors2020,20,4317 13of18
+Threestudiesinvestigatedintensity(activitycounts)asanoutcomevariableinmonitoringthePA
+ofhospitalizedpatientsfollowingTKA[52–54]andTHA[52,53]. Webelievehowever,thatmonitoring
+thetimespentactiveismoremeaningfulthanmonitoringintensitylevels(activitycounts)intheearly
+recoveryphaseaftersurgery. First,theintensityofPAasperceivedbypatientsmaydeviatefromthe
+intensitymeasuredbytheaccelerometer. Duringthefirstdaysaftersurgery,patientsmayperceive
+ambulation at low walking speeds as a high intensity activity, while the accelerometer objectively
+classifiesthisasalowintensityactivity. Second,intheearlyrecoveryphaseaftersurgery,thefocusof
+physiotherapyliesontherecoveryofactivitieswhichareessentialtoperformathome,suchaswalking
+andstairclimbing. Thefocusdoesnotlieontheintensityoftheactivitiesperformed.
+Three studies investigated step counts as an outcome variable in the monitoring of PA of
+hospitalized patients following TKA [28,55,56] and THA [55]. Using step counts to quantify
+PA has advantages since it is specific to ambulation and is easily interpreted by patients and
+physiotherapists[57]. However, duringtheearlyrecoveryphaseafterTKAandTHA,allpatients
+requireawalkingaid,andslowandimpairedgaitsarecommon[58]. Severalstudieshaveshownthat
+thesefactorsdecreasethevalidityofactivitytrackerstomeasurestepcounts[59–62]. Furthermore,
+movementsofthearmsorlegsperformedinbedoronachairmayresultinanoverestimationof
+thenumberofstepstaken. Wethereforeconsiderthetimespentactiveamoreappropriateoutcome
+variableforHospitalFitthanstepcounts.
+The present study investigated an mHealth tool which uses a multimodal approach, tailored
+specifically to the needs of hospitalized patients and their physiotherapists. Besides objective
+activity monitoring, Hospital Fit also provides patients insight into their recovery progress and
+offersphysiotherapiststheoptionofcreatingapatient-specificexerciseprogramsupportedbyvideos.
+Recently,anincreasingnumberofothermHealthtoolshavebeeninvestigatedwithintheorthopedic
+rehabilitationpathway[28–30,63–69]. Thesetoolsarepredominantlyprescribedinsupportofoutpatient
+physiotherapy. BesidesmonitoringPA,theyarebeingusedtoofferbiofeedbackinexerciseprograms,
+monitortherangeofmotion(ROM)ofthekneejoint,capturePROMs,provideeducationalmaterial
+andenabletelerehabilitation.
+Inertial measurement units (IMUs) contain accelerometers paired with gyroscopes and
+magnetometers,toprovideadetailedanalysisoflimbmovementsandorientationswithinaspatial
+referenceframe[45]. TheuseofIMUsenablespatientstoreceivefeedbackontheperformanceoftheir
+exercisetechniquebasedonsupervisedmachinelearning. Italsoenablescountingexerciserepetitions
+aswellasrecordingtheROMofthekneejoint. Theseoptionscanofferadditionalmotivationand
+feedbacktoenhanceadherence,andcanpositivelyimpactthepatientexperienceandclinicaloutcome.
+Althoughthistechnologyseemspromising,thereisaneedforsuchsystemstodemonstrateareal-world
+accuracyvalidation[70,71].
+Furthermore, some mHealth tools describe using the internal proprietary algorithm of the
+patient’ssmartphonetopassivelymeasuretheirstepcount[28,29]. Thisrequirespatientstocarrytheir
+smartphoneswiththeminordertonotmakeanunderestimationoftheamountofPAperformed.
+During hospitalization however, patients often wear hospital gowns or pajamas without pockets,
+orleavetheirsmartphonesontheirnightstand. Therefore,monitoringPAthroughasmartphoneisnot
+recommendedinhospitalizedpatients. HospitalFitisequippedwithanaccelerometerattachedtothe
+upperleg,andthealgorithmisabletodifferentiatelyingandsittingfromstandingandwalkingin
+patientsusingwalkingaids,orwithsloworimpairedgait. Thisisanadvantageovermanysmartphones
+andcommerciallyavailableactivitytrackersandoneofthereasonsHospitalFitwasdeveloped.
+This study was not without limitations. We acknowledge that with the current study design,
+the results may not only be attributable to the introduction of Hospital Fit. The current design
+enabledustoeffectivelyusethetimeinwhichHospitalFitwasdevelopedtoincludepatientsinthe
+controlgroup,andgiveusafirstimpressionofthepotentialofHospitalFit. Unfortunately,dueto
+technologicalchallenges,thedevelopmentofHospitalFittooklongerthananticipated. Althoughthe
+clinicalcarepathwayandphysiotherapytreatmentdidnotchangeduringthisperiod,awarenesson
+Sensors2020,20,4317 14of18
+theimportanceofPAduringhospitalizationmighthaveincreasedamongpatientsandhealthcare
+professionals,whichmayhaveresultedinabiasinfavoroftheinterventiongroup. Thiscouldhave
+ledtoaslightoverestimationoftheresults.
+Additionally,theindividualfunctionalitiesofHospitalFitwerenotinvestigatedinthispilotstudy.
+Therefore,wecannotestablishtherelationshipbetweeneachfunctionalityandPA.Enablingthiswould
+haveprovidedvaluableinformationregardingthecontributionofthedifferentfunctionalitiesonthe
+influenceofHospitalFit.
+Furthermore,whenthisstudywasdesignedin2016,themedian(range)postoperativeLOSwas6
+(4–10)days. TheimplementationofanewclinicalcarepathwayinNovember2016hasresultedina
+reductioninthemedian(range)LOSto4(3–12)days,leavingarelativelyshortperiodtointroduce
+anduseHospitalFit[8]. Inourstudy,themajorityofpatientsweredischargedonPOD2anddata
+foronly23patientswereavailableonPOD2. Becausethedataoftheseremaining23patientswere
+notrepresentativeofthewholepopulationandresultedininsufficientpowertoperformaregression
+analysis,onlydataontheamountofPAperformedonPOD1wereincludedintheanalysis.
+Thepresentstudyhasanumberofimportantimplicationsfordailypracticeandfutureresearch.
+First,theresultsshowthatHospitalFithasthepotentialtoenhancetheamountofPAandfunctional
+recoveryinhospitalizedpatients,especiallywhenthehospitalstaypermitstheuseoftheapplication
+foralongerperiod. Second,sincetheliteratureontheamountofPAperformedinhospitalizedpatients
+followingTKAandTHAisscarce,thisstudycontributestotheknowledgeofthePAbehaviorofthis
+population. Third,continuousobjectivemonitoringprovidespatientsandtheirphysiotherapiststhe
+advantageofbeingabletosetgoalsregardingtheamountofPA.However,referencevaluesregarding
+the optimal amount of PA after surgery do not exist yet. Hospital Fit and the data it creates have
+tremendouspotential,becausecontinuousPAmonitoringaspartofstandardcarewillenablecreating
+populationnormsforPA.
+InordertodeterminetheeffectivenessofHospitalFit,itisrecommendedthatthispilotstudy
+shouldbefollowedbyalarger,clusterrandomizedcontrolledtrialinapopulationofhospitalized
+patientswithalongerLOS.InordertodeterminetheeffectofeachfunctionalityofHospitalFitonPA,
+investigatingtheindividualfunctionalitiesisrecommendedaswell.
+5. Conclusions
+This pilot study aimed to gain a first impression of whether Hospital Fit has the potential to
+improvetheamountofPAandshortenthetimeuntilfunctionalrecoveryisachievedinhospitalized
+patientsfollowingorthopedicsurgery. Theresultsshowanincreaseinpatients’timespentstanding
+andwalking,aswellashigheroddsoffunctionalrecoveryonPOD1duetotheintroductionofHospital
+Fit. Thisstudyshowsthatasmartphoneappcombinedwithanaccelerometerdemonstratespotential
+toenhancepatients’PAlevelsandrecoveryprocessesduringhospitalization.
+AuthorContributions: Conceptualization,H.C.v.D.-H.,A.T.R.W.,T.A.E.J.B.,A.F.L.andR.A.d.B.;Datacuration,
+H.C.v.D.-H.;Formalanalysis,H.C.v.D.-H.andA.F.L.;Fundingacquisition,A.F.L.;Investigation,H.C.v.D.-H.and
+A.T.R.W.;Methodology,H.C.v.D.-H.,A.T.R.W.,T.A.E.J.B.,A.F.L.andR.A.d.B.;Projectadministration,H.C.v.D.-H.;
+Resources,A.F.L.;Supervision,A.F.L.andR.A.d.B.;Visualization,H.C.v.D.-H.;Writing—originaldraft,H.C.v.D.-H.;
+Writing—reviewandediting,H.C.v.D.-H.,A.T.R.W.,T.A.E.J.B.,A.F.L.andR.A.d.B.Allauthorshavereadand
+agreedtothepublishedversionofthemanuscript,andagreedtobeaccountableforallaspectsoftheworkto
+ensurethatquestionsrelatedtotheaccuracyorintegrityofanypartoftheworkareappropriatelyinvestigated
+andresolved.
+Funding: ThisresearchwasfundedbyaSmallBusinessInnovationResearch(SBIR)funding,subsidizedbythe
+DutchGovernment,grantnumber:SB1AP16010.
+Acknowledgments: WewouldliketothankallphysiotherapistsworkingatMaastrichtUniversityMedicalCenter
+fortheirassistanceinthisstudy. WewouldalsoliketothankW.J.P.BijnensofMaastrichtUniversityforhis
+assistanceincreatingacustomizedMATLABprogram,andS.M.J.vanKuijkofMaastrichtUniversityMedical
+Centerforhisassistanceinthestatisticalanalysis.
+ConflictsofInterest: Theauthorsdeclarenoconflictofinterest. Thefundershadnoroleinthedesignofthe
+study;inthecollection,analyses,orinterpretationofdata;inthewritingofthemanuscript,orinthedecision
+Sensors2020,20,4317 15of18
+topublishtheresults. Allsubjectsgavetheirinformedconsentforinclusionbeforestudyinitiation. Thisstudy
+wasperformedincompliancewiththeDeclarationofHelsinkiandtheprotocolwasapprovedbytheMedical
+EthicsCommitteeoftheUniversityHospitalMaastrichtandMaastrichtUniversity(METCazM/UM),registration
+number2017-0175.
+References
+1. Jansson,M.M.;Harjumaa,M.;Puhto,A.P.;Pikkarainen,M.Patients’satisfactionandexperiencesduring
+electiveprimaryfast-tracktotalhipandkneearthroplastyjourney: Aqualitativestudy. J.Clin. Nurs. 2019.
+[CrossRef][PubMed]
+2. Berghmans,D.D.P.;Lenssen,A.F.;Emans,P.J.;deBie,R.A.Functions,disabilitiesandperceivedhealthinthe
+firstyearaftertotalkneearthroplasty;aprospectivecohortstudy. BMCMusculoskelet. Disord. 2018,19,250.
+[CrossRef][PubMed]
+3. Ibrahim,M.S.;Khan,M.A.;Nizam,I.;Haddad,F.S.Peri-operativeinterventionsproducingbetterfunctional
+outcomesandenhancedrecoveryfollowingtotalhipandkneearthroplasty: Anevidence-basedreview.
+BMCMed. 2013,11,37. [CrossRef][PubMed]
+4. Carr,A.J.;Robertsson,O.;Graves,S.;Price,A.J.;Arden,N.K.;Judge,A.;Beard,D.J.Kneereplacement. Lancet
+2012,379,1331–1340. [CrossRef]
+5. AJRR.2019AnnualReport;AmericanAcademyofOrthopaedicSurgeons(AAOS):Rosemont,IL,USA,2019.
+6. Soeters,R.;White,P.B.;Murray-Weir,M.;Koltsov,J.C.B.;Alexiades,M.M.;Ranawat,A.S.Preoperativephysical
+therapyeducationreducestimetomeetfunctionalmilestonesaftertotaljointarthroplasty. Clin.Orthop.
+Relat. Res. 2018,476,40–48. [CrossRef]
+7. Tanzer,D.;Smith,K.;Tanzer,M.ChangingPatientexpectationsdecreaseslengthofstayinanenhanced
+recoveryprogramforTHA.Clin. Orthop. Relat. Res. 2018,476,372–378. [CrossRef]
+8. Didden,A.G.M.;Punt,I.M.;Feczko,P.Z.;Lenssen,A.F.Enhancedrecoveryinusualhealthcareimproves
+functionalrecoveryaftertotalkneearthroplasty. Int. J.Orthop. TraumaNurs. 2019,34,9–15. [CrossRef]
+9. Engdal,M.;Foss,O.A.;Taraldsen,K.;Husby,V.S.;Winther,S.B.DailyPhysicalactivityintotalhiparthroplasty
+patientsundergoingdifferentsurgicalapproaches: ACohortstudy. Am. J.Phys. Med. Rehabil. 2017,96,
+473–478. [CrossRef]
+10. Den Hertog, A.; Gliesche, K.; Timm, J.; Muhlbauer, B.; Zebrowski, S. Pathway-controlled fast-track
+rehabilitationaftertotalkneearthroplasty: Arandomizedprospectiveclinicalstudyevaluatingtherecovery
+pattern,drugconsumption,andlengthofstay. Arch. Orthop. Trauma. Surg. 2012,132,1153–1163. [CrossRef]
+11. Malviya,A.;Martin,K.;Harper,I.;Muller,S.D.;Emmerson,K.P.;Partington,P.F.;Reed,M.R.Enhanced
+recoveryprogramforhipandkneereplacementreducesdeathrate.ActaOrthop.2011,82,577–581.[CrossRef]
+12. Brown,C.J.;Roth,D.L.;Allman,R.M.Validationofuseofwirelessmonitorstomeasurelevelsofmobility
+duringhospitalization. J.Rehabil. Res. Dev. 2008,45,551–558. [CrossRef][PubMed]
+13. Pedersen, M.M.; Bodilsen, A.C.; Petersen, J.; Beyer, N.; Andersen, O.; Lawson-Smith, L.; Kehlet, H.;
+Bandholm,T.Twenty-four-hourmobilityduringacutehospitalizationinoldermedicalpatients. J.Gerontol.
+Ser. ABiol. Sci. Med. Sci. 2013,68,331–337. [CrossRef][PubMed]
+14. Evensen,S.;Sletvold,O.;Lydersen,S.;Taraldsen,K.Physicalactivityamonghospitalizedolderadults—An
+observationalstudy. BMCGeriatr. 2017,17,110. [CrossRef][PubMed]
+15. So,C.;Pierluissi,E.Attitudesandexpectationsregardingexerciseinthehospitalofhospitalizedolderadults:
+Aqualitativestudy. J.Am. Geriatr. Soc. 2012,60,713–718. [CrossRef]
+16. Hoogeboom,T.J.;Dronkers,J.J.;Hulzebos,E.H.;vanMeeteren,N.L.Meritsofexercisetherapybeforeand
+aftermajorsurgery. Curr. Opin. Anaesthesiol. 2014,27,161–166. [CrossRef]
+17. Hoogeboom,T.J.;vanMeeteren,N.L.;Schank,K.;Kim,R.H.;Miner,T.;Stevens-Lapsley,J.E.Riskfactors
+fordelayedinpatientfunctionalrecoveryaftertotalkneearthroplasty. Biomed. Res. Int. 2015,2015,167643.
+[CrossRef]
+18. Lenssen,A.F.;Crijns,Y.H.;Waltje,E.M.;vanSteyn,M.J.;Geesink,R.J.;vandenBrandt,P.A.;deBie,R.A.
+Efficiencyofimmediatepostoperativeinpatientphysicaltherapyfollowingtotalkneearthroplasty: AnRCT.
+BMCMusculoskelet. Disord. 2006,7,71. [CrossRef]
+19. Joosen,P.;Piette,D.;Buekers,J.;Taelman,J.;Berckmans,D.;DeBoever,P.Asmartphone-basedsolutionto
+monitordailyphysicalactivityinacarehome. J.Telemed. Telecare2019,25,611–622. [CrossRef]
+20. WHO.mHealth: NewHorizonsforHealthThroughMobileTechnologies;WHO:Geneva,Switzerland,2011.
+Sensors2020,20,4317 16of18
+21. Ureña,R.;Chiclana,F.;Gonzalez-Alvarez,A.;Herrera-Viedma,E.;Moral-Munoz,J.A.m-SFT:Anovelmobile
+healthsystemtoassesstheelderlyphysicalcondition. Sensors2020,20,1462. [CrossRef]
+22. Block,V.A.;Pitsch,E.;Tahir,P.;Cree,B.A.;Allen,D.D.;Gelfand,J.M.RemotePhysicalactivitymonitoringin
+neurologicaldisease: Asystematicreview. PLoSONE2016,11,e0154335. [CrossRef]
+23. Thijs,I.;Fresiello,L.;Oosterlinck,W.;Sinnaeve,P.;Rega,F.Assessmentofphysicalactivitybywearable
+technologyduringrehabilitationaftercardiacsurgery: ExplorativeProspectivemonocentricobservational
+cohortstudy. JMIRmHealthuHealth2019,7,e9865. [CrossRef][PubMed]
+24. Vandelanotte,C.;Muller,A.M.;Short,C.E.;Hingle,M.;Nathan,N.;Williams,S.L.;Lopez,M.L.;Parekh,S.;
+Maher,C.A.Past,present,andfutureofeHealthandmHealthresearchtoimprovephysicalactivityand
+dietarybehaviors. J.Nutr. Educ. Behav. 2016,48,219–228. [CrossRef]
+25. Coughlin,S.S.;Whitehead,M.;Sheats,J.Q.;Mastromonico,J.;Smith,S.Areviewofsmartphoneapplications
+forpromotingphysicalactivity. JacobsJ.CommunityMed. 2016,2,1–14.
+26. vanderWeegen,S.;Verwey,R.;Spreeuwenberg,M.;Tange,H.;vanderWeijden,T.;deWitte,L.It’slife!
+Mobileandweb-basedmonitoringandfeedbacktoolembeddedinprimarycareincreasesphysicalactivity:
+Aclusterrandomizedcontrolledtrial. J.Med. InternetRes. 2015,17,e184. [CrossRef][PubMed]
+27. Feldman,D.I.;TheodoreRobison,W.;Pacor,J.M.;Caddell,L.C.;Feldman,E.B.;Deitz,R.L.;Feldman,T.;
+Martin,S.S.;Nasir,K.;Blaha,M.J.HarnessingmHealthtechnologiestoincreasephysicalactivityandprevent
+cardiovasculardisease. Clin. Cardiol. 2018,41,985–991. [CrossRef][PubMed]
+28. Ramkumar,P.N.;Haeberle,H.S.;Ramanathan,D.;Cantrell,W.A.;Navarro,S.M.;Mont,M.A.;Bloomfield,M.;
+Patterson,B.M.RemotePatientmonitoringusingmobilehealthfortotalkneearthroplasty: Validationofa
+wearableandmachinelearning-basedsurveillanceplatform. J.Arthroplast. 2019,34,2253–2259. [CrossRef]
+29. Ramkumar,P.N.;Haeberle,H.S.;Bloomfield,M.R.;Schaffer,J.L.;Kamath,A.F.;Patterson,B.M.;Krebs,V.E.
+ArtificialIntelligenceandarthroplastyatasingleinstitution: Real-worldapplicationsofmachinelearningto
+bigdata,value-basedcare,mobilehealth,andremotepatientmonitoring. J.Arthroplast. 2019,34,2204–2209.
+[CrossRef]
+30. Correia,F.D.;Nogueira,A.;Magalhães,I.;Guimarães,J.;Moreira,M.;Barradas,I.;Molinos,M.;Teixeira,L.;
+Tulha,J.;Seabra,R.;etal. Medium-Termoutcomesofdigitalversusconventionalhome-basedrehabilitation
+aftertotalkneearthroplasty: Prospective,parallel-groupfeasibilitystudy. JMIRRehabil. Assist. Technol. 2019,
+6,e13111. [CrossRef]
+31. Dorje, T.; Zhao, G.; Scheer, A.; Tsokey, L.; Wang, J.; Chen, Y.; Tso, K.; Tan, B.K.; Ge, J.; Maiorana, A.
+SMARTphoneandsocialmedia-basedCardiacRehabilitationandSecondaryPrevention(SMART-CR/SP)for
+patientswithcoronaryheartdiseaseinChina: Arandomisedcontrolledtrialprotocol. BMJOpen2018,8,
+e021908. [CrossRef]
+32. Chen,K.Y.;Janz,K.F.;Zhu,W.;Brychta,R.J.Redefiningtherolesofsensorsinobjectivephysicalactivity
+monitoring. Med. Sci. SportsExerc. 2012,44,13–23. [CrossRef]
+33. Evenson, K.R.; Goto, M.M.; Furberg, R.D. Systematic review of the validity and reliability of
+consumer-wearableactivitytrackers. Int. J.Behav. Nutr. Phys. Act. 2015,12,159. [CrossRef][PubMed]
+34. Bijnens,W.A.;Aarts,J.;Stevens,A.;Ummels,D.;Meijer,K.Optimizationandvalidationofanadjustable
+activity classification algorithm for assessment of physical behavior in elderly. Sensors 2019, 19, 5344.
+[CrossRef][PubMed]
+35. Berendsen,B.A.; Hendriks,M.R.; Meijer,K.; Plasqui,G.; Schaper,N.C.; Savelberg,H.H.Whichactivity
+monitortouse? Validity,reproducibilityanduserfriendlinessofthreeactivitymonitors. BMCPublicHealth
+2014,14,749. [CrossRef][PubMed]
+36. Annegarn,J.;Spruit,M.A.;Uszko-Lencer,N.H.;Vanbelle,S.;Savelberg,H.H.;Schols,A.M.;Wouters,E.F.;
+Meijer,K.Objectivephysicalactivityassessmentinpatientswithchronicorganfailure: Avalidationstudyof
+anewsingle-unitactivitymonitor. Arch. Phys. Med. Rehabil. 2011,92,1852–1857. [CrossRef][PubMed]
+37. Manas,A.;DelPozo-Cruz,B.;Garcia-Garcia,F.J.;Guadalupe-Grau,A.;Ara,I.Roleofobjectivelymeasured
+sedentarybehaviourinphysicalperformance,frailtyandmortalityamongolderadults: Ashortsystematic
+review. Eur. J.SportSci. 2017,17,940–953. [CrossRef][PubMed]
+38. Shields,R.K.;Enloe,L.J.;Evans,R.E.;Smith,K.B.;Steckel,S.D.Reliability,validity,andresponsivenessof
+functionaltestsinpatientswithtotaljointreplacement. Phys. Ther. 1995,75,169–176. [CrossRef][PubMed]
+39. Bercken, V.e.V.d. Lineaire Regressieanalyse, 1st ed.; Noordhoff Uitgevers bv: Groningen/Houten,
+TheNetherlands,2010.
+Sensors2020,20,4317 17of18
+40. Twisk, J.W.R. Inleiding in de Toegepaste Biostatistiek, 2nd ed.; Elsevier Gezondheidszorg: Maarssen,
+TheNetherlands,2010.
+41. Fisher,S.R.;Goodwin,J.S.;Protas,E.J.;Kuo,Y.F.;Graham,J.E.;Ottenbacher,K.J.;Ostir,G.V.Ambulatory
+activityofolderadultshospitalizedwithacutemedicalillness. J.Am. Geriatr. Soc. 2011,59,91–95. [CrossRef]
+42. Ostir,G.V.;Berges,I.M.;Kuo,Y.F.;Goodwin,J.S.;Fisher,S.R.;Guralnik,J.M.Mobilityactivityanditsvalue
+asaprognosticindicatorofsurvivalinhospitalizedolderadults. J.Am. Geriatr. Soc. 2013,61,551–557.
+[CrossRef]
+43. Brown,C.J.;Williams,B.R.;Woodby,L.L.;Davis,L.L.;Allman,R.M.Barrierstomobilityduringhospitalization
+fromtheperspectivesofolderpatientsandtheirnursesandphysicians. J.Hosp. Med. 2007,2,305–313.
+[CrossRef]
+44. Koenders, N.; van Oorsouw, R.; Seeger, J.P.H.; Nijhuis-van der Sanden, M.W.G.; van de Glind, I.;
+Hoogeboom,T.J.“I’mnotgoingtowalk,justforthesakeofwalking... ”: Aqualitative,phenomenological
+studyonphysicalactivityduringhospitalstay. Disabil. Rehabil. 2018,1–8. [CrossRef]
+45. Small,S.R.;Bullock,G.S.;Khalid,S.;Barker,K.;Trivella,M.;Price,A.J.Currentclinicalutilisationofwearable
+motionsensorsfortheassessmentofoutcomefollowingkneearthroplasty: Ascopingreview. BMJOpen
+2019,9,e033832. [CrossRef][PubMed]
+46. Brønd,J.C.;Arvidsson,D.SamplingfrequencyaffectstheprocessingofActigraphrawaccelerationdatato
+activitycounts. J.Appl. Physiol. 2016,120,362–369. [CrossRef][PubMed]
+47. Godfrey,A.;Hetherington,V.;Shum,H.;Bonato,P.;Lovell,N.H.;Stuart,S.FromAtoZ:Wearabletechnology
+explained. Maturitas2018,113,40–47. [CrossRef][PubMed]
+48. Clark,C.C.T.;Nobre,G.C.;Fernandes,J.F.T.;Moran,J.;Drury,B.;Mannini,A.;Gronek,P.;Podstawski,R.
+Physicalactivitycharacterization: Doesonesitefitall? Physiol. Meas. 2018,39,09TR02. [CrossRef][PubMed]
+49. Matthews,C.E.;Hagströmer,M.;Pober,D.M.;Bowles,H.R.Bestpracticesforusingphysicalactivitymonitors
+inpopulation-basedresearch. Med. Sci. SportsExerc. 2012,44,68–76. [CrossRef]
+50. Schotanus,M.G.M.;Bemelmans,Y.F.L.;Grimm,B.;Heyligers,I.C.;Kort,N.P.Physicalactivityafteroutpatient
+surgeryandenhancedrecoveryfortotalkneearthroplasty. KneeSurg. SportsTraumatol. Arthrosc. 2017,25,
+3366–3371. [CrossRef]
+51. Fenten,M.G.E.;Bakker,S.M.K.;Scheffer,G.J.;Wymenga,A.B.;Stienstra,R.;Heesterbeek,P.J.C.Femoralnerve
+cathetervs. localinfiltrationforanalgesiainfasttracktotalkneearthroplasty: Short-termandlong-term
+outcomes. Br. J.Anaesth. 2018,121,850–858. [CrossRef]
+52. Luna,I.E.;Kehlet,H.;Wede,H.R.;Hoevsgaard,S.J.;Aasvang,E.K.Objectivelymeasuredearlyphysical
+activityaftertotalhiporkneearthroplasty. J.Clin. Monit. Comput. 2019,33,509–522. [CrossRef]
+53. Krenk, L.; Jennum, P.; Kehlet, H. Activity, sleep and cognition after fast-track hip or knee arthroplasty.
+J.Arthroplast. 2013,28,1265–1269. [CrossRef]
+54. Tsuji,S.;Tomita,T.;Fujii,M.;Laskin,R.S.;Yoshikawa,H.;Sugamoto,K.Isminimallyinvasivesurgery-total
+knee arthroplasty truly less invasive than standard total knee arthroplasty? A quantitative evaluation.
+J.Arthroplast. 2010,25,970–976. [CrossRef]
+55. Hayashi,K.;Kako,M.;Suzuki,K.;Takagi,Y.;Terai,C.;Yasuda,S.;Kadono,I.;Seki,T.;Hiraiwa,H.;Ushida,T.;
+etal. Impactofvariationinphysicalactivityaftertotaljointreplacement. J.PainRes. 2018,11,2399–2406.
+[CrossRef][PubMed]
+56. Twiggs,J.;Salmon,L.;Kolos,E.;Bogue,E.;Miles,B.;Roe,J.Measurementofphysicalactivityinthepre-
+andearlypost-operativeperiodaftertotalkneearthroplastyforOsteoarthritisusingaFitbitFlexdevice.
+Med. Eng. Phys.2018,51,31–40. [CrossRef]
+57. Bassett,D.R.;John,D.Useofpedometersandaccelerometersinclinicalpopulations: Validityandreliability
+issues. Phys. Ther. Rev. 2010,15,135–142. [CrossRef]
+58. Peel, N.M.; Kuys, S.S.; Klein, K. Gait speed as a measure in geriatric assessment in clinical settings:
+Asystematicreview. J.Gerontol. Ser. ABiol. Sci. Med. Sci. 2013,68,39–46. [CrossRef][PubMed]
+59. Floegel,T.A.;Florez-Pregonero,A.;Hekler,E.B.;Buman,M.P.Validationofconsumer-basedhipandwrist
+activitymonitorsinolderadultswithvariedambulatoryabilities. J.Gerontol. Ser. ABiol. Sci. Med. Sci. 2017,
+72,229–236. [CrossRef][PubMed]
+60. Beevi,F.H.;Miranda,J.;Pedersen,C.F.;Wagner,S.Anevaluationofcommercialpedometersformonitoring
+slowwalkingspeedpopulations. Telemed. J.EHealth2016,22,441–449. [CrossRef]
+Sensors2020,20,4317 18of18
+61. Martin,J.B.;Krcˇ,K.M.;Mitchell,E.A.;Eng,J.J.;Noble,J.W.Pedometeraccuracyinslowwalkingolderadults.
+Int. J.Ther. Rehabil. 2012,19,387–393. [CrossRef]
+62. Cyarto,E.V.;Myers,A.;Tudor-Locke,C.Pedometeraccuracyinnursinghomeandcommunity-dwelling
+olderadults. Med. Sci. SportsExerc. 2004,36,205–209. [CrossRef]
+63. Argent,R.;Slevin,P.;Bevilacqua,A.;Neligan,M.;Daly,A.;Caulfield,B.Clinicianperceptionsofaprototype
+wearableexercisebiofeedbacksystemfororthopaedicrehabilitation: Aqualitativeexploration. BMJOpen
+2018,8,e026326. [CrossRef]
+64. Argent,R.;Slevin,P.;Bevilacqua,A.;Neligan,M.;Daly,A.;Caulfield,B.Wearablesensor-basedexercise
+biofeedbackfororthopaedicrehabilitation: Amixedmethodsuserevaluationofaprototypesystem. Sensors
+2019,19,432. [CrossRef]
+65. Kayaalp,M.E.;Agres,A.N.;Reichmann,J.;Bashkuev,M.;Duda,G.N.;Becker,R.Validationofanoveldevice
+forthekneemonitoringoforthopaedicpatients. Sensors2019,19,5193. [CrossRef][PubMed]
+66. Brennan,L.;DorronzoroZubiete,E.;Caulfield,B.Feedbackdesignintargetedexercisedigitalbiofeedback
+systemsforhomerehabilitation: Ascopingreview. Sensors2019,20,181. [CrossRef][PubMed]
+67. Bell,K.M.;Onyeukwu,C.;McClincy,M.P.;Allen,M.;Bechard,L.;Mukherjee,A.;Hartman,R.A.;Smith,C.;
+Lynch,A.D.;Irrgang,J.J.Verificationofaportablemotiontrackingsystemforremotemanagementofphysical
+rehabilitationoftheknee. Sensors2019,19,21. [CrossRef][PubMed]
+68. Chiang,C.Y.;Chen,K.H.;Liu,K.C.;Hsu,S.J.;Chan,C.T.DataCollectionandanalysisusingwearablesensors
+formonitoringkneerangeofmotionaftertotalkneearthroplasty. Sensors2017,17,418. [CrossRef][PubMed]
+69. Msayib,Y.;Gaydecki,P.;Callaghan,M.;Dale,N.;Ismail,S.AnIntelligentremotemonitoringsystemfortotal
+kneearthroplastypatients. J.Med. Syst. 2017,41,90. [CrossRef][PubMed]
+70. O’Reilly,M.;Caulfield,B.;Ward,T.;Johnston,W.;Doherty,C.WearableInertialSensorSystemsforLower
+LimbExerciseDetectionandEvaluation: ASystematicReview. SportsMedicine(AucklandN.Z.)2018,48,
+1221–1246. [CrossRef]
+71. Peake, J.M.; Kerr, G.; Sullivan, J.P. A critical review of consumer wearables, mobile applications, and
+equipment for providing biofeedback, monitoring stress, and sleep in physically active populations.
+Front.Physiol. 2018,9,743. [CrossRef]
+©2020bytheauthors. LicenseeMDPI,Basel,Switzerland. Thisarticleisanopenaccess
+articledistributedunderthetermsandconditionsoftheCreativeCommonsAttribution
+(CCBY)license(http://creativecommons.org/licenses/by/4.0/).

@@ -1,0 +1,2269 @@
+The Visual Computer (2021) 37:3019–3038 
+https://doi.org/10.1007/s00371-021-02242-y 
+
+Can a humanoid social robot stimulate the interactivity of cognitively 
+impaired elderly? A thorough study based on computer vision 
+methods 
+Gauri Tulsulkar1 · Nidhi Mishra1 · Nadia Magnenat Thalmann1,2 · Hwee Er Lim3 · Mei Ping Lee3 · 
+Siok Khoong Cheng4 
+Accepted: 2 July 2021 / Published online: 30 July 2021 
+© The Author(s) 2021 
+Abstract 
+Social Assistive Robotics is increasingly being used in care settings to provide psychosocial support and interventions for 
+the elderly with cognitive impairments. Most of these social robots have provided timely stimuli to the elderly at home and 
+in care centres, including keeping them active and boosting their mood. However, previous investigations have registered 
+shortcomings in these robots, particularly in their ability to satisfy an essential human need: the need for companionship. 
+Reports show that the elderly tend to lose interests in these social robots after the initial excitement as the novelty wears out 
+and the monotonous familiarity becomes all too familiar. This paper presents our research facilitating conversations between a 
+social humanoid robot, Nadine, and cognitively impaired elderly at a nursing home. We analysed the effectiveness of human– 
+humanoid interactions between our robot and 14 elderly over 29 sessions. We used both objective tools (based on computer 
+vision methods) and subjective tools (based on observational scales) to evaluate the recorded videos. Our ﬁndings showed that 
+our subjects engaged positively with Nadine, suggesting that their interaction with the robot could improve their well-being 
+by compensating for some of their emotional, cognitive, and psychosocial deﬁciencies. We detected emotions associated with 
+cognitively impaired elderly during these interactions. This study could help understand the expectations of the elderly and 
+the current limitations of Social Assistive Robots. Our research is aligned with all the ethical recommendations by the NTU 
+Institutional Review Board. 
+Keywords Social Assistive Robotics (SAR) · Robot companions · Social robots · Social intelligence for Robots · 
+Human–humanoid interaction · Computer vision · Observational scales 
+
+
+Nidhi Mishra 
+nidhimishra2906@gmail.com 
+Nadia Magnenat Thalmann 
+nadia.thalmann@miralab.ch 
+Hwee Er Lim 
+hweeer@consultgoshen.com 
+Mei Ping Lee 
+meiping@consultgoshen.com 
+Siok Khoong Cheng 
+siokkhoong.cheng@bheh.org 
+
+Cognitively impaired elderly citizens in nursing homes 
+require holistic care, including medical, nursing, physical 
+and functional, psychosocial, and cognitive care. However, 
+most institutions prioritise medical, nursing, and physical 
+and functional care services over psychosocial and cognitive 
+needs. It is common for the elderly in nursing homes to be 
+lonely, socially isolated, bored, and lack activity engagement, 
+resulting in other issues, such as concerning behaviours, 
+adjustment difﬁculties, poor mood, and lack of motivation. 
+Such psychological impact often affects the overall health 
+and well-being of these residents. 
+
+Institute of Media Innovation, Nanyang Technological 
+University, Singapore, Singapore 
+
+
+
+
+
+
+Several research teams are currently working on projects 
+for elderly self-sufﬁciency [1,2], particularly on conversa- 
+tional agents design [3,4]. Critical to building a coherent, 
+proactive, and engaging conversational social robot is social 
+dialogue exchange. An autonomous social humanoid robot 
+with intelligent perceptual analyses provides better engag- 
+ing interactions and could foster a personalised relationship 
+with its user (5). Such a relationship could help address a 
+user’s psychosocial and cognitive needs and reduce the issues 
+(listed above) that increase the demand for care and human 
+resources. Social robots could address workforce shortages 
+and improve the engagement and participation levels and the 
+quality of life of the elderly in nursing homes. 
+This research required extensive support from the care 
+and therapy staff to boost declining interaction levels caused 
+by communication, language, and cognitive obstacles. To 
+implement such a robotic solution, we evaluated several inter- 
+actions between professional therapists and the elderly. We 
+identiﬁed appropriate and proactive behaviours that would 
+stimulate the humanoid social robot to show empathy and 
+interact meaningfully with cognitively impaired elderly. We 
+then integrated these behaviours into competency descrip- 
+tors and incorporated them into our humanoid social robot, 
+Nadine [5]. 
+We aimed primarily to stimulate residents of a nursing 
+home through conversations and keep them engaged. We 
+deployed Nadine to provide companionship and support 
+to nursing home residents with cognitive impairment. The 
+human–robot interaction (HRI) technology was used for the 
+following purposes: 
+– To promote engagement and stimulation using various 
+stimuli: Nadine should be able to interact with residents 
+in nursing homes in multiple ways, including playing 
+games (Bingo, karaoke), holding a conversation, showing 
+images/videos, and playing songs. 
+– To provide person-centred care through personalised 
+interactions: Based on face recognition, memory net- 
+works for conversations, and other AI techniques, Nadine 
+should provide a personalised interaction service to each 
+resident to help improve their memory, help them recall 
+facts and emotions, and improve their quality of life in a 
+nursing home. 
+We assessed Nadine’s efﬁcacy based on residents’ willing- 
+ness to communicate and engage with her and their moods 
+during these interactions. We compared results from initial 
+interactions to the changes in interaction over time to evalu- 
+ate participants’ emotional states and quality of engagement. 
+All interactive sessions were recorded, and a comprehen- 
+sive understanding of the effects of Nadine was obtained 
+using objective and subjective tools. The objective tools were 
+based on computer vision techniques, such as Deep Neural 
+
+Networks (DNNs), while the subjective tools relied on the 
+Observed Emotion Rating Scale (OERS) [6] and Menorah 
+Park Engagement Scale (MPES) [7]. OERS is an observa- 
+tional rating scale that grades the extent or duration of an 
+affective state, such as pleasure, anger, anxiety/fear, sadness, 
+and general alertness in the elderly. MPES is an observational 
+rating scale that appraises 4 types of engagement: nonengage- 
+ment (e.g. blank stare), self-engagement (e.g. ﬁddling with 
+clothes), passive engagement (e.g. listening), and construc- 
+tive engagement (e.g. actively handling objects). 
+The rest of the paper is organised as follows: Section 2 
+looks at related investigations using humanoid robots in 
+nursing homes. We also touch on some humanoid robots 
+providing support to the elderly with cognitive impairment. 
+Section 3 discusses our research questions to be addressed. 
+Section 4 explains our experimental setup of Nadine at the 
+nursing home and the adaptation technique used. In Sect. 4.5, 
+we outline the details of our data collection methods and pro- 
+vide our framework to analyse the data collected. Section 5 
+presents the results of the analysis of our experimental data. 
+We address potential limitations and provide conclusions in 
+Sect. 6. Finally, Sect. 7 discusses future plans. 
+
+Signiﬁcant efforts have been aimed at improving the over- 
+all mental health of the elderly by providing them with 
+robots for companionship. Robots, such as Pearl [8,9], Sil- 
+bot [10], Mero [11], Hobbit [12–14], Lio [15], Kompaï [3], 
+TIAGo [16], RAMCIP [17], Matilda [18], and more provide 
+the elderly with assistance or services, like fulﬁlling daily 
+activities, that enable them to live in their own homes and 
+communities safely and independently [19–24]. The elderly 
+in nursing homes have been observed to engage more fre- 
+quently with various stimuli, including life-like dolls, plush 
+animals, building blocks, sorting tasks, puzzles, and robots 
+[25]. 
+Investigators have recognised that a participant’s choice of 
+a robot is strongly motivated by its physicality. Researchers 
+[26,27] investigating the effects of the physical appearance 
+of social robots have reported that embodiment plays a 
+vital role in their interactivity. Social assistive-robot-based 
+systems that can perform activities, play cognitive games, 
+and socialise, can stimulate people’s cognitive, social, and 
+physical conditions and constrain the deterioration of their 
+cognitive state [19]. 
+Many animal-inspired robots, such as Paro [28–35], AIBO 
+[36–40], iCat [41], Furby [42], NeCoRo [43], CuDDler [44], 
+have been used to maintain interest in the elderly and have 
+yielded positive social and psychological effects akin to 
+animal-assisted therapy. However, creature-like robots, such 
+as the hobbit robot, have eventually been treated as ordinary 
+
+
+
+toys, rather than an aid, and have failed to become meaning- 
+ful companions for the elderly [45]; these shortcomings in 
+robot performance eventually frustrated residents. 
+The relationship between Paro robots and residents in care 
+facilities revealed that Paro strengthened social ties among 
+residents, with most residents establishing moderate to strong 
+ties with the robot; it also decreases residents’ stress levels 
+[28,46–52]. 
+While most creature-like social robots have been designed 
+to provide companionship to the elderly, few have been 
+explicitly designed to improve psychological well-being 
+among this group of citizens. As robots, Paro and Aibo do not 
+necessarily satisfy all the needs of the elderly, such as improv- 
+ing social interaction [53]. Pleo [54]), which was developed 
+as a toy in the form of a baby dinosaur and can learn voice 
+commands, sense speciﬁc food, and react to touch, has been 
+used in homes for studies. Initially, participants were fas- 
+cinated with the robot’s novelty, but they soon got fed up 
+and did not interact with it regularly. Eventually, Pleo was 
+only activated on special occasions. While Pleo was initially 
+treated like a real animal with activities, such as petting and 
+being named, it failed to inspire regular interactions and was 
+treated as a regular toy over time. 
+Humanoid-like robots, such as Nao, Pepper, and Buddy, 
+are also used to keep the elderly company [55,56]. Research 
+with Nao robots as physical exercise teachers and instructors 
+has shown that they can guide exercises, deliver information 
+to users, and provide motivation in the same way as human 
+instructors [57]. Another study [58] demonstrated that inter- 
+action with Nao improved patients’ evaluated parameters. 
+User expectations are directly related to robots’ appearances. 
+We used Nadine for our study because she has a realistic- 
+humanoid appearance and can hold engaging conversations 
+with the elderly. 
+One study [77] explained the importance of advancing 
+the understanding of HRI by using social robots to address 
+attention issues in the elderly. The elderly beneﬁt from com- 
+municating with robots [78]. Research with the Kabochan 
+speaking robot [60,79] demonstrated an increase in resident- 
+robot engagement over time in a group, but direct engagement 
+was not assessed. Having a physical body and a system capa- 
+ble of handling a conversation ﬂow in a robot is advantageous 
+in promoting high engagement of the elderly [76]. These ﬁnd- 
+ings of the study using a virtual and a physical robot CommU 
+provide a new insight into the development of dialogue sys- 
+tems for robots in assisting elderly by maintaining a better 
+mental health. 
+Ethnographic studies in which a humanoid social robot, 
+Robovie, interacted with residents in an elderly care cen- 
+tre [75,80] suggested that the robot was well accepted. 
+However, Robovie’s behaviour was remotely operated to 
+act as a conversational partner through basic dialogues that 
+only included greetings and questions, particularly questions 
+about hobbies. Robovie as a companion was appreciated, 
+and the elderly even took walks with it. However, no sig- 
+niﬁcant improvements in residents’ cognitive abilities have 
+been observed when the elderly have walked with/without 
+Robovie or enjoyed its company [81] because no interaction 
+has been noted during those activities. 
+In a study evaluating the Kompaï robot [82] designed by 
+Robosoft [83] two elderly participants interacted with Kom- 
+paï for almost an hour. Signiﬁcant sensory data, such as audio 
+data, RGB-D data, thermal images, and data from the skele- 
+ton tracker, were recorded from the multisensory system to 
+gain contextual insight into the users’ interactions, needs, and 
+
+
+
+
+reactions. Analyses showed that these reactions were posi- 
+tive, and the two elderly found the robot to be beneﬁcial [3] 
+. However, this study was performed for a limited time, and 
+the two users did not constitute enough sample to advance a 
+general conclusion. Other studies have since also supported 
+these results, through [16,20,84]. 
+In one study, the Pepper Robot [59] better understood 
+multidomain interventions vis-à-vis social facilitation with 
+the elderly. At the end of the inquiry, participants showed 
+strong emotions when letting go of the robot, 
+indicat- 
+ing the importance of the social bond they had created 
+with it. The Pepper robot has also been used in cases 
+of schizophrenia and dementia for recreational purposes 
+[85,86]. 
+Healthcare professionals have a favourable view of the 
+effect of the Zora robot [62]. However, negative impacts 
+resulting from the use of robots for elderly care also exist 
+[87]. The elderly consider social robots to only aid recre- 
+ational activities. The impact of Zora on care personnel and 
+elderly participants in care services was evaluated previously 
+for 10 weeks, with ﬁndings ﬂuctuating between negative and 
+positive feedbacks [61]. 
+Monitoring and managing emergencies and helping with 
+robotic support have been widely accepted [88,89], whereas 
+tasks involving the direct interaction between a person and a 
+robot are not yet recognised. 
+Individual adaptations of robots for dementia or cogni- 
+tively impaired persons, like verbal reminders and personal 
+adaptation, are essential. A mixed method showed the 
+positive outcomes of several aspects, such as apathy, qual- 
+ity of life, and cognitive state, of residents’ dispositions 
+[90]. 
+
+
+We incorporated the competencies presented in table 1 into 
+our robot to create more meaningful interactions missing 
+in earlier studies, as discussed below. For appearance, we 
+indicated whether the robot is human-like. We aimed to 
+assess if a humanoid robot, such as Nadine with its human- 
+like features, could emote natural human communication, 
+as reported in [91] and satisfy the innate need for human 
+companionship among the elderly. Nadine can make facial 
+expressions, respond with gestures, and make eye contact 
+with the elderly, something other robots have not been able 
+to do in the past. Studies have shown that the interaction 
+with face and arm movements is stimulating and could arouse 
+curiosity and interest [10]. 
+For functionalities, our study was based on speech, vision, 
+empathy, memory, and The Internet of Things (IoT). We anal- 
+ysed the following: 
+
+
+
+Table 1 Summary of the robots used for interaction with and compan- 
+ionship for the elderly, where (a) is Humanoid realistic appearance, (b) 
+is Residents information, (c) is Empathy, (d) is Facial expressions, (e) 
+is Gestures, (f) is The Internet of Things (IoT), (g) is Gazing, (h) is 
+Face recognition, (i) is Languages spoken, (j) is Pro-active mode, (k) 
+is Social Activity host, (l) is Number of participants, (m) is Computer 
+Vision-based analysis, (n) is Personalisation, and (o) is Observational 
+tool-based analysis 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+N/A 
+(cid:2) 
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+X 
+(cid:2) 
+
+
+X 
+(cid:2) 
+
+
+X 
+(cid:2) 
+
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+X 
+(cid:2) 
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+N/A 
+(cid:2) 
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+X 
+(cid:2) 
+
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+N/A 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+N/A 
+(cid:2) 
+
+
+X 
+(cid:2) 
+
+
+
+N/A 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+X 
+(cid:2) 
+
+
+
+
+X 
+(cid:2) 
+
+
+X 
+(cid:2) 
+
+N/A 
+(cid:2) 
+
+
+X 
+(cid:2) 
+
+
+
+X 
+(cid:2) 
+
+
+
+
+
+X 
+(cid:2) 
+
+
+
+– The robot’s ability to speak and understand speech; if it 
+could talk, is the robot multilingual? [92] claims robots 
+need to communicate with the elderly to provide care and 
+companionship; 
+– Different aspects of the robot’s vision-based capabilities 
+for functionalities. We assess whether the robot can detect 
+faces, recognise them, and understand the environment to 
+gaze at the elderly and understand their facial emotions; 
+– Nadine’s conversational and empathetic capabilities vis- 
+à-vis other robots. Nadine is a conversational, empathetic 
+robot, and we compare this capability with other robots 
+[17,93]. Nadine is a conversational, empathetic robot, and 
+we compare this capability with other robots. 
+– If previous robots were capable of engaging the elderly 
+using memory. The ability to give reminders and remem- 
+ber past conversations to initiate and sustain personalised 
+conversations is crucial to a robot’s ability to provide 
+companionship to the elderly [92]). Having a long- 
+term memory would allow Nadine to create a high-level 
+behavioural system, enabling her to interact with the 
+elderly in richer forms. Nadine already could use pre- 
+vious memories of places, people, objects, or performed 
+behaviours to enhance interactions and establish long- 
+term relationships [94]. 
+– If previously studied robots could control and interact 
+with the devices around them, such as TV, speakers, and 
+temperature control. IoT is an emerging vision that brings 
+together pervasive sensors and objects with robotic and 
+autonomous systems [95]. 
+Apart from making conversation, we intended to ﬁnd out 
+what other activities these robots could host. We also clas- 
+siﬁed these activities based on the study environment and 
+the number of participants. Furthermore, we built our clas- 
+siﬁcation around the analysis method used for the statistical 
+results in previous studies, speciﬁcally, AI- or ML-enabled. 
+We also inquired if the studies used observational tools, such 
+as MPES and OERS, to analyse users’ engagement. 
+To reap the beneﬁts of SARs for healthcare, key stake- 
+holders, including healthcare professionals, therapy staff, and 
+
+
+
+managers in institutional settings, must become essential role 
+players in the eventual acceptance of robot technology [61]. 
+Our contribution is to study several interactions between pro- 
+fessional therapists and the elderly. These interactions are 
+deﬁned as appropriate behaviour models required for our 
+robot to best perform at nursing homes. In our study, we 
+considered the following holistic parameters: 
+
+
+– Multilingual conversation with personalized speech; 
+– Computer vision and deep learning-based methods to 
+
+
+
+These parameters deduced from table 1 were not taken into 
+account by previous investigations. We believe that our study 
+could be a step forward in introducing a humanoid social 
+robot with a human-like appearance and characteristics that 
+mimic human behaviour, emotion recognition, and gesture 
+synthesis. We were the ﬁrst to use deep learning-based model 
+parameters to verify and validate results obtained in data 
+analysis. Our evaluation method incorporates video analysis 
+and the use of observational tools, like OERS and MPES, 
+to determine the holistic effect of the conversation sessions 
+with Nadine as a companion for the elderly. 
+Robots have many advantages, including providing con- 
+stant help and ensuring they offer the same quality and 
+consistency without discrimination. They are also less likely 
+to make mistakes. However, they, undoubtedly, lack person- 
+ality, human empathy and naturalness, and a human personal 
+approach—for the time being. The current research aimed to 
+address the possible acceptance and limitations of the robotic 
+technology used in the broad area of HRI up to now. In this 
+regard, we intended to answer the following research ques- 
+tions: 
+– Does a social robot that can initiate contact and have 
+personal information of residents encourage interaction, 
+participation and engagement? (the residents sought to 
+interact with Nadine without staff, calling Nadine by 
+name, showing “affection” to Nadine, looking at Nadine 
+or calling Nadine for numbers). 
+– Does the presence of a social robot increase social inter- 
+activity (connect with the residents, increase smiling, 
+laughing and conversations) amongst residents within the 
+environment? 
+– Does the presence of a social robot reduce the amount 
+of time/attention from care staff to attend to the nega- 
+tive emotional events of the residents, e.g. quarrelling 
+amongst (cognitively impaired elderly), repeated calling 
+for staff, apathetic behaviour and low engagement? (e.g. 
+
+positive behavioural responses, like paying attention and 
+talking to Nadine, curiously observing Nadine instead of 
+indifference/“stoning”). 
+
+We used Nadine, a socially intelligent, realistic humanoid 
+robot with natural-like skin, hair, and appearance, for our 
+experiments. She was placed at the centre of an elderly home 
+ward for this experiment. Fourteen residents participated in 
+29 one-to-one interaction sessions with the help of the care 
+staff. To understand the overall results at the end of the study, 
+Nadine was left running for three hours each morning for six 
+days thereafter without the care staff to observe residents’ ini- 
+tiative. During interaction sessions, residents could interact 
+with Nadine; she initiated conversations when she observed 
+residents being inactive/passive for a long time. 
+In order to get a holistic idea of the effect of Nadine’s inter- 
+action sessions with the residents, we placed ﬁve different 
+cameras at different angles to record the one-to-one interac- 
+tion sessions. Complete footage from all available cameras 
+was analysed and compared without compressing them into 
+single average sessions. 
+Using the same video footage as the one analysed by 
+computer vision methods, we conducted an observational 
+analysis to validate our ﬁndings. Thus, Nadine’s potential to 
+incite the engagement of residents in the activity and its effect 
+on their emotional state were studied. 
+
+Our research was reviewed by the Research Integrity & Ethics 
+ofﬁce and approved by the Institutional Review Board of 
+NTU under the application number IRB-2020-09-056. 
+Participation in our study was entirely voluntary. It was 
+the participant’s choice of whether to participate or not. Par- 
+ticipants had the right to refuse to participate or withdraw 
+from the study, even if the participant had agreed to partici- 
+pate earlier. All participants were given pertinent information 
+(according to their level of understanding and in the language 
+that they understand) to make an informed decision about 
+participating in the study. They signed a consent form if they 
+agreed to participate in the study. For non-English speaking 
+participants, an interpreter ﬂuent in both English and the par- 
+ticipant’s spoken language was used to help in the consent 
+process. A representative of the NTU research team, a BHEH 
+medical social worker and a Certiﬁed Dementia Practitioner 
+from Goshen Consultancy Services Pte Ltd conducted the 
+process of seeking consent from the residents using a new up 
+to standard NTU-IRB Consent form to convey the complete 
+information of the study to the participants in layman terms 
+to help the participants make an informed decision. BHEH 
+
+
+
+medical social worker and Goshen Consultancy Services Pte 
+Ltd who are Certiﬁed Dementia Practitioner helped us select 
+the right participants. 
+
+In considering the ethical issues in various applications of 
+robotics in elderly care, we have observed and critically 
+emphasized on the safety protocols and safe distancing mea- 
+sures for Covid-19. BHEH maintained and followed the 
+guidelines given by the Ministry of Health. As older peo- 
+ple are more vulnerable to Covid infections, utmost care 
+in personal hygiene and safe distancing in line with the 
+rules and regulations set by the Ministry of Health, Singa- 
+pore, were undertaken. The NTU research team underwent 
+temperature monitoring and safety check-in before every 
+experiment. Research team maintained the one-meter dis- 
+tance with the elderly and made no physical contact with 
+them. NTU research team visits were limited to software and 
+hardware maintenance of the Nadine robot. Masks were worn 
+by all care-staff and the research team at all times. Sanitiz- 
+ers and wet wipes were placed all across the ward room for 
+disinfecting the equipment, such as microphones and the sur- 
+faces touched by the residents and the team. Each surface and 
+items were disinfected before and after each experiment. The 
+experiments and the visits to the nursing home commenced 
+only when it was safe and duly advised by the Ministry of 
+Health, Singapore. 
+
+Nadine has 27 degrees of freedom (DOF), enabling her to 
+make facial movements and gesticulate effectively, as docu- 
+mented in [96] and [97]. 
+Figure 5 shows Nadine’s architecture, as developed by 
+[5]; it consists of three layers: perception, processing, and 
+interaction. Nadine receives audio and visual stimuli from 
+microphones, 3D cameras and web cameras to perceive user 
+characteristics and her environment, which are then sent to 
+the processing layer. The processing layer is the core mod- 
+ule of Nadine that receives all results about the environment 
+from the perception layer and acts upon them. This layer 
+includes various submodules, such as dialogue processing 
+(chatbot), affective system (emotions, personality, mood), 
+and Nadine’s memory of previous encounters with users. The 
+action/interaction layer consists of a dedicated robot con- 
+troller, including emotion expression, lip synchronisation, 
+and gaze generation. 
+Nadine can recognise people she has met before and the 
+faces she is trained to identify and engage with in an ongo- 
+ing ﬂowing conversation. She can also help people read text, 
+show images, put on Skype sessions, and respond to emails. 
+Nadine can be considered part of the human-assistive tech- 
+nology [98], as she can assist people over a continuous period 
+without breaks; she has previously worked at different places 
+that required her to work for long hours [99]. 
+
+Nadine supports an adaption based on the Nir Eyal model 
+of lifecycle hooks presented by Eyal [100]. Any habit starts 
+with an external trigger, followed by usage, and the usage 
+stimulates more usage, an advantage the elderly can gain 
+from the robot. Nadine’s perception engine helps understand 
+the habitual lifecycle of the elderly, prompting an internal 
+trigger in the elderly to use the robot further. She carefully 
+records residents’ data and gives intelligent, actionable infer- 
+ences on their likes and dislikes. Empathy mapping involves 
+actions based on the inferences, which further strengthens 
+
+
+
+
+In social and healthcare assistive robotics, proactiveness is 
+highly desirable in robots that serve as companions or the 
+care staff. Initiating a conversation is a proactive task. Nadine 
+can respond to questions and keep up the conversation but 
+cannot proactively initiate a conversation. We developed and 
+deployed an uncomplicated proactive module that enables 
+Nadine to start a conversation proactively to solve this prob- 
+lem. The goal is for Nadine to be able to start a conversation 
+and continue to keep residents engaged in it. 
+To create this module, we used the BDI framework pro- 
+posed in [104]. We also integrated a state-of-the-art gaze 
+tracking model in Nadine, in which the coordinates of the 
+point of gaze of the subject are estimated using the model pro- 
+posed in [105]. This point is calibrated with the Kinect depth 
+map as a reference to translate to real-world coordinates of 
+the gaze point. A threshold that helps Nadine recognise when 
+a resident is quiet or passive for a very long time and then trig- 
+gers her to initiate a conversation from her proactive module 
+was applied. 
+
+Nadine uses the identity of a person to customise her 
+responses and behaviour. For face recognition, a web camera 
+attached to Nadine focuses on the person currently talking 
+to her. She uses a deep neural network based on solutions 
+in [106], which can detect faces and identify them. From a 
+training perspective, only 10 images of a person are required 
+to achieve a good performance. Ten images of each resident 
+were acquired and used to train Nadine to identify them. 
+During the interaction, the face is passed through the 
+trained model to identify the resident using the web camera 
+stream; this information is critical to Nadine’s operation. A 
+user identity or name acts as an input to other submodules to 
+change verbal and nonverbal behaviours. For example, dur- 
+ing interactions, verbal responses can include the name of the 
+resident. Moreover, based on the person’s identity, the mem- 
+ory submodule loads different memories, including previous 
+conversations with the user, to trigger appropriate verbal and 
+nonverbal responses, depending on the context of the con- 
+versation. The affective module also uses this information to 
+react to emotion and mood changes if necessary. 
+
+To better suit residents, we updated the questions and 
+responses in Nadine’s personal memory. Her responses to 
+the residents should rather be enriching than chatbot-based. 
+Based on our study with therapists at nursing homes, we 
+understand that Nadine’s response should be positive and 
+not end with a statement. She should show curiosity, and her 
+
+residents’ attachment to the robot companion; this is the life- 
+cycle hook. We aimed to determine how the lifecycle hook of 
+the elderly’s behaviour improves interaction as the resident 
+starts investing time with the robot companion and ensures 
+that an internal trigger is set off to prompt the elderly to use 
+the companion. Studies have proven that collaborative care 
+models have improved the health of the elderly. The objec- 
+tive of this research was to see Nadine’s impact and improve 
+her Empathy-AI mapping capabilities. 
+[101] and [102] reported that most robots designed for the 
+elderly do not fulﬁl the needs and requirements to perform 
+their best. For Nadine to perform her best at nursing homes, 
+we updated some previous models and developed new mod- 
+ules recommended in an earlier study [103]. The modules 
+that were updated/expanded for Nadine as a caretaker at a 
+nursing home are as follows: 
+– Show images, songs and videos 
+– Proactive module 
+– Recognise residents 
+– Update Nadine’s Personal Memory and Response 
+– Update in Affective System—Emotion Engine 
+– Update in speech tone and speed 
+
+We created an interface that plays songs or videos or shows 
+images of residents’ choice to enable them to interact with 
+Nadine. The module allows residents to play songs and 
+videos and show images if these items are available in the 
+database; the nursing home staff created the database based 
+on the likes and usual requests from residents. Nadine played 
+the requested item triggered by the keywords on the database, 
+and this item was displayed on the external touch screen. 
+
+
+
+answers should be in a manner that invokes reactions from the 
+residents and keeps them involved in the conversation. For 
+this, we updated Nadine’s personal memory and responses 
+in the chatbot. 
+
+Any individual can be characterised by their personality and 
+emotions. Subconsciously, people convey different messages 
+through their display of emotions. Changes in emotion can 
+occur in the form of facial expressions, change in tone and 
+pitch of speech, and gestures. As a social humanoid robot, 
+Nadine has an emotion engine that controls her sensations, 
+personality, and mood during interactions, enabling her to 
+perceive the situation (user and environment) and adjust her 
+emotions and behaviour accordingly. As a result, Nadine can 
+generate different emotions, including pleasure, arousal, and 
+dominance. 
+For Nadine to perform best in nursing homes, she needs 
+to appear patient and show no negativity or anger. There- 
+fore, Nadine should exhibit a positive temperament only. A 
+conﬁguration ﬁle was set to different parameters that allow 
+Nadine to stay positive and behave accordingly, even when 
+residents are frustrated, angry, or upset with her. 
+
+Another vital aspect for Nadine’s optimal functioning is 
+to reveal positive emotions in her speech synthesis output, 
+mainly by changing her speech’s pitch, tone, and speed and 
+including modulations. We modiﬁed the speech synthesiser 
+to adapt speech output so that Nadine speaks slower and 
+louder and in a low tone to make it easier for residents to 
+understand her. 
+
+Using the analytical procedures provided below, we obtained 
+the data for every video of Nadine’s interactions with all 
+residents and analysed them using statistical methods to get 
+meaningful comparisons. 
+
+
+Analysing emotional facial expressions is essential to under- 
+standing feelings and determining whether the conversations 
+are enjoyable. Facial Expression Recognition has promis- 
+ing applications in human-computer interaction and mental 
+health assessment. In order to get a holistic idea of the effect 
+of Nadine’s interaction sessions with residents at the Nursing 
+home, we placed ﬁve different cameras at various angles to 
+record the sessions and analysed the videos of 11 residents. 
+Because our research focuses on the engagement of the 
+elderly in one-to-one interactions, we analysed only the two 
+cameras placed at angles that directly focused on the faces 
+of the elderly. Five different cameras were placed at different 
+angles throughout the room to capture the elderly as a group 
+from different angles. However, the footages obtained from 
+the two speciﬁc cameras angled directly at the elderly allowed 
+us to get a clear view of the expressions of the individual 
+elderly and their movements and gestures while conversing 
+with Nadine on a one-to-one basis. On the videos obtained, 
+we used objective tools based on computer vision techniques 
+to evaluate the emotional and physical states of the elderly to 
+understand their engagement in the conversations. Emotional 
+cues, such as positive, negative, and neutral, found through 
+facial expressions were used to determine the interest levels 
+and engagement of the elderly. The following ﬁve evaluation 
+metrics were studied: 
+– Positive Emotional engagement, which reﬂects the pos- 
+itive effect of the conversations with Nadine on the 
+residents; 
+– Negative Emotional engagement, which reﬂects the neg- 
+ative effect of the conversations with Nadine on the 
+residents; 
+– Neutral Emotional engagement, which reﬂects the neu- 
+tral effect of the conversations with Nadine on the 
+residents; 
+
+
+
+
+To provide a quantitative analysis of these ﬁve metrics, 
+we exploited the advantages of DNNs in efﬁcient video 
+processing. Notably, we applied four different networks: a 
+face detector1, an expression recogniser, an action detector2 
+and an optical ﬂow estimator [107]. The face detector was 
+used to estimate the locations of faces in any given frame 
+of the videos. Moreover, because all the residents were in 
+wheelchairs, their relative locations were inferred based on 
+their facial locations. Only the faces of the elderly were 
+detected, particularly as the nursing care staff were wear- 
+ing medical masks throughout the sessions with Nadine. We 
+adopted the Dlib library with its pre-trained convolutional 
+neural network (CNN) to implement the face detector. 
+The expression recogniser categorised the expressions 
+of detected faces. We considered eight expressions: Neu- 
+tral, Happy, Sad, Surprise, Fear, Disgust, Anger, and Con- 
+tempt. To this end, the ResNet-50 [108] was used, with the 
+1 http://dlib.net/ 
+2 https://github.com/open-mmlab/mmaction2 
+
+
+
+tive measures of Emotional engagement and Movement were 
+as follows: 
+Positive Emotional Engagement of residents was deﬁned 
+by the following equation using their positive expressions 
+in every frame, where st and surt are the conﬁdences of 
+detecting Smile and Surprise expressions, respectively: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+smile = 1 
+L 
+=1 
+surprise = 1 
+L 
+Negative Emotional Engagement of residents was deﬁned 
+by the following equation using their negative expressions 
+in every frame, where sadt , ft , disgt , angt and cont are the 
+conﬁdences of detecting Sadness, Fear, Disgust, Anger, and 
+Contempt, respectively: 
+
+
+
+
+
+
+
+
+
+sadness = 1 
+L 
+
+
+
+
+
+
+
+
+
+
+
+fear = 1 
+L 
+=1 
+disgust = 1 
+L 
+
+CNN architecture as the backbone, to categorise expres- 
+sions. The recogniser was trained on the largest in-the- 
+wild facial expressions dataset AffectNet [109] with about 
+320K (excluding None, Uncertain and Non-Face categories) 
+images till the network was converged. In order to dis- 
+entangle emotions during sessions, the expressions were 
+grouped into 3 categories: Positive, Negative, and Neutral. 
+The positive category consisted of Happy and Surprise, 
+the negative of Sad, Fear, Disgust, Anger, and Contempt, 
+and the neutral solely of the neutral expressions of the 
+elderly. 
+The action detector measured the motions and actions of 
+detected faces, generating action proposals, which are the 
+locations and conﬁdences of detecting an action. We imple- 
+mented the action detector based on the pre-trained temporal 
+segment network [110] provided in the MMAction2 library. 
+The action detector informed us of the movement of the 
+elderly during the session, as the face detector detected only 
+their faces. 
+The optical ﬂow estimator monitored moving targets. 
+We estimated dense optical ﬂow via the recurrent all-pairs 
+ﬁeld transformation network. For an arbitrary region in 
+each frame during movement, the average magnitude of the 
+estimated optical ﬂow in the region was used to measure 
+the intensity of movement of the elderly during the ses- 
+sions. 
+
+in spontaneous facial 
+expression recognition, Activity and Movement detection in 
+the continuous video stream of every resident. The quantita- 
+
+
+
+
+
+
+– Cognitive Domain: This includes the mental processes, 
+learning, and understanding that residents 
+thinking, 
+demonstrated during interaction with Nadine. 
+– Communication and Language Abilities 
+– Orientation, Attention, and Memory 
+
+
+In order to understand the emotional reactions of the res- 
+idents when interacting with Nadine, a repeated-measure 
+ANOVA was conducted, revealing signiﬁcant differences in 
+the emotions experienced by the residents (F(1, 316) = 
+1818.306, p > .001). The levels of various emotions can 
+be seen in Fig. 7 
+Emotional patterns between the ﬁrst ten and the last ten 
+sessions were not different, as indicated by the absence of 
+an interaction effect in the mixed ANOVA (F(7, 1442) = 
+.834, p = .559) and also observable in Fig. 8. 
+In order to determine how Nadine’s presence affected the 
+need for the activities of the care staff, the frequency of 
+their visits was used as a predictor in linear regression, with 
+the optical ﬂow as the criterion. The model was signiﬁcant 
+(F(1, 333) = 7.959, p = .005, β = .153), indicating that 
+the activity of the care staff increased with Nadine’s presence 
+over time. To determine the impact of Nadine’s presence on 
+residents’ activity, linear regression with the frequency of 
+their visits as the predictor and the body score as the crite- 
+rion was performed. There were no signiﬁcant connections 
+between the two (F(1, 335) = .589, p = .443). The mean 
+number of visits was 14.25, with a standard deviation of 5.28. 
+The frequency of visits for each of the residents can be seen 
+in Table 2. 
+The relationship between the number of visits and various 
+emotions is presented in Table 3. People who interacted with 
+the robot more showed more neutral expressions, less fear, 
+and smiled less. The other correlations were not signiﬁcant 
+at the α = .05 level. 
+The average duration of the conversations was 909 sec- 
+onds (15 minutes and 9 seconds), with the standard correla- 
+tion of 0.515. The serial number of the session successfully 
+predicted the conversation length (F(1, 335) = 18.610, p < 
+.001, β = .229) which increased over time. . Conversation 
+length correlated negatively with smile and positively with 
+neutral at the α = .05 level (Table 4). 
+The data from the observation of video material of the 
+two-week open session indicate that participants mostly felt 
+positive emotions when interacting with Nadine; their pre- 
+dominant emotions were neutral and happiness (as shown in 
+
+For Activity and the Movement, we used the activity detec- 
+tion and the optical ﬂow estimator, where ot and dt are the 
+average magnitude of optical ﬂow and the conﬁdence of 
+detecting activity, respectively, as follows: 
+
+
+
+
+
+
+
+
+L 
+
+t=1 
+
+
+
+activity = 1 
+L 
+body_movement = 1 
+L 
+
+Residents were observed during their interactions with 
+Nadine using video recording with the following tools: 
+
+
+
+
+The OERS and MPES observation data were collected 
+over 4 sessions, with each session lasting from 8-25 mins. A 
+summary of the 10 case studies was compiled to capture the 
+changes and progress of residents. This summary was used to 
+validate the results and ﬁndings of the observational data and 
+qualitatively evaluate residents’ progress using a 3-domain 
+conceptual framework [111]. 
+The 3-domain conceptual framework (3D Framework) 
+was developed to evaluate the impact of the one-to-one inter- 
+action with Nadine. This holistic framework that includes 
+the psychosocial, emotional, and cognitive domains aimed to 
+explain the impact of the one-to-one resident–Nadine inter- 
+action through the various domains and dimensions. The 
+framework is conceptually organised in the following man- 
+ner: 
+– Psychosocial Domain: This domain includes emotions, 
+personality, self-esteem, and relationships that impacted 
+empathy-related behaviours that residents demonstrated 
+during interaction with Nadine. 
+
+– Emotional Domain: This includes the feelings and emo- 
+tions that residents demonstrated during interaction with 
+Nadine. 
+
+
+
+
+
+
+
+
+
+
+
+anger = 1 
+L 
+=1 
+contempt = 1 
+L 
+
+
+Fig. 8 Comparing emotional patterns between the ﬁrst and the last 10 
+sessions 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table 3 The correlations between various emotions and the frequency 
+of visiting the robot 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.132 
+−.117 
+0.003 
+−0.004 
+−.402 
+0.069 
+
+0.073 
+−0.093 
+0.104 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table 4 The correlations between various emotions and the length of 
+conversation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.116 
+− .112 
+− 0.041 
+− 0.027 
+0.018 
+− 0.049 
+− 0.005 
+− 0.035 
+0.036 
+
+
+
+
+
+
+
+
+
+
+Fig. 10 MPES Summary. Session one denotes the initial 10 sessions; 
+Session two shows the subsequent 4 sessions; Session three indicates 
+the next 5 sessions; Session four represents the ﬁnal 10 sessions 
+
+Fig. 9). Furthermore, participants never or very rarely showed 
+disgust, contempt, fear, anger, and surprise; they showed a 
+moderate amount of sadness. Pearson’s correlations revealed 
+no difference in emotions based on the amount of time the 
+residents spent with Nadine (r values ranging from .011 to 
+.205, p values ranging from .174 to .943). 
+
+OERS and MPES observational data showed positive changes 
+in residents’ emotional state and engagement level over the 
+29 sessions of 1-to-1 interactions with Nadine. 
+Using the MPES tool, we observed residents’ engage- 
+ment levels at baseline. The ﬁrst 10 sessions yielded 10% 
+Other Engagement (OE1), 30% Passive Engagement (PE1) 
+and 60% Constructive Engagement (CE1). The engagement 
+levels then steadily improved, as seen in the shift towards CE 
+in the subsequent 9 sessions (100% CEu2) and ﬁnal 10 (90% 
+CE2 and 10% CE1). The MPES tool also showed improve- 
+ments in residents’ engagement time, from less than half 
+of the session at baseline to more than half of the session 
+towards the end of the program, as shown in Fig. 10. In gen- 
+eral, residents demonstrated improvement in the quality and 
+Fig. 11 OERS Summary. Session one denotes the initial 10 sessions; 
+Session two shows the subsequent 4 sessions; Session three indicates 
+the next 5 sessions; Session four represents the ﬁnal 10 sessions 
+duration of their engagement over the interaction programme 
+with Nadine. 
+Per the OERS tool, as seen in Fig. 11, the emotion ratings 
+of the 10 baseline sessions were 10% AF and 90% GA, which 
+progressively improved over the interaction programme as 
+the residents’ emotions improved to 90% P, 10% GA, and 
+0% of AF. 
+
+We placed Nadine at a nursing home and studied the effects 
+of her presence in one-to-one interactions with the residents 
+through different means. A psychotherapist performed the 
+studies via two chosen methods: computer- and observation- 
+based assessments. 
+Contrary to expectations and previous ﬁndings [112], 
+Nadine’s presence was associated with more activity from 
+the staff over time. A few factors can explain this increase 
+in the activity of the care staff during resident–Nadine inter- 
+actions. First, residents started to engage more with Nadine 
+
+
+
+over period of time. For residents to initiate conversations 
+with Nadine or continue the conversations they needed help 
+from the staff in picking up the mic and holding it. Also, 
+Nadine’s English and Mandarin modules were unfamiliar 
+to the residents, requiring staff to frequently translate and 
+explain Nadine “expressions” and language. Residents who 
+only spoke the dialect depended on the staff for translation 
+to “talk” to Nadine. However, when Nadine gave appropri- 
+ate responses, residents were observed to respond proactively 
+too. The residents interacted with Nadine, on average, half of 
+each day, indicating a moderate interest in interacting with 
+Nadine. 
+The residents interacted with Nadine on average a half of 
+the days that she was there. This indicates moderate interest 
+of theirs for interacting with her, which is to be expected from 
+the residents of a home for the elderly. However, those who 
+interacted with her more showed much less fear, indicating 
+that they felt more relaxed when interacting with her. They 
+also smiled slightly less, but this may be attributed to them 
+just normally interacting with Nadine. This is also conﬁrmed 
+by the fact that they expressed neutral emotions more, which 
+is in line with previous studies which showed more calmness 
+after interacting with Paro [29] but also contradictory to stud- 
+ies which showed less neutral affect for residents interacting 
+with Paro [30]. 
+On average the residents conversed with Nadine for 
+around 15 minutes. This is most likely the attention span 
+that they are able to invest in the conversation with her. It 
+may also be the limit of their interest in the interaction. With 
+time, the residents became more and more accustomed to 
+Nadine, as the conversations became longer over time. Fur- 
+thermore, the residents showed less smiling and more neutral 
+expressions with longer conversations. This is probably due 
+to them ﬁnding Nadine less funny or mesmerizing over time, 
+but more interesting as a conversation partner. 
+The ﬁndings indicate signiﬁcant positive changes noted in 
+the residents’ responses (well-being) across the interaction 
+programme with Nadine. The key ﬁndings from the obser- 
+vational results suggest that residents responded positively 
+to Nadine through increased positive emotional expression, 
+quality of engagement, and engagement duration. These 
+outcomes were partially supported by the numerical data 
+from the computer- and observation-based methods, which 
+showed no changes in positive emotions that were rather high 
+throughout the assessment. Furthermore, disgust decreased 
+with time. Additionally, residents’ positive emotions (like 
+smile and neutral) overwhelmingly dominated negative ones 
+(like fear, disgust, contempt, and anger); sadness was mod- 
+erately expressed but still at a lesser degree than smile and 
+neutral emotions. 
+Analytical ﬁndings using both the observational data and 
+case studies were encouraging for human–robot interaction 
+(HRI), suggesting the following: 
+
+– Improved well-being for residents in nursing homes: 
+Residents in nursing homes appeared to accept and ben- 
+eﬁt from their interactions with Nadine, impacting their 
+psychosocial, emotional, and cognitive needs. All our 
+participants demonstrated responses that surpassed the 
+usual nursing home activity engagement; they had oppor- 
+tunities to display the different domains of empathy that 
+provided a sense of purpose and connection with the 
+social robot. The residents also showed higher activity 
+based on numerically increased optical ﬂow, which is 
+excellent for their motoric and social development. This 
+type of engagement is often not encountered in nursing 
+homes; it provides opportunities for residents to chal- 
+lenges their curiosity and try to understand the social 
+robot, motivates them to ﬁnd ways to connect with it, and 
+instils in them the patience and nurturing spirit towards 
+helping their companion. Eventually, there were notice- 
+able improvements in the communication abilities for 
+90% of the residents, regardless of their cognitive abili- 
+ties. Nadine instilled in the residents a sense of purpose 
+and affection, allowing them to care for and nurture the 
+robot. 
+– The residents who interacted less frequently with Nadine 
+were probably afraid of her: Fear and the frequency of 
+interactions with Nadine correlated negatively, indicating 
+that the elderly who interacted less with her may have 
+feared her. Despite her highly humanoid appearance and 
+behaviour, some of the elderly still feared her, which is 
+unfortunate and a missed opportunity for development. 
+The elderly probably need more time and education to 
+get used to Nadine and stop being afraid. However, the 
+apparent positivity others derived from interacting with 
+Nadine could have spread among the fearful residents 
+over time. 
+– Emotional expression Responses: Those who interacted 
+more with Nadine showed much less fear and an increas- 
+ing level of affection for Nadine through their nonverbal 
+and verbal communications, indicating that they felt more 
+relaxed with her. These residents also smiled slightly less, 
+possibly because they perceived their interaction with 
+Nadine as purely normal. Their more frequent expres- 
+sion of neutral emotions supports this assumption, which 
+is in line with observations from previous studies showing 
+more calmness after interacting with Paro [29] However, 
+our observation contradicts the view from another study 
+with less neutral affect for residents interacting with Paro 
+[30]. Still, our inclusion of new tests (presented above) 
+that previous studies had not run should tilt the pendulum 
+of advantage towards our ﬁndings. 
+– Positive intervention for residents with cognitive impair- 
+ment or dementia: Residents with cognitive impairment 
+and dementia appeared to improve their cognitive abil- 
+ities as they interacted with Nadine. As seen in the 
+
+
+eight residents with cognitive impairment and/or demen- 
+their communication and language abilities and 
+tia, 
+mental processes improved signiﬁcantly. Despite their 
+cognitive impairment, their level of empathy appeared 
+reasonably intact and may have compensated for their 
+cognitive deﬁcits and promoted appropriate responses 
+and behaviours; this sparks exciting possible interven- 
+tions where social robots could stimulate and promote 
+the unaffected senses in persons with cognitive impair- 
+ment. 
+– Increased productivity by augmenting or reducing human 
+resources: Social robots can augment or reduce the 
+stafﬁng needed in nursing homes. This study featured 
+the use of a social robot that was operational at ﬁxed 
+timing. Residents only interacted with Nadine at speciﬁc 
+times. Despite the robot’s rigidity and inconsistent per- 
+formance, the residents were very accommodating and 
+affectionate and nurtured it. 
+Since Nadine has a humanoid appearance and the ability 
+to communicate, read, and make facial expressions related to 
+emotions, it is logical to assume that her presence can simul- 
+taneously improve the state of residents in nursing homes 
+and reduce the burden on the nursing home staff. The real- 
+ism of Nadine’s appearance and interactions is of paramount 
+importance for her usage in human interactions, especially 
+amongst the elderly. Because this group of citizens is least 
+familiar with technology, this gap could be bridged using 
+human-like robots. All the beneﬁts of having people do a par- 
+ticular job could henceforth be combined with the beneﬁts 
+of using robots, which leads to the best possible outcomes 
+for both users and organisations. That is why research on 
+humanoid robots is so important and why it needs further 
+development. 
+This study showed that using Nadine in a one-to-one inter- 
+action (video captured during all sessions 3) setting could be 
+beneﬁcial to cognitively impaired residents in nursing homes, 
+which is a step in the right direction. Future studies should 
+continue investigating these issues and determining all the 
+settings in which humanoid robots’ usage could be beneﬁ- 
+cial. 
+
+We conﬁrmed that using social robots can undoubtedly help 
+the well-being of care home residents. However, much sci- 
+entiﬁc work must still be conducted on and with these robots 
+to ensure the continuity of users’ well-being daily: more 
+research has to be conducted on speech recognition and 
+3 https://www.dropbox.com/sh/hln4fhnj15o8d95/ 
+AACWKdFDI9r5HDjuCQSlVXpRa?dl=0 
+understanding, the awareness of social robots, multi-party 
+interaction, and the capability to move around and inter- 
+vene with residents. The social robot should also combine 
+multi-functions to grasp objects and bring them wherever 
+the resident is. 
+A better speech recogniser must also be developed to 
+understand the broken/soft speech spoken by the elderly. We 
+observed that Nadine could not always answer the elderly 
+correctly due to her inability to understand their speech, an 
+issue not faced by healthy adults. In general, speech recog- 
+nition systems are optimised to an average adult’s voice, 
+with speech tending to exhibit a lower accuracy rate when 
+recognising an older adult’s voice because of speech articu- 
+lation and speaking style. The elderly’s speech patterns have 
+a slower speech rate with lengthier inter-syllabic silence and 
+slightly lower speech intelligibility. Therefore, the speech 
+synthesiser must be modiﬁed to adapt speech output to make 
+it easier for the elderly to understand them. Speech under- 
+standing signiﬁcantly degrades with ageing, particularly in 
+noisy environments. A robot should speak slower and have a 
+higher volume with a low tone to help the elderly understand 
+and interact effectively. The synthesiser must convey appro- 
+priate emotions while maintaining the speed of the robot 
+speech. Age-related deﬁcits in speech-in-noise understand- 
+ing pose a signiﬁcant problem for older adults. There is a 
+need to develop a better and dedicated speech synthesiser for 
+assistive robots that serve the purpose of companionship to 
+the elderly. 
+Our experiments demonstrate the need for socially assis- 
+tive robots to operate in environments with multiple users. 
+The robot control systems that govern these multi-party 
+interactions must be evaluated from technical and social 
+standpoints(97). Social robots are becoming unstuck in more 
+and more situations where they must interact with multi- 
+ple users simultaneously. We believe that the multi-party 
+interaction system will render robots more communicative, 
+cooperative, intuitive, capable of meeting expectations, and, 
+overall, able to make a better impression. 
+Our ﬁndings provide an excellent opportunity to develop 
+a mobile social robot that increases accessibility and inter- 
+action opportunities. A roving social robot with humanoid 
+features could support the existing stafﬁng resources as it 
+can generate optimal psychosocial, emotional, and cognitive 
+responses without the constant presence of a human worker. 
+At study sites, a roving robot could serve as an enhance- 
+ment to the workforce by moving around to generate active 
+and passive engagement from the residents within the daily 
+activity area through conversations with and among the resi- 
+dents, providing video and audio reminiscence materials, and 
+being an exciting and interesting object to behold. 
+Acknowledgements This research is partly supported by the National 
+Research Foundation, Singapore, under its International Research Cen- 
+
+
+
+tres in Singapore Funding Initiative, and Institute for Media Innovation, 
+Nanyang Technological University (IMI-NTU). Any opinions, ﬁndings, 
+and conclusions or recommendations expressed in this material are 
+those of the author(s) and do not reﬂect the views of National Research 
+Foundation, Singapore. We are very thankful to the institutional review 
+board (IRB) for their guidelines and support in ethical issues. Special 
+thanks to Chai Kooi Foong, Linda Lim, and Sau Wai from Bright Hill 
+Evergreen Home for their continuous support during this research. We 
+would like to thank our colleagues Tham Yiep Soon for his strong 
+technical support during the study and Ashwini Lawate for her help in 
+pre-processing the video material. 
+Open Access This article is licensed under a Creative Commons 
+Attribution 4.0 International License, which permits use, sharing, adap- 
+tation, distribution and reproduction in any medium or format, as 
+long as you give appropriate credit to the original author(s) and the 
+source, provide a link to the Creative Commons licence, and indi- 
+cate if changes were made. The images or other third party material 
+in this article are included in the article’s Creative Commons licence, 
+unless indicated otherwise in a credit line to the material. If material 
+is not included in the article’s Creative Commons licence and your 
+intended use is not permitted by statutory regulation or exceeds the 
+permitted use, you will need to obtain permission directly from the copy- 
+right holder. To view a copy of this licence, visit http://creativecomm 
+ons.org/licenses/by/4.0/. 
+
+1. Panou, M., Bekiaris, E., Touliou, K., Cabrera, M.: “Use cases for 
+optimising services promoting autonomous mobility of elderly 
+with cognitive impairments,” (2015) 
+2. Panou, M., Cabrera, M., Bekiaris, E., Touliou, K.: “Ict services 
+for prolonging independent living ofelderly with cognitive impair- 
+ments.” AAATE, (2015) 
+3. Agrigoroaie, R., Ferland, F., Tapus, A.: “The enrichme project: 
+Lessons learnt from a ﬁrst interaction with the elderly,” In: Inter- 
+national Conference on Social Robotics. Springer, pp. 735–745 
+(2016) 
+4. Tobis, S., Cylkowska-Nowak, M., Wieczorowska-Tobis, K., 
+Pawlaczyk, M., Suwalska, A.: Occupational therapy students’ per- 
+ceptions of the role of robots in the care for older people living in 
+the community. Occupational therapy international 2017, (2017) 
+5. Ramanathan, M., Mishra, N., Magnenat Thalmann, N.: “Nadine 
+humanoid social robotics platform,” In: Computer Graphics Inter- 
+national Conference. Springer, pp. 490–496 (2019) 
+
+
+7. Judge, K.S., Camp, C.J., Orsulic-Jeras, S.: Use of montessori- 
+based activities for clients with dementia in adult day care: effects 
+on engagement. Am. J. Alzheimer’s Disease 15(1), 42–46 (2000) 
+8. Pollack, M.E., Brown, L., Colbry, D., Orosz, C., Peintner, B., 
+Ramakrishnan, S., Engberg, S., Matthews, J.T., Dunbar-Jacob, 
+J., McCarthy, C.E., et al.: Pearl: A mobile robotic assistant for 
+the elderly. AAAI Workshop Automation Eldercare 2002, 85–91 
+(2002) 
+9. Pineau, J., Montemerlo, M., Pollack, M., Roy, N., Thrun, S.: 
+Towards robotic assistants in nursing homes: challenges and 
+results. Robot. Auton. Syst. 42(3–4), 271–281 (2003) 
+10. Law, M., Sutherland, C., Ahn, H.S., MacDonald, B.A., Peri, 
+K., Johanson, D.L., Vajsakovic, D.-S., Kerse, N., Broadbent, E.: 
+Developing assistive robots for people with mild cognitive impair- 
+ment and mild dementia: a qualitative study with older adults and 
+experts in aged care. BMJ Open 9(9), e031937 (2019) 
+
+11. Kim, G.H., Jeon, S., Im, K., Kwon, H., Lee, B., Kim, G., Jeong, H., 
+Han, N., Seo, S., Cho, H., Noh, Y., Park, S.E., Kim, H., Hwang, 
+J., Yoon, C., Ye, B.S., Chin, J., Kim, J.-H., Na, D.: Structural 
+brain changes after traditional and robot-assisted multi-domain 
+cognitive training in community-dwelling healthy elderly. PLOS 
+ONE 10, e0123251 (2015) 
+12. Fischinger, D., Einramhof, P., Papoutsakis, K., Wohlkinger, W., 
+Mayer, P., Panek, P., Hofmann, S., Koertner, T., Weiss, A., Argy- 
+ros, A., et al.: Hobbit, a care robot supporting independent living 
+at home: ﬁrst prototype and lessons learned. Robot. Auton. Syst. 
+75, 60–78 (2016) 
+13. Vincze, M., Fischinger, D., Bajones, M., Wolf, D., Suchi, M., 
+Lammer, L., Weiss, A., Pripﬂ, J., Körtner, T., Gisinger, C.: “What 
+older adults would like a robot to do in their homes-ﬁrst results 
+from a user study in the homes of users,” In: Proceedings of ISR 
+2016: 47st International Symposium on Robotics. VDE, pp. 1–7 
+(2016) 
+14. Bajones, M., Fischinger, D., Weiss, A., Puente, P.D.L., Wolf, D., 
+Vincze, M., Körtner, T., Weninger, M., Papoutsakis, K., Michel, 
+D., et al.: Results of ﬁeld trials with a mobile service robot for 
+older adults in 16 private households. ACM Trans. Human-Robot 
+Interaction (THRI) 9(2), 1–27 (2019) 
+15. Mišeikis, J., Caroni, P., Duchamp, P., Gasser, A., Marko, R., 
+Mišeikien˙e, N., Zwilling, F., de Castelbajac, C., Eicher, L., Früh, 
+M., et al.: Lio-a personal robot assistant for human-robot inter- 
+action and care applications. IEEE Robot. Autom. Letts. 5(4), 
+5339–5346 (2020) 
+16. Co¸sar, S., Fernandez-Carmona, M., Agrigoroaie, R., Pages, J., 
+Ferland, F., Zhao, F., Yue, S., Bellotto, N., Tapus, A.: Enrichme: 
+perception and interaction of an assistive robot for the elderly at 
+home. Int. J. Soc. Robot. 12(3), 779–805 (2020) 
+
+
+18. Khosla, R., Chu, M.-T.: Embodying care in matilda: an affective 
+communication robot for emotional wellbeing of older people 
+in Australian residential care facilities. ACM Trans. Manag. Inf. 
+Syst.(TMIS) 4(4), 1–33 (2013) 
+19. Martinez-Martin, E., Escalona, F., Cazorla, M.: Socially assis- 
+tive robots for older adults and people with autism: an overview. 
+Electronics 9(2), 367 (2020) 
+20. Salatino, C., Pigini, L., Van Kol, M.M.E., Gower, V., Andrich, 
+R., Munaro, G., Rosso, R., Castellani, A.P., Farina, E.: A robotic 
+solution for assisting people with mci at home: preliminary tests of 
+the enrichme system. Studies Health Technol. Inf. 242, 484–491 
+(2017) 
+21. Klamer, T., Allouch, S.B., Heylen, D.: “adventures of harvey— 
+use, acceptance of and relationship building with a social robot in a 
+domestic environment,” In: International Conference on Human- 
+Robot Personal Relationship. Springer, pp. 74–82 (2010) 
+22. Pu, L., Moyle, W., Jones, C., Todorovic, M.: The effectiveness 
+of social robots for older adults: a systematic review and meta- 
+analysis of randomized controlled studies. Gerontol. 59(1), e37– 
+e51 (2019) 
+23. Tsujimura, M., Ide, H., Yu, W., Kodate, N., Ishimaru, M., Shima- 
+mura, A., Suwa, S.: “The essential needs for home-care robots in 
+Japan,” J. Enabling Technol., (2020) 
+24. Alves-Oliveira, P., Petisca, S., Correia, F., Maia, N., Paiva, A.: 
+“Social robots for older adults: framework of activities for aging 
+in place with robots,” In: International Conference on Social 
+Robotics. Springer, pp. 11–20 (2015) 
+25. Cohen-Mansﬁeld, J., Dakheel-Ali, M., Marx, M.S.: Engagement 
+in persons with dementia: the concept and its measurement. Am. 
+J. Geriatr. psychiatry 17(4), 299–307 (2009) 
+26. Bradwell, H.L., Edwards, K.J., Winnington, R., Thill, S., Jones, 
+R.B.: Companion robots for older people: importance of user- 
+centred design demonstrated through observations and focus 
+
+
+groups comparing preferences of older people and roboticists in 
+South West England. BMJ Open 9(9), e032468 (2019) 
+27. Lohse, M., Hegel, F., Wrede, B.: “Domestic applications for social 
+robots: an online survey on the inﬂuence of appearance and capa- 
+bilities,” (2008) 
+28. Wada, K., Shibata, T.: Living with seal robots—its sociopsycho- 
+logical and physiological inﬂuences on the elderly at a care house. 
+IEEE Trans. Robot. 23(5), 972–980 (2007) 
+29. Lane, G.W., Noronha, D., Rivera, A., Craig, K., Yee, C., Mills, 
+B., Villanueva, E.: Effectiveness of a social robot, paro, in a va 
+long-term care setting. Psychol. Services 13(3), 292 (2016) 
+30. Moyle, W., Jones, C.J., Murﬁeld, J.E., Thalib, L., Beattie, E.R., 
+Shum, D.K., O’Dwyer, S.T., Mervin, M.C., Draper, B.M.: Use of a 
+robotic seal as a therapeutic tool to improve dementia symptoms: 
+a cluster-randomized controlled trial. J. Am. Med. Dir. Assoc. 
+18(9), 766–773 (2017) 
+31. Robinson, H., MacDonald, B., Kerse, N., Broadbent, E.: The psy- 
+chosocial effects of a companion robot: a randomized controlled 
+trial. J. Am. Med. Dir. Assoc. 14(9), 661–667 (2013) 
+32. Tapus, A.: “Improving the quality of life of people with dementia 
+through the use of socially assistive robots,” In: 2009 Advanced 
+Technologies for Enhanced Quality of Life. IEEE, pp. 81–86 
+(2009) 
+33. Tapus, A., Tapus, C., Matari´c, M.J.: “Music therapist robot for 
+individuals with cognitive impairments,” In: Proceedings of the 
+4th ACM/IEEE international conference on Human robot inter- 
+action, pp. 297–298 (2009) 
+34. Tapus, A., Tapus, C., Mataric, M.J.: “The use of socially assistive 
+robots in the design of intelligent cognitive therapies for people 
+with dementia,” In: 2009 IEEE international conference on reha- 
+bilitation robotics. IEEE, pp. 924–929 (2009) 
+35. Tapus, A., Tapus, C., Mataric, M.: “Music therapist robot: a solu- 
+tion for helping people with cognitive impairments,” In: IJCAI 
+Workshop on Intelligent Systems for Assisted Cognition, July, 
+Pasadena, CA, (2009) 
+36. Tamura, T., Yonemitsu, S., Itoh, A., Oikawa, D., Kawakami, A., 
+Higashi, Y., Fujimooto, T., Nakajima, K.: Is an entertainment 
+robot useful in the care of elderly people with severe dementia? J. 
+Gerontol. Series A: Biol. Sci. Med. Sci. 59(1), M83–M85 (2004) 
+37. Banks, M.R., Willoughby, L.M., Banks, W.A.: Animal-assisted 
+therapy and loneliness in nursing homes: use of robotic versus 
+living dogs. J. Am. Med. Dir. Assoc. 9(3), 173–177 (2008) 
+38. Ananto, R.A., Young, J.E.: “Robot pets for everyone: the untapped 
+
+39. Hamada, T., Okubo, H., Inoue, K., Maruyama, J., Onari, H., 
+Kagawa, Y., Hashimoto, T.: “Robot therapy as for recreation for 
+elderly people with dementia-game recreation using a pet-type 
+robot,” In: RO-MAN 2008-The 17th IEEE International Sympo- 
+sium on Robot and Human Interactive Communication. IEEE, pp. 
+174–179 (2008) 
+40. Sakairi, K.: “Research of robot-assisted activity for the elderly 
+with senile dementia in a group home,” In: SICE 2004 Annual 
+Conference, vol. 3. IEEE, pp. 2092–2094 (2004) 
+41. Homes, S., Nugent, B.C., Augusto, J.: Human-robot user studies 
+in eldercare: lessons learned. Smart Homes Beyond: Icost 2006, 
+4 (2006) 
+42. Barata, A., Martins, H., Mendes, R.: Application of social robots 
+for symptom control in institutionalized elderly patients with 
+dementia. Int. J. Robot. Eng. 2, 002 (2015) 
+43. Libin, A., Cohen-Mansﬁeld, J.: Therapeutic robocat for nurs- 
+ing home residents with dementia: preliminary inquiry. Am. J. 
+Alzheimer’s Disease Other Dementias ® 19(2), 111–116 (2004) 
+44. Moyle, W., Jones, C., Sung, B., Bramble, M., O’Dwyer, S., Blu- 
+menstein, M., Estivill-Castro, V.: What effect does an animal robot 
+called cuddler have on the engagement and emotional response of 
+older people with dementia? a pilot feasibility study. Int. J. Soc. 
+Robot. 8(1), 145–156 (2016) 
+45. Pripﬂ, J., Körtner, T., Batko-Klein, D., Hebesberger, D., Weninger, 
+M., Gisinger, C., Frennert, S., Eftring, H., Antona, M., Adami, I., 
+et al.: “Results of a real world trial with a mobile social service 
+robot for older adults,” In: 2016 11th ACM/IEEE International 
+Conference on Human-Robot Interaction (HRI). IEEE, pp. 497– 
+498 (2016) 
+46. Wada, K., Shibata, T.: “Robot therapy in a care house-its sociopsy- 
+chological and physiological effects on the residents,” In: Pro- 
+ceedings 2006 IEEE International Conference on Robotics and 
+Automation, 2006. ICRA 2006. IEEE, pp. 3966–3971 (2006) 
+47. Turkle, S., Taggart, W., Kidd, C.D., Dasté, O.: Relational artifacts 
+with children and elders: the complexities of cybercompanion- 
+ship. Connect. Sci. 18(4), 347–361 (2006) 
+48. Giusti, L., Marti, P.: “Interpretative dynamics in human robot 
+interaction,” In: ROMAN 2006-The 15th IEEE International Sym- 
+posium on Robot and Human Interactive Communication. IEEE, 
+pp. 111–116 (2006) 
+49. Wada, K., Shibata, T.: “Robot therapy in a care house - results of 
+case studies—,” In: ROMAN 2006—The 15th IEEE International 
+Symposium on Robot and Human Interactive Communication, pp. 
+581–586 (2006) 
+50. Chang, W., Šabanovic, S., Huber, L.: “Use of seal-like robot paro 
+in sensory group therapy for older adults with dementia,” In: 2013 
+8th ACM/IEEE International Conference on Human-Robot Inter- 
+action (HRI), pp. 101–102 (2013) 
+51. Šabanovi´c, S., Chang, W.-L.: Socializing robots: constructing 
+robotic sociality in the design and use of the assistive robot paro. 
+AI Soc. 31(4), 537–551 (2016) 
+52. Šabanovi´c, S., Bennett, C.C., Chang, W.-L., Huber, L.: “Paro robot 
+affects diverse interaction modalities in group sensory therapy for 
+older adults with dementia,” In: 2013 IEEE 13th international 
+conference on rehabilitation robotics (ICORR). IEEE, pp. 1–6 
+(2013) 
+53. Broekens, J., Heerink, M., Rosendal, H., et al.: Assistive social 
+robots in elderly care: a review. Gerontechnology 8(2), 94–103 
+(2009) 
+54. Fernaeus, Y., Håkansson, M., Jacobsson, M., Ljungblad, S.: “How 
+do you play with a robotic toy animal? a long-term study of pleo,” 
+In: Proceedings of the 9th international Conference on interaction 
+Design and Children, pp. 39–48 (2010) 
+
+
+56. Guiot, D., Kerekes, M., Sengès, E.: “Living with buddy: can a 
+social robot help elderly with loss of autonomy to age well?” In: 
+28th IEEE RO-MAN Internet Of Intelligent Robotic Things For 
+Healthy Living and Active Ageing, International Conference on 
+Robot & Human Interactive Communication, pp. 23–26 (2019) 
+57. Shen, Z., Wu, Y.: “Investigation of practical use of humanoid 
+robots in elderly care centres,” In: Proceedings of the Fourth 
+International Conference on Human Agent Interaction, pp. 63– 
+66 (2016) 
+58. Céspedes, N., Múnera, M., Gómez, C., Cifuentes, C.A.: Social 
+human-robot interaction for gait rehabilitation. IEEE Trans. Neu- 
+ral Syst. Rehabili.Eng. 28(6), 1299–1307 (2020) 
+59. Carros, F., Meurer, J., Löfﬂer, D., Unbehaun, D., Matthies, S., 
+Koch, I., Wieching, R., Randall, D., Hassenzahl, M., Wulf, V.: 
+“Exploring human-robot interaction with the elderly: Results from 
+a ten-week case study in a care home,” In: Proceedings of the 
+2020 CHI Conference on Human Factors in Computing Systems, 
+ser. CHI ’20. New York, NY, USA: Association for Computing 
+Machinery, pp. 1–12 (2020) 
+60. Ke, C., Lou, V.W.-Q., Tan, K.C.-K., Wai, M.Y., Chan, L.L.: 
+Changes in technology acceptance among older people with 
+
+
+
+dementia: the role of social robot engagement. Int. J. Med. Inf. 
+141, 104241 (2020) 
+61. Melkas, H., Hennala, L., Pekkarinen, S., Kyrki, V.: Impacts of 
+robot implementation on care personnel and clients in elderly- 
+care institutions. Int. J. Med. Inf. 134, 104041 (2020) 
+62. Huisman, C., Kort, H.: “Two-year use of care robot zora in dutch 
+nursing homes: An evaluation study,” In: Healthcare, vol. 7, no. 
+1. Multidisciplinary Digital Publishing Institute, p. 31. (2019) 
+63. Cruz-Sandoval, D., Morales-Tellez, A., Sandoval, E.B., Favela, 
+J.: “A social robot as therapy facilitator in interventions to deal 
+with dementia-related behavioral symptoms,” In: Proceedings of 
+the 2020 ACM/IEEE International Conference on Human-Robot 
+Interaction, pp. 161–169 (2020) 
+64. Moharana, S., Panduro, A.E., Lee, H.R., Riek, L.D.: “Robots for 
+joy, robots for sorrow: community based robot design for dementia 
+caregivers,” In: 2019 14th ACM/IEEE International Conference 
+on Human-Robot Interaction (HRI). IEEE, pp. 458–467 (2019) 
+65. Abdollahi, H., Mollahosseini, A., Lane, J.T., Mahoor, M.H.: “A 
+pilot study on using an intelligent life-like robot as a companion 
+for elderly individuals with dementia and depression,” In: 2017 
+IEEE-RAS 17th International Conference on Humanoid Robotics 
+(Humanoids). IEEE, pp. 541–546 (2017) 
+66. Chu, M.-T., Khosla, R., Khaksar, S.M.S., Nguyen, K.: Service 
+innovation through social robot engagement to improve dementia 
+care quality. Assist. Technol. 29(1), 8–18 (2017) 
+67. Rouaix, N., Retru-Chavastel, L., Rigaud, A.-S., Monnet, C., 
+Lenoir, H., Pino, M.: Affective and engagement issues in the con- 
+ception and assessment of a robot-assisted psychomotor therapy 
+for persons with dementia. Front. Psychol. 8, 950 (2017) 
+68. Shibata, T.: Therapeutic seal robot as biofeedback medical device: 
+qualitative and quantitative evaluations of robot therapy in demen- 
+tia care. Proc. IEEE 100(8), 2527–2538 (2012) 
+69. Thunberg, S., Rönnqvist, L., Ziemke, T.: “Do robot pets decrease 
+agitation in dementia patients?” In: International Conference on 
+Social Robotics. Springer, pp. 616–627 (2020) 
+70. Li, J., Louie, W.G., Mohamed, S., Despond, F., Nejat, G.: “A user- 
+study with tangy the bingo facilitating robot and long-term care 
+residents,” In: 2016 IEEE International Symposium on Robotics 
+and Intelligent Sensors (IRIS), pp. 109–115 (2016) 
+71. Studies, B.C.: Meet stevie the social robot that holds bingo 
+lessons in a care home. (2020). [Online]. Available: https:// 
+businesscasestudies.co.uk/meet-stevie-the-social-robot-that- 
+holds-bingo-lessons-in-a-care-home/ 
+72. Law, M., Sutherland, C., Ahn, H.S., MacDonald, B.A., Peri, 
+K., Johanson, D.L., Vajsakovic, D.-S., Kerse, N., Broadbent, 
+E.: “Developing assistive robots for people with mild cogni- 
+tive impairment and mild dementia: a qualitative study with 
+older adults and experts in aged care,” BMJ Open, 9(9), 
+(2019). [Online]. Available: https://bmjopen.bmj.com/content/9/ 
+9/e031937 
+73. Perugia, G., Rodríguez-Martín, D., Boladeras, M., Català, A., 
+Barakova, E., Rauterberg, M.: Quantity of movement as a mea- 
+sure of engagement for dementia: The inﬂuence of motivational 
+disorders. Am. J. Alzheimer s Disease Other Dementias 33, 11 
+(2017) 
+74. Passler Bates, D., Young, J.E.: “Snugglebot: A novel cuddly com- 
+panion robot design,” In: Proceedings of the 8th International 
+Conference on Human-Agent Interaction, pp. 260–262 (2020) 
+75. Fasola, J., Mataric, M.J.: “Robot exercise instructor: a socially 
+assistive robot system to monitor and encourage physical exercise 
+for the elderly,” In: 19th International Symposium in Robot and 
+Human Interactive Communication. IEEE, pp. 416–421 (2010) 
+76. Nishio, T., Yoshikawa, Y., Sakai, K., Iio, T., Chiba, M., Asami, 
+T., Isoda, Y., Ishiguro, H.: The effects of physically embodied 
+multiple conversation robots on the elderly. Front. Robot. AI 8, 
+61 (2021) 
+
+
+77. Henschel, A., Hortensius, R., Cross, E.S.: “Social cognition in 
+the age of human—robot interaction,” Trends in Neurosciences, 
+43(6), 373–384, 
+[Online]. Available: http://www. 
+sciencedirect.com/science/article/pii/S0166223620300734 
+78. Obayashi, K., Kodate, N., Masuyama, S.: Measuring the impact of 
+age, gender and dementia on communication-robot interventions 
+in residential care homes. Geriatr. Gerontol. Int. 20(4), 373–378 
+(2020) 
+79. Chen, K., Lou, V.W.-Q., Tan, K.C.-K., Wai, M.-Y., Chan, L.-L.: 
+Effects of a humanoid companion robot on dementia symptoms 
+and caregiver distress for residents in long-term care. J. Am. Med. 
+Dir. Assoc. 21(11), 1724–1728 (2020) 
+80. Sabelli, A.M., Kanda, T., Hagita, N.: “A conversational robot 
+in an elderly care center: an ethnographic study,” In: 2011 6th 
+ACM/IEEE international conference on human-robot interaction 
+(HRI). IEEE, pp. 37–44 (2011) 
+81. Karunarathne, D., Morales, Y., Nomura, T., Kanda, T., Ishiguro, 
+H.: Will older adults accept a humanoid robot as a walking part- 
+ner? Int. J. Soc. Robot. 11(2), 343–358 (2019) 
+82. Ferland, F., Tapus, A.: “System integration for the enrichme 
+project: A service robot for care facilities for the elderly,” In: 
+RO-MAN Workshop on Behavior Adaptation, Interaction and 
+Learning for Assistive Robotics, (2016) 
+83. Robosoft. [Online]. Available: www.robosoft.com 
+84. Cylkowska-Nowak, M., Tobis, S., Salatino, C., Tapus, A., Suwal- 
+ska, A.: “The robots in elderly care,” In: 2nd International 
+Multidisciplinary Scientiﬁc Conference on Social Sciences and 
+Arts SGEM2015, (2015) 
+85. Sato, M., Yasuhara, Y., Osaka, K., Ito, H., Dino, M.J.S., Ong, I.L., 
+Zhao, Y., Tanioka, T.: Rehabilitation care with pepper humanoid 
+robot: a qualitative case study of older patients with schizophrenia 
+and/or dementia in Japan. Enfermería Clínica 30, 32–36 (2020) 
+86. Feingold Polak, R., Tzedek, S.L.: “Social robot for rehabilitation: 
+Expert clinicians and post-stroke patients’ evaluation following a 
+long-term intervention,” In: Proceedings of the 2020 ACM/IEEE 
+International Conference on Human-Robot Interaction, pp. 151– 
+160 (2020) 
+87. Tuisku, O., Pekkarinen, S., Hennala, L., Melkas, H.: Robots do 
+not replace a nurse with a beating heart. Information Technology 
+& People (2019) 
+88. Pigini, L., Facal, D., Blasi, L., Andrich, R.: Service robots in 
+elderly care at home: users’ needs and perceptions as a basis for 
+concept development. Technol. Disabil. 24(4), 303–311 (2012) 
+89. Bradwell, H.L., Winnington, R., Thill, S., Jones, R.B.: Ethical per- 
+ceptions towards real-world use of companion robots with older 
+people and people with dementia: survey opinions among younger 
+adults. BMC Geriatrics 20(1), 1–10 (2020) 
+90. Schüssler, S., Zuschnegg, J., Paletta, L., Fellner, M., Lodron, G., 
+Steiner, J., Pansy-Resch, S., Lammer, L., Prodromou, D., Brunsch, 
+S., et al.: The effects of a humanoid socially assistive robot versus 
+tablet training on psychosocial and physical outcomes of persons 
+with dementia: protocol for a mixed methods study. JMIR Res. 
+Protoc. 9(2), e14927 (2020) 
+91. Baka, E., Vishwanath, A., Mishra, N., Vleioras, G., Magnenat 
+Thalmann, N.: “Am I talking to a human or a robot?: A prelimi- 
+nary study of human’s perception in human-humanoid interaction 
+and its effects in cognitive and emotional states,” In: Computer 
+Graphics International Conference. Springer, pp. 240–252 (2019) 
+92. Rudzicz, F., Wang, R., Begum, M., Mihailidis, A.: “Speech recog- 
+nition in alzheimer’s disease with personal assistive robots,” In: 
+Proceedings of the 5th Workshop on Speech and Language Pro- 
+cessing for Assistive Technologies, pp. 20–28 (2014) 
+93. De Carolis, B., Ferilli, S., Palestra, G.: Simulating empathic 
+behavior in a social assistive robot. Multimed. Tools Appl. 76(4), 
+5073–5094 (2017) 
+
+
+94. Sánchez, M.-L., Correa, M., Martínez, L., Ruiz-del Solar, J.: “An 
+episodic long-term memory for robots: the bender case,” In: Robot 
+Soccer World Cup. Springer, pp. 264–275 (2015) 
+95. Simoens, P., Dragone, M., Safﬁotti, A.: The internet of robotic 
+things: a review of concept, added value and applications. Int. J. 
+Adv. Robot. Syst. 15(1), 1729881418759424 (2018) 
+96. Xiao, Y., Zhang, Z., Beck, A., Yuan, J., Thalmann, D.: Human- 
+robot interaction by understanding upper body gestures. Presence: 
+teleoperators and virtual environments 23(2), 133–154 (2014) 
+97. Beck, A., Zhijun, Z., Magnenat Thalmann, N.: “Motion control for 
+social behaviors,” In: Context Aware Human-Robot and Human- 
+Agent Interaction. Springer, pp. 237–256 (2016) 
+98. Magnenat Thalmann, N., Zhang, Z.: “Social robots and virtual 
+humans as assistive tools for improving our quality of life,” In: 
+2014 5th International Conference on Digital Home. IEEE, pp. 
+1–7 (2014) 
+99. Mishra, N., Ramanathan, M., Satapathy, R., Cambria, E., Mag- 
+nenat Thalmann, N.: “Can a humanoid robot be part of the 
+organizational workforce? a user study leveraging sentiment anal- 
+ysis,” In: 2019 28th IEEE International Conference on Robot and 
+Human Interactive Communication (RO-MAN). IEEE, pp. 1–7 
+(2019) 
+
+
+101. Neven, L.: but obviously not for me: robots, laboratories and the 
+deﬁant identity of elder test users. Sociol. Health Illn. 32(2), 335– 
+347 (2010) 
+
+is not for 
+me: Addressing stereotypes of aging in assistive robot design,” 
+In: 2016 25th IEEE International Symposium on Robot and 
+Human Interactive Communication (RO-MAN). IEEE, pp. 312– 
+317 (2016) 
+103. Chang, W.-L., Šabanovi´c, S.: “Exploring taiwanese nursing 
+homes as product ecologies for assistive robots,” In: 2014 IEEE 
+International Workshop on Advanced Robotics and its Social 
+Impacts. IEEE, pp. 32–37 (2014) 
+104. Kc, U., Chodorowski, J.: A case study of adding proactivity in 
+indoor social robots using belief-desire-intention (bdi) model. 
+Biomimetics 4(4), 74 (2019) 
+105. Zhang, X., Sugano, Y., Fritz, M., Bulling, A.: “It’s written all 
+over your face: Full-face appearance-based gaze estimation,” In: 
+Proceedings of the IEEE Conference on Computer Vision and 
+Pattern Recognition Workshops, pp. 51–60 (2017) 
+106. Amos, B., Ludwiczuk, B., Satyanarayanan, M., et al.: Openface: A 
+general-purpose face recognition library with mobile applications. 
+CMU School of Computer Science 6(2), (2016) 
+107. Teed, Z., Deng, J.: “Raft: Recurrent all-pairs ﬁeld transforms for 
+optical ﬂow,” In: Proceedings of the IEEE Conference on Com- 
+puter Vision and Pattern Recognition, (2020) 
+108. He, K., Zhang, X., Ren, S., Sun, J.: “Deep residual learning for 
+image recognition,” In: Proceedings of European Conference on 
+Computer Vision, pp. 770–778 (2016) 
+109. Mollahosseini, A., Hasani, B., Mahoor, M.H.: Affectnet: a 
+database for facial expression, valence, and arousal computing 
+in the wild. IEEE Trans. Affect. Comput. 10(1), 18–31 (2017) 
+110. Wang, L., Xiong, Y., Wang, Z., Qiao, Y., Lin, D., Tang, X., Van 
+Gool, L.: Temporal segment networks for action recognition in 
+videos. IEEE Trans. Pattern Anal. Mach. Intell. 41(11), 2740– 
+2755 (2018) 
+111. Tisseron, S., Tordo, F., Baddoura, R.: Testing empathy with robots: 
+a model in four dimensions and sixteen ítems. Int. J. Soc. Robot. 
+7(1), 97–102 (2015) 
+112. Thodberg, K., Sørensen, L.U., Videbech, P.B., Poulsen, P.H., 
+Houbak, B., Damgaard, V., Keseler, I., Edwards, D., Christensen, 
+J.W.: Behavioral responses of nursing home residents to visits 
+from a person with a dog, a robot seal or a toy cat. Anthrozoös 
+29(1), 107–121 (2016) 
+Publisher’s Note Springer Nature remains neutral with regard to juris- 
+dictional claims in published maps and institutional afﬁliations. 
+
+Gauri 
+is currently a 
+researcher at 
+the Institute for 
+Media Innovation at Nanyang 
+Technological University, Singa- 
+pore. She obtained her Bachelor’s 
+degree from Manipal 
+Institute 
+of technology, India. She has 5 
+years of extensive research expe- 
+rience. Her interests are computer 
+vision, human–robot 
+interaction 
+and data analysis. 
+Nidhi Mishra has a Bachelor in 
+Technology from Indian Institute 
+of Information Technology, Alla- 
+habad. She has gained ﬁve years 
+of research experience in human– 
+computer 
+human– 
+interaction, 
+robot interaction, and natural lan- 
+guage processing. Her research 
+interest spans various subdomains 
+of natural language programming 
+(NLP), artiﬁcial intelligence (AI) 
+and machine learning (ML). 
+Nadia Magnenat Thalmann has 
+pioneered the ﬁeld of Virtual 
+Humans at a very early stage at 
+the University of Montreal 
+in 
+Canada before moving to the Uni- 
+versity of Geneva in 1989 where 
+she founded the interdisciplinary 
+research group MIRALab. She has 
+published several landmark papers 
+on the modelling of 3D faces and 
+bodies as well as pioneered the 
+ﬁeld of physical modelling of 
+clothes. She has also worked 
+intensively on the simulation of 
+the digital patient. Recently in 
+NTU Singapore, she advanced the ﬁeld of social robotics with her 
+humanoid robot Nadine, similar to herself, that can show emotions, 
+speak naturally and remember facts and emotions. She has received 
+many awards and several honorary doctorates. She is a life mem- 
+ber of the Swiss Academy of Engineering Sciences. Nadia Magnenat 
+Thalmann—Wikipedia 
+
+
+
+
+Hwee Er Lim is passionate to 
+transform care for the older per- 
+and 
+sons 
+future-ready solutions to promote 
+dignity of care. Hwee Er, with 
+her expertise as a Gerontology 
+Occupational Therapist, strategic 
+leader and founder of Goshen 
+Consultancy Services Pte Ltd, 
+combines innovative clinical and 
+business knowledge to design and 
+implement 
+sustainable person- 
+centred care practices in care for 
+the older persons. She holds a 
+Masters of Health Service Man- 
+agement from University of Sydney, Australia and Bachelor of Health 
+Sciences (Hons), University of Teesside, UK. 
+
+Siok Khoong Cheng is the Chief 
+Executive Ofﬁcer of Bright Hill 
+Evergreen Home and has been 
+serving the residents of this vol- 
+untary welfare home that provides 
+quality health care and shelter for 
+the disadvantaged and aged sick 
+for close to 7 years. Prior to join- 
+ing the charity sector, Ms Cheng 
+held various senior regional roles 
+with leading global FMCG and 
+logistic companies for more than 
+25 years 
+
+
+Mei 
+leverages her 
+expertise in organisational devel- 
+opment, human resource manage- 
+ment and business acumen to 
+inﬂuence transformational service 
+delivery in social service organi- 
+sations. As co-founder of Goshen 
+Consultancy, Mei Ping has led 
+numerous 
+and 
+sector-wide 
+and 
+technology-based projects to pro- 
+quality 
+mote 
+person-centred 
+service 
+delivery. Lee Mei Ping holds a 
+Masters of Business Administra- 
+tion from University of South Australia, Australis and Bachelor of 
+Business, Marketing from Monash University, Australia. 
+and 
+social 
+
+
+
+

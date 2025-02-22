@@ -1,0 +1,774 @@
+JournalofPediatricPsychology,46(5),2021,536–546
+doi:10.1093/jpepsy/jsaa125
+AdvanceAccessPublicationDate:23January2021
+OriginalResearchArticle
+Adaptive mHealth Intervention for Adolescent
+Physical Activity Promotion
+ChristopherC.Cushing,1,2 PHD,Carolina M. Bejarano,2MA,
+AdrianOrtega,2MA, NickSayre,BFA, DavidA.Fedele ,3 PHD,ABPP,
+andJoshuaM. Smyth,4 PHD
+1SchiefelbuschInstituteforLifeSpanStudies,UniversityofKansas,2ClinicalChildPsychologyProgram,University
+ofKansas,3DepartmentofClinical&HealthPsychology,Universityof Florida,and4Departmentof Biobehavioral
+Health,ThePennsylvaniaStateUniversity
+*All correspondence concerning this article should be addressed to correspondence to Christopher C. Cushing,
+PHD, Clinical Child Psychology Program, University of Kansas, 2011 Dole Human Development Center, 1000
+SunnysideAvenue,Lawrence,KS66045,USA.E-mail:christopher.cushing@ku.edu
+Received26July2020;revisionsreceived7December2020;accepted9December2020
+Abstract
+Objective The present nonrandomized controlled trial aimed to evaluate feasibility, acceptabil-
+ity,andpreliminaryefficacyofatailoredtextmessageinterventionforincreasingadolescentphysi-
+calactivity,ascomparedwithpassivemonitoring.Methods Fortyadolescents(13–18yearsold)
+received either a tailored text messaging intervention (Network Underwritten Dynamic Goals
+Engine [NUDGE]; N¼20), or participated in an attention-control condition (N¼20), for 20days.
+Physicalactivitywasmeasuredforallparticipantsviacontinuousaccelerometry.Frequencyanaly-
+seswere conducted on program usageand satisfactionratings to evaluate feasibility and accept-
+ability, and multilevel models were used to evaluate the efficacy hypotheses. Results The vast
+majority of participants (90%) reported being very or mostly satisfied with the NUDGE program
+andratedtheirenjoymentasaboveaverage.Theinterventiongroupwasestimatedtospendanav-
+erage of 20.84 more minutes per day in moderate-to-vigorous physical activity relative to the
+attention-controlgroup(b¼20.84,SE¼8.19).Exploratoryanalysesrevealedthattheintervention
+groupalsoengagedin82fewerminutesofsedentarytimeperdayonaverage,althoughthiseffect
+was not significant due to the large variability in sedentary time (b ¼ (cid:2)81.98, SE ¼ 46.86).
+Conclusions TheNUDGEtailoredtextmessaginginterventionwasfeasible,acceptable,andef-
+ficacious in increasing physical activity in this sample. Findings warrant additional evaluation of
+NUDGE as both a standalone physical activity intervention or as part of a multicomponent
+package.
+Keywords:eHealth;healthbehavior;healthpromotionandprevention;interventionoutcome;mHealth.
+Introduction
+(Nader et al., 2008). However, marked declines in
+It is recommended that adolescents obtain 60min of health promoting physical activity and increases in
+moderate-to-vigorous physical activity (MVPA) daily. sedentary time are observed around age 13 and
+This practice can promote overall health and help to worsen through adulthood, at which point only 1 out
+prevent problems such as cardiovascular disease, dia- of 5 Americans meet the 2008 Physical Activity
+betes, and obesity (Danaei et al., 2009). Interestingly, Guidelines (DHHS, 2008; Nader et al., 2008). Given
+many young children engage in adequate MVPA the observed rapid decline it is essential to find
+VC TheAuthor(s)2021.PublishedbyOxfordUniversityPressonbehalfoftheSocietyofPediatricPsychology.
+Allrightsreserved.Forpermissions,pleasee-mail:journals.permissions@oup.com 536
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+mHealthPhysicalActivityInterventionforAdolescents 537
+acceptable and efficacious intervention approaches the person has performed an action. Adolescents are
+that can facilitate adolescents’ engagement in more still developing the ability to self-regulate their own
+MVPA, which may translate into improved health behavior (Pokhrel et al., 2013). Therefore, tailored
+overthelifespan. interventions that provide developmentally appropri-
+Adolescents are high adopters of smartphone tech- ate external supports for self-regulatory skills consis-
+nologiesandaregenerallycomfortablewithcommuni- tent with control theory could support long-term
+cation via text message (Lenhart, 2015). In fact, health habits in adolescents (Lansing & Berg, 2014).
+representativesurveyssuggestthattheaverageadoles- Moreover, there is some evidence that interventions
+cent sends (cid:3)30 text messages per day and texting is thatadapttotheuserovertimemaybemoreeffective
+their dominant mode of communication (Anderson, thanstaticinterventions(Smyth&Heron,2016).
+2015). A recent meta-analysis aimed to evaluate the Digital interventions offer the potential to leverage
+efficacy of mobile health interventions for improving user data within the program to change or “adapt”
+health outcomes, in children and adolescents, and theinterventionexperiencebasedonuserinputs.Such
+found that the average overall effect size associated paradigms were originally framed as ecological mo-
+withtheseinterventionswassmall,yetstatisticallysig- mentary interventions, just-in-time interventions, and
+nificant (Fedele et al., 2017). One conclusion from in some cases where the rules of the interventions
+this work was that very few mHealth studies use a change over time can be known as just-in-time adap-
+clear theoretical framework to guide the choice of the tive interventions (Heron & Smyth, 2010; Nahum-
+behavior change techniques in the intervention. Shani et al., 2016; Smyth & Heron, 2016).
+Moreover, several studies have demonstrated that Importantly, such a digital intervention system that
+consumer-facing mobile applications specifically for adapts to user input can be easily conceptualized as a
+physical activity do not widely employ efficacious form of feedback control (i.e., the controlled system
+behavior-change techniques (Brannon & Cushing, from control theory) because the system itself is con-
+2015).Importantly,thisrunscountertorecentfinding tinually optimizing its performance based on user
+thatparentsareopentoarangeofevidence-basedbe- inputs(Riveraetal.,2007).
+haviorchangetechniquesembeddedinmHealthinter- As one goes about building an adaptive interven-
+ventions, which indicates that the market is receptive tionsomeconsiderationmustbegiventohowthesys-
+to features that should change behavior (Cushing tem will be designed. In contrast to large packages
+etal.,2018). with many active ingredients, the ORBIT (Obesity-
+There is evidence that control theory might be a RelatedBehavioralInterventionTrials)modelencour-
+powerful framework for designing interventions to ages the smallest intervention possible with the inten-
+promote physical activity (Michie et al., 2009). tion of repurposing efficacious intervention concepts
+Indeed, control theory interventions (particularly inlargerpackages.Theadvantageofconductingsmall
+those that encourage self-monitoring) have support scale interventions is that individual elements are
+for promoting adolescent physical activity (Brannon closely tied to theoretical models or empirical evi-
+&Cushing,2015).Controltheorypositsthat,individ- dence. Then, when an intervention succeeds or fails a
+uals achieve goals by monitoring progress toward an clear picture of why it produces an observed effect
+end state, incorporating feedback, and modifying emerges from the study (Czajkowski et al., 2015).
+goals as needed (Carver & Scheier, 1981, 1982). Currently,itisunclearifsimpleprompts—designedin
+Michieetal.(2009)foundinterventionsthatleveraged amannerconsistentwithcontroltheory—wouldbeef-
+the control theory strategy of self-monitoring with at fective on their own in increasing adolescent physical
+least one other behavioral self-regulation component activity.Inlargepartthisisbecausemoststudiescom-
+were significantly more effective than interventions bine messaging with other intervention elements
+that did not involve this combination. Broadly, inter- (Ludwigetal.,2018).
+ventionsconsistentwithcontroltheoryusethetechni- Thisstudyaimed toevaluate feasibility,acceptabil-
+ques of goal-setting, self-monitoring of behavior, ity and gather preliminary data on the effect of an
+receiving feedback, and goal review (Carver & adaptive mHealth intervention in which adolescents
+Scheier, 1981, 1982). Goal setting is typically defined receive messages about physical activity that are tai-
+as a detailed plan of what a person will do that is lored based on their recent exercise. Participants are
+time-boundandmeasurable.Self-monitoringissimply asked to self-report their physical activity, review
+the act of keeping track of a behavior. Goal review goals in the light of their past performance, set a goal
+refers to actively reconsidering previously set goals to for the future, and receive feedback on their perfor-
+determine ifthey are stillframedin a waythat isrele- mance.ConsistentwiththeORBITmodelofinterven-
+vant and reasonable. Feedback can be either a depic- tiondevelopment,thisstudywasdesignedwithasfew
+tion of data that indicates progress toward a goal or activeingredientsaspossibletoensurethatthemecha-
+more qualitative commentary on how well or poorly nisms of action would be unambiguous provided that
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+538 Cushingetal.
+the intervention has an effect (Czajkowski et al., team recruited participants in the attention-control
+2015). It was hypothesized that adolescents who re- group from 2015 to 2016 and participants in the
+ceived a tailored text messaging intervention (inter- NUDGE group in 2017. Recruitment occurred across
+vention group) that involved goal-setting, self- allfourseasonsoftheyear.
+monitoring, feedback, and goal re-evaluation would
+engage in more physical activity over a 20-day study EnrollmentVisit
+period than adolescents in the passive monitoring Parent-adolescent dyads attended a scheduled visit in
+group (attention control group). Although not a spe- thelabandcompletedaninformedconsentandassent
+cifictargetoftheintervention,anexploratoryanalysis process, respectively.1 They completed a set of base-
+of the intervention effect on sedentary time was also linequestionnaires pertaining tophysical activity,die-
+performed. tary behavior, and mood on a lab computer. These
+measures included a demographics survey, the
+Treatment Self-Regulation for Exercise and Diet
+MaterialsandMethods Questionnaire (Levesque et al., 2006), Perceived
+Participants Competence for Exercise Questionnaire (Williams
+Because adolescence (13–18) is a time of declining et al., 1998), Social Support for Exercise Scale (Sallis
+physical activity, forty adolescents, ages 13–18years et al., 1987), Physical Activity Self-Efficacy
+old, participated in the study (see Table I). A total of Questionnaire (Motl et al., 2000), Physical Activity
+20 participants made up the intervention group Attitudes Questionnaire (Nelson et al., 2010),
+(Network Underwritten Dynamic Goals Engine; Pediatric Quality of Life Inventory (Varni et al.,
+NUDGE), whereas 20 were in the attention-control 2001), Power of Food Scale (Lowe et al., 2009), and
+group. The attention control group were drawn from theChildren’sReportofSleepPatterns(Meltzeretal.,
+a larger sample that participated in an ecological mo- 2013). Research staff provided the adolescent with a
+mentary assessment study assessing the relationship smartphoneforuseinthestudyandexplainedinstruc-
+between state and trait psychological variables and tions for usage.2 Consistent with other studies in
+physical activity. Attention control participants were youth (Heron et al., 2017) we limited the features of
+matched to NUDGE participants on age, sex, and the smartphones given to participants to only those
+race/ethnicity,withprioritygivenintheorderthevari- necessary to complete the study (i.e., SMS capability
+ables are listed. Participants from each study were and access to the survey app). Each participant chose
+recruited using the same procedures (i.e., through four times to complete a daily survey that would take
+flyers posted in a midwestern city) and the respective about 3–5min. These daily surveys included the
+protocols (i.e., study measures and duration), apart Positive and Negative Affect Scale-Child Version
+from the NUDGE intervention, were equivalent. The (Ebesutani et al., 2012), the three highest loading
+protocols were approved by the local institutional re- items for five of the subscales from the Profile of
+view board. Adolescents and/or their parents con- MoodStatesscale(depression, anxiety,anger, energy,
+tactedtheresearchlabtoexpressinterestinthestudy, fatigue,McNairetal.,1971),questionsaboutthepar-
+completed a brief screening process, and were sched- ticipant’s environment, dietary intake, social support
+uled for an initial lab visit. Inclusion criteria were: (a) for exercise (Sallis et al., 1987), and hedonic hunger
+agerangeof13–18yearsold,(b)abletoreadatgrade (Mitchell et al., 2016). Control participants received
+levelinEnglish.Exclusioncriteriaincluded:(a)signif- the same contacts as the intervention condition (i.e.,
+icantuncorrectedvisualimpairments,(b)anyphysical same surveys). In addition to the control procedures,
+impairments that limited activity, and (c) independent NUDGEparticipantsprovidedconvenienttimestore-
+living without a caregiver (e.g., 18-year-old college ceiveinterventiontextmessages.NUDGEparticipants
+undergraduateslivinginadormitory;Figure1). weretrainedtoreportMVPA inminutes.Inthetrain-
+ing, we defined exercise as activities such as running,
+Procedures swimming, or brisk walking that makes it hard to
+Recruitment procedures as well as study procedures carry on a conversation. Adolescents in both groups
+fortheinterventionandattentioncontrolgroupswere
+similar.Participantswererecruitedusingflyersposted 1 Onreview,colleaguesrequestedthatallmeasuresadministeredto
+in a midwestern community. Postings were made at participants be listed.Becausea largernumber ofmeasureswere
+giventhatarenotanalyzedinthecurrentreport,welisttheminthe
+businesses, places of worship, and schools when
+proceduressectionratherthanthelistofstudymeasureswhichare
+allowed. Flyers indicated that participants would be
+usedtoevaluatethestudyaims.
+asked to complete surveys, wear sensors, and would
+2 Participantswereprovidedwithasmartphonebecauseourappused
+be compensated financially for the time they devoted
+for distributing surveys was unstable on phones it was not pro-
+to the project. Informed consent was obtained along grammedfor.Forthisreason,wegaveparticipantsphonessothat
+with assent if the child was a minor. The research wecouldensuretheappwouldworkproperly.
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+mHealthPhysicalActivityInterventionforAdolescents 539
+TableI.NUDGEParticipantDemographics
+Demographicvariable
+Interventiongroup(N¼20) Attentionalcontrolgroup(N¼20)
+M(SD)orN(%)
+Gender
+Male 5(25%) 5(25%)
+Female 15(75%) 15(75%)
+Ageatbaseline(years) 15.25(1.80) 15.25(1.62)
+Race/Ethnicity
+White/Caucasian 16(80%) 12(60%)
+Black/AfricanAmerican 2(10%) 1(5%)
+Hispanic/Latinx 2(10%) 2(10%)
+Asian 0(0%) 2(10%)
+Other/Multiracial 0(0%) 2(10%)
+Missing 1(5%)
+BMIPercentile 70.9(22.7) 65.4(28.3)
+Approximatefamilyincome
+<$10,000 1(5.0%) 0(0%)
+$10,000–$20,000 0(0%) 2(10%)
+$21,000–$30,000 0(0%) 1(5%)
+$31,000–$40,000 0(0%) 1(5%0
+$41,000–$50,000 1(5%) 1(5%)
+$51,000–$60,000 2(10%) 4(20%)
+>$60,000 15(75%) 11(55%)
+Mother’shighestlevelofeducation
+Highschoolgraduate 6(30%) 4(20%)
+Collegegraduateorabove 14(70%) 16(80%)
+Father’sHighestLevelofEducation
+Highschoolgraduate 6(30%) 7(35%)
+Collegegraduateorabove 14(70%) 13(65%)
+Note.M¼mean;SD¼standarddeviation;BMI¼bodymassindex.Oneinterventiongroupparticipantdidnotreportfamilyincome.One
+controlgroupparticipantdidnotreportrace/ethnicity.
+were also provided an accelerometer for tracking as a blinded heart rate monitor for the 20-day study
+physical activity (ActiGraph wGT3X-BT) to be worn duration. As mentioned previously, the recruitment,
+on their non-dominant wrist throughout the duration consenting, assessment procedures, and the study pe-
+of the study. The accelerometer did not provide feed- riod for the attention-control study were identical to
+backonactivitytotheparticipant. theNUDGEprotocol.Researchstaffexplainedtopar-
+ticipants that their physical activity would be moni-
+ExitVisit tored during the study. Participants in this condition
+Attheendofthe20-day3studyperiod,allparticipants receivednointerventioncontent.
+returned to the lab for a scheduled visit to complete
+postintervention measures and return the smartphone NUDGEIntervention
+and accelerometer. Participants were compensated NUDGE is a chat bot developed for the purposes of
+$15 for wearing the accelerometer for 24 h on 18 out this study. The bot is a server-side computer program
+of 20 study days; and, an extra $25 if the participant thatadaptstextmessagesbasedonuserinputwiththe
+answeredallfoursurveysonatleast17days. goaltopromoteadolescentphysicalactivity.Theplat-
+formengagesinachatwithuserstohelpthemsetand
+AttentionControlCondition review goals, self-monitor progress, provide feedback
+The attention-control group did not receive the ongoalattainment,andrevisefuturegoals.Theadap-
+tivenatureoftheinterventionmeansthattheprogram
+NUDGEinterventiontextmessages(describedbelow).
+changes the wording of messages, and the ranges of
+Instead, participants completed identical study meas-
+goals based on user input and self-reported activity
+ures (enrollment, exit, and daily surveys) in the
+levels. To begin, participants choose a time of day
+NUDGE protocol and wore an accelerometer as well
+whentheywouldliketoreceiveatextmessagetoseta
+physical activity goal. The goal is then stored over-
+3 Participantswereprovidedwithasmartphonebecauseourappused
+night; at a predetermined time the next morning,
+for distributing surveys was unstable on phones it was not pro-
+grammedfor.Forthisreason,wegaveparticipantsphonessothat NUDGE sends a message reminding the user of their
+wecouldensuretheappwouldworkproperly. stored goal (e.g., “Just a friendly reminder that your
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+540 Cushingetal.
+in goal attainment. For this reason, the self-report
+(even iflessaccurate thananaccelerometer)isdesired
+over a passive monitoring system (Michie et al.,
+2009).TheparticipantrepliestotheNUDGEbotwith
+a numerical value representing their accumulated ex-
+ercise. The entry is compared against the previously
+entered goal value. The NUDGE bot then provides
+feedback to the user indicating whether or not their
+predefined goal was met and subsequently requests a
+newgoal(e.g.,“Thisisfantastic!Youmetyourgoal!”
+or “It looks like you didn’t meet your goal.”). The
+maximum allowable goal value was 120min and the
+minimum was 15. In addition, NUDGE only accepts
+goal values that were between an investigator defined
+range(i.e.,75–125%)ofthelastself-monitoredphysi-
+calactivityvalue,sothatfutureperformanceistiedto
+past performance and goals cannot be set too high or
+too low to be useful (Wrosch et al., 2003; e.g., “Let’s
+set a new exercise goal. Based on what you did this
+time [25min], I think you should choose between 15
+and 45min”). If users exceeded 60min of self-
+reported exercise, the feedback message was modified
+tocongratulate the user on their healthy level of exer-
+cise (e.g., “This is fantastic! You met your goal! You
+exercised a healthy amount! Let’s set a new goal be-
+tween[75–125%ofcurrentMVPA]”).
+Measures
+DemographicsandAnthropometrics
+Participants completed a brief demographic question-
+naire and their height and weight were measured by
+studystaff.Bodymassindexpercentilewascalculated
+based on age and sex, as indicated by the Centers for
+DiseaseControl(Kuczmarski,2002).
+ObjectiveMeasureofActivity
+Physical activity (MVPA) andsedentarybehavior (SB)
+were measured by an accelerometer (ActiGraph
+wGT3X-BT; Actigraph LLC, Pensacola, FL).
+Participantswereinstructedtoweartheaccelerometer
+for 24 h per day on their nondominant wrist during
+the study. The accelerometer was used only for pas-
+sively monitoring physical activity. The goal was to
+usethedeviceonlytotrackoutcomesandnotasanel-
+ement of the intervention. Accelerometers were set to
+sample movement at arate of30Hz.Data were proc-
+essedusingtheActilifesoftwarev.6.10.2,andsumma-
+Figure1.FlowchartofNUDGEprocesses.
+rizeddailymeasurementsofMVPAandthesecondary
+outcome of SB using the Chandler et al. (2016)
+exercise goal today is 25min. I will check in with you algorithm.
+later to see how you did”). Later the same day, the
+userispromptedtoself-monitortheirphysicalactivity FeasibilityandAcceptability
+via self-report (e.g., “How much exercise did you get To determine the feasibility of the NUDGE protocol,
+[in minutes]?”). NUDGE used self-report in this in- we computed the average number of participant-
+stance because control theory posits that the active provided responses per day, messages sent by the
+comparisonofone’sperformancetoagoalisessential NUDGE bot per day, exchanged messages per day
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+mHealthPhysicalActivityInterventionforAdolescents 541
+between participants and the NUDGE bot per day, as variablefortheinterventiongroup.Finally,adummy-
+well as the number of unexpected messages (i.e., the coded variable representing weekend and weekdays
+participant texted without receiving a message from was entered into the model asamain effect and inter-
+NUDGE) received from participants, and compared actionwithgroupmembership.Thisvariablewascen-
+them with expected values based on the protocol. In teredsothatthezeropointwouldrepresentweekdays.
+addition, we calculated instances of what we describe Finally,wecalledupconditionaleffectsoftheinterac-
+asa goal-loop, or occurrences when participants were tionsothatwecouldreportonspecificparameteresti-
+unable to set goals within a personally useful range mates (e.g., MVPA levels in intervention participants
+(i.e., 75-125% of their previous attainment). This oc- onweekdays).
+curredwhen participants continually enter valuesthat
+areoutsidetheacceptablerangeforthealgorithmand
+Results
+indicate lack of understanding of the NUDGE rules,
+and may reflect frustration with the system. Feasibility
+Participants completed the Consumer Satisfaction Based on the NUDGE protocol, there should be six
+Questionnaire(CSQ)asameasureacceptabilityofthe messagesexchangedbetweentheNUDGEbotandthe
+intervention. This consisted of a list of questions ad- user (e.g., four from NUDGE bot and two from the
+ministered in survey format at the end of the study to user). The average number of participant-provided
+assess participant satisfaction with NUDGE. The responses per day was 1.35, the average number of
+CSQ-8 is comprised of eight items on a 4-point re- sentmessagesfromtheNUDGEbotperdaywas1.66,
+sponse scale (a ¼ .90) and measured general satisfac- and the average number of exchanged messages per
+tion with NUDGE as well as quality of program. day was 3. There was a small, but significant decline
+Some example items on the CSQ-8 are “how satisfied in participant engagement with the NUDGE bot
+are you with the amount of help you have received?” across time (b ¼ (cid:2)0.02, p¼.004). In real terms this
+and “how do you rate the quality of service you means that by the end of the study participants were
+received?” Total satisfaction scores were generated responding to.4 fewer messages than on the first day,
+(based on the sum of individual items) to investigate which is a trivial difference. There were 16 occasions
+acceptability of the program. Participants also com- ofunexpectedmessages fromparticipants and2occa-
+pleted two text responses regarding what participants sions of goal-loop frustration (i.e., participants were
+liked and did not like about the study: “please tell us notabletosetagoalwithintheacceptablerange).We
+what you liked about the study”; and, “please tell us anticipated 800days of accelerometer data and
+whatyoudidnotlikeaboutthestudy”(TableII). obtained799.
+DataAnalysisPlan Acceptability
+To evaluate feasibility and acceptability we evaluate The mean satisfaction score from the CSQ-8 was
+the mean number of text messages exchanged and the 26.65(SD¼4.03,range¼16–32).Thisindicatesthat
+average valueinour acceptability measure. Ourapri- theaverageparticipantwassatisfiedwiththeinterven-
+ori criteria for feasibility and acceptability was that tion. Scores from an individual item, “In an overall,
+bothvalueswouldbeabovethemidpointofthescale. general sense, how satisfied are you with the services
+To evaluate the efficacy hypotheses, we conducted you have received?,” on the CSQ-8 indicated that
+multilevel models using SAS PROC MIXED. We ran 60% of participants were very satisfied, 30% were
+two sets of identical models for MVPA and our ex- mostlysatisfied,and10%wereindifferentordissatis-
+ploratoryanalysisofsedentarytimeasassessedbyob- fiedwiththeNUDGEprogram.
+jectively monitored accelerometry. First, the Free text responses regarding what participants
+dependent variable was entered into a model with no liked and disliked about the study were coded to cre-
+predictors to allow for the computation of an intra- ate frequencies of common themes in responses. Five
+class correlation coefficient (ICC). Next, we explicitly participantscommentedhowtheNUDGEprogramin-
+modeled an effect of time by fitting dummy codes for creasedtheirmotivationforhealthybehaviors,suchas
+each observation centered at baseline. We fit models physical activity. Four participants endorsed that
+forlinear,randomlinear,quadratic,andrandomqua- NUDGE facilitated self-reflection and self-monitoring
+dratic effects of time. The best fitting and most parsi- of physical activity. For example, participants com-
+monious model was selected using (cid:2)2LL difference mented how they liked “how it made me think about
+tests (Snijders & Bosker, 2011). Group membership exercising”, how “it forced me to look at how much
+was then entered into the model as a predictor with exercising I was getting” and how it “keeps tabs on
+the control group centered at zero this was done so the physical activity I did.” Seventeen participants
+thattheinterpretationoftheeffectwouldbethenum- commented on the ease of the intervention, the help-
+ber of minutes increase or decrease in the dependent fulness of goal reminders, and the flexibility to
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+542 Cushingetal.
+TableII.ConsumerSatisfactionQuestionnaire-8
+Item Percentages
+Howdoyouratethequalityofserviceyoureceived?
+Excellent 40.0
+Good 45.0
+Fair 10.0
+Poor 5.0
+Didyougetthekindofserviceyouwanted?
+No,definitelynot 0.0
+No,notreally 5.0
+Yes,generally 40.0
+Yes,definitely 55.0
+Towhatextenthasourprogrammetyourneeds
+Almostallofmyneedshavebeenmet 55.0
+Mostofmyneedshavebeenmet 40.0
+Onlyafewofmyneedshavebeenmet 5.0
+Noneofmyneedshavebeenmet 0.0
+Ifafriendwereinneedofsimilarhelp,wouldyourecommend
+ourservicestohimorher?
+No,definitelynot 0.0
+No,notreally 0.0
+Yes,generally 60.0
+Yes,definitely 40.0
+Howsatisfiedareyouwiththeamountofhelpyouhave
+received?
+Quitedissatisfied 5.0
+Indifferentormildlydissatisfied 10.0
+Mostlysatisfied 30.0
+Verysatisfied 55.0
+Havetheservicesyoureceivedhelpedyoutodealmoreeffec-
+tivelywithyourproblem?
+Yes,theyhelpedagreatdeal 15.0
+Yes,theyhelpedsomewhat 70.0
+No,theyreallydidn’thelp 15.0
+No,theyseemedtomakethingsworse 0.0
+Inanoverall,generalsense,howsatisfiedareyouwiththeserv-
+icesyouhavereceived?
+Verysatisfied 60.0
+Mostlysatisfied 30.0
+Indifferent,ormildlydissatisfied 10.0
+Quitedissatisfied 0.0
+Ifyouweretoseekhelpagain,wouldyoucomebacktoour
+program
+No,definitelynot 0.0
+No,notreally 5.0
+Yes,generally 70.0
+Yes,definitely 25.0
+incorporate NUDGE into their daily schedule. Ten models for time, it was established that a random ef-
+participants indicated some dissatisfaction with the fectlinearmodeloftimefitbestandwasusedforsub-
+equipment (e.g., accelerometer) with the majority of sequentanalyses;thissuggeststhatMVPAincreasesor
+complaintsrelatingtodiscomfortwearingthedevice. decreases at different rates across study participants
+during the study window. Participants in the control
+MVPAEfficacy condition averaged (cid:3)28min of MVPA. In the final
+Toevaluatetheequivalenceofthetwogroupswecon- model, the main effect of group was b ¼ 20.84 (SE ¼
+ducted an independent samples t-test across the two 8.19; Table III) indicating that the intervention group
+groups on the first day of the study. There were no engagedin(cid:3)21moreminutesofMVPAthanthecon-
+group differences in MVPA at that timepoint. In an trolgroup.Moreover,themagnitudeofthisdifference
+emptymultilevelmodelforMVPAtheICCwas.57in- ismore than three quartersof aSD (d¼ .83). Finally,
+dicating that (cid:3)57% of the variance in MVPA is day of the week did moderate the intervention effect
+between-person and 43% is within-person. In the with NUDGE participants obtaining significantly
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+mHealthPhysicalActivityInterventionforAdolescents 543
+TableIII.FinalModelforMVPA the week did not have a significant main effect or in-
+teractionforSB.
+95%CIforslope
+Fixedeffects Slope Lower Upper p
+Discussion
+Intercept 28.28 — — —
+The current nonrandomized controlled trial demon-
+Time (cid:2)0.31 –0.17 0.11 0.04
+Group 20.84 19.36 22.30 0.01 stratedtheinitialfeasibility,acceptability,andprelim-
+Weekend (cid:2)0.7 (cid:2)5.52 4.12 .78 inary efficacy of the NUDGE text messaging
+Group*Weekend (cid:2)7.45 (cid:2)14.70 (cid:2)0.2 .04
+intervention. With only three text messages per day
+RandomEffects Estimate SE exchanged on average, the intervention group
+obtained 21 more minutes of MVPA and 82 fewer
+Intercept 688.65 174.14
+Time 0.12 0.12 minutes of sedentary time. The satisfaction with the
+Intercept-time (cid:2)2.90 4.23 program was high and participant confusion or frus-
+Residual 540.75 28.53 trationwerelow.
+In the development of NUDGE, we have used a
+Note. MVPA ¼ moderate-to-vigorous physical activity. Models
+were conditioned such that the intercept represents the number of minimalist approach to intervention design. Other
+MVPAminutesforacontrolparticipant,onaweekday,onthefirst valuable physical activity promotion packages are
+dayofthestudy. built on sound theory and contain many intervention
+strategies that are hypothesized to produce the treat-
+TableIV.FinalModelforSedentary ment effect (Gourlan et al., 2016; King et al., 2013).
+Consistent with the ORBIT model of intervention de-
+95%CIforslope
+velopment, our approach was to design the smallest
+FixedEffects Slope Lower Upper p possible intervention that could reasonably produce
+an effect (Czajkowski et al., 2015). By linking every
+Intercept 725.47 — — —
+possible text message to an element of control theory,
+Time 0.88 0.77 (cid:2)0.63 0.22
+Group (cid:2)81.97 46.86 (cid:2)173.82 0.09 wehopedtominimizewastedinteractionswithpartic-
+Weekend (cid:2)23.76 12.29 (cid:2)47.85 .05 ipants,andalsoreducetheriskofhabituation.Weat-
+Group*weekend 33.2 18.5 (cid:2)3.06 .07 tributethehighfeasibilityandacceptabilityto,atleast
+Randomeffects Estimate SE in part, the minimalist approach todesign.Given that
+participants are asked to use a familiar behavior (i.e.,
+Intercept 19,799 4,854.69
+Time 1.84 3.98 text messaging), it was relatively easy for them to
+Intercept-time 128.37 94.53 complete the protocol. Moreover, as a result of over-
+Residual 13,563 712.40 sampling females, the generalizability of the interven-
+tion is enhanced as girls transition more rapidly from
+Note. MVPA ¼ moderate-to-vigorous physical activity. Models
+were conditioned such that the intercept represents the number of obtainingadequateMVPAinyouthtoinactivityinad-
+sedentary minutesfor a control participant,on a weekday, on the olescence and the effect is more pronounced than for
+firstdayofthestudy. boys(Naderetal.,2008).
+It is important to note that while the aggregate ef-
+more MVPA on weekdays compared with weekends. fectofNUDGEexceedsthatfoundincomparabletext
+Moreover, controls obtained less activity than the in- message interventions (Armanasco et al., 2017) and
+terventiongrouponweekenddays. face-to-face health promotion programs (Cushing
+et al., 2014),the effects are not uniformly positive for
+SedentaryEfficacy
+every participant. That is to say, we think it is impor-
+Therewerenodifferencesinsedentarytimeacrossthe
+tanttonotethatnoteverypersonwhoreceivesthein-
+two groups on the first day of the study. The empty tervention will engage in a clinically meaningful
+model revealed an ICC for sedentary activity of .63. amount of more MVPA and less sedentary time. For
+This indicates that 63% of the variability in SB is instance, the lower bound 95% CI for MVPA is 4.8.
+between-person, whereas 37% is within-person. Although even the participant who achieves this
+Again,arandomlineareffectoftimefitthelongitudi- muted intervention effect is increasing MVPA at a
+naldatabest and was retained for analyses; thisagain level in keeping with prior physical activity interven-
+suggests that participants increased or decreased in tions (Metcalf et al., 2012), additional studies that
+sedentary time at different rates. Participants in the seek to optimize the effect of NUDGE are needed. In
+control condition obtained (cid:3)725min of sedentary otherwords,thereisvalueinraisingthe“floor”ofthe
+time.Inthefinalmodel,therewasanonsignificantef- intervention effect sothat the person whobenefits the
+fect of the intervention on SB (Table IV). The effect leaststillexperiencesameaningful change.Weexpect
+size of the model implied means was d ¼ .40. Day of that the variables that influence MVPA and sedentary
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+544 Cushingetal.
+time are likely to fluctuate within-person and that RealWorldApplication
+their effect will likely be different from person-to- A brief intervention like NUDGE does have real-
+person (Cushing et al., 2019). Importantly, the inter- world application beyond its function as a pilot trial.
+vention period is quite brief (20days) and additional It is meaningful to have an extremely brief interven-
+studies are needed to understand the durability of the tionthatimprovesMVPAin20days.Eveniftheinter-
+interventioneffectovertime. vention effect were to deteriorate after this window
+We agree with the microtemporal framework put (an open empirical question) it is easier to maintain a
+forwardbyDunton(2018)asawayofidentifyingvar- behavior than to start it from nothing. Therefore, in-
+iables that can be used to optimize NUDGE. For ex- tervention content that follows after NUDGE has an
+ample, we imagine that environmental context may abundance of MVPA to attempt to reinforce. Because
+moderatetheeffectofaNUDGEmessage.Inourown theaccelerometerwasonlyusedforoutcometracking,
+work, we have demonstrated that when participants teensdonotneedtowearasmartwatchoraccelerom-
+judgetheweathertobepoortheyarelesslikelytoen- eter to benefit from NUDGE, which further enhances
+its real-world application. Finally, a real-world appli-
+gage in MVPA (Bejarano et al., 2019). Related, we
+cation would deliver texts directly to any phone.
+have observed that adolescents are highly individual-
+Because a smartphone is not needed the cost of entry
+ized inthe degree towhich their mood orenergy level
+forNUDGEislow.
+influences their MVPA or sedentary time (Cushing
+et al., 2017). These findings suggest that environment
+TowardRecruitmentofaDiverseSample
+and mood states might be used to modify the delivery
+The sample in this study was primarily white and up-
+of an activity prompt or other intervention content.
+perincome.Thissuggeststousthatthecommunityre-
+Anotherpointofoptimizationismessage timing.Asa
+cruitment methods lack feasible for producing
+dayprogressesforanindividualparticipantthereisan
+diversityonincomeandrace.Futurestudiesmayneed
+asymptoteintheprobabilitythattheyaregoingtoen-
+to employ clinic recruitment or more targeted recruit-
+gageinmeaningfulexercise.Specifically,thereappears
+ment from specific organizations where race and in-
+to be a window of opportunity for prompting activity
+come diversity is present (e.g., Boys and Girls clubs,
+between 5 and 8 p.m. that deserves experimental in-
+faithgroups,etc.).
+vestigation (Ortega & Cushing, 2020). Finally, some
+evidence exists that suggests digital interventions may
+not be the right solution for every participant who Conclusion
+wantstochangetheirphysicalactivitybehavior,some NUDGE should be explored as both a standalone
+participants may benefit more from messages deliv- physical activity intervention as well as part of a mul-
+eredbyprovidersorpractitionersthanthosedelivered ticomponent package. This study serves as a useful
+by a piece of software (Brannon et al., 2018). With modelformappinginterventioncomponentsontospe-
+these findings in mind, it will be important to demon- cificelementsofanestablishedtheory.Byusingasfew
+strate the effect of NUDGE in a larger clinical trial, interventioncomponentsaspossiblethemechanismof
+andtodetermineifithasutilityinclinicalpopulations actionisunambiguous.
+(e.g.,pediatricoverweightandobesity).
+Funding
+Limitations Data collection for the control group was supporded by a
+Thisprojectisanonrandomizedtrial.Forthisreason, Targeted Research Grant from the Society of Pediatric
+both generalizability and causality are unknown. PsychologyawardedtoCCC.
+Second, the intervention period is short ((cid:3)3 weeks),
+Conflictsofinterest:Nonedeclared.
+and no maintenance phase was conducted. Therefore,
+wearenotabletoassessthedurabilityoftheinterven-
+References
+tion effect nor can we predict the point at which par-
+ticipants would have habituated to the intervention. Anderson, M. (2015). How having smartphones (or not)
+Third, the sample is small which introduces three shapesthewayteenscommunicate.PewResearchCenter.
+Armanasco,A.A.,Miller,Y.D.,Fjeldsoe,B.S.,&Marshall,
+problems:(a)Thesampleisnotfullyrepresentative of
+A.L.(2017).Preventivehealthbehaviorchangetextmes-
+all those who might benefit from NUDGE, (b) the ef-
+sage interventions: A meta-analysis. American Journal of
+fect sizes are likely to change in a larger trial, and (c)
+Preventive Medicine, 52(3), 391–402. https://doi.org/10.
+thep<.05criterionmaybetoostringentforasignifi-
+1016/J.AMEPRE.2016.10.042
+cance test. This report is of a nonclinical sample that
+Bejarano,C.M.,Cushing,C.C.,&Crick,C.J.(2019).Does
+is more likely to benefit from this type of intervention contextpredictpsychologicalstatesandactivity?Aneco-
+comparedwithonewithsignificantimpairments. logical momentary assessment pilot study of adolescents.
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+mHealthPhysicalActivityInterventionforAdolescents 545
+Psychology of Sport and Exercise, 41, 146–152. https:// Sports Research Digest. https://doi.org/10.4085/1062-
+doi.org/10.1016/J.PSYCHSPORT.2018.05.008 6050-44.1.5
+Brannon, E. E., & Cushing, C. C. (2015). A systematic re- Dunton,G.F.(2018).Sustaininghealth-protectivebehaviors
+view:Isthereanappforthat?Translationalscienceofpe- such as physical activity and healthy eating. JAMA,
+diatric behavior change for physical activity and dietary 320(7), 639–640. https://doi.org/10.1001/jama.2018.
+interventions. Journal of Pediatric Psychology, 40(4), 6621
+373–384.https://doi.org/10.1093/jpepsy/jsu108 Ebesutani, C., Regan, J., Smith, A., Reise, S., Higa-
+Brannon, E. E., Cushing, C. C., Walters, R. W., Crick, C., McMillan,C.,&Chorpita,B.F.(2012).The10-itemposi-
+Noser,A.E.,&Mullins,L.L.(2018).Goalfeedbackfrom tive and negative affect schedule for children, child and
+whom? A physical activity intervention using an N-of-1 parent shortened versions: Application of item response
+RCT. Psychology & Health, 33(6), 701–712. https://doi. theory for more efficient assessment. Journal of
+org/10.1080/08870446.2017.1385783 Psychopathology and Behavioral Assessment, 34(2),
+Carver, C. S., & Scheier, M. (1981). Attention and self- 191–203.https://doi.org/10.1007/s10862-011-9273-2
+regulation:Acontrol-theoryapproachtohumanbehavior. Fedele, D. A., Cushing, C. C., Fritz, A., Amaro, C. M., &
+Springer-Verlag. Ortega,A.(2017).Mobilehealthinterventionsforimprov-
+Carver,C.S.,&Scheier,M.F.(1982).Controltheory:Ause- ing health outcomes in youth a meta-analysis. JAMA
+ful conceptual framework for personality–social, clinical, Pediatrics, 171(5), 461.https://doi.org/10.1001/jamapedi-
+and health psychology. Psychological Bulletin, 92(1), atrics.2017.0042
+111–135.https://doi.org/10.1037/0033-2909.92.1.111 Gourlan, M., Bernard, P., Bortolon, C., Romain, A. J.,
+Chandler,J.L.,Brazendale,K.,Beets,M.W.,&Mealing,B. Lareyre,O.,Carayol,M.,Ninot,G.,&Boich(cid:2)e,J.(2016).
+A.(2016).Classificationofphysicalactivityintensitiesus- Efficacyoftheory-basedinterventionstopromotephysical
+ingawrist-wornaccelerometerin8-12-year-oldchildren. activity. A meta-analysis of randomised controlled trials.
+Pediatric Obesity, 11(2), 120–127. https://doi.org/10. Health Psychology Review, 10(1), 50–66. https://doi.org/
+1111/ijpo.12033 10.1080/17437199.2014.981777
+Cushing,C.C.,Mitchell,T.B.,Bejarano,C.M.,Walters,R. Heron,K.E.,Everhart,R.S.,McHale,S.M.,&Smyth,J.M.
+W.,Crick,C.J.,&Noser,A.E.(2017).Bidirectionalasso- (2017). Using mobile-technology-based ecological mo-
+ciationsbetweenpsychologicalstatesandphysicalactivity mentaryassessment(EMA)methodswithyouth:Asystem-
+inadolescents:AmHealthPilotstudy.JournalofPediatric atic review and recommendations. Journal of Pediatric
+Psychology, 42(5), 559–568. https://doi.org/10.1093/ Psychology, 42(10), 1087–1107. https://doi.org/10.1093/
+jpepsy/jsw099 jpepsy/jsx078
+Cushing,C.C.,Brannon,E.E.,Suorsa,K.I.,&Wilson,D. Heron,K.E.,&Smyth,J.M.(2010).Ecologicalmomentary
+K. (2014). Systematic review and meta-analysis of health interventions: Incorporating mobile technology into psy-
+promotioninterventionsforchildrenandadolescentsusing chosocialandhealthbehaviourtreatments.BritishJournal
+anecologicalframework.JournalofPediatricPsychology, ofHealthPsychology,15(1),1–39.
+39(8),949–962.https://doi.org/10.1093/jpepsy/jsu042 King,A.C.,Hekler,E.B.,Grieco,L.A.,Winter,S.J.,Sheats,
+Cushing,C.C.,Fedele,D.A.,Brannon,E.E.,&Kichline,T. J. L., Buman, M. P., Banerjee, B., Robinson, T. N., &
+(2018). Parents’ perspectives on the theoretical domains Cirimele, J. (2013). Harnessing different motivational
+frameworkelementsneededinapediatrichealthbehavior framesviamobilephonestopromotedailyphysicalactiv-
+app:Acrowdsourcedsocialvaliditystudy.JMIRmHealth ity and reduce sedentary behavior in aging adults. PLoS
+anduhealth,6(12),e192.https://doi.org/10.2196/mhealth. One, 8(4), e62613.https://doi.org/10.1371/journal.pone.
+9808 0062613
+Cushing,C.C.,Monzon,A.,Ortega,A.,Bejarano,C.M.,& Kuczmarski,R.J.(2002).2000CDCGrowthChartsforthe
+Carlson,J.A.(2019).Commentary:Identifyingopportuni- United States: Methods and development. Department of
+tiesforpediatriceHealthandmHealthstudies:Physicalac- Health and Human Services, Centers for Disease Control
+tivityasacaseexample.JournalofPediatricPsychology, andPrevention,NationalCenterforHealthStatistics.
+44(3),269–274.https://doi.org/10.1093/jpepsy/jsz005 Lansing, A. H., & Berg, C. A. (2014). Adolescent self-
+Czajkowski,S.M.,Powell,L.H.,Adler,N.,Naar-King,S., regulationasafoundationforchronicillnessself-manage-
+Reynolds,K.D.,Hunter,C.M.,Laraia,B.,Olster,D.H., ment. Journal of Pediatric Psychology, 39(10),
+Perna,F.M.,Peterson,J.C.,Epel,E.,Boyington,J.E.,& 1091–1096.https://doi.org/10.1093/jpepsy/jsu067
+Charlson, M. E. (2015). From ideas to efficacy: The Lenhart,A.(2015).Teens,socialmedia&technologyover-
+ORBIT model for developing behavioral treatments for view,2015.PewResearchCenter.
+chronicdiseases.HealthPsychology,34(10),971–982. Levesque,C.S.,Williams,G.C.,Elliot,D.,Pickering,M.A.,
+Danaei,G.,Ding,E.L.,Mozaffarian,D.,Taylor,B.,Rehm, Bodenhamer,B.,&Finley,P.J.(2006).Validatingthethe-
+J.,Murray,C.J.L.,&Ezzati,M.(2009).Thepreventable oretical structure of the Treatment Self-Regulation
+causesofdeathintheUnitedStates:Comparativeriskas- Questionnaire(TSRQ)acrossthreedifferenthealthbehav-
+sessment of dietary, lifestyle, and metabolic risk factors. iors.HealthEducationResearch,22(5),691–702.https://
+PLoS Medicine, 6(4), e1000058.https://doi.org/10.1371/ doi.org/10.1093/her/cyl148
+JOURNAL.PMED.1000058 Lowe,M.R.,Butryn,M.L.,Didie,E.R.,Annunziato,R.A.,
+DHHS. (2008). 2008 Physical activity guidelines for Thomas,J.G.,Crerand,C.E.,Ochner,C.N.,Coletta,M.
+Americans. President’s Council on Physical Fitness & C., Bellace, D., Wallaert, M., & Halford, J. (2009). The
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024
+546 Cushingetal.
+poweroffoodscale.Appetite,53(1),114–118.https://doi. Nelson, T. D., Benson, E. R., & Jensen, C. D. (2010).
+org/10.1016/j.appet.2009.05.016 Negativeattitudestowardphysicalactivity:Measurement
+Ludwig, K., Arthur, R., Sculthorpe, N., Fountain, H., & and role in predicting physical activity levels among
+Buchan,D.S.(2018).Textmessaginginterventionsforim- preadolescents. Journal of Pediatric Psychology, 35(1),
+provement in physical activity and sedentary behavior in 89–98.
+youth: Systematic review. JMIR mHealth and uhealth, Ortega,A.,&Cushing,C.C.(2020).Developingempirical
+6(9),e10799. decision points to improve the timing of adaptive digital
+McNair, D. M., Lorr, M., & Droppleman, L. F. (1971). health physical activity interventions in youth: Survival
+Profile of mood state manual. Educational and Industrial analysis.JMIRmHealthanduHealth,8(6),e17450.
+TestingService. Pokhrel, P., Herzog, T. A., Black, D. S., Zaman, A., Riggs,
+Meltzer,L.J.,Avis,K.T.,Biggs,S.,Amy,A.C.,Crabtree,V. N. R., & Sussman, S. (2013). Adolescent neurocognitive
+M. L., & Bevans, K. B. (2013). The children’s report of development, self-regulation, and school-based drug use
+sleep patterns (CRSP): A self-report measure of sleep for prevention. Prevention Science, 14(3), 218–228. https://
+doi.org/10.1007/s11121-012-0345-7
+school-aged children. Journal of Clinical Sleep Medicine,
+Rivera,D.E.,Pew,M.D.,&Collins,L.M.(2007).Usingen- 09(03),235–245.https://doi.org/10.5664/jcsm.2486
+gineeringcontrolprinciplestoinformthedesignofadap-
+Metcalf,B.,Henley,W.,&Wilkin,T.(2012).Effectiveness
+tive interventions: A conceptual introduction. Drug and
+ofinterventiononphysicalactivityofchildren:Systematic
+AlcoholDependence,88,S31–S40.
+review and meta-analysis of controlled trials with objec-
+Sallis,J.F.,Grossman,R.M.,Pinski,R.B.,Patterson,T.L.,
+tively measured outcomes (EarlyBird 54). BMJ, 345(1),
+&Nader,P.R.(1987).Thedevelopmentofscalestomea-
+e5888.
+sure social support for diet and exercise behaviors.
+Michie, S., Abraham, C., Whittington, C., McAteer, J., &
+Preventive Medicine, 16(6), 825–836. https://doi.org/10.
+Gupta, S. (2009). Effective techniques in healthy eating
+1016/0091-7435(87)90022-3
+and physical activity interventions: A meta-regression.
+Smyth, J. M., & Heron, K. E. (2016). Is providing mobile
+Health Psychology, 28(6), 690–701. https://doi.org/10.
+interventions “just-in-time” helpful? an experimental
+1037/a0016136
+proof of concept study of just-in-time intervention for
+Mitchell, T. B., Cushing, C. C., & Amaro, C. M. (2016).
+stressmanagement.IEEEWirelessHealthConference,pp.
+Psychometric properties of the power of food scale in a
+89–95. 2016 IEEE Wireless Health (WH). IEEE. https://
+community sample of preadolescents and adolescents.
+doi.org/10.1109/WH.2016.7764561
+Journal of Child and Family Studies, 25(9), 2733–2739.
+Snijders,T.A.B.,&Bosker,R.J.(2011).Multilevelanalysis:
+https://doi.org/10.1007/s10826-016-0444-3
+An introduction to basic and advanced multilevel model-
+Motl,R.W.,Dishman,R.K.,Trost,S.G.,Saunders,R.P.,
+ing.Sage.
+Dowda,M.,Felton,G.,Ward,D.S.,&Pate,R.R.(2000). Varni, J. W., Seid, M., & Kurtin, P. S. (2001). PedsQLTM
+Factorialvalidityandinvarianceofquestionnairesmeasur-
+4.0: Reliability and Validity of the Pediatric Quality of
+ing social-cognitive determinants of physical activity Life InventoryTM version 4.0 generic core scales in
+among adolescent girls. Preventive Medicine, 31(5), healthy and patient populations. Medical Care, 39(8),
+584–594.https://doi.org/10.1006/pmed.2000.0735 800–812. https://doi.org/10.1097/00005650-200108000-
+Nader,P.R.,Bradley,R.H.,Houts,R.M.,McRitchie,S.L., 00006
+&O’Brien,M.(2008).Moderate-to-vigorousphysicalac- Williams, G. C., Freedman, Z. R., & Deci, E. L. (1998).
+tivityfromages9to15years.JAMA,300(3),295–305. Supporting autonomy to motivate patients with diabetes
+Nahum-Shani,I.,Smith,S.N.,Spring,B.J.,Collins,L.M., for glucose control. Diabetes Care, 21(10), 1644–1651.
+Witkiewitz,K.,Tewari,A.,&Murphy,S.A.(2016).Just- https://doi.org/10.2337/diacare.21.10.1644
+in-TimeAdaptiveInterventions(JITAIs)inmobilehealth: Wrosch, C., Scheier, M. F., Carver, C. S., & Schulz, R.
+Keycomponentsanddesignprinciplesforongoinghealth (2003).Theimportanceofgoaldisengagementinadaptive
+behavior support. Annals of Behavioral Medicine, 18, self-regulation: When giving up is beneficial. Self and
+446–462.https://doi.org/10.1007/s12160-016-9830-8 Identity,2(1),1–20.
+Downloaded
+from
+https://academic.oup.com/jpepsy/article/46/5/536/6114715
+by
+guest
+on
+28
+July
+2024

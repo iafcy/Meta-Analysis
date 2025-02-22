@@ -1,0 +1,1025 @@
+Jacquemin et al. Human Genomics (2023) 17:16 Human Genomics
+https://doi.org/10.1186/s40246-023-00464-w
+RESEARCH Open Access
+Congenital hydrocephalus: new Mendelian
+mutations and evidence for oligogenic
+inheritance
+Valerie Jacquemin1* , Nassim Versbraegen2,3 , Sarah Duerinckx4, Annick Massart1,5, Julie Soblet6,
+Camille Perazzolo1, Nicolas Deconinck7, Elise Brischoux‑Boucher8, Anne De Leener9, Nicole Revencu9 ,
+Sandra Janssens10, Stèphanie Moorgat11, Bettina Blaumeiser12, Kristiina Avela13, Renaud Touraine14,
+Imad Abou Jaoude15, Kathelijn Keymolen16, Pascale Saugier‑Veber17, Tom Lenaerts2,3,18 ,
+Marc Abramowicz1,19*† and Isabelle Pirson1†
+Abstract
+Background Congenital hydrocephalus is characterized by ventriculomegaly, defined as a dilatation of cerebral ven‑
+tricles, and thought to be due to impaired cerebrospinal fluid (CSF) homeostasis. Primary congenital hydrocephalus is
+a subset of cases with prenatal onset and absence of another primary cause, e.g., brain hemorrhage. Published series
+report a Mendelian cause in only a minority of cases. In this study, we analyzed exome data of PCH patients in search
+of novel causal genes and addressed the possibility of an underlying oligogenic mode of inheritance for PCH.
+Materials and methods We sequenced the exome in 28 unrelated probands with PCH, 12 of whom from families
+with at least two affected siblings and 9 of whom consanguineous, thereby increasing the contribution of genetic
+causes. Patient exome data were first analyzed for rare (MAF < 0.005) transmitted or de novo variants. Population
+stratification of unrelated PCH patients and controls was determined by principle component analysis, and outliers
+identified using Mahalanobis distance 5% as cutoff. Patient and control exome data for genes biologically related to
+cilia (SYScilia database) were analyzed by mutation burden test.
+Results In 18% of probands, we identify a causal (pathogenic or likely pathogenic) variant of a known hydrocephalus
+gene, including genes for postnatal, syndromic hydrocephalus, not previously reported in isolated PCH. In a further
+11%, we identify mutations in novel candidate genes. Through mutation burden tests, we demonstrate a significant
+burden of genetic variants in genes coding for proteins of the primary cilium in PCH patients compared to controls.
+Conclusion Our study confirms the low contribution of Mendelian mutations in PCH and reports PCH as a pheno‑
+typic presentation of some known genes known for syndromic, postnatal hydrocephalus. Furthermore, this study
+identifies novel Mendelian candidate genes, and provides evidence for oligogenic inheritance implicating primary
+cilia in PCH.
+†Marc Abramowicz and Isabelle Pirson have contributed equally to this work
+*Correspondence:
+Valerie Jacquemin
+jacqvalli@yahoo.com
+Marc Abramowicz
+marc.abramowicz@unige.ch
+Full list of author information is available at the end of the article
+© The Author(s) 2023. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which
+permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the
+original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or
+other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line
+to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory
+regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this
+licence, visit http:// creat iveco mmons. org/ licen ses/ by/4. 0/. The Creative Commons Public Domain Dedication waiver (http:// creat ivec o
+mmons. org/ publi cdoma in/ zero/1. 0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.
+Jacquemin et al. Human Genomics (2023) 17:16 Page 2 of 14
+Keywords Congenital hydrocephalus, Oligogenic inheritance, Exome sequencing, Mutation burden test, Cilia
+Background clearly monogenic cases, might consist of an oligogenic dis-
+Hydrocephalus refers to the abnormal accumulation order in at least a subset of patients.
+of cerebrospinal fluid (CSF) within the cerebral ventri- In hydrocephalus animal models, genetic mutations
+cles (ventriculomegaly) and/or subarachnoid spaces. were identified in genes encoding key proteins of motile
+Increased intracerebral pressure may cause tissue injury or primary cilia function. Mutant mice with deficiencies
+and irreparable brain damage, and hydrocephalus is in motile cilia axonemal proteins, such as hydin, dynein
+hence a potentially devastating condition. Strikingly, in axonemal heavy chain 5 (Dnah5), and coiled-coil domain-
+spite of decades of surgery for hydrocephalus, consisting containing 151 (Ccdc151) [21–23], exhibit hydrocepha-
+mainly of shunting brain ventricular CSF to the perito- lus. Nevertheless, in humans, motile cilia defaults lead to
+neal cavity, it is often unknown whether hydrocephalus is primary cilia dyskinesia (PCD), a disorder characterized
+a cause or consequence of brain damage [1]. by chronic respiratory tract infections, situs inversus, and
+Congenital hydrocephalus (CH) affects 2–8 in 10,000 infertility, but rarely associated to hydrocephalus [24].
+live births, with major morbidity and mortality [2]. CH Knock-out mice for genes involved in ciliogenesis such
+appears very heterogeneous in its causes, with more than as Cadherin EGF LAG Seven-Pass G-Type Receptor 2/3
+half of the cases secondary to hemorrhage, neoplasm, (Ceslr2/3) [25], Intraflagellar transport 88 (Ift88) [26, 27],
+or infection, while epidemiological studies suggest a and Kinesin family member 6 (Kif6) [28], all presenting
+genetic etiology for up to 40% of CH cases [3]. In a third ependymal cell cilia dysfunction, also exhibit hydrocepha-
+of genetic cases, hydrocephalus may occur as the sole or lus. Interestingly, the involvement of primary cilia defects
+main clinical feature [4, 5], which will be defined through- in hydrocephalus was reported in elipsa (ift54) zebrafish
+out the manuscript as primary congenital hydrocephalus mutants [29] as well as in Ccdc88c mice mutants [30].
+(PCH). On the contrary, hydrocephalus can occur as part Taken together, these studies suggest a potential role for
+of a syndrome in association to other anomalies, known primary cilium defects in human PCH.
+as syndromic forms of PCH. To better understand the genetic landscape of PCH, we
+Though many genes have been associated with syn- studied a cohort of 28 inbred and outbred families. We first
+dromic forms of hydrocephalus, few genes have been performed whole-exome sequencing (WES) analysis and
+reported to cause PCH. X-linked inheritance of PCH has identified novel mutations in known CH genes, as well as
+been associated with mutations in L1 cell adhesion mol- in three novel candidate genes. We then addressed possible
+ecule (L1CAM) [6, 7], and AP-1 complex sigma-2 subunit oligogenic inheritance of PCH.
+(AP1S2) [8], which encode proteins involved in neuron
+Results
+guidance and function. Autosomal recessive inheritance
+was observed with mutations in multiple PDZ domain We included 28 genetically undiagnosed probands in our
+protein (MPDZ) [9], coiled-coil domain-containing pro- study, 9 of which were from consanguineous families and
+tein 88C (CCDC88C) [10, 11], EMAP like 1 (EML1), 19 were outbred. A total of 39 subjects were sequenced,
+and WD repeat domain 81 (WDR81) [12]. The encoded including probands, affected siblings and parents (Addi-
+proteins are, respectively, involved in synaptic plasticity, tional file 1: Table S1). WES analysis provided a molecu-
+dendrite development, mitotic spindle orientation, and lar diagnosis in 18% of the PCH cohort, i.e., pathogenic or
+endolysosomal trafficking. More recently, de novo muta- likely pathogenic variants according to ACMG guidelines
+tions were also identified in a set of genes regulating neu- [31], as well as the identification of three novel candidate
+ral progenitor cell fate, which account for a diagnostic genes.
+yield of 8.5% of the studied CH cohort [13, 14]. Never-
+theless, despite significant efforts to identify PCH causal WES analysis provides a molecular diagnosis in 18%
+genes, Mendelian inheritance is rare, with the majority of of the PCH cohort, novel mutations are identified in genes
+cases remaining unexplained. associated with CH
+Recent reports indicate that disorders previously consid- CRADD
+ered as monogenic are in fact caused by mutant alleles at Two siblings of Finnish origin, presenting with mac-
+more than one locus [15–19]. Digenic inheritance has been rocephaly (Table 1, Additional file 1: Table S1-15.1;
+described in diverse pathologies [20], among which brain 15.2), displayed a common homozygous mutation in
+disorders such as holoprosencephaly and microcephaly CASP2 and RIPK1 domain-containing adaptor with
+[16, 19]. This suggests that PCH, associated with only few death domain (CRADD) (c.509 G > A p.(Arg170His)), as
+J acquemin et al. Human Genomics (2023) 17:16 Page 3 of 14
+noitatum
+DDARC
+fo
+noitamrfinoc
+dna
+sulahpecordyh
+htiw
+detaicossa
+seneg
+ni snoitatum
+levoN
+1
+elbaT
+feR
+yticinhtE
+tceffe
+nietorP
+nietorP
+noitpircsed
+tnairav
+tpircsnarT
+gniyfissalc
+rof
+sedoC
+tnairaV
+DDAC
+ecnatirehnI
+ytisogyZ
+eneG
+DI
+tneitaP
+stnairav
+noitacfiissalc
+erocs
+)GMCA(
+hcnerF
+tfihsemarF
+)45*sf5412ulG(.p
+Gled5346.c:4.510600_MN
+2MP
+dna
+2SP
+,1SVP
+P
+04
+ovon
+eD
+teH
+A1DIRA
+12
+]04
+,23[
+hsinniF
+esnessiM
+)siH071grA(.p
+A > G905.c:3.508300_MN
+3PP
+dna
+2MP
+,4SP
+PL
+42
+RA
+moH
+DDARC
+2.51
+;1.51
+]34[
+inatsikaP
+noiteleD
+)led517ueL_317nlG(.p
+led5412_7312.c:2.837020_MN
+1PP
+dna
+4MP
+,2MP
+,3SP
+PL
+AN
+RA
+moH 022SNIDIK
+3.61
+;2.61
+;1.61
+naigleB
+tceffe
+gnicilpS
+?.p
+A >
+G1
+9351.c:1.667342100_MN
+2MP
+dna
+1SVP
+PL
+8.22
+RA
+moH 1TNGMOP
+62
++
+naccoroM
+tceffe
+gnicilpS
+?.p
+A
+> G1
+333.c:5.283310_MN
+2MP
+dna
+1SVP
+PL
+8.42
+RA
+moH
+2TMOP
+71
++
+dna
+suogyzoreteh
+htob
+ni
+ro
+)1TNGMOP
+,DDARC(
+etats
+suogyzomoh
+eht
+ni
+tnesba
+rehtie
+era
+snoitatum
+llA
+.refiitnedi
+qeSfeR
+htiw
+,noitadnemmocer
+erutalcnemon
+SVGH
+ot
+gnidrocca
+deman
+era
+snoitatum
+ehT
+llun
+,1SVP
+;cinegohtap
+ylekil
+,PL
+;cinegohtap
+,P ;elbacilppa
+ton
+:AN ;etogyzomoh
+:moH
+;etogyzoreteh
+:teH
+;evissecer
+lamosotua
+:RA
+.sesabatad
+DAmong
+dna
+CAxE
+morf
+)2TMOP
+,022SNIDIK
+,A1DIRA(
+setats
+suogyzomoh
+;yrotsih
+ylimaf
+on
+dna
+esaesid
+eht
+htiw
+tneitap
+a ni
+)demrfinoc
+ytinretap
+dna ytinretam
+htob(
+ovon
+ed
+,2SP
+;)noiteled
+noxe-itlum
+ro
+elgnis
+,nodoc
+noitaitini
+,setis
+ecilps
+2
+ro
+1
+/
+lacinonac
+,tfihsemarf
+,esnesnon(
+tnairav
+−
++
+eht
+ot
+derapmoc
+desaercni
+yltnacfiingis
+si
+slaudividni
+detceffa
+ni tnairav
+eht fo
+ecnelaverp
+,4SP
+;tcudorp
+eneg
+ro
+eneg
+eht
+no
+tceffe
+gnigamad
+a fo
+evitroppus
+seiduts
+lanoitcnuf
+oviv
+ni ro ortiv
+ni
+dehsilbatse-llew
+,3SP
+a
+ni
+snoitresni/snoiteled
+emarfni
+ot
+eud
+segnahc
+htgnel
+nietorp
+,4MP
+;CAxE
+ro semoneG
+0001
+,tcejorP
+gnicneuqeS
+emoxE
+ni
+)evissecer
+fi
+ycneuqerf
+wol
+ylemertxe
+ta
+ro(
+slortnoc
+morf
+tnesba ,2MP
+;slortnoc
+ni
+ecnelaverp
+a
+troppus
+ecnedive
+lanoitatupmoc
+fo
+senil
+elpitlum
+,3PP
+;esaesid
+eht
+esuac
+ot nwonk
+ylevitinfied
+eneg
+a
+ni srebmem
+ylimaf
+detceffa
+elpitlum
+ni
+esaesid
+htiw
+noitagerges-oc
+,1PP
+;stnairav
+ssol-pots
+ro
+noiger
+taeper-non
+]85[0202
+.la te drallE
+gniwollof
+sedoc
+dna
+snoitacfiissalC
+.).cte
+,tcapmi
+gnicilps
+,yranoitulove
+,noitavresnoc(
+tcudorp
+eneg
+ro eneg
+eht
+no
+tceffe
+suoireteled
+Jacquemin et al. Human Genomics (2023) 17:16 Page 4 of 14
+reported previously [32, 33]. The p.(Arg170His) variant, ARID1A First trimester ultrasound revealed hydroceph-
+located in the last exon of CRADD gene, was predicted alus with dilatation of 3rd ventricle, confirmed by foeto-
+to have a highly damaging effect on protein function, pathological exam which additionally described aque-
+and yielded a combined annotation-dependent deple- ductal stenosis and corpus callosum agenesis. By WES
+tion (CADD) score [34, 35] of 24, highest compared to trio analysis, we identified a de novo frameshift mutation
+all other variants shared by both fetuses. It was present in AT-rich interaction domain 1A (ARID1A) (c.6435delG;
+at a low frequency (5.277 10−4) in the exome aggrega- p.(Glu2145fs)) (Table 1, Additional file 1: STable 1–21),
+×
+tion consortium [36] with 63 alleles reported, all het- absent from 1000G [37], GoNL [38], ESP6500 [39], our
+erozygous, in 17 European (Non-Finnish), 2 Other, and in-house database, and gnomAD [44]. Sanger sequenc-
+44 European (Finnish) subjects. The variant was absent ing of the affected fetus confirmed the presence of the
+from 1000G [37], GoNL [38], ESP6500 [39], and our in- frameshift, and its absence in both parents. ARID1A
+house database. The p.(Arg170His) substitution was pre- encodes a member of the SWItch/Sucrose Non-Fer-
+viously described in a patient presenting an overlapping menting (SWI/SNF) complex, mediating processes such
+phenotype of lissencephaly and megalencephaly [40]. as the regulation of gene expression, cellular prolifera-
+This mutation occurs at a highly conserved residue in the tion, apoptosis, differentiation, and the repair of genetic
+death domain of the protein spanning from amino acid material [47]. Recently, a conditional Arid1a KO mouse
+residues 116 to 188, which participates to form a complex model showed that pancortical Arid1a deletion led to
+that activates Caspase2 and trigger apoptosis. The Arg- extensive mistargeting of intracortical axons and corpus
+170Cys mutation abolishes CRADD’s ability to activate callosum agenesis [47]. Human mutations in this gene are
+caspase-2, resulting in reduced neuronal apoptosis, lead- associated with Coffin–Siris syndrome (CSS), a disorder
+ing to megalencephaly [40]. Interestingly, another patient rarely linked to hydrocephalus. Though malformations
+harboring a missense mutation targeting the same amino such as corpus callosum agenesis have been described
+acid lissencephaly and megalencephaly in association to in CSS caused by pathogenic variants in ARID1A, pre-
+hydrocephalus [40]. CRADD/caspase-2 signaling plays natal anomalies are rare with almost all CSS patients
+an essential role in human cortical architecture, synaptic ascertained in postnatal period [48]. However, novel fetal
+plasticity, and cognitive function during brain develop- findings in association with pathogenic ARID1A variants
+ment [32]. Apoptosis is known to be important in human recently reported, overlap the clinical presentation of our
+brain development and its impairment has been associ- fetus (i.e., lung lobulation defects) [48]. Interestingly, the
+ated to brain malformations [41, 42]. Indeed, ventriculo- involvement of ARID1A in cancer is transposed as a puta-
+megaly can arise from progressive CSF accumulation due tive mechanism to explain the brain malformations asso-
+to peri-aqueductal neuronal stem cell hyperproliferation ciated to CSS. In cancer, pathogenic ARID1A mutations
+[14]. Taken together, these data suggest that the disrup- affect subunits of the SWI/SNF complex inducing a dis-
+tion of this pathway could explain the phenotype of this ruption in phosphatase and tensin homolog (PTEN) and
+patient. phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic
+subunit alpha (PIKC3A) signaling, thus aberrant expres-
+KIDINS220 In one family of consanguineous origin, sion of these genes could lead to brain malformations, as
+three fetuses (Table 1, Additional file 1: Table S1-16.1; both PTEN and PIKC3A haploinsufficiency have been
+16.2; 16.3) displayed ventriculomegaly and limb contrac- linked to ventriculomegaly/hydrocephalus [48].
+tures. WES of affected fetuses and both parents revealed
+a shared homozygote mutation in kinase D interacting POMT2 and POMGNT1
+substrate 220 (KIDINS220) c.2137_2145delCAA GTG Two unrelated fetuses presented at the time of evalu-
+CTG; p.(Gln713_Leu715del) which segregated with the ation (undisclosed information and 22 weeks of gesta-
+phenotype, as reported elsewhere [43]. The three amino tion, respectively) with severe ventriculomegaly. In each
+acid inframe deletion was absent from 1000G [37], GoNL proband, a homozygous mutation was found (Table 1,
+[38], ESP6500 [39], and our in-house database as well as Additional file 1: Table S1-17, 26) in genes encoding
+in gnomAD [44]. The aforementioned glutamine, valine, proteins involved in O-mannosylglycan biosynthesis. In
+and leucine residues are highly conserved among mam- the first fetus, WES analysis uncovered a homozygote
+mals, and fall in the binding region of Trka, an NGF mutation in protein O-mannosyltransferase 2 (POMT2)
+receptor which triggers differentiation and survival path- c.333 1 G > A, while in the second fetus a homozygote
++
+ways [45]. Moreover, the presented phenotype was previ- mutation in protein O-linked mannose N-acetylglu-
+ously reported in one family with three affected siblings, cosaminyltransferase 1 (POMGNT1) c.1539 1 G > A
++
+for which pathogenicity was attributed to a homozygous was found. Both mutations were predicted pathogenic
+KIDINS220 mutation [46]. with respective pathogenic CADD scores of 24.8 and
+J acquemin et al. Human Genomics (2023) 17:16 Page 5 of 14
+22.8, and resided in splice site donors, which in gen- file 1: Table S1-28.1; 28.2). Familial segregation was
+eral leads to single exon skipping [49]. In POMGNT1, confirmed by Sanger sequencing. The variant falls into
+the impacted exon lies in the proteins catalytic region, a homozygote stretch of 12 Mbp ranging from posi-
+while in POMT2 it lies within the transmembrane heli- tion chr1: 100.984.092–113.000.946. The variant was
+ces of the protein. POMT2 and POMGNT1 are involved not reported in gnomAD [44], and the exon harboring
+in two clinically similar disorders, respectively Walker– the mutation is predicted intolerant to variation. The
+Warburg syndrome (WWS) and muscle–eye–brain dis- variant was predicted deleterious with a CADD score of
+ease (MEB) [50, 51]. Both are linked to a severe neuronal 16.94. Interestingly, a recent article describes a patient
+migration disorder associated with hydrocephalus and with severe growth delay, and anatomic brain anomalies
+muscular dystrophy, though the physiopathology is usu- including an enlargement of the peri-cerebral spaces, in
+ally less severe in MEB [52–55]. Several studies indicate which the same RNPC3 variant was identified [59] The
+that O-mannosylation of alpha-dystroglycan (⍺-DG), a tyrosine residue is a well-conserved amino acid in the
+highly glycosylated surface membrane protein, plays an RNA recognition motif 2 (RRM2) involved in the bind-
+important role in muscle and brain development [50, 56]. ing of RNPC3 to small nuclear RNAs. Indeed, RNPC3
+Indeed, in WWS patients, the highly glycosylated ⍺-DG gene encodes for a component the pre-mRNA splicing
+was selectively deficient in skeletal muscle and brain [57]. machinery, the minor (U12-dependent) spliceosome
+complexes, reported to target around 700–800 genes
+Three new potential candidate genes revealed by WES [60].
+analysis
+RNPC3 TIE1
+In a consanguineous family of Turkish origin, a homozy- A homozygote variant in tyrosine kinase with immuno-
+gous missense variant in RNA binding region con- globulin like and EGF like domains 1 (TIE1) c.2459 G > A;
+taining 3 (RNPC3) c.1328A > G; p.(Tyr443Cys) was p.(Arg820Gln) was identified in an consanguineous fam-
+identified in two affected fetuses (Fig. 1A, Additional ily (Fig. 1B, Additional file 1: Table S1-10). The variant
+Fig. 1 Schematic representation of the three potential candidate genes and their respective family tree. Family trees showing proband 28.1 (A),
+proband 10 (B) and proband 22 (C), and their respective genotypes. The dotted line represents adoption. Schematic representation of the proteins’
+domains and position of variants in candidate genes are indicated. Image created with BioRender.com
+Jacquemin et al. Human Genomics (2023) 17:16 Page 6 of 14
+was absent from all data databases, and was predicted potential outliers in 25 unrelated PCH patients and 166
+to yield a damaging effect on the protein. Harboring a control patients with non-neurological disorders based
+CADD score of 32, this variant was the most deleteri- on the Mahalanobis distance (MD). The MD is a distance
+ous homozygote variant identified in the patient. Indeed, metric that allows inference of the distance of a point
+bioinformatic predictions (https://www.mutationtaster. with regard to a multivariate distribution (PCA) while
+org/;https://hsf.genomnis.com/; http://wangcomputing. employing the covariance structure [68]. Here, we used
+com/assp/) show that the missense mutation could intro- a robust version of MD which computes the distance (in
+duce a new splice site, affecting RNA splicing. terms of deviation from the multivariate centroid) for
+each data point and we set a cutoff value based on the
+DNAH2 distribution of those distances [69]. The points with dis-
+In one patient (Fig. 1C, Additional file 1: Table S1-22) tances greater than the cutoff are deemed to be outliers.
+presenting with triventricular hydrocephalus, a brain MD with a significance level of 5% (MD5%) was applied
+cyst, encephalocele, and an incomplete cerebellum, we to the two first principal components of the PCA, mean-
+identified a compound heterozygote variant in dynein ing that 5% of the most extreme data points were consid-
+axonemal heavy chain 2 (DNAH2), encoding a heavy ered as outliers. This analysis conserved 23 patients and
+chain subunit of the inner dynein arm-f (dynein f), a 155 controls (Fig. 2A) and excluded 2 patients and 11
+component of motile cilia [61]. The NM_020877.2: controls as they were considered as outliers.
+c.2493C > A; p.(Pro345Thr) and c.12834G > A; The mutation burden test revealed a statistically sig-
+p.(Val3792Ile) variants harbored respective CADD nificant burden in PCH patients in ciliary genes and
+scores of 26 and 15, and both were absent from 1000G more particularly in primary ciliary genes, over a range
+[37], GoNL [38], ESP6500 [39], and our in-house data- of AF (< 3%, < 5%), consistent with oligogenic inherit-
+base. The first variant p.(Pro345Thr) lies within the ance (Fig. 2B). Interestingly, we maintain significance for
+STEM domain of the protein involved in interaction with AF < 10% in primary cilia. The smallest p value (p 0.0082)
+=
+other dynein components. DNAH2 is part of the axone- was observed in the primary cilia subset of genes at an
+mal inner dynein arm complex and plays a central role AF < 5% with MD5% cutoff (Fig. 2B, C, lower right panel).
+in ciliary beating [61]. Notably, compound heterozygote The same trend was maintained in the cohort prior to
+variants (NM_020877.2: c.2190C > T, p.(Arg244Trp) / PCA analysis, where PCH patients displayed a higher
+c.7192G > C, p.(Gly1911Ala); c.3246C > T, p.(Arg596X) / number of allelic variants in the primary cilia genes for
+c.4696A > G, p.(Asp1079Gly)) were found in two different AF < 3% and above (Fig. 2B).
+probands presenting primary microcephaly [62]. As a control, we measured the burden of allelic vari-
+ants in housekeeping genes among PCH and control
+Oligogenic inheritance: patients with PCH display patients for all conditions which gave a significant p value
+an excess of variants in primary cilia genes and observed no significant difference between the two
+Although WES analysis rendered a molecular diagno- groups (Fig. 2C, right panels). To exclude the effect of
+sis for 18% of our cohort, a significant number of cases chance in the selection of the ciliary genes, 10,000 permu-
+remained unsolved, for whom we suspected non-Men- tations were performed with either 304 or 253 randomly
+delian modes of inheritance. Many animal models which chosen housekeeping genes (Additional file 1: Figure S1).
+present hydrocephalus as main feature are models in A significance level of α 0.05 was considered, with an
+=
+which motile cilia genes are impaired [63, 64], though expected value of less than 500 subsets of housekeeping
+the impairment of the same group of genes in humans is genes resulting in a significant Wilcoxon statistics (10,000
+responsible for PCD, a ciliopathy rarely associated with trials * 0.05). The number of subsets of housekeep-
+hydrocephalus [65, 66]. Conversely, there is some recent ing genes yielding a Wilcoxon statistic with a smaller p
+evidence linking primary cilia defects and hydrocephalus value than for the ciliary genes was counted (Additional
+[29]. file 1: Figure S2). Respectively, only 278 (AF < 3%) and
+We therefore compared the burden of variants in ciliary 122 (AF < 5%) random selections of housekeeping genes
+genes, obtained from the SYScilia database [67], between resulted in a significant p value with MD5% (Fig. 2B). In
+our patient and control groups. This analysis was con- other words, only 2.8% and 1.2% of randomly chosen lists
+ducted using the complete gene list comprised of 304 harbor a smaller p value compared to the corresponding
+genes, and on a subdivision of the latter (in two subsets burden test p value obtained with the ciliary gene lists.
+of genes linked to motile and primary cilia). The variants The same analysis conducted on the total cohort gave 314
+were filtered as described in the Methods section, for and 142 random selections of housekeeping genes with a
+various allelic frequencies (AFs < 0.5, 1, 3, 5, 10, and 30%). significant p value (Fig. 2B). These results allow us to vali-
+Principal component analysis (PCA) was used to identify date with a probability of 95% that the burden of variants
+J acquemin et al. Human Genomics (2023) 17:16 Page 7 of 14
+Fig. 2 PCH patients display a burden of variants in primary ciliary genes. A Plot represents the distribution of patients and controls used in
+mutation burden test analysis. Each dot represents a sample (exome sequencing data) and each color represents a type of sample: patients (red
+circles) and controls (gray circles). The square englobes the subset of patients and controls determined by MD5% cutoff. B Calculated p values by
+Wilcoxon test for mutation burden tests (Burden p value) and on 10,000 permutation test (PT p value) at different allelic frequencies (AFs) with or
+without cutoff at MD5%. *p value 0.05, **p value 0.01. C (upper panels) Variants in 253 primary cilia genes (left) and in 253 housekeeping genes
+≤ ≤
+(right) identified via exome sequencing filtered for AF < 3% in patients and controls with or without MD5% cutoff. (Lower panels) Variants in 253
+primary cilia genes (left) and in 253 housekeeping genes (right) identified via exome sequencing filtered for AF < 5% in patients and controls with or
+without MD5% cutoff
+observed in our PCH patients is not due to random gene of pathogenic combinations of two or more variants. A
+selection. search for common digenic pairs among hydrocepha-
+lus patients was also conducted, but did not uncover
+Digenic viewpoint: VarCoPP analysis any conclusive results, possibly due to the modest size
+Finally, patients’ results were re‐examined individually, of the cohort. The pathogenic pairs in the 99% confi-
+from a digenic viewpoint, in search of potential cases dence interval obtained by VarCoPP for each individual
+Jacquemin et al. Human Genomics (2023) 17:16 Page 8 of 14
+patient were evaluated using bioinformatic databases Furthermore, WES analysis allowed the identifica-
+such as PubMed, OMIM, and ClinVar. In addition, we tion of apparently Mendelian mutations in three new
+took advantage of the ORVAL [70] platform to explore candidate genes, RNPC3, TIE1 and DNAH2, each of
+the predicted digenic effect of the pathogenic pairs. As these belonging to cellular processes previously linked
+a result, a candidate pair composed of primary ciliary to human or mice PCH phenotype, and ubiquitously
+genes was predicted to have a digenic effect (Additional expressed in brain, albeit with lower expression levels for
+file 1: Table S2). DNAH2 (https:// www. prote inatl as. org).
+The candidate pair is predicted as true digenic by the The tyrosine residue variant in RNPC3 p.(Tyr443Cys)
+digenic effect predictor [71] in ORVAL, meaning that the is a well-conserved amino acid in the RNA recogni-
+presence of variants in both genes is required to trigger tion motif 2 (RRM2) involved in binding small nuclear
+the disease phenotype. The first variant falls in the Intra- RNAs. RNPC3 is a component of one of the minor
+flagellar transport 172 (IFT172) gene (p.Asp907Asn), and (U12-dependent) spliceosome complex, reported to
+is absent from 1000G [37], GoNL [38], ESP6500 [39], and act on 700–800 RNAs [60]. A zebrafish mutant, caliban
+our in-house database as well as in gnomAD [44] and (clbn), harboring a splicing mutation in the same RRM2
+harbors a CADD score of 25.5. The second variant com- domain of rnpc3, leads to a severe and pleiotropic phe-
+posing the pathogenic pair in tetratricopeptide repeat notype in developing zebrafish larvae with early lethality
+domain 21B (TTC21B) (p.Pro753Leu) was also absent [74]. The authors showed that several genes involved in
+from all aforementioned databases and harbors a CADD various steps of mRNA processing, including transcrip-
+score equal to 23.3. IFT172 is part of the IFT-B com- tion, splicing, and nuclear export are disrupted in clbn
+plex and TTCB21 of the IFT-A complex, respectively, mutants. Interestingly, of the 38 downregulated genes, 4
+responsible for anterograde and retrograde intraflagellar are associated with human pathologies wherein hydro-
+transport [72], necessary for the structure and functional cephalus is a feature [74]. Though in human [75] and
+integrity of the cilium. mice models [76, 77] defects in minor spliceosome com-
+ponents are associated with several disorders charac-
+Discussion
+terized by microcephaly and dwarfism, a recent report
+In this study, we report the analysis by WES of a PCH describes a case of severe ventriculomegaly and mild
+cohort of 28 families, 9 of which were inbred and 19 out- growth retardation associated with compound heterozy-
+bred. Almost half of the PCH probands included in this gote mutations in the non-coding region of RNA, U4atac
+study were from families where two or more cases had Small Nuclear (RNU4ATAC) [78]. In parallel, a recent
+been described (13 families), which increased the likeli- study in 9 outbred families identified mutations in splice-
+hood of a genetic contribution. osome genes peptidylprolyl isomerase like 1 (PPIL1) and
+A molecular diagnosis following Mendelian inherit- pre-RNA processing-17 (PRP17) causing neurodegen-
+ance was found in four families with novel mutations erative pontocerebellar hypoplasia with microcephaly,
+in known genes: KIDINS220, POMT2, POMGNT1 and where one of the probands presented both microcephaly
+ARID1A (Table 1). In one sibship, we identified a previ- (-4SD) and hydrocephalus[79]. Taken together, these data
+ously described homozygous mutation in CRADD [40] support RNPC3 as a likely candidate for PCH.
+(Table 1). In some patients who presented prenatally Exome analysis of a second consanguineous fam-
+with ventriculomegaly, we identified variants in genes for ily revealed a homozygote variant in TIE1, predicted to
+which hydrocephalus was already reported but as a post- introduce a new donor splice site resulting in aberrant
+natal feature of a complex syndrome. Some of these cases RNA splicing. This angioprotein receptor plays a critical
+revealed a posteriori to consist of syndromic associations role in angiogenic events such as blood vessel homeosta-
+with hydrocephalus, though ventriculomegaly appeared sis and endothelial cell survival and in lymphangiogenesis
+at the time as the major echographic finding. Indeed, [80]. The major impact in Tie−/− mice is on the formation
+hydrocephalus, albeit the hallmark for the diagnosis of of lymphatic vasculature, with embryos also presenting
+WWS, appears on the prenatal ultrasound mostly in the hemorrhage, both causing death during gestation [81]. In
+third trimester [73]. Cases as these reflect the need to zebrafish, decreasing the expression of tie1 mRNA corre-
+include such patients in routine syndromic hydrocepha- lates with significantly increased eye size and ventricular
+lus genetic screening. Other cases underscore the impor- space [82]. Moreover, defects in angiogenesis compo-
+tance to better describe prenatal features of well-known nents such as FLVCR heme transporter 2 (FLVCR2) and
+postnatal phenotypes, e.g., ARID1A. This effort will be Vascular endothelial growth factor (VEGF) in humans
+important to validate which genes should be included in, have been linked to hydrocephalus [79, 83, 84].
+or excluded from, diagnostic panels for fetal medicine. To date, autosomal recessive mutations in DNAH2
+have been associated morphological abnormalities of the
+J acquemin et al. Human Genomics (2023) 17:16 Page 9 of 14
+sperm flagella responsible of male infertility [85]. Deple- neuroepithelial cells and RGCs at early mid-gestation-
+tion of either Dnah2 or WD repeat domain 78 (Wdr78), induced derepression of Sonic Hedgehog (SHH) signal-
+another dynein f subunit, by RNAi in mouse ependymal ing, leading to hydrocephalus at birth [92]. Finally, the
+cells resulted in increased incidence of paralyzed motile primary cilium is essential in planar cell polarity (PCP),
+cilia, and interestingly, knockdown wdr78 zebrafish lar- allowing establishment of a polarity axis which organizes
+vae displayed hydrocephalus [61]. Moreover, in 2016 Ha cells in the plane of the tissue [93–95]. PCP is also essen-
+et al. characterized two hydrocephalus mouse mutants tial for tissue homeostasis [96] and the directional beat-
+by WES after whole-genome SNP mapping and revealed ing of motile cilia. The Ccdc88c mice model, with the loss
+novel recessive mutations in two genes encoding for of PCP of ependymal cells, leads to abnormal ependymal
+structural components of the motile cilia axoneme, flow and hydrocephalus [30]. Indeed, the correct posi-
+dynein axonemal assembly factor 1 (Dnaaf1) and leucine- tioning of the primary cilium through translational polar-
+rich repeat-containing protein 48 (Lrrc48) [86]. ity, at the apical surface of the cell, is mandatory for the
+Through WES analysis, Mendelian mutations were correct establishment and proper beating of the motile
+found in a minority of PCH probands in our cohort cilia [97].
+(18%), leaving the majority of cases unexplained. From We used ORVAL [70], a novel web platform which pre-
+this observation and the fact that animal models are dicts the potential pathogenicity of an individual’s oligo-
+compatible with a more complex heredity, we hypoth- genic variant combinations. One patient was identified
+esized that missing heritability of PCH could, at least in with a true digenic combination IFT172-TTC21B, within
+a number of cases, lie within oligogenic inheritance. In the 99% confidence interval. Both genes encode compo-
+double transgenic mouse model Tg(Lmo3;Hen2), 15% of nents of the IFT complex, B and A, respectively. The high
+either Tg(Lmo3) or Tg(Hen2) pups developed hydroceph- CADD scores of both variants as well as their close bio-
+alus, whereas all double heterozygote pups presented logical distance could explain the high disease-causing
+with hydrocephalus [87]. Moreover, increasing evidence confidence generated by ORVAL. These results are rein-
+in animal models shows implication of ciliary genes, forced by the absence of the same variant combination
+responsible for cilia biogenesis/maturation, in hydro- in the 155 controls and the association of both genes in
+cephalus. To study the implication of ciliary genes under mutated animal models with hydrocephalus. Both mice
+an oligogenic model as an underlying cause of PCH, we and zebrafish animal models carrying an Ift172 mutation
+performed mutation burden tests and provide evidence displayed hydrocephalus. Indeed, a recessive N-ethyl,N-
+of such inheritance implicating ciliary genes. After clus- nitrosurea (ENU)-induced hypomorphic mutation in
+tering analysis using PCA and a MD5% cutoff, WES data Ift172 in mice caused VACTERL syndrome associ-
+of 23 unrelated PCH patients and 155 controls were com- ated with hydrocephalus [98], and an ift172 knockdown
+pared by burden test of variants in ciliary genes in both zebrafish model displayed anomalies including ventral
+motile and primary ciliary genes. body curvature and hydrocephalus [99]. In a mice model
+We observed a statistically significant mutation bur- where Ttc21b was ablated in brain and surrounding
+den in PCH patients found over a range of allele frequen- domains, embryos displayed an enlarged forebrain and
+cies, particularly in primary cilia genes, suggesting that ventriculomegaly of the lateral ventricles [89]. Hence, we
+the primary cilium could be an essential component in suggest that the predicted pathogenic combination could
+hydrocephalus pathogeny. The major roles of primary explain the observed phenotype in this sibship.
+cilia include sensory perception, signal transduction, and
+Conclusion
+cell cycle progression.
+Recent key observations showed that protein products In conclusion, we report novel mutations in known
+of genes mutated in murine hydrocephalus are localized hydrocephalus genes in 18% of our PCH probands and
+to the primary cilium. For example, defaults in centro- propose three novel candidate genes: DNAH2, TIE1 and
+somal protein Cep290 or intraflagellar transport (IFT) RNPC3 in a further 11%. Mutations in genes known for
+components such as Kinesin family member 3a (Kif3a), postnatal, syndromic hydrocephalus presented as iso-
+Ift188 and Ttc21b, impair primary cilia formation/sign- lated PCH in some of our probands. We furthermore
+aling in turn disrupting ependymal cilia and leading report evidence of oligogenic inheritance implicating
+to hydrocephalus in mice [88–90]. Moreover, cilium- the primary cilium as an important player in PCH. In
+less radial glia conditional mutants display increased one patient, we identified a true digenic combination
+mTOR signaling which leads to enlarged apical domains where both gene products are implicated in intraflagel-
+of radial glial cells (RGCs) and subsequent dilatation of lar transport in primary cilia and, when mutated in ani-
+brain ventricles [91]. More recently, deletion of Gpr161 mal models, are associated to hydrocephalus. Our data
+cilia-localized G-protein coupled receptor in mouse will contribute to identifying novel Mendelian genes;
+Jacquemin et al. Human Genomics (2023) 17:16 Page 10 of 14
+including or excluding genes from clinical diagnostic realigner and base recalibrator version 2.7 and finally,
+panels in fetal medicine; and precising the role of pri- variants were called using GATK Haplotype Caller ver-
+mary cilia in brain developmental disorders. sion 2.7. The resulting variant set was annotated and fil-
+tered using the Highlander software (https:// sites. uclou
+Patients and methods
+vain. be/ highl ander/ index. html). Variants were filtered for
+Patient cohort collection quality criteria (pass GATK standard filter, read depth > 5,
+The study was approved by the Department of Scien- variant confidence by depth 10), allelic frequency
+≥
+tific Research and Ethics Committee of Erasme Hospi- (AF) < 0.5% (based on the maximum minor AF found
+tal in Belgium under the reference P2019/056. Written in ExAC [36], 1000G [37], ESP6500 [39], gonl [103],
+informed consent from the patients or legal representa- ARIC5606 [104] and our in-house database), nonsyn-
+tives was obtained. The probands of these families were onymous or splice junction effect in protein coding genes
+referred to us by national and international genetic or (using biotype from Ensembl [105] and snpeff_effect
+obstetric departments, based on the following inclu- from SnpEff [106]), and genotype (homozygous or hete-
+sion criteria: primary congenital hydrocephalus with- rozygous variants). Variants were then sorted by decreas-
+out L1CAM mutation, abnormal karyotype, or known ing combined annotation-dependent depletion (CADD)
+syndromes (Supplementary Table 3). Included probands score and consensus score, corresponding to a combined
+presented with PCH that was either isolated or associ- pathogenicity score from the six different predictors
+ated with brain malformations. CGH array and/or karyo- included in the Highlander software. 1 point was given
+type, as well as L1CAM sequencing were performed in for each of the six prediction software (Mutation Taster,
+all patients before referral. Medical history, clinical and Sift, Polyphen2, LTR, Mutation Assessor, FATHMM)
+radiological assessments were obtained by the referring when the variant is predicted to be pathogenic. Addi-
+physicians. We included 28 families in our study, 9 of tional points were given based on type of mutation with
+which were inbred and 19 were outbred, and performed the highest score given to frameshift and nonsense pre-
+a total of 39 exomes (28 probands and 11 relatives) (Sup- dicted effect (snpeff_effect). Variants were inspected
+plementary Table 1). manually based on scientific literature and genome data-
+bases data, and variant curation followed the American
+Preparation of gDNA and whole‑exome sequencing College of Medical Genetics and Genomics (ACMG)
+Genomic DNA was extracted from either cultured guidelines. Variants of interest were then confirmed by
+amniotic fluid cells or from umbilical cord cells. DNA Sanger sequencing and familial segregation was under-
+of unaffected relatives was extracted from peripheral taken when possible. Possible candidate genes have been
+blood. Patients’ genomic DNA was sheared and exonic submitted to the online Matchmaker exchange platform.
+sequences were captured using a DNA capture kit. For
+WES, DNA samples were prepared in Illumina libraries Sanger sequencing
+and then underwent whole-exome enrichment with the ExonPrimer software (http:// ihg. helmh oltz- muenc hen.
+NimbleGen Seqcap EZ v3, Agilent SureSelect All Exon de/ ihg/ ExonP rimer. html) was used for PCR primer
+v1 and Agilent SureSelect All Exon v5. DNA sequenc- design (Supplementary Table 4). All exons and flanking
+ing platforms varied according to the time of the analy- intronic regions of the candidate genes were sequenced
+sis. Two sequencing platforms were used: AROS applied by the Sanger method using the Big Dye Terminator cycle
+biotechnology, Denmark (Illumina HiSeq 2000) and sequencing kit v2 (Applied Biosystems, Foster City, Cali-
+BRIGHTcore Brussels Interuniversity Genomics High fornia, USA), and analyzed on a 3130 Genetic Analyser
+Throughput core, Brussels, Belgium (Illumina HiSeq sequencing machine (Applied Biosystems). Sequences
+1500). were analyzed in silico for mutations using Blast (https://
+blast. ncbi. nlm. nih. gov/ Blast. cgi).
+Variant classification
+Dry-lab processing, base calling of the raw sequencing Mutation burden analysis
+data, primary sequence analysis and variant calling was Genes biologically related to cilia were obtained from
+performed at the Interuniversity Institute of Bioinfor- SYScilia database [67] (https://.Syscilia database.
+matics in Brussels ((IB)2; Brussels, Belgium). In brief, raw com). These genes were separated into two subsets of
+sequences were aligned to the reference genome GRCh37 genes regarding their involvement in either primary
+using BWA algorithm version 0.7.15 [100], duplicated or in motile cilia (Supplementary Table 5). The cover-
+reads were then marked using Picard version 1.97 [101], age of the selected genes in the exome was above 70%
+alignment quality was improved using the GATK [102] (exon_coverage_20x) except for SHH with a respective
+J acquemin et al. Human Genomics (2023) 17:16 Page 11 of 14
+coverage of 59%. As control genes for permutations variant (e.g., CADD raw scores), gene (e.g., haploinsuf-
+tests, 1,926 housekeeping genes identified in at least ficiency) and gene-pair level (e.g., biological distance).
+seven different studies (detective breadth 7; [107]) Specifically, 500 random forest predictors constitute
+≥
+were used. VarCoPP, where each individual predictor classifies a
+WES data from 25 unrelated hydrocephalus patients given variant combination. Two scores are assigned
+and 166 in-house controls, composed of patients pre- to each combination, the classification score CS (i.e.,
+senting pathologies other than cerebral and their rela- median probability calculated over all the pathogenic
+tives, were used for the genetic mutation burden test probabilities provided by the ensemble of predictors)
+analysis. and the support score SS (i.e., percentage of the 500
+Population stratification of unrelated hydrocephalus predictors that deem the combination pathogenic).
+patients and control patients was determined by prin- Thresholds are defined with regard to these two scores
+cipal component analysis (PCA) using PLINK software to create confidence zones. We considered bi-locus
+[108]. Mahalanobis distance (MD) with a significance variant combinations that fells in the 99% confidence
+level of 5% was used to identify potential outliers. zone (CS 0.74; SS 100%). These combinations were
+≥ =
+A genetic mutation burden test was used to assess if further inspected using the ORVAL plateform (https://
+there was a significant excess of variants in ciliary genes orval.i squar e.b e) [70], which incorporates VarCoPP
+in our patients compared to controls. WES data of con- [109].
+trols and cases were analyzed to search for variants
+Supplementary Information
+in genes related to ciliary structure. Variants were fil-
+tered for quality criteria (pass GATK [102] standard fil- The online version contains supplementary material available at https:// doi.
+org/ 10. 1186/ s40246‑ 023‑ 00464‑w.
+ter, read depth 10), AF (< 30%, 10%, 5%, 3%, 1%, 0.5%
+≥
+based on the maximum minor allele frequency found
+Additional file 1. Patient data and ciliary methodology.
+in ExAC [36], 1000G [37], ESP650 [39], GoNL [38],
+ARIC5606 [104], and our in‐house database) and muta-
+Acknowledgements
+tion impact using snpeff_effect [106].
+We acknowledge our collaborators for their trust in referral of patients and
+The genetic burden was analyzed using an in-house thank all the patients and families for their participation in this study.
+developed program in Python (https://w ww.p ython.
+Author contributions
+org/). Statistical significance was measured by com-
+ND, EBB, ADL, NR,SJ, SM, BB, KA, RT, IAJ, KK, and PSV were involved in patient
+paring the genetic burden of our patients to controls referral. VJ helped in writing—original draft preparation. VJ, IP, and MA helped
+using a nonparametric Wilcoxon test. Precisely, for in writing—review and editing. MA contributed to conceptualization. VJ, NV,
+SD, and AM were involved in data analysis and interpretation. TL, IP, and MA
+each patient or control, the number of allelic variants
+helped in supervision. All authors read and approved the final manuscript.
+in ciliary genes was counted, with homozygous vari-
+ants counting as two allelic variants. A permutation Funding
+This work was supported by a Jean Van Damme Orphan Disease grant of
+test with 10,000 random selections of 304 or 253 house-
+the Fonds Erasme (MA) and an Action de Recherche Concertée (ARC) of the
+keeping genes was performed to exclude the effect of Belgian Fédération Wallonie‑Bruxelles (MA), as well as the Belgian Kids’ Fund of
+chance in all/primary cilia gene selection, respectively. Hôpital Universitaire des Enfants Reine Fabiola (VJ).
+A mutation burden was measured and the Wilcoxon
+Data Availability
+statistic for independent samples was calculated for The datasets used and/or analyzed during this study are available from the
+each of the 10,000 selections. The number of subsets of corresponding author on reasonable request.
+housekeeping genes, yielding a Wilcoxon statistic with
+Declarations
+a smaller p value than for the ciliary genes, was counted
+and divided by 10,000. This value was set as the p value
+Ethics approval and consent to participate
+for the permutation tests. An explanatory scheme is The study was approved by the Department of Scientific Research and
+available in Additional file 1: Fig. S1. Ethics Committee (IRB) of Erasme Hospital in Belgium under the reference
+P2019/056. Written informed consent from the patients or legal representa‑
+tives was obtained.
+Predicting disease‑causing variant combinations using
+ORVAL platform Competing interests
+The authors declare no competing interests.
+Prediction of potentially disease-causing combinations
+was performed using VarCoPP [70, 109] on an in-house Author details
+cluster. VarCoPP is designed to process alleles in pairs 1 Institut de Recherche Interdisciplinaire en Biologie Humaine et Moléculaire,
+Université Libre de Bruxelles, Brussels, Belgium. 2 Interuniversity Institute
+to prioritize disease-causing combinations. This classi-
+of Bioinformatics in Brussels, Université Libre de Bruxelles‑Vrije Universiteit
+fier, trained on digenic cases contained in the digenic Brussel, Brussels, Belgium. 3 Machine Learning Group, Université Libre de
+disease database (DIDA) [110], uses 11 features at the Bruxelles, Brussels, Belgium. 4 Service de Neuropédiatrie, Hôpital Universitaire
+Jacquemin et al. Human Genomics (2023) 17:16 Page 12 of 14
+de Bruxelles and CUB Hôpital Erasme and Université Libre de Bruxelles, Brus‑ 13. Furey CG, Choi J, Jin SC, Zeng X, Timberlake AT, Nelson‑Williams C, et al.
+sels, Belgium. 5 Department of Nephrology, University Hospital of Antwerp, De novo mutation in genes regulating neural stem cell fate in human
+Edegem, Belgium. 6 Human Genetics Department, CUB Hôpital Erasme, congenital hydrocephalus. Neuron. 2018;99(2):302‑314.e4.
+Brussels, Belgium. 7 Hopital Universitaire des Enfants Reine Fabiola and Hopital 14. Jin SC, Dong W, Kundishora AJ, Panchagnula S, Moreno‑De‑Luca A,
+Universitaire de Bruxelles and Université Libre de Bruxelles, Brussels, Belgium. Furey CG, et al. Exome sequencing implicates genetic disruption of
+8 Centre de génétique humaine ‑ CHU de Besançon, Université de Bourgogne‑ prenatal neuro‑gliogenesis in sporadic congenital hydrocephalus. Nat
+Franche‑Comté, Besançon, France. 9 Centre de Génétique Humaine, Cliniques Med. 2020;26(11):1754–65.
+Universitaires Saint‑Luc et Université Catholique de Louvain, Brussels, Belgium. 15. Katsanis N, Lupski JR, Beales PL. Exploring the molecular basis of Bardet‑
+10 Center for Medical Genetics, Ghent University Hospital, Ghent, Belgium. Biedl syndrome. Hum Mol Genet. 2001;10(20):2293–9.
+11 Centre de Génétique Humaine, Institut de Pathologie et de Génétique, 16. Duerinckx S, Jacquemin V, Drunat S, Vial Y, Passemard S, Perazzolo C,
+Gosselies, Belgium. 12 Center of Medical Genetics, Antwerp University et al. Digenic inheritance of human primary microcephaly deline‑
+and Antwerp University Hospital, Edegem, Belgium. 13 Department of Clinical ates centrosomal and non‑centrosomal pathways. Hum Mutat.
+Genetics, Helsinki University Hospital, Helsinki, Finland. 14 Génétique Clinique 2020;41(2):512–24.
+Chromosomique et Moléculaire, CHU de Saint‑Etienne, St‑Priest‑en‑Jarez, 17. Li L, Bainbridge MN, Tan Y, Willerson JT, Marian AJ. A potential oligo‑
+France. 15 Department of Gynecology and Obstetrics, Abou Jaoude Hospital, genic etiology of hypertrophic cardiomyopathy: a classic single‑gene
+Jal El Dib, Lebanon. 16 Center for Medical Genetics, UZ Brussels, Jette, Belgium. disorder. Circ Res. 2017;120(7):1084–90.
+17 Department of Genetics and Reference Center for Developmental Disorders, 18. Liu YP, Bosch DGM, Siemiatkowska AM, Rendtorff ND, Boonstra FN,
+Université Rouen Normandie, Inserm U1245 and CHU Rouen, Rouen, France. Möller C, et al. Putative digenic inheritance of heterozygous RP1L1 and
+18 Artificial Intelligence Lab, Vrije Universiteit Brussel, Brussels, Belgium. C2orf71 null mutations in syndromic retinal dystrophy. Ophthalmic
+19 Department of Genetic Medicine and Development, University of Geneva, Genet. 2017;38(2):127–32.
+Geneva, Switzerland. 19. Kim A, Savary C, Dubourg C, Carré W, Mouden C, Hamdi‑Rozé H,
+et al. Integrated clinical and omics approach to rare diseases: novel
+Received: 10 January 2023 Accepted: 22 February 2023 genes and oligogenic inheritance in holoprosencephaly. Brain.
+2019;142(1):35–49.
+20. Schäffer AA. Digenic inheritance in medical genetics. J Med Genet.
+2013;50(10):641–52.
+21. Dawe HR, Shaw MK, Farr H, Gull K. The hydrocephalus inducing gene
+References product, Hydin, positions axonemal central pair microtubules. BMC Biol.
+1. Tully HM, Dobyns WB. Infantile hydrocephalus: a review of epidemiol‑ 2007;7(5):33.
+ogy, classification and causes. Eur J Med Genet. 2014;57(8):359–68. 22. Chiani F, Orsini T, Gambadoro A, Pasquini M, Putti S, Cirilli M, et al.
+2. Chi JH, Fullerton HJ, Gupta N. Time trends and demographics of Functional loss of Ccdc151 leads to hydrocephalus in a mouse model
+deaths from congenital hydrocephalus in children in the United States: of primary ciliary dyskinesia. Dis Model Mech. 2019. https:// doi. org/ 10.
+National Center for Health Statistics data, 1979 to 1998. J Neurosurg. 1242/ dmm. 038489.
+2005;103(2 Suppl):113–8. 23. Ibañez‑Tallon I, Gorokhova S, Heintz N. Loss of function of axonemal
+3. Verhagen JM, Schrander‑Stumpel CT, Krapels IP, de Die‑Smulders CE, dynein Mdnah5 causes primary ciliary dyskinesia and hydrocephalus.
+Van FH, Willekes C, et al. Congenital hydrocephalus in clinical practice: a Hum Mol Genet. 2002;11(6):715–21.
+genetic diagnostic approach. Eur J Med Genet. 2011;54(6):e542–7. 24. Sakamoto K, Nakajima M, Kawamura K, Nakamura E, Tada N, Kondo A,
+4. Varela MF, Miyabe MM, Oria M. Fetal brain damage in congenital hydro‑ et al. Ependymal ciliary motion and their role in congenital hydroceph‑
+cephalus. Childs Nerv Syst. 2020;36(8):1661–8. alus. Childs Nerv Syst. 2021;37(11):3355–64.
+5. Saugier‑Veber P, Marguet F, Lecoquierre F, Adle‑Biassette H, Guimiot F, 25. Tissir F, Qu Y, Montcouquiol M, Zhou L, Komatsu K, Shi D, et al. Lack of
+Cipriani S, et al. Hydrocephalus due to multiple ependymal malforma‑ cadherins Celsr2 and Celsr3 impairs ependymal ciliogenesis, leading to
+tions is caused by mutations in the MPDZ gene. Acta Neuropathol fatal hydrocephalus. Nat Neurosci. 2010;13(6):700–7.
+Commun. 2017;5(1):36. 26. Taulman PD, Haycraft CJ, Balkovetz DF, Yoder BK. Polaris, a protein
+6. Adle‑Biassette H, Saugier‑Veber P, Fallet‑Bianco C, Delezoide AL, Razavi involved in left‑right axis patterning, localizes to basal bodies and cilia.
+F, Drouot N, et al. Neuropathological review of 138 cases geneti‑ Mol Biol Cell. 2001;12(3):589–99.
+cally tested for X‑linked hydrocephalus: evidence for closely related 27. Banizs B, Pike MM, Millican CL, Ferguson WB, Komlosi P, Sheetz J, et al.
+clinical entities of unknown molecular bases. Acta Neuropathol. Dysfunctional cilia lead to altered ependyma and choroid plexus
+2013;126(3):427–42. function, and result in the formation of hydrocephalus. Development.
+7. Jouet M, Rosenthal A, MacFarlane J, Kenwrick S, Donnai D. A missense 2005;132(23):5329–39.
+mutation confirms the L1 defect in X–linked hydrocephalus (HSAS). Nat 28. Konjikusic MJ, Yeetong P, Boswell CW, Lee C, Roberson EC, Ittiwut
+Genet. 1993;4(4):331. R, et al. Mutations in Kinesin family member 6 reveal specific role in
+8. Saillour Y, Zanni G, Portes VD, Heron D, Guibaud L, Iba‑Zizen MT, et al. ependymal cell ciliogenesis and human neurological development.
+Mutations in the AP1S2 gene encoding the sigma 2 subunit of the PLoS Genet. 2018;14(11): e1007817.
+adaptor protein 1 complex are associated with syndromic X‑linked 29. Olstad EW, Ringers C, Hansen JN, Wens A, Brandt C, Wachten D, et al.
+mental retardation with hydrocephalus and calcifications in basal Ciliary beating compartmentalizes cerebrospinal fluid flow in the brain
+ganglia. J Med Genet. 2007;44(11):739–44. and regulates ventricular development. Curr Biol. 2019;29(2):229‑241.
+9. Al‑Dosari MS, Al‑Owain M, Tulbah M, Kurdi W, Adly N, Al‑Hemidan A, e6.
+et al. Mutation in MPDZ causes severe congenital hydrocephalus. J Med 30. Takagishi M, Sawada M, Ohata S, Asai N, Enomoto A, Takahashi
+Genet. 2013;50(1):54–8. K, et al. Daple coordinates planar polarized microtubule dynam‑
+10. Drielsma A, Jalas C, Simonis N, Désir J, Simanovsky N, Pirson I, et al. Two ics in ependymal cells and contributes to hydrocephalus. Cell Rep.
+novel CCDC88C mutations confirm the role of DAPLE in autosomal 2017;20(4):960–72.
+recessive congenital hydrocephalus. J Med Genet. 2012;49(11):708–12. 31. Richards S, Aziz N, Bale S, Bick D, Das S, Gastier‑Foster J, et al. Standards
+11. Ekici AB, Hilfinger D, Jatzwauk M, Thiel CT, Wenzel D, Lorenz I, et al. and guidelines for the interpretation of sequence variants: a joint con‑
+Disturbed Wnt signalling due to a mutation in CCDC88C causes an sensus recommendation of the American College of Medical Genetics
+autosomal recessive non‑syndromic hydrocephalus with medial diver‑ and Genomics and the Association for Molecular Pathology. Genet
+ticulum. Mol Syndromol. 2010;1(3):99–112. Med. 2015;17(5):405–23.
+12. Shaheen R, Sebai MA, Patel N, Ewida N, Kurdi W, Altweijri I, et al. The 32. Polla DL, Rahikkala E, Bode MK, Määttä T, Varilo T, Loman T, et al. Pheno‑
+genetic landscape of familial congenital hydrocephalus. Ann Neurol. typic spectrum associated with a CRADD founder variant underlying
+2017;81(6):890–7. frontotemporal predominant pachygyria in the Finnish population. Eur
+J Hum Genet. 2019;27(8):1235–43.
+J acquemin et al. Human Genomics (2023) 17:16 Page 13 of 14
+33. Avela K, Toiviainen‑Salo S, Karttunen‑Lewandowski P, Kauria L, Valanne 57. Endo T, Manya H, Seta N, Guicheney P. POMGnT1, POMT1, and POMT2
+L, Salonen‑Kajander R. Frontotemporal pachygyria‑two new patients. mutations in congenital muscular dystrophies. Methods Enzymol.
+Eur J Med Genet. 2012;55(12):753–7. 2010;1(479):343–52.
+34. Kircher M, Witten DM, Jain P, O’Roak BJ, Cooper GM, Shendure J. A 58. Ellard S, Baple EL, Callaway A, Berry I, Forrester N, Turnbull C, et al. ACGS
+general framework for estimating the relative pathogenicity of human best practice guidelines for variant classification in rare disease. ACGS.
+genetic variants. Nat Genet. 2014;46(3):310–5. 2020. https:// doi. org/ 10. 1101/ 531210.
+35. Rentzsch P, Witten D, Cooper GM, Shendure J, Kircher M. CADD: predict‑ 59. Bezen D, Kutlu O, Mouilleron S, Rizzoti K, Dattani M, Guran T, et al. A
+ing the deleteriousness of variants throughout the human genome. homozygous Y443C variant in the RNPC3 is associated with severe
+Nucleic Acids Res. 2019;47(D1):D886–94. syndromic congenital hypopituitarism and diffuse brain atrophy. Am J
+36. Lek M, Karczewski KJ, Minikel EV, Samocha KE, Banks E, Fennell T, et al. of Med Genet Pt A. 2022;188(9):2701–6.
+Analysis of protein‑coding genetic variation in 60,706 humans. Nature. 60 . Minor spliceosome and disease. Sem Cell Dev Biol. 2018;79:103–12.
+2016;536(7616):285–91. 61. Zhang Y, Chen Y, Zheng J, Wang J, Duan S, Zhang W, et al. Vertebrate
+37. Genomes Project Consortium. A global reference for human genetic Dynein‑f depends on Wdr78 for axonemal localization and is essential
+variation. Nature. 2015;526(7571):68–74. for ciliary beat. J Mol Cell Biol. 2019;11(5):383–94.
+38. Genome of the Netherlands [Internet]. [cited 2019 Jun 4]. Available 62. Duerinckx S, Désir J, Perazzolo C, Badoer C, Jacquemin V, Soblet J, et al.
+from: http:// www. nlgen ome. nl/ Phenotypes and genotypes in non‑consanguineous and consanguin‑
+39. Exome Variant Server ‑ Search Results [Internet]. [cited 2019 Jun 4]. eous primary microcephaly: high incidence of epilepsy. Mol Genet
+Available from: https:// evs. gs. washi ngton. edu/ EVS/ PopSt atsSe rvlet? Genom Med. 2021;9: e1768.
+searc hBy Gene Hugo& target kidin s220&x 0&y 0 63. Vogel P, Read RW, Hansen GM, Payne BJ, Small D, Sands AT, et al.
+= + = = =
+40. Donato ND, Jean YY, Maga AM, Krewson BD, Shupp AB, Avrutsky MI, Congenital hydrocephalus in genetically engineered mice. Vet Pathol.
+et al. Mutations in CRADD result in reduced caspase‑2‑mediated neu‑ 2012;49(1):166–81.
+ronal apoptosis and cause megalencephaly with a rare lissencephaly 64. Kumar V, Umair Z, Kumar S, Goutam RS, Park S, Kim J. The regulatory
+variant. Am J Hum Genet. 2016;99(5):1117–29. roles of motile cilia in CSF circulation and hydrocephalus. Fluids Barriers
+41. Matsumoto Y, Yamaguchi Y, Hamachi M, Nonomura K, Muramatsu Y, CNS. 2021;18(1):31.
+Yoshida H, et al. Apoptosis is involved in maintaining the character of 65. Olbrich H, Schmidts M, Werner C, Onoufriadis A, Loges NT, Raidt J,
+the midbrain and the diencephalon roof plate after neural tube closure. et al. Recessive HYDIN mutations cause primary ciliary dyskinesia
+Dev Biol. 2020;468(1):101–9. without randomization of left‑right body asymmetry. Am J Hum Genet.
+42. Kuida K, Zheng TS, Na S, Kuan C, Yang D, Karasuyama H, et al. Decreased 2012;91(4):672–84.
+apoptosis in the brain and premature lethality in CPP32‑deficient mice. 66. Jeanson L, Copin B, Papon JF, Dastot‑Le Moal F, Duquesnoy P, Montantin
+Nature. 1996;384(6607):368–72. G, et al. RSPH3 mutations cause primary ciliary dyskinesia with central‑
+43. Jacquemin V, Antoine M, Duerinckx S, Massart A, Desir J, Perazzolo C, complex defects and a near absence of radial spokes. Am J Hum Genet.
+et al. TrkA mediates effect of novel KIDINS220 mutation in human brain 2015;97(1):153–62.
+ventriculomegaly. Hum Mol Genet. 2020;29(23):3757–64. 67. van Dam TJ, Wheway G, Slaats GG, Huynen MA, Giles RH, SYSCILIA Study
+44. Karczewski KJ, Francioli LC, Tiao G, Cummings BB, Alföldi J, Wang Q, Group. The SYSCILIA gold standard (SCGSv1) of known ciliary compo‑
+et al. The mutational constraint spectrum quantified from variation in nents and its applications within a systems biology consortium. Cilia.
+141,456 humans. Nature. 2020;581(7809):434–43. 2013;2(1):7.
+45. Arévalo JC, Yano H, Teng KK, Chao MV. A unique pathway for sustained 68. Dovoedo YH, Chakraborti S. Outlier detection for multivariate skew‑nor‑
+neurotrophin signaling through an ankyrin‑rich membrane‑spanning mal data: a comparative study. J Stat Comput Simul. 2013;83(4):773–83.
+protein. EMBO J. 2004;23(12):2358–68. 69. Leys C, Klein O, Dominicy Y, Ley C. Detecting multivariate outliers:
+46. Mero IL, Mørk HH, Sheng Y, Blomhoff A, Opheim GL, Erichsen A, et al. use a robust variant of the Mahalanobis distance. J Exp Soc Psychol.
+Homozygous KIDINS220 loss‑of‑function variants in fetuses with 2018;1(74):150–6.
+cerebral ventriculomegaly and limb contractures. Hum Mol Genet. 70. Renaux A, Papadimitriou S, Versbraegen N, Nachtegael C, Boutry S,
+2017;26(19):3792–6. Nowé A, et al. ORVAL: a novel platform for the prediction and explora‑
+47. Doyle DZ, Lam MM, Qalieh A, Qalieh Y, Sorel A, Funk OH, et al. Chroma‑ tion of disease‑causing oligogenic variant combinations. Nucleic Acids
+tin remodeler Arid1a regulates subplate neuron identity and wiring of Res. 2019;47(W1):W93–8.
+cortical connectivity. Proc Natl Acad Sci. 2021;118(21): e2100686118. 71. Versbraegen N, Fouché A, Nachtegael C, Papadimitriou S, Gazzo A,
+48. Slavotinek A, Lefebvre M, Brehin AC, Thauvin C, Patrier S, Sparks TN, et al. Smits G, et al. Using game theory and decision decomposition to
+Prenatal presentation of multiple anomalies associated with haploinsuf‑ effectively discern and characterise bi‑locus diseases. Artif Intell Med.
+ficiency for ARID1A. Eur J Med Genet. 2022;65(2): 104407. 2019;1(99): 101690.
+49. Anna A, Monika G. Splicing mutations in human genetic dis‑ 72. Gerdes JM, Davis EE, Katsanis N. The vertebrate primary cilium in devel‑
+orders: examples, detection, and confirmation. J Appl Genet. opment, homeostasis, and disease. Cell. 2009;137(1):32–45.
+2018;59(3):253–68. 73. Low ASC, Lee SL, Tan ASA, Chan DKL, Chan LL. Difficulties with
+50. van Reeuwijk J, Brunner HG, van Bokhoven H. Glyc‑O‑genetics of prenatal diagnosis of the Walker‑Warburg syndrome. Acta Radiol.
+Walker‑Warburg syndrome. Clin Genet. 2005;67(4):281–9. 2005;46(6):645–51.
+51. Fu X, Yang H, Jiao H, Wang S, Liu A, Li X, et al. Novel copy number vari‑ 74. Markmiller S, Cloonan N, Lardelli RM, Doggett K, Keightley MC, Boglev
+ation of POMGNT1 associated with muscle‑eye‑brain disease detected Y, et al. Minor class splicing shapes the zebrafish transcriptome during
+by next‑generation sequencing. Sci Rep. 2017;7(1):7056. development. Proc Natl Acad Sci. 2014;111(8):3062–7.
+52. Vajsar J, Schachter H. Walker‑Warburg syndrome. Orphanet J Rare Dis. 75. Nagy R, Wang H, Albrecht B, Wieczorek D, Gillessen‑Kaesbach G, Haan
+2006;3(1):29. E, et al. Microcephalic osteodysplastic primordial dwarfism type I with
+53. Preuss M, Heckmann M, Stein M, Nestler U. Two cases of Walker‑War‑ biallelic mutations in the RNU4ATA C gene. Clin Genet. 2012;82(2):140–6.
+burg syndrome complicated by hydrocephalus. PNE. 2010;46(1):34–8. 76. Doggett K, Williams BB, Markmiller S, Geng FS, Coates J, Mieruszynski S,
+54. El‑Dessouky SH, Hosny H, Elarab AE, Issa MY. Prenatal presentation of et al. Early developmental arrest and impaired gastrointestinal homeo‑
+Walker‑Warburg syndrome with a POMT2 mutation: an extended fetal stasis in U12‑dependent splicing‑defective Rnpc3‑deficient mice. RNA.
+phenotype. Egypt J Med Hum Genet. 2020;23(21):48. 2018;24(12):1856–70.
+55. Taniguchi K, Kobayashi K, Saito K, Yamanouchi H, Ohnuma A, Hayashi 77. Baumgartner M, Olthof AM, Aquino GS, Hyatt KC, Lemoine C, Drake K,
+YK, et al. Worldwide distribution and broader clinical spectrum of et al. Minor spliceosome inactivation causes microcephaly due to cell
+muscle‑eye‑brain disease. Hum Mol Genet. 2003;12(5):527–34. cycle defects and death of self‑amplifying radial glial cells. Develop‑
+56. Yoshida A, Kobayashi K, Manya H, Taniguchi K, Kano H, Mizuno ment. 2018. https:// doi. org/ 10. 1242/ dev. 166322.
+M, et al. Muscular dystrophy and neuronal migration disorder 78. Chen YS, He JF, Quan T, Li SB, Li DZ. Hydrocephalus and growth retarda‑
+caused by mutations in a glycosyltransferase, POMGnT1. Dev Cell. tion: a fetal RNU4ATAC ‑opathy missed by whole‑exome sequencing.
+2001;1(5):717–24. MSY. 2022;9:1–5.
+Jacquemin et al. Human Genomics (2023) 17:16 Page 14 of 14
+79. Chai G, Webb A, Li C, Antaki D, Lee S, Breuss MW, et al. Mutations in spli‑ 103. Francioli LC, Menelaou A, Pulit SL, van Dijk F, Palamara PF, Elbers
+ceosomal genes PPIL1 and PRP17 cause neurodegenerative pontocer‑ CC, et al. Whole‑genome sequence variation, population structure
+ebellar hypoplasia with microcephaly. Neuron. 2021;109(2):241‑256.e9. and demographic history of the Dutch population. Nat Genet.
+80. Thurston G. Role of Angiopoietins and Tie receptor tyrosine kinases in 2014;46(8):818–25.
+angiogenesis and lymphangiogenesis. Cell Tissue Res. 2003;314(1):61–8. 104. Atherosclerosis Risk in Communities Study Description | Atherosclero‑
+81. Michelini S, Ricci M, Veselenyiova D, Kenanoglu S, Kurti D, Baglivo M, sis Risk in Communities [Internet]. [cited 2019 Jun 4]. Available from:
+et al. TIE1 as a candidate gene for lymphatic malformations with or https:// sites. cscc. unc. edu/ aric/
+without lymphedema. Int J Mol Sci. 2020. https:// doi. org/ 10. 3390/ ijms2 105. Yates A, Akanni W, Amode MR, Barrell D, Billis K, Carvalho‑Silva D, et al.
+11867 80. Ensembl 2016. Nucleic Acids Res. 2016;44(D1):D710‑716.
+82. Chowdhury TA, Koceja C, Eisa‑Beygi S, Kleinstiver BP, Kumar SN, Lin CW, 106. Cingolani P, Platts A, Wang LL, Coon M, Nguyen T, Wang L, et al. A pro‑
+et al. Temporal and spatial post‑transcriptional regulation of zebrafish gram for annotating and predicting the effects of single nucleotide pol‑
+tie1 mRNA by long noncoding RNA during brain vascular assembly. ymorphisms, SnpEff: SNPs in the genome of Drosophila melanogaster
+Arterioscler Thromb Vasc Biol. 2018;38(7):1562–75. strain w1118; iso‑2; iso‑3. Fly (Austin). 2012;6(2):80–92.
+83. Shim JW, Sandlund J, Han CH, Hameed MQ, Connors S, Klagsbrun M, 107. Zhang Y, Akintola OS, Liu KJA, Sun B. Detection bias in microarray and
+et al. VEGF, which is elevated in the CSF of patients with hydrocephalus, sequencing transcriptomic analysis identified by housekeeping genes.
+causes ventriculomegaly and ependymal changes in rats. Exp Neurol. Data Brief. 2016;6:121–3.
+2013;247:703–9. 108. Purcell S, Neale B, Todd‑Brown K, Thomas L, Ferreira MAR, Bender D,
+84. Santander N, Lizama CO, Meky E, McKinsey GL, Jung B, Sheppard D, et al. PLINK: a tool set for whole‑genome association and population‑
+et al. Lack of Flvcr2 impairs brain angiogenesis without affecting the based linkage analyses. Am J Hum Genet. 2007;81(3):559–75.
+blood‑brain barrier. J Clin Invest. 2020;130(8):4055–68. 109. Papadimitriou S, Gazzo A, Versbraegen N, Nachtegael C, Aerts J, Moreau
+85. Li Y, Sha Y, Wang X, Ding L, Liu W, Ji Z, et al. DNAH2 is a novel candidate Y, et al. Predicting disease‑causing variant combinations. Proc Natl Acad
+gene associated with multiple morphological abnormalities of the Sci. 2019;116(24):11878–87.
+sperm flagella. Clin Genet. 2019;95(5):590–600. 110. Gazzo A, Raimondi D, Daneels D, Moreau Y, Smits G, Van Dooren S, et al.
+86. Ha S, Lindsay AM, Timms AE, Beier DR. Mutations in Dnaaf1 and Lrrc48 Understanding mutational effects in digenic diseases. Nucleic Acids
+cause hydrocephalus, laterality defects, and sinusitis in mice. G3 Res. 2017;45(15):e140–e140.
+(Bethesda). 2016;6(8):2479–87.
+87. Isogai E, Okumura K, Saito M, Yoshizawa Y, Itoh K, Tando S, et al. Onco‑
+Publisher’s Note
+genic Lmo3 cooperates with Hen2 to induce hydrocephalus in mice.
+Exp Anim. 2015;64(4):407–14. Springer Nature remains neutral with regard to jurisdictional claims in pub‑
+88. Rachel RA, Yamamoto EA, Dewanjee MK, May‑Simera HL, Sergeev YV, lished maps and institutional affiliations.
+Hackett AN, et al. CEP290 alleles in mice disrupt tissue‑specific cilia
+biogenesis and recapitulate features of syndromic ciliopathies. Hum
+Mol Genet. 2015;24(13):3775–91.
+89. Snedeker J, Schock EN, Struve JN, Chang CF, Cionni M, Tran PV, et al.
+Unique spatiotemporal requirements for intraflagellar transport genes
+during forebrain development. PLoS ONE. 2017;12(3): e0173258.
+90. Tong CK, Han YG, Shah JK, Obernier K, Guinto CD, Alvarez‑Buylla A. Pri‑
+mary cilia are required in a unique subpopulation of neural progenitors.
+PNAS. 2014;111(34):12438–43.
+91. Foerster P, Daclin M, Asm S, Faucourt M, Boletta A, Genovesio A, et al.
+mTORC1 signaling and primary cilia are required for brain ventricle
+morphogenesis. Development. 2017;144(2):201–10.
+92. Shimada IS, Somatilaka BN, Hwang SH, Anderson AG, Shelton JM, Raja‑
+ram V, et al. Derepression of sonic hedgehog signaling upon Gpr161
+deletion unravels forebrain and ventricular abnormalities. Dev Biol.
+2019;450(1):47–62.
+93. Butler MT, Wallingford JB. Planar cell polarity in development and
+disease. Nat Rev Mol Cell Biol. 2017;18(6):375–88.
+94. Devenport D. Tissue morphodynamics: translating planar polarity cues
+into polarized cell behaviors. Semin Cell Dev Biol. 2016;55:99–110.
+95. Zallen JA. Planar polarity and tissue morphogenesis. Cell.
+2007;129(6):1051–63.
+96. Wallingford JB. Planar cell polarity signaling, cilia and polarized ciliary
+beating. Curr Opin Cell Biol. 2010;22(5):597–604.
+97. Mirzadeh Z, Han YG, Soriano‑Navarro M, García‑Verdugo JM, Alvarez‑
+Buylla A. Cilia organize ependymal planar polarity. J Neurosci.
+2010;30(7):2600–10.
+98. Friedland‑Little JM, Hoffmann AD, Ocbina PJR, Peterson MA, Bosman JD, RReeaaddyy ttoo ssuubbmmiitt yyoouurr rreesseeaarrcchh ?? CChhoooossee BBMMCC aanndd bbeenneeffiitt ffrroomm::
+Chen Y, et al. A novel murine allele of Intraflagellar transport protein 172
+• fast, convenient online submission
+causes a syndrome including VACTERL‑like features with hydrocepha‑
+lus. Hum Mol Genet. 2011;20(19):3725–37. • thorough peer review by experienced rese archers in your field
+99. Halbritter J, Bizet AA, Schmidts M, Porath JD, Braun DA, Gee HY, et al. • rapid publication on acceptance
+Defects in the IFT‑B component IFT172 cause Jeune and Mainzer‑
+• support for research data, including large and complex data types
+Saldino syndromes in humans. Am J Hum Genet. 2013;93(5):915–25.
+100. Li H, Durbin R. Fast and accurate short read alignment with Burrows‑ • gold Open Access which fosters wider collaboration and increased citations
+Wheeler transform. Bioinformatics. 2009;25(14):1754–60. • maximum visibility for your research: over 100M website views per year
+101. broadinstitute. Picard Tools [Internet]. Available from: https:// broad insti
+tute. github. io/ picard/ At BMC, research is always in progress.
+102. DePristo MA, Banks E, Poplin R, Garimella KV, Maguire JR, Hartl C, et al. A
+framework for variation discovery and genotyping using next‑genera‑ Learn more biomedcentral.com/submissions
+tion DNA sequencing data. Nat Genet. 2011;43(5):491–8.

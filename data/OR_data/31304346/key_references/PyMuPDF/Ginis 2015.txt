@@ -1,0 +1,978 @@
+Editor's Comment: Smartphones have become ubiquitous in modern society and can be both an incredible convenience and an irritating
+intrusion. In this fascinating report, Ginis and colleagues provide us a potential use for smartphone technology that may favorably impact
+our ability to treat patients with Parkinson's disease. They describe the feasibility and effectiveness of a smartphone application, the CuPiD
+system, in a controlled clinical trial comparing the use of the CuPiD system with personalized gait advice, carried out in a home envi-
+ronment. The results of their study are both interesting and encouraging. Further study of this unique technology is clearly indicated and
+will be stimulated by this important report.
+Ronald F. Pfeiffer, Editor-in-Chief, Dept. of Neurology, Oregon Health and Science University (OHSU), 3181 SW Sam Jackson Park Rd,
+Portland, OR 97201-3098, Oregon, USA
+Feasibility and effects of home-based smartphone-delivered
+automated feedback training for gait in people with Parkinson's
+disease: A pilot randomized controlled trial
+Pieter Ginis a, Alice Nieuwboer a, *, Moran Dorfman b, Alberto Ferrari c, Eran Gazit b,
+Colleen G. Canning d, Laura Rocchi c, Lorenzo Chiari c, Jeffrey M. Hausdorff b, e, f,
+Anat Mirelman b, e
+a KU Leuven, Department of Rehabiliation Sciences, Neuromotor Rehabilitation Research Group, Leuven, Belgium
+b Tel Aviv Sourasky Medical Center, Department of Neurology, Center for the Study of Movement, Cognition, and Mobility, Tel Aviv, Israel
+c University of Bologna, Department of Electrical, Electronic and Information Engineering e Guglielmo Marconi, Bologna, Italy
+d University of Sydney, Faculty of Health Sciences, Clinical and Rehabilitation Sciences Research Group, Sydney, Australia
+e Sackler Faculty of Medicine, Tel Aviv University, Tel Aviv, Israel
+f Sagol School of Neuroscience, Tel Aviv University, Tel Aviv, Israel
+a r t i c l e
+i n f o
+Article history:
+Received 11 July 2015
+Received in revised form
+22 October 2015
+Accepted 1 November 2015
+Keywords:
+Parkinson's disease
+Physical therapy
+Gait training
+Auditory feedback
+Wearable sensor
+Smartphone
+a b s t r a c t
+Background: Inertial measurement units combined with a smartphone application (CuPiD-system) were
+developed to provide people with Parkinson's disease (PD) real-time feedback on gait performance. This
+study investigated the CuPiD-system's feasibility and effectiveness compared with conventional gait
+training when applied in the home environment.
+Methods: Forty persons with PD undertook gait training for 30 min, three times per week for six weeks.
+Participants were randomly assigned to i) CuPiD, in which a smartphone application offered positive and
+corrective feedback on gait, or ii) an active control, in which personalized gait advice was provided. Gait,
+balance, endurance and quality of life were assessed before and after training and at four weeks follow-
+up using standardized tests.
+Results: Both groups improved signiﬁcantly on the primary outcomes (single and dual task gait speed) at
+post-test and follow-up. The CuPiD group improved signiﬁcantly more on balance (MiniBESTest) at post-
+test (from 24.8 to 26.1, SD~5) and maintained quality of life (SF-36 physical health) at follow-up whereas
+the control group deteriorated (from 50.4 to 48.3, SD~16). No other statistically signiﬁcant differences
+were found between the two groups. The CuPiD system was well-tolerated and participants found the
+tool user-friendly.
+Conclusion: CuPiD was feasible, well-accepted and seemed to be an effective approach to promote gait
+training, as participants improved equally to controls. This beneﬁt may be ascribed to the real-time
+* Corresponding author. Tervuursevest 101 Box 1501, 3001 Leuven, Belgium.
+E-mail addresses: pieter.ginis@faber.kuleuven.be (P. Ginis), alice.nieuwboer@faber.kuleuven.be (A. Nieuwboer), morando@tlvmc.gov.il (M. Dorfman), alberto.ferrari@
+unibo.it (A. Ferrari), erang@tlvmc.gov.il (E. Gazit), colleen.canning@sydney.edu.au (C.G. Canning), l.rocchi@unibo.it (L. Rocchi), lorenzo.chiari@unibo.it (L. Chiari),
+jhausdor@tlvmc.gov.il (J.M. Hausdorff), anatmi@tlvmc.gov.il (A. Mirelman).
+Contents lists available at ScienceDirect
+Parkinsonism and Related Disorders
+journal homepage: www.elsevier.com/locate/parkreldis
+http://dx.doi.org/10.1016/j.parkreldis.2015.11.004
+1353-8020/© 2015 Elsevier Ltd. All rights reserved.
+Parkinsonism and Related Disorders 22 (2016) 28e34
+
+feedback, stimulating corrective actions and promoting self-efﬁcacy to achieve optimal performance.
+Further optimization of the system and adequately-powered studies are warranted to corroborate these
+ﬁndings and determine cost-effectiveness.
+© 2015 Elsevier Ltd. All rights reserved.
+1. Introduction
+In Parkinson's disease (PD), gait and balance deﬁcits, and more
+speciﬁcally freezing of gait (FOG), result in reduced quality of life
+[1]. Exercise has been shown to improve PD motor impairments in
+the short term [2,3]. Also, it has been suggested that exercise effects
+can be enhanced by increasing subjects' cognitive engagement with
+practice through the provision of cueing or biofeedback in PD [4,5].
+Cueing is deﬁned as temporal or spatial stimuli, which regulate and
+facilitate repetitive movements by providing an explicit motor
+target. Several systematic reviews indicate that different cueing
+modalities have an immediate effect on gait and health related
+quality of life (HR-QoL) [6e8], and increase retention of learning in
+PD [9,10]. In addition, cueing reduces the severity of Freezing of Gait
+(FOG) [9,11,12]. Biofeedback refers to the provision of external in-
+formation during or immediately after movement, which supple-
+ments
+sensory
+(proprioceptive)
+pathways
+to
+guide
+motor
+performance. Although augmented feedback has been shown to be
+effective for improving balance [13e15] and gait [16], it usually
+requires cumbersome laboratory setups and specialized healthcare
+professionals to administer. Combined with the increasing preva-
+lence of PD and the predicted shortage of physiotherapists [17],
+new ways to deliver cueing and biofeedback seem therefore
+warranted.
+Current wearable technology in PD is mainly directed towards
+long-term, home assessment of disease symptoms [18], rather than
+therapy [19]. To our knowledge, only Espay et al. investigated at-
+home
+training
+with
+wearable
+biofeedback
+technology
+and
+showed it was effective to improve gait in PD, although a control
+group was lacking [20]. In addition, FOG can now be detected
+reliably in real-time using inertial measurement units (IMUs) in a
+standardized setting, but home detection has not been investigated
+yet [21,22]. A six week training period using a FOG speciﬁc
+instrumented cueing method in the laboratory, found a reduction
+of FOG episodes but no carry-over to daily life [23]. These results
+highlight the challenge of designing appropriate technology, which
+aims to address the needs of people with PD in the home envi-
+ronment [19].
+The current study is part of the EU-funded CuPiD-project (www.
+cupid-project.eu). Innovatively, and in line with recent evolutions
+[24,25], we designed a gait training application not only with a
+team of engineers and physiotherapists, but also with the active
+participation of persons with PD. The technology integrates 3 main
+functions: 1) measurement of gait in real-time; 2) auditory
+biofeedback (ABF) on one or more spatiotemporal gait parameters
+[26]; and 3) rhythmical auditory cueing to prevent or overcome
+FOG episodes [22]. The aims of the present study were to test the
+feasibility of training with the CuPiD system in the home envi-
+ronment, and to discover the differential effects of CuPiD training
+versus conventional home-based gait intervention on gait, balance
+and HR-QoL in PD. We hypothesized that both interventions would
+improve gait and balance outcomes, as participants would be
+stimulated to increase walking, but that the effects would be
+ampliﬁed in the CuPiD group because of the cognitive engagement
+by the wearable biofeedback.
+2. Methods
+2.1. Participants
+Forty PD persons were recruited by telephone from databases of
+the Department of Rehabilitation Sciences, KU Leuven (Belgium)
+and the Tel Aviv Sourasky Medical Center (Israel) (Fig. 1). Partici-
+pants were included if they were able to walk for 10 min contin-
+uously; had a score of 24 or higher on the Montreal Cognitive
+Assessment (MoCA); were in Hoehn & Yahr Stage II to III in ON-
+state and were on stable PD medication. People were excluded if
+they had severe medical conditions affecting gait other than PD,
+had hearing or visual problems precluding beneﬁting from auditory
+feedback and were likely to change medication regimen during the
+course of the study. Participants were allowed to continue with
+their usual care including their regular physiotherapy. After base-
+line screening, participants were randomly allocated to the CuPiD
+or control group per center by the researcher, who was not blind to
+group allocation. A stratiﬁed blocked randomization procedure was
+used (Hoehn & Yahr stage, having FOG or not). The study was
+approved by the local ethics committee of the University Hospitals
+Leuven and Tel Aviv Sourasky Medical Center. All participants gave
+written consent according to the declaration of Helsinki.
+2.2. CuPiD system
+The CuPiD system consisted of a smartphone (Galaxy S3-mini,
+Samsung, South Korea), a docking station and two IMUs (EXLs3,
+EXEL srl., Italy) with a sampling frequency of 100 Hz (Fig. 2A in
+Supplementary
+Materials).
+Technical
+features and
+algorithms
+were ﬁrst validated for the detection of gait abnormalities against
+standard gait registration systems [26], and for FOG detection in a
+laboratory environment [22]. Ten people with PD (5 from each
+country) extensively tested the system prior to trial commence-
+ment. Battery life ensured a user-duration of up to 4 h.
+Two
+applications
+were
+used
+in
+this
+study:
+the
+audio-
+biofeedback (ABF-gait app) and the instrumented cueing for FOG-
+training (FOG-cue app). Feedback and cues were provided via
+earphones
+or
+the
+smartphone's
+speaker.
+The
+ABF-gait
+app
+contained:
+1) A large touch-screen ”Start” button, establishing the connection
+with the IMUs (see Fig. 2A in Supplementary Materials);
+2) A menu of four training targets: cadence, stride length, sym-
+metry and gait speed;
+3) A ‘therapeutic window’ allowing calibration of feedback ac-
+cording to the individual's optimal gait performance [26], and
+set per gait parameter as a percentage above and below the
+median of every 5 steps (see Fig. 2B in Supplementary
+Materials). Positive verbal feedback (in Dutch or Hebrew) was
+given when gait remained within the therapeutic window,
+diminishing with an exponential trend to prevent feedback
+overload and maximize motor learning. Corrective verbal feed-
+back
+was
+given
+when
+gait
+parameters
+fell
+outside
+the
+P. Ginis et al. / Parkinsonism and Related Disorders 22 (2016) 28e34
+29
+
+therapeutic window. Fig. 3 shows training examples of 2 PD
+persons (see supplementary materials).
+The FOG-cue app contained:
+1) A FOG detection sensitivity option, adjusted by the physiother-
+apist to low or high to accommodate excessive false positive or
+false negative detections.
+2) An exercise menu, including walking in a ﬁgure of 8, maneu-
+vering through cluttered spaces and making turns with and
+without responding to a visual GOeNOeGO signal provided by
+the smartphone.
+3) Intelligent cueing options, providing continuous cueing during
+walking which faded when FOG occurred or was initiated when
+FOG was detected (based on the participant's preference).
+2.3. Intervention
+2.3.1. CuPiD training
+CuPiD group participants received weekly home visits from the
+researcher during the six week of intervention. Participants were
+instructed to walk at least 3 times per week for 30 min, according to
+ACSM's exercise guidelines for health beneﬁts [27]. They were
+instructed to use the ABF-gait app, which provided feedback on
+selected gait parameters during their walks. Participants with FOG
+received instruction on how to avoid FOG and practiced for an
+additional 30 min three times a week using the FOG-cue app,
+similar to previous work [23].
+The smartphone was carried in a pocket of the participant's
+clothing, except for during FOG-training when the phone was
+handheld (to see the visual signals). Participants were taught how
+to apply the IMUs to their shoes (when using the ABF-gait app) and
+above their ankles when using the FOG-cue app. A booklet with
+pictures and personalized instructions was left in the home and
+consultation by telephone was offered in case of difﬁculties using
+the system. An optimal performance walk was performed during
+the initial visit and repeated twice over the 6-week study period to
+calibrate the ABF-gait app. Spatiotemporal parameters and FOG-
+cue settings were on average 4 times adjusted by the researcher
+during weekly visits.
+Participants were asked to record the frequency and duration of
+their training sessions in a diary. The CuPiD system also recorded
+the duration of walks with the system. Training data were provided
+in summary statistics, consisting of simple displays of positive and
+corrective feedback received and number of steps performed.
+2.3.2. Control training
+The control group also received weekly visits by the same
+researcher for six weeks and was provided with the same practice
+Fig. 1. Study ﬂowchart.
+P. Ginis et al. / Parkinsonism and Related Disorders 22 (2016) 28e34
+30
+
+schedule,
+personalized
+approach
+and
+recommendations
+for
+training, except for the CuPiD system. Control participants also
+recorded the frequency and duration of their training sessions in a
+diary. People allocated to this group were informed about the
+documented effectiveness of the intervention.
+2.4. Assessment procedure and outcomes
+During the ﬁrst session (pre-test), in- and exclusion criteria
+were checked and baseline values of the primary and secondary
+outcomes collected. The same outcomes were assessed after the 6
+weeks intervention (post-test) and after a 4 week (follow-up)
+period by the same assessor at each clinical center. Testers were not
+blinded to group allocation. Measurements' order was standardized
+within the test procedure and conducted when participants were
+optimally medicated, about 1 h after PD medication intake.
+Primary outcomes were gait speed under usual and dual task
+(DT) conditions. We were particularly interested in detecting
+changes in DT gait speed, as it may better represent improved gait
+automaticity than single task outcomes. Participants were asked to
+walk for one minute over an instrumented walkway (PKMAS,
+Protokinetics, USA): (1) at comfortable speed and (2) while reciting
+as many words as possible starting with a pre-speciﬁed letter.
+Secondary gait, balance and HR-QoL outcomes included the 2
+Minute Walk Test (2MWT) [28], the mini-Balance Evaluation Sys-
+tems Test (MiniBESTest) [29], the Four Square Step Test (FSST) [30],
+the Falls Efﬁcacy Scale-International (FES-I) [31] and the Physical
+Activity Scale for the Elderly (PASE) [32]. FOG severity was deter-
+mined by the New-FOG questionnaire (NFOG-Q) [33] and the Zie-
+gler protocol [34]. Disease severity was quantiﬁed using the
+Movement Disorders Uniﬁed Parkinson's Disease Rating Scale e
+motor
+examination
+(UPDRS
+III)
+[35].
+Cognitive
+assessments
+included Color Trail Test (CTT) A and B [36] and verbal ﬂuency (VF)
+scores in sitting and walking. Quality of life was determined by the
+Short Form 36 Health Survey (SF-36) [37]. At post-test, a 5-item
+Likert scale investigated whether participants found the CuPiD
+system user-friendly or not (1 ¼ no agreement and 5 ¼ total
+agreement).
+2.5. Statistical analysis
+KolmogoroveSmirnov analysis and Levene's test evaluated the
+data distribution. In case of abnormal distributions, non-parametric
+analyses were performed. As this did not lead to different results,
+only parametric test results are reported.
+To compare baseline characteristics and adherence outcomes
+between both groups, an independent samples T-test was used for
+continuous and a chi-square for categorical variables. A 2 (group) by
+Table 1
+Outcomes of PD persons who completed the training period.
+Variables
+CuPiD (n ¼ 20)
+Control (n ¼ 18)
+Effects
+Pretest
+Posttest
+Follow-up
+Pretest
+Posttest
+Follow-up
+Time
+Group
+Time  group
+Comfortable gait
+Gait speed [m/s]
+1.11 (0.23)
+1.21 (0.24)b
+1.22 (0.23)b
+1.16 (0.14)
+1.22 (0.14)b
+1.24 (0.17)b
+P < 0.001
+P ¼ 0.70
+P ¼ 0.34
+Stride length [m]
+1.18 (0.22)
+1.26 (0.21)b
+1.26 (0.21)b
+1.26 (0.16)
+1.32 (0.14)b
+1.31 (0.17)b
+P < 0.001
+P ¼ 0.31
+P ¼ 0.31
+DS time [% GCT]
+32.42 (4.62)
+30.71 (3.99)b
+30.59 (4.28)b
+29.51 (3.12)
+28.79 (3.26)b
+28.88 (3.59)b
+P < 0.01
+P ¼ 0.07
+P ¼ 0.17
+Dual task gait
+Gait speed [m/s]
+0.96 (0.24)
+1.09 (0.28)b
+1.07 (0.27)b
+1.03 (0.12)
+1.09 (0.11)b
+1.09 (0.17)b
+P < 0.001
+P ¼ 0.66
+P ¼ 0.33
+Stride length [m]
+1.07 (0.22)
+1.16 (0.26)b
+1.14 (0.24)b
+1.15 (0.14)
+1.21 (0.11)b
+1.19 (0.18)b
+P < 0.001
+P ¼ 0.35
+P ¼ 0.51
+DS time [% GCT]
+34.70 (4.81)
+32.64 (4.60)b
+32.94 (4.75)
+31.78 (3.26)
+31.02 (3.58)b
+31.51 (4.05)
+P < 0.01
+P ¼ 0.12
+P ¼ 0.22
+Balance
+MiniBESTest [0e32]
+24.75 (5.61)
+26.10 (4.64)b
+24.95 (4.78)
+25.33 (4.04)
+24.44 (4.96)
+25.00 (4.89)
+P ¼ 0.79
+P ¼ 0.82
+P ¼ 0.04
+FSST [s]
+11.02 (3.57)
+9.70 (2.28)
+9.86 (3.34)b
+10.26 (2.21)
+10.51 (3.53)
+10.12 (2.59)b
+P < 0.05
+P ¼ 0.92
+P ¼ 0.09
+FES-I [16e64]
+26.90 (7.21)
+27.35 (9.45)
+26.74 (9.57)
+27.28 (10.02)
+27.82 (12.07)
+28.00 (9.93)
+P ¼ 0.91
+P ¼ 0.84
+P ¼ 0.89
+Endurance and physical capacity
+2 MWT [m]
+145.56 (38.17)
+157.54 (39.23)b
+152.47 (43.38)
+150.09 (25.89)
+153.89 (25.20)b
+154.97 (24.18)
+P < 0.005
+P ¼ 0.95
+P ¼ 0.15
+PASE [0e400]
+125.86 (85.56)
+115.31 (73.77)
+102.30 (68.55)
+103.30 (60.37)
+102.66 (50.00)
+99.92 (48.19)
+P ¼ 0.18
+P ¼ 0.52
+P ¼ 0.56
+Disease severity
+UPDRS III [0e132]
+28.35 (14.77)
+28.15 (15.57)
+30.85 (14.26)
+33.77 (14.36)
+31.00 (14.62)
+34.65 (15.21)
+P ¼ 0.09
+P ¼ 0.44
+P ¼ 0.64
+Freezing of gaita
+NFOG-Q [0e28]
+14.43 (7.84)
+12.93 (7.65)
+13.93 (8.27)
+13.70 (7.82)
+15.10 (6.57)
+15.70 (7.30)
+P ¼ 0.49
+P ¼ 0.73
+P ¼ 0.19
+Ziegler [0e36]
+5.50 (8.25)
+5.07 (6.97)
+5.00 (6.67)
+4.40 (4.12)
+4.00 (6.91)
+4.30 (4.27)
+P ¼ 0.79
+P ¼ 0.69
+P ¼ 0.93
+Cognition
+CTT-A [s]
+73.65 (34.67)
+58.70 (26.27)
+64.30 (29.87)
+59.78 (19.16)
+69.94 (47.08)
+64.77 (26.59)
+P ¼ 0.08
+P ¼ 0.67
+P ¼ 0.08
+CTT-B [s]
+136.32 (59.42)
+142.95 (67.38)
+126.00 (60.25)
+122.33 (66.07)
+119.78 (56.24)
+120.65 (58.93)
+P ¼ 0.23
+P ¼ 0.36
+P ¼ 0.25
+VF Sit [#]
+30.05 (12.19)
+29.50 (14.89)
+27.75 (14.43)
+31.78 (16.95)
+31.22 (17.84)
+32.88 (22.02)
+P ¼ 0.86
+P ¼ 0.58
+P ¼ 0.46
+VF Walk [#]
+11.00 (5.06)
+10.20 (4.56)
+10.35 (5.58)
+10.28 (6.32)
+10.33 (6.82)
+11.18 (7.49)
+P ¼ 0.59
+P ¼ 0.99
+P ¼ 0.47
+Quality of life
+SF-36 [0e100]
+58.59 (18.60)
+59.76 (17.95)
+59.46 (17.13)
+53.24 (16.55)
+59.28 (18.73)
+53.81 (20.42)
+P ¼ 0.23
+P ¼ 0.51
+P ¼ 0.65
+SF-36 Phys. health [0e100]
+53.79 (18.50)
+53.28 (18.45)
+54.80 (16.48)
+50.41 (15.60)
+56.67 (17.32)
+48.29 (15.54)c
+P ¼ 0.21
+P ¼ 0.71
+P < 0.05
+SF-36 Ment. health [0e100]
+59.76 (18.01)
+63.56 (18.41)
+60.60 (18.05)
+55.00 (18.69)
+58.13 (20.04)
+56.59 (24.21)
+P ¼ 0.38
+P ¼ 0.44
+P ¼ 0.75
+CuPiD System usability [1e5]
+I can turn on the smartphone easily
+4.5 (0.9)
+I can turn on the CuPiD applications easily
+4.6 (0.7)
+I think CuPiD is simple to use
+4.3 (0.8)
+I can attach/remove the sensors easily
+4.0 (1.3)
+I think I can use the system independently
+4.0 (1.2)
+m: meters; s: seconds; DS: Double Support; GCT: gait cycle time; Phys: Physical; Ment: Mental.
+Values are presented as mean (±standard deviation).
+a Analysis performed only on PD persons reporting freezing of gait;
+b Signiﬁcantly different from pretest;
+c Signiﬁcantly different from posttest.
+P. Ginis et al. / Parkinsonism and Related Disorders 22 (2016) 28e34
+31
+
+3 (time: pre-test/post-test/follow-up) repeated measures ANOVA
+evaluated differences for the dependent variables on the primary
+and secondary outcomes, being the independent variables. Because
+of the exploratory nature of this trial, Fisher's LSD post-hoc ana-
+lyses were applied. Effect sizes expressed as partial eta squared (ɳ2)
+are reported for the most important ﬁndings. The level of statistical
+signiﬁcance was set at a ¼ 0.05.
+We report the data from all participants who completed the 6
+weeks of training (per protocol analysis) and also conducted an
+intention-to-treat analysis with a last observation carried forward
+method to impute missing values. Statistical analysis was per-
+formed using SPSS version 22 (IBM, USA).
+3. Results
+Twenty-two participants were allocated to CuPiD, of which 20
+completed training. Eighteen participants were allocated to the
+control arm, all of whom completed training (Fig. 1). Reasons for
+dropout (N ¼ 2) were unrelated to CuPiD in one person. However,
+the second person was unable to cope with the CuPiD system
+without supervision at home. Both training groups were similar at
+baseline (see supplementary materials: Table S1). Fourteen CuPiD
+participants and 10 control participants experienced FOG. Only 11
+participants (29%) had used a smartphone before entering the
+study.
+3.1. Gait
+There were no interaction effects for the primary outcomes
+(Table 1), gait speed under single tasking (F(2,108) ¼ 1.11, p ¼ 0.34,
+ɳ2 ¼ 0.03) and gait speed under dual tasking (F(2,108) ¼ 1.14,
+p ¼ 0.33, ɳ2 ¼ 0.03). Also the group differences for the primary
+outcomes,
+were
+not
+signiﬁcantly
+different
+(Single
+tasking:
+F(1,108) ¼ 0.15, p ¼ 0.70, ɳ2 ¼ 0.01; Dual tasking: F(1,108) ¼ 0.19,
+p ¼ 0.66, ɳ2 ¼ 0.01). However, there was a main effect of time
+(Single tasking: F(2,108) ¼ 14.31, p < 0.001, ɳ2 ¼ 0.29; Dual tasking:
+F(2,108) ¼ 9.57, p < 0.001, ɳ2 ¼ 0.23). These results indicate that both
+groups improved gait speed during single and dual tasking from
+pre-test to post-test, whereby the CuPiD group improved their gait
+speed with 9.0% and 13.5% and the control group with 5.2% and 5.8%
+for single and dual tasking, respectively. Other gait outcomes
+showed a similar pattern of results and most gait beneﬁts were
+maintained at follow-up in both groups.
+3.2. Balance
+A signiﬁcant time by group interaction was found for the
+miniBESTest (F(2,108) ¼ 3.73, p ¼ 0.04, ɳ2 ¼ 0.11), indicating that the
+improvement in balance for the CuPiD group was signiﬁcantly
+greater than the control group at post-test (Table 1). However, this
+effect was not maintained at follow-up. This result was also re-
+ﬂected with a trend towards a signiﬁcant interaction effect of time
+by group for the FSST (F(2,108) ¼ 3.38, p ¼ 0.09, ɳ2 ¼ 0.10).
+3.3. Endurance
+The aforementioned gait improvements were also reﬂected in
+the 2MWT which showed a signiﬁcant main effect of time
+(F(2,108) ¼ 4.32, p < 0.005, ɳ2 ¼ 0.11) as shown in Table 1.
+3.4. Health related quality of life
+A signiﬁcant time by group interaction was found for the
+physical health score of the SF-36 (F(2,108) ¼ 1.85, p < 0.05,
+ɳ2 ¼ 0.06), indicating that the control group experienced a decrease
+in self-reported physical health at follow-up, while the CuPiD group
+did not.
+There were no signiﬁcant between-group or within-group dif-
+ferences for FOG outcomes and cognitive measures. Intention-to-
+treat analysis yielded similar results with the exception that the
+time by group interactions for the MiniBESTest and SF-36 (physical
+health) were no longer signiﬁcant (both p ¼ 0.07).
+3.5. Feasibility
+Adherence data (Table 2) showed that the CuPiD group spent
+less time training compared to the control group, while the number
+of training sessions was identical (CuPiD: 28 ± 9 sessions; control:
+28 ± 10 sessions; p ¼ 0.91). Training duration was based on the
+CuPiD system logs for the CuPiD group, and diary data for the
+control group. When checking for differences between diaries and
+CuPiD
+logs
+in
+13
+CuPiD
+participants,
+diary
+notations
+(701 ± 304 min) were not signiﬁcantly different from CuPiD logs
+(646 ± 254 min; p ¼ 0.25). Participants with incomplete diary data,
+were excluded from this analysis.
+In general, participants were very positive about the CuPiD
+system, as scores on user-friendliness were on average above 4 on a
+5-point scale. However, attaching and removing the IMUs and using
+the CuPiD system without technical support resulted in more var-
+iable answers (Table 1). It was observed that participants with
+previous smartphone experience had the least problems using the
+CuPiD system. Some participants were so enthusiastic about the
+system that they expressed disappointment after its withdrawal.
+4. Discussion
+This phase II RCT investigated the feasibility of the CuPiD system
+and its effectiveness on gait and balance, compared to conventional
+gait training in people with PD. The system was well-accepted and
+showed to be useful for providing minimally supervised at-home
+gait training. Both study arms improved on the primary outcomes
+of gait speed under comfortable and DT conditions at post-test and
+at follow-up. The CuPiD approach demonstrated to be better at
+improving balance than conventional gait training in people with
+PD.
+Despite the non-superior ﬁndings of the CuPiD system for gait,
+the results revealed a larger improvement in gait speed during both
+comfortable (9.0%) and DT conditions (13.5%), whereas controls
+improved gait speed by only 5.2% and 5.8%. According to the rec-
+ommendations by Hass et al., the control group's effect sizes can be
+interpreted as small [38], whereas those of the CuPiD group can be
+considered as clinically moderate and as comparable to other
+Table 2
+Adherence data.
+CuPiDa
+Controlb
+p-value
+Overall
+PD persons [#]
+20
+18
+Total duration [minutes]
+649.5 (234.7)
+923.8 (342.6)
+<0.01
+Sessions [#]
+28.3 (8.7)
+27.9 (10.3)
+0.91
+ABF-app/Gait advice
+PD persons [#]
+20
+18
+Total duration [minutes]
+494.7 (274.5)
+742.7 (286.7)
+0.01
+Sessions [#]
+20.7 (6.5)
+20.7 (6.1)
+0.99
+FOG-cue/FOG advice
+PD persons [#]
+10
+7
+Total duration [minutes]
+309.6 (141.5)
+465.6 (179.1)
+0.06
+Sessions [#]
+16.3 (4.5)
+18.6 (1.5)
+0.17
+Values are presented as mean (±standard deviation).
+a Based on CuPiD-system adherence data.
+b Based on diary adherence data.
+P. Ginis et al. / Parkinsonism and Related Disorders 22 (2016) 28e34
+32
+
+cueing and treadmill studies [9,16,39]. These results are the more
+notable, considering that total training time was lower in the CuPiD
+group, suggesting that the CuPiD system may have improved
+training efﬁciency.
+In contrast to gait, we found an interaction effect for the Mini-
+BESTest balance outcome favoring the CuPiD group. However, it
+should be noted that the between-group mean difference for the
+MiniBESTest of 1.7 points is below the smallest real difference of 3.4
+points [40]. CuPiD participants also tended to improve more than
+controls on the FSST, another test of dynamic stability, requiring
+fast steps in different directions over a small obstacle. Together,
+these ﬁndings suggest that CuPiD induced beneﬁts of dynamic
+stability, which may be ascribed to the fact that CuPiD targeted
+larger step sizes and greater gait stability.
+There were no between- or within-group effects on FOG,
+although pre-to post-test differences of 1.5 points in NFOG-Q scores
+were found in favor of the CuPiD group. Since both groups devoted
+less time to training FOG, it is possible that the dose was insufﬁcient
+to be effective. In addition, FOG training was only undertaken by 17
+participants. Therefore, the study was not powered to detect sig-
+niﬁcant differences.
+This study showed that the CuPiD group trained as much as the
+control group in terms of training sessions, but had a lower training
+duration. Possible explanations could be related to the self-
+reporting of adherence, overestimating actual compliance for rea-
+sons of social desirability. However, when training diaries and
+CuPiD logs were compared, no signiﬁcant differences were detec-
+ted, albeit in participants with complete diaries only. The fact that
+CuPiD participants were aware that their training was logged, may
+also have contributed to this ﬁnding. The number of training ses-
+sions was similar in both groups, indicating that the intention to
+train was equal in both groups. Also, the reported training duration
+is in line with earlier reported adherence of approximately 80% in
+home-based PD interventions [41,42]. The CuPiD system was used
+with minimal supervision, while most participants were unfamiliar
+with a smartphone. Except for difﬁculties with the correct place-
+ment of the IMUs and the touchscreen the system was very well-
+tolerated
+as indicated
+by the positive
+scores
+on the
+user-
+friendliness scale.
+Lack of statistical conﬁrmation of the CuPiD system's beneﬁts
+may indicate that it does not offer an added clinical value. Alter-
+natively, the study may have been underpowered to show a surplus
+effect. Post-hoc power calculations based on the DT gait speed re-
+sults showed that 164 (82 per group) persons would be required to
+achieve the desired power of 0.80 assuming effect sizes of 13.5% for
+the CuPiD group and 5.8% for controls. However, when compared
+against a passive control group, a total of 54 (27 per group) par-
+ticipants would sufﬁce. Other limitations which may have inﬂu-
+enced the trial outcomes, were the lack of assessor blinding for
+group allocation and uncorrected post-hoc analyses for multiple
+comparisons. Also, the placebo effect resulting from increased
+attention during therapy was not controlled for and we did not take
+usual care characteristics into consideration. Despite these draw-
+backs, we conclude that the CuPiD system was feasible for unsu-
+pervised home-use and was an effective approach for gait and
+balance training in PD. Given the shorter training duration with the
+CuPiD systems, these beneﬁts may possibly be associated with the
+online biofeedback model, enhancing training efﬁciency. Large
+scale clinical trials to investigate its long-term use and cost-
+effectiveness are indicated before future implementation can be
+considered.
+Conﬂict of interest
+AF and LC have a signiﬁcant ﬁnancial interest in mHealth
+Technologies, a company that may have a commercial interest in
+the results of this research and technology. All other authors
+declare no competing interests.
+Funding sources
+The research leading to these results has received funding from
+the European Union Seventh Framework Programme (FP7/2007-
+2013) under grant agreement No. 288516 (CuPiD project).
+Authors' contribution
+All authors contributed to the research design. PG, MD and EG
+were responsible for recruitment, home-based training and as-
+sessments. PG was principally responsible for data-analysis and
+drafting of the manuscript. AF was responsible for implementing
+necessary adjustments to the CuPiD system. All authors critically
+reviewed the manuscript and approved the submitted version.
+Acknowledgments
+The authors would like to thank all volunteers who were willing
+to participate in this study.
+Appendix A. Supplementary data
+Supplementary data related to this article can be found at http://
+dx.doi.org/10.1016/j.parkreldis.2015.11.004.
+References
+[1] D. Muslimovic, B. Post, J.D. Speelman, B. Schmand, R.J. de Haan, Determinants
+of disability and quality of life in mild to moderate Parkinson disease,
+Neurology 70 (2008) 2241e2247.
+[2] V.A. Goodwin, S.H. Richards, R.S. Taylor, A.H. Taylor, J.L. Campbell, The effec-
+tiveness of exercise interventions for people with Parkinson's disease: a sys-
+tematic review and meta-analysis,, Mov. Disord. 23 (2008) 631e640.
+[3] C.L. Tomlinson, S. Patel, C. Meek, C.P. Herd, C.E. Clarke, R. Stowe, et al., Phys-
+iotherapy intervention in Parkinson's disease: systematic review and meta-
+analysis, BMJ 345 (2012) e5004.
+[4] G.M. Petzinger, B.E. Fisher, S. McEwen, J.A. Beeler, J.P. Walsh, M.W. Jakowec,
+Exercise-enhanced neuroplasticity targeting motor and cognitive circuitry in
+Parkinson's disease, Lancet Neurol. 12 (2013) 716e726.
+[5] E.E.H. van Wegen, M.A. Hirsch, M. Huiskamp, G. Kwakkel, Harnessing Cueing
+training for neuroplasticity in Parkinson disease, Top. Geriatr. Rehabil. 30
+(2014) 46e57.
+[6] I. Lim, E. van Wegen, C. de Goede, M. Deutekom, A. Nieuwboer, A. Willems, et
+al., Effects of external rhythmical cueing on gait in patients with Parkinson's
+disease: a systematic review, Clin. Rehabil. 19 (2005) 695e713.
+[7] S.J. Spaulding, B. Barber, M. Colby, B. Cormack, T. Mick, M.E. Jenkins, Cueing
+and gait improvement among people with Parkinson's disease: a meta-anal-
+ysis, Arch. Phys. Med. Rehabil. 94 (2013) 562e570.
+[8] P.A. Rocha, G.M. Porﬁrio, H.B. Ferraz, V.F. Trevisani, Effects of external cues on
+gait parameters of Parkinson's disease patients: a systematic review, Clin.
+Neurol. Neurosurg. 124 (2014) 127e134.
+[9] A. Nieuwboer, G. Kwakkel, L. Rochester, D. Jones, E. van Wegen, A.M. Willems,
+et al., Cueing training in the home improves gait-related mobility in Parkin-
+son's disease: the RESCUE trial, J. Neurol. Neurosurg. Psychiatry 78 (2007)
+134e140.
+[10] L. Rochester, K. Baker, V. Hetherington, D. Jones, A.M. Willems, G. Kwakkel, et
+al., Evidence for motor learning in Parkinson's disease: acquisition, automa-
+ticity and retention of cued gait performance after training with external
+rhythmical cues, Brain Res. 1319 (2010) 103e111.
+[11] G. Frazzitta, R. Maestri, D. Uccellini, G. Bertotti, P. Abelli, Rehabilitation
+treatment of gait in patients with Parkinson's disease with freezing: a com-
+parison between two physical therapy protocols using visual and auditory
+cues with or without treadmill training, Mov. Disord. 24 (2009) 1139e1143.
+[12] U.M. Fietzek, F.E. Schroeteler, K. Ziegler, J. Zwosta, A.O. Ceballos-Baumann,
+Randomized cross-over trial to investigate the efﬁcacy of a two-week phys-
+iotherapy programme with repetitive exercises of cueing to reduce the
+severity of freezing of gait in patients with Parkinson's disease, Clin. Rehabil.
+28 (2014) 902e911.
+[13] A. Mirelman, T. Herman, S. Nicolai, A. Zijlstra, W. Zijlstra, C. Becker, et al.,
+Audio-biofeedback training for posture and balance in patients with Parkin-
+son's disease, J. Neuroeng Rehabil. 8 (2011) 35.
+P. Ginis et al. / Parkinsonism and Related Disorders 22 (2016) 28e34
+33
+
+[14] M.R. van den Heuvel, G. Kwakkel, P.J. Beek, H.W. Berendse, A. Daffertshofer,
+E.E. van Wegen, Effects of augmented visual feedback during balance training
+in Parkinson's disease: a pilot randomized clinical trial, Park. Relat. Disord. 20
+(2014) 1352e1358.
+[15] C.Y. Yen, K.H. Lin, M.H. Hu, R.M. Wu, T.W. Lu, C.H. Lin, Effects of virtual reality-
+augmented balance training on sensory organization and attentional demand
+for postural control in people with Parkinson disease: a randomized
+controlled trial, Phys. Ther. 91 (2011) 862e874.
+[16] A. Mirelman, I. Maidan, T. Herman, J.E. Deutsch, N. Giladi, J.M. Hausdorff,
+Virtual reality for gait training: can it induce motor learning to enhance
+complex walking and reduce fall risk in patients with Parkinson's disease?
+J. Gerontol. A Biol. Sci. Med. Sci. 66 (2011) 234e240.
+[17] J.L. Zimbelman, S.P. Juraschek, X.M. Zhang, V.W.H. Lin, Physical therapy
+workforce in the United States: forecasting nationwide shortages, PM&R 2
+(2010) 1021e1029.
+[18] W. Maetzler, J. Domingos, K. Srulijes, J.J. Ferreira, B.R. Bloem, Quantitative
+wearable sensors for objective assessment of Parkinson's disease, Mov. Dis-
+ord. 28 (2013) 1628e1637.
+[19] P.B. Shull, W. Jirattigalachote, M.A. Hunt, M.R. Cutkosky, S.L. Delp, Quantiﬁed
+self and human movement: a review on the clinical impact of wearable sensing
+and feedback for gait analysis and intervention, Gait Posture 40 (2014) 11e19.
+[20] A.J. Espay, Y. Baram, A.K. Dwivedi, R. Shukla, M. Gartner, L. Gaines, et al., At-
+home
+training
+with
+closed-loop
+augmented-reality
+cueing
+device
+for
+improving gait in patients with Parkinson disease, J. Rehabilitation Res. Dev.
+47 (2010) 573e582.
+[21] M. Bachlin, M. Plotnik, D. Roggen, N. Giladi, J.M. Hausdorff, G. Troster,
+A wearable system to assist walking of Parkinson's disease patients, Methods
+Inf. Med. 49 (2010) 88e95.
+[22] S. Mazilu, U. Blanke, M. Hardegger, G. Troster, E. Gazit, M. Dorfman, et al.,
+GaitAssist: a wearable assistant for gait training and rehabilitation in Parkin-
+son's disease, in: 2014 IEEE International Conference on Pervasive Computing
+and Communications Workshops (Percom Workshops), 2014, pp. 135e137.
+[23] M. Plotnik, S. Shema, M. Dorfman, E. Gazit, M. Brozgol, N. Giladi, et al., A motor
+learning-based intervention to ameliorate freezing of gait in subjects with
+Parkinson's disease, J. Neurol. 261 (2014) 1329e1339.
+[24] K. Schipper, L. Dauwerse, A. Hendrikx, J.W. Leedekerken, T.A. Abma, Living
+with Parkinson's disease: priorities for research suggested by patients, Park.
+Relat. Disord. 20 (2014) 862e866.
+[25] R. Fleurence, J.V. Selby, K. Odom-Walker, G. Hunt, D. Meltzer, J.R. Slutsky, et
+al., How the patient-centered outcomes Research Institute is engaging pa-
+tients and others in shaping its research agenda, Health Aff. (Millwood) 32
+(2013) 393e400.
+[26] F. Casamassima, A. Ferrari, B. Milosevic, P. Ginis, E. Farella, L. Rocchi,
+A wearable system for gait training in subjects with Parkinson's disease,
+Sensors (Basel) 14 (2014) 6229e6246.
+[27] C.E. Garber, B. Blissmer, M.R. Deschenes, B.A. Franklin, M.J. Lamonte, I.M. Lee,
+et al., American College of Sports Medicine position stand. Quantity and
+quality
+of
+exercise
+for
+developing
+and
+maintaining
+cardiorespiratory,
+musculoskeletal, and neuromotor ﬁtness in apparently healthy adults: guid-
+ance for prescribing exercise, Med. Sci. Sports Exerc 43 (2011) 1334e1359.
+[28] P. Rossier, D.T. Wade, Validity and reliability comparison of 4 mobility mea-
+sures in patients presenting with neurologic impairment, Arch. Phys. Med.
+Rehabil. 82 (2001) 9e13.
+[29] A.L. Leddy, B.E. Crowner, G.M. Earhart, Utility of the Mini-BESTest, BESTest,
+and BESTest sections for balance assessments in individuals with Parkinson
+disease, J. Neurol. Phys. Ther. 35 (2011) 90e97.
+[30] R.P. Duncan, G.M. Earhart, Four square step test performance in people with
+Parkinson disease, J. Neurol. Phys. Ther. 37 (2013) 2e8.
+[31] K.A. Hauer, G.I. Kempen, M. Schwenk, L. Yardley, N. Beyer, C. Todd, et al.,
+Validity and sensitivity to change of the falls efﬁcacy scales international to
+assess fear of falling in older adults with and without cognitive impairment,
+Gerontology 57 (2011) 462e472.
+[32] R.A. Washburn, K.W. Smith, A.M. Jette, C.A. Janney, The Physical Activity Scale
+for the Elderly (PASE): development and evaluation, J. Clin. Epidemiol. 46
+(1993) 153e162.
+[33] A. Nieuwboer, L. Rochester, T. Herman, W. Vandenberghe, G.E. Emil,
+T. Thomaes, et al., Reliability of the new freezing of gait questionnaire:
+agreement between patients with Parkinson's disease and their carers, Gait
+Posture 30 (2009) 459e463.
+[34] K. Ziegler, F. Schroeteler, A.O. Ceballos-Baumann, U.M. Fietzek, A new rating
+instrument to assess festination and freezing gait in Parkinsonian patients,
+Mov. Disord. 25 (2010) 1012e1018.
+[35] C.G. Goetz, B.C. Tilley, S.R. Shaftman, G.T. Stebbins, S. Fahn, P. Martinez-Martin,
+et al., Movement Disorder Society-sponsored revision of the Uniﬁed Parkin-
+son's Disease Rating Scale (MDS-UPDRS): scale presentation and clinimetric
+testing results, Mov. Disord. 23 (2008) 2129e2170.
+[36] I. Sanchez-Cubillo, J.A. Perianez, D. Adrover-Roig, J.M. Rodriguez-Sanchez,
+M. Rios-Lago, J. Tirapu, et al., Construct validity of the Trail Making Test: role
+of task-switching, working memory, inhibition/interference control, and
+visuomotor abilities, J. Int. Neuropsychol. Soc. 15 (2009) 438e450.
+[37] A. Riazi, J.C. Hobart, D.L. Lamping, R. Fitzpatrick, J.A. Freeman, C. Jenkinson, et
+al., Using the SF-36 measure to compare the health impact of multiple scle-
+rosis and Parkinson's disease with normal population health proﬁles,
+J. Neurol. Neurosurg. Psychiatry 74 (2003) 710e714.
+[38] C.J. Hass, M. Bishop, M. Moscovich, E.L. Stegemoller, J. Skinner, I.A. Malaty, et
+al., Deﬁning the clinically meaningful difference in gait speed in persons with
+Parkinson disease, J. Neurol. Phys. Ther. 38 (2014) 233e238.
+[39] T. Herman, N. Giladi, L. Gruendlinger, J.M. Hausdorff, Six weeks of intensive
+treadmill training improves gait and quality of life in patients with Parkin-
+son's disease: a pilot study, Arch. Phys. Med. Rehabil. 88 (2007) 1154e1158.
+[40] N. Lofgren, E. Lenholm, D. Conradsson, A. Stahle, E. Franzen, The Mini-
+BESTestea clinically reproducible tool for balance evaluations in mild to
+moderate Parkinson's disease? BMC Neurol. 14 (2014) 235.
+[41] C.G. Canning, N.E. Allen, C.M. Dean, L. Goh, V.S. Fung, Home-based treadmill
+training for individuals with Parkinson's disease: a randomized controlled
+pilot trial, Clin. Rehabil. 26 (2012) 817e826.
+[42] T. Martin, M. Weatherall, T.J. Anderson, M.R. MacAskill, A randomized
+controlled feasibility trial of a speciﬁc cueing program for falls management in
+persons with Parkinson disease and freezing of Gait, J. Neurol. Phys. Ther. 39
+(2015) 179e184.
+P. Ginis et al. / Parkinsonism and Related Disorders 22 (2016) 28e34
+34
+

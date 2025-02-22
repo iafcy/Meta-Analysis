@@ -1,0 +1,1014 @@
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+Original Paper
+The Aim2Be mHealth Intervention for Children With Overweight
+or Obesity and Their Parents: Person-Centered Analyses to
+Uncover Digital Phenotypes
+Olivia De-Jongh González1, PhD; Claire N Tugault-Lafleur2, PhD, RD; E Jean Buckler3, PhD; Jill Hamilton4, PhD;
+Josephine Ho5, MD; Annick Buchholz6, PhD; Katherine M Morrison7, MD; Geoff DC Ball8, PhD, RD; Louise C
+Mâsse1, PhD
+1School of Population and Public Health, University of British Columbia, BC Children's Hospital Research Institute, Vancouver, BC, Canada
+2School of Nutrition Sciences, Faculty of Health Sciences, The University of Ottawa., Ottawa, ON, Canada
+3School of Exercise Science, Physical and Health Education, University of Victoria., Victoria, BC, Canada
+4Department of Paediatrics, Hospital for Sick Children, University of Toronto, Toronto, ON, Canada
+5Cumming School of Medicine, Department of Pediatrics, University of Calgary, Calgary, AB, Canada
+6Children’s Hospital of Eastern Ontario Research Institute, Ottawa, ON, Canada
+7Department of Pediatrics, Center for Metabolism, Obesity and Diabetes Research, McMaster University, Hamilton, ON, Canada
+8Department of Pediatrics, Faculty of Medicine & Dentistry, University of Alberta, Edmonton, AB, Canada
+Corresponding Author:
+Louise C Mâsse, PhD
+School of Population and Public Health, University of British Columbia
+BC Children's Hospital Research Institute
+4480 Oak St.
+Vancouver, BC, V6H 3V4
+Canada
+Phone: 1 6048752000 ext 5563
+Email: lmasse@bcchr.ubc.ca
+Abstract
+Background: Despite the growing number of mobile health (mHealth) interventions targeting childhood obesity, few studies
+have characterized user typologies derived from individuals’patterns of interactions with specific app features (digital phenotypes).
+Objective: This study aims to identify digital phenotypes among 214 parent-child dyads who used the Aim2Be mHealth app
+as part of a randomized controlled trial conducted between 2019 and 2020, and explores whether participants’characteristics and
+health outcomes differed across phenotypes.
+Methods: Latent class analysis was used to identify distinct parent and child phenotypes based on their use of the app’s behavioral,
+gamified, and social features over 3 months. Multinomial logistic regression models were used to assess whether the phenotypes
+differed by demographic characteristics. Covariate-adjusted mixed-effect models evaluated changes in BMI z scores (zBMI),
+diet, physical activity, and screen time across phenotypes.
+Results: Among parents, 5 digital phenotypes were identified: socially engaged(35/214, 16.3%), independently engaged(18/214,
+8.4%) (sociallyand independently engagedparents are those who used mainly the social or the behavioral features of the app,
+respectively), fully engaged(26/214, 12.1%), partially engaged(32/214, 15%), and unengaged(103/214, 48.1%) users. Married
+parents were more likely to be fully engagedthan independently engaged(P=.02) or unengaged(P=.01) users. Socially engaged
+parents were older than fully engaged(P=.02) and unengaged(P=.01) parents. The latent class analysis revealed 4 phenotypes
+among children: fully engaged (32/214, 15%), partially engaged (61/214, 28.5%), dabblers (42/214, 19.6%), and unengaged
+(79/214, 36.9%) users. Fully engagedchildren were younger than dabblers(P=.04) and unengaged(P=.003) children. Dabblers
+lived in higher-income households than fully and partially engaged children (P=.03 and P=.047, respectively). Fully engaged
+children were more likely to have fully engaged (P<.001) and partially engaged (P<.001) parents than unengaged children.
+Compared with unengagedchildren, fullyand partially engagedchildren had decreased total sugar (P=.006 and P=.004, respectively)
+and energy intake (P=.03 and P=.04, respectively) after 3 months of app use. Partially engaged children also had decreased
+sugary beverage intake compared with unengagedchildren (P=.03). Similarly, children with fully engagedparents had decreased
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 1
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+zBMI, whereas children with unengagedparents had increased zBMI over time (P=.005). Finally, children with independently
+engagedparents had decreased caloric intake, whereas children with unengagedparents had increased caloric intake over time
+(P=.02).
+Conclusions: Full parent-child engagement is critical for the success of mHealth interventions. Further research is needed to
+understand program design elements that can affect participants’engagement in supporting behavior change.
+Trial Registration: ClinicalTrials.gov NCT03651284; https://clinicaltrials.gov/ct2/show/NCT03651284
+International Registered Report Identifier (IRRID): RR2-10.1186/s13063-020-4080-2
+(J Med Internet Res 2022;24(6):e35285) doi: 10.2196/35285
+KEYWORDS
+mobile health; mHealth; childhood obesity; digital phenotypes; latent class analysis
+there have been calls to develop analytical methods to process
+Introduction
+the vast amounts of data that are available when using mHealth
+technologies [27] and identify digital phenotypes (ie, user
+Background
+typologies derived from individuals’ patterns of interactions
+Childhood obesity remains a significant health problem in
+with specific app features) [28,29]. Although digital phenotypes
+Canada [1]. Evidence shows that family-based multicomponent
+have been used in other areas of health research (eg, diabetes
+interventions that integrate self-regulatory strategies (ie, goal
+[30], sleep [31], mental health [32]) and dietary and physical
+setting, graded tasks, and self-monitoring) and support changes
+activity behaviors in a nonclinical sample [33], little attention
+at the familial and individual levels are necessary to significantly
+has been paid to the treatment of obesity in childhood. Some
+affect child weight outcomes (eg, BMI, waist to hip ratio, and
+studies have investigated which app features participants use
+total fat mass [2-9]). However, a 2018 meta-analysis [4] found
+[23,33] and individual characteristics associated with partial or
+that family-based multicomponent behavioral interventions had
+total use of an intervention [33-36]. However, most studies
+a small effect in reducing children’s BMI in efficacy trials versus
+evaluated usability derived from self-reported measures (eg,
+standard-of-care controls (β=−.16, 95% CI −0.24 to −0.07).
+asking participants about their preferences and use of app
+Mobile health (mHealth) interventions offer a promising adjunct features), total app use, or the use of individual features instead
+or alternative to in-person treatments to support lifestyle of focusing on patterns of app use [23,34,37].
+behavior change [10,11]. Several reviews [12-15] and
+Objectives
+meta-analyses [16,17] have suggested that mHealth interventions
+To our knowledge, no study targeting childhood obesity has
+offer multiple advantages to in-person interventions (eg,
+identified user typologies based on participants’engagement
+real-time data collection, intervention in natural environments,
+with objectively measured components of an mHealth
+lower costs, health behavior tracking with feedback, and
+intervention. To address this gap, this study aimed to (1) identify
+incorporation of gamified elements), which may appeal to
+digital phenotypes of Canadian children with overweight or
+children and youth [12]. Data on the efficacy of mHealth
+obesity and their parents who used an mHealth app (the Aim2Be
+interventions for the prevention and management of childhood
+app [25]) over a 3-month period, (2) explore whether
+obesity are promising but limited as this is still a rapidly
+participants’characteristics differed by digital phenotype, and
+evolving field of research [12,14,18].
+(3) evaluate 3-month changes in children’s BMI zscores (zBMI)
+mHealth interventions for children living with obesity are most and dietary, physical activity, and screen time behaviors across
+often evaluated using randomized controlled trials and, in some digital phenotypes.
+cases, evaluate the doseof the intervention received to provide
+a better understanding of their effects [19-24]. Dose-response Methods
+analyses are often measured in terms of total minutes or
+percentage of content examined; however, this approach does Study Design
+not provide a nuanced picture of how users may benefit from
+This study was a secondary analysis of data collected from a
+different mHealth intervention components (ie, what design
+randomized controlled trial evaluating the efficacy of the
+elements of the app may be more successful in engaging
+Aim2Be app (version 2) to improve lifestyle behaviors and
+participants and promoting health behavior change) [25,26].
+adiposity among children with overweight or obesity [25,38].
+Studies examining how intervention exposure affects behavior
+The trial was registered on ClinicalTrials.gov (NCT03651284)
+change cannot solely focus on the quantity of the intervention
+on August 29, 2018 [25]. The CONSORT-EHEALTH
+received, but must also consider how participants engage with
+(Consolidated Standards of Reporting Trials of Electronic and
+the active ingredientsof the intervention—namely, the features
+Mobile Health Applications and Online Telehealth) checklist
+that support behavior change.
+[39] is available in Multimedia Appendix 1. Data analyzed in
+mHealth interventions are particularly well-suited to examine this study were collected from March 2019 to June 2020.
+in greater detail which components of the intervention
+participants engage with through app analytics data. Recently,
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 2
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+Ethics Approval by the age- and sex-specific World Health Organization cutoffs
+[40]. After providing consent, eligible participants completed
+The evaluation protocol was approved by the Children’s and
+a web-based survey, three 24-hour dietary recalls, and received
+Women’s Research Ethics Board at the University of British
+assessment tools for height (measuring tape) weight (digital
+Columbia (H16-03090/H17-02032), the Health Research Ethics
+scale), and physical activity (Fitbit Flex 2, Fitbit Inc) to complete
+Board at the University of Alberta (Pro00076869), the Hospital
+baseline measurements. Participants completed follow-up
+for Sick Children Research Ethics Board (REB1000059362),
+assessments at the 3- and 6-month follow-ups. Families
+the Hamilton Integrated Research Ethics Board (project 4250),
+randomized to the experimental group (107/214, 50%) had
+and the Children’s Hospital of Eastern Ontario Research Ethics
+access to the app after completing baseline measures. Waitlisted
+Board (18/01E). All the participants provided web-based consent
+control families (107/214, 50%) were given access to the app
+before participating in the study.
+after completing their assessment at the 3-month follow-up.
+Data Collection Protocol This study combined data collected from baseline to 3 months
+The detailed study protocol has been published elsewhere [25]. in the intervention group, and from 3 to 6 months in the
+The participating families (N=214) were recruited from 6 weight waitlisted control group (Figure 1). Randomization was
+management clinic sites across Canada, as well as through successful, and participants’ characteristics did not differ
+Facebook. Children were eligible to participate if they were between the intervention and the waitlisted control group;
+aged 10 to 17 years and were overweight or obese, as defined however, our analyses were not based on the randomization
+group but dependent on users’engagement.
+Figure 1. CONSORT (Consolidated Standards of Reporting Trials) flow diagram depicting the study methodology and data analyzed.
+Uncertainty, Discovery, and Outcomes framework [45]. The
+The Aim2Be Intervention
+content within different features of the app was also informed
+The theoretical foundations of the Aim2Be app have been by the Canadian 24-Hour Movement Guidelines [46] and the
+described elsewhere [25]. Briefly, the app, which was cocreated Canadian dietary guidelines in place at the time of the study
+by Ayogo Health Inc [41] and the Childhood Obesity Foundation (Canada’s Food Guide 2007) [47].
+with expert input, aimed to promote healthy lifestyle behaviors
+The Aim2Be app features fall under 3 broad domains:
+among children and their parents by targeting dietary, physical
+behavioral, gamified, and social. The behavioral domain draws
+activity, screen time, and sleep behaviors while emphasizing
+on self-regulatory strategies such as goal setting,
+healthy body image, strong self-esteem, and living green [25].
+self-monitoring, and graded tasks to facilitate behavior change
+The behavior change techniques incorporated in the app are
+by strengthening self-regulatory skills [4,8]. The gamified
+grounded in social cognitive theory [42], the Player Experience
+domain focuses on increasing participants’ enjoyment,
+and Need Satisfaction Model—an extension of the
+engagement, and motivation through various gamification
+self-determination theory [43,44]—and the Agency, Challenge,
+elements (eg, personalization, challenges, uncertainty). The
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 3
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+social domain facilitates peer support, behavior modeling, and and 3illustrate screenshots of the child and parent interventions,
+interaction with other app users or with a coach through different respectively.
+interactive features (eg, answering poll questions, viewing poll
+In addition to the parent companion app, 2 very similar versions
+results, posting on the social wall, and responding to others’
+of Aim2Be were developed for preteens (aged 10-13 years) and
+posts). Social support is also provided to children through a
+teenagers (aged 13-17 years), with 3 app features (ie, stages,
+companion app for parents, which aims to facilitate behavioral
+posting on a social wall, and responding to others’ posts)
+changes through a positive familial environment, reinforcement
+available only to teenagers. As this study combined data from
+strategies, and environmental and stimulus control. Figures 2
+both teenagers and preteens, features only available to both
+groups were included in the analyses.
+Figure 2. Screenshot of the Aim2Be app for children.
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 4
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+Figure 3. Screenshot of the Aim2Be app for parents.
+stories, which involved the number of times users read choose
+Measures
+your own adventure stories (these stories used a user-guided
+Use of Aim2Be App Features fictional character involved in a series of decision-making
+processes); (3) quizzes, which involved short tests that the users
+App analytics (provided by Ayogo Health Inc [41]) were used
+answered, allowing them to earn digital currency if they selected
+to track the number of times children and parents used each
+the correct answer; and (4) collections, which involved digital
+Aim2Be app feature. The behavioral domain included the
+items the user purchased with digital currency within the app.
+following five features: (1) aims, indicating the number of
+The parent app integrated only quick wins as the gamified
+high-level goals chosen by users while indicating their perceived
+domain.
+importance and potential obstacles; (2) tasks, indicating the
+number of activities users completed to accomplish their aims; The social domain included the following four features: (1)
+(3) check-ins, indicating the number of times users answer poll, which involved the number of 2-choice poll
+self-monitored their progress regarding specific health behaviors, questions from the social poll responded to by the users, with
+with short recommendations on how to improve their behaviors; feedback on the percentage of users who selected each option;
+(4) articles read, indicating the number of articles providing (2) digital coach, which involved the number of chat sessions
+educational content read by the user; and (5) articles reflected between the user and a digital coach with preprogrammed
+on, indicating the number of written responses provided by the prompts, questions, and answers; (3) live coach, which involved
+user after reading an article. the number of one-on-one messages the user sent to a live
+trained health coach; and (4) posts, which involved the number
+The gamified domain included the following four features: (1)
+of times the user posted a message on a social wall, sharing
+quick wins, which involved simple tasks users completed to
+thoughts, feelings, or experiences with others. By design, the
+engage in a healthy behavior or explore a new feature of the
+live coach feature, analyzed as part of the social domain, was
+app, and which allowed them to earn digital currency; (2)
+not made available to participants randomized to the waitlisted
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 5
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+control group; therefore, data for these participants were missing engaging in vigorous and moderate physical activity over the
+at random. In addition, only teens (119/214, 55.6%) had access past 7 days. The average daily time was calculated for sitting,
+to the posting feature. Consequently, this feature was not walking, and moderate and vigorous physical activity.
+analyzed in the children’s sample as the missing data were
+Screen Time
+age-related.
+Children’s and parents’screen time was evaluated with 2 items
+Children’s zBMI adapted from the Sedentary Behavior Questionnaire for adults
+Parents were mailed a digital scale (Active Era) and a measuring (intraclass correlation coefficient ranged from 0.51 to 0.93 [57]).
+tape (HDX Corp) with instructions (using the Centers for Children and parents reported the time (minutes) spent watching
+Disease Control and Prevention home protocol [48]) to television; playing computer or video games; using a computer,
+accurately measure their child’s height and weight at home. tablet, or mobile device outside of school or paid work; and
+This procedure has been validated to assess children’s height talking or texting on a cell phone during their most recent week
+and weight at home [49]. Children’s height and weight were and weekend day. The average daily sedentary time was then
+then used to compute zBMI using the World Health Organization calculated.
+Stata macro [40], where being overweight in childhood was
+Statistical Approach
+defined as zBMI >1 SD and ≤2 SD, and obesity was defined as
+zBMI >2 SD. Latent class analysis (LCA) in MPlus version 8 (Muthen and
+Muthen [58]) was used to separately identify digital phenotypes
+Health Behaviors among children and parents. There is no fixed minimum sample
+size for LCA as it depends on multiple factors (eg, number and
+Dietary Behaviors
+quality of indicators, class differentiation, and relative samples
+Children’s dietary behaviors were evaluated with the Waterloo
+in each class) [59]. Of relevance, previous Monte Carlo
+Eating Behavior Questionnaire, a 24-hour web-based dietary
+simulations [60] have found that an LCA with 100 participants
+recall (intraclass correlation coefficients ranging from 0.39 to
+can result in reliable solutions when conducted with robust
+0.71 for energy, carbohydrates, sugar, fiber, and fats, validated
+indicators, providing support for conducting an LCA with 214
+against dietitian interviews) [50]. Children reported all foods
+participants. The LCA identified digital phenotypes based on
+and beverages consumed on the previous day. Standardized
+different use patterns for the various behavioral, social, and
+food group servings using the 2007 Canada’s Food Guide
+gamified app features, similar to a recent study profiling child
+classification framework were used to quantify the amount of
+users using an earlier version of Aim2Be [33]. As the
+food consumed (eg, number of servings of vegetables and fruits)
+distribution of use for each feature was skewed, an individual’s
+[47]. A composite index of dietary quality (the Canadian Healthy
+use of each app feature was ranked as no use(a participant never
+Eating Index [51]) was used as a measure of overall adherence
+used a given app feature), and among the remaining participants,
+to the 2007 Canada’s Food Guide. The index ranges from 0 to
+low use (a participant’s use of a feature was at or below the
+100 points, where scores <50, 50 to 80, and >80 indicate poor,
+median use), or high use (a participant’s use of a feature was
+requiring improvement, and gooddietary quality, respectively
+above the median use). The robust maximum likelihood
+[51]. Parents’dietary behaviors were evaluated using 7 items
+estimator with the expectation-maximization algorithm and
+adapted from the Canadian Community Health Surveys [52].
+2000 random starts was used. The LCA used full information
+Parents reported their own consumption of vegetables and fruits
+maximum likelihood to handle data missing at random in the
+(excluding fruit juices), 100% fruit juices, and sugar-sweetened
+live coachfeature (no other variables included in the LCA had
+beverages.
+missing data). Various fit and relative indices were used to
+Physical Activity compare different k-class solutions to determine the best number
+of classes to be retained with the LCA [59]. We first evaluated
+Children’s physical activity was evaluated using Fitbit Flex 2
+the Bayesian information criterion, sample size–adjusted
+(Fitbit Inc). Children wore the Fitbit for 7 to 14 days at baseline
+Bayesian information criterion, Akaike information criterion,
+and at 3 and 6 months, and their daily step count was obtained
+consistent Akaike information criterion, and approximate weight
+by our team using Fitabase, a web-based platform designed for
+of evidence. For these indices, both a lower value and a
+research using Fitbits [53]. Furthermore, we computed the
+meaningful decrease after adding another class to the solution
+children’s average number of daily steps. In addition, children
+are desirable. Second, we compared neighboring solutions of k
+completed a web-based survey, which included 5 questions
+classes (eg, 3 vs 4 classes) with the relative indices of the
+from the Physical Activity Questionnaire for Older Children
+Vuong-Lo-Mendell-Rubin likelihood ratio test, bootstrap
+[54]; a 7-day recall inquiring about the amount of physical
+likelihood ratio test, and Bayes factor. For the
+activity with responses between none and more than 2 hours.
+Vuong-Lo-Mendell-Rubin and bootstrap likelihood ratio test,
+The total score of the questionnaire was significantly related to
+a significant Pvalue indicates a better fit of kclasses than with
+moderate and vigorous physical activity using accelerometers
+the previous model (k-1 classes). For the Bayes factor, higher
+(r=0.33) [55]. Parents’physical activity was evaluated using 7
+scores indicate stronger evidence supporting kclasses than those
+items from the Physical Activity Questionnaire Short Form
+supporting k+1 classes. Third, we estimated how each model
+(repeatability reliability across different countries ranged from
+was corrected by all models using the correct model probability
+0.32 to 0.88, with 75% of the correlation coefficients >0.65 and
+index, where higher values are desirable. Other indicators of
+a pooled coefficient of 0.76 [56]). Participants were asked about
+well-differentiated classes such as entropy and average posterior
+the number of days and minutes spent sitting, walking, and
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 6
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+probability were also evaluated, where desirable values were Household income ranged from <CAD $50,000 (US $37,500;
+>0.8% and >70%, respectively. Finally, the k-class solution 36/214, 16.8%) to >CAD $150,000 (US $112,500; 35/214,
+selected also considered practical and theoretical interpretability 16.4%). Approximately 30.8% (66/214) of parents reported
+and the relative sample size of each class. Although some incomes between CAD $50,000 (US $37,500) and CAD
+authors retained classes that encompassed at least 5% of the $100,000 (US $75,000), and 25.7% (55/214) reported incomes
+sample [59], the authors recognized the limitations of estimating between CAD $100,000 (US $75,000) and CAD $150,000 (US
+classes with a low relative prevalence (1%-8%). This was $112,500).
+accounted for when selecting the final solution.
+Identifying Digital Phenotypes
+Multiple multinomial logistic regression models were used to
+Table 1 summarizes the results from the LCA and Figure 4
+evaluate the associations between digital phenotypes included
+provides plots for selecting LCA indices for both the child and
+as the dependent variable and demographic factors (children’s
+parent models. Fit indices and interpretability of the classes
+and parents’ age and sex, parental educational attainment,
+supported a 4-class solution among children. By contrast, the
+marital status, household income, ethnicity, and recruitment
+parent LCA fit indices pointed to a 5- or 6-class solution;
+site) as independent variables. Parental phenotypes were also
+however, further evaluation of the potential solutions led to the
+added as predictors of children’s phenotypes.
+retention of the 5-class solution. Although 6 of the 11 indices
+Mixed-effect models evaluated changes in health behaviors and showed the 6-class solution as the best option, the relatively
+zBMI across children’s and parents’ phenotypes. One model small sample for 2 of the classes suggested an overextraction.
+was run for each outcome (children’s zBMI, children’s and Therefore, the 5-class model was retained as the final solution
+parents’ diet, physical activity, and screen time). All models for the parents. In addition, the 5-class solution made more
+included an interaction term between time and phenotype and substantive sense. Moreover, the average posterior probability
+were adjusted for children’s and parents’age and sex, parental for both child- and parent-selected models ranged between 91%
+educational attainment, marital status, household income, and 99%, indicating well-differentiated classes for the 5-class
+ethnicity, and recruitment site. Postestimation contrasts of solution. Thus, our results suggest excellent differentiation
+marginal linear predictions tested overall group differences. For between the classes.
+outcomes with borderline significance (P<.10) or significant
+Figure 5 shows children’s and parents’digital phenotypes (A
+(P<.05) overall group differences, we conducted pairwise
+and B, respectively). Figure 5A shows 4 children’s digital
+comparisons and calculated the Cohen effect size as follows:
+phenotypes (N=214): unengaged, dabblers, partially engaged,
+f2= (R2 – R2 ) / (1 – R2 ) and fully engaged. Unengaged(79/214, 36.9% of users) included
+AB A AB
+children who did not interact with most of the app features with
+Here, B is the predictor of interest (eg, interaction phenotype
+exception of check-ins. Dabblers (42/214, 19.6% of users)
+1×time), Ais the set of all other predictors (ie, demographics,
+regrouped children who did not use most behavioral features
+time, and other phenotypes), R2 is the proportion of variance of the app (eg, completing tasks and reading or reflecting on
+AB
+that Aand Btogether (ie, the full model) account for, and R2 articles) but predominantly interacted with gamified and social
+A
+features, including collections and the digital coach. Partially
+is the proportion of variance the predictors explain in a reduced
+engaged(61/214, 28.5% of users) included children who were
+model, with all fixed effects from the full model, except for the
+low users of the behavioral features, particularly regarding task
+effect of B and random effects constrained to be the same as
+completion and reading and reflecting on articles but had greater
+those from the full model. Therefore, f2represents the proportion
+use of the check-in feature. Partially engaged children had
+of variance uniquely accounted for by B[61,62].
+mixed interactions with the gamified and social features, with
+All regression analyses were performed using Stata (version greater use of the collections and the digital coach, respectively,
+15; StataCorp) [63]. The significance level was set at P<.05. but rarely read stories or completed quizzes. Fully engaged
+(32/214, 15% of users) comprised high users of most app
+Results features and included children who engaged the most with the
+active ingredients of the app (ie, the behavioral features such
+Demographic Characteristics of the Participants as setting aims and completing tasks).
+From the 214 parent-child dyads, the mean age of the children Figure 5B shows 5 parental digital phenotypes (N=214):
+was 13 (SD 2.2) years, and the sample was evenly split among unengaged, socially engaged, independently engaged, partially
+boys (104/214, 48.6%) and girls (110/214, 51.4%). engaged, and fully engaged. Unengaged (103/214, 48.1% of
+Approximately 92.5% (198/214) of the participating parents users) included parents who did not use most of the features,
+were mothers, and 71% (152/214) were married or living with with the exception of check-ins. Socially engaged (35/214,
+a partner. The mean age of parents was 44 (SD 6.2) years. Just 16.4% of users) regrouped parents who engaged with the social
+over half of the parents (120/214, 56.1%) had not completed a features of the app by creating posts on the social wall,
+university degree. Approximately 60.3% (129/214) of parents answering poll questions, and interacting with the live health
+self-identified as having a White or European descent, 16.8% coach. However, socially engaged parents had low use of the
+(36/214) reported mixed ethnicity, 5.6% (12/214) reported an behavioral and gamified features and, in particular, did not
+East or Southeast Asian descent, 4.2% (9/214) reported a South complete any tasks within the app. Independently engaged
+Asian descent, and 3.3% (7/214) reported an indigenous descent. (18/214, 8.4% of users) comprised parents who made little use
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 7
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+of the social features (the only social feature they used involved and check-ins) and social (eg, posts) features was evenly split
+direct messages with the live health coach but did not interact between low and high use. Partially engagedparents tended to
+with other parents). Instead, independently engaged parents be high users of the article feature, low users of the answer poll
+focused their attention on the behavioral features of the app and feature, and nonusers of the digital coach feature. Hence, their
+mostly set aims, read articles, and completed check-ins; overall engagement with the behavioral features tended to be
+however, they also interacted with all the behavioral features greater than with the gamified and social features. Finally, fully
+to some degree. Partially engaged (32/214, 15% of users) engagedparents (26/214, 12.1% of users) included users who
+included parents who had a mixed use of most app features, interacted extensively with all app features, except the digital
+indicating that their engagement with some behavioral (eg, aims coach feature.
+Table 1. Comparative fit indices between k-class solutions for children and parents.
+Classes in the LLb AICc BICd SABICe VLMR- BLRTgPvalue Entropyh CAICi AWEj BFk CmPl
+modela LRTfPvalue
+Children’s models
+1 −2337 4725 4809 4730 N/Am N/A N/A 4758 4771 0.0 0.0
+2 −1790 3682 3853 3692 <.001 <.001 .95 3750 3775 0.0 0.0
+3 −1644 3441 3700 3456 .10 <.001 .95 3544 3582 0.3 0.2
+4n −1563 3331 3678 3351 .008 <.001 .96 3468 3520 16.6 0.8
+5o −1521 3300 3734 3325 .76 <.001 .95 3471 3536 71.5 0.0
+Parents’models
+1 −1853 3746 3813 3749 N/A N/A N/A 3772 3782 0.0 0.0
+2 −1455 2992 3130 3000 <.001 <.001 .95 3046 3067 0.0 0.0
+3 −1357 2837 3046 2850 .09 <.001 .93 2920 2951 0.8 0.4
+4 −1298 2761 3041 2778 .90 <.001 .97 2872 2913 4.4 0.5
+5n −1256 2720 3070 2741 .12 <.001 .98 2859 2911 17.7 0.1
+6 −1229 2707 3128 2732 .79 .01 .99 2873 2936 22.7 0.0
+aModel and number of classes in the solution.
+bLL: log-likelihood.
+cAIC: Akaike information criterion.
+dBIC: Bayesian information criterion.
+eSABIC: sample size–adjusted Bayesian information criterion.
+fVLMR-LRT: Vuong-Lo-Mendell-Rubin adjusted likelihood ratio test.
+gBLRT: bootstrapped likelihood ratio test.
+hEntropy or differentiation between classes.
+iCAIC: consistent Akaike information criterion.
+jAWE: approximate weight of evidence.
+kBF: Bayes factor.
+lCmP: correct model probability.
+mN/A: not applicable.
+nSelected solution based on fit indices, relative sample sizes, and interpretability.
+oThis model was not identified, but the results are reported only for transparency purposes.
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 8
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+Figure 4. Plot of information criterion values across latent classes among children (A) and parents (B). AIC: Akaike information criterion; BIC:
+Bayesian information criterion; CAIC: consistent AIC; AWE: approximate weight of evidence; SABIC: sample size–adjusted BIC.
+Figure 5. Conditional probability plots showing child (A) and parent (B) digital phenotypes (N=214). Numbers within brackets on the y-axis indicate
+the median distribution of use for each feature (eg, the median number of tasks completed by parents over 3 months was 10 among low and high users).
+fully and partially engaged phenotypes (P=.03 and P=.047,
+Demographic Characteristics Associated With Digital
+respectively). Parents in the socially engagedphenotype were
+Phenotypes
+2 to 3 years older than parents in the fully engaged(P=.02) and
+Table 2 and Table 3 show the distribution of demographic unengaged(P=.01) phenotypes. Moreover, fully engagedparents
+factors across child and parent digital phenotypes, respectively, were more likely to be married, common law, or living with a
+with relative risk ratios and significance levels available in partner than parents belonging to the independently engaged
+Multimedia Appendix 2 (Tables S1 and S2). The results are (P=.02) and unengaged (P=.01) phenotypes, who were more
+presented separately for children and parents. Children in the likely to be single, divorced, or widowed.
+fully engaged phenotype were 1 to 1.5 years younger than
+Figure 6shows the distribution of parental digital phenotypes
+children belonging to the dabblers (P=.04) and unengaged
+across children’s phenotypes, highlighting how their phenotypes
+(P=.003) phenotypes. Furthermore, children from the dabblers
+were strongly associated. At one end of the spectrum, fully
+phenotype were more likely to be in a household with an income
+engaged children were more likely to have fully and partially
+>CAD $80,000 (US $63,771) than children belonging to the
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 9
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+engagedparents, and at the other end, unengagedchildren were more likely to have unengagedparents.
+Table 2. Demographic distribution across child digital phenotypes (N=214).
+Predictors of child digital phenotypesa Fully engaged Partially engaged Dabblers Unengaged
+Phenotype sample size, N 32 61 42 79
+Age (years), mean (SD)b 12.0 (1.8) 12.9 (2.3) 13.0 (2.4) 13.5 (2.2)
+Sex (female), n (%) 19 (59) 30 (49) 19 (45) 42 (53)
+Household income (≥CAD $80,000; US $63,771), n (%)c 17 (53) 31 (51) 29 (69) 42 (53)
+Parental education (more than a Bachelor’s degree), n (%) 15 (47) 28 (46) 18 (43) 32 (41)
+Parental marital status (married), n (%) 27 (84) 46 (75) 32 (76) 58 (73)
+Race or ethnicity (White or European), n (%) 22 (69) 38 (62) 28 (67) 41 (52)
+aPredictors’reference groups are: male, household income <CAD $80,000 (US $63,771), parental educational attainment lower than a bachelor’s degree,
+single parents, and people who did not self-identify as having a White or European descent.
+bThe age of fully engagedchildren significantly differs from both dabblersand unengagedchildren’s age.
+cThe household income of both fully engagedand partially engagedchildren significantly differs from the household income among dabblers.
+Table 3. Demographic distribution across parent digital phenotypes (N=214).
+Predictors of parent digital phenotypesa Fully engaged Partially engaged Independently engaged Socially engaged Unengaged
+Phenotype sample size, N 26 32 18 35 103
+Age (years), mean (SD)b 44.5 (7.1) 42.2 (5.6) 44.5 (7.1) 46.7 (6.6) 43.5 (6.0)
+Sex (female), n (%) 26 (100) 32 (100) 17 (94.4) 31 (88.6) 92 (89.3)
+Household income (≥CAD $80,000; US 16 (61.5) 20 (62.5) 9 (50) 17 (48.6) 57 (55.3)
+$63,771), n (%)
+Parental education (more than a Bache- 9 (34.6) 20 (62.5) 9 (50) 14 (40) 41 (39.8)
+lor’s degree), n (%)
+Parental marital status (married, common 25 (96.2) 27 (84.4) 12 (66.7) 26 (74.3) 73 (70.9)
+law, or living with a partner), n (%)c
+Race or ethnicity (White or European), 20 (76.9) 19 (59.3) 11 (61.1) 20 (57.1) 59 (57.3)
+n (%)
+Recruitment through a clinical setting, n 9 (34.6) 14 (43.8) 8 (44.4) 17 (48.6) 47 (45.6)
+(%)
+aPredictors’reference groups are: male, household income <CAD $80,000 (US $63,771), parental educational attainment lower than a bachelor’s degree,
+single parents, people who did not self-identify as having a White or European descent, and recruitment through Facebook.
+bThe age of both fully engagedand unengagedparents significantly differs from the age of socially engagedparents.
+cThe marital status of fully engagedparents significantly differs from both independently engagedand unengagedparents’marital status.
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 10
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+Figure 6. Associations between children’s and parents’digital phenotypes (N=214). Vertical bars represent the proportion of parents with each phenotype
+with a given child phenotype. Within groups that share the same number and color, groups that do not share the same letter are significantly different
+from one another and are compared with the reference group (ie, unengaged users).
+partially engaged phenotype decreased their intake of sugary
+Changes in Health Outcomes Across Digital
+beverages compared with unengaged children who did not
+Phenotypes
+(P=.01; f2=0.02). In this case, fully engaged children did not
+Table 4summarizes the 3-month changes in zBMI, diet, physical
+differ significantly from unengagedchildren; however, as shown
+activity, and screen time across children’s and parents’digital
+in Figure 7C, children’s intake of sugary beverages in the fully
+phenotypes, with statistically significant (P<.05) or borderline
+engaged group trended downward, whereas unengaged
+significant (P<.10) comparisons shown in Figure 7, where
+children’s intake trended upward (P=.12).
+panels A to C show child outcomes across child phenotypes,
+and panels D and E show child outcomes across parent Differential changes in outcomes among children were also
+phenotypes. observed across the parental phenotypes (Figure 7D and 7E).
+Multiple group comparisons showed borderline significant
+Multiple group comparisons showed that changes in the total
+changes in children’s zBMI and total daily energy intake across
+sugar intake of children differed across phenotypes (P=.01;
+parental phenotypes (P=.06 and P=.08, respectively), which
+Figure 7A-C). Children belonging to the fully engaged(P=.01;
+became significant in individual pairwise comparisons.
+f2=0.04) or partially engaged (P=.004; f2=0.05) phenotypes Specifically, children whose parents were fully engaged
+reduced their total sugar intake over 3 months compared with significantly decreased their zBMI (P=.01; f2=0.05) compared
+children in the unengaged phenotype (reference group), who
+with children with unengagedparents (reference group) whose
+increased their total sugar intake over time. Regarding children’s
+zBMI slightly increased. Similarly, children whose parents
+total daily energy intake and energy intake from sugary
+belonged to the independently engaged phenotype decreased
+beverages, we found borderline differences (P=.07 and P=.09)
+their daily caloric intake (P=.02; f2=0.03) compared with
+that became significant in individual pairwise comparisons.
+children with unengaged parents whose daily caloric intake
+Children from the fully engaged (P=.03; f2=0.01), partially
+increased over 3 months. Figure 7E also shows trends of
+engaged (P=.04; f2=0.03), and dabblers (P=.03; f2=0.00) decreased caloric intake among children with fullyand partially
+phenotypes decreased their total energy intake over 3 months engaged parents compared with children with unengaged
+compared with the unengaged children who increased their parents; however, these trends were not statistically significant
+daily energy intake over time. Finally, children from the (P=.11 and P=.07, respectively).
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 11
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+Table 4. Changes in children’s and parents’health outcomes across digital phenotypes (N=214).
+Participants and health outcomes Child phenotypes Parent phenotypes
+Chi-square (df) Pvalue Chi-square (df) Pvalue
+Children
+BMI zscores 0.5 (3) .93 9.1 (4)a .06a
+Total energy, daily (kcal per day) 7.2 (3)a .07a 8.2 (4)a .08a
+Healthy Eating Index (range 0-100 points) 0.3 (3) .96 1.9 (4) .76
+Fruits and vegetables (daily servings) 0.2 (3) .98 3.6 (4) .47
+Saturated and trans fat (g per day) 5.4 (3) .15 5.5 (4) .24
+Total fiber (g per day) 1.5 (3) .68 1.5 (4) .84
+Total sugar (g per day) 11.8 (3)a .01a 5.4 (4) .25
+Sugary beverages (kcal per day) 6.7 (3)a .09a 5.5 (4) .24
+Total physical activity (minutes per week) 2.5 (3) .47 0.6 (4) .96
+Fitbit (steps per day) 2.1 (3) .55 3.2 (4) .52
+Screen time (minutes per day) 4.9 (3) .18 2.3 (4) .69
+Parents
+Daily frequency of sugary beverages (times per day) N/Ab N/A 1.2 (4) .88
+Daily frequency of fruit juice (times per day) N/A N/A 6.5 (4) .16
+Fruit and vegetables (servings per day) N/A N/A 2.4 (4) .67
+Walking (minutes per day) N/A N/A 4.0 (4) .41
+Moderate and vigorous physical activity (minutes per day) N/A N/A 2.0 (4) .75
+Screen time (minutes per week) N/A N/A 7.1 (4) .13
+aIndicate significant (P<.05) or borderline significant (P<.10) interactions (time×digital phenotype) for which pairwise comparisons between phenotypes
+were further explored.
+bN/A: not applicable.
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 12
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+Figure 7. Changes in children’s health outcomes across children’s (A-C) and parents’(D and E) digital phenotypes (N=214). Comparison of each
+phenotype versus unengaged phenotype (reference group). Pvalue indicates significance level and f2 indicates Cohen effect size.
+to compare our findings with those of previous studies.
+Discussion
+However, our results are similar to a recently published study
+profiling children’s (but not parents’) engagement with an older
+Principal Findings
+version of Aim2Be [33], where the 4 child profiles that emerged
+This is the first digital phenotyping study of an mHealth
+were similar, although our study examined 6 additional app
+intervention targeting health behavior changes among children
+features. Interestingly, the results previously observed in the
+with overweight or obesity and their parents. We evaluated user
+prevention context [33] were replicated in our study using a
+typologies based on how children and parents interacted with
+clinical sample of children. Importantly, users with distinct
+different features of the Aim2Be app. We found 4 child
+patterns of engagement obtained different health benefits
+(unengaged, dabblers, partially engaged, and fully engaged)
+depending on whether they interacted with the active ingredients
+and 5 parent (unengaged, socially, independent, partially
+of the app. When lifestyle behavior modification interventions
+engaged, and fully engaged) phenotypes, which illustrate the
+required in-person attendance, dose-response studies identified
+ways in which participants used the behavioral, gamified, and
+a minimum of 26 hours of contact for the intervention to
+social features of the Aim2Be app. As expected, based on
+improve children’s outcomes [4]. However, our digital
+Aim2Be’s conceptual framework [25], our results demonstrated
+phenotype analyses illustrate that new approaches are needed
+that specific patterns of use supported behavior change, whereas
+to conduct dose-response analyses in the context of mHealth
+others did not, meaning that greater engagement with the active
+interventions, especially when users have the freedom to select
+ingredients of the app improved children’s dietary and weight
+which app features they engage with. As users interact with the
+outcomes.
+Aim2Be app quite differently, this variability must be accounted
+Comparison With Prior Work for when assessing whether the intervention can influence the
+mediators and outcomes targeted by the app.
+Given the scarcity of research on the digital phenotypes of
+mHealth users in the context of childhood obesity, it is difficult
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 13
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+In this study, we found that fully engagedchildren with Aim2Be research found that parents of young children decreased their
+(eg, set goals, completed tasks, and read articles) experienced use of mHealth apps when they had limited time or only used
+more desirable behavior changes than unengaged users. the app to find specific information of interest [67]. This could
+Specifically, children who engaged more fully with the app explain why independently engaged parents did not use the
+decreased their intake of total daily calories, total sugars, and gamified or social domains but used the domain exclusively
+sugary beverages. Our findings align with existing research focused on behavioral change and why their children decreased
+[22,33] suggesting that mHealth interventions have the potential their energy intake over time.
+to improve children’s dietary behaviors. Furthermore, in
+Limitations and Strengths
+exploratory analyses examining the aims that were most often
+set and completed among Aim2Be users (data not shown), we This study had several limitations and strengths. First, our
+found that “Drop sugary drinks” was the most common aim sample was relatively small and not powered to detect significant
+chosen by children, which validates our findings related to lower changes across multiple digital phenotypes in these secondary
+total sugar and energy from sugary drinks among fully and analyses. This could have limited our ability to detect clinically
+partially engaged children. These results highlight the meaningful changes in health outcomes, although some changes
+importance of increasing engagement with the app’s active were observed. In addition, overall adherence to the app was
+ingredients, namely, setting specific goals and completing tasks low, which limited our ability to detect more phenotypes and
+related to those goals to promote health behavior change among perhaps to observe some between-group changes. Moreover,
+children. our study included a clinical sample (children with overweight
+or obesity); thus, our findings are limited to this population.
+In this study, fully engaged children were more likely to be
+Nevertheless, we used a detailed dietary assessment (24-hour
+younger and have fully or partially engaged parents. These
+dietary recalls), both self-reported and objective measures of
+associations could indicate that the app was more appealing to
+physical activity, and objective measures of app usability
+younger children, as shown by other research [34], or that
+through app analytics. Finally, we used a novel approach to
+parents dedicated more attention to their children when they
+examine intervention efficacy, which showed positive effects
+were younger than when they were older. In addition, younger
+that are not observed [38] using more traditional analysis.
+children might be more easily influenced by their parents, which
+may explain their use of the Aim2Be app. These findings are Future Directions
+aligned with previous studies reporting that parental Overall, 3 key messages from our findings point to future
+self-monitoring (a behavioral strategy) and adherence to eHealth directions in mHealth research. First, even in the mHealth
+interventions were significant predictors of adolescents’ context, parental engagement matters as it can increase
+self-monitoring and adherence [33,64]. children’s adherence to a lifestyle intervention and provide the
+household environment that supports behavior change. Thus,
+We also found that children whose parents were fullyor partially
+whether a lifestyle intervention is delivered in person or on the
+engagedwith the app’s behavioral features decreased their zBMI
+web, parents should be involved as they are active agents of
+and total daily energy intake more than children whose parents
+change. Second, dose-response analyses should assess how (and
+only engaged with the social features or who did not engage
+not only how much) the app is being used by the participants,
+with the app at all. Our findings are consistent with a qualitative
+as users’full engagement with the active ingredientsof the app
+study [65] showing that participation as a familyis one of the
+seems to be a critical factor for the success of mHealth
+main factors identified by both children and parents to facilitate
+interventions. Finally, as participants’engagement with specific
+behavior change. Indeed, current guidelines [4,15,66] for the
+features of an app is key to promoting behavior change, future
+treatment of childhood obesity include a family-based approach.
+research should examine how we design program components
+Taken together, our findings reinforce the critical role that
+that ensure users interact with the active ingredients of the
+parents play in lifestyle interventions to support their children’s
+mHealth intervention.
+adherence and improvement of health outcomes, even in the
+mHealth context. Conclusions
+This study also revealed that family structure was associated This study showed that distinct patterns of use exist among both
+with parental phenotypes. Fewer single-parent households parents and children who used a family-based lifestyle mHealth
+belonged to the fully and partially engaged phenotypes than app, namely, Aim2Be. Identifying who uses mHealth apps and
+parents who lived with a partner or were married, which may how can help us understand and develop more tailored
+reflect that more independent, time-scarce (and therefore interventions to support various users in a health behavior
+task-oriented) parents [67]. Interestingly, single-parent change process. Our findings point to the importance of
+households were also likely to belong to the independently optimizing users’full engagement with the active ingredients
+engaged phenotype (ie, parents who only engaged with the of the app as a critical factor for the success of mHealth
+behavioral app features such as aims and tasks), and children interventions and highlight the need for further research to
+whose parents belonged to this phenotype reduced more of their understand program design elements that can influence
+total daily energy than other phenotypes. In fact, previous participant engagement.
+Acknowledgments
+The authors would like to thank the families who participated in the study.
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 14
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+The Childhood Obesity Foundation received funding, in part, from the Public Health Agency of Canada, with matched financial
+and in-kind funds from Ayogo Health Inc (Aim2Be developer), Merck Canada Inc, Heart and Stroke, Obesity Canada, Diabetes
+Canada, Dietitians of Canada, Canadian Society for Exercise Physiology, Craving Change, David Suzuki Foundation, and Pacific
+Blue Cross Foundation. Supplemental funding was obtained from a Team Grant in Bariatric Care (Team to Address Bariatric
+Care in Canadian Children—Team ABC3) from the Canadian Institutes of Health Research (Institute of Nutrition, Metabolism,
+and Diabetes); from Alberta Health Services, Alberta Innovates, Obesity Canada, the Ontario Ministry of Health and Long-Term
+Care, and the Women and Children’s Health Research Institute.
+Data Availability
+LCM should be contacted at the BC Children’s Hospital Research Institute and School of Population and Public Health University
+of British Columbia (lmasse@bcchr.ubc.ca) regarding access to data and materials.
+Authors' Contributions
+LCM, J Hamilton, J Ho, AB, KMM, and GDCB designed the Aim2Be randomized controlled trial with LCM as the lead of the
+randomized controlled trial. LCM oversaw the data collection, and EJB managed part of the data collection. OD-JG and LCM
+conceptualized the paper with input from CNT-L. CNT-L cleaned the data set, and LCM reviewed the cleaning code with help
+from OD-JG. OD-JG performed the analyses. OD-JG, CNT-L, EJB, and LCM provided input in the interpretation of the data.
+OD-JG drafted the manuscript with help from CNT-L, LCM, and EJB. All authors critically reviewed a draft of the manuscript.
+All authors read and approved the final manuscript.
+Conflicts of Interest
+LCM received salary support to conduct this research, which was provided by the BC Children’s Hospital Research Institute.
+OD-JG received a postdoctoral salary from the University of British Columbia and received PhD scholarships from the National
+Council of Science and Technology (Conacyt) of Mexico and from Universidad Iberoamericana of Mexico City. CNT-L received
+a postdoctoral fellowship from the Canadian Institutes of Health Research. EJB received a postdoctoral fellowship from the BC
+Children’s Hospital Research Institute. GDCB received funding from an Alberta Health Services Chair in Obesity Research.
+Multimedia Appendix 1
+CONSORT-EHEALTH (Consolidated Standards of Reporting Trials of Electronic and Mobile Health Applications and Online
+Telehealth) checklist.
+[PDF File (Adobe PDF File), 1375 KB-Multimedia Appendix 1]
+Multimedia Appendix 2
+Relative risk ratios of the predictors of the digital phenotypes.
+[DOCX File , 22 KB-Multimedia Appendix 2]
+References
+1. Roberts KC, Shields M, de Groh M, Aziz A, Gilbert J. Overweight and obesity in children and adolescents: results from
+the 2009 to 2011 Canadian Health Measures Survey. Health Rep 2012 Sep;23(3):37-41 [FREE Full text] [Medline: 23061263]
+2. Baños RM, Oliver E, Navarro J, Vara MD, Cebolla A, Lurbe E, et al. Efficacy of a cognitive and behavioral treatment for
+childhood obesity supported by the ETIOBE web platform. Psychol Health Med 2019 Jul 16;24(6):703-713. [doi:
+10.1080/13548506.2019.1566622] [Medline: 30648879]
+3. Kang NR, Kwack YS. An update on mental health problems and cognitive behavioral therapy in pediatric obesity. Pediatr
+Gastroenterol Hepatol Nutr 2020 Jan;23(1):15-25 [FREE Full text] [doi: 10.5223/pghn.2020.23.1.15] [Medline: 31988872]
+4. Guideline Development Panel for Treatment of Obesity‚ American Psychological Association. Summary of the clinical
+practice guideline for multicomponent behavioral treatment of obesity and overweight in children and adolescents. Am
+Psychol 2020;75(2):178-188 [FREE Full text] [doi: 10.1037/amp0000530] [Medline: 32052993]
+5. Kang Sim DE, Strong DR, Manzano MA, Rhee KE, Boutelle KN. Evaluation of dyadic changes of parent-child weight
+loss patterns during a family-based behavioral treatment for obesity. Pediatr Obes 2020 Jun;15(6):e12622. [doi:
+10.1111/ijpo.12622] [Medline: 32048808]
+6. Comșa L, David O, David D. Outcomes and mechanisms of change in cognitive-behavioral interventions for weight loss:
+a meta-analysis of randomized clinical trials. Behav Res Ther 2020 Jun 02;132:103654. [doi: 10.1016/j.brat.2020.103654]
+[Medline: 32683134]
+7. Vignolo M, Rossi F, Bardazza G, Pistorio A, Parodi A, Spigno S, et al. Five-year follow-up of a cognitive-behavioural
+lifestyle multidisciplinary programme for childhood obesity outpatient treatment. Eur J Clin Nutr 2008 Sep;62(9):1047-1057.
+[doi: 10.1038/sj.ejcn.1602819] [Medline: 17554247]
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 15
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+8. Luzier J, Berlin K, Weeks J. Behavioral treatment of pediatric obesity: review and future directions. Children's Health Care
+2010 Oct;39(4):312-334. [doi: 10.1080/02739615.2010.516202]
+9. Miri SF, Javadi M, Lin C, Griffiths MD, Björk M, Pakpour AH. Effectiveness of cognitive-behavioral therapy on nutrition
+improvement and weight of overweight and obese adolescents: a randomized controlled trial. Diabetes Metab Syndr
+2019;13(3):2190-2197. [doi: 10.1016/j.dsx.2019.05.010] [Medline: 31235156]
+10. Partridge SR, Raeside R, Singleton A, Hyun K, Redfern J. Effectiveness of text message interventions for weight management
+in adolescents: systematic review. JMIR Mhealth Uhealth 2020 May 26;8(5):e15849 [FREE Full text] [doi: 10.2196/15849]
+[Medline: 32348264]
+11. Hammersley ML, Jones RA, Okely AD. Parent-focused childhood and adolescent overweight and obesity eHealth
+interventions: a systematic review and meta-analysis. J Med Internet Res 2016 Jul 21;18(7):e203 [FREE Full text] [doi:
+10.2196/jmir.5893] [Medline: 27443862]
+12. Turner T, Spruijt-Metz D, Wen CK, Hingle MD. Prevention and treatment of pediatric obesity using mobile and wireless
+technologies: a systematic review. Pediatr Obes 2015 Dec;10(6):403-409 [FREE Full text] [doi: 10.1111/ijpo.12002]
+[Medline: 25641770]
+13. Tully L, Burls A, Sorensen J, El-Moslemany R, O'Malley G. Mobile health for pediatric weight management: systematic
+scoping review. JMIR Mhealth Uhealth 2020 Jun 03;8(6):e16214 [FREE Full text] [doi: 10.2196/16214] [Medline: 32490849]
+14. Badawy SM, Kuhns LM. Texting and mobile phone app interventions for improving adherence to preventive behavior in
+adolescents: a systematic review. JMIR Mhealth Uhealth 2017 Apr 19;5(4):e50 [FREE Full text] [doi: 10.2196/mhealth.6837]
+[Medline: 28428157]
+15. Tate EB, Spruijt-Metz D, O'Reilly G, Jordan-Marsh M, Gotsis M, Pentz MA, et al. mHealth approaches to child obesity
+prevention: successes, unique challenges, and next directions. Transl Behav Med 2013 Dec;3(4):406-415 [FREE Full text]
+[doi: 10.1007/s13142-013-0222-3] [Medline: 24294329]
+16. Fedele DA, Cushing CC, Fritz A, Amaro CM, Ortega A. Mobile health interventions for improving health outcomes in
+youth: a meta-analysis. JAMA Pediatr 2017 May 01;171(5):461-469 [FREE Full text] [doi: 10.1001/jamapediatrics.2017.0042]
+[Medline: 28319239]
+17. Duan Y, Shang B, Liang W, Du G, Yang M, Rhodes RE. Effects of eHealth-based multiple health behavior change
+interventions on physical activity, healthy diet, and weight in people with noncommunicable diseases: systematic review
+and meta-analysis. J Med Internet Res 2021 Feb 22;23(2):e23786 [FREE Full text] [doi: 10.2196/23786] [Medline: 33616534]
+18. Wang Y, Xue H, Huang Y, Huang L, Zhang D. A systematic review of application and effectiveness of mHealth interventions
+for obesity and diabetes treatment and self-management. Adv Nutr 2017 May;8(3):449-462 [FREE Full text] [doi:
+10.3945/an.116.014100] [Medline: 28507010]
+19. Partridge SR, McGeechan K, Hebden L, Balestracci K, Wong AT, Denney-Wilson E, et al. Effectiveness of a mHealth
+Lifestyle Program With Telephone Support (TXT2BFiT) to prevent unhealthy weight gain in young adults: randomized
+controlled trial. JMIR Mhealth Uhealth 2015 Jun 15;3(2):e66 [FREE Full text] [doi: 10.2196/mhealth.4530] [Medline:
+26076688]
+20. Ek A, Delisle Nyström C, Chirita-Emandi A, Tur JA, Nordin K, Bouzas C, et al. A randomized controlled trial for overweight
+and obesity in preschoolers: the More and Less Europe study - an intervention within the STOP project. BMC Public Health
+2019 Jul 15;19(1):945 [FREE Full text] [doi: 10.1186/s12889-019-7161-y] [Medline: 31307412]
+21. Delisle Nyström C, Sandin S, Henriksson P, Henriksson H, Maddison R, Löf M. A 12-month follow-up of a mobile-based
+(mHealth) obesity prevention intervention in pre-school children: the MINISTOP randomized controlled trial. BMC Public
+Health 2018 May 24;18(1):658 [FREE Full text] [doi: 10.1186/s12889-018-5569-4] [Medline: 29793467]
+22. Nollen NL, Mayo MS, Carlson SE, Rapoff MA, Goggin KJ, Ellerbeck EF. Mobile technology for obesity prevention: a
+randomized pilot study in racial- and ethnic-minority girls. Am J Prev Med 2014 Apr;46(4):404-408 [FREE Full text] [doi:
+10.1016/j.amepre.2013.12.011] [Medline: 24650843]
+23. Partridge SR, Allman-Farinelli M, McGeechan K, Balestracci K, Wong AT, Hebden L, et al. Process evaluation of
+TXT2BFiT: a multi-component mHealth randomised controlled trial to prevent weight gain in young adults. Int J Behav
+Nutr Phys Act 2016 Jan 19;13:7 [FREE Full text] [doi: 10.1186/s12966-016-0329-2] [Medline: 26785637]
+24. Tripicchio GL, Ammerman AS, Neshteruk C, Faith MS, Dean K, Befort C, et al. Technology components as adjuncts to
+family-based pediatric obesity treatment in low-income minority youth. Child Obes 2017 Dec;13(6):433-442 [FREE Full
+text] [doi: 10.1089/chi.2017.0021] [Medline: 28727927]
+25. Mâsse LC, Vlaar J, Macdonald J, Bradbury J, Warshawski T, Buckler E, et al. Aim2Be mHealth intervention for children
+with overweight and obesity: study protocol for a randomized controlled trial. Trials 2020 Feb 03;21(1):132 [FREE Full
+text] [doi: 10.1186/s13063-020-4080-2] [Medline: 32014057]
+26. Kim Y, Oh B, Shin H. Effect of mHealth with offline antiobesity treatment in a community-based weight management
+program: cross-sectional study. JMIR Mhealth Uhealth 2020 Jan 21;8(1):e13273 [FREE Full text] [doi: 10.2196/13273]
+[Medline: 31961335]
+27. Nilsen W, Kumar S, Shar A, Varoquiers C, Wiley T, Riley WT, et al. Advancing the science of mHealth. J Health Commun
+2012;17 Suppl 1:5-10. [doi: 10.1080/10810730.2012.677394] [Medline: 22548593]
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 16
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+28. Jain SH, Powers BW, Hawkins JB, Brownstein JS. The digital phenotype. Nat Biotechnol 2015 May;33(5):462-463. [doi:
+10.1038/nbt.3223] [Medline: 25965751]
+29. Radhakrishnan K, Kim MT, Burgermaster M, Brown RA, Xie B, Bray MS, et al. The potential of digital phenotyping to
+advance the contributions of mobile health to self-management science. Nurs Outlook 2020;68(5):548-559. [doi:
+10.1016/j.outlook.2020.03.007] [Medline: 32402392]
+30. Yang Q, Hatch D, Crowley MJ, Lewinski AA, Vaughn J, Steinberg D, et al. Digital phenotyping self-monitoring behaviors
+for individuals with type 2 diabetes mellitus: observational study using latent class growth analysis. JMIR Mhealth Uhealth
+2020 Jun 11;8(6):e17730 [FREE Full text] [doi: 10.2196/17730] [Medline: 32525492]
+31. Teo J, Davila S, Yang C, Hii A, Pua C, Yap J, et al. Digital phenotyping by consumer wearables identifies sleep-associated
+markers of cardiovascular disease risk and biological aging. Commun Biol 2019;2:361 [FREE Full text] [doi:
+10.1038/s42003-019-0605-1] [Medline: 31602410]
+32. Ebner-Priemer U, Mühlbauer E, Neubauer A, Hill H, Beier F, Santangelo P, et al. Digital phenotyping: towards replicable
+findings with comprehensive assessments and integrative models in bipolar disorders. Int J Bipolar Disord 2020 Nov
+17;8(1):35 [FREE Full text] [doi: 10.1186/s40345-020-00210-4] [Medline: 33211262]
+33. Lin Y, Mâsse LC. A look at engagement profiles and behavior change: a profile analysis examining engagement with the
+Aim2Be lifestyle behavior modification app for teens and their families. Prev Med Rep 2021 Dec;24:101565 [FREE Full
+text] [doi: 10.1016/j.pmedr.2021.101565] [Medline: 34976631]
+34. Mâsse LC, Watts AW, Barr SI, Tu AW, Panagiotopoulos C, Geller J, et al. Individual and household predictors of adolescents'
+adherence to a web-based intervention. Ann Behav Med 2015 Jun;49(3):371-383. [doi: 10.1007/s12160-014-9658-z]
+[Medline: 25270826]
+35. Ernsting C, Dombrowski SU, Oedekoven M, O Sullivan JL, Kanzler M, Kuhlmey A, et al. Using smartphones and health
+apps to change and manage health behaviors: a population-based survey. J Med Internet Res 2017 Apr 05;19(4):e101 [FREE
+Full text] [doi: 10.2196/jmir.6838] [Medline: 28381394]
+36. Smahel D, Elavsky S, Machackova H. Functions of mHealth applications: a user's perspective. Health Informatics J 2019
+Sep 10;25(3):1065-1075 [FREE Full text] [doi: 10.1177/1460458217740725] [Medline: 29121831]
+37. Chai LK, Collins CE, May C, Ashman A, Holder C, Brown LJ, et al. Feasibility and efficacy of a web-based family telehealth
+nutrition intervention to improve child weight status and dietary intake: a pilot randomised controlled trial. J Telemed
+Telecare 2021 Apr;27(3):146-158. [doi: 10.1177/1357633X19865855] [Medline: 31364474]
+38. De-Jongh González O, Tugault-Lafleur C, Hamilton J, Ho J, Buchholz A, Morrison K, et al. Efficacy of the Aim2Be
+mHealth intervention for children with overweight and obesity: a randomized controlled trial. In: Proceedings of the Society
+of Behavioral Medicine (SBM) 42nd Annual Meeting. 2021 Presented at: Society of Behavioral Medicine (SBM) 42nd
+Annual Meeting; Apr 12-16, 2021; Virtual URL: https://doi.org/10.1093/abm/kaab020[doi: 10.1093/abm/kaab020]
+39. Eysenbach G, CONSORT-EHEALTH Group. CONSORT-EHEALTH: improving and standardizing evaluation reports of
+Web-based and mobile health interventions. J Med Internet Res 2011 Dec 31;13(4):e126 [FREE Full text] [doi:
+10.2196/jmir.1923] [Medline: 22209829]
+40. de Onis M, Onyango AW, Borghi E, Siyam A, Nishida C, Siekmann J. Development of a WHO growth reference for
+school-aged children and adolescents. Bull World Health Organ 2007 Sep;85(9):660-667 [FREE Full text] [doi:
+10.2471/blt.07.043497] [Medline: 18026621]
+41. Aim2Be homepage. Aim2Be. URL: https://www.aim2be.ca/[accessed 2021-10-26]
+42. Bandura A. Health promotion by social cognitive means. Health Educ Behav 2004 Apr;31(2):143-164. [doi:
+10.1177/1090198104263660] [Medline: 15090118]
+43. Deterding S. The lens of intrinsic skill atoms: a method for gameful design. Human Comput Interact 2015 May
+15;30(3-4):294-335. [doi: 10.1080/07370024.2014.993471]
+44. Ryan R, Rigby C, Przybylski A. The motivational pull of video games: a self-determination theory approach. Motiv Emot
+2006 Nov 29;30(4):344-360 [FREE Full text] [doi: 10.1007/s11031-006-9051-8]
+45. Designing digital tools for patient engagement. Ayogo. URL: https://ayogo.com/wp-content/uploads/2018/[accessed
+2021-08-26]
+46. Tremblay MS, Carson V, Chaput J, Connor Gorber S, Dinh T, Duggan M, et al. Canadian 24-hour movement guidelines
+for children and youth: an integration of physical activity, sedentary behaviour, and sleep. Appl Physiol Nutr Metab 2016
+Jun;41(6 Suppl 3):S311-S327 [FREE Full text] [doi: 10.1139/apnm-2016-0151] [Medline: 27306437]
+47. Canada's Food Guide. Government of Canada. URL: https://food-guide.canada.ca/en/[accessed 2021-11-23]
+48. Measuring children’s height and weight accurately at home. Centers for Disease Control and Prevention. URL: https://www.
+cdc.gov/healthyweight/assessing/bmi/childrens_bmi/measuring_children.html[accessed 2021-08-23]
+49. Sarkkola C, Rounge TB, Simola-Ström S, von Kraemer S, Roos E, Weiderpass E. Validity of home-measured height,
+weight and waist circumference among adolescents. Eur J Public Health 2016 Dec;26(6):975-977. [doi:
+10.1093/eurpub/ckw133] [Medline: 27578829]
+50. Hanning RM, Royall D, Toews JE, Blashill L, Wegener J, Driezen P. Web-based Food Behaviour Questionnaire: validation
+with grades six to eight students. Can J Diet Pract Res 2009;70(4):172-178. [doi: 10.3148/70.4.2009.172] [Medline:
+19958572]
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 17
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+51. Garriguet D. Diet quality in Canada. Health Rep 2009 Sep;20(3):41-52 [FREE Full text] [Medline: 19813438]
+52. Canadian Community Health Survey (CCHS) - 2016. Statistics Canada. 2016. URL: https://www23.statcan.gc.ca/imdb/
+p3Instr.pl?Function=assembleInstr&Item_Id=260675[accessed 2022-03-29]
+53. Fitabase homepage. Fitabase. URL: https://www.fitabase.com/[accessed 2021-10-20]
+54. Kowalski K, Crocker R, Donen R. The Physical Activity Questionnaire for Older Children (PAQ-C) and Adolescents
+(PAQ-A) Manual. University of Saskatchewan. URL: https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.454.
+4555&rep=rep1&type=pdf[accessed 2021-10-20]
+55. Wang JJ, Baranowski T, Lau WP, Chen TA, Pitkethly AJ. Validation of the Physical Activity Questionnaire for older
+Children (PAQ-C) among Chinese children. Biomed Environ Sci 2016 Mar;29(3):177-186 [FREE Full text] [doi:
+10.3967/bes2016.022] [Medline: 27109128]
+56. Craig CL, Marshall AL, Sjöström M, Bauman AE, Booth ML, Ainsworth BE, et al. International physical activity
+questionnaire: 12-country reliability and validity. Med Sci Sports Exerc 2003 Aug;35(8):1381-1395. [doi:
+10.1249/01.MSS.0000078924.61453.FB] [Medline: 12900694]
+57. Rosenberg DE, Norman GJ, Wagner N, Patrick K, Calfas KJ, Sallis JF. Reliability and validity of the Sedentary Behavior
+Questionnaire (SBQ) for adults. J Phys Act Health 2010 Nov;7(6):697-705. [doi: 10.1123/jpah.7.6.697] [Medline: 21088299]
+58. Muthén LK, Muthén BO. Mplus User’s Guide. Eighth Edition. Los Angeles, CA: Muthén & Muthén; 2017.
+59. Nylund-Gibson K, Choi A. Ten frequently asked questions about latent class analysis. Translational Issues Psychol Sci
+2018 Dec;4(4):440-461 [FREE Full text] [doi: 10.1037/tps0000176]
+60. Wurpts IC, Geiser C. Is adding more indicators to a latent class analysis beneficial or detrimental? Results of a Monte-Carlo
+study. Front Psychol 2014 Aug 21;5:920 [FREE Full text] [doi: 10.3389/fpsyg.2014.00920] [Medline: 25191298]
+61. How can I estimate effect size for mixed models? UCLA. URL: https://stats.idre.ucla.edu/stata/faq/
+how-can-i-estimate-effect-size-for-mixed/[accessed 2021-06-20]
+62. Selya AS, Rose JS, Dierker LC, Hedeker D, Mermelstein RJ. A practical guide to calculating Cohen's f(2), a measure of
+local effect size, from PROC MIXED. Front Psychol 2012;3:111 [FREE Full text] [doi: 10.3389/fpsyg.2012.00111]
+[Medline: 22529829]
+63. Stata Statistical Software: Release 17. College Station, TX: StataCorp LLC; 2017.
+64. Tu A, Watts A, Chanoine J, Panagiotopoulos C, Geller J, Brant R, et al. Does parental and adolescent participation in an
+e-health lifestyle modification intervention improves weight outcomes? BMC Public Health 2017 Apr 24;17(1):352 [FREE
+Full text] [doi: 10.1186/s12889-017-4220-0] [Medline: 28438202]
+65. Watson PM, Dugdill L, Pickering K, Hargreaves J, Staniford LJ, Owen S, et al. Distinguishing factors that influence
+attendance and behaviour change in family-based treatment of childhood obesity: a qualitative study. Br J Health Psychol
+2021 Feb;26(1):67-89. [doi: 10.1111/bjhp.12456] [Medline: 32710510]
+66. Report of the commission on ending childhood obesity. World Health Organization. URL: https://www.who.int/publications/
+i/item/9789241510066[accessed 2022-03-29]
+67. Taki S, Russell CG, Lymer S, Laws R, Campbell K, Appleton J, et al. A mixed methods study to explore the effects of
+program design elements and participant characteristics on parents' engagement with an mHealth program to promote
+healthy infant feeding: the growing healthy program. Front Endocrinol (Lausanne) 2019;10:397 [FREE Full text] [doi:
+10.3389/fendo.2019.00397] [Medline: 31293515]
+Abbreviations
+CONSORT-EHEALTH: Consolidated Standards of Reporting Trials of Electronic and Mobile Health Applications
+and Online Telehealth
+LCA: latent class analysis
+mHealth: mobile health
+zBMI: BMI z score
+Edited by T Leung; submitted 30.11.21; peer-reviewed by B Shang, S Badawy; comments to author 15.02.22; revised version received
+07.04.22; accepted 23.04.22; published 22.06.22
+Please cite as:
+De-Jongh González O, Tugault-Lafleur CN, Buckler EJ, Hamilton J, Ho J, Buchholz A, Morrison KM, Ball GDC, Mâsse LC
+The Aim2Be mHealth Intervention for Children With Overweight or Obesity and Their Parents: Person-Centered Analyses to Uncover
+Digital Phenotypes
+J Med Internet Res 2022;24(6):e35285
+URL: https://www.jmir.org/2022/6/e35285
+doi: 10.2196/35285
+PMID: 35731547
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 18
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH De-Jongh González et al
+©Olivia De-Jongh González, Claire N Tugault-Lafleur, E Jean Buckler, Jill Hamilton, Josephine Ho, Annick Buchholz, Katherine
+M Morrison, Geoff DC Ball, Louise C Mâsse. Originally published in the Journal of Medical Internet Research
+(https://www.jmir.org), 22.06.2022. This is an open-access article distributed under the terms of the Creative Commons Attribution
+License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any
+medium, provided the original work, first published in the Journal of Medical Internet Research, is properly cited. The complete
+bibliographic information, a link to the original publication on https://www.jmir.org/, as well as this copyright and license
+information must be included.
+https://www.jmir.org/2022/6/e35285 J Med Internet Res 2022 | vol. 24 | iss. 6 | e35285 | p. 19
+XSL FO (page number not for citation purposes)
+•
+RenderX

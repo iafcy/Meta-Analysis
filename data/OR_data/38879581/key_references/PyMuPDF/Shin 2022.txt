@@ -1,0 +1,1328 @@
+
+
+Citation: Shin, M.; Kim, O.-J.; Yang,
+S.; Choe, S.-A.; Kim, S.-Y. Different
+Mortality Risks of Long-Term
+Exposure to Particulate Matter across
+Different Cancer Sites. Int. J. Environ.
+Res. Public Health 2022, 19, 3180.
+https://doi.org/10.3390/ijerph
+19063180
+Academic Editor: Paul B.
+Tchounwou
+Received: 25 December 2021
+Accepted: 4 March 2022
+Published: 8 March 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright:
+© 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+International  Journal  of
+Environmental Research
+and Public Health
+Article
+Different Mortality Risks of Long-Term Exposure to Particulate
+Matter across Different Cancer Sites
+Miyoun Shin 1
+, Ok-Jin Kim 2, Seongwoo Yang 3
+, Seung-Ah Choe 4 and Sun-Young Kim 1,*
+1
+Department of Cancer Control and Population Health, Graduate School of Cancer Science and Policy,
+National Cancer Center, Goyang 10408, Korea; 1706104@ncc.re.kr
+2
+Environmental Health Research Division, Environment Health Research Department, National Institute of
+Environment Research, Incheon 22689, Korea; ojkim21@korea.kr
+3
+Department of Digital Health, Samsung Advanced Institute for Health Sciences & Technology,
+Sungkyunkwan University, Seoul 06351, Korea; yangsw@g.skku.edu
+4
+Department of Preventive Medicine, College of Medicine, Korea University, Seoul 02841, Korea;
+seungah@korea.ac.kr
+*
+Correspondence: sykim@ncc.re.kr
+Abstract: Particulate matter (PM) air pollution has challenged the global community and the Interna-
+tional Agency for Research on Cancer (IARC) classiﬁed airborne particulate matter as carcinogenic
+to humans. However, while most studies of cancer examined a single cancer type using different
+cohorts, few studies compared the associations of PM between different cancer types. We aimed
+to compare the association of long-term exposure to PM (PM10 and PM2.5) and cancer mortality
+across 17 different types of cancer using a population-based cohort in the Seoul Metropolitan Area
+(SMA), South Korea; Our study population includes 87,608 subjects (mean age: 46.58 years) residing
+in the SMA from the National Health Insurance Services–National Sample cohort (NHIS–NSC) and
+followed up for 2007–2015. We used the time-dependent Cox proportional hazards model to estimate
+hazard ratios (HRs) and 95% conﬁdence intervals (95% CIs) of each cancer mortality per 10 µg/m3
+increase in PM concentrations, after adjusting for individual and areal characteristics. During eight
+years of follow-up, 1487 people died with any of 17 cancer types. Lung cancer death was the highest,
+followed by liver and stomach cancer. Although we did not ﬁnd the association for all cancer types,
+possibly because of limited cancer cases, HRs of PM2.5 were relatively high for lung, stomach, pan-
+creas, non-Hodgkin’s lymphoma, prostate, esophagus, oral and pharynx, and brain cancer mortality
+(HRs = 1.44–7.14). High HRs for pancreas, non–Hodgkin’s lymphoma, esophagus, and oral and
+pharynx cancer were also seen for PM10; our ﬁndings suggest PM air pollution as a potential risk
+factor of cancer mortality for upper digestive tracts, mouth, pancreas, and non–Hodgkin’s lymphoma
+in a highly urbanized population with high exposure to PM for a long time.
+Keywords: cancer; cohort; long-term exposure; mortality; particulate matter
+1. Introduction
+Cancer remains one of the major burdens of disease worldwide. In 2016, the World
+Health Organization reported that about 70% of all deaths are attributed to non-communicable
+diseases, in which cancer makes up more than 20% [1]. Despite the overall decrease in
+cancer deaths, owing to early cancer detection and management, the burden of cancer
+mortality persists, with constant global increase in cancer incidence. For example, the newly
+diagnosed cancer cases are expected to be 28.4 million cases in 2040, approximately a 50%
+rise from 2020 [2]. Lung cancer, as the most common cause of cancer death, makes up 18.0%
+of 9.9 million deaths for the global population, followed by colorectum (9.4%) and liver
+cancer (8.3%) in 2020 [2]. In order to reduce the heavy burden of cancer, efforts have been
+devoted to identifying risk factors of cancer. In addition to genetic predisposition, studies
+Int. J. Environ. Res. Public Health 2022, 19, 3180. https://doi.org/10.3390/ijerph19063180
+https://www.mdpi.com/journal/ijerph
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+2 of 13
+reported modiﬁable behaviors such as smoking, drinking, diet, and physical activity, and
+recently drew attention to environmental factors [1].
+As a prominent environmental risk factor, particulate matter (PM) air pollution has
+challenged the global community. Many epidemiological and toxicological studies sug-
+gested evidence of the causal relationship between long–term exposure to PM and lung
+cancer incidence and mortality [3]. Owing to cumulative evidence, the International Agency
+for Research on Cancer (IARC) classiﬁed airborne particulate matter as carcinogenic to
+humans [4]. Most recently, new ﬁndings supported the associations with mortality of
+other cancer types: stomach, colorectal, liver, pancreatic, breast, and bladder cancer [5–12].
+However, it is difﬁcult to compare the associations of PM between different cancer types,
+because most studies examined single cancer types based on different cohorts. Charac-
+teristics of cancer and the association with PM may vary depending on the population
+related to genetic and environmental factors. Furthermore, only a few cohort studies that
+compared many cancer types were performed, mostly in limited regions of North America
+and Europe, primarily with low-dose conditions of PM. Findings from low–dose countries
+may or may not be consistent, when investigated in high-dose conditions.
+A population-based cohort in South Korea can provide an opportunity to ﬁll this
+research gap. The National Health Insurance Service-National Sample Cohort (NHIS–NSC)
+is a nationwide cohort that makes up of 2.2% of the South Korean population and includes
+various information from medical utilization and health examination [13]. In South Korea,
+cancer is the most common cause of death, accounting for 27.5% of the total death [14].
+This is greater than the global ﬁgure and expected to increase along with population aging
+and westernized lifestyle [15]. This large portion of cancer deaths can also help elucidate
+the role of PM air pollution as a risk factor of the various types of cancer. Our previous
+study used this cohort and found suggestive evidence of the association between PM and
+lung cancer incidence in the Seoul Metropolitan Area (SMA), where about half of the South
+Korean population resides [16]. Using the population-based nationwide cohort, this study
+aims to compare the associations of long-term exposure to PM ≤2.5 or 10 µm in diameter
+(PM2.5 or PM10) with cancer mortality by 17 cancer types in the SMA.
+2. Materials and Methods
+2.1. Study Population
+Our study population includes 87,608 subjects selected from the NHIS–NSC. Since
+South Korea accomplished universal healthcare coverage for all citizens in 2000, the NHIS
+database has been expanded by containing enormous amounts of information on healthcare
+utilization and biological and sociodemographic characteristics for the entire population.
+In 2014, the NHIS created the NHIS–NSC, which includes one million people sampled
+from the NHIS database and their various individual information for 2002–2015 [13]. We
+primarily focused on the Seoul Metropolitan Area (SMA), where our previous study found
+the association between PM and lung cancer incidence [16]. The SMA is a highly urbanized
+and populated area with relatively high air pollution (48 and 26 µg/m3 for annual average
+concentration of PM2.5 and PM10, respectively, in 2015), consisting of three regions, namely,
+Seoul, the capital of South Korea (area = 605 km2; population = 10,192,710), Gyeonggi, the
+most populated province (10,184 km2; 11,106,211), and Incheon, the second largest port city
+(1007 km2; 2,664,576) (Figure 1 and Figure S1, see the supplementary ﬁle) [17]. A relatively
+homogenous people, as half of the South Korean population live in the SMA, can help
+achieve the representativeness of our ﬁndings and avoid the difﬁculty in accounting for the
+exceptionally heterogeneous subpopulation found in our previous studies [16,18].
+From one million people of the NHIS–NSC, we applied our exclusion criteria and
+selected 87,608 subjects as our study population (Figure S2). To assess the impact of long-
+term exposure to PM on cancer mortality, we determined the year 2007 as our baseline
+and employed the exposure period of 5 years. Speciﬁcally, we selected study subjects who
+participated in a health screening covered by the National Health Insurance in 2005–2007,
+and we followed up their status of cancer death from 2007 to 2015. We restricted our study
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+3 of 13
+population to health screenees in order to utilize their various individual characteristics,
+including biological information, health behavior, and medical history. We additionally
+excluded those who were younger than the age of 30 or severely disabled, and had no
+information on cause of death, residential address, or individual characteristics. We did
+not exclude those who were diagnosed with cancer before the baseline, from 2002 to 2006
+(10.44% of the study population), to retain the minimum sample size to investigate each
+cancer site.
+ 
+ 
+(a) 
+(b) 
+(c) 
+Figure 1. Maps of South Korea and the Seoul Metropolitan Area (a), and PM2.5 (b) and PM10
+(c) concentrations (µg/m3) for 2015–2019.
+2.2. Cancer Mortality and Individual and Areal Characteristics
+We identiﬁed 17 speciﬁc types of cancer mortality based on the International Classiﬁ-
+cation of Disease, 10th reversion (ICD–10): oral and pharynx (C01–C14), esophagus (C15),
+stomach (C16), colorectal (C18–C21), liver (C22), gallbladder (C23–C24), pancreas (C25),
+lung (C34), breast (C50), female genitals (C53–C56), prostate (C61), bladder (C67), kidney
+(C64–66, C68), brain (C71), non-Hodgkin’s (C82–C85), multiple myeloma (C88, C90), and
+leukemia (C91–C95). We chose these 17 sites, which were investigated in previous studies
+that compared different cancer sites [6,9] and provided at least 20 cancer deaths in our
+study population.
+For individual-level characteristics, we included age, sex, health insurance premium
+(0–40%, 40–60%, 60–80%, or 80–100%), employee status, smoking status (never, former or
+current smoker), smoking period (year), smoking amount (pack per day), frequency of
+alcohol consumption and physical activity, diet (plant–based, balanced, or meat–based diet),
+BMI, and family history of any cancer. A health insurance premium is computed based
+primarily on income and property/asset, regardless of age and health status, and was often
+used as an indicator for socioeconomic status in previous studies, South Korea [16,18,19].
+For area–level characteristics, we used district–speciﬁc characteristics for demographics,
+socioeconomic status, health care access, and area type. Six area-level characteristics
+represent socioeconomic characteristics and health care accessibility. Demography–related
+characteristics such as the proportion of the elderly and population density were also often
+used as indicators of area-level socioeconomic status in South Korea, based on high poverty
+rate and low economic activity of the elderly population and low population density
+correlated with large elderly population [20–22]. Gross regional domestic product (GRDP)
+is estimated based on production, distribution, and expenditure of income of each district,
+indicating local economic activity [23]. We used the proportion of health screening program
+recipients to represent health care accessibility. Using the district-speciﬁc characteristics
+obtained from the year 2005 Census and general national statistics in 2005, we categorized
+the elderly population (≥65 years), high school graduates, population size, and gross
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+4 of 13
+regional domestic production to the quartiles across districts. We obtained health screening
+program recipients for each district from the National Health Insurance Statistic in 2008
+and computed the rate of recipients. The area types deﬁned as urban, suburban and rural
+areas were obtained from the Korea Statistics.
+2.3. Exposure Assessment
+We estimated individual–level long–term concentrations of PM using two previously
+developed prediction models. For PM10, we used the national–scale exposure prediction
+model developed in a universal kriging framework along with more than 300 geographical
+variables and air pollution regulatory monitoring data [24]. This point–wise spatial model
+allowed us to predict annual–average concentrations of PM10 at any location in South
+Korea. As address information of NHIS-NSC subjects is available at the district level for
+maintaining conﬁdentiality, we predicted annual-average PM10 concentrations at all census
+tract centroids and averaged to each district to compute population-representative district
+averages. Each Metropolitan City or Province includes 5–48 districts with a total of 251–263
+districts for 2002–2015 (average and range of area size in 2007 for South Korea: 429 and
+3–1818 km2; SMA: 149 and 7–878 km2). For PM2.5, we applied the ratio-based model
+because nationwide PM2.5 regulatory monitoring data are available only after 2015, as
+opposed to PM10, which is available from 2001 [25]. This model provided district-level
+PM2.5 annual-average concentrations based on the ratios of PM2.5 to PM10 multiplied by
+district–level PM10 predictions. As PM2.5 monitoring data are available for 2001–2015
+in Seoul, we computed ratios each year for 2001–2015 in Seoul and adjusted regional
+differences of ratios using the proportions of ratios in Seoul to those in other regions in 2015.
+Since accumulating evidence has showed stronger associations of various health endpoints
+with PM2.5 than with PM10, and since our prediction approach for PM2.5 based on ratios
+showed good model performance [26], we treated the PM2.5 analysis as our primary. Finally,
+we computed the averages of district-level PM10 or PM2.5 concentrations for each of the
+previous 5 years over the follow–up period as individual–level long–term exposure to
+PM. In addition, we computed 1– and 3–year average concentrations for our sensitivity
+analyses.
+2.4. Statistical Analysis
+We used the time-dependent Cox proportional hazards model to estimate hazard
+ratios (HRs) and 95% conﬁdence intervals (95% CIs) of cancer mortality per 10 µg/m3
+increase in PM concentrations, according to each of 17 cancer types. Time–dependent Cox
+regression allows us to assess the overall risk estimate by combining the survival pattern
+associated with exposure within each time window of one year for the entire follow-up
+period as a weighted average of estimates across time windows [27]. The survival time of
+each participant was calculated from the baseline, 1 January 2007, to the earliest date of the
+end of the study, 31 December 2015, death, and drop-out. Participants who were lost to
+follow up, alive at the end of study, or died with other causes were treated censored.
+We developed three progressively–adjusted health analysis models to investigate
+the association between long-term exposure to PM and cancer mortality according to the
+progressive adjustment of potential confounders. Model 1 included age and sex in addition
+to PM. In model 2, we added individual-level characteristics. These characteristics were
+commonly included as confounders in previous cohort studies of long-term air pollution
+and mortality [28,29]. In model 3, we additionally adjusted for area-level characteristics to
+account for possible area-level confounding, in addition to individual-level confounding,
+suggested in our previous studies of PM and mortality in South Korea [16,18,30]. Since
+the SMA has relatively similar area-level characteristics, we chose model 2 as our primary
+approach. For our sensitivity analysis, we used 1- and 3-year average concentrations of PM
+and compared to our primary analysis using average exposure for the previous 5 years.
+Second, we performed the same analyses using the 206,717 NHIS–NSC subjects for South
+Korea and compared to our ﬁndings for the SMA. Third, we deﬁned cancer deaths based
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+5 of 13
+on single-site cancers and compared those to our primary ﬁndings, including both single–
+and multiple–site cancers. Lastly, we excluded those who were diagnosed with cancer
+before the baseline and compared this to our primary analysis ﬁndings.
+This study was approved by the Institutional Review Board of the National Cancer
+Center (IRB code NCC2018–0017).
+3. Results
+3.1. Study Population and Individual Characteristics
+In 87,608 NHIS–NSC subjects living in the SMA, most participants were middle-aged
+adults (46.58 years old on average) and more than half of participants had never smoked
+(67.43%), never or rarely consumed alcohol (54.73%), did not exercise (50.60%), and lived in
+urban areas (84.46%) (Table 1). People who died with any cancer during the eight years
+of follow-up for 2007–2015 were likely to be older (58.60 years old), former or current
+smokers (40.75%) with longer cigarette smoking period for ≥30 years (21.75%), and alcohol
+consumers drinking almost every day (6.78%) at baseline, compared to those who survived
+to the end of the study, were lost, or died with other causes (46.36 years old, 32.42%, 5.71%,
+and 3.05%, respectively). These patterns in the total SMA population and subpopulations
+by cancer death status were similar for 206,717 people in the entire country (Table S1).
+Table 1. Descriptive summary of individual and areal characteristics of 87,608 National Health
+Insurance Service–National Sample Cohort subjects and by their cancer death status in the Seoul
+Metropolitan Area (SMA) for 2005–2007.
+Characteristic
+Variable
+Value
+Total
+(87,608)
+Cancer Death 1
+No (86,045)
+Yes (1563)
+Demography
+Age (year)
+46.58 (11.01)
+46.36 (10.89)
+58.60 (11.18)
+Sex
+Male
+53.83
+53.57
+67.95
+Socioeconomic status
+Health insurance premium
+0–40%
+24.66
+24.56
+30.20
+40–60%
+22.10
+22.17
+18.62
+60–80%
+24.72
+24.78
+21.37
+80–100%
+28.51
+28.49
+29.81
+Employed
+Yes
+38.20
+38.47
+23.67
+Behavior
+Cigarette smoking status 2
+Never
+67.43
+67.58
+59.25
+Former
+9.82
+9.78
+12.28
+Current
+22.75
+22.64
+28.47
+Cigarette smoking amount
+(packs per day) 2
+Never
+74.99
+75.12
+67.64
+<0.5
+5.24
+5.17
+8.69
+0.5–1
+13.68
+14.62
+16.65
+1–2
+5.74
+5.72
+6.94
+≥2
+0.35
+0.36
+0.07
+Cigarette smoking period (year) 2
+Never
+69.31
+69.44
+61.98
+<5
+1.63
+1.64
+1.27
+5–9
+2.87
+2.90
+1.54
+10–19
+11.68
+11.77
+6.69
+20–29
+8.51
+8.54
+6.76
+≥30
+5.99
+5.71
+21.75
+Alcohol consumption
+Never or rarely
+54.73
+54.67
+57.77
+2–3 per month
+16.88
+16.97
+12.22
+1–2 per week
+18.33
+18.41
+14.08
+3–4 per week
+6.94
+6.90
+9.15
+Almost everyday
+3.12
+3.05
+6.78
+Physical activity
+None
+50.60
+50.55
+53.49
+1–2 per week
+27.93
+28.05
+21.56
+3–4 per week
+12.50
+12.53
+10.68
+5–6 per week
+3.08
+3.08
+2.69
+Almost everyday
+5.89
+5.79
+11.58
+Nutrition
+Plant–based diet
+21.74
+21.69
+24.29
+Balanced diet
+74.22
+74.26
+72.1
+Meat–based diet
+4.04
+4.05
+3.61
+BMI 3
+<18.5
+2.43
+2.40
+4.09
+18.5–25
+62.59
+62.6
+62.19
+25–30
+31.73
+31.76
+30.13
+≥30
+3.25
+3.25
+3.58
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+6 of 13
+Table 1. Cont.
+Characteristic
+Variable
+Value
+Total
+(87,608)
+Cancer Death 1
+No (86,045)
+Yes (1563)
+Family
+history
+Cancer
+Yes
+15.15
+15.20
+12.54
+Area-level
+Elderly population
+0–25%
+23.64
+23.71
+19.83
+25–50%
+27.85
+27.87
+26.94
+50–75%
+23.33
+23.37
+21.37
+75–100%
+25.17
+25.05
+31.86
+High school graduates
+0–25%
+25.40
+25.35
+28.47
+25–50%
+25.36
+25.38
+24.25
+50–75%
+23.71
+23.75
+21.63
+75–100%
+25.53
+25.52
+25.66
+Gross regional domestic product
+0–25%
+24.78
+24.77
+25.72
+25–50%
+16.12
+16.13
+15.80
+50–75%
+41.74
+41.70
+43.89
+75–100%
+17.35
+17.40
+14.59
+Population density
+0–25%
+24.24
+24.19
+27.32
+25–50%
+25.19
+25.25
+21.94
+50–75%
+24.16
+24.16
+24.18
+75–100%
+26.40
+26.40
+26.55
+Area type
+Urban
+84.46
+84.54
+80.23
+Suburban
+12.21
+12.16
+14.4
+Rural
+3.33
+3.29
+5.37
+Health screening participation
+rate
+58.99 (3.38)
+59.00 (3.38)
+58.70 (3.30)
+1 All numbers are presented as percent except for age and health screening participation rate presented as mean
+(standard deviation). 2 Questionnaire did not include the type of cigarette. 3 BMI, body mass index.
+3.2. Study Population and Cancer Mortality
+For eight years of follow-up in our study, from 2007 to 2015, 1563 people (782,090
+person years; 1.78%) died with any cancer in 87,608 NHIS–NSC SMA subjects, while 1487
+died with any of 17 cancer types. According to the cancer site, lung cancer gave the highest
+deaths (23.50%), followed by liver cancer (13.57%) and stomach cancer (12.68%) (Table 2).
+This pattern was similar in 206,717 subjects over South Korea (24.81, 14.93, and 12.50%,
+respectively) (Table S2).
+Table 2. Numbers of deaths by 17 cancer types and descriptive summary of individual character-
+istics in 87,608 National Health Insurance Service-National Sample Cohort subjects in the Seoul
+Metropolitan Area for 2007–2015.
+Cancer Type 1
+Case
+%
+Age (Mean (sd))
+Sex (Male %)
+Premium (Low 2 %)
+Premium (High 3 %)
+Ever Smoker (%)
+All cancer
+1563
+100.00
+58.66 (11.19)
+67.95
+30.20
+29.81
+40.75
+Total
+1487
+95.14
+58.60 (11.18)
+68.12
+30.53
+28.98
+41.22
+Lung
+367
+23.50
+60.39 (9.90)
+78.20
+38.15
+27.52
+56.40
+Liver
+212
+13.57
+55.33 (11.07)
+77.36
+25.00
+30.66
+45.28
+Stomach
+198
+12.68
+58.98 (11.93)
+64.65
+32.32
+27.78
+33.84
+Colorectal
+151
+9.67
+59.23 (10.63)
+64.24
+35.10
+28.48
+39.07
+Pancreas
+129
+8.26
+60.29 (9.93)
+58.91
+28.68
+34.11
+37.98
+Gallbladder
+69
+4.42
+61.55 (9.85)
+56.52
+23.19
+44.93
+30.43
+Female genital 4
+50
+3.20
+54.14 (12.44)
+0.00
+28.00
+28.00
+0.00
+Kidney
+38
+2.43
+55.61 (11.77)
+84.21
+31.58
+26.32
+39.47
+Breast 4
+37
+2.37
+48.95 (9.67)
+0.00
+24.32
+21.62
+2.70
+Prostate 5
+36
+2.30
+64.39 (1.55)
+100.00
+25.00
+30.56
+55.56
+Non–Hodgkin’s
+35
+2.24
+62.31 (9.00)
+71.43
+25.71
+28.57
+34.29
+Esophagus
+35
+2.24
+58.23 (9.93)
+91.43
+20.00
+34.29
+60.00
+Leukemia
+32
+2.05
+55.84 (14.09)
+78.13
+25.00
+12.50
+37.50
+Bladder
+27
+1.73
+64.70 (10.41)
+81.48
+33.33
+29.63
+44.44
+Oral and Pharynx
+25
+1.60
+51.44 (12.43)
+96.00
+8.00
+24.00
+52.00
+Brain
+24
+1.54
+53.54 (12.35)
+41.67
+25.00
+25.00
+12.50
+Multiple myeloma
+22
+1.41
+60.41 (12.50)
+72.73
+27.27
+13.64
+22.73
+1 The list of cancer types in descending order according to the number of cancer death. 2 Lowest 25% of health
+insurance premium. 3 Highest 25% of health insurance premium. 4 Summaries among women. 5 Summaries
+among men.
+Individual characteristics in 2005–2007 showed similarities and differences across
+17 cancer types (Table 2). Breast and prostate cancer mortality showed the lowest and
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+7 of 13
+highest mean ages (48.95 and 64.39 years old, respectively). Males are more likely to die with
+all types of cancer than females, except only for brain cancer (41.67%). In particular, more
+than 90% of esophagus and oral and pharynx cancer deaths occurred in males. Additionally,
+people in the lowest 25% for health insurance premiums tended to die more with lung,
+stomach, colorectal, kidney, and bladder cancer (>30%), while people in the highest 25%
+for health insurance premiums showed higher mortality with liver, pancreas, gallbladder,
+prostate, and esophagus cancer (>30%). Lastly, a higher percent of ever smokers was found
+in lung, prostate, esophagus, and oral and pharynx cancer mortality (>50%). Such trends
+are mostly similar in South Korea with a few exceptions (Table S2). For example, oral
+and pharynx cancer showed different patterns between low and high health insurance
+premiums in the SMA (8.00% and 24.00%), but there was greater similarity in the South
+Korean population (21.21 and 22.73%).
+3.3. Association between Long-Term PM Exposure and Cancer Mortality
+Figure 2 shows HRs and 95% CIs of cause-speciﬁc cancer mortality for a 10µg/m3
+increase in PM2.5 or PM10 concentrations for the previous ﬁve years in the SMA population.
+Although both PM2.5 and PM10 showed HRs close to 1 for all cancer mortality (HR = 1.16,
+95% CI = 0.79–1.69), HRs somewhat varied across 17 cancer types (Table S3). For PM2.5, lung
+cancer showed a positive estimate (HR = 1.55, 95% CI = 0.73–3.26). HRs were particularly
+high for stomach, pancreas, non-Hodgkin’s lymphoma, prostate, esophagus, oral and
+pharynx, and brain cancer mortality (HRs = 1.44–7.14 for non-Hodgkin’s to oral and
+pharynx cancer mortality). These patterns were mostly similar for PM10, with some
+exceptions of negative estimates for stomach and prostate cancer. Nonetheless, effect
+estimates of all 17 cancer types were statistically non-signiﬁcant, mainly due to small
+numbers of cancer deaths.
+Figure 2. Hazard ratios and 95% conﬁdence intervals of cancer-speciﬁc mortality for a 10 µg/m3
+increase in individual-level PM concentrations for the previous 5 years, after adjusting for individual
+or areal characteristics in 87,608 National Health Insurance Service–National Sample Cohort subjects
+in the Seoul Metropolitan Area (cancer types seen from the highest number of deaths on the left to the
+lowest on the right; the maximum y–axis limit set to 4.0, for improving readability without presenting
+extremely high upper bounds of conﬁdence intervals, as seen in Tables S3 and S4).
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+8 of 13
+Our sensitivity analysis for the entire country showed similarities and differences from
+those for the SMA (Figure S3 and Tables S5 and S6). Stomach, prostate, non-Hodgkin’s
+lymphoma, esophagus, and brain cancer that showed higher HRs of PM2.5 compared to
+other cancer types in the SMA also showed positive and higher estimates (HRs = 1.12–1.87)
+(Table S5). Different from the SMA, in South Korea, leukemia showed the highest estimate
+(HR = 2.39, 95% CI = 0.84–7.37), whereas lung cancer gave a negative estimate (HR = 0.82,
+95% CI = 0.63–1.08). None of these estimates were statistically signiﬁcant.
+Our sensitivity analyses, using PM2.5 for the previous 1 or 3 years, generally showed
+consistent results with those of the main analysis using 5 years of exposure in the SMA.
+HRs were positive for lung (1.68 and 1.62, 1 year and 3 year HRs, respectively), stomach
+(1.43 and 1.92), pancreas (2.47 and 3.60), prostate (2.73 and 3.57), esophagus (3.02 and 2.87),
+and oral and pharynx (8.14 and 5.31) cancer mortality (Table S3). However, gallbladder,
+female genital, non-Hodgkin’s lymphoma, leukemia, and brain cancer mortality showed
+the different patterns across shorter and longer exposure periods of averaging. The analysis
+using single–site deﬁnition for cancer mortality also showed consistent results with those
+of the main analysis, including single– and multiple–site cancers (Table S7). Exclusion of
+those who were diagnosed with cancer before the baseline also showed generally consistent
+results with our primary ﬁndings (Table S8).
+4. Discussion
+Using a population-based well-established cohort, we focused on 17 different types
+of cancer and compared the associations of cancer mortality with long–term exposure to
+PM in a highly urbanized population exposed to a relatively high level of PM air pollution.
+Although we did not ﬁnd statistical signiﬁcance for the association across all cancer types
+possibly resulting from the limited cancer cases, our ﬁndings suggest potentially higher
+mortality risk of PM2.5 in lung, stomach, pancreas, prostate, non–Hodgkin’s lymphoma,
+esophagus, oral and pharynx, and brain cancer compared to other cancer types. The
+suggestive high risks of pancreas, Non–Hodgkin’s lymphoma, esophagus, and oral and
+pharynx cancer were consistent for PM10.
+This study adds an important understanding of the variation in the association of
+PM and cancer mortality across different cancer sites under a high-dose environment of
+PM. Most previous cohort studies of PM have focused on lung cancer [3]. Although the
+mutagenic, epigenetic, and inﬂammatory mechanisms are shared largely with all types of
+cancer, it is only recently that large cohort studies have begun to expand to other cancer
+types [27,31–37]. Furthermore, there have only been a few studies that compared the
+associations across different types of cancer and identiﬁed the speciﬁc sites more affected
+by PM air pollution than others. The ﬁndings of these studies are still too inconsistent to
+provide evidence of the difference in the association [3]. To our knowledge, at least three
+studies paid attention to different cancer types and investigated PM as a risk factor of
+mortality in a generally healthy population: two studies in the U.S. and one in Hong Kong.
+The lack of evidence could possibly result from the unavailability of representative and
+sufﬁcient cancer data for different sites. Our study aimed to ﬁll in this research gap, using
+a representative population exposed to a high-dose of PM from a population-based cohort,
+constructed from the national health insurance database, taking advantage of a universal
+health care system.
+Previous studies that compared the associations of PM and cancer mortality across
+various cancer types showed inconsistent ﬁndings, possibly derived by different environ-
+mental and/or population characteristics. Two nationwide studies in the U.S. examined 22
+cancer sites in 635,539 subjects (18–84 years) of the Public National Health Interview Survey
+(NHIS) for 1987–2014 and 29 cancer sites in 623,048 adults (≥30 years) of the American
+Cancer Society Cancer Prevention Study II (ACS–CPS II) cohort for 1982–2004 [6,9]. Both
+studies found the associations of PM2.5 with colorectal cancer, and reported largely positive
+but non–signiﬁcant HRs for cancers of the esophagus and female genitals (Table 3). Some
+differences were also found. The ACS–CPS II study reported the association with kidney
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+9 of 13
+cancer which showed a non-signiﬁcantly negative estimate in the NHIS cohort. The associ-
+ation was found for mouth, stomach, breast, female genital, non–Hodgkin’s lymphoma,
+and leukemia in the NHIS study but not in the ACS–CPS II study. These differences could
+be related to different population characteristics and study period. The NHIS population
+of 635,539 subjects were young and old adults aged 18–84 years, living in the continental
+U.S. including suburban and rural areas in addition to urban areas, and participated from
+late 1980s through 2010s. In contrast, the ACS–CPS II population of 623,048 subjects were
+adults over 30 years, mostly from urban areas, followed up from the 1980s through to the
+early 2000s. The other comparison study, performed in Hong Kong with a much higher
+level of PM2.5 (33.7 µg/m3 compared to 10.7 and 12.6 µg/m3 in two U.S. studies), and an
+older population, aged ≥65, also showed differences in their ﬁndings. This cohort of 66,820
+people showed the associations with cancers of breast and upper digestive tracts including
+esophagus and stomach, and digestive accessary organs including liver, gall bladder, and
+pancreas (Table 3). Their high effect estimates for upper digestive tracts are also seen in our
+study as another Asian population, whereas their ﬁndings for breast and female genital
+cancers are not replicated in our study. Our ﬁndings are even more different from the
+ﬁndings of two U.S. studies. Except esophagus cancer, which consistently showed higher
+effect estimates, all the other cancers of the breast, female genitals, and bladder found
+associated in the U.S. studies showed no associations with HRs close to 1 in our study. In
+addition to the differences in pollution sources, physical environments, and population,
+another possible explanation for this inconsistency could be the much smaller sample size
+compared to the two U.S. studies.
+Table 3. Findings of the present study and three previous studies that compared the associations of
+PM2.5 and cancer mortality across different cancer types.
+Shin et al. (2021)
+Coleman et al. (2020)
+Turner et al. (2017)
+Wong et al. (2016)
+Characteristics
+Country
+South Korea
+USA
+USA
+Hong Kong
+Population size
+87,608
+635,539
+623,048
+66,820
+Study period
+2002–2015
+1987–2014
+1982–2004
+1998–2001
+Cancer types 1
+ICD10
+Case 2
+HR (95% CI)
+Case 2
+HR (95% CI)
+Case 2
+HR (95% CI)
+Case 2
+HR (95% CI)
+Oral and pharynx
+C01–C14
+25
+7.14 (0.40–126.86)
+374
+1.19 (0.74–1.91)
+262
+1.03 (0.84–1.26) 3
+—
+—
+58
+0.93 (0.61–1.44) 4
+—
+—
+243
+0.88 (0.70–1.10) 5
+—
+—
+Esophagus
+C15
+35
+2.43 (0.21–27.82)
+599
+0.59 (0.38–0.90)
+1180
+1.02 (0.93–1.13)
+323
+1.42 (1.06–1.89) 6
+Stomach
+C16
+198
+1.90 (0.70–5.17)
+525
+1.87 (1.20–2.92)
+1340
+1.00 (0.91–1.09)
+Colorectal
+C18–C21
+151
+0.64 (0.19–2.13)
+2572
+1.29 (1.05–1.58)
+6475
+1.04 (1.00–1.08)
+719
+1.01 (0.79–1.30)
+Liver
+C22
+212
+0.42 (0.16–1.15)
+761
+1.32 (0.94–1.85)
+1003
+1.05 (0.94–1.16)
+676
+1.35 (1.06–1.71) 7
+Gallbladder
+C23–C24
+69
+0.89 (0.16–4.90)
+—
+—
+403
+1.03 (0.87–1.22)
+Pancreas
+C25
+129
+3.47 (1.05–11.51)
+1607
+1.09 (0.83–1.44)
+3812
+0.98 (0.92–1.03)
+Lung
+C33–C34
+367
+1.55 (0.73–3.26)
+7420
+1.13 (1.00–1.26)
+—
+—
+1408
+1.14 (0.96–1.36)
+Breast
+C50
+37
+0.67 (0.06–7.50)
+2099
+1.33 (1.08–1.64)
+3844
+1.03 (0.97–1.08)
+111
+1.80 (1.26–2.55)
+Female genital
+C53–C56
+50
+0.69 (0.10–4.66)
+750
+1.20 (0.73–1.96)
+611
+1.04 (0.91–1.19) 8
+138
+1.73 (1.17–2.54) 11
+237
+1.77 (1.00–3.16)
+115
+1.34 (0.98–1.83) 9
+392
+1.03 (0.69–1.53)
+987
+1.03 (0.93–1.15) 10
+Prostate
+C61
+36
+1.98 (0.13–29.76)
+1215
+0.91 (0.68–1.22)
+1068
+0.96 (0.86–1.06)
+143
+1.02 (0.51–2.04) 12
+Bladder
+C67
+27
+0.16 (0.01–4.37)
+589
+1.48 (1.00–2.20)
+1324
+1.13 (1.03–1.23)
+155
+0.98 (0.58–1.64) 14
+Kidney
+C64–C66,
+C68
+38
+0.94 (0.09–10.07)
+603
+0.98 (0.66–1.46) 13
+927
+1.14 (1.03–1.27)
+Brain
+C71
+24
+1.62 (0.29–8.97)
+622
+1.48 (0.96–2.29)
+1591
+1.04 (0.96–1.14)
+—
+—
+Non-Hodgkin’s
+C82–C85
+35
+1.44 (0.12–17.83)
+1016
+1.48 (1.10–1.98)
+2840
+1.00 (0.94–1.07)
+310
+1.29 (0.86–1.95) 15
+Multiple
+myeloma
+C90
+22
+0.63 (0.18–2.18)
+541
+0.99 (0.64–1.53)
+1421
+0.97 (0.89–1.07)
+Leukemia
+C91–C95
+32
+0.93 (0.07–12.45)
+970
+1.43 (1.05–1.97)
+2584
+1.01 (0.94–1.07)
+1 The list of cancer types are in descending order according to ICD10. 2 Number of cases. 3 Tongue and mouth,
+C01–C06; 4 salivary gland, C07–C08; 5 pharynx, C09–C14; 6 upper digestive tract, C15–C16; 7 accessory organs,
+C22–C25; 8 uterus, C54–C55; 9 cervix, C53; 10 ovary, C56; 11 female genital, C51–C58; 12 male genital, C60–C63;
+13 kidney, C64–C65; 14 urinary, C64–C68; 15 lympho-hematopoietic, C81–C96.
+Our ﬁndings of suggestive risk of stomach, pancreas, and oral and pharynx cancer
+mortality for exposure to long–term PM2.5 was also found in some previous cohort studies
+that investigated mortality or incidence of single cancer types (Figure S4). A study of 400,000
+adults in Taiwan reported the association of PM2.5 and stomach cancer mortality [33], while
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+10 of 13
+a European cohort study of 305,551 adults in 10 countries showed the association with
+incidence of stomach cancer [34]. A U.S. cohort study based on a multi-ethnic population
+in the Los Angeles area reported the association with incidence of pancreas cancer [38].
+We did not ﬁnd any studies that reported the association with non-Hodgkin’s lymphoma
+which showed a high HR in our study. As the incidence of non-Hodgkin’s lymphoma has
+recently increased in many countries including South Korea [39], our ﬁnding provides a
+motivation to explore new cancer types. Different from our ﬁndings, increasing numbers
+of individual cohort studies examined bladder, kidney, breast, and brain cancers and found
+the associations. While recent review studies of breast and brain cancers concluded that
+the evidence still remains inconsistent [40,41], review studies of bladder and kidney cancer
+concluded relatively consistent evidence [42,43]. Future studies should include extended
+populations to investigate these cancers with relatively low incidence and mortality.
+In our study, all of our estimates were statistically non-signiﬁcant possibly because
+of small cancer cases. Although we relied on a population-based cohort, one million
+cohort is still hampered by limited power when we applied our conservative inclusion
+criteria and pruned to about 90,000 people as our study population. To address the issue of
+low power, we performed a sensitivity analysis by extending the study population to the
+entire country. However, this nationwide analysis also gave mostly non-signiﬁcant effect
+estimates. These uncertain and less stable effect estimates may be derived by the heavily
+diverse population from different regions according to socioeconomic characteristics or
+environmental factors, which were not sufﬁciently adjusted by area-level variables included
+in our analyses. Future studies can include further extended populations fully leveraging
+the national health insurance database. In addition, investigation of cancer incidence could
+have improved the lack of power. However, we focused on cancer mortality in our study
+to avoid potential outcome measurement errors in incidence and the impact of different
+degree of error across different cancer types on the comparison. Future studies should
+expand the comparison across cancer sites to cancer incidence. Lastly, we did not account
+for multiple comparison of 17 cancer types, because our ﬁndings gave large uncertainty
+derived by small cases. Future research using extended populations should apply multiple
+comparison correction.
+Our study includes some limitations to provide topics for future research. Our study
+used district-level PM concentrations as individual exposure based on limited address
+availability. In addition, we relied on exposure to outdoor PM and did not take into account
+indoor and/or personal exposure. These limitations may lead to exposure measurement
+errors that affect accuracy and/or precision in subsequent health effect analyses [43,44].
+Although inﬁltration of PM is higher compared to gaseous pollutants [45,46], indicating
+the small impact of measurement errors when outdoor PM is used, emerging new tech-
+nology such as portable sensors can help assess indoor PM of cancer patients [46]. Future
+studies should improve exposure assessment by using detailed address information and
+incorporating indoor and personal exposure. In addition, we obtained all individual–level
+and area-level variables at baseline to maximize the sample size, but some of these char-
+acteristics such as BMI could vary over time. Further studies should apply time-varying
+information and conﬁrm our ﬁndings. Lastly, we did not exclude cancer patients, com-
+prising 10% of our population, in order to attain sufﬁcient sample sizes to investigate the
+association by 17 different cancer sites. This inclusion would make it difﬁcult to distinguish
+between the impact of PM on cancer occurrence and its impact on progression, although
+our sensitivity analysis showed generally consistent ﬁndings with our primary results
+including patients. Differences in severity and induction period depending on the cancer
+type could make this impact even more complicated. Future studies should clarify this
+impact in extended populations.
+5. Conclusions
+Although our study did not ﬁnd associations, ﬁndings suggested PM air pollution as a
+potential risk factor of deaths for pancreas, non–Hodgkin’s lymphoma, esophagus, and oral
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+11 of 13
+and pharynx cancer other than lung cancer in an urban population exposed to high levels
+of PM air pollution. Further studies need to investigate the difference in the association by
+cancer types using extended populations and reﬁned exposure measurement.
+Supplementary Materials: The following are available online at https://www.mdpi.com/article/10
+.3390/ijerph19063180/s1, Figure S1: Maps of South Korea and the Seoul Metropolitan Area (a), and
+district-speciﬁc concentrations of PM2.5 (b) and PM10 (c) for 2015-2019, Figure S2: Flow chart of our
+application of subject exclusion criteria to the National Health Insurance Service-National Sample
+Cohort (NHIS-NSC) subjects, Table S1: Descriptive summary of individual and areal characteristics
+of 206,717 National Health Insurance Service-National Sample Cohort subjects and by their cancer
+death status in the South Korea for 2005-2007, Table S2: Numbers of deaths for 17 cancer types
+and descriptive summary of individual characteristics in 206,717 National Health Insurance Service-
+National Sample Cohort subjects in South Korea for 2007-2015, Figure S3: Hazard ratios and 95%
+conﬁdence intervals of cause-speciﬁc mortality for an increase of 10µg/m3 in individual-level PM
+concentrations for the previous 5 years after adjusting for individual or areal characteristics in 206,717
+National Health Insurance Service-National Sample Cohort subjects in South Korea (cancer types seen
+from the highest number of deaths on the left to the lowest on the right; the maximum y-axis limit
+set to 3.0, for improving readability without presenting extremely high upper bounds of conﬁdence
+intervals as seen in Table S5), Table S3: Hazard ratios and 95% conﬁdence intervals of cancer-speciﬁc
+mortality for a 10µg/m3 increase in individual-level PM2.5 concentrations for the previous 5 years
+after adjusting for individual or areal characteristics in 87,608 National Health Insurance Service-
+National Sample Cohort subjects in the Seoul Metropolitan Area, Table S4: Hazard ratios and 95%
+conﬁdence intervals of cancer-speciﬁc mortality for a 10µg/m3 increase in individual-level PM10
+concentrations for the previous 5 years after adjusting for individual or areal characteristics in 87,608
+National Health Insurance Service-National Sample Cohort subjects in the Seoul Metropolitan Area,
+Table S5: Hazard ratios and 95% conﬁdence intervals of cause-speciﬁc mortality for an increase
+of 10µg/m3 in individual-level PM2.5 concentrations for the previous 5 years after adjusting for
+individual or areal characteristics in 206,717 National Health Insurance Service-National Sample
+Cohort subjects in the South Korea, Table S6: Hazard ratios and 95% conﬁdence intervals of cause-
+speciﬁc mortality for an increase of 10µg/m3 in individual-level PM10 concentrations for the previous
+5 years after adjusting for individual or areal characteristics in 206,717 National Health Insurance
+Service-National Sample Cohort subjects in the South Korea, Figure S4: Hazard ratios and 95%
+conﬁdence intervals of mortality or incidence of stomach, pancreas, and oral and pharynx cancer
+for long-term exposure to PM2.5, Table S7: Hazard ratios and 95% conﬁdence intervals of lung,
+pancreas, non-Hodgkin’s, esophagus, and oral and pharynx cancer mortality for a 10µg/m3 increase
+in individual-level PM2.5 concentrations for the previous 5 years in the primary model (model 2) by
+deﬁnition of cancer deaths based on both single and multiple cancer sites versus single sites only in
+87,608 National Health Insurance Service-National Sample Cohort subjects in the Seoul Metropolitan
+Area, Table S8: HRs and 95%CI of lung, pancreas, non-Hodgkin’s, esophagus, and oral and pharynx
+cancer mortality for a 10µg/m3 increase in individual-level PM2.5 concentrations for the previous
+5, 3, and 1 years in primary model (model 2) for the comparison between including and excluding
+lung cancer patients before 2006 using National Health Insurance Service-National Sample Cohort
+subjects in the Seoul Metropolitan Area.
+Author Contributions: M.S. and S.-Y.K. designed the study and wrote the paper; O.-J.K. and S.Y.
+contributed to data management and data analysis; S.-A.C. contributed to the interpretation of results.
+All authors have read and agreed to the published version of the manuscript.
+Funding: This research was supported by the Basic Science Research Program through the National
+Research Foundation of Korea (KRF) (2018R1A2B6004608), the National Cancer Center of Korea
+(NCC-2110570), and the Korean Foundation for Cancer Research [2020-A-2].
+Institutional Review Board Statement: This study was approved by the Institutional Review Board
+of the National Cancer Center (IRB code NCC2018-0017).
+Informed Consent Statement: Not applicable.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+12 of 13
+References
+1.
+World Health Organization (WHO). World Health Statistics 2020: Monitoring Health for the SDGs, Sustainable Development Goals;
+World Health Statistics: Geneva, Switzerland, 2020.
+2.
+Sung, H.; Ferlay, J.; Siegel, R.L.; Laversanne, M.; Soerjomataram, I.; Jemal, A.; Bray, F. Global Cancer Statistics 2020: GLOBOCAN
+Estimates of Incidence and Mortality Worldwide for 36 Cancers in 185 Countries. CA Cancer J. Clin. 2021, 71, 209–249. [CrossRef]
+[PubMed]
+3.
+U.S. EPA. Integrated Science Assessment (ISA) for Particulate Matter; Final Report, December 2019; U.S. Environmental Protection
+Agency: Washington, DC, USA, 2019.
+4.
+IARC Working Group on the Evaluation of Carcinogenic Risks to Humans. Outdoor air pollution. IARC Monogr. Eval. Carcinog.
+Risks Hum. 2016, 109, 9.
+5.
+Ethan, C.J.; Mokoena, K.; Yu, Y.; Shale, K.; Fan, Y.; Rong, J.; Liu, F. Association between PM2.5 and mortality of stomach and
+colorectal cancer in Xi’an: A time-series study. Environ. Sci. Pollut. Res. 2020, 27, 22353–22363. [CrossRef] [PubMed]
+6.
+Coleman, N.C.; Burnett, R.T.; Higbee, J.D.; Leﬂer, J.S.; Merrill, R.M.; Ezzati, M.; Marshall, J.D.; Kim, S.-Y.; Bechle, M.; Robinson,
+A.; et al. Cancer mortality risk, ﬁne particulate air pollution, and smoking in a large, representative cohort of US adults. Cancer
+Causes Control 2020, 31, 767–776. [CrossRef]
+7.
+Schraufnagel, D.E.; Balmes, J.R.; Cowl, C.T.; De Matteis, S.; Jung, S.-H.; Mortimer, K.; Perez-Padilla, R.; Rice, M.B.; Riojas-
+Rodriguez, H.; Sood, A.; et al. Air Pollution and Noncommunicable Diseases. Chest 2019, 155, 417–426. [CrossRef]
+8.
+Kim, H.-B.; Shim, J.-Y.; Park, B.; Lee, Y.-J. Long-Term Exposure to Air Pollutants and Cancer Mortality: A Meta-Analysis of Cohort
+Studies. Int. J. Environ. Res. Public Health 2018, 15, 2608. [CrossRef]
+9.
+Turner, M.C.; Krewski, D.; Diver, W.R.; Pope, C.A.; Burnett, R.T.; Jerrett, M.; Marshall, J.D.; Gapstur, S.M. Ambient Air Pollution
+and Cancer Mortality in the Cancer Prevention Study II. Environ. Health Perspect. 2017, 125, 087013. [CrossRef]
+10.
+Wong, C.M.; Tsang, H.; Lai, H.K.; Thomas, G.N.; Lam, K.B.H.; Chan, K.P.; Zheng, Q.; Ayres, J.G.; Lee, S.Y.; Lam, T.H.; et al. Cancer
+Mortality Risks from Long-term Exposure to Ambient Fine Particle. Cancer Epidemiol. Biomark. Prev. 2016, 25, 839–845. [CrossRef]
+11.
+Lin, H.; Wang, X.; Liu, T.; Li, X.; Xiao, J.; Zeng, W.; Ma, W. Air Pollution and Mortality in China. Adv. Exp. Med. Biol. 2017, 1017,
+103–121. [CrossRef]
+12.
+Beelen, R.; Hoek, G.; Brandt, P.V.D.; Goldbohm, R.A.; Fischer, P.; Schouten, L.; Jerrett, M.; Hughes, E.; Armstrong, B.; Brunekreef,
+B. Long-Term Effects of Trafﬁc-Related Air Pollution on Mortality in a Dutch Cohort (NLCS-AIR Study). Environ. Health Perspect.
+2008, 116, 196–202. [CrossRef]
+13.
+Lee, J.; Lee, J.S.; Park, S.-H.; Shin, S.A.; Kim, K. Cohort Proﬁle: The National Health Insurance Service–National Sample Cohort
+(NHIS-NSC), South Korea. Int. J. Epidemiol. 2016, 46, dyv319. [CrossRef] [PubMed]
+14.
+KOSIS. Causes of Death Statistics in 2019. Available online: http://kostat.go.kr/portal/eng/pressReleases/8/10/index.board?
+bmode=read&aSeq=385629&pageNo=&rowNum=10&amSeq=&sTarget=&sTxt= (accessed on 22 September 2020).
+15.
+Jung, K.-W.; Won, Y.-J.; Kong, H.-J.; Lee, E.S. Cancer statistics in Korea: Incidence, mortality, survival, and prevalence in 2016.
+Cancer Res. Treat. 2019, 51, 417–430. [CrossRef] [PubMed]
+16.
+Yang, S.; Kim, O.-J.; Shin, M.; Kim, W.J.; Kim, S.-Y. Association between long-term exposure to high levels of ambient air pollution
+and incidence of lung cancer in a population-based cohort. Environ. Res. 2021, 198, 111214. [CrossRef] [PubMed]
+17.
+GITS. Lands by Province and Districts in 2007. Available online: https://gits.gg.go.kr/gtdb/web/trafﬁcDb/visualization/data/
+view.do?boardNo=282&boardOrder=145&schGubunCode=02&schCon=0&schStr=&pageIndex=1 (accessed on 24 December
+2021).
+18.
+Kim, O.-J.; Lee, S.H.; Kang, S.-H.; Kim, S.-Y. Incident cardiovascular disease and particulate matter air pollution in South Korea
+using a population-based and nationwide cohort of 0.2 million adults. Environ. Health 2020, 19, 113. [CrossRef] [PubMed]
+19.
+Ha, D.; Ryu, J.; Chun, Y.; Song, I.; Shin, J.-Y. Differential characteristics and treatment of psoriasis patients by economic status in
+South Korea. Medicine 2020, 99, e22410. [CrossRef]
+20.
+KOSIS 2005. Population Census. Available online: http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1INOO02&
+conn_path=I2 (accessed on 24 December 2021).
+21.
+OECD (The Organization for Economic Co-Operation and Development). Income Inequality Remains High in the Face of Weak
+Recovery in 2016. Available online: http://www.oecd.org/social/OECD2016-Income-Inequality-Update.pdf (accessed on 16
+October 2020).
+22.
+KIHASA (Korean Institute for Health and Social Affairs). Relative Regional Deprivation in Korea: Current State and Trends. Health
+Soc. Welfare Forum. 2019, 272, 54–69. Available online: https://www.kihasa.re.kr/web/publication/periodical/search_view.do?
+menuId=48&tid=38&bid=19&searchform=Y&keyField=writer&key=%EC%B5%9C%EC%A7%80%ED%9D%AC (accessed on 24
+December 2021).
+23.
+KOSIS 2005. Social Survey: Gross Regional Domestic Product (GRDP). Available online: http://kosis.kr/statHtml/statHtml.do?
+orgId=202&tblId=DT_F10101&conn_path=I2 (accessed on 24 December 2021).
+24.
+Song, I.S.; Kim, S.Y. Estimation of representative area-level concentrations of particulate matter (PM10) in Seoul, Korea. J. Korea
+Assoc. Geogr. Inform Stud. 2016, 19, 118–129. [CrossRef]
+25.
+Kim, S.-Y.; Song, I. National-scale exposure prediction for long-term concentrations of particulate matter and nitrogen dioxide in
+South Korea. Environ. Pollut. 2017, 226, 21–29. [CrossRef]
+
+Int. J. Environ. Res. Public Health 2022, 19, 3180
+13 of 13
+26.
+Lee, S.H.; Kim, O.-J.; Kim, S.-Y.; Kim, H. An Approach to Estimating National-scale Annual-average Concentrations of PM2.5
+before 2015 when National Air Quality Monitoring Data are Available in South Korea. J. Korean Soc. Atmos. Environ. 2018, 34,
+806–821. [CrossRef]
+27.
+Dekker, F.; Ren, E.; de Mutsert, E.; van Dijk, P.C. Survival analysis: Time-dependent effects and time-varying risk factors. Kidney
+Int. 2008, 74, 994–997. [CrossRef]
+28.
+Puett, R.C.; Hart, J.E.; Yanosky, J.D.; Paciorek, C.; Schwartz, J.; Suh, H.; Speizer, F.E.; Laden, F. Chronic Fine and Coarse Particulate
+Exposure, Mortality, and Coronary Heart Disease in the Nurses’ Health Study. Environ. Health Perspect. 2009, 117, 1697–1701.
+[CrossRef] [PubMed]
+29.
+Hart, J.E.; Liao, X.; Hong, B.; Puett, R.C.; Yanosky, J.D.; Suh, H.; Kioumourtzoglou, M.-A.; Spiegelman, D.; Laden, F. The association
+of long-term exposure to PM2.5 on all-cause mortality in the Nurses’ Health Study and the impact of measurement-error correction.
+Environ. Health 2015, 14, 38. [CrossRef] [PubMed]
+30.
+Lim, Y.-H.; Oh, J.; Han, C.; Bae, H.-J.; Kim, S.; Jang, Y.; Ha, E.; Hong, Y.-C. Long-term exposure to moderate ﬁne particulate matter
+concentrations and cause-speciﬁc mortality in an ageing society. Int. J. Epidemiol. 2021, 49, 1792–1801. [CrossRef] [PubMed]
+31.
+Coleman, N.C.; Ezzati, M.; Marshall, J.D.; Robinson, A.L.; Burnett, R.T.; Pope, C.A. Fine Particulate Matter Air Pollution and
+Mortality Risk Among US Cancer Patients and Survivors. JNCI Cancer Spectr. 2021, 5, pkab001. [CrossRef] [PubMed]
+32.
+Wang, Y.; Li, M.; Wan, X.; Sun, Y.; Cheng, K.; Zhao, X.; Zheng, Y.; Yang, G.; Wang, L. Spatiotemporal analysis of PM2.5 and
+pancreatic cancer mortality in China. Environ. Res. 2018, 164, 132–139. [CrossRef]
+33.
+Guo, C.; Chan, T.-C.; Teng, Y.-C.; Lin, C.; Bo, Y.; Chang, L.-Y.; Lau, A.K.; Tam, T.; Wong, M.; Lao, X.Q. Long-term exposure to
+ambient ﬁne particles and gastrointestinal cancer mortality in Taiwan: A cohort study. Environ. Int. 2020, 138, 105640. [CrossRef]
+34.
+Nagel, G.; Stafoggia, M.; Pedersen, M.; Andersen, Z.J.; Galassi, C.; Munkenast, J.; Jaensch, A.; Sommar, J.; Forsberg, B.; Olsson, D.;
+et al. Air pollution and incidence of cancers of the stomach and the upper aerodigestive tract in the European Study of Cohorts
+for Air Pollution Effects (ESCAPE). Int. J. Cancer 2018, 143, 1632–1643. [CrossRef]
+35.
+Coleman, N.C.; Burnett, R.T.; Ezzati, M.; Marshall, J.D.; Robinson, A.L.; Pope, C.A. Fine Particulate Matter Exposure and Cancer
+Incidence: Analysis of SEER Cancer Registry Data from 1992–2016. Environ. Health Perspect. 2020, 128, 107004. [CrossRef]
+36.
+Huang, H.-C.; Tantoh, D.M.; Hsu, S.-Y.; Nfor, O.N.; Frank, C.-F.L.; Lung, C.-C.; Ho, C.-C.; Chen, C.-Y.; Liaw, Y.-P. Association
+between coarse particulate matter (PM10-2.5) and nasopharyngeal carcinoma among Taiwanese men. J. Investig. Med. 2019, 68,
+419–424. [CrossRef]
+37.
+Chu, Y.-H.; Kao, S.-W.; Tantoh, D.M.; Ko, P.-C.; Lan, S.-J.; Liaw, Y.-P. Association between ﬁne particulate matter and oral cancer
+among Taiwanese men. J. Investig. Med. 2018, 67, 34–38. [CrossRef]
+38.
+Bogumil, D.; Wu, A.H.; Stram, D.; Yang, J.; Tseng, C.-C.; Le Marchand, L.; Wu, J.; Cheng, I.; Setiawan, V.W. The association
+between ambient air pollutants and pancreatic cancer in the Multiethnic Cohort Study. Environ. Res. 2021, 202, 111608. [CrossRef]
+[PubMed]
+39.
+Taj, T.; Poulsen, A.H.; Ketzel, M.; Geels, C.; Brandt, J.; Christensen, J.H.; Puett, R.; Hvidtfeldt, U.A.; Sørensen, M.; Raaschou-
+Nielsen, O. Long-term exposure to PM2.5 and its constituents and risk of Non-Hodgkin lymphoma in Denmark: A population-
+based case–control study. Environ. Res. 2020, 188, 109762. [CrossRef] [PubMed]
+40.
+Zumel-Marne, A.; Castaño-Vinyals, G.; Kundi, M.; Alguacil, J.; Cardis, E. Environmental Factors and the Risk of Brain Tumours
+in Young People: A Systematic Review. Neuroepidemiology 2019, 53, 121–141. [CrossRef]
+41.
+White, A.J.; Bradshaw, P.T.; Hamra, G.B. Air Pollution and Breast Cancer: A Review. Curr. Epidemiol. Rep. 2018, 5, 92–100.
+[CrossRef] [PubMed]
+42.
+Sakhvidi, M.J.Z.; Lequy, E.; Goldberg, M.; Jacquemin, B. Air pollution exposure and bladder, kidney and urinary tract cancer risk:
+A systematic review. Environ. Pollut. 2020, 267, 115328. [CrossRef] [PubMed]
+43.
+Turner, M.C.; Andersen, Z.J.; Baccarelli, A.; Diver, W.R.; Gapstur, S.M.; Pope, C.A.; Prada, D.; Samet, J.; Thurston, G.; Cohen, A.
+Outdoor air pollution and cancer: An overview of the current evidence and public health recommendations. CA A Cancer J. Clin.
+2020, 70, 460–479. [CrossRef]
+44.
+Chen, C.; Zhao, B. Review of relationship between indoor and outdoor particles: I/O ratio, inﬁltration factor and penetration
+factor. Atmos. Environ. 2011, 45, 275–288. [CrossRef]
+45.
+Evangelopoulos, D.; Katsouyanni, K.; Keogh, R.H.; Samoli, E.; Schwartz, J.; Barratt, B.; Zhang, H.; Walton, H. PM2.5 and NO2
+exposure errors using proxy measures, including derived personal exposure from outdoor sources: A systematic review and
+meta-analysis. Environ. Int. 2020, 137, 105500. [CrossRef]
+46.
+Morawska, L.; Thai, P.K.; Liu, X.; Asumadu-Sakyi, A.; Ayoko, G.; Bartonova, A.; Bedini, A.; Chai, F.; Christensen, B.; Dunbabin,
+M.; et al. Applications of low-cost sensing technologies for air quality monitoring and exposure assessment: How far have they
+gone? Environ. Int. 2018, 116, 286–299. [CrossRef]
+

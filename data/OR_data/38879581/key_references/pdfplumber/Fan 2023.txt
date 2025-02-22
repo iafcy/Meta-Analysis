@@ -1,0 +1,771 @@
+EnvironmentalResearch222(2023)115405
+Contents lists available at ScienceDirect
+Environmental Research
+journal homepage: www.elsevier.com/locate/envres
+Long-term exposure to fine particulate matter and site-specific cancer
+mortality: A difference-in-differences analysis in Jiangsu province, China
+Zhaoyu Fana,1, Yingxin Lia,1, Jing Weib, Gongbo Chenc, Rui Wangd, Ruijun Xua, Tingting Liua,
+Ziquan Lve, Suli Huangf, Hong Sung,**, Yuewei Liua,*
+aDepartment of Epidemiology, School of Public Health, Sun Yat-sen University, Guangzhou, Guangdong, 510080, China
+bDepartment of Atmospheric and Oceanic Science, Earth System Science Interdisciplinary Center, University of Maryland, College Park, MD, 20740, USA
+cClimate, Air Quality Research Unit, School of Public Health and Preventive Medicine, Monash University, Melbourne, VIC, 3004, Australia
+dLuohu District Chronic Disease Hospital, Shenzhen, Guangdong, 518020, China
+eCentral Laboratory of Shenzhen Center for Disease Control and Prevention, Shenzhen, Guangdong, 518055, China
+fDepartment of Environment and Health, Shenzhen Center for Disease Control and Prevention, Shenzhen, Guangdong, 518055, China
+gDepartment of Environment and Health, Jiangsu Provincial Center for Disease Control and Prevention, Nanjing, Jiangsu, 210009, China
+A R T I C L E I N F O A B S T R A C T
+Handling Editor: Jose L Domingo Background: Accumulating studies have reported that chronic exposure to ambient fine particulate matter (PM2.5)
+can lead to adverse effects on lung cancer mortality; however, such chronic effects are less clear for mortality
+Keywords: from other site-specific cancers.
+Fine particulate matter Objective: To explore the causal effect of long-term PM2.5 exposure on mortality from all-site and a variety of site-
+Cancer specific cancers in Jiangsu province, China during 2015–2020 using a difference-in-differences analysis.
+Mortality
+Methods: For each of 53 county-based spatial units in Jiangsu province, we calculated annual death counts for all-
+Difference-in-differences
+Long-term exposure
+site cancer and 23 site-specific cancers. Using a validated high-resolution PM2.5 grid dataset, long-term PM2.5
+exposure of a spatial unit within a given year was evaluated as the average of population-weighted annual
+concentrations during recent 10 years. Conditional Poisson regression models were employed to evaluate
+exposure-response associations adjusting for spatial and temporal variables, seasonal temperatures, relative
+humidity, and gross domestic product (GDP).
+Results: During the study period, we identified 947,337 adult cancer deaths in Jiangsu province. Each 1 μg/m3
+increment in PM2.5 exposure was significantly associated with a 2.7% increase in the risk of all-site cancer
+mortality. PM2.5-mortality associations were also observed in cancer of lip, oral cavity and pharynx, stomach,
+colorectum, pancreas, lung, bone and joints, ovary, prostate, and lymphoma (all adjusted P <0.05), with the
+relative risks ranging from 1.028 (95% confidence interval [CI]: 1.011, 1.046) for stomach cancer to 1.201 (95%
+CI: 1.120, 1.308) for bone and joints cancers. Exposure-response curves showed that these associations were
+close to linearity, though most of them had increasing slopes at high exposure levels. Overall, women and
+subjects in low GDP regions were more vulnerable to PM2.5 exposures.
+Conclusions: Long-term exposure to ambient PM2.5 contributes to a higher risk of mortality from multiple site-
+specific cancers.
+1. Introduction worldwide (GBD, 2020). It is estimated that 99% of the entire global
+population breathes unhealthy air exceeding the concentration limits of
+Ambient fine particulate matter (PM2.5) continues to be a major the updated World Health Organization (WHO) Air Quality Guidelines
+environmental issue, which has raised critical public health concerns (annual average PM2.5: 5 μg/m3) in 2022 (WHO, 2022; WHO, 2021).
+Abbreviations: PM2.5, fine particulate matter; RR, relative risk; CI, confidence interval; GDP, gross domestic product.
+* Corresponding author.
+** Corresponding author.
+E-mail addresses: hongsun@jscdc.cn (H. Sun), liuyuewei@mail.sysu.edu.cn (Y. Liu).
+1 The authors consider that the first two authors should be regarded as joint first authors.
+https://doi.org/10.1016/j.envres.2023.115405
+Received 27 December 2022; Received in revised form 26 January 2023; Accepted 30 January 2023
+Availableonline2February2023
+0013-9351/©2023ElsevierInc.Allrightsreserved.
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+Extensive evidence suggests that ambient PM2.5 exposure is detrimental 2.2. Exposure assessment
+to human health by increasing morbidity and mortality from a number
+of diseases including cancer (Lelieveld et al., 2015; Turner et al., 2020). Based on the ChinaHighPM2.5 data from the ChinaHighAirPollutants
+In 2020, cancer caused 9.96 million deaths and was ranked as the second (CHAP; available at https://weijing-rs.github.io/product.html) data-
+primary cause of death globally (Sung et al., 2021). Considering that sets, we extracted annual average PM2.5 grid data with the spatial res-
+most cancers are attributable to genetic and environmental interactions olution of 0.01◦in Jiangsu province between 2006 and 2020. The CHAP
+(Mbemi et al., 2020), it is of great necessity to estimate the cancer datasets were generated by hybrid machine-learning prediction models
+mortality associated with PM2.5 exposure. Accumulating epidemiolog- integrating ground measurement data, satellite remote sensing products,
+ical studies have found chronic detrimental effects of PM2.5 exposure on and atmospheric reanalysis data (Wei et al., 2020; Wei et al., 2021). The
+mortality from all-site cancer and lung cancer (Chen and Hoek, 2020; cross-validation coefficient of determination (CV-R2) value of the annual
+Chen et al., 2021; Ciabattini et al., 2021; Coleman et al., 2020b; Pope average PM2.5 grid data was 0.94, which has been validated and used in
+et al., 2020; Turner et al., 2020; Wang et al., 2020a; Wong et al., 2016). our published studies (Li et al., 2022; Liu et al., 2021; Wang et al., 2021).
+The Global Burden of Disease (GBD) Study 2019 estimated that 308,000 Annual grid data (spatial resolution: 30 arc seconds, equates to about 1
+lung cancer deaths were attributable to PM2.5 exposure worldwide, km at 0◦latitude) on population distribution in Jiangsu province during
+including 171,300 deaths in China (GBD, 2020). 2006–2020 were obtained from Landscan Global grid datasets (available
+While most studies explored the association of long-term exposure to at https://landscan.ornl.gov/). We used a 2-stage approach to evaluate
+PM2.5 with mortality from all-site cancer or lung cancer, the chronic long-term PM2.5 exposure. First, we calculated the population-weighted
+effects of PM2.5 exposure on mortality from other site-specific cancers annual average PM2.5 concentrations for each spatial unit using the sum
+remain less clear. Only a small number of studies provided epidemio- of the product between the grid population weight and the grid PM2.5
+logical evidence on the associations of long-term PM2.5 exposure with concentration within each spatial unit’s geographical boundary. The
+mortality from cancer of stomach, colorectum, liver, pancreas, breast, population weight was defined as the percentage of the population in
+ovary, bladder, kidney, and leukemia (Coleman et al., 2020b; Guo et al., each grid accounting for the total population of all grids within each
+2020; Guo et al., 2021; Hung et al., 2012; Turner et al., 2017; Wang spatial unit’s geographical boundary. Second, considering the potential
+et al., 2019; Wang et al., 2018; Wong et al., 2016; Yeh et al., 2017; Yu lag impacts of PM2.5 exposure on cancer death, which generally referred
+et al., 2022a–c), and the results are mixed. Note that some of these to the elapsed duration between exposure to cancer-causing substances
+studies are limited by a small sample size, less accurate exposure (e.g., PM2.5) and the occurrence of cancer death, we set the exposure lag
+assessment, and/or narrow range of exposure level, which can introduce period to 10 years based on the lowest Bayesian Information Criterion
+great heterogeneity and make it difficult in comparing the results across (BIC). We extracted the population-weighted PM2.5 exposures of each
+studies or across different cancers. Given the high disease burden of a spatial unit in the past 9 years before 2015–2020 and assessed the
+series of site-specific cancers, it is of great importance to systematically long-term exposure to PM2.5 in a given year during the study period by
+quantify the association of long-term PM2.5 exposure with the risk of averaging the annual concentrations in the current year and the pre-
+mortality from site-specific cancers in a single study. ceding 9 years. For example, long-term exposure to PM2.5 in the year
+Here, we performed a validated difference-in-differences (DID) 2015 was estimated by averaging population-weighted exposures from
+analysis to assess the causal effect of long-term PM2.5 exposure on 2006 to 2015.
+multiple cancer mortality, utilizing large-scale and population-based
+mortality surveillance data in Jiangsu province, China during 2.3. Outcomes
+2015–2020. We aimed to quantitatively evaluate the association of long-
+term ambient PM2.5 exposure with mortality from all-site and a variety The study outcomes were mortality from all-site cancer (ICD-10
+of site-specific cancers. Population vulnerability was further investi- codes: C00–C97) and 23 site-specific cancers, including cancer of lip,
+gated by demographic characteristic and socioeconomic status (SES). oral cavity and pharynx (C00–C14), nasopharynx (C11), digestive sys-
+tem (C15–C26), esophagus (C15), stomach (C16), colorectum
+2. Materials and methods (C18–C21), liver (C22), pancreas (C25), respiratory system (C30–C39),
+lung (C33–C34), bone and joints (C40–C41), breast (C50), female gen-
+2.1. Study area and population ital system (C51–C58), cervix (C53), ovary (C56), male genital system
+(C60–C63), prostate (C61), urinary system (C64–C68), kidney
+Our study was conducted in Jiangsu province, which is a coastal (C64–C65), bladder (C67), brain (C71), lymphoma (C81–C85), and
+province in East China with a total area of 107,200 square kilometers. leukemia (C91–C95).
+Jiangsu is one of the leading provinces in finance, education, technol-
+ogy, and tourism in China. As a densely populated province, Jiangsu had 2.4. Covariates
+a population of 84.7 million in 2020, contributing 6.0% of the national
+population in China. In this analysis, we divided Jiangsu province into To control potential confounding biases induced by meteorological
+53 spatial units according to China’s county-level administrative di- factors (Gasparrini et al., 2015; Renzi et al., 2019; Wang et al., 2016; Yu
+visions (Table S1). et al., 2022a), we adopted 24-h average grid data (temporal resolution:
+We identified 947,337 cancer deaths aged over 20 years who lived in daily; spatial resolution: 0.0625◦×0.0625◦) on air temperature (◦C) and
+Jiangsu province and died from cancer between 2015 and 2020 from the relative humidity (%) in Jiangsu province during 2015–2020 from the
+mortality surveillance system of Jiangsu province. This system was China Meteorological Administration Land Data Assimilation System
+managed by the Jiangsu Provincial Center for Disease Control and (CLDAS version 2.0), which was generated and routinely updated by the
+Prevention and was implemented to routinely monitor causes of death China National Meteorological Information Center (Liu et al., 2020).
+among the general population of Jiangsu province. We collected infor- After converting the meteorological grid data to those with the spatial
+mation for each death on sex, date of birth, date of death, residential resolution of 0.01◦, annual average temperatures in summer (June, July,
+address, and underlying cause of death coded by the 10th revision of the and August) and winter (January, February, and December) and annual
+International Statistical Classification of Diseases and Related Health mean relative humidity were calculated by averaging values of all grids
+Problems (ICD-10). Based on the residential address, we aggregated within each spatial unit’s geographical boundary during 2015–2020.
+annual death counts for all-site and site-specific cancers by spatial unit Information on population size and gross domestic product (GDP) in
+and calendar year during our study period. each spatial unit by year was extracted from the Jiangsu Statistical
+Yearbook 2016–2021.
+2
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+2.5. Statistical analysis ∑
+t=2020
+E = t=2015R c,t (2)
+We applied a DID design with multiple periods and spatial units to c 6
+e ax lla -sm iti en e a t nh de c sa itu es -a sl p e ef cf ie fic ct o cf a l non ceg r- ste r (m W aP nM g2 .5 e te x ap lo .,s u 2r 0e 1o 6n ) .m o Ar st a ali ty c afr uo sm al RC c,t=R c,t E(cid:0) E c×100% (3)
+modeling approach, the DID analysis examined the effects of PM2.5 c
+exposure on health outcomes by evaluating the relevance of differences
+i un n iP tM ov2. e5 r e tx impo es ,u ar ne d w hi ath s bd eif ef ne r wen idc ee ls y i n ap t ph le i es dtu td oy e xo pu lt oc ro em te h ein c ae ua sc ah l s ep ffa et cia tsl w deh ae tr he s R inc, t spre ap tir ae ls e un nt is t p c o ap nu dl a yti eo an r- w t; e Eig c h it se td h eP M m2 e.5 a ne x op f o Ps Mur 2e .s 5 o or r c ca an nc ce er r
+of long-term ambient pollutant exposures on various health outcomes
+deaths in spatial unit c during 2015–2020; RCc,t is the relative change of
+(Leogrande et al., 2019; Renzi et al., 2019; Wang et al., 2016; Yit-
+PM2.5 or cancer deaths in spatial unit c and year t. Second, we assumed
+that no spatiotemporal factors other than seasonal temperatures and
+shak-Sade et al., 2019; Yu et al., 2020). Because the population in a
+given spatial unit was compared to itself over different periods, un-
+GDP have confounded the association between PM2.5 exposure and
+cancer mortality.
+measured confounders that rarely changed over time or kept constant
+Using the conditional Poisson regression model established in the
+during the study period were naturally controlled; however, factors that
+previous section, we estimated relative risks (RRs) and corresponding
+were correlated with the temporal exposures and varied differently
+95% confidence intervals (95% CIs) of mortality from all-site and site-
+across spatial units over time still needed to be adjusted. As proposed in
+previous studies (Renzi et al., 2019; Wang et al., 2016; Yu et al., 2022a,c;
+specific cancers associated with per 1 μg/m3 increment in PM2.5 expo-
+Yu et al., 2020), we considered seasonal temperatures, relative humid-
+sure. To plot exposure-response curves of PM2.5 with cancer mortality,
+ity, and GDP as potential spatiotemporal confounders and fitted a con-
+we fitted PM2.5 exposure using natural cubic spline function with 3
+degrees of freedom in our model and further checked the nonlinearity
+ditional Poisson regression model to qualify the causal and long-term
+using likelihood ratio tests. All P values from multiple testing were
+association between PM2.5 exposure and cancer mortality:
+[ (cid:0) )] ) ) adjusted using the false discovery rete (FDR) method (Benjamini and
+ln E Y c,t =β 0+β 1(PM 2.5c,t+ )β 2I c+β 3I t+ns(β 4T (cid:0)emp s (cid:0)umc,t + )n )s(β 5Temp winc,t Hochberg, 1995; Coleman et al., 2020a).
++ns β 6RH c,t +β 7GDP c,t+offset log Pop c,t We performed stratified analyses by sex and GDP (categorized by the
+median of GDP values across 53 spatial units in 2015). The two-sample z
+(1) test was applied to detect the effect modification by stratification vari-
+ables (Altman and Bland, 2003):
+where Yc,t means the expected amount of cancer deaths in spatial unit c
+and year t; PM2.5c,t denotes the population-weighted PM2.5 exposure in z=√̅̅̅̅̅̅̅β ̅̅1̅̅̅(cid:0) ̅̅̅̅̅β ̅̅2̅̅̅̅̅̅̅̅̅̅̅̅̅
+spatial unit c and year t; Ic refers to a dummy variable for each of the 53 (SE 1)2+(SE 2)2 (4)
+spaces in Jiangsu province, which was adjusted by the eliminate argu-
+dm ue rn int go f
+2
+t 0h 1e
+5
+m –2o 0d 2e 0l;
+;
+It
+c
+td e Tfi en me ps
+s
+ua
+m
+d c,u t,m Tm emy pv wa ir ni ca ,tb l ae
+n
+f do r
+R
+e Hac c,h
+t
+rc ea ple rn esd ea nr
+t
+y te ha er w froh mer e
+th
+β e1 ca on nd
+d
+iβ t2
+i
+or ne ap lr Pes oe in sst
+o
+t nh e
+re
+r ge rg er se ss is oi no n
+m
+c oo de ef lfi
+s
+c ii ne n eats
+c
+ho f
+s
+tP rM at2 u.5
+m
+e
+;
+x St Era
+1
+c at ned
+d
+average temperatures in summer and winter and the average relative
+SE2 are the corresponding standard errors.
+humidity in spatial unit c and year t, respectively, all of which are
+Several sensitivity analyses were performed to check the robustness
+modeled as natural cubic spline function (function ns) with 3 degrees of
+of the results, including: (1) using natural cubic spline function with 4
+freedom (df) to consider the possible nonlinear associations of temper-
+and 5 df in the adjustment for seasonal temperatures and annual relative
+ature and relative humidity with mortality; GDPc,t indicates the value of
+humidity; (2) adjusting for annual average temperature instead of sea-
+GDP in spatial unit c and year t; log(Popc,t)represents the natural loga-
+sonal temperatures; (3) adjusting for ozone (O3) and coarse particulate
+rithm of annual population size in spatial unit c and year t, which was
+matter (PM2.5-10) exposures in the model, respectively; (4) modifying
+adjusted as the offset term in the model; β 0 is the intercept term; the lag periods of long-term PM2.5 exposure from 10 years to 7–9 years
+β 1represents the regression coefficient for the chronic effect of PM2.5
+which were also commonly used in previous studies in estimating the
+exposure on a variety of site-specific cancer mortality; β and β are
+2 3 chronic effect of PM2.5 (Crouse et al., 2020; Wang et al., 2020b); (5)
+regression coefficients adjusting for spatial and temporal variables of Ic excluding the current year’s exposure when estimating the long-term
+and It, respectively; β
+4
+to β
+7
+are regression coefficients for mean summer
+PM2.5 exposure during the study period. We utilized R software
+temperature, mean winter temperature, mean relative humidity, and
+(version 4.1.2) to perform all data analyses and data visualizations (R
+GDP, respectively.
+Core Team, 2021). The conditional Poisson regression models were
+As proposed previously (Wang et al., 2016; Yitshak-Sade et al.,
+fitted with the gnm package (Armstrong et al., 2014). The statistically
+2019), the DID approach had two presupposed assumptions. The first
+significant level of the two-tailed P value was set to 0.05.
+assumption was the parallel trend assumption, which means that all
+spatial units should have common trends of cancer mortality. If PM2.5
+3. Results
+levels do not fluctuate over time under the counterfactual framework,
+the differences in cancer mortality across spatial units should remain During 2015–2020, we collected 947,337 cancer deaths from 53
+stable over time as well. While, in the actual PM2.5 exposure settings, it is
+spatial units in Jiangsu province, including 239,087 cancers of lung
+allowed that the trends of cancer deaths across spatial units vary over
+(25.2%), 146,401 of stomach (15.5%), 127,286 of esophagus (13.4%),
+time because other factors influencing mortality may exist. Therefore, as
+116,236 of liver (12.3%), 64,736 of colorectum (6.8%), 47,206 of
+long as the differences in cancer deaths over time by spatial units were
+pancreas (5.0%), 19,492 of breast (2.1%), and 19,273 of leukemia
+not correlated with these in PM2.5, the parallel trend assumption would
+(2.0%). Among these deaths, 63.9% were men and 71.0% were over 65
+hold. Since we were unable to observe the counterfactual hypothesis and
+years. Stomach and lung cancers were the two primary causes of cancer
+no statistical method was available to examine this assumption, we used death among men, women, and older adults (≥65 years), while liver and
+the relative change rate (RCc,t) to assess and visualize the corresponding
+lung cancers were the two primary causes of cancer death in adults aged
+fluctuations of differences in PM2.5 and the number of cancer deaths 20–65 years (Table S2). Annual average population-weighted PM2.5
+across each spatial unit between 2015 and 2020 (Fig. S1) (Hu et al., exposure was 60.3 μg/m3 (standard deviation [SD]: 7.0 μg/m3), with a
+2022; Yu et al., 2020). range of 40.2–81.6 μg/m3. Annual average temperatures in summer and
+winter and annual relative humidity were 27.0 ◦C (SD: 0.9 ◦C), 4.6 ◦C
+3
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+Table 1
+Characteristics of cancer deaths and summary statistics of demographic, socioeconomic, and environmental data for 53 spatial units in Jiangsu province, China during
+2015–2020.
+Characteristic Total Mean (SD) Min P25 Median P75 Max IQR
+Death data
+Cancer deaths 947,337 2,979 (2,158) 744 1,643 2,338 3,256 12,877 1,613
+Sex
+Male 605,452 (63.9) 1,904 (1,375) 454 1,064 1,468 2,071 8,248 1,007
+Female 341,885 (36.1) 1,075 (785) 261 580 871 1,176 4,712 596
+Age
+<65 years 274,619 (29.0) 864 (597) 178 497 678 966 3,766 470
+≥65 years 672,718 (71.0) 2,115 (1,582) 511 1,146 1,666 2,282 9,705 1,137
+Demographic data
+Population size, 106 84.7 1.5 (1.4) 0.3 0.8 1.0 1.6 9.3 0.8
+Sex
+Male 43.0 0.8 (0.7) 0.1 0.4 0.5 0.8 4.8 0.4
+Female 41.7 0.8 (0.7) 0.1 0.4 0.5 0.8 4.6 0.4
+Socioeconomic data
+GDP, 108, CNY NA 1,700 (2,200) 217 505 859 1,960 14,800 1,460
+Environmental data
+PM2.5, lag 0-year, μg/m3 NA 47.6 (8.7) 25.9 41.6 47.3 52.9 74.8 11.3
+PM2.5, lag 09-year, μg/m3 NA 60.3 (7.0) 40.2 55.7 60.2 64.3 81.6 8.6
+Summer temperature, ◦C NA 27.0 (0.9) 24.9 26.4 27.0 27.6 28.9 1.2
+Winter temperature, ◦C NA 4.6 (1.3) 1.6 3.5 4.6 5.8 7.5 2.2
+Relative humidity, % NA 74.7 (2.5) 65.2 73.2 74.9 76.4 80.6 3.2
+Abbreviations: SD, standard deviation; IQR, interquartile range; GDP, gross domestic product; CNY, Chinese Yuan; PM2.5, fine particulate matter; NA, not available.
+Column percentages are expressed as n (%) and the averages of continuous variables are given as mean (SD).
+Fig. 1. Spatial distribution of the annual PM2.5 exposures and cancer deaths in 53 spatial units in Jiangsu province, China during 2015–2020.
+(SD: 1.3 ◦C), and 74.7% (SD: 2.5%), respectively (Table 1). FDR method, long-term PM2.5 exposure was significantly associated
+Fig. 1 displays the distribution of long-term PM2.5 exposure levels with elevated risks of cancer mortality from lip, oral cavity and pharynx
+and all-site cancer deaths in 53 spatial units in Jiangsu province, China (RR: 1.069; 95% CI: 1.011, 1.130), digestive system (1.020; 1.011,
+from 2015 to 2020. The PM2.5 exposure showed an overall decreasing 1.030), stomach (1.028; 1.011, 1.046), colorectum (1.029; 1.004,
+trend in Jiangsu province over time. The high-polluted areas were 1.055), pancreas (1.065; 1.035, 1.096), respiratory system (1.035;
+mainly located in the northwest of Jiangsu province. Fig. S1 presents the 1.022, 1.049), lung (1.035; 1.021, 1.049), bone and joints (1.201; 1.120,
+relative change rates on both PM2.5 and all-site cancer deaths in each 1.308), ovary (1.108; 1.031, 1.190), male genital system (1.088; 1.034,
+spatial unit during 2015–2020. Over the study period, the trend of 1.145), prostate (1.089; 1.034, 1.148), urinary system (1.061; 1.012,
+relative change in cancer mortality was generally stable and it was 1.112), and lymphoma (1.106; 1.049, 1.168). As shown in Fig. 2, we
+slightly opposite to the fluctuation in PM2.5 exposure, which can provide plotted nonlinear exposure-response curves of long-term PM2.5 exposure
+evidence to support the parallel trend assumption. with cancer mortality. The risk of all-site cancer mortality showed a
+Table 2 presents the estimated relative risks of mortality from all-site monotonically increasing trend with incremental PM2.5 exposure across
+and site-specific cancer deaths associated with each 1 μg/m3 increase of the entire exposure range, with increasing slopes at high exposure levels
+long-term exposure to ambient PM2.5. With each 1 μg/m3 increment in (P for nonlinear trend <0.001; Table 2). Similar nonlinear trends
+PM2.5 exposure, the estimated RR of all-site cancer mortality was 1.027 significantly associated with PM2.5 exposure were also found for mor-
+(95% CI: 1.020, 1.034). After the multiple testing adjustment using the tality from cancer of digestive system, stomach, colorectum, pancreas,
+4
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+Table 2 Abbreviations: RR, relative risk; CI, confidence interval; PM2.5, fine particulate
+Estimated RR (95% CI) of cancer mortality associated with each 1 μg/m3 in- matter; ICD-10, International Statistical Classification of Diseases and Related
+crease of long-term exposure to ambient PM2.5 in Jiangsu province, China during Health Problems 10th Revision; FDR, false discovery rate.
+2015–2020. The P values for linear trend and nonlinear trend were adjusted by the FDR
+method.
+Site-specific cancer Per 1 μg/m3 FDR-adjusted P FDR-adjusted P for A FDR-adjusted P value <0.05 was considered significant.
+(ICD-10 codes) increase for linear trend nonlinear trend
+All sites (C00–C97) 1.027 <0.001 <0.001
+respiratory system, lung, ovary, and lymphoma (all P for nonlinear trend
+(1.020,
+1.034) <0.05; Table 2).
+Lip, oral cavity and 1.069 0.03 0.25 Fig. 3 demonstrates the associations of PM2.5 exposure with mor-
+pharynx (C00–C14) (1.011, tality from all-site and site-specific cancers stratified by sex and GDP
+1.130)
+(Data are displayed in Table S3 and Table S4 in Supplementary Mate-
+Nasopharynx (C11) 1.080 0.07 0.11
+(1.001, rials). No significant effect modification by sex was identified, except
+1.165) that the association of pancreas cancer mortality was significantly
+Digestive system 1.020 <0.001 0.004 greater in women (P for effect modification =0.045). Subjects in low
+(C15–C26) (1.011, GDP regions had significantly stronger associations for all-site and
+1.030) stomach cancer (all P for effect modification <0.05), while the risk of
+Esophagus (C15) 1.015 0.24 0.56
+(0.992, ovary cancer mortality was higher in subjects living in high GDP areas (P
+1.037) for effect modification =0.03).
+Stomach (C16) 1.028 0.002 0.03 In sensitivity analyses, no substantial change was observed when
+(1.011,
+adjusting for seasonal temperatures and relative humidity with different
+1.046)
+Colorectum 1.029 0.03 0.01 dfs or adjusting for annual average temperature (Table S5). The analyses
+(C18–C21) (1.004, with the adjustment for O3 and coarse particulate matter exposures
+1.055) yielded similar results (Table S6). The analyses adopting 7- to 9-year
+Liver (C22) 1.000 0.98 <0.001 average exposure to PM2.5 also yielded similar results to those of the
+(0.980,
+main analyses using 10-year average exposure (Table S7). When
+1.020)
+Pancreas (C25) 1.065 <0.001 <0.001 applying the long-term exposure with excluding the current year’s
+(1.035, exposure, similar PM2.5-mortality associations were observed
+1.096) (Table S6).
+Respiratory system 1.035 <0.001 <0.001
+(C30–C39) (1.022,
+1.049) 4. Discussion
+Lung (C33–C34) 1.035 <0.001 <0.001
+(1.021, This is the first DID analysis to investigate the causal effect of long-
+Bone and joints
+11 .. 20 049
+1
+)
+<0.001 0.16
+term ambient PM2.5 exposure on site-specific cancer mortality in
+(C40–C41) (1.120, China. We identified that long-term exposure to PM2.5 was positively
+1.308) associated with mortality from all-site cancer and cancer of lip, oral
+Breast (C50) 0.976 0.34 0.09 cavity and pharynx, stomach, colorectum, pancreas, lung, bone and
+(0.933, joints, ovary, prostate, and lymphoma. Stratified analyses revealed that
+1.022)
+women and people living in low GDP regions had higher risks of mor-
+Female genital system 1.028 0.24 0.05
+(C51–C58) (0.986, tality from certain site-specific cancer.
+1.072) The positive PM2.5-mortality association for all-site cancer was
+Cervix (C53) 0.942 0.08 0.41 generally in line with those in prior studies. A national DID analysis in
+(0.885, Brazil during 2010–2018 reported that with per 10 μg/m3 increment in
+1.003)
+Ovary (C56) 1.108 0.01 0.03
+3-year average PM2.5 exposure, the risk of all-site cancer mortality
+(1.031, significantly increased by 16% (Yu et al., 2022a), which was lower than
+1.190) that in our results (27%). Results from the Hong Kong, China and the US
+Male genital system 1.088 0.002 0.39 cohorts showed that with per 10 μg/m3 increment in long-term PM2.5
+(C60–C63) (1.034,
+exposure, the estimated risk of all-site cancer mortality increased by
+1.145)
+22.0%, 15.0%, and 2.5%, respectively (Coleman et al., 2020b; Wang
+Prostate (C61) 1.089 0.002 0.41
+(1.034, et al., 2020a; Wong et al., 2016), which were also lower than our esti-
+1.148) mates. The difference in the magnitude of the effect estimates can be due
+Ur (i Cn 6ar 4y – Csy 6s 8t )e m 1 (1.0 .06 11 2 , 0.03 0.65 t Bo r:
+a
+( z1 il) aD ni dve tr hs ee P UM
+S
+2 c.5
+o
+ve ex rp eo ds u ar e
+ra
+r na gn eg e os f. lT eh sse tP hM an2. 5
+3
+e 0x p μgo /su mr 3e ,s wof
+h
+s et ru ed ai se s
+o
+uin
+r
+1.112)
+Kidney (C64–C65) 1.092 0.06 0.39 results were derived from a much higher and wider PM2.5 exposure
+(1.006, range (40.2–81.6 μg/m3); (2) Different populations. The cohorts from
+1.185) Hong Kong and the US only included people over 65 years, while our
+Bladder (C67) 1.054 0.11 0.58
+analysis was conducted among adults 20 years or older.
+(0.994,
+Similar with some previous studies conducted in China (Guo et al.,
+1.119)
+Brain (C71) 1.024 0.36 0.38 2017; He et al., 2018; Li et al., 2020; Yin et al., 2017), we found a
+(0.976, negative effect of PM2.5 exposure on lung cancer mortality (per 10
+Lymphoma (C81–C85) 1 1. .0 17 05 6) <0.001 0.04 μ hg ig/ hm e3
+r
+i tn hc ar ne a ts he
+a
+ti n
+in
+P aM n2. a5,
+t
+ioR nR a:
+l
+1 m.3 e5 n) ,
+c
+t oh ho ou rg
+t
+h
+(
+po eu
+r
+r
+1
+e 0s t μim g/a mte 3d inv ca rlu eae
+s
+ew a ins
+(1.049,
+1.168) PM2.5, hazard ratio: 1.12) and a study using lung cancer death data from
+Leukemia (C91–C95) 0.998 0.98 0.39 75 Chinese communities (per 10 μg/m3 increase in PM2.5, RR: 1.08)
+(0.952, (Guo et al., 2017; Yin et al., 2017). In addition, in line with the cohort
+1.046)
+study of the China-PAR project (Li et al., 2020), our findings showed that
+5
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+Fig. 2. Exposure-response curve of long-term exposure to ambient PM2.5 with cancer mortality with a significant nonlinear association. The solid blue lines with
+shaded regions indicate RRs of cancer mortality and their 95% CIs, respectively. Abbreviations: PM2.5, fine particulate matter; RR, relative risk; CI, confi-
+dence interval.
+the PM2.5-mortality association for lung cancer exhibited a similar 2021; Hung et al., 2012; Turner et al., 2017; Wang et al., 2019). Overall,
+nonlinear exposure-response shape, with a monotonically increasing our findings and previous studies provide evidence on the harmful effect
+trend at low PM2.5 exposure levels and steeper slopes at the high PM2.5 of PM2.5 exposure on mortality from cancer of many organs. Further
+exposure levels. This exposure-response pattern can be useful in devel- studies focusing on site-specific cancers are warranted to facilitate the
+oping effective strategies to minimize the burden of lung cancer death. assessment of cancer burden concerning long-term exposure to ambient
+Moreover, we observed that long-term exposure to PM2.5 showed sig- PM2.5.
+nificant adverse effects on the risks of mortality from a variety of The risk of mortality from certain site-specific cancers in our study
+site-specific cancers including lip, oral cavity and pharynx, stomach, was higher than several previous studies (Chen et al., 2021; Coleman
+colorectum, pancreas, lung, bone and joints, ovary, prostate, and lym- et al., 2020b; Turner et al., 2017; Wang et al., 2020a; Wong et al., 2016;
+phoma, which have rarely been investigated and the results remain Yu et al., 2022a–c) with possible reasons including: (1) Different study
+inconclusive. For digestive system cancer, existing studies reported design. Most previous studies used a cohort design to control only a
+PM2.5 exposure was associated with cancer mortality from stomach, limited number of measured confounding factors (Chen et al., 2021;
+colorectum, and digestive accessory organs (e.g., liver and pancreas) Coleman et al., 2020b; Turner et al., 2017; Wang et al., 2020a; Wong
+(Coleman et al., 2020b; Guo et al., 2020; Turner et al., 2017; Wang et al., et al., 2016), and were usually subject to residual confounding that can
+2018; Wong et al., 2016). For urinary system cancer, two cohort studies induce biased estimates. In this DID analysis, we considered temporal
+in the US and one spatial analysis in Taiwan, China consistently reported variables, spatial variables, and measured confounders (i.e. tempera-
+a positive association with the risk of bladder cancer mortality (Coleman ture, relative humidity, and socioeconomic status), which can indirectly
+et al., 2020b; Turner et al., 2017; Yeh et al., 2017); however, we did not control a number of common factors that changed across areas over
+observe significant PM2.5-mortality associations either from kidney time. Since the population of a spatial unit was compared with itself at
+cancer or bladder cancer. Studies have also observed negative associa- different periods, unmeasured confounders that rarely changed over
+tions of exposure to PM2.5 with cancer mortality from breast, ovary, time or kept constant during the study period were also controlled
+prostate, lymphoma, and leukemia (Coleman et al., 2020b; Guo et al., through the study design. (2) Different exposure level. Most previous
+6
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+Fig. 3. Estimated RR (95% CI) of cancer mortality associated with each 1 μg/m3 increase of long-term exposure to ambient PM2.5 stratified by sex and GDP. Ab-
+breviations: RR, relative risk; CI, confidence interval; PM2.5, fine particulate matter; GDP, gross domestic product.
+7
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+studies on PM2.5 exposure and site-specific cancer mortality were mainly PM2.5 exposure on the progression of cancer death.
+conducted in the US and Brazil (Coleman et al., 2020b; Turner et al., There are also some limitations. First, we only adjusted for seasonal
+2017; Wang et al., 2020a; Yu et al., 2022a–c). The exposure level of temperatures, relative humidity, and GDP in the model. Other spatio-
+PM2.5 and its constituents in China were different from that in these temporal variables, including employment rates and behavior trends in
+regions, which can lead to various susceptibility to PM2.5 exposure smoking and alcohol consumption, may confound the associations be-
+across site-specific cancers. (3) Limited sample size. Consistent with tween PM2.5 exposure and cancer mortality (Wang et al., 2016; Yit-
+published literature, the sample size of site-specific cancers with higher shak-Sade et al., 2019). Although these unmeasured confounders were
+effect estimates was typically smaller (Turner et al., 2017), which can unable to be adjusted in the model, the dummy variables for years and
+add more uncertainties and warrants large-scale investigations in future. spatial units in the model can in part control the corresponding change
+We assessed exposure-response curves of PM2.5 with mortality from a trends of these confounders and reduce potential bias. Second, we were
+variety of site-specific cancers in China. Our results suggest that the unable to consider the individuals’ residential mobility and used expo-
+associations of long-term exposure to PM2.5 with cancer mortality were sure estimates at the county of death as a proxy of long-term exposure
+approximately linear across the exposure range of 40.2–81.6 μg/m3, indicators. Nonetheless, it is suggested that the exposure misclassifica-
+though there was a steeper increase of mortality risk in higher exposure tion due to the lack of residential history is probably non-differential and
+levels. One possible explanation is that PM2.5 exposure interacts with may lead the bias of estimated associations to null effects (Cheng et al.,
+other factors (e.g., socioeconomic status and medical accessibility) to 2020; Crouse et al., 2015). Finally, since the lack of historical ambient
+synergistically increase the mortality risk at higher exposure levels (Han pollutants data, we were unable to conduct analyses by further adjusting
+et al., 2021; Zhao et al., 2021). Note that these curves did not indicate a for other gaseous pollutants (e.g., nitrogen dioxide, sulfur dioxide, car-
+potential exposure threshold for risk of cancer mortality, suggesting that bon monoxide) in the models. Given that published literature also linked
+reducing PM2.5 exposures in any level within our exposure range other pollutant exposures to cancer mortality (Turner et al., 2020; W.
+(especially at high exposure levels) can yield significant health benefits. Wei et al., 2021), future studies can account for co-pollutants exposure
+It should also be noted that more uncertainties were observed for the risk when estimating PM2.5-mortality associations.
+of cancer mortality associated with high level of PM2.5 exposures, which
+needs to be confirmed in further studies. 5. Conclusion
+In stratified analysis, we found that the association of pancreas
+cancer mortality was significantly stronger in women than that in men. In summary, our results established causal associations between
+This finding can be explained by the difference in individual habits on long-term exposure to PM2.5 and the increased risk of mortality from all-
+cooking oil fumes exposure and the sexual discrepancy in metabolism. site cancer and site-specific cancers including the digestive system, the
+For the GDP level, subjects living in low GDP regions showed stronger respiratory system, the reproductive system, the urinary system, and the
+PM2.5-mortality associations of all-site cancer and stomach cancer. hematopoietic system. Our findings suggest that women and people
+Perhaps these differences are related to the inhabitants in these areas living in low SES regions are more vulnerable to PM2.5 exposures. Our
+spending more time on outdoor activities, which further leads to higher study provides further evidence that ambient PM2.5 can be a contributor
+exposure to ambient air pollution (Han et al., 2021). Moreover, low to mortality from a number of site-specific cancers and highlights the
+socioeconomic status regions may have the insufficient budget to control needs to take effective measures for both policymakers and individuals
+air pollution, which can aggravate the vulnerability of populations to air to reduce exposures to PM2.5 pollution.
+pollution (Zhao et al., 2021).
+Several possible pathways could explain the potential biological Credit authorship and contribution statement
+mechanisms between PM2.5 exposure and cancer mortality. First, PM2.5
+contains various mutagens and carcinogenic substances including Zhaoyu Fan, Yingxin Li: Methodology, Formal analysis, Writing –
+polycyclic aromatic hydrocarbons, volatile organic compounds, and original draft, Visualization. Jing Wei: Data collection. Gongbo Chen,
+heavy metals, which can transport and metabolize in the body and Rui Wang, Ruijun Xu, Tingting Liu, Ziquan Lv, Suli Huang: Writing –
+trigger the progression of cancer (Castano-Vinyals et al., 2004; Man- review & editing. Hong Sun: Data collection, Writing – review & editing.
+isalidis et al., 2020; Moorthy et al., 2015). Second, previous studies have Yuewei Liu: Conceptualization, Methodology, Writing – review & edit-
+connected air pollution exposure with epigenetic modifications ing, Supervision.
+including DNA hypermethylation and hypomethylation, both of which
+are considered as cancer-related and early-effect biomarkers (Demetriou Declaration of competing interest
+and Vineis, 2015; Sanchez-Guerra et al., 2015; Zhang et al., 2020).
+Third, PM2.5 may cause oxidative stress and inflammation, which are The authors declare that they have no known competing financial
+proven to be connected with several cancers such as breast, colorectum, interests or personal relationships that could have appeared to influence
+and stomach cancer (Baulig et al., 2007; Kruk and Aboul-Enein, 2017). the work reported in this paper.
+Finally, PM2.5 can penetrate the alveolar-blood barrier and blood-brain
+barrier (Cristaldi et al., 2022). PM2.5-bound toxic substances are then Data availability
+able to enter the bloodstream, transport throughout the body, and cause
+adverse effects on different organs (Anderson et al., 2012; Choi et al., Data on air pollution and grid population density are available at
+2018). https://weijing-rs.github.io/and https://landscan.ornl.gov/, respec-
+Our study has the following advantages. First, we enrolled over 80 tively. Data on weather and mortality are confidential.
+million general population with 0.95 million cancer deaths across 53
+spatial units during 6 consecutive years. Our sample size is large enough Acknowledgements
+to provide sufficient statistical power and allow u to make a novel
+contribution to the causal effect of long-term PM2.5 exposure on mor- This work was supported by the National Science and Technology
+tality from multiple site-specific cancers using the DID analysis in China. Major Project (grant number: 2022YFC3700105).
+Second, the PM2.5 exposure was assessed using a high-quality and high-
+resolution (0.01◦×0.01◦) dataset, which can reduce the uncertainty in Appendix A. Supplementary data
+exposure measurement (Wei et al., 2022). Third, the use of historical
+estimates on long-term ambient concentrations over a 10-year exposure Supplementary data to this article can be found online at https://doi.
+window can give better evaluations of the cumulative chronic impacts of org/10.1016/j.envres.2023.115405.
+8
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+References He, Y., Gao, Z., Guo, T., Qu, F., Liang, D., Li, D., et al., 2018. Fine particulate matter
+associated mortality burden of lung cancer in Hebei Province, China. Thorac Cancer
+9, 820–826. https://doi.org/10.1111/1759-7714.12653.
+Altman, D.G., Bland, J.M., 2003. Interaction revisited: the difference between two
+Hu, J., Zhou, M., Qin, M., Tong, S., Hou, Z., Xu, Y., et al., 2022. Long-term exposure to
+estimates. BMJ 326, 219. https://doi.org/10.1136/bmj.326.7382.219.
+ambient temperature and mortality risk in China: a nationwide study using the
+Anderson, J.O., Thundiyil, J.G., Stolbach, A., 2012. Clearing the air: a review of the
+difference-in-differences design. Environ. Pollut. 292, 118392 https://doi.org/
+effects of particulate matter air pollution on human health. J. Med. Toxicol. 8,
+166–175. https://doi.org/10.1007/s13181-011-0203-1. 10.1016/j.envpol.2021.118392.
+Hung, L.J., Chan, T.F., Wu, C.H., Chiu, H.F., Yang, C.Y., 2012. Traffic air pollution and
+Armstrong, B.G., Gasparrini, A., Tobias, A., 2014. Conditional Poisson models: a flexible
+alternative to conditional logistic case cross-over analysis. BMC Med. Res. Methodol.
+risk of death from ovarian cancer in Taiwan: fine particulate matter (PM2.5) as a
+proxy marker. J. Toxicol. Environ. Health 75, 174–182. https://doi.org/10.1080/
+14, 122. https://doi.org/10.1186/1471-2288-14-122.
+15287394.2012.641200.
+Baulig, A., Blanchet, S., Rumelhard, M., Lacroix, G., Marano, F., Baeza-Squiban, A., 2007.
+Kruk, J., Aboul-Enein, H.Y., 2017. Reactive oxygen and nitrogen species in
+Fine urban atmospheric particulate matter modulates inflammatory gene and
+protein expression in human bronchial epithelial cells. Front. Biosci. 12, 771–782. carcinogenesis: implications of oxidative stress on the progression and development
+of several cancer types. Mini Rev. Med. Chem. 17, 904–919. https://doi.org/
+https://doi.org/10.2741/2100.
+10.2174/1389557517666170228115324.
+Benjamini, Y., Hochberg, Y., 1995. Controlling the false discovery rate: a practical and
+powerful approach to multiple testing. J. Roy. Stat. Soc. B 57, 289–300. https://doi. Lelieveld, J., Evans, J.S., Fnais, M., Giannadaki, D., Pozzer, A., 2015. The contribution of
+outdoor air pollution sources to premature mortality on a global scale. Nature 525,
+org/10.1111/j.2517-6161.1995.tb02031.x.
+Castano-Vinyals, G., D’Errico, A., Malats, N., Kogevinas, M., 2004. Biomarkers of 367–371. https://doi.org/10.1038/nature15371.
+Leogrande, S., Alessandrini, E.R., Stafoggia, M., Morabito, A., Nocioni, A., Ancona, C.,
+exposure to polycyclic aromatic hydrocarbons from environmental air pollution.
+et al., 2019. Industrial air pollution and mortality in the Taranto area, Southern Italy:
+Occup. Environ. Med. 61, e12. https://doi.org/10.1136/oem.2003.008375.
+a difference-in-differences approach. Environ. Int. 132, 105030 https://doi.org/
+Chen, J., Hoek, G., 2020. Long-term exposure to PM and all-cause and cause-specific
+10.1016/j.envint.2019.105030.
+mortality: a systematic review and meta-analysis. Environ. Int. 143, 105974 https://
+Li, J., Lu, X., Liu, F., Liang, F., Huang, K., Yang, X., et al., 2020. Chronic effects of high
+doi.org/10.1016/j.envint.2020.105974.
+fine particulate matter exposure on lung cancer in China. Am. J. Respir. Crit. Care
+Chen, Y., Chen, R., Chen, Y., Dong, X., Zhu, J., Liu, C., et al., 2021. The prospective
+Med. 202, 1551–1559. https://doi.org/10.1164/rccm.202001-0002OC.
+effects of long-term exposure to ambient PM2.5 and constituents on mortality in rural
+Li, S., Meng, Q., Laba, C., Guan, H., Wang, Z., Pan, Y., et al., 2022. Associations between
+East China. Chemosphere 280, 130740. https://doi.org/10.1016/j.
+long-term exposure to ambient air pollution and renal function in Southwest China:
+chemosphere.2021.130740.
+the China Multi-Ethnic Cohort (CMEC) study. Ecotoxicol. Environ. Saf. 242, 113851
+Cheng, I., Tseng, C., Wu, J., Yang, J., Conroy, S.M., Shariff-Marco, S., et al., 2020.
+https://doi.org/10.1016/j.ecoenv.2022.113851.
+Association between ambient air pollution and breast cancer risk: the multiethnic
+cohort study. Int. J. Cancer 146, 699–711. https://doi.org/10.1002/ijc.32308. Liu, J., Shi, C., Sun, S., Liang, J., Yang, Z.-L., 2020. Improving land surface hydrological
+simulations in China using CLDAS meteorological forcing data. J. Meteorol. Res. 33,
+Choi, J., Oh, J.Y., Lee, Y.S., Min, K.H., Hur, G.Y., Lee, S.Y., et al., 2018. Harmful impact
+1194–1206. https://doi.org/10.1007/s13351-019-9067-0.
+of air pollution on severe acute exacerbation of chronic obstructive pulmonary
+Liu, M., Tang, W., Zhang, Y., Wang, Y., Baima, K., Li, Y., et al., 2021. Urban-rural
+disease: particulate matter is hazardous. Int. J. Chronic Obstr. Pulm. Dis. 13,
+1053–1059. https://doi.org/10.2147/COPD.S156617. differences in the association between long-term exposure to ambient air pollution
+and obesity in China. Environ. Res. 201, 111597 https://doi.org/10.1016/j.
+Ciabattini, M., Rizzello, E., Lucaroni, F., Palombi, L., Boffetta, P., 2021. Systematic
+envres.2021.111597.
+review and meta-analysis of recent high-quality studies on exposure to particulate
+Manisalidis, I., Stavropoulou, E., Stavropoulos, A., Bezirtzoglou, E., 2020. Environmental
+matter and risk of lung cancer. Environ. Res. 196, 110440 https://doi.org/10.1016/
+and health impacts of air pollution: a review. Front. Public Health 8, 14. https://doi.
+j.envres.2020.110440.
+org/10.3389/fpubh.2020.00014.
+Coleman, N.C., Burnett, R.T., Ezzati, M., Marshall, J.D., Robinson, A.L., Pope 3rd, C.A.,
+Mbemi, A., Khanna, S., Njiki, S., Yedjou, C.G., Tchounwou, P.B., 2020. Impact of gene-
+2020a. Fine particulate matter exposure and cancer incidence: analysis of SEER
+environment interactions on cancer development. Int. J. Environ. Res. Publ. Health
+cancer registry data from 1992-2016. Environ. Health Perspect. 128, 107004
+17, 8090. https://doi.org/10.3390/ijerph17218089.
+https://doi.org/10.1289/EHP7246.
+Moorthy, B., Chu, C., Carlin, D.J., 2015. Polycyclic aromatic hydrocarbons: from
+Coleman, N.C., Burnett, R.T., Higbee, J.D., Lefler, J.S., Merrill, R.M., Ezzati, M., et al.,
+metabolism to lung cancer. Toxicol. Sci. 145, 5–15. https://doi.org/10.1093/toxsci/
+2020b. Cancer mortality risk, fine particulate air pollution, and smoking in a large,
+representative cohort of US adults. Cancer Causes Control 31, 767–776. https://doi. kfv040.
+Pope 3rd, C.A., Coleman, N., Pond, Z.A., Burnett, R.T., 2020. Fine particulate air
+org/10.1007/s10552-020-01317-w. pollution and human mortality: 25+years of cohort studies. Environ. Res. 183,
+Cristaldi, A., Fiore, M., Oliveri Conti, G., Pulvirenti, E., Favara, C., Grasso, A., et al.,
+108924 https://doi.org/10.1016/j.envres.2019.108924.
+2022. Possible association between PM2.5 and neurodegenerative diseases: a
+R Core Team, 2021. R: A Language and Environment for Statistical Computing. R
+systematic review. Environ. Res. 208, 112581 https://doi.org/10.1016/j.
+Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/.
+envres.2021.112581.
+Renzi, M., Forastiere, F., Schwartz, J., Davoli, M., Michelozzi, P., Stafoggia, M., 2019.
+Crouse, D.L., Peters, P.A., Hystad, P., Brook, J.R., van Donkelaar, A., Martin, R.V., et al.,
+2015. Ambient PM2.5, O3, and NO2 exposures and associations with mortality over dLo ifn feg r- ete nr cm
+e-
+iP nM -d1 i0
+f
+fe ex rep no cs eu sr e
+a
+a pn pd
+ro
+c aa cu hs .e E-s np ve ic ri ofi nc
+.
+m Heo art la thli t Py
+e
+i rn
+s
+pt eh ce
+t
+.L a 1t 2i 7u ,m
+6
+r 7e 0g 0io 4n
+h
+( tI tt pa sl :y /) /: a
+16 years of follow-up in the Canadian census health and environment cohort
+(CanCHEC). Environ. Health Perspect. 123, 1180–1186. https://doi.org/10.1289/ doi.org/10.1289/EHP3759.
+Sanchez-Guerra, M., Zheng, Y., Osorio-Yanez, C., Zhong, J., Chervona, Y., Wang, S.,
+ehp.1409276.
+et al., 2015. Effects of particulate matter exposure on blood 5-hydroxymethylation:
+Crouse, D.L., Erickson, A.C., Christidis, T., Pinault, L., van Donkelaar, A., Li, C., et al.,
+results from the Beijing truck driver air pollution study. Epigenetics 10, 633–642.
+t2 e0 m2 p0 o. rE av
+l
+a sl cu aa lt ei n og
+f
+eth xe
+p
+os se un rs eit aiv si st ey
+s
+so mf eP nM t.2 E.5 p-m ido er mta il oi lt oy
+g
+a ys s 3o 1c ,i a 1t 6io 8n –1s 7to
+6 .
+t hh te
+t
+ps sp :a /t /i da ol ia .on rd
+g /
+https://doi.org/10.1080/15592294.2015.1050174.
+Sung, H., Ferlay, J., Siegel, R.L., Laversanne, M., Soerjomataram, I., Jemal, A., et al.,
+10.1097/EDE.0000000000001136.
+2021. Global Cancer Statistics 2020: GLOBOCAN estimates of incidence and
+Demetriou, C.A., Vineis, P., 2015. Carcinogenicity of ambient air pollution: use of
+biomarkers, lessons learnt and future directions. J. Thorac. Dis. 7, 67–95. https:// mortality worldwide for 36 cancers in 185 countries. CA Cancer J. Clin. 71,
+209–249. https://doi.org/10.3322/caac.21660.
+doi.org/10.3978/j.issn.2072-1439.2014.12.31.
+Turner, M.C., Krewski, D., Diver, W.R., Pope 3rd, C.A., Burnett, R.T., Jerrett, M., et al.,
+Gasparrini, A., Guo, Y., Hashizume, M., Lavigne, E., Zanobetti, A., Schwartz, J., et al.,
+2017. Ambient air pollution and cancer mortality in the Cancer Prevention Study II.
+2015. Mortality risk attributable to high and low ambient temperature: a
+multicountry observational study. Lancet 386, 369–375. https://doi.org/10.1016/ Environ. Health Perspect. 125, 087013 https://doi.org/10.1289/EHP1249.
+Turner, M.C., Andersen, Z.J., Baccarelli, A., Diver, W.R., Gapstur, S.M., Pope 3rd, C.A.,
+S0140-6736(14)62114-0.
+et al., 2020. Outdoor air pollution and cancer: an overview of the current evidence
+GBD 2019 Risk Factors Collaborators, 2020. Global burden of 87 risk factors in 204
+and public health recommendations. CA Cancer J. Clin. 70, 460–479. https://doi.
+countries and territories, 1990-2019: a systematic analysis for the Global Burden of
+Disease Study 2019. Lancet 396, 1223–1249. https://doi.org/10.1016/S0140-6736 org/10.3322/caac.21632.
+Wang, Y., Kloog, I., Coull, B.A., Kosheleva, A., Zanobetti, A., Schwartz, J.D., 2016.
+(20)30752-2.
+Guo, Y., Zeng, H., Zheng, R., Li, S., Pereira, G., Liu, Q., et al., 2017. The burden of lung
+Estimating causal effects of Long-term PM2.5 exposure on mortality in New Jersey.
+Environ. Health Perspect. 124, 1182–1188. https://doi.org/10.1289/ehp.1409671.
+cancer mortality attributable to fine particles in China. Sci. Total Environ. 579,
+1460–1466. https://doi.org/10.1016/j.scitotenv.2016.11.147. Wang, Y., Li, M., Wan, X., Sun, Y., Cheng, K., Zhao, X., et al., 2018. Spatiotemporal
+Guo, C., Chan, T.C., Teng, Y.C., Lin, C., Bo, Y., Chang, L.Y., et al., 2020. Long-term
+analysis of PM2.5 and pancreatic cancer mortality in China. Environ. Res. 164,
+132–139. https://doi.org/10.1016/j.envres.2018.02.026.
+exposure to ambient fine particles and gastrointestinal cancer mortality in Taiwan: a
+Wang, H., Gao, Z., Ren, J., Liu, Y., Chang, L.T., Cheung, K., et al., 2019. An urban-rural
+cohort study. Environ. Int. 138, 105640 https://doi.org/10.1016/j.
+and sex differences in cancer incidence and mortality and the relationship with
+envint.2020.105640.
+Guo, Q., Wang, X., Gao, Y., Zhou, J., Huang, C., Zhang, Z., et al., 2021. Relationship
+PM2.5 exposure: an ecological study in the southeastern side of Hu line.
+Chemosphere 216, 766–773. https://doi.org/10.1016/j.chemosphere.2018.10.183.
+between particulate matter exposure and female breast cancer incidence and
+Wang, B., Eum, K.D., Kazemiparkouhi, F., Li, C., Manjourides, J., Pavlu, V., et al., 2020a.
+mortality: a systematic review and meta-analysis. Int. Arch. Occup. Environ. Health
+94, 191–201. https://doi.org/10.1007/s00420-020-01573-y. The impact of long-term PM2.5 exposure on specific causes of death: exposure-
+response curves and effect modification among 53 million U.S. Medicare
+Han, C., Xu, R., Gao, C.X., Yu, W., Zhang, Y., Han, K., et al., 2021. Socioeconomic
+beneficiaries. Environ. Health 19, 20. https://doi.org/10.1186/s12940-020-00575-
+disparity in the association between long-term exposure to PM2.5 and mortality in
+0.
+2640 Chinese counties. Environ. Int. 146, 106241 https://doi.org/10.1016/j.
+Wang, H., Li, J., Gao, M., Chan, T.C., Gao, Z., Zhang, M., et al., 2020b. Spatiotemporal
+envint.2020.106241.
+variability in long-term population exposure to PM2.5 and lung cancer mortality
+9
+Z. Fan et al. E n v i r o n m e n t a l R e s e a r c h 222(2023)115405
+attributable to PM2.5 across the Yangtze River Delta (YRD) region over 2010-2016: a Yeh, H.L., Hsu, S.W., Chang, Y.C., Chan, T.C., Tsou, H.C., Chang, Y.C., et al., 2017.
+multistage approach. Chemosphere 257, 127153. https://doi.org/10.1016/j. Spatial analysis of ambient PM2.5 exposure and bladder cancer mortality in Taiwan.
+chemosphere.2020.127153. Int. J. Environ. Res. Publ. Health 14, 508. https://doi.org/10.3390/ijerph14050508.
+Wang, L., Chen, G., Pan, Y., Xia, J., Chen, L., Zhang, X., et al., 2021. Association of long- Yin, P., Brauer, M., Cohen, A., Burnett, R.T., Liu, J., Liu, Y., et al., 2017. Long-term fine
+term exposure to ambient air pollutants with blood lipids in Chinese adults: the particulate matter exposure and nonaccidental and cause-specific mortality in a
+China Multi-Ethnic Cohort study. Environ. Res. 197, 111174 https://doi.org/ large national cohort of Chinese men. Environ. Health Perspect. 125, 117002
+10.1016/j.envres.2021.111174. https://doi.org/10.1289/EHP1673.
+Wei, J., Li, Z., Cribb, M., Huang, W., Xue, W., Sun, L., et al., 2020. Improved 1 km Yitshak-Sade, M., Kloog, I., Zanobetti, A., Schwartz, J.D., 2019. Estimating the causal
+resolution PM2.5 estimates across China using enhanced space-time extremely effect of annual PM2.5 exposure on mortality rates in the Northeastern and mid-
+randomized trees. Atmos. Chem. Phys. 20, 3273–3289. https://doi.org/10.5194/ Atlantic states. Environ. Epidemiol. 3, e052 https://doi.org/10.1097/
+acp-20-3273-2020. EE9.0000000000000052.
+Wei, J., Li, Z., Lyapustin, A., Sun, L., Peng, Y., Xue, W., et al., 2021. Reconstructing 1-km- Yu, W., Guo, Y., Shi, L., Li, S., 2020. The association between long-term exposure to low-
+resolution high-quality PM2.5 data records from 2000 to 2018 in China: level PM2.5 and mortality in the state of Queensland, Australia: a modelling study
+spatiotemporal variations and policy implications. Rem. Sens. Environ. 252, 112136 with the difference-in-differences approach. PLoS Med. 17, e1003141 https://doi.
+https://doi.org/10.1016/j.rse.2020.112136. org/10.1371/journal.pmed.1003141.
+Wei, W., Wu, B.J., Wu, Y., Tong, Z.T., Zhong, F., Hu, C.Y., 2021. Association between Yu, P., Xu, R., Li, S., Coelho, M., Saldiva, P.H.N., Sim, M.R., et al., 2022a. Associations
+long-term ambient air pollution exposure and the risk of breast cancer: a systematic between long-term exposure to PM2.5 and site-specific cancer mortality: a
+review and meta-analysis. Environ. Sci. Pollut. Res. Int. 28, 63278–63296. https:// nationwide study in Brazil between 2010 and 2018. Environ. Pollut. 302, 119070
+doi.org/10.1007/s11356-021-14903-5. https://doi.org/10.1016/j.envpol.2022.119070.
+Wei, Y., Qiu, X., Yazdi, M.D., Shtein, A., Shi, L., Yang, J., et al., 2022. The impact of Yu, P., Xu, R., Li, S., Yue, X., Chen, G., Ye, T., et al., 2022b. Associations between long-
+exposure measurement error on the estimated concentration-response relationship term exposure to wildfire-related particulate matter and site-specific cancer
+between long-term exposure to PM2.5 and mortality. Environ. Health Perspect. 130, mortality: a national study in Brazil, 2010-16. Lancet Oncol. 23 (Suppl. 1), S6.
+77006 https://doi.org/10.1289/EHP10389. https://doi.org/10.1016/S1470-2045(22)00405-3.
+Wong, C.M., Tsang, H., Lai, H.K., Thomas, G.N., Lam, K.B., Chan, K.P., et al., 2016. Yu, P., Xu, R., Li, S., Yue, X., Chen, G., Ye, T., et al., 2022c. Exposure to wildfire-related
+Cancer mortality risks from long-term exposure to ambient fine particle. Cancer PM2.5 and site-specific cancer mortality in Brazil from 2010 to 2016: a retrospective
+Epidemiol. Biomarkers Prev. 25, 839–845. https://doi.org/10.1158/1055-9965.EPI- study. PLoS Med. 19, e1004103 https://doi.org/10.1371/journal.pmed.1004103.
+15-0626. Zhang, W., Klinkebiel, D., Barger, C.J., Pandey, S., Guda, C., Miller, A., et al., 2020.
+World Health Organization, 2021. WHO global air quality guidelines: particulate matter Global DNA hHypomethylation in epithelial ovarian cancer: passive demethylation
+(PM2.5 and PM10), ozone, nitrogen dioxide, sulfur dioxide and carbon monoxide. http and association with genomic instability. Cancers 12, 764. https://doi.org/10.3390/
+s://www.who.int/publications/i/item/9789240034228. cancers12030764.
+World Health Organization, 2022. Billions of people still breathe unhealthy air: new Zhao, S., Liu, S., Hou, X., Sun, Y., Beazley, R., 2021. Air pollution and cause-specific
+WHO data. https://www.who.int/news/item/04-04-2022-billions-of-people-still- mortality: a comparative study of urban and rural areas in China. Chemosphere 262,
+breathe-unhealthy-air-new-who-data. 127884. https://doi.org/10.1016/j.chemosphere.2020.127884.
+10

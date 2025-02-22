@@ -1,0 +1,769 @@
+JournalofAlzheimer’sDiseasexx(20xx)x–xx 1
+DOI10.3233/JAD-190052
+IOSPress
+Pilot Test of a Computer-Based System
+to Help Family Caregivers of Dementia
+Patients
+f
+o
+DavidH.GustafsonJr.a,DavidH.GustafsonSr.a,b,OliviaJ.Codya,Ming-YuanChihc,
+o
+DarcieC.Johnstona,∗ andSanjayAsthanad,e,f
+aCenterforHealthEnhancementSystemsStudies,UniversityofWisconsin–Madison,Madison,WI,USA
+r
+bDepartmentofIndustrialandSystemsEngineering,UniversityofWisconsin–Madison,Madison,WI,USA
+cCollegeofHealthSciences,UniversityofKentucky,Lexington,KY,USAP
+dDivisionofGeriatricsandGerontology,DepartmentofMedicine,UniversityofWisconsinSchool
+ofMedicineandPublicHealth(SMPH),Madison,WI,USA
+eWisconsinAlzheimer’sDiseaseResearchCenter,SMPH,Madis on,WI,USA
+fGeriatricResearch,EducationandClinicalCenter,WilliamdS.MiddletonMemorialVeteransHospital,
+Madison,WI,USA
+e
+Accepted10May2019 t
+c
+Abstract.
+Background: Family members absorb much of the care of dementia patients. The burden of care substantially impacts
+e
+caregivers’health,furtherstrainingourhealthcaresystem.By2050,theincidenceofAlzheimer’sdiseasewillmorethan
+double, increasing the numbers of family caregivers proportionally. Interventions that reduce their burden are needed to
+preservetheirhealthaswellasthreviabilityofthehealthcaresystem.
+Objective:Thispaperreportsonthedevelopmentandfeasibilitytestingofacomputer-basedsystemintendedtoimprove
+r
+thelivesofcaregivers.D-CHESS(Dementia–ComprehensiveHealthEnhancementSupportSystem)allowsuserstoobtain
+information,communicaotewithothercaregivers,gethelpwithcaredecisions,andshareinformationwithexperts.
+Method:Thirty-onecaregiverswererandomlyassignedtoaninterventiongroupreceivingD-CHESSfor6monthsorto
+acontrolgroupreceivingacaregivingbook.Surveysat0,2,4,and6monthsevaluatedcaregiverburden,familyconflict,
+C
+satisfactionwithdecisions,socialsupport,loneliness,anxiety,depression,andcopingcompetence.
+Results:SurveyfindingssuggestD-CHESSparticipantsmayperformbetteronmeasuresofsocialsupport,anxiety,loneliness,
+andcopingcompetence;thegroupswereequivalentoncaregiverburden,decisionsatisfaction,anddepression,andthecontrol
+groupreportedlessfamilyconflictthantheintervention.D-CHESSusedatasuggestedenhancementstosystemdesignand
+contenttoincreaseawarenessanduseofvariousfeatures.
+Conclusion: This study suggests that D-CHESS has potential to positively impact family caregivers and that the system
+meritsfurtherdevelopmentandinvestigationwithafull-scaleclinicaltrial.
+Keywords:Alzheimer’sdisease,computer-assisteddecisionmaking,dementia,familycaregivers,healthinformationtech-
+nology,psychologicalstress,socialsupport,technologicalinnovations,technology,telemedicine
+INTRODUCTION
+∗Correspondenceto:Darcie C. Johnston, MLIS, Center for
+HealthEnhancementSystemsStudies,UniversityofWisconsin–
+In 2019, Americans with Alzheimer’s disease
+Madison, Mechanical Engineering Building Room 4107, 1513
+numbered 5.8 million, a figure projected to rise to
+UniversityAve.,Madison,WI53706,USA.Tel.:+16088902615;
+E-mail:dcjohnston@wisc.edu. 13.8millionby2050duetolongerlifeexpectancies,
+ISSN1387-2877/19/$35.00©2019–IOSPressandtheauthors.Allrightsreserved
+2 D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers
+anagingBabyBoomerpopulation,andtheincreasing [16–18],actionplanning[19–21],casemanagement
+incidenceofthediseaseaspeopleage[1].Theimpli- [22–24], and peer [25–27] and family [28, 29] sup-
+cations for the U.S. healthcare system are sobering, port. In this article, we report on a pilot test that
+notonlybecauseoftheriseinincidencebutalsothe studied the effectiveness of an eHealth interven-
+risingcostofcareforeachpatient.Annualhealthcare tion employing these elements in addressing the
+and long-term care payments for a person age 65+ psychological, social, and practical needs of family
+withdementia($48,977)totalmorethanthreetimes caregiversofpatientswithdementia.
+thepaymentsforapersonage65+withoutdementia
+($13,976)[1].By2050,thenationalcostofcarefor MATERIALSANDMETHODS f
+thosewithdementia,ifleftunchecked,willincrease
+o
+from the current $290 billion to an untenable $1.1 Theintervention:D-CHESS
+trillion[1].
+o
+A large portion of individual care is absorbed by A family of eHealth systems known as CHESS
+unpaidfamilycaregivers.In2018,16.2millionfam- (Comprehensive Health Enhancement Support Sys-
+ily members provided 18.5 billion hours of care, or tem) has been rdeveloped over the last three
+anaverageof22hoursperweek[1].Inaddition,they decades by researchers in the Center for Health
+P
+paidanaverageof$11,233fromtheirownresources Enhancement Systems Studies at the University of
+for out-of-pocket expenses [1]. The cost savings to Wisconsin–Madison. These systems employ web-
+thehealthcaresystemintermsoflaborandexpenses based ormobiletechnologiestoimprovehealthand
+is significant, amounting to $234 billion in 2018 well-being, and several have been proven effective
+d
+[1], but the cost to caregivers themselves is a cri- inrandomizedtrialssupportingpatientswithvarious
+sis in its own right. In addition to strains on time conditionsanddiseases.Specifically,improvements
+e
+and financial resources, caregivers are often coping havebeenshownin:1)qualityoflifeandcostsofcare
+with serious threats to their quality of life, includ- forpeoplewithHIV[30],2)qualityoflifeandself-
+ing loneliness, isolation, depression, and probtlems efficacyforwomenwithbreastcancerversuscontrol
+with employment, sleep, other family relatcionships, and internet groups [31–33], 3) asthma control for
+and susceptibility to disease [1–4]. The practical, young children [34], and 4) risky drinking among
+emotional,andphysicalburdensofcearingforloved alcoholics[35].
+oneswithdementiafarexceedtheburdenofcarefor Other versions of CHESS have aimed to support
+non-dementia patients on every measure [1]. These the caregiver rather than the patient. CHESS Lung
+r
+burdens translate to greater healthcare needs on the Cancer (CHESS-LC) supported family caregivers
+part of caregivers themserlves, costing an estimated of lung cancer patients by providing: 1) informa-
+$11.8billionin2018andfurtherstrainingthesystem tion, motivation, and skills training to support the
+o
+forall[1–3,5,6]. caregiver from diagnosis through the first year of
+A number of recent studies have examined care- bereavement;2)collectionofhealthstatusdataonthe
+C
+giverburdenandhowitmaybereduced.Wawrziczny patient and caregiver; 3) alerts for the clinical team
+etal.suggestsupportprogramswith“preparedness, if a patient’s symptom exceeded preset thresholds;
+dyadic,andfamilymodules”[7].Schreveetal.rec- 4) access to new information; and 5) mechanisms
+ommendinformationtechnology-basedinterventions forengagingfamilyandfriends.Resultsshowednot
+aimed at “alleviating the psychological burden and only reduced caregiver emotional burden but also
+socialisolation”ofcaregiversand“providingaccess improvedresponsetotreatment,qualityofdying,and
+to information and resources” [8]. In a review of lengthofpatientsurvival[36].
+existing interventions, Gitlin and Hodgson identify Another earlier CHESS system was developed
+threeelementscommontothosethataremosteffec- to support caregivers of dementia patients. Funded
+tive: 1) the caregiver is actively involved with the through grants from the Alzheimer’s Association
+intervention; 2) the intervention adapts to the needs andtheRobertWoodJohnsonFoundation,thatsys-
+of the family as the illness progresses; and 3) the tem offered detailed information about dementia,
+intervention helps both caregiver and patient [9]. personal accounts of how other caregivers coped,
+Overall, extensive research indicates that caregiver descriptionsandlocationsofservicesthatcaregivers
+outcomes improve when caregivers have programs mayneed,andlinkstovettedonlineresources.Users
+and tools that incorporate long duration [10, 11], couldanonymouslyposequestionstoexperts,receive
+assertiveoutreach[12],monitoring[13–15],prompts suggestions of resources for help, communicate
+D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers 3
+with other caregivers through facilitated discussion CDRdataweremissingfromtheWADRCdatabase
+groups, and use decision aids to work through key foronepersonintheD-CHESSgroup.
+issues. Caregivers (n=18, all age 65+) who tested
+thatearlysystemindicateditprovidedneededinfor- Procedures
+mation,peersupport,andrelieffromisolation[37].
+D-CHESS(Dementia–CHESS)isawebsiteforuse An initial invitation letter was sent to caregiver
+oncomputersortabletsthatevolvedfromtheseear- partnersofsubjectswithdementiaintheWisconsin
+lier CHESS systems for caregivers. D-CHESS was Alzheimer’sDiseaseResearchCenterClinicalCore
+designed to help with motivation, decision making, study.Thecaregiversalsoreceivedfin-personinvita-
+stress reduction, and access to services by allowing tionsduringtheirannualvisitfortheWADRCstudy.
+o
+caregiverstoobtaininformationandsupportwithout Interestedcaregiverscouldfilloutandreturnaform
+concern for location, distance, time, confidentiality, orcallCHESSresearchstaffdirectly.
+o
+oreducation.Itsdevelopmentwasinformedbyfeed- Eligiblecaregiversweresenttheconsentformand
+backfrommultiplefocusgroupsheldwithcaregivers baselinesurveywithinstructionstocallCHESSstaff
+ofAlzheimer’sdiseasepatientsandone-on-oneneeds once they receivedrthe documents. During that call,
+assessments with individual caregivers. Among the staff went through the consent form and answered
+P
+manyinsightsprovidedbythisinformationwashow anyquestions.Ifcaregiversagreedtotakepart,they
+newtrackingandmotion-sensingtechnologiesmight signed the consent, completed the baseline survey,
+assistinreducingcaregiverburden. and m ailed both back to CHESS. When the con-
+Table 1 describes the services provided by sentandbaselinesurveyswerereceived,participants
+d
+D-CHESSaswellasexternalsensorsofferedtothis were randomized to either the D-CHESS interven-
+study’s participants. D-CHESS may be used as the tion(n=16)orthecontrol(n=15)group.Participants
+e
+diseaseprogresses,foraslongasneeded,anelement weremailedsubsequentsurveysat2,4,and6months,
+of successful tools for caregivers [10, 11]. In addi- foratotaloffoursurveys.
+tion,D-CHESSservicesofferotherelementsptroven From the original group of 31 participants, three
+effectiveincaregiverprograms,suchasassecrtiveout- did not complete the study because one patient was
+reach,actionplanning,andpeerandfamilysupport, placed in memory care and two other patients died.
+as well as quality informational reseources such as In addition, two participants completed only two of
+expertadviceandvettedarticlesandwebsites. the four surveys. Thus, 26 (83.9%) of the original
+31completedallsurveys.Subsequently,onepartici-
+r
+Participants pantinthecontrolgroupwasasignificantoutlieron
+r five of the eight outcome variables; this participant
+Participants were unpaid family caregivers of wasremovedfromallanalyses[39].Therefore,final
+o
+patients with Alzheimer’s disease. To be eligible, a group sizes for analyses were 14 D-CHESS and 11
+caregiverneededtobe:1)anunpaidfamilymember controlparticipants.
+C
+whowas2)theprimarycaregiverforapatientwith The intervention group received access to the
+dementia, 3) providing care in the patient’s home, D-CHESSwebsitefor6months.Theseparticipants
+and 4) able to read English. We aimed to recruit werealsoofferedtheuseofthreecommerciallyavail-
+30participants,followingrecommendationsbyHert- able sensors: a Bluetooth tracker, a GPS location
+zog [38], and achieved a total of 31. All reported tracker, and a motion sensor. The Bluetooth tracker
+beingwhite/Caucasian;theirothercharacteristicsare would help locate lost items such as keys; the GPS
+reportedinTable2. locationtrackercouldbecarriedbyapatient,allow-
+As a measure of severity of dementia, Clinical ingthecaregivertomonitorthepatient’slocation;and
+DementiaRating(CDR)scalescoreswereobtained themotionsensorcouldbeusedtoalertacaregiver
+at baseline from the subject database of the NIH- ifthepatiententeredspecificareasofthehomethat
+funded Wisconsin Alzheimer’s Disease Research couldbehazardous.Fourofthe15caregiverschose
+Center(WADRC)ClinicalCoreattheUniversityof touseoneormoresensors.
+Wisconsin–Madison. CDR scores can range from 0 Thesethreesensorswereincludedinthestudyasa
+to 3 (0=normal, 0.5=very mild dementia, 1=mild resultoffeedbackfromfocusgroupswithcaregivers,
+dementia,2=moderatedementia,3=severedemen- who described situations for which they wanted
+tia)andarebasedonsemi-structuredinterviewswith help.Wechosetheseparticulardevicesbecausethey
+thepatientandcaregiverorotherreliablesource[40]. address the largest number of scenarios mentioned
+4 D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers
+Table1
+D-CHESSservicesforfamilycaregiversofpatientswithdementia
+D-CHESSfeature Description
+Homepage
+ThoughtoftheDay Promptthatchangesdaily,targetingcommonconcernsofcaregivers(e.g.,anxiety,financialissues,
+healthyeating)withlinkstoresources.(prompts,familysupport,qualityinformation)
+ReadingRoomarea
+LibraryTopics Extensiveon-sitecollectionofinformationalreadingsontopicsrelatedtodementiaandcaregiving
+createdbyexpertsatUW,andlinkstorelevantexternalwebsitesvettedforquality.(action
+planning,familysupport,qualityinformation) f
+FAQs Searchablelistoffrequentlyaskedquestionsandanswersaboutdementiaandrelateddiseases,
+o
+self-careandstressreduction,symptomandbehaviormanagement,financialandlegalissues,
+medicalcare,endoflife,andmore.(actionplanning,familysupport,qualityinformation)
+PersonalStories Real-lifeaccountsfromcaregiversoffamilymemberswithdementia,withpromptstoexplore1)
+o
+copingtechniques,2)in-depthdescriptionsofpatientbehaviors,symptoms,andcaregivingstress,
+and3)advicebasedonexperiences.(peersupport,familysupport,prompts)
+CaregiverTips Quicktipsfromprofessionalsourcescoveringabroadrangeofissues,suchascopingwiththe
+r
+emotionalsideofcaregiving,relatingtothepatient,andhelpingwitheverydayactivities.Study
+participantsalsosharetheirowntips.(peersuppor Pt,familysupport,prompts,qualityinformation)
+Supportarea
+DiscussionGroup Private,interactiveonlinediscussiongroupforcaregiversofdementiapatientsforsharingand
+solicitinginformation,ideas,experiences,andsupport.(assertiveoutreach,peersupport,family
+support,prompts)
+MyJournal Privatejournalingfeatureforcaregiverds,withpromptsforwritingandreflection.(prompts,action
+planning)
+EasingDistress Collectionofcognitive-behavioral,psychological,relaxation,andlifestylestrategiesforcopingwith
+distress,includingaudiomeeditations,cognitivereframingexercises,andmore.(prompts,action
+planning,peersupport,qualityinformation)
+Toolsarea
+t
+WeeklyCheck-In Weeklycaregiverreportonmeasuresoftheirownhealthandwell-being,withresponsestrackedover
+time.Whenapcpropriate(e.g.,indicationsofdepression),specialistsatUWfollowup.(assertive
+outreach,monitoring,prompts,casemanagement)
+PlacementDecisionGuide Step-by-stepdecisionguidetohelpcaregiversclarifysituationsandneedswhenconsideringplacing
+afamielymemberinspecializedcare.(prompts,actionplanning,familysupport)
+RespitePlanner Interactivetoolfor1)thinkingthroughpotentialbenefitsandbarrierstorespiteand2)respite
+planning.(prompts,actionplanning,familysupport)
+r
+ActionPlanner Interactivetoolforcreatingastep-by-stepplanforanychangeforcaregiverorpatient,suchas
+bringinginhelporchangingdoctors,establishingabudget,startingarelaxationroutine,andmore.
+r
+(prompts,actionplanning,familysupport)
+FindingHelparea o
+AskaSpecialist Privatetwo-waymessagingbetweencaregiversandAlzheimer’sinformationspecialists:1)
+caregiversreachoutatanytimetorequestinformationandadvice,2)specialistsinitiatesupport
+C whencaregiversshowneed(e.g.,depression)viaresponsesonbi-monthlypapersurveys.
+(assertiveoutreach,prompts,casemanagement,familysupport,qualityinformation)
+Family&Friends Updatesandprivatemessagingforfamilyandfriendsofcaregiversandtheirpatients,availablevia
+sign-up.(assertiveoutreach,prompts,peersupport,familysupport)
+CommunityResources Alphabeticallistingofhealth,socialservice,andothercommunityorganizations,aswellasrelevant
+websites,providinginformationandsupporttocaregiversofdementiapatients.(peersupport,
+familysupport,qualityinformation)
+Externalsensors
+GPSTracking Location-monitoringviaatrackerwornbythepatient.(monitoring,familysupport)
+CaregiverAlerts Motion-activatedsensorsstrategicallyplaced(e.g.,ondoors)thatnotifycaregiverswhentriggered.
+(monitoring,familysupport)
+ItemFinder Bluetoothtrackers,attachedtoitemsfrequentlylost,thatemitasoundviaasmartphoneappwhenthe
+itemissought.(monitoring,familysupport)
+by caregivers. Insights gained with regard to the All D-CHESS participants already had their own
+feasibility and acceptance of sensors by study par- computerandinternetservice,andtheyreceivedin-
+ticipants will inform future development and grant home training for the system and (if used) sensor
+submissions. setup by CHESS research staff. If participants had
+D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers 5
+Table2
+CharacteristicsofD-CHESSandcontrolgroupparticipantsatbaseline
+Characteristic D-CHESS(n=16) Control(n=15) Effectsize
+Caregiverage n/aa
+55–64 3 3
+65–74 7 9
+75+ 6 3
+Patientage Nodata Nodata n/aa
+PatientCDRscores
+Mean(SD) 1.63(0.99) 1.47(0.88) Cohen’sd=0.18
+f
+Range 0.5–3.0 0.5–3.0
+Caregiverrelationship n/aoa
+Spouseorpartnerofpatient 15 13
+Adultchildofpatient 0 1
+Otherrelative 1 1 o
+Caregivergender(female) 11 8 Cramer’sV=0.16,df=1
+Education 15.62(2.09) 15.40(2.26) Cohen’sd=0.10b
+Highschoolgraduate 2 3 r
+Somecollege 3 2
+P
+Collegegraduate 8 7
+Graduatedegree 3 3
+CDR,ClinicalDementiaRating.aTocalculateeffectsizeforcategoricalvariables,Cramer’sVrequiresacell
+sizeof5observationsorlarger[39].Inthiscase,theminimumreq uirementisnotmet.bTocalculatetheeffect
+sizebetweengroups,educationwasrecodedasyearsofeducadtionasfollows:highschoolgraduate=12,some
+college=14,collegegraduate=16,somegraduatestudy=17,master’sdegree=18,PhD=20.
+e
+technical issues with the website or sensors, they messages sent to the Alzheimer’s disease informa-
+couldcallan800numberforpersonalsupportfrom tionspecialistattheWisconsinAlzheimer’sDisease
+CHESSstaff. t ResearchCenter.
+If caregivers scored above 10 on a decpression
+assessment [41] in the paper survey (range=0–27; Outcomemeasures
+higherscoressignalgreaterdepression),orifthrough
+e
+D-CHESS they requested contact with a Wisconsin To test the impact of D-CHESS, we measured
+Alzheimer’s Disease Research Center information caregiver burden, family conflict, satisfaction with
+r
+specialist,aspecialistwouldgivethemacall. care decisions, social support, anxiety, depression,
+Thecontrolgroupreceirvedalimitedintervention loneliness,andcopingcompetence.Table3presents
+consistingofabookforfamilycaregiversofdemen- baseline outcome scores on the following measures
+o
+tia patients, The 36-Hour Day [42]. The book was for participants in both groups who completed all
+mailed to the control group, and no other training surveys.
+C
+wasprovided.
+Caregiverburden
+Ethics Acaregiverloadscale[3]assessedobjectivecare-
+giverburdenwithsixitemsona4-pointLikertscale
+Compliancewithguidelinesonhumanexperimen- (0=don’thavetodoit,3=difficult,Ineedmorehelp
+tation as well as study protocols were approved by fromothers).Theitemsincorporatedbothchalleng-
+the Institutional Review Board at the University of ingbehaviorsandhelpneededwithactivitiesofdaily
+Wisconsin–Madison(submissionID2016-0366).To living,includinginstrumentalactivities.Asubjective
+protect confidentiality, only the project director had burdenquestionfromtheCaregivingAppraisalScale
+accesstoparticipants’namesandaddresses. [43] was added (“I can fit in most of the things I
+need to do in spite of the time taken by caring for
+D-CHESSuse this person”), measured on a 5-point Likert scale
+(0=disagree a lot, 4=agree a lot). All scores were
+D-CHESS automatically collected use data, recodedtoa10-pointscaletoequalizeweightacross
+including: number of participants logging on, num- scales,andanaveragewasthencalculated,reversing
+berofpageviews,specificservicesused,discussion the subjective burden item. Higher values indicate
+groupposts,datainputtodecisionaids,andprivate moreburden.
+6 D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers
+Table3 on a 4-point Likert scale (0=never, 3=often). This
+Outcome scores at baseline for D-CHESS and control group scale was chosen for its brevity, the non-pejorative
+participantswhocompletedsurveysat0,2,4,and6months
+toneoftheitems,anditswell-documentedusewith
+Outcome D-CHESS Control a broad age range, including the elderly. An aver-
+(n=14) (n=11)
+agescorewascalculated,withitems1,5,6,10,15,
+M(SD) M(SD)
+16, 19, and 20 reverse-coded. Item 9 (“How often
+Caregiverburdena 3.36(1.53) 3.36(1.17)
+Familyconflict 0.28(0.54) 0.27(0.37) do you feel outgoing and friendly?”) was removed
+Satisfactionwithcaredecisions 3.29(0.71) 3.17(0.60) duetolackofvarianceinparticipants’answers,with
+Socialsupport 2.43(0.98) 1.89(0.72) over54%ofparticipantsrespondingf“often.”Higher
+Loneliness 0.83(0.51) 1.03(0.40)
+Anxietya 2.70(1.58) 2.46(1.69) scoresindicatemoreloneliness. o
+Depression 0.52(0.44) 0.54(0.54)
+Copingcompetence 1.82(0.44) 1.66(0.42)
+o
+Higher scores indicate higher levels of the named outcome, Anxiety
+whetherpositiveornegative(e.g.,moreburden,moresocialsup-
+Caregivers’ anxiety was assessed using multiple
+port).aScoreshavebeenconvertedto0–10foranalysis.
+measures:1)TheGreneralizedAnxietyDisorderscale
+[48], consisting of seven items on a 4-point Likert
+P
+Familyconflict
+Scale (0=not at all, 3=nearly every day); 2) two
+Twelve questions adapted from Aneshensel et al.
+questionsfromLawtonetal.’s[43]subjectiveburden
+[44]assessedfamilyconflictona4-pointLikertscale
+scale (“No matter how much I do, somehow I feel
+(0=nodisagreement,3=quiteabit).TheAneshensel
+gudilty about not doing enough for this person” and
+etal.scalesarebasedonsurveys,observations,and
+“Takingcareofthispersongivesmeatrappedfeel-
+interviewstappingstressacrossmultipledimensions
+ing”),assessedona5-pointLikertscale(0=disagree
+of life, including family conflict, seeking help, and e
+a lot, 4=agree a lot); and 3) a question assessing
+emotionalsupport.Anaveragescorewascalculated;
+difficultyfunctioning(“Ifyoucheckedoffanyprob-
+higherscoresindicatemoreconflict. t lems,howdifficulthavethesemadeitforyoutodo
+c yourwork,takecareofthingsathome,orgetalong
+Satisfactionwithcaredecisions
+with other people?”), using a 4-point Likert Scale
+Satisfaction was assessed using t ehe Satisfaction (0=extremely difficult, 3=not difficult at all). All
+with Decision Scale [45], containing six items on scores were recoded to a 10-point scale to equalize
+a 5-point Likert scale (0=strongly disagree, weight across scales, and an average was then cal-
+r
+4=stronglyagree).Anaveragescorewascalculated. culated, reversing the difficulty item. Higher values
+Higherscoresindicatemorresatisfaction. indicategreateranxiety.
+o
+Socialsupport
+Caregiver’ssocialsupportwasassessedusingthe Depression
+C
+MOS Social Support Survey [46], consisting of 14 Caregiver’s depression was assessed using the
+itemsona5-pointLikertscale(0=never,4=mostof eight-item version of the Patient Health Question-
+thetime),withhigherscoresindicatingmoresocial naire[41].Responsesweregivenona4-pointLikert
+support.Inaddition,seekinghelpwasassessedusing scale(0=notatall,3=nearlyeveryday).Anaverage
+anadaptedversionofAneshenseletal.’s[44]survey scorewascalculatedforallitems.Higherscoresindi-
+questions. This consisted of two items asking how catemoredepressionsymptoms.
+muchhelpcaregiversreceivedandhowsatisfiedthey
+werewiththereceivedhelp,bothmeasuredusing5-
+pointLikertscales(howmuchhelp:0=nohelp,4=a Copingcompetence
+lot of help; help satisfaction: 0=not at all satisfied, Abilitytocopewiththestressofcaringforafamily
+4=verysatisfied).Theresponsestoall16questions memberwithdementiawasassessedwithnineaction-
+wereaveragedtoyieldasinglesocialsupportscore. oriented items (e.g., “Made a plan of action and
+Higherscoresindicatemoresocialsupport. followedit”)fromLawtonetal.’scaregiverappraisal
+scale[43].Responseswerescoredona5-pointLikert
+Loneliness scale(0=never,4=mostofthetime),andanaverage
+Caregiver’s loneliness was assessed using the score was calculated, with higher scores indicating
+UCLALonelinessScale[47],consistingof20items greatercopingcompetence.
+D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers 7
+Analysisplan period while D-CHESS participants did not report
+anychange(seeTable4).
+A 2 (time: baseline, month 6)×2 (study group:
+D-CHESS, control) repeated measures analysis of
+D-CHESSuse
+variance (ANOVA) was conducted to examine the
+effect of study group across time on each outcome Overall, participants continued to access
+separately.Therefore,eight2×2repeatedmeasures
+D-CHESS throughout the study, with 100%,
+ANOVAswererunintotal,oneforeachoutcome. 50%, 71%, 71%, 57%, and 64% logging on during
+months1through6,respectively(sefeTable5).
+RESULTS
+AsshowninTable6,Supportowasthemostvisited
+areaofthesystem,with919totalpagesviewed.This
+area showed the greatest decline in visits over time
+Outcomemeasures o
+butstillremainedthemostpopular,loggingthemost
+pages viewed in the final month. Support was fol-
+Asexpectedduetothesmallsamplesize,allfind-
+lowedbyToolsanrdThoughtoftheDayforamount
+ings were nonsignificant (p>0.12), but the effect
+sizeshintatwhatmightberevealedwithasufficient
+of access. InPterms of both number of visitors and
+pagesviewed,useofToolsandThoughtoftheDay
+samplesize.Descriptivestatisticsandeffectssizesfor
+sustained or actually increased over the 6 months.
+each outcome are reported in Table 4. Specifically,
+These resultsarenoteworthybecausedrop-offistyp-
+they suggest that the current version of D-CHESS,
+relativetothecontrolgroup,maybeassociatedwith
+icadllyasignificantproblemwithonlinehealthtools
+[49–54].
+improvements in social support, anxiety, and cop-
+ing competence and with preventing the worsening e
+ofloneliness. DISCUSSION
+However,theotherfouroutcomeswerenotasso-
+t
+ciatedwithpracticalimprovementforparticipantsin This pilot study raises interesting hypotheses for
+c
+the D-CHESS group, relative to the control. Care- future research and suggests changes for improv-
+giver burden, depression, and satisfaction with care ingD-CHESSinpreparationforalarger,controlled
+decisionsworsenedforeveryoneoveerthe6months, trial. For example, we expected a positive impact
+regardless of study group. For family conflict, the on decision satisfaction as a result of D-CHESS’s
+small effect size indicates thart the control group is decision-making and planning services, but found
+associatedwithfeelinglessconflictafterthe6-month reduction in satisfaction over time in both groups.
+r
+o Table4
+Repeatedmeasuresanalysisofvariancebetweenstudygroupandtime
+Outcome D-CHESS(n=14) Control(n=11) Cohen’sdc
+C
+(cid:2)aM(SDb) (cid:2)aM(SDb)
+Caregiverburdend –0.24(1.24) –0.13(0.54) 0.09
+Familyconflict 0.01(0.80) –0.11(0.68) 0.32
+Satisfactionwithcaredecisions –0.24(1.15) –0.25(1.23) 0.00
+Socialsupport 0.37(0.89) –0.07(0.93) 0.68
+Loneliness 0.00(0.79) 0.19(0.80) 0.54
+Anxietyd –0.28(0.18) 0.05(0.81) 0.28
+Depression –0.10(0.77) –0.09(0.82) 0.00
+Copingcompetence 0.21(0.92) –0.05(0.75) 0.67
+Higher scores indicate higher levels of the named outcome, whether positive or negative (e.g., more bur-
+den,moresocialsupport).aChange((cid:2))wascalculatedas6-monthscoresminusbaselinescores.bChangein
+standarddeviationwascalculatedusingSDchange=sqrt(SD12+SD22–(2*corr*SD1*SD2)).cEtasquaredwas
+convertedtoCohen’sdusingd=2*(sqr(eta2/(1-eta2))).dScoreshavebeenconvertedto0–10foranalysis.
+Table5
+GeneraluseofD-CHESSamongallinterventiongroupparticipants(N=14)
+Measure Month1 Month2 Month3 Month4 Month5 Month6
+n(%)loggingonatleastonce 14(100) 7(50) 10(71.4) 10(71.4) 8(57.1) 9(64.3)
+M(SD)pageviewsperuser 21.7(59.6) 19.3(37.2) 25.9(35.6) 19.3(21.0) 20.1(35.3) 12.0(14.2)
+8 D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers
+Table6
+UseofD-CHESSbyservicearea
+D-CHESSareavisited Month1 Month2 Month3 Month4 Month5 Month6 Studyperiod
+ThoughtoftheDay
+nusers(N=14) 4 7 10 10 7 8 7.7(54.8)a
+Totalpagesviewed 23 31 51 32 28 24 189(31.5)b
+ReadingRoom
+nusers(N=14) 3 5 5 4 4 2 3.8(27.4)a
+Totalpagesviewed 16 19 23 23 14 9 104(17.3)b
+Support
+f
+nusers(N=14) 14 5 7 9 6 6 7.8(56.0)a
+Totalpagesviewed 175 140 218 134 175 7o7 919(153.2)b
+Tools
+nusers(N=14) 5 7 10 9 8 9 8.0(57.1)a
+Totalpagesviewed 59 55 60 65 56 o 51 346(57.7)b
+FindingHelp
+nusers(N=14) 3 5 2 4 2 3 3.2(22.6)a
+Totalpagesviewed 31 25 9 15 r 8 7 95(15.8)b
+aAverageofmonths1–6and(inparentheses)percentoftotalN.bTotalpageviewsduringsPtudyand(inparentheses)monthlymean.
+System use data indicate that the Tools area, where The Caregiver Tips and Personal Stories services,
+these services reside, was the second-most visited where D-CHESS users could exchange practical
+d
+area of the site and that use actually increased ideas and share experiences with one another, are
+overtime,suggestingstronginterestinordesirefor locatedintheReadingRoom,oneoftheleastvisited
+help with decision making. User studies could help eareasofthesite.MovingtheseservicestotheSupport
+determinehowD-CHESS’sdecision-makingcontent areamayincreasetheirvisibilityanduse,potentially
+couldbemoreeffective(e.g.,morespecialized,tcom- helpingtoreduceburden.Inaddition,useofallpeer
+prehensive,orin-depth). c supportresourcesmightbeincreasedwith,forexam-
+With regard to family conflict, there are several ple,systempromptsandothermarketinganddesign
+family relationship and communication services on changes.
+e
+D-CHESS,butthoseservicesarelocatedintheRead- TheSupportarea,withpeer-leddiscussiongroups
+ing Room and Finding Help areas, the two least (typicallythemostfrequentlyusedserviceinCHESS
+r
+accessedareasofthesite.Itispossiblethatrevisions systems),loggedthemostusebutdeclinedovertime.
+designed to enhance discroverability or encourage Voice-controlledaccessviasmartspeakersandsmart
+interestintheseservices,suchasnavigationchanges displays,afocusofourcurrenteffortswithCHESS
+o
+andprompts,couldincreasevisitstothoseservices, systems,mayhelpsustainuse[57,58].Thatsaid,with
+whichinturncouldleadtoimprovementsinfamily only 14 participants in the intervention, the sample
+conflictoutcomCes. sizewastoosmallforthediscussiongrouptoreach
+That D-CHESS had no discernible effect on critical mass, the number of participants needed to
+depressionisconsistentwithresultsofotherCHESS produceenoughcommentstokeepasocialnetwork
+studies. The previous studies do show changes in active [59, 60]. Lack of use of Caregiver Tips and
+qualityoflife,socialsupport,andotherdimensions PersonalStoriesmayalsobedue,atleastinpart,to
+thatwouldleadustoexpectdepressiontoimprove. insufficientsamplesize.
+It may be the case, however, that relieving depres- Inalargerstudy,wherecriticalmasswillbereach-
+sion requires more (e.g., medication, role playing able,wepredicthigheruserates.Nevertheless,with
+and other components of one-on-one psychother- somanyservicesonD-CHESS(15,notincludingsen-
+apy) than an online support system can provide sors),marketing,tutorials,andpromptstoless-used
+[55]. butevidence-basedservicessuchasjournaling(My
+We found a small trend toward reduction in Journal)[61]andcognitivebehavioraltherapy(Eas-
+caregiver burden over time for both groups, with ing Distress) [62] are needed. Future development,
+D-CHESSperformingbetter,buttheeffectsizedif- incorporatingartificialintelligence,willincludefea-
+ferenceisclosetozeroandprobablyduetochance. tures and functions that alert and remind users of
+Developmentaimedatthisoutcomemightfocuson underused services and provide automated training.
+peersupport,whichisshowntorelieveburden[56]. D-CHESS has the potential to be smarter in other
+D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers 9
+ways,too.OtherCHESSsystemsusedatacollected use it as an alert if her husband attempted to enter
+on caregiver and patient status as well as natural thebasement,wherehehadpreviouslybeeninjured.
+languageprocessingofuser-enteredtext,suchasdis- Theimplementationwasnotsuccessful,becausethe
+cussiongrouppostsandjournalentries.Usingthese family lived in a rural setting, where signal quality
+data appropriately, the system may be designed to was unreliable. However, she understood its poten-
+detect and address caregivers’ concerns before they tial and was disappointed not to be able to benefit
+becomecrises. fromit.
+The design of the study itself appears practical
+and useful for a large-scale investigation. However, Limitations f
+futureresearchmightemployafullorpartialfactorial
+o
+design to further explain which D-CHESS services Pilotstudies,includingthisone,cannottestforsta-
+havethemostimpact. tistical significance between groups in that they are
+o
+underpowered,buttheycanhelpdetermineinacost-
+Technologyadvancements effective way the feasibility of a larger study [63].
+Thispilotisvaluarbleinthatitexploresthepotential
+Survey feedback from participants also suggests of a theory-based support system for caregivers of
+P
+valuablechangestothetechnologyplatforms.First, Alzheimer’s disease patients, highlighting technical
+theD-CHESSsystemwetestedwasoptimizedforuse andpracticalissuesforfurtherdevelopmentinprepa-
+ondesktopandlaptopcomputers.Inournextround ration formoredefinitivestudy.Wefoundmoderate
+of development, we would adapt it as an app 1) for effect sizes for several outcomes, but a large ran-
+d
+smartphonesandtablets,forgreaterportability,and2) domizedtrialisneededtotestsignificancebetween
+forvoice-activatedsmartspeakersorsmartdisplays, groups.
+e
+technologies currently being adopted at unusually Afurtherlimitationconcernsthedemographicsof
+highrates,includingamongtheelderlyanddisabled theparticipants,whorepresentafairlynarrowswath
+[57,58]. t ofthepopulation.Inafull-scalestudy,wewouldaim
+Second,wewouldincludesensortechnolcogywith for much greater diversity with regard to race and
+theD-CHESSsystemratherthanoffersensorsassep- ethnicity,education,andgender.
+arateproducts,socaregiverswouldnoetneedtomake Finally,initscurrentversion,D-CHESSdoesnot
+additional decisions for or against. Although every incorporate several potentially beneficial technolo-
+caregiverintheD-CHESSgroupwasofferedthesen- gies.First,theplatformused(computerlaptops)did
+r
+sors, only four accepted them. Those who declined nottakeadvantageofsmartphones,smartspeakers,or
+did so because they did nrot want the added burden smartdisplays,eachofwhichofferscapabilitiesthat
+oflearninganothertechnology,notbecausetheydid could increase the effectiveness of D-CHESS. Sec-
+o
+notseepotentialbenefit. ond,onlyasmallnumberofparticipantswerewilling
+Ofthefourwhousedthem,threereportedpositive to try sensors; as a result, data were insufficient to
+C
+results. Caregivers who used the Bluetooth tracker assessthepracticalutilityofthosedevices.
+to find lost items reported a reduction in both their
+own stress and patients’ agitation. One patient fre- Conclusion
+quently misplaced the TV remote and insisted the
+caregiver stop everything to find it. Another patient Despite its limitations, this pilot test hints at the
+oftenlostkeys.Byaffixingthetrackertotheitems, potentialvalueofD-CHESStocaregivers,whichwas
+caregivers could instantly locate them by pushing a expectedgiventhefindingsfromotherCHESSstud-
+button on their phones and activating a sound from ies[29,30,32].Atthesametime,theresultspointto
+the tracker. The caregiver who used the GPS loca- possibledevelopmentwithregardtositedesign,con-
+tion tracker also reported reduction in stress. Her tent enhancements, and technological advances that
+husband,intheearlystagesofAlzheimer’sdisease, couldstrengthenthesystem.
+took a bus to local events where he volunteered as Perhaps most important is the potential for D-
+a security guard. This level of independence was CHESStoprovidesocialsupportandamelioratethe
+importanttohim.WhenhecarriedtheGPStrackerin isolation and loneliness present in caregiving roles
+apocket,thecaregivercouldseewherehewasatany [64].Throughdiscussiongroups,caregivertips,and
+moment, reducing her worry that he might get lost. personalstories,D-CHESScurrentlyofferswaysto
+Thecaregiverwhotriedthemotionsensorsoughtto emulate the support achieved in traditional support
+10 D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers
+groupsettings—settingsthatareofteninaccessibleto [6] WinterL,GitlinLN(2006/2007)Evaluationofatelephone-
+caregiversbecauseoftheirpatients’constantneeds, based support group intervention for female caregivers
+of community-dwelling individuals with dementia. Am
+whichmakegettingawayforanhourormorediffi-
+JAlzheimersDisOtherDemen21,391-397.
+cult.Indeed,veryfewcaregiversinthispilotattended
+[7] WawrzicznyE,BernaG,DucharmeF,KergoatMJ,Pasquier
+support groups regularly, while they often reported F, Antoine P (2017) Modeling the distress of spousal
+anxiety and frustration as their loved ones’ disease caregiversofpeoplewithdementia.JAlzheimersDis55,
+703-716.
+progressed.Havingaccesstotrustedpeersandadvi-
+[8] SchreveJ,BaierRR,Epstein-LubowG,GardnerRL(2016)
+sorsthroughanonlinesupportgroupcouldincrease Dementia caregivers’ technology preferences: Design
+knowledge, reduce feelings of isolation, and reduce insightsfromqualitativeinterviews.Gferontechnology14,
+stress,tothebenefitofcaregiversandpatientsalike 89-96.
+o
+[9] Gitlin LN, Hodgson N (2015) Caregivers as therapeutic
+[4, 65]. Accordingly, we aim to boost D-CHESS’s
+agentsindementiacare:Theevidence-baseforinterven-
+support services in the next phase of development tionssupportingtheirrole.InFamilyCaregivingintheNew
+o
+withenhancementssuchasprompts,onlinetraining, Normal,GauglerJE,KaneRL,eds.Elsevier,Philadelphia,
+andimprovementstositeorganization. pp.305-356.
+[10] McKayJR,VanHornDH,OslinDW,LynchKG,IveyM,
+Overall,thispilottestsuggeststhatD-CHESSmay r
+Ward K, Drapkin ML, Becher JR, Coviello DM (2010)
+have the potential to help ease the stress of family ArandomiPzedtrialofextendedtelephone-basedcontinuing
+caregivers, with positive implications for their own care for alcohol dependence: Within-treatment substance
+useoutcomes.JConsultClinPsychol78,912-923.
+health.Asourpopulationagesandtheincidenceof
+[11] MaistoSA,ZywiakWH,ConnorsGJ(2006)Courseoffunc-
+dementiaincreases,strainingboththehealthcaresys-
+t ioning1yearfollowingadmissionfortreatmentofalcohol
+temandournationaleconomy,theneedforsolutions dusedisorders.AddictBehav31,69-79.
+becomes increasingly urgent. Further development [12] GodleyMD,GodleySH,DennisML,FunkR,PassettiLL
+(2002)Preliminaryoutcomesfromtheassertivecontinuing
+andinvestigationofD-CHESSwithafull-scaleclin-
+e careexperimentforadolescentsdischargedfromresidential
+icaltrialismerited.
+treatment.JSubstAbuseTreat23,21-32.
+[13] ScherrD,KastnerP,KollmannA,HallasA,AuerJ,Krap-
+t pinger H, Schuchlenz H, Stark G, Grander W, Jakl G,
+ACKNOWLEDGMENTS
+SchreierG,FruhwaldFM(2009)Effectofhome-basedtele-
+c
+monitoringusingmobilephonetechnologyontheoutcome
+We wish to thank the family caregivers in the ofheartfailurepatientsafteranepisodeofacutedecom-
+Wisconsin Alzheimer’s Disease Reesearch Center pensation:Randomizedcontrolledtrial.JMedInternetRes
+11,e34.
+(WADRC) Clinical Core who shared their time and
+[14] NohJH,ChoYJ,NamHW,KimJH,KimDJ,YooHS,Kwon
+experiencessogenerously.Thi rsstudywassupported YW,WooMH,ChoJW,HongMH,YooJH,GuMJ,Kim
+byinternalfundsfromtheDepartmentofMedicine, SA,AnKE,JangSM,KimEK,YooHJ(2010)Web-based
+SchoolofMedicineandPr ublicHealth,Universityof comprehensiveinformationsystemforself-managementof
+diabetesmellitus.DiabetesTechnolTher12,333-337.
+Wisconsin–Madison.o
+[15] HelzerJE,BadgerGJ,RoseGL,MongeonJA,SearlesJS
+Authors’ disclosures available online (https:// (2002)Declineinalcoholconsumptionduringtwoyearsof
+www.j-alz.com/manuscript-disclosures/19-0052r2). dailyreporting.JStudAlcohol63,551-558.
+C
+[16] DavisJR,GlarosAG(1986)Relapsepreventionandsmok-
+ingcessation.AddictBehav11,105-114.
+REFERENCES [17] LarimerME,PalmerRS,MarlattGA(1999)Relapsepre-
+vention. An overview of Marlatt’s cognitive-behavioral
+model.AlcoholResHealth23,151-160.
+[1] Alzheimer’sAssociation(2019)2019Alzheimer’sDisease
+[18] SealeJP,ShellenbergerS,VelasquezMM,BoltriJM,Oko-
+factsandfigures.AlzheimersDement15,321-387.
+sunI,GuyinnM,VinsonD,CorneliusM,JohnsonJA(2010)
+[2] SchulzR,BeachSR(1999)Caregivingasariskfactorfor
+Impactofvitalsignsscreening&clinicianpromptingon
+mortality:TheCaregiverHealthEffectsStudy.JAMA282,
+alcohol and tobacco screening and intervention rates: A
+20215-2219.
+pre-postinterventioncomparison.BMCFamPract11,18.
+[3] OberstMT,ThomasSE,GassKA,WardSE(1989)Care-
+[19] Witkiewitz K, Marlatt GA (2007) High-risk situations:
+giving demands and appraisal of stress among family
+Relapse as a dynamic process. In Therapist’s Guide to
+caregivers.CancerNurs12,209-215.
+Evidence-BasedRelapsePrevention,WitkiewitzK,Marlatt
+[4] AneshenselCS,PearlinLI,SchulerRH(1993)Stress,role
+G,eds.AcademicPress,London,pp.19-33.
+captivity, and the cessation of caregiving. J Health Soc
+[20] vanOschL,LechnerL,ReubsaetA,WiggerS,deVriesH
+Behav34,54-70.
+(2008)Relapsepreventioninanationalsmokingcessation
+[5] Williams F, Moghaddam N, Ramsden S, De Boos
+contest:Effectsofcopingplanning.BrJHealthPsychol13,
+D (2018) Interventions for reducing levels of burden
+525-535.
+amongst informal carers of persons with dementia in
+[21] WashtonAM(1991)CocaineAddiction:Treatment,Recov-
+the community. A systematic review and meta-analysis
+ery,andRelapsePrevention,WWNorton&Company,New
+of randomised controlled trials. Aging Ment Health. doi:
+York,NY.
+10.1080/13607863.2018.1515886
+D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers 11
+[22] Sullivan WP, Wolk JL, Hartmann DJ (1992) Case man- R,SchillerJH,ClearyJF(2013)AneHealthsystemsup-
+agement in alcohol and drug treatment: Improving client portingpalliativecareforpatientswithnon-smallcelllung
+outcomes.FamSoc73,195-204. cancer:Arandomizedtrial.Cancer119,1744-1751.
+[23] DennisM,ScottCK,FunkR(2003)Anexperimentalevalu- [37] GustafsonD,GustafsonRC,WackerbarthS(1997)CHESS:
+ationofrecoverymanagementcheckups(RMC)forpeople Healthinformationanddecisionsupportforpatientsand
+withchronicsubstanceusedisorders.EvalProgramPlann families.Generations21,56-58.
+26,339-352. [38] HertzogMA(2008)Considerationsindeterminingsample
+[24] McLellanAT,HaganTA,LevineM,MeyersK,GouldF, sizeforpilotstudies.ResNursHealth31,180-191.
+BencivengoM,DurellJ,JaffeJ(1999)Doesclinicalcase [39] FieldA(2018)DiscoveringstatisticsusingIBMSPSSstatis-
+managementimproveoutpatientaddictiontreatment?Drug tics,5thed,SagePublications,ThousandOaks,CA.
+AlcoholDepend55,91-103. [40] Morris JC (1993) The clinical demfentia rating (CDR):
+[25] LorigKR,RitterPL,LaurentDD,FriesJF(2004)Long-term Current version and scoring rules. Neurology 43, 2412-
+o
+randomized controlled trials of tailored-print and small- 2414.
+group arthritis self-management interventions. Med Care [41] KroenkeK,StrineTW,SpitzerRL,WilliamsJB,BerryJT,
+42,346-354. Mokdad AH (2009) The PHQ-8 as a measure of current
+o
+[26] RappRC,SiegalHA,FisherJH(1992)Astrengths-based depressioninthegeneralpopulation.JAffectDisord114,
+modelofcasemanagement/advocacy:Adaptingamental 163-173.
+healthmodeltopracticeworkwithpersonswhohavesub- [42] MaceNL,RabinsPV(2011)The36-HourDay:AFamily
+r
+stanceabuseproblems.NIDAResMonogr127,79-91. GuidetoCaringforPeopleWhoHaveAlzheimer’sDisease
+[27] Shaw BR, Jeong Yeob H, Hawkins RP, McTavish FM, RelatedDePmentiasandMemoryLoss,TheJohnsHopkins
+GustafsonDH(2008)Communicatingaboutselfandothers UniversityPress,Baltimore,MD.
+withinanonlinesupportgroupforwomenwithbreastcancer [43] LawtonMP,KlebanMH,MossM,RovineM,Glicksman
+andsubsequentoutcomes.JHealthPsychol13,930-939. A(1989)Measuringcaregivingappraisal.JGerontol44,
+[28] Palermo TM, Wilson AC, Peters M, Lewandowski A, 6 1-71.
+Somhegyi H (2009) Randomized controlled trial of [44d] AneshenselCS,PearlinLI,MullanJT,ZaritSH,Whitlatch
+an internet-delivered family cognitive-behavioral therapy CJ(1995)ProfilesinCaregiving:TheUnexpectedCareer,
+interventionforchildrenandadolescentswithchronicpain. AcademicPress,SanDiego,CA.
+Pain146,205-213. e[45] Holmes-RovnerM,KrollJ,SchmittN,RovnerDR,Breer
+[29] DuBenskeLL,GustafsonDH,ShawBR,ClearyJF(2010) ML,RothertML,PadonuG,TalarczykG(1996)Patient
+Web-based cancer communication and decision making satisfactionwithhealthcaredecisions:Thesatisfactionwith
+systems: Connecting patients, caregivers, and clinticians decisionscale.MedDecisMaking16,58-64.
+for improved health outcomes. Med Decis Making 30, [46] MoserA,StuckAE,SillimanRA,GanzPA,Clough-Gorr
+c
+732-744. KM (2012) The eight-item modified Medical Outcomes
+[30] GustafsonDH,HawkinsR,BobergE,PingreeS,SerlinRE, Study Social Support Survey: Psychometric evaluation
+GrazianoF,ChanCL(1999)Impactofeapatient-centered, showedexcellentperformance.JClinEpidemiol65,1107-
+computer-based health information/support system. Am J 1116.
+PrevMed16,1-9. [47] RussellDW(1996)UCLALonelinessScale(Version3):
+[31] GustafsonDH,McTavishF,HrawkinsR,PingreeS,Arora Reliability,validity,andfactorstructure.JPersAssess66,
+N,MendenhallJ,SimmonsGE(1998)Computersupport 20-40.
+forelderlywomenwithbrreastcancer.JAMA280,1305. [48] Spitzer RL, Kroenke K, Williams JB, Lowe B (2006) A
+[32] GustafsonDH,HawkinsR,PingreeS,McTavishF,Arora brief measure for assessing generalized anxiety disorder:
+NK, Mendenhall J,oCella DF, Serlin RC, Apantaku FM, TheGAD-7.ArchInternMed166,1092-1097.
+StewartJ,SalnerA(2001)Effectofcomputersupporton [49] IQVIAInstituteforHumanDataScience(2017)Thegrow-
+youngerwomenwithbreastcancer.JGenInternMed16, ingvalueofdigitalhealth:Evidenceandimpactonhuman
+C
+435-445. health and the healthcare system, IQVIA, https://www.
+[33] GustafsonDH,HawkinsR,McTavishF,PingreeS,Chen iqvia.com/institute/reports/the-growing-value-of-digital-
+WC, Volrathongchai K, Stengle W, Stewart JA, Serlin health,AccessedSeptember20,2018.
+RC (2008) Internet-based interactive support for cancer [50] Krebs P, Duncan DT (2015) Health app use among US
+patients:Areintegratedsystemsbetter?JCommun58,238- mobile phone owners: A national survey. JMIR Mhealth
+257. Uhealth3,e101.
+[34] GustafsonD,WiseM,BhattacharyaA,PulvermacherA, [51] PerezS(2016)Nearly1in4peopleabandonmobileapps
+ShanovichK,PhillipsB,LehmanE,ChinchilliV,Hawkins after only one use, TechCrunch, https://techcrunch.com/
+R, Kim JS (2012) The effects of combining Web-based 2016/05/31/nearly-1-in-4-people-abandon-mobile-apps-af
+eHealthwithtelephonenursecasemanagementforpedi- ter-only-one-use/,AccessedJanuary31,2018.
+atricasthmacontrol:Arandomizedcontrolledtrial.JMed [52] PerroJ(2017)Mobileapps:What’sagoodretentionrate?
+InternetRes14,e101. Localytics, http://info.localytics.com/blog/mobile-apps-
+[35] GustafsonDH,McTavishFM,ChihMY,AtwoodAK,John- whats-a-good-retention-rate, Accessed September 20,
+sonRA,BoyleMG,LevyMS,DriscollH,ChisholmSM, 2018.
+DillenburgL,IshamA,ShahD(2014)Asmartphoneappli- [53] Endeavor Partners (2014) Inside Wearables: How the
+cationtosupportrecoveryfromalcoholism:Arandomized scienceofhumanbehaviorchangeoffersthesecrettolong-
+clinicaltrial.JAMAPsychiatry71,566-572. term engagement, Endeavor Partners, https://blog.endea
+[36] GustafsonDH,DuBenskeLL,NamkoongK,HawkinsR, vour.partners/inside-wearable-how-the-science-of-human-
+ChihMY,AtwoodAK,JohnsonR,BhattacharyaA,Car- behavior-change-offers-the-secret-to-long-term-engageme
+mackCL,TraynorAM,CampbellTC,BussMK,Govindan nt-a15b3c7d4cf3,AccessedJanuary23,2018.
+12 D.H.Gustafsonetal./Computer-BasedSystemforFamilyCaregivers
+[54] Fox G, Garland S, Keibel A, Saxon LA (2017) Why [59] ChesneyT,LawsonS(2015)Criticalmassanddiscontinued
+people stick with or abandon wearable devices, NEJM useofsocialmedia.SystResBehavSci32,376-387.
+Catalyst, https://catalyst.nejm.org/stay-abandon-wearable- [60] GeddesC(2011)Achievingcriticalmassinsocialnetworks.
+devices/,AccessedJanuary24,2018. JDatabaseMarkCustStrategyManag18,123-128.
+[55] SubstanceAbuseandMentalHealthServicesAdministra- [61] Pennebaker JW (1997) Writing about emotional experi-
+tion(SAMHSA)(2015)inTreatmentImprovementProtocol encesasatherapeuticprocess.PsycholSci8,162-166.
+[TIP]Series60,SubstanceAbuseandMentalHealthSer- [62] BlagysMD,HilsenrothMJ(2002)Distinctiveactivitiesof
+vicesAdministration,Rockville,MD. cognitive-behavioraltherapy:Areviewofthecomparative
+[56] ShibaK,KondoN,KondoK(2016)Informalandformal psychotherapyprocessliterature.ClinPsycholRev22,671-
+socialsupportandcaregiverburden:TheAGESCaregiver 706.
+Survey.JEpidemiol26,622-628. [63] KannanS,GowriS(2015)Pilotstudiefs:Aretheyappropri-
+[57] Mizak A, Park M, Park D, Oldon K (2017) Amazon atelyreported?PerspectClinRes6,207-210.
+o
+“Alexa” pilot analysis report, Front Porch Center for [64] Jones SM, Killett A, Mioshi E (2018) What factors
+Innovation and Wellbeing, http://fpciw.org/wp-content/ predict family caregivers’ attendance at dementia cafes?
+uploads/sites/15/2017/12/FINAL-DRAFT-Amazon-Alexa- JAlzheimersDis64,1337-1345.
+o
+Analysis-Report.pdf [65] GalinskyMJ,SchoplerJH,AbellMD(1997)Connecting
+[58] National Public Radio, Edison Research (2018) The group members through telephone and computer groups.
+Smart Audio Report, https://www.nationalpublicmedia. HealthSocWork22,181-188.
+r
+com/smart-audio-report/latest-report/,AccessedMarch25,
+2019. P
+d
+e
+t
+c
+e
+r
+r
+o
+C

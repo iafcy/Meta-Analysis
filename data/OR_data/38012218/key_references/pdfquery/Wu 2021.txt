@@ -1,0 +1,825 @@
+
+
+
+Acute Exacerbation of a Chronic Obstructive Pulmonary Disease 
+Prediction System Using Wearable Device Data, Machine 
+Learning, and Deep Learning: Development and Cohort Study 
+Chia-Tung Wu1*, MSc; Guo-Hung Li2*, MSc; Chun-Ta Huang3, MD, PhD; Yu-Chieh Cheng2, BSc; Chi-Hsien Chen4, 
+MD, PhD; Jung-Yien Chien3, MD, PhD; Ping-Hung Kuo3, MD; Lu-Cheng Kuo3, MD; Feipei Lai1, PhD 
+1Department of Computer Science and Information Engineering, National Taiwan University, Taipei, Taiwan 
+2Graduate Institute of Biomedical Electronics and Bioinformatics, National Taiwan University, Taipei, Taiwan 
+3Department of Internal Medicine, National Taiwan University Hospital, College of Medicine, National Taiwan University, Taipei, Taiwan 
+4Department of Environmental and Occupational Medicine, National Taiwan University Hospital, College of Medicine, National Taiwan University, 
+Taipei, Taiwan 
+*these authors contributed equally 
+Corresponding Author: 
+Jung-Yien Chien, MD, PhD 
+Department of Internal Medicine 
+National Taiwan University Hospital, College of Medicine, National Taiwan University 
+No 7 Chung-Shan S Road 
+Taipei, 100 
+Taiwan 
+Phone: 886 972651516 
+Email: jychien@ntu.edu.tw 
+
+Background: The World Health Organization has projected that by 2030, chronic obstructive pulmonary disease (COPD) will 
+be the third-leading cause of mortality and the seventh-leading cause of morbidity worldwide. Acute exacerbations of chronic 
+obstructive pulmonary disease (AECOPD) are associated with an accelerated decline in lung function, diminished quality of life, 
+and higher mortality. Accurate early detection of acute exacerbations will enable early management and reduce mortality. 
+Objective: The aim of this study was to develop a prediction system using lifestyle data, environmental factors, and patient 
+symptoms for the early detection of AECOPD in the upcoming 7 days. 
+Methods: This prospective study was performed at National Taiwan University Hospital. Patients with COPD that did not have 
+a pacemaker and were not pregnant were invited for enrollment. Data on lifestyle, temperature, humidity, and fine particulate 
+matter were collected using wearable devices (Fitbit Versa), a home air quality–sensing device (EDIMAX Airbox), and a 
+smartphone app. AECOPD episodes were evaluated via standardized questionnaires. With these input features, we evaluated the 
+prediction performance of machine learning models, including random forest, decision trees, k-nearest neighbor, linear discriminant 
+analysis, and adaptive boosting, and a deep neural network model. 
+Results: The continuous real-time monitoring of lifestyle and indoor environment factors was implemented by integrating home 
+air quality–sensing devices, a smartphone app, and wearable devices. All data from 67 COPD patients were collected prospectively 
+during a mean 4-month follow-up period, resulting in the detection of 25 AECOPD episodes. For 7-day AECOPD prediction, 
+the proposed AECOPD predictive model achieved an accuracy of 92.1%, sensitivity of 94%, and specificity of 90.4%. Receiver 
+operating characteristic curve analysis showed that the area under the curve of the model in predicting AECOPD was greater 
+than 0.9. The most important variables in the model were daily steps walked, stairs climbed, and daily distance moved. 
+Conclusions: Using wearable devices, home air quality–sensing devices, a smartphone app, and supervised prediction algorithms, 
+we achieved excellent power to predict whether a patient would experience AECOPD within the upcoming 7 days. The AECOPD 
+prediction system provided an effective way to collect lifestyle and environmental data, and yielded reliable predictions of future 
+AECOPD events. Compared with previous studies, we have comprehensively improved the performance of the AECOPD 
+prediction model by adding objective lifestyle and environmental data. This model could yield more accurate prediction results 
+for COPD patients than using only questionnaire data. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 1 
+(page number not for citation purposes) 
+
+
+
+
+
+
+With rapid progress of medicine, many treatments and 
+medications have been developed, and relationships between 
+lifestyle and disease have been elucidated. Precision medicine 
+involves determining the best treatment plan for individual 
+patients. Currently, research on precision medicine primarily 
+involves developing related apps based on historical data from 
+electronic medical records. When a patient is discharged from 
+the hospital, lifestyle and environmental risks affect disease 
+control. However, such factors are difficult to collect and use 
+for analysis. 
+The World Health Organization includes chronic respiratory 
+diseases among the four major human chronic diseases; in 
+particular, lung disease accounts for an estimated 7.5 million 
+deaths per year, or approximately 14% of annual deaths 
+worldwide. These diseases are a major economic burden, and 
+contribute to gender and social inequalities within and between 
+countries. In descending frequency, the most frequent diseases 
+include chronic obstructive pulmonary disease (COPD), lung 
+cancer, tuberculosis, lung infections, asthma, and interstitial 
+lung diseases [1]. COPD is a highly prevalent lung disease 
+characterized by persistent airflow limitation due to a mixture 
+of obstructive bronchiolitis and emphysema. The morbidity and 
+mortality of COPD are high and continue to increase [2], such 
+that COPD is projected to become the third-leading cause of 
+death worldwide by 2030. 
+Acute exacerbation of COPD (AECOPD) decreases the patient’s 
+quality of life, accelerates decline in lung function, and is 
+significantly associated with mortality [3]. COPD is a 
+heterogeneous disorder with large variations in the risk of 
+exacerbation across patients. In clinical practice, a history of 
+two or more exacerbations and one severe exacerbation per year 
+is used to guide therapeutic choices for exacerbation prevention 
+[3]. However, this approach is clinically limited owing to 
+significant heterogeneity in risk even among those who have 
+frequent exacerbation episodes. Although these outcomes may 
+be avoided with early detection and treatment, increasing 
+evidence shows that environmental and lifestyle factors may 
+affect the development of COPD. 
+Lifestyle modification is considered to be one of the most 
+cost-effective strategies in the self-management and secondary 
+prevention of COPD [4]. Nevertheless, there is limited evidence 
+demonstrating the relationship between lifestyle factors and 
+COPD development. Several studies have developed predictive 
+models for AECOPD [5]; however, there is no prediction tool 
+incorporating both lifestyle data and medical questionnaires. 
+Moreover, some researchers have argued that remote monitoring 
+is a promising alternative—or an adjunct—to traditional health 
+care services in COPD management [6]. Nonetheless, some 
+studies have shown that inefficient systems, poor patient 
+
+XSL•FO 
+RenderX 
+compliance, and poor performance of prediction tools may 
+decrease the effects of health care interventions [7-9]. 
+Hence, the objectives of this study were to (1) develop a lifestyle 
+observation platform based on wearable devices and a 
+smartphone app to observe lifestyle and environmental factors 
+for patients with COPD, and to (2) construct an AECOPD 
+prediction tool for the early prediction of COPD exacerbations 
+using lifestyle factors, indoor environmental factors, and medical 
+questionnaires. 
+
+Data Collection 
+Eligible participants were adult patients with COPD (20 years 
+of age or older) who were not implanted with a pacemaker and 
+who were not pregnant. Participants were recruited from the 
+pulmonologist clinics at National Taiwan University Hospital 
+between March 2019 and February 2020. The study protocol 
+was approved by the institutional review board of National 
+Taiwan University Hospital (201710066RINB). During the 
+study period, we enrolled 67 patients with a confirmed diagnosis 
+of COPD according to the Global Initiative for Chronic 
+Obstructive Lung Disease (GOLD) criteria [3], as defined by 
+the ratio of <70% postbronchodilator forced expiratory volume 
+in 1 second to the forced vital capacity. 
+Data collection was based on clinical questionnaires, 
+environmental data, and physiological data. Data on patient 
+symptoms were prospectively evaluated by the modified Medical 
+Research Council (mMRC) dyspnea scale and the COPD 
+assessment test (CAT) upon enrollment and every month during 
+follow-up. The mMRC scale is used to assess functional 
+impairment due to dyspnea attributable to respiratory disease, 
+and the CAT is a patient-completed questionnaire that is used 
+globally to assess the impact of COPD (cough, sputum, dyspnea, 
+chest tightness) on health status. Both are widely used clinical 
+tests for COPD, and some studies [4,10] have also used these 
+clinical tools to evaluate the health condition of COPD patients. 
+According to the GOLD guidelines, COPD exacerbations are 
+defined as the acute worsening of respiratory symptoms, 
+resulting in additional therapy [11]. 
+Environmental data and physiological data were collected as 
+time-series data by home air quality–sensing devices and 
+wearable devices that were provided to all participants. Although 
+most medical research [4,10,12] tends to use medical devices 
+as data sources, patient compliance could be reduced by the 
+inconvenience and difficulty in operating such devices. 
+Physiological data included walking steps, climbing stairs, 
+distances, consumption in calories, heart rate, and sleep status. 
+Environmental data comprised temperature, humidity, and fine 
+particulate matter (PM2.5) levels. All data were synchronized 
+with the database every 15 minutes to ensure that any subtle 
+changes were not neglected. 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 2 
+(page number not for citation purposes) 
+
+
+System Architecture 
+Figure 1 shows the architecture of the AECOPD prediction 
+system. The system consists of four components: a wearable 
+device (Fitbit Versa), home air quality–sensing device 
+(EDIMAX Airbox), lifestyle observation platform, and the 
+personal health advice app. Wearable devices automatically 
+collected lifestyle data (physical activities, heart rate, and sleep 
+patterns) via Bluetooth to the original customized apps and were 
+further connected to the lifestyle observation platform via the 
+OAuth 2.0 protocol. Environmental data in the patient’s living 
+environment (ie, temperature, humidity, and PM2.5 levels) were 
+collected from the home air quality–sensing device and open 
+environmental application programming interface (API). We 
+also developed a health self-management smartphone app for 
+patients and a lifestyle observation platform for medical staff, 
+which together facilitate the continuous monitoring of lifestyle 
+data and instant care advice. To assist physicians in organizing 
+key information more effectively, data are visualized by 
+combining trend charts, as shown in Figure 2. In addition to 
+these trend charts, the daily prediction results are also used as 
+a reference for decision support to help physicians better 
+understand the status of their patients. 
+Figure 1. System architecture of the acute exacerbation of chronic obstructive pulmonary disease (AECOPD) prediction system. API: application 
+programming interface; COPD: chronic obstructive pulmonary disease; mMRC: modified Medical Research Council dyspnea scale. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 3 
+(page number not for citation purposes) 
+
+
+
+Figure 3 shows an example system scenario: when the prediction 
+probability exceeds 0.7, a red icon is displayed to prompt the 
+case manager to intervene and take care of the patient. To protect 
+patient privacy, the system transmits data via the HTTPS 
+protocol, and personal information is encrypted. Figure 4 shows 
+the data management workflow. Only verified medical service 
+providers can access their patients’ information, which ensures 
+the confidentiality and integrity of the data. The mobile app 
+was designed to record symptoms and produce trend charts to 
+help patients better understand their health status, as shown in 
+Figure 5. With appropriate expert advice, they are thus able to 
+better manage their own health. 
+
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 4 
+(page number not for citation purposes) 
+
+
+
+
+Data Processing 
+The combination of clinical questionnaire data, environmental 
+data, and physiological data was the main dataset used in our 
+training model. To explore the influence of changes in 
+environmental and lifestyle factors on AECOPD, first- and 
+second-order differentiation models were applied to the 
+environmental and physiological data to understand trends and 
+serve as additional input features. Random downsampling was 
+used to account for data imbalance, resulting in 5600 data points, 
+one-third of which were used as the validation set and the 
+remainder were used as the training set. We used forward-filling 
+to pad missing and questionnaire data, as illustrated in Figure 
+6. The complete data selection rules are shown in Figure 7. Note 
+that missing values is a common problem in data mining. A 
+correlation analysis (Figure 8) was performed between 
+physiological and environmental features to ensure that their 
+interactions did not affect the prediction results. Finally, as 
+shown in Textbox 1, 45 features were selected to predict the 
+probability of AECOPD. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 5 
+(page number not for citation purposes) 
+
+
+
+
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 6 
+(page number not for citation purposes) 
+
+
+
+
+
+
+Temperature, humidity, fine particulate matter, first-order differentiation (diff1)_temperature, diff1_humidity, diff1_fine particulate matter, second-order 
+differentiation (diff2)_temperature, diff2_humidity, diff2_fine particulate 
+
+
+Heart rate, walking steps, calories consumption, deep sleep time, light sleep time, rapid eye movement time, awake time, diff1_heart rate, diff1_ 
+walking steps, diff1_calories consumption, diff1_deep sleep time, diff1_light sleep time, diff1_rapid eye movement time, diff1_awake time, diff2_heart 
+rate, diff2_ walking steps, diff2_calories consumption, diff2_deep sleep time, diff2_light sleep time, diff2_rapid eye movement time, diff2_awake 
+time 
+
+
+Chronic obstructive pulmonary disease (COPD) assessment test (9 answers), modified Medical Research Council (mMRC) dyspnea scale (1 answer), 
+life quality questionnaire (5 answers) 
+Classification Models 
+Classification algorithms for this study were selected according 
+to previously published studies on COPD such as those of Wang 
+et al [13] and Rahman et al [14]. The former group developed 
+AECOPD identification models to reduce patient mortality and 
+financial burdens, and the latter group attempted to identify 
+relations between discriminatory heart rate variability features 
+and disease severity in patients with pulmonary diseases and 
+COPD. For model comparison with machine learning–based 
+classification, we selected the following classifiers: decision 
+trees [15], random forests [16], k-nearest neighbor clustering 
+[17], linear discriminant analysis, and adaptive boosting [18]. 
+We also propose a deep neural network (DNN) architecture for 
+use in comparing the performance between machine-learning 
+and deep-learning approaches on AECOPD prediction. 
+Supervised learning was performed using AECOPD events and 
+51 features obtained from the lifestyle observation platform. 
+Models were implemented using python libraries such as 
+scikit-learn and Pytorch. 
+DNN Classification 
+The DNN classification model was constructed using fully 
+connected layers, which connect each neuron in one layer to 
+every neuron in another layer, mapping feature representations 
+to the target vector space. Hyperparameters for the two fully 
+connected layers are presented in Table 1. Batch normalization 
+was applied to input data sequences to reduce the internal 
+covariate shift and gradient dependence [19]. For the activation 
+function we used parametric rectified linear unit (PReLU), which 
+combines the characteristics of ReLU and leaky ReLU, with 
+the introduction of a variable slope α, randomly selected from 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 7 
+(page number not for citation purposes) 
+
+
+the uniform distribution during the training process to negative 
+values [20]. The complete DNN architecture is shown in Figure 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validation and Model Assessment 
+We use 3-fold cross-validation to evaluate the stability of the 
+prediction models. The workflow is shown in Figure 10. We 
+used two metrics to evaluate the performance of the 
+identification models based on the test set: the area under the 
+receiver operating characteristic curve (AUROC) and the F1 
+score. We also used sensitivity, specificity, precision, and 
+accuracy as assessment metrics. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 8 
+(page number not for citation purposes) 
+
+
+
+
+Patient Characteristics 
+A total of 67 patients were registered for this study. Most of the 
+patients were middle-aged (mean 66.62, SD 11.38 years) and 
+were men. Eighteen percent had never smoked and the 
+remainder were either current smokers or exsmokers. Detailed 
+demographic information of the study participants is shown in 
+Table 2. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 9 
+(page number not for citation purposes) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Distribution of Physiological and Environmental 
+Factors 
+Figure 11 illustrates the AECOPD probabilities versus the 
+distributions of physiological and environmental features, among 
+which average heart rate, PM2.5, steps walked, and calorie 
+consumption were significantly different between those with 
+and without AECOPD. This shows that physiological and 
+environmental factors are useful for predicting AECOPD. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 10 
+(page number not for citation purposes) 
+
+
+Figure 11. Acute exacerbation of chronic obstructive pulmonary disorder probability trends versus normalized distributions of physiological and 
+environmental factors. HR: heart rate; AE: acute exacerbation: PM2.5: fine particulate matter. 
+AECOPD Prediction Model 
+Table 3 and Figure 12 demonstrate the performance of the 
+implemented models. The DNN model yielded the best 
+performance with 6 metrics higher than 90%. 
+To determine which model best fits diverse scenarios, we trained 
+the model using various combinations of data features, as shown 
+in Table 4: the prediction including all of the features yielded 
+the best performance. These results further confirmed that 
+physiological and environmental data features are more 
+predictive 
+clinical 
+questionnaires. 
+
+
+
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 11 
+(page number not for citation purposes) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aAUROC: area under the receiver operating characteristic curve. 
+bkNN: k-nearest neighbor. 
+cLDA: linear discriminant analysis. 
+dAdaBoost: adaptive boosting. 
+eDNN: deep neural network. 
+Figure 12. Receiver operating characteristic (ROC) curve and area under the receiver operating characteristic curve of all models. AE: acute exacerbation; 
+KNN: k-nearest neighbor; LDA: linear discriminant analysis. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 12 
+(page number not for citation purposes) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aAUROC: area under the receiver operating characteristic curve. 
+bDNN: deep neural network. 
+cEnv: environmental. 
+dAdaBoost: adaptive boosting. 
+AECOPD Prediction System 
+To account for incomplete data, which is typical in real-world 
+apps, the prediction system supports AECOPD prediction via 
+optional features. When only lifestyle or environmental data 
+are automatically uploaded daily, the system still predicts 
+whether AECOPD will occur within the next 7 days. Therefore, 
+multiple AECOPD prediction models were deployed on the 
+server. Through the process shown in Figure 13, daily prediction 
+results are provided to support physicians in making decisions. 
+Different color signs displayed on the system indicate different 
+risk levels. 
+
+Feature Importance 
+Figure 14 shows the importance scores of model features as 
+evaluated by a random forest algorithm. Feature importance is 
+a measure of the ability to improve the purity of the random 
+forest model’s leaf nodes. Daily activity–related features such 
+as average heart rate, calorie consumption, and steps walked 
+yielded higher importance scores, which indicates that these 
+features have greater potential to improve the performance of 
+the random forest model. As average heart rate had the highest 
+importance score, and is thus likely the most influential predictor 
+of AECOPD, we used a warning sign for abnormal heart rates 
+in the AECOPD prediction system to alert physicians when the 
+patient’s average heart rate was abnormal. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 13 
+(page number not for citation purposes) 
+
+
+
+
+Principal Findings 
+We implemented an AECOPD prediction system by integrating 
+wearable devices, Internet-of-Things environment sensors, a 
+smartphone app, machine learning, and deep learning. We 
+present six models for AECOPD identification. Additionally, 
+we selected features to determine the optimal feature set for this 
+task. The performance of each model is demonstrated according 
+to sensitivity, specificity, F1-score, accuracy, precision, and 
+AUROC metrics obtained based on 3-fold cross-validation. To 
+the best of our knowledge, this is the most comprehensive study 
+that used machine-learning models to predict AECOPDs. 
+Clinical questionnaires tend to be more subjective, which can 
+affect clinical decisions. The AECOPD prediction model with 
+all data features achieved the best performance. These results 
+showed that physiological and environmental data are more 
+powerful predictors than questionnaire data. Compared with 
+clinical questionnaire data alone, lifestyle and environmental 
+data yielded improvements of 10% in accuracy and 20% in 
+AUROC. 
+
+XSL•FO 
+RenderX 
+Comparison With Prior Work 
+In the 2010s, researchers began to attempt to predict COPD 
+exacerbation. One study used demographic features, vital signs, 
+and electronic medical records to predict COPD exacerbations 
+in the emergency department [21]. Another used 28 features, 
+including vital signs, medical history, inflammatory indicators, 
+and tree-based machine learning, to predict the prognosis of 
+hospitalized patients with COPD [22]. In contrast, in this study, 
+we focused on exacerbation risk prediction for discharged COPD 
+patients, because their health condition is likely to be less 
+accessible. Another study remotely monitored AECOPD in 
+patients via questionnaire data. They demonstrated an accuracy 
+of 100% for event-based prediction and up to 80.5% for 
+symptom-based prediction [23]. In addition, Shah et al [24] 
+used pulse oximetry and three vital signs to predict AECOPD, 
+reaching a mean AUROC of 68%. In comparison to these 
+studies, we used daily activities and environmental information 
+as predictors to trace the health conditions of patients with 
+COPD and achieved higher performance. With wearable devices 
+and smartphone apps, all relevant COPD information can be 
+collected instantly. Such a system will be helpful for achieving 
+the goal of personalized health management in the future. Thus, 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 14 
+(page number not for citation purposes) 
+
+
+overall, our study constitutes a novel solution making use of 
+various data sources for superior AECOPD prediction 
+performance. 
+Limitations 
+Because of limitations in the air quality–sensing device, 
+environmental data collection was restricted to the user’s 
+bedroom, which degrades the prediction results. To account for 
+this, in the future we plan to use GPS functions to trace the 
+user’s movements to capture the corresponding environmental 
+data published via governmental open APIs. 
+In contrast to assumptions of physicians, Figure 10 shows that 
+patients with AECOPD engaged in more physical activity than 
+those without AECOPD. After reviewing the personal lifestyle 
+of each patient, we found that some engaged in intense exercise 
+even if they were uncomfortable, which goes against the 
+accepted knowledge of the medical profession. In the future, 
+more data could help to shed light on this apparent paradox. 
+Conclusions 
+Patients with COPD generally must return to the hospital 
+monthly for numerous clinical tests, which is a time-consuming 
+procedure. At the same time, it is impractical for discharged 
+patients or those under home care to continuously observe their 
+health conditions. They thus run the risk of AECOPDs between 
+routine visits. 
+In this study, we attempted to predict whether a patient with 
+COPD will experience acute exacerbation of their condition 
+within the next 7 days. In general, lifestyle and environmental 
+data of patients are difficult to collect effectively. However, 
+with the proposed system, all COPD-related data are uploaded 
+lifestyle and 
+automatically. Our 
+environmental data facilitate the precise management of users’ 
+health conditions, and can even produce early warnings of 
+AECOPD. The experimental results confirmed that such lifestyle 
+and environmental data are highly correlated to user health 
+conditions. In the future, we will enhance the prediction system 
+and perform external validation to ensure that the model can be 
+applied to other regions. 
+
+
+
+Acknowledgments 
+This research is supported by the Ministry of Science and Technology, Taiwan (grant MOST 110-2634-F-002-032-). 
+Conflicts of Interest 
+None declared. 
+
+
+
+3. 
+4. 
+
+
+
+
+
+
+Qureshi H, Sharafkhaneh A, Hanania NA. Chronic obstructive pulmonary disease exacerbations: latest evidence and clinical 
+implications. Ther Adv Chronic Dis 2014 Sep 14;5(5):212-227 [FREE Full text] [doi: 10.1177/2040622314532862] 
+[Medline: 25177479] 
+Yan R, Wang Y, Bo J, Li W. Healthy lifestyle behaviors among individuals with chronic obstructive pulmonary disease in 
+urban and rural communities in China: a large community-based epidemiological study. Int J Chron Obstruct Pulmon Dis 
+2017;12:3311-3321. [doi: 10.2147/COPD.S144978] [Medline: 29180861] 
+Global Initiative for Chronic Obstructive Lung Disease. URL: https://goldcopd.org/ [accessed 2021-03-23] 
+Ambrosino N, Bertella E. Lifestyle interventions in prevention and comprehensive management of COPD. Breathe (Sheff) 
+2018 Sep 31;14(3):186-194 [FREE Full text] [doi: 10.1183/20734735.018618] [Medline: 30186516] 
+Adibi A, Sin DD, Safari A, Johnson KM, Aaron SD, FitzGerald JM, et al. The Acute COPD Exacerbation Prediction Tool 
+(ACCEPT): a modelling study. Lancet Respir Med 2020 Oct;8(10):1013-1021. [doi: 10.1016/S2213-2600(19)30397-2] 
+[Medline: 32178776] 
+Sanchez-Morillo D, Fernandez-Granero MA, Leon-Jimenez A. Use of predictive algorithms in-home monitoring of chronic 
+obstructive pulmonary disease and asthma: A systematic review. Chron Respir Dis 2016 Aug;13(3):264-283 [FREE Full 
+text] [doi: 10.1177/1479972316642365] [Medline: 27097638] 
+Hurst JR, Donaldson GC, Quint JK, Goldring JJ, Patel AR, Wedzicha JA. Domiciliary pulse-oximetry at exacerbation of 
+chronic obstructive pulmonary disease: prospective pilot study. BMC Pulm Med 2010 Oct 20;10:52 [FREE Full text] [doi: 
+10.1186/1471-2466-10-52] [Medline: 20961450] 
+Sánchez-Morillo D, Crespo M, León A, Crespo Foix LF. A novel multimodal tool for telemonitoring patients with COPD. 
+Inform Health Soc Care 2015 Jan 31;40(1):1-22. [doi: 10.3109/17538157.2013.872114] [Medline: 24380372] 
+Sanders C, Rogers A, Bowen R, Bower P, Hirani S, Cartwright M, et al. Exploring barriers to participation and adoption 
+of telehealth and telecare within the Whole System Demonstrator trial: a qualitative study. BMC Health Serv Res 2012 Jul 
+26;12:220 [FREE Full text] [doi: 10.1186/1472-6963-12-220] [Medline: 22834978] 
+Saleh L, Mcheick H, Ajami H, Mili H, Dargham J. Comparison of machine learning algorithms to increase prediction 
+accuracy of COPD domain. In: Mokhtari M, Abdulrazak B, Aloulou H, editors. Enhanced Quality of Life and Smart Living. 
+ICOST 2017. Lecture Notes in Computer Science. Cham: Springer; 2017:247-254. 
+11. Anthonisen NR, Manfreda J, Warren CP, Hershfield ES, Harding GK, Nelson NA. Antibiotic therapy in exacerbations of 
+chronic obstructive pulmonary disease. Ann Intern Med 1987 Feb;106(2):196-204. [doi: 10.7326/0003-4819-106-2-196] 
+[Medline: 3492164] 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 15 
+(page number not for citation purposes) 
+
+
+
+
+
+acute exacerbations in chronic obstructive pulmonary disease. Comput Methods Programs Biomed 2020 May;188:105267. 
+[doi: 10.1016/j.cmpb.2019.105267] [Medline: 31841787] 
+
+
+
+
+
+
+
+
+
+
+prediction. Eur Resp J 2015;46(Suppl 59):OA3282. [doi: 10.1183/13993003.congress-2015.OA3282] 
+Sergey I, Christian S. Batch normalization: accelerating deep network training by reducing internal covariate shift. arXiv. 
+2015. URL: https://arxiv.org/abs/1502.03167 [accessed 2021-04-11] 
+20. He K, Zhang X, Ren S, Sun J. Delving deep into rectifiers: surpassing human-level performance on ImageNet classification. 
+2015 Presented at: IEEE International Conference on Computer Vision; 2015; Santiago, Chile URL: https://www. 
+cv-foundation.org/openaccess/content_iccv_2015/papers/He_Delving_Deep_into_ICCV_2015_paper.pdf 
+
+
+21. Goto T, Camargo CA, Faridi MK, Yun BJ, Hasegawa K. Machine learning approaches for predicting disposition of asthma 
+and COPD exacerbations in the ED. Am J Emerg Med 2018 Sep;36(9):1650-1654. [doi: 10.1016/j.ajem.2018.06.062] 
+[Medline: 29970272] 
+Peng J, Chen C, Zhou M, Xie X, Zhou Y, Luo CH. A machine-learning approach to forecast aggravation risk in patients 
+with acute exacerbation of chronic obstructive pulmonary disease with clinical indicators. Sci Rep 2020 Feb 20;10(1):3118. 
+[doi: 10.1038/s41598-020-60042-1] [Medline: 32080330] 
+Fernandez-Granero MA, Sanchez-Morillo D, Lopez-Gordo MA, Leon A. A machine learning approach to prediction of 
+exacerbations of chronic obstructive pulmonary disease. In: Artificial Computation in Biology and Medicine. Lecture Notes 
+in Computer Science Volume 9107. Cham: Springer; 2015 Presented at: International Work-Conference on the Interplay 
+Between Natural and Artificial Computation (IWINAC 2015); June 1-5, 2015; Elche, Spain p. 305-311. [doi: 
+10.1007/978-3-319-18914-7_32] 
+Shah SA, Velardo C, Farmer A, Tarassenko L. Exacerbations in chronic obstructive pulmonary disease: identification and 
+prediction using a digital health system. J Med Internet Res 2017 Mar 07;19(3):e69 [FREE Full text] [doi: 10.2196/jmir.7207] 
+[Medline: 28270380] 
+
+
+AECOPD: acute exacerbation of chronic obstructive pulmonary disease 
+API: application programming interface 
+AUROC: area under the receiver operating characteristic curve 
+CAT: chronic obstructive pulmonary disease assessment test 
+COPD: chronic obstructive pulmonary disease 
+DNN: deep neural network 
+GOLD: Global initiative for chronic obstructive lung disease 
+mMRC: modified Medical Research Council dyspnea scale 
+PM2.5: fine particulate matter 
+Edited by L Buis; submitted 17.07.20; peer-reviewed by D Ruttens, X Li; comments to author 13.10.20; revised version received 
+30.01.21; accepted 23.03.21; published 06.05.21 
+Please cite as: 
+Wu CT, Li GH, Huang CT, Cheng YC, Chen CH, Chien JY, Kuo PH, Kuo LC, Lai F 
+Acute Exacerbation of a Chronic Obstructive Pulmonary Disease Prediction System Using Wearable Device Data, Machine Learning, 
+and Deep Learning: Development and Cohort Study 
+JMIR Mhealth Uhealth 2021;9(5):e22591 
+URL: https://mhealth.jmir.org/2021/5/e22591 
+doi: 10.2196/22591 
+PMID: 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 16 
+(page number not for citation purposes) 
+
+
+©Chia-Tung Wu, Guo-Hung Li, Chun-Ta Huang, Yu-Chieh Cheng, Chi-Hsien Chen, Jung-Yien Chien, Ping-Hung Kuo, Lu-Cheng 
+Kuo, Feipei Lai. Originally published in JMIR mHealth and uHealth (https://mhealth.jmir.org), 06.05.2021. This is an open-access 
+article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), 
+which permits unrestricted use, distribution, and reproduction in any medium, provided the original work, first published in JMIR 
+mHealth and uHealth, is properly cited. The complete bibliographic information, a link to the original publication on 
+https://mhealth.jmir.org/, as well as this copyright and license information must be included. 
+
+XSL•FO 
+RenderX 
+JMIR Mhealth Uhealth 2021 | vol. 9 | iss. 5 | e22591 | p. 17 
+(page number not for citation purposes) 

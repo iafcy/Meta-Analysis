@@ -1,0 +1,334 @@
+### Letter to the Editor
+
+#### Maximum Pao2 in the First 72 Hours of Intensive Care Is Associated With Risk-Adjusted Mortality in Pediatric Patients Undergoing Mechanical Ventilation
+
+Abstract: A relationship between Pao2 and mortality has previously been
+observed in single-center studies. We performed a retrospective cohort
+study of the Pediatric Health Information System plus database including patients less than or equal to 21 years old admitted to a medical or
+cardiac ICU who received invasive ventilation within 72 hours of admission. We trained and validated a multivariable logistic regression mortality
+prediction model with very good discrimination (C-statistic, 0.86; 95%
+CI, 0.79–0.92; area under the precision-recall curve, 0.39) and acceptable calibration (standardized mortality ratio, 0.96; 95% CI, 0.75–1.23;
+calibration belt p = 0.07). Maximum Pao2 measurements demonstrated
+a parabolic (“U-shaped”) relationship with PICU mortality (Box-Tidwell
+_p < 0.01). Maximum Pao2 was a statistically significant predictor of_
+risk-adjusted mortality (standardized odds ratio, 1.27; 95% CI, 1.23–
+1.32; p < 0.001). This analysis is the first multicenter pediatric study to
+identify a relationship between the extremes in Pao2 values and PICU
+mortality. Clinicians should remain judicious in the use of oxygen when
+caring for children.
+Key Words: child; critical care; death; hyperoxia; oxygen; ventilators,
+mechanical
+
+ecently, there has been increasing interest in hyperoxemia.
+Several randomized controlled trials and meta-analyses
+of oxygen management strategies in adults have come to
+differing conclusions regarding the importance of hyperoxemia R
+(1–3). While fewer data exist for children, there is a growing body
+of literature identifying a relationship between the Pao2 values
+and mortality in PICU settings (4–7). Limitations of these previous studies include data from single centers, variable definitions of
+hyperoxemia, and absent or uncalibrated risk-adjustment strategies. Our objective was to examine the relationship between the
+Pao2 values and mortality among critically ill children in a large
+multicenter cohort, adjusting with a well-calibrated mortality risk
+model. We hypothesized that both hypoxemia and hyperoxemia
+would demonstrate an association with risk-adjusted mortality.
+
+Copyright © 2020 The Authors. Published by Wolters Kluwer Health, Inc.
+on behalf of the Society of Critical Care Medicine. This is an open-access
+[article distributed under the terms of the Creative Commons Attribution-Non](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+[Commercial-No Derivatives License 4.0 (CCBY-NC-ND), where it is permis-](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+sible to download and share the work provided it is properly cited. The work
+cannot be changed in any way or used commercially without permission from
+the journal.
+
+_Crit Care Expl 2020; 2:e0186_
+
+**DOI: 10.1097/CCE.0000000000000186**
+
+
+## Explorations
+
+#### MATERIALS AND METHODS
+
+We performed a retrospective cohort study of the Pediatric Health
+Information System plus (PHIS+) database, a collection of federated electronic health record data containing laboratory results
+and quality-controlled administrative data from six large pediatric
+hospitals between 2010 and 2012 (8). We included patients with
+21 years old or younger that were admitted to a pediatric general
+or cardiac ICU with a hospital discharge date between January 1,
+2010, and December 31, 2012, who received invasive mechanical
+ventilation within 72 hours of admission and who had at least one
+Pao2 value obtained. We excluded patients who were admitted to a
+neonatal ICU or who received extracorporeal membrane oxygenation. The primary outcome was in-hospital mortality. The study
+was approved by the University of Pittsburgh Institutional Review
+Board.
+Because prior work has suggested a parabolic (“U-shaped”)
+relationship between Pao2 and mortality (5, 6), we performed a
+Box-Tidwell test. We developed a multivariable logistic regression model of predicted mortality, with a random effect for hospital, and plotted the expected and actual mortalities of patients
+grouped by differing maximum Pao2 values using bin widths
+of 100 mm Hg. The variables used in the mortality prediction
+model are listed in **Table 1. We divided the cohort into 80%**
+training and 20% testing subsets. Backward stepwise selection was performed, taking variables with _p value of less than_
+0.05 as statistically significant. Discrimination was assessed
+using _C-statistics with DeLong 95% CIs and area under the_
+precision-recall curve (AUPRC). Calibration was assessed with
+standardized mortality ratios (SMRs) with Hosmer 95% CI and
+calibration belts, with _p value of greater than or equal to 0.05_
+deemed acceptable (9). Because the relationship between Pao2
+and mortality was nonlinear, we performed polynomial (parabolic) regression. This approach is similar to standard logistic
+regression, but allows the demonstration of the “U-shaped”
+relationship between the patients’ maximum Pao2 value and
+risk-adjusted mortality (with all other variables in the model
+taken into account), and calculation of where the lowest riskadjusted mortality occurred.
+We conducted five sensitivity analyses. First, we excluded
+patients with a cardiovascular complex chronic condition flag
+(10). Second, we excluded patients with burns, carbon monoxide
+poisoning, or traumatic brain injury. Third, we excluded patients
+with cardiac arrest prior to admission. Fourth, because prior work
+has suggested a time-dependent effect of hyperoxemia (4–7), we
+restricted the cohort to patients with invasive mechanical ventilation and Pao2 measurements within 24 hours of admission. Fifth,
+we broadened the cohort to include patients who underwent invasive mechanical ventilation and Pao2 measurements at any time
+during admission. All analyses were performed in R (Versions
+3.5.1 and 4.0.0; R Foundation for Statistical Computing, Vienna,
+Austria).
+
+
+-----
+
+**TABLE 1. Cohort Demographics, Mortality Prediction Models, and Effect of Maximum Pao2**
+
+**Excluding Burns,**
+
+**Within** **Excluding** **Carbon Monoxide** **Within** **Any Time**
+**72 hr of** **Cardiovascular** **Poisoning, and** **Excluding** **24 hr of** **During**
+
+**Characteristics** **Admission** **CCC** **Traumatic Brain Injury** **Cardiac Arrest** **Admission** **Admission**
+
+Cohort demographics
+
+Cohort size, n (%) 4,469 (100) 2,072 (100) 4,390 (100) 4,416 (100) 2,396 (100) 5,994 (100)
+
+Median age (IQR), yr 1.8 (0.4–8.4) 3.7 (0.9–11.3) 1.7 (0.4–8.3) 1.8 (0.4–8.4) 1.9 (0.5–9.1) 1.3 (0.2–7.5)
+
+Male, n (%) 2,480 (55.5) 1,144 (55.2) 2,426 (55.3) 2,447 (55.4) 1,347 (56.2) 3,307 (55.2)
+
+White, n (%) 3,151 (70.5) 1,469 (70.9) 3,086 (70.3) 3,119 (70.6) 1,681 (70.2) 4,192 (69.9)
+
+Commercial insurance, 2,058 (46.1) 883 (42.6) 2,015 (45.9) 2,034 (46.1) 1,086 (45.3) 2,704 (45.1)
+
+_n (%)_
+
+Any CCC, n (%) 3,924 (87.8) 1,527 (73.7) 3,872 (88.2) 3,873 (87.7) 2,081 (86.9) 5,393 (90)
+
+Median ICU length 6 (3–11) 6 (3–11) 6 (3–11) 6 (3–11) 5 (2–10) 7 (3–15)
+
+of stay (IQR)
+
+Received vasopressors, 3,364 (75.3) 1,296 (62.5) 3,314 (75.5) 3,322 (75.2) 1,630 (68) 2,758 (46)
+
+_n (%)_
+
+Survived to discharge, 4,235 (94.8) 1,927 (93) 4,169 (95) 4,209 (95.3) 2,271 (94.8) 5,594 (93.3)
+
+_n (%)_
+
+Median number of 9 (4–16) 8 (3–16) 9 (4–16) 9 (4–16) 5 (2–8) 13 (6–29)
+
+Pao2 values (IQR)
+
+Mortality prediction model characteristics[a]
+
+_C-statistic (DeLong_ 0.86 0.87 0.89 0.87 0.92 0.9
+
+95% CI) (0.79–0.92) (0.79–0.96) (0.84–0.95) (0.81–0.94) (0.87–0.97) (0.86–0.94)
+
+Area under the 0.39 0.58 0.46 0.35 0.47 0.55
+
+precision-recall curve
+
+Italian Group for the 0.07 0.49 0.49 0.56 0.67 < 0.01
+
+Evaluation of the
+Interventions in ICUs
+Calibration belt p
+
+Standardized mortality 0.96 0.87 0.9 1.03 0.87 1.01
+
+ratio (Hosmer 95% CI) (0.75–1.23) (0.64–1.19) (0.69–1.17) (0.8–1.33) (0.62–1.23) (0.86–1.19)
+
+Effect of maximum Pao2 on mortality
+
+Standardized odds 1.27 1.18 1.24 1.20 1.22 1.15
+
+ratio (95% CI)[b] (1.23–1.32)[c] (1.13–1.24)[c] (1.20–1.29)[c] (1.16–1.24)[c] (1.10–1.36)[c] (1.13–1.17)[c]
+
+Lowest risk-adjusted 384 341 398 348 466 391
+
+mortality (mm Hg)
+
+CCC = complex chronic condition, IQR = interquartile range.
+
+aMortality prediction models were developed from the following list of terms: admission priority, cardiovascular CCC, gastrointestinal CCC, hematologic or immunologic
+CCC, malignancy CCC, metabolic CCC, neurologic and neuromuscular CCC, congenital or genetic defect CCC, renal or urologic CCC, respiratory CCC, premature
+and neonatal CCC, technology dependence, transplant recipient, mental health disorder CCC (primary or secondary), dobutamine use, dopamine use, epinephrine
+use, norepinephrine use, vasopressin use, maximum Pco2, maximum lactate, maximum and minimum WBC count, maximum and minimum platelet count, maximum
+international normalized ratio, and minimum pH.
+
+bOdds ratio is standardized to one sd of the model term.
+
+cp < 0.001.
+
+
+#### RESULTS
+
+Cohort demographics are listed in Table 1. The mortality prediction model had very good discrimination (C-statistic, 0.86; 95% CI,
+0.79–0.92; AUPRC, 0.39) and acceptable calibration (SMR, 0.96;
+95% CI, 0.75–1.23; calibration belt p = 0.07). The Box-Tidwell test
+indicated that the relationship between Pao2 and mortality was
+nonlinear (p < 0.01). The relationship between maximum Pao2
+
+
+and mortality is shown in Figure 1. Predicted and actual mortalities are shown on the left axis, and the effect plot of maximum Pao2
+measurement with 95% CI is shown on the right axis. Maximum
+Pao2 had a statistically significant effect on risk-adjusted mortality. We observed a parabolic (“U-shaped”) relationship between
+maximum Pao2 and unadjusted mortality. Both absolute and riskadjusted mortalities fell until a maximum Pao2 value of 384mm
+
+
+-----
+
+(4–7). Together, these results suggest
+that both hypoxemia and extreme
+hyperoxemia are associated with
+risk-adjusted mortality; however, the
+precise thresholds associated with
+clinical harm remain uncertain and
+likely vary by clinical condition (4–
+7). A recent randomized controlled
+trial among adults demonstrated no
+difference between conservative and
+liberal oxygen management strategies (3). However, the highest Pao2
+measurements in the liberal oxygen
+therapy group from that study were
+less than 150 mm Hg. In contrast,
+the present study and several prior
+pediatric studies (4–7) have demonstrated a significant association only
+with either extreme hyperoxemia
+and death. In the present study, the
+optimal maximum Pao2 value in the
+first 72 hours of mechanical ventilation appears to be between 100 and
+
+**Figure 1. Maximum Pao2 value versus mortality for patients intubated and mechanically ventilated within 72 hr** 400 mm Hg.
+of admission. The x-axis shows the maximum Pao2 value obtained within 72 hr of admission. The bars on the left Expert opinion has suggested
+_y-axis divide patients into bins based on their maximum Pao2 value (using a bin width of 100 mm Hg) and show_ that extreme hyperoxemia may be
+the actual (light gray) and predicted (dark gray) percent mortalities for each of the bins, using a multivariable
+model that does not include a Pao2 term. The numbers below the bars show the number of patients in each bin. an indirect measurement of patients
+The solid and dashed lines on the right y-axis show an effect plot of a parabolic Pao2 term on a multivariable undergoing brain death testing or
+mortality prediction model. This represents the effect of maximum Pao2 value on mortality when all other being assessed for organ donation
+variables in the model are held constant. The solid line represents the line of best fit, and the dashed lines
+
+eligibility (4). However, as relatively
+
+represent the 95% CI.
+
+few PICU patients undergo brain
+death testing within 24 hours of
+
+Hg and then rose again. The relationship between maximum Pao2 admission, the findings of our sensitivity analysis, combined with
+and risk-adjusted mortality was relatively flat between the values prior studies of the impact of early hyperoxemia, would suggest
+of 250–450 mm Hg. this is less likely (6, 7).
+Model performance was similar between the main analysis and Many administrative databases contain limited clinical data,
+the sensitivity analyses (Table 1), except that a model including precluding risk-adjustment according to previously validated
+Pao2 values from any time during admission displayed poor cali- severity of illness scores. The PHIS+ data include federated labobration (calibration belt p < 0.01). A parabolic Pao2 term was a sig- ratory results, allowing for improved risk-adjustment compared
+nificant predictor of mortality in all sensitivity analyses. The point with administrative data alone. Our risk model incorporated
+of lowest risk-adjusted mortality was between 341 and 466 mm Hg important laboratory measures of organ dysfunction, including
+for all analyses. Pco2, lactate, WBC count, platelet count, international normal
+ized ratio, and pH. However, in the absence of granular clinical
+
+#### DISCUSSION
+
+data, the findings from the database review such that the present
+
+This is the first multicenter study of critically ill pediatric patients study should be considered hypothesis-generating.
+to identify a nonlinear (“U-shaped”) relationship between the Pao2 This work has several limitations, including the retrospective
+values and mortality. In polynomial regression, odds of mortality observational design. Additionally, because the maximum Pao2
+increased with a maximum Pao2 value less than 250 mm Hg or value for each patient in the first 72 hours was examined, this study
+greater than 450 mm Hg. However, in the binned analysis, patients does not address what Pao2 should be targeted for a sustained
+with Pao2 values between 100 and 400 mm Hg had variable risk- period of time. Because PHIS+ does not include provider notes,
+adjusted mortality. Clear trends of worsened risk-adjusted mortal- it is possible that children with hyperoxemia or hypoxemia were
+ity in both analyses were present for patients with maximum Pao2 managed according to specific therapeutic targets. We attempted
+values either less than 100 or greater than or equal to 400 mm Hg. to control for such scenarios by excluding patients with burns, carA comparable effect was evident in multiple sensitivity analyses. bon monoxide poisoning, or traumatic brain injury; however, we
+Previous studies have observed Pao2 threshold values between cannot fully exclude confounding by indication. Similarly, we can300 and 550 mm Hg to be associated with increased mortality not exclude that these children were moribund for other reasons
+
+
+-----
+
+that are not captured by the variables listed in Table 1. Finally,
+bin widths of 100 mm Hg were chosen to ensure adequate sample
+size in each bin (e.g., using a bin width of 50 mm Hg would have
+resulted in zero patients with a maximum Pao2 between 450 and
+499 mm Hg). Exploratory analyses did not suggest that smaller bin
+widths would have altered the analysis findings (e.g., patients with
+maximum Pao2 values of < 50 and 50–99 mm Hg had mortalities of 8.2% and 8.0%, respectively). However, the precision of the
+binned analysis is limited by sample size.
+The present work is the first multicenter pediatric study to confirm a parabolic relationship between the Pao2 values and riskadjusted PICU mortality. Maximum Pao2 values less than 100 or
+greater than or equal to 400 mm Hg were associated with increased
+mortality among invasively ventilated patients. While a prospective study is necessary to determine whether a causal relationship
+exists, the present results suggest clinicians should be judicious in
+the use of high Fio2 therapy in the absence of a specific indication.
+
+**Jonathan H. Pelletier, MD, Department of Critical Care**
+Medicine, University of Pittsburgh School of Medicine, UPMC
+Children’s Hospital of Pittsburgh, Pittsburgh, PA; Sriram
+**Ramgopal, MD, Division of Emergency Medicine, Department**
+of Pediatrics, Ann and Robert H. Lurie Children’s Hospital of
+Chicago, Northwestern University Feinberg School of Medicine,
+Chicago, IL; Alicia K. Au, MD, MS, Robert S. B. Clark,
+**MD, Department of Critical Care Medicine, University of**
+Pittsburgh School of Medicine, UPMC Children’s Hospital of
+Pittsburgh, Pittsburgh, PA; Christopher M. Horvat, MD, MHA,
+Department of Critical Care Medicine, University of Pittsburgh
+School of Medicine, UPMC Children’s Hospital of Pittsburgh,
+Pittsburgh, PA, and Division of Pediatric Critical Care Medicine,
+Health Informatics for Clinical Effectiveness, UPMC Children’s
+Hospital of Pittsburgh, Pittsburgh, PA
+
+Supported, in part, by grants 5K23NS104133 (to Dr. Au) and 1K23HD09933101A1 (to Dr. Horvat).
+
+
+The authors have disclosed that they do not have any potential conflicts of
+interest.
+[For information regarding this article, E-mail: christopher.horvat@chp.edu](mailto:christopher.horvat@chp.edu)
+
+##### REFERENCES
+1. Chu DK, Kim LH, Young PJ, et al: Mortality and morbidity in acutely ill
+adults treated with liberal versus conservative oxygen therapy (IOTA): A
+systematic review and meta-analysis. Lancet 2018; 391:1693–1705
+2. Girardis M, Busani S, Damiani E, et al: Effect of conservative vs conventional oxygen therapy on mortality among patients in an intensive care unit: The oxygen-ICU randomized clinical trial. _JAMA 2016;_
+316:1583–1589
+3. The ICU-ROX Investigators and the Australian and New Zealand
+Intensive Care Society Clinical Trials Group: Conservative oxygen
+therapy during mechanical ventilation in the ICU. _N Engl J Med 2020;_
+382:989–998
+4. Ramgopal S, Dezfulian C, Hickey RW, et al: Association of severe hyperoxemia events and mortality among patients admitted to a pediatric
+intensive care unit. JAMA Netw Open 2019; 2:e199812
+5. Raman S, Prince NJ, Hoskote A, et al: Admission PaO2 and mortality in
+critically ill children: A cohort study and systematic review. Pediatr Crit
+_Care Med 2016; 17:e444–e450_
+6. Numa A, Aneja H, Awad J, et al: Admission hyperoxia is a risk factor for
+mortality in pediatric intensive care. Pediatr Crit Care Med 2018; 19:699–704
+7. Ramgopal S, Dezfulian C, Hickey RW, et al: Early hyperoxemia and
+outcome among critically ill children. _Pediatr Crit Care Med 2020;_
+21:e129–e132
+8. Narus SP, Srivastava R, Gouripeddi R, et al: Federating clinical data
+from six pediatric hospitals: Process and initial results from the PHIS+
+Consortium. AMIA Annu Symp Proc 2011; 2011:994–1003
+9. Finazzi S, Poole D, Luciani D, et al: Calibration belt for quality-ofcare assessment based on dichotomous outcomes. _PLoS One 2011; 6:_
+e16110
+10. Feudtner C, Feinstein JA, Zhong W, et al: Pediatric complex chronic conditions classification system version 2: Updated for ICD-10 and complex
+medical technology dependence and transplantation. BMC Pediatr 2014;
+14:199
+
+**DOI: 10.1097/CCE.0000000000000186**
+
+
+-----
+

@@ -1,0 +1,633 @@
+IISSEEEE
+E
+NVIRONMENTAL
+E
+Original Research Article PIDEMIOLOGY
+Additive effects of 10-year exposures to PM and
+2.5
+NO and primary cancer incidence in American
+2
+older adults
+Yaguang Wei a*, Mahdieh Danesh Yazdib, Tszshan Mac, Edgar Castroa, Cristina Su Liua,
+Xinye Qiua, James Healya, Bryan N. Vua, Cuicui Wanga, Liuhua Shic, Joel Schwartza,d
+Background: Epidemiologic evidence on the relationships between air pollution and the risks of primary cancers other than
+lung c ancer remained largely lacking. We aimed to examine associations of 10-year exposures to fine particulate matter (PM ) and
+2.5
+nitrogen dioxide (NO) with risks of breast, prostate, colorectal, and endometrial cancers.
+2
+Methods: For each cancer, we constructed a separate cohort among the national Medicare beneficiaries during 2000 to 2016. We
+simultaneously examined the additive associations of six exposures, namely, moving average exposures to PM and NO over the
+2.5 2
+year of diagnosis and previous 2 years, previous 3 to 5 years, and previous 6 to 10 years, with the risk of first cancer diagnosis after
+10 years of follow-up, during which there was no cancer diagnosis.
+Results: The cohorts included 2.2 to 6.5 million subjects for different cancers. Exposures to PM and NO were associated with
+2.5 2
+increased risks of colorectal and prostate cancers but were not associated with endometrial cancer risk. NO was associated with a
+2
+decreased risk of breast cancer, while the association for PM remained inconclusive. At exposure levels below the newly updated
+2.5
+World Health Organization Air Quality Guideline, we observed substantially larger associations between most exposures and the
+risks of all cancers, which were translated to hundreds to thousands new cancer cases per year within the cohort per unit increase
+in each exposure.
+Conclusions: These findings suggested substantial cancer burden was associated with exposures to PM and NO, emphasizing
+2.5 2
+the urgent need for strategies to mitigate air pollution levels.
+Keywords: Air pollution; Primary cancers; Causal modeling; Additive effects
+Introduction
+In 2013, the International Agency for Research on Cancer
+Outdoor air pollution is a leading contributor to the global bur- identified air pollution as a group 1 carcinogen for lung cancer.4
+den of disease.1 Outdoor air pollution is a complex mixture of For other cancers, genotoxicity and molecular biomarker data
+particles and irritant gases such as organic aerosols, heavy met- from experimental studies demonstrated that air pollution is
+als, and nitrogen dioxide (NO).2 Once inhaled, those pollutants associated with altered gene expressions, inflammation, and oxi-
+2
+can penetrate deeper into the lungs and are carried by the blood- dative stress in tissues other than the lung, indicating potential
+stream throughout the body. A recent global review showed that links between air pollution and the risk of developing various
+chronic exposure to air pollution can affect almost every organ types of cancers.5–8 Epidemiologic evidence on air pollution and
+in the body, causing a variety of diseases and conditions.3 other cancers remained largely lacking but was growing sub-
+stantially in recent years.9–12 Nevertheless, most existing studies
+had relatively short follow-up periods and evaluated exposures
+from one up to a few years before cancer diagnosis.13–16 Due to
+aDepartment of Environmental Health, Harvard T.H. Chan School of Public
+cancer’s long latency period, those studies might not be able to
+Health, Boston, Massachusetts; bProgram in Public Health, Department of
+Family, Population, and Preventive Medicine, Renaissance School of Medicine adequately identify critical windows of susceptibility or capture
+at Stony Brook University, Stony Brook, New York; cGangarosa Department of the full effect. Besides, previous studies were limited to small
+Environmental Health, Rollins School of Public Health, Emory University, Atlanta, unrepresentative samples, which was further complicated by
+Georgia; and dDepartment of Epidemiology, Harvard T.H. Chan School of Public the heterogeneity in cancer.17–19 Additionally, previous studies
+Health, Boston, Massachusetts had reported risks on a multiplicative scale, which obscured
+Submitted 01 May 2023; accepted 10 July 2023. the actual size of the risk and are more difficult to interpret
+Supplemental digital content is available through direct URL citations in
+the HTML and PDF versions of this article (www.environepidem.com).
+*Corresponding Author. Address: Department of Environmental Health, Harvard What this study adds
+T.H. Chan School of Public Health, 401 Park Drive, Landmark Center, Room
+Although air pollution has been identified as a carcinogen for
+404C, Boston, MA 02115. E-mail: weiyg@hsph.harvard.edu (Y. Wei).
+lung cancer, the relation between air pollution and other pri-
+Copyright © 2023 The Authors. Published by Wolters Kluwer Health, Inc. on mary cancers remained largely unquantified. We estimated the
+behalf of The Environmental Epidemiology. All rights reserved. This is an open
+simultaneous associations of 10-year exposures to fine particu-
+access article distributed under the Creative Commons Attribution License 4.0
+late matter (PM ) and nitrogen dioxide (NO) with the risks of
+(CCBY), which permits unrestricted use, distribution, and reproduction in any 2.5 2
+breast, prostate, colorectal, and endometrial cancers among the
+medium, provided the original work is properly cited.
+national Medicare cohort between 2000 and 2016. Our results
+Environmental Epidemiology (2023) 7:e265
+showed that PM and NO exposures increased the risks of
+Received: 1 May 2023; Accepted 10 July 2023 colorectal and p2 r. o5 state can2 cers. At low exposure levels, we
+Published online 1 August 2023 observed substantially larger associations between most expo-
+DOI: 10.1097/EE9.0000000000000265 sures and the risks of all cancers.
+1
+Wei et al. • Environmental Epidemiology (2023) 7:e265 Environmental Epidemiology
+compared with the additive effect estimates.20 Further, the com- learners with 10-fold cross-validated R-squared values of 0.89
+peting risk of death was pervasive but commonly overlooked, for annual PM predictions and 0.84 for annual NO predic-
+2.5 2
+leading to potential overestimation of the effect size.21 tions. This performance was in held-out monitors not used for
+We aimed to examine the simultaneous associations of 10-year model fitting. Based on these predictions at 1-km2 grid cells and
+exposures to fine particulate matter (PM ) and NO, the two ZIP code shapefiles provided by the Environmental Systems
+2.5 2
+major primary pollutants emitted directly from fossil fuel and Research Institute (ESRI), we estimated concentrations at ZIP
+biomass combustion sources, on the risks of breast, prostate, codes by averaging the predictions at grids whose centroids
+colorectal, and endometrial cancers, for national Medicare ben- were inside the polygonal area for general ZIP codes, or assign-
+eficiaries ≥65 years of age with continuous enrollment in the ing the prediction at the nearest grid for other ZIP Codes that
+Fee-for-Service (FFS) program and in the Medicare Parts A and did not have polygon representations, such as apartment build-
+B. To provide a better sense of the risk posed by the pollutants, ings, military bases, or post offices.28
+we estimated additive associations and translated them to the The ZIP code-level concentrations were considered as proxy
+numbers of new cancer cases per unit increase in each exposure, exposure measurements and were linked to each beneficiary in
+accounting for the competing risk of death. each year based on their residential ZIP codes. For each bene-
+ficiary in each year, we examined three exposure windows: the
+moving average exposure over that year and the previous two
+Methods years (lag 0–2 years), the moving average over the previous 3 to
+5 years (lag 3–5 years), and the moving average over the previ-
+Study population and design
+ous 6 to 10 years (lag 6–10 years).
+We obtained the Medicare denominator file and the Medicare
+Chronic Conditions Warehouse (CCW) from the Centers for
+Medicare and Medicaid Services.22 The Medicare denominator Community-level covariates
+file contained enrollment records and demographic information,
+We included a variety of annual, ZIP code-level covariates in
+including sex, race/ethnicity, age, Medicaid enrollment status (a
+the analysis as potential confounders and effect modifiers. The
+marker of low socioeconomic status), ZIP code of residence,
+percent of ever smokers, average body mass index (BMI), and
+and date of death (if any), for each Medicare beneficiary. Age,
+number of active medical doctors per 1000 people were derived
+Medicaid enrollment status, and ZIP code of residence were
+from the Behavioral Risk Factor Surveillance System and the
+updated annually. The CCW contained the date of the first
+Area Health Resources Files.29,30 The percent White, percent
+occurrence of cancer diagnosis for each cancer type across all
+Black, percent below poverty, percent rental housing, percent
+available claims in the FFS and the Medicare Parts A (inpa-
+education below high school, and median household income
+tient) and B (outpatient, physician service, home health, etc.).
+were derived from the Decennial Census and the American
+To reduce the chance of missing cancer diagnoses, we restricted
+Community Survey.31–33 The distance from the centroid of each
+the cohort to beneficiaries with continuous enrollment in FFS
+ZIP code to the nearest hospital was calculated based on the
+and in both Part A and Part B throughout the follow-up period.
+ESRI’s hospital distribution files, which was considered as a
+This was because if a beneficiary spent any time in the Medicare
+proxy for average distance to the nearest hospital.34 The per-
+Advantage Plans (Part C), or only one of Parts A or B during
+cent of Medicare beneficiaries with diabetes who had a lip-
+the study period, there was the possibility that the cancer claims
+id-panel test in a year and the percent beneficiaries with at least
+were not available for CCW.23
+one ambulatory doctor’s visit in a year were derived from the
+For each cancer, we constructed a separate cohort in which
+Dartmouth Health Atlas.35 Rurality, as measured by population
+each beneficiary was followed since 2000 or entering the study. To
+density, was derived from the NASA Socioeconomic Data and
+allow for the assessment of the exposure effects over the 10 years
+Applications Center.36 The Normalized Difference Vegetation
+before cancer diagnosis, we implemented an inclusion criterion
+Index (NDVI), a measure of greenness that was associated with
+that required a minimum follow-up period of 10 years after enroll-
+cancer incidence,37 was obtained from the NASA’s Moderate
+ment, during which no cancer diagnosis occurred. That is, we only
+Resolution Imaging Spectroradiometer Land data products.38
+included beneficiaries who were cancer-free for the initial 10 years
+The national Area Deprivation Index (ADI), a composite mea-
+of follow-up. By applying the 10-year cancer-free inclusion crite-
+sure of neighborhood disadvantage level, was obtained from the
+rion, we also ensured that the first identified cancer diagnosis was
+Neighborhood Atlas website.39
+an incidence case. If a beneficiary had been diagnosed with cancer
+before enrolling in Medicare, we believed they would have had
+a claim record for physician visit, treatment, hospitalization, etc. Statistical analysis
+with cancer diagnosis within the first 10 years after study entry.
+We had six exposures of interest, specifically lag 0 to 2, lag 3 to
+After that, beneficiaries were censored at the first occurrence of
+5, and lag 6 to 10 exposures to PM and NO. For each cancer
+cancer diagnosis, death, or the end of the study in 2016, whichever 2.5 2
+and each exposure, to obtain the independent effect estimate, we
+occurred earliest. We restricted the cohort to females for breast
+employed an inverse probability weighting (IPW)-based addi-
+and endometrial cancers and males for prostate cancer.
+tive model in which the other five exposures were adjusted as
+This study was approved by the Institutional Review Boards
+confounders.20,40 The analysis consisted of two stages: a design
+at the Harvard T.H. Chan School of Public Health and Emory
+stage where the inverse probability weight (IPW) of each per-
+University.
+son-year’s exposure was estimated to provide a scalar summary
+that can be used to eliminate confounding and competing risk
+Exposures through weighting, and an analysis stage where the additive
+association of the exposure with the cancer risk was estimated.
+We predicted daily average outdoor PM and NO levels at
+2.5 2 In the first stage, the IPW (sw i) for person-year i was esti-
+1-km2 grid cells across the contiguous US using geographically
+mated by
+weighted regressions that ensembled predictions from random
+forests, gradient boosting, and neural network.24–27 The predic-
+tions integrated multiple data sources including satellite data,
+l sa imnd u- lu as tie
+o
+v na s,r ia etb cl .e s T, hm eo n enit so er min bg
+l
+ed da t ma,
+o
+c dh ee lsm i dc ea ml otr na sn ts rp ato er dt m beo td tee rl sw i= K(xK(x i gˆ− (xx¯)
+c)) ×
+gˆ(Dgˆ(D =i 0= x0 | ,x i) c),
+i i i i i i
+predictive performance than that of the individual machine − | |
+2
+Wei et al. • Environmental Epidemiology (2023) 7:e265 www.environmentalepidemiology.com
+where K() represented a kernel density estimator; x i the expo- Table 1.
+·
+sure level; x¯ the average exposure across all person-years; c i a Demographic characteristics of the constructed Medicare
+set of confounders including the other five exposures, individual
+cohorts.
+risk factors (sex [male or female], race/ethnicity [White, Black,
+or other], age group after initial 10-year cancer-free follow-up Breast Colorectal Endometrial Prostate
+[75–84 or ≥85 years], and Medicaid enrollment status [yes or cancer cancer cancer cancer
+no]), and community-level covariates as delineated above; D i Number of individuals (%) 3,756,831 6,457,863 4,044,008 2,161,156
+the indicator of death (0 or 1); and gˆ() a gradient boosting (100) (100) (100) (100)
+·
+machine (GBM) prediction model with a gaussian loss func- Number of person-years 55,133,844 94,243,120 59,429,929 31,113,440
+tion.41 Overall, the above function incorporated the stabilized Number of cancer diagnoses 90,421 (2.4) 68,456 (1.0) 21,660 (0.5) 80,615
+IPWs for both confounding and competing risk of death. The (%) (3.7)
+use of nonparametric algorithms of kernel density and GBM Sex
+had superior performance over parametric models in terms Male (%) 0 2,459,690 0 2,161,156
+of bias and flexibility: the kernel density function relaxed (38.1) (100)
+the strong assumption of distributional form of the exposure Female (%) 3,756,831 3,998,173 4,044,008 0
+residuals, and the GBM captured all possible nonlinearity and (100) (61.9) (100)
+interactions of covariates and was unaffected by the potential Race
+White (%) 3,416,371 5,902,528 3,682,920 1,989,780
+autocorrelation.42,43 If the assumptions underlying the propen-
+(91.0) (91.4) (91.1) (92.1)
+sity score were met, this would provide a causal model.40
+Black (%) 206,382 (5.5)328,257 (5.1)220,178 (5.4) 90,702
+In the analysis stage, we fitted the following linear probability
+(4.2)
+model weighted by the IPWs obtained in the previous stage to
+Othera (%) 134,078 (3.5)227,078 (3.5)140,910 (3.5) 80,674
+estimate the additive association of the exposure with the abso-
+(3.7)
+lute cancer risk,
+Age group after initial
+10-year cancer-free fol-
+E(Y =1x)=β +β x,
+i i 0 1 i low-up (years)
+|
+75–84 (%) 3,105,175 5,511,808 3,353,113 1,918,776
+where Y i was the outcome of cancer diagnosis (0 or 1). Given (82.7) (85.4) (82.9) (88.8)
+the estimated association βˆ 1, we further estimated the annual ≥85 (%) 651,656 946,055 690,895 242,380
+number of new cancer cases attributed to a unit increase in the (17.3) (14.6) (17.1) (11.2)
+exposure by Ever enrolled in Medicaid (%) 486,759 665,057 513,226 146,367
+(13.0) (10.3) (12.7) (6.8)
+aOther indicates Asian, Hispanic, Native American, Pacific Islander, and multiracial individuals.
+N
+Annualnumberofnewcancercases=βˆ
+1×Duration
+ofstudy,
+Table 2.
+where N was the total number of person-years of follow-up Distributions of annual concentrations of PM and NO at ZIP
+2.5 2
+(including those of beneficiaries with cancer diagnoses in the codes among all years in the contiguous US.
+first 10 years of follow-up) and the duration of study was 17
+PM (µg/m3) NO (ppb)
+years. 2.5 2
+To examine whether the associations remained at low expo- Minimum 0.0 0.0
+10th percentile 5.8 7.1
+sure levels, for PM , we repeated the whole analysis for per-
+2.5 25th percentile 7.6 9.7
+son-years with exposure levels at lag 0 to 2, lag 3 to 5, and lag 6
+Median 9.8 15.0
+to 10 years all below 10 µg/m3; for NO 2, we repeated the whole
+Mean 9.8 17.3
+analysis for person-years with exposure levels at lag 0 to 2, lag
+75th percentile 11.8 21.9
+3 to 5, and lag 6 to 10 years all below 20 parts per billion (ppb). 90th percentile 14.0 31.1
+We further examined the associations at stricter exposure levels, Maximum 30.9 127.6
+specifically the newly updated World Health Organization air
+quality guidelines ([AQG]; 5 µg/m3 for PM and 10 ppb for
+2.5
+NO T2 o) .4 e4 xamine whether certain subpopulations and communi- P (TM ab2. l5 e a 2v )e .r a Fg oe rd g9 e. n8 e rµ ag l/ m Z3 I Pa n Cd o dan esn u thal a tN hO a2 d a pv oe lr ya gg oe nd 1 re7 p.3 re sp ep nb -
+ties experienced higher cancer risk in the impact of air pollution, tations, the average distance from a ZIP Code centroid to its
+we conducted separate analysis for each subgroup by age, sex boundary was ≈7.3 km; the fifth percentile corresponded to a
+(for colorectal cancer only), race/ethnicity, ever enrollment in distance of 1.2 km, while the 95th percentile represented a dis-
+Medicaid, and upper or lower quartile of community-level per- tance of 17.5 km.
+cent of ever smokers, average BMI, population density, and ADI. Results of the main analysis and low-level analysis are shown
+in Table 3. For breast cancer, exposures to PM at lag 0 to 2
+2.5
+and lag 3 to 5 years were statistically and significantly associ-
+Results
+ated with decreased cancer risk, while at lag 6 to 10 year, the
+The cohorts had 3.8 million participants for breast cancer, 6.5 association was insignificant. Exposures to NO at lag 0 to
+2
+million for colorectal cancer, 4.0 million for endometrial cancer, 2, lag 3 to 5, and lag 6 to 10 years were all associated with
+and 2.2 million for prostate cancer. The cohorts predominantly increased breast cancer risk. In the low-level analysis in which
+consisted of Whites (>90%) and beneficiaries aged between the analysis was restricted to exposure levels below 10 µg/m3 for
+75 and 84 years (>80%) after initial 10-year cancer-free fol- PM and below 20 ppb for NO, both pollutants across the lag
+2.5 2
+low-up (Table 1). Beneficiaries excluded from the cohort due to periods were associated with increased cancer risk. Notably, in
+a cancer diagnosis, death, or end of the study within the first 10 the below-AQG analysis in which the analysis was restricted to
+years after the Medicare enrollment had larger population sizes, exposure levels below 5 µg/m3 for PM and below 10 ppb for
+2.5
+higher numbers of cancer diagnoses, and lower proportions of NO, substantially larger positive associations were observed
+2
+White (Table S1; http://links.lww.com/EE/A234). Over the study for both pollutants across the lag periods. These additive asso-
+period between 2000 and 2016, the annual concentrations of ciations were translated to hundreds to thousands of newly
+3
+Wei et al. • Environmental Epidemiology (2023) 7:e265 Environmental Epidemiology
+Table 3.
+Absolute increases (and 95% CIs) in the risk of cancer diagnosis and the annual number of new cancer cases per unit increase in
+PM and NO.
+2.5 2
+Breast cancer Colorectal cancer Endometrial cancer Prostate cancer
+Annual
+Absolute increase Absolute increase Absolute increase Absolute increase number of
+in the risk of can- Annual number of in the risk of can- Annual number of in the risk of can- Annual number of in the risk of can- new cancer
+cer diagnosis new cancer cases cer diagnosis new cancer cases cer diagnosis new cancer cases cer diagnosis cases
+Main analysisa
+PM , lag −0.0024% −78 (−125, −32) 0.0047% (0.0040%, 261 (220, 301) 0.0003% 10 (−13, 33) 0.0072% (0.0048%, 132 (87, 178)
+2.5
+0–2 years (−0.0038%, 0.0054%) (−0.0004%, 0.0097%)
+−0.0010%) 0.0009%)
+PM , lag −0.0026% −83 (−125, −42) 0.0040% (0.0033%, 219 (183, 255) −0.0005% −18 (−38, 3) 0.0067% (0.0045%, 123 (82, 163)
+2.5
+3–5 years (−0.0038%, 0.0046%) (−0.0011%, 0.0089%)
+−0.0013%) 0.0001%)
+PM , lag 0.0006% 21 (−14, 56) 0.0041% (0.0035%, 225 (195, 255) −0.0005% −19 (−36, −2) 0.0112% (0.0094%, 205 (171, 240)
+2.5
+6–10 years (−0.0004%, 0.0046%) (−0.0010%, 0.0131%)
+0.0017%) −0.0001%)
+NO, lag 0.0018% (0.0014%, 57 (45, 69) 0.0005% (0.0003%, 29 (18, 39) 0.0000% 1 (−5, 7) 0.0035% (0.0029%, 64 (52, 75)
+2
+0–2 years 0.0021%) 0.0007%) (−0.0001%, 0.0041%)
+0.0002%)
+NO, lag 0.0014% (0.0011%, 46 (35, 56) 0.0009% (0.0007%, 48 (39, 58) 0.0000% −2 (−7, 4) 0.0041% (0.0035%, 74 (64, 85)
+2
+3–5 years 0.0017%) 0.0010%) (−0.0002%, 0.0046%)
+0.0001%)
+NO, lag 0.0012% (0.0009%, 39 (29, 49) 0.0003% (0.0002%, 18 (9, 26) −0.0001% −5 (−10, 0) 0.0047% (0.0041%, 85 (75, 95)
+2
+6–10 years 0.0015%) 0.0005%) (−0.0003%, 0.0052%)
+0.0000%)
+Low-level analysisb
+PM , lag 0.0177% (0.0136%, 575 (441, 708) 0.0069% (0.0050%, 383 (276, 491) 0.0031% (0.0012%, 109 (44, 174) 0.0380% (0.0314%, 695 (575, 816)
+2.5
+0–2 years 0.0218%) 0.0089%) 0.0050%) 0.0446%)
+PM , lag 0.0075% (0.0036%, 242 (116, 368) 0.0078% (0.0060%, 434 (332, 536) 0.0006% 22 (−40, 84) 0.0310% (0.0248%, 566 (453, 680)
+2.5
+3–5 years 0.0113%) 0.0097%) (−0.0011%, 0.0371%)
+0.0024%)
+PM , lag 0.0158% (0.0121%, 512 (392, 632) 0.0065% (0.0048%, 362 (265, 458) 0.0000% 1 (−58, 61) 0.0228% (0.0168%, 417 (308, 525)
+2.5
+6–10 years 0.0195%) 0.0083%) (−0.0017%, 0.0287%)
+0.0017%)
+NO, lag 0.0079% (0.0065%, 255 (211, 299) 0.0033% (0.0026%, 182 (144, 221) 0.0030% (0.0023%, 104 (82, 125) 0.0057% (0.0034%, 105 (63, 147)
+2
+0–2 years 0.0092%) 0.0040%) 0.0036%) 0.0080%)
+NO, lag 0.0043% (0.0030%, 141 (97, 185) 0.0008% (0.0001%, 42 (4, 80) 0.0009% (0.0002%, 30 (8, 52) 0.0053% (0.0031%, 97 (56, 139)
+2
+3–5 years 0.0057%) 0.0014%) 0.0015%) 0.0076%)
+NO, lag 0.0052% (0.0040%, 169 (130, 208) 0.0001% 8 (−26, 41) −0.0005% −17 (−36, 2) 0.0115% (0.0094%, 210 (173, 247)
+2
+6–10 years 0.0064%) (−0.0005%, (−0.0010%, 0.0135%)
+0.0007%) 0.0001%)
+Below-AQG analysisc
+PM , lag 0.1015% (0.0703%, 3,291 (2,280, 0.0631% (0.0490%, 3,499 (2,717, 0.0265% (0.0123%, 926 (430, 1,423) 0.1986% (0.1525%, 3,635 (2,791,
+2.5
+0–2 years 0.1326%) 4,302) 0.0772%) 4,281) 0.0407%) 0.2448%) 4,480)
+PM , lag 0.0537% (0.0207%, 1,743 (672, 2,814) 0.0140% 777 (−24, 1,579) 0.0280% (0.0136%, 980 (475, 1,484) 0.1583% (0.1100%, 2,897 (2,014,
+2.5
+3–5 years 0.0868%) (−0.0004%, 0.0425%) 0.2066%) 3,780)
+0.0285%)
+PM , lag 0.0673% (0.0330%, 2,184 (1,070, 0.0521% (0.0367%, 2,890 (2,034, −0.0130% −455 (−985, 75) 0.1040% (0.0540%, 1,904 (989,
+2.5
+6–10 years 0.1017%) 3,298) 0.0676%) 3,746) (−0.0282%, 0.1541%) 2,819)
+0.0021%)
+NO, lag 0.0345% (0.0269%, 1,118 (872, 1,364)0.0180% (0.0142%, 997 (785, 1,209) 0.0121% (0.0086%, 423 (300, 546) 0.0568% (0.0442%, 1,039 (809,
+2
+0–2 years 0.0420%) 0.0218%) 0.0156%) 0.0693%) 1,268)
+NO, lag 0.0188% (0.0109%, 609 (353, 866) 0.0000% 0 (−214, 215) 0.0043% (0.0007%, 152 (24, 279) 0.0192% (0.0065%, 351 (119, 583)
+2
+3–5 years 0.0267%) (−0.0039%, 0.0080%) 0.0318%)
+0.0039%)
+NO, lag 0.0249% (0.0169%, 809 (548, 1,071) 0.0067% (0.0026%, 371 (146, 595) 0.0040% (0.0003%, 141 (10, 272) 0.0409% (0.0276%, 748 (505, 992)
+2
+6–10 years 0.0330%) 0.0107%) 0.0078%) 0.0542%)
+aMain analysis was conducted among the entire cohort.
+bFor PM , the low-level analysis was conducted among person-years with exposure levels at lag 0–2 years, lag 3–5 years, and lag 6–10 years all below 10 µg/m3; for NO, the low-concentration analysis
+2.5 2
+was conducted among person-years with exposure levels at lag 0–2 years, lag 3–5 years, and lag 6–10 years all below 20 ppb.
+cFor PM , the below-guideline analysis was conducted among person-years with exposure levels at lag 0–2 years, lag 3–5 years, and lag 6–10 years all below 5 µg/m3; for NO, the below-guideline
+2.5 2
+analysis was conducted among person-years with exposure levels at lag 0–2 years, lag 3–5 years, and lag 6–10 years all below 10 ppb.
+diagnosed breast cancer cases in each year within the cohort. As lag 6 to 10 NO was associated with 809 (95% CI = 548, 1,071)
+2
+an example, each 1-µg/m3 increase in lag 0 to 2 PM was asso- new breast cancer diagnoses per year among the cohort.
+2.5
+ciated with 3,291 (95% confidence interval [CI] = 2,280, 4,302) For colorectal cancer, both pollutants across the lag periods
+new breast cancer diagnoses per year, and each 1-ppb increase in were associated with increased cancer risk. The effect sizes for
+4
+Wei et al. • Environmental Epidemiology (2023) 7:e265 www.environmentalepidemiology.com
+PM were larger than those for NO. In the low-level anal- and the concentration-response relations may follow a nonlin-
+2.5 2
+ysis, associations for PM were slightly larger than those for ear pattern in an additive scale.
+2.5
+the main analysis, and for NO the associations attenuated with For breast cancer, the results can be interpreted as associa-
+2
+increasing lag periods. In the below-AQG analysis, substantially tions for postmenopausal breast cancer risk, considering that
+larger associations were observed for both pollutants, which the Medicare cohort consisted of individuals aged 75 years or
+were translated to hundreds to thousands of newly diagnosed older at the time of diagnosis. In accord with Crouse et al.48 and
+colorectal cancer cases per year among the cohort. Poulsen et al.13 who investigated the postmenopausal women,
+For endometrial cancer, most associations were not statis- we found that NO was negatively associated with breast can-
+2
+tically significant across the entire exposure ranges. However, cer incidence. Evidence for PM was less clear. Consistent with
+2.5
+the lag 6 to 10 PM exposure was marginally and significantly several large cohort studies,15,16,18,49–51 we detected both positive
+2.5
+associated with decreased cancer risk. In the low-level and and negative association for PM across the entire exposure
+2.5
+below-AQG analyses, the associations for both pollutants atten- range. The mixed associations in our study and the previous
+uated with increasing lag periods. studies may be due to the heterogeneous changes in chemical
+For prostate cancer, all the exposures were associated with compositions and sources of PM .19 The difference in PM
+2.5 2.5
+increased cancer risk across the entire exposure ranges. In the compositions may also explain the more varying results for
+low-level analysis, all the effect sizes were larger compared with PM than those for NO. However, when restricting the anal-
+2.5 2
+those in the full exposure ranges. In the below-AQG analysis, ysis to lower exposure levels, where the compositions of local
+the associations became considerably larger, which were trans- PM remained fairly stable,52 we found strongly and consis-
+2.5
+lated to hundreds to thousands of newly diagnosed prostate tently adverse impacts of PM . Clearly, future studies with data
+2.5
+cancer cases per year among the cohort. on PM compositions are needed to explore the relations of
+2.5
+Susceptibility among subpopulations was mostly inconsistent specific chemical components with breast cancer risk. Similar to
+across exposures and cancer types (Figure 1). For breast cancer, endometrial cancer, the substantially larger associations in the
+those who ever enrolled in Medicaid experienced higher risk low-level and below-AQG analyses indicated that the effect of
+associated with PM exposures over lag 3 to 5 and lag 6 to air pollution on breast cancer risk may be more pronounced at
+2.5
+10 years, and those who lived in ZIP codes with higher BMI lower exposure levels.
+(>75th percentile) had higher risk for NO exposures at lag 0 to Few studies had explored the potential impact of individual-
+2
+2 and lag 3 to 5 years. For colorectal cancer, those who lived in and community-level factors on the susceptibility of cancer to
+ZIP codes with higher rate of ever smokers (>75th percentile) or air pollution.53 In this study, we found inconsistent subgroup
+average BMI (>75th percentile) had higher risk associated with differences across exposures and cancer types, possibly due to
+NO exposures at lag 0 to 2 and lag 3 to 5 years. For endome- the complex etiology of different cancers.9 However, we found
+2
+trial cancer, those who lived in ZIP codes with higher average suggestive evidence indicating a disproportionately higher risk of
+BMI (>75th percentile) were at a higher cancer risk associated all the cancers associated with NO exposures among individu-
+2
+with lag 0 to 2 PM and lag 0 to 2 NO exposures. For prostate als residing in communities with higher average BMI, suggesting
+2.5 2
+cancer, Blacks were at a higher cancer risk associated with PM that a lack of access to healthy food and limited opportunities
+2.5
+exposures across lag 0 to 2, lag 3 to 5, and lag 6 to 10 years, and for physical activities may contribute to an increased cancer sus-
+those who lived in ZIP codes with higher average BMI (>75th ceptibility to the adverse effect of NO.54 The finding of greater
+2
+percentile) had higher risk associated with NO exposures susceptibility of the Medicaid enrollees and Blacks to the PM -
+2 2.5
+across lag 0 to 2, lag 3 to 5, and lag 6 to 10 years. induced cancer risks was also important in terms of improving
+health equity. Blacks had been exposed to higher levels of air
+pollution,55 so the larger effect sizes resulted in an even greater
+Discussion
+injustice.
+In this cohort study of millions of Medicare beneficiaries Our study had several strengths. First, the inclusion of millions
+across the contiguous US, we found clear evidence that chronic of participants with long-term follow-up allowed for investigat-
+exposures to PM and NO increased the risks of colorectal ing the exposures later in life, from up to 10 years before cancer
+2.5 2
+and prostate cancers in a window of 10 years before diag- diagnosis, with ample statistical power. Second, the independent
+nosis, consistent with the most recent epidemiological stud- and additive associations made it possible to combine them to
+ies.11,13,14,16,17,45–47 Compared with previous studies, our study obtain the overall estimates for a window of 10 years before
+controlled for the competing risk of death, used propensity cancer diagnosis. As a result, adding up the individual effect
+score and an additive model that provided marginal estimates estimates for each pollutant was a straightforward and valid
+of effect sizes, and found stronger associations at lower concen- approach that provided a better sense of its long-term impact.
+trations, including below the newly updated WHO guidelines. Third, the use of GBM and kernel density estimator achieved a
+In the main analysis, when considering the mutually adjusted high level of flexibility and accuracy for estimating IPW, mak-
+and independent additive effect estimates, the combined effects ing the results robust against any observed confounding bias.
+over three exposure windows were substantial: for colorectal Fourth, accounting for competing risk avoided the associations
+cancer, an unit reduction in long-term PM and NO would being overestimated.
+2.5 2
+prevent at least 705 and 95 annual incident cases within the This study also had limitations. First, restricted by available
+cohort, respectively; for prostate cancer, an unit reduction in data sources, we could not capture individual-level risk factors
+long-term PM and NO would prevent at least 460 and 223 such as smoking status and BMI, but used community-level
+2.5 2
+annual cases within the cohort, respectively. Given that the smoking rate and average BMI as surrogates, which may lead
+effect sizes were considerably larger at exposure levels below to confounding bias. For breast cancer, it is important to note
+the newly updated WHO guidelines, further reducing the pollu- that reproductive factors and the use of hormone therapy
+tion levels would achieve greater health and economic benefits were not available for the analysis.56 For colorectal cancer,
+by preventing more cancers. In contrast, there was little evidence the analysis did not account for alcohol consumption, a rec-
+observed in our main analysis supporting the relevance of PM ognized risk factor.57 While these factors may not be directly
+2.5
+and NO exposures to endometrial cancer risk, consistent with associated with air pollution exposures and therefore may not
+2
+the Japan’s National Cancer Registry study.12 However, in the confound the association between air pollution and cancer
+low-level and below-AQG analyses, the larger associations sug- incidence, incorporating them in future research can still con-
+gested that there may be stronger relations between lower levels tribute to obtaining more robust effect estimates. Second, the
+of PM and NO exposures and the risk of endometrial cancer, use of ZIP code-level exposures was subject to measurement
+2.5 2
+5
+Wei et al. • Environmental Epidemiology (2023) 7:e265 Environmental Epidemiology
+Figure 1. Absolute increases (and 95% CIs) in the risk of cancer diagnosis and the annual number of new cancer cases per unit increase in PM and NO
+2.5 2
+for each subgroup of individual and community-level characteristics. Subgroups of community-level characteristics were divided by upper or lower quartiles.
+error, especially for NO , which has greater spatial variabil- levels, in particular below the newly updated WHO AQG, we
+2
+ity.58 However, the larger ZIP codes were generally in less pop- observed substantially larger associations between most expo-
+ulated and rural areas, where the spatial variability in NO sures and the risks of all cancers. The observed additive asso-
+2
+exposure may be smaller than in urban areas, where the ZIP ciations resulted in a substantial number of newly diagnosed
+codes are smaller. This may limit, but not eliminate, the expo- cancer cases per year within the cohorts, ranging from hundreds
+sure error. A recent simulation study suggested that correcting to thousands for each unit increase in exposure. These findings
+for exposure measurement error would lead to larger effect suggested substantial cancer burden associated with exposures
+estimates.59 Third, participants in our study were restricted to to PM and NO, emphasizing the urgent need for strategies to
+2.5 2
+Medicare beneficiaries with continuous enrollment in both FFS mitigate air pollution levels.
+program and Part A and B, which may limit generalizability
+to the total elderly population. Fourth, restricting the analysis
+to only beneficiaries who were cancer-free for the initial 10 Conflicts of interest statement
+years of follow-up may introduce selection bias, considering The authors declare that they have no they have no conflicts of
+the demographic differences between the analysis group and interest with regard to the content of this report.
+excluded group. There was a possibility that the beneficiaries This work was supported by the National Institutes of Health
+who developed cancer during the initial 10 years might be grants R01ES032418 and P30ES000002.
+more susceptible to the effects of air pollution. In this case, The Medicare data are available upon request to the Centers
+overlooking those beneficiaries could lead to the associations for Medicare and Medicaid Services. The grid-level PM data
+being underestimated. are available at https://doi.org/10.7927/0rvr-4538. The2. 5 grid-
+level NO data are available at https://doi.org/10.7927/f8eh-
+2
+5864. The ZIP code-level PM and NO are available at https://
+Conclusions 2.5 2
+doi.org/10.7927/9yp5-hz11. Other covariate data are publicly
+Our study of the national Medicare cohort investigated addi- available with sources described in the article.
+tive associations of 10-year exposures to PM and NO with
+2.5 2
+the risks of breast, prostate, colorectal, and endometrial can-
+ACKNOWLEDGMENTS
+cers. We found that exposures to PM and NO were associ-
+2.5 2
+ated with increased risks of colorectal and prostate cancers, Y.W. and J.S. did conceptualization. Y.W., M.D.Y., E.C., C.S.L.,
+but were not associated with endometrial cancer risk. NO and L.S. did data curation. Y.W. did formal analysis. Y.W.,
+2
+was associated with a decreased risk of breast cancer, while the T.M., X.Q., J.H., B.N.V., C.W., L.S. did methodology. J.S. did
+association for PM remained inconclusive. At lower exposure supervision. Y.W. wrote the original draft. Y.W., M.D.Y., T.M.,
+2.5
+6
+Wei et al. • Environmental Epidemiology (2023) 7:e265 www.environmentalepidemiology.com
+E.C., C.S.L., X.Q., J.H., B.N.V., C.W., L.S., and J.S. did review 22. Gorina Y, Kramarow EA. Identifying chronic conditions in medicare
+and editing. claims data: evaluating the chronic condition data warehouse algorithm.
+Health Serv Res. 2011;46:1610–1627.
+23. Ma T, Yazdi MD, Schwartz J, et al. Long-term air pollution exposure
+and incident stroke in American older adults: A national cohort study.
+References
+Global Epidemiol. 2022;4:100073.
+1. Murray CJL, Aravkin AY, Zheng P, et al. Global burden of 87 risk factors 24. Di Q, Amini H, Shi L, et al. An ensemble-based model of PM2.5 con-
+in 204 countries and territories, 1990–2019: a systematic analysis for the centration across the contiguous United States with high spatiotemporal
+Global Burden of Disease Study 2019. Lancet. 2020;396:1223–1249. resolution. Environ Int. 2019;130:104909.
+2. Stanek LW, Brown JS, Stanek J, Gift J, Costa DL. Air pollution toxicology—a 25. Di Q, Amini H, Shi L, et al. Assessing NO2 concentration and model
+brief review of the role of the science in shaping the current understanding uncertainty with high spatiotemporal resolution across the contiguous
+of air pollution health risks. Toxicol Sci. 2010;120(suppl_1):S8–27. United States. Environ Sci Technol. 2020;54:1372–1384.
+3. Manisalidis I, Stavropoulou E, Stavropoulos A, Bezirtzoglou E. 26. Di Q, Wei Y, Shtein A, et al. Daily and Annual PM2.5 Concentrations
+Environmental and health impacts of air pollution: a review. Front for the Contiguous United States, 1-km Grids, v1 (2000 - 2016). NASA
+Public Health. 2020;8:14. Socioeconomic Data and Applications Center (SEDAC); 2021.
+4. Loomis D, Grosse Y, Lauby-Secretan B, et al; International Agency for 27. Di Q, Wei Y, Shtein A, et al. Daily and Annual NO2 Concentrations
+Research on Cancer Monograph Working Group IARC. The carcinoge- for the Contiguous United States, 1-km Grids, v1 (2000 - 2016).
+nicity of outdoor air pollution. Lancet Oncol. 2013;14:1262–1263. NASA Socioeconomic Data and Applications Center (SEDAC);
+5. Zhou W, Tian D, He J, et al. Repeated PM2.5 exposure inhibits BEAS-2B 2022.
+cell P53 expression through ROS-Akt-DNMT3B pathway-mediated 28. Wei Y, Xing X, Shtein A, et al. Daily and Annual PM2.5, O3, and NO2
+promoter hypermethylation. Oncotarget. 2016;7:20691–20703. Concentrations at ZIP Codes for the Contiguous U.S., 2000-2016,
+6. Sanchez-Guerra M, Zheng Y, Osorio-Yanez C, et al. Effects of particu- v1.0. NASA Socioeconomic Data and Applications Center (SEDAC);
+late matter exposure on blood 5-hydroxymethylation: results from the 2022.
+Beijing truck driver air pollution study. Epigenetics. 2015;10:633–642. 29. CDC. Behavioral Risk Factor Surveillance System. BRFSS 2013 Survey
+7. Gondalia R, Baldassari A, Holliday KM, et al. Methylome-wide associ- Data and Documentation. 2013.
+ation study provides evidence of particulate matter air pollution-associ- 30. Best AE. Secondary data bases and their use in outcomes research: a
+ated DNA methylation. Environ Int. 2019;132:104723. review of the area resource file and the Healthcare Cost and Utilization
+8. Brauer M, Avila-Casado C, Fortoul TI, Vedal S, Stevens B, Churg A. Air Project. J Med Syst. 1999;23:175–181.
+pollution and retained particles in the lung. Environ Health Perspect. 31. Bureau UC. 2010 Census Demographic Profile Summary File.
+2001;109:1039–1043. 32. Bureau UC. 2000 Summary File 3.
+9. Turner MC, Andersen ZJ, Baccarelli A, et al. Outdoor air pollution and 33. Council NR. Using the American Community Survey: Benefits and
+cancer: an overview of the current evidence and public health recom- Challenges. The National Academies Press; 2007.
+mendations. CA Cancer J Clin. 2020;70:460–479. 34. Institute ESR. Esri Data & Maps 10, An Esri White Paper. Redlands,
+10. White AJ. Invited perspective: air pollution and breast cancer risk: CA; 2010. Available at: http://downloads.esri.com/support/whitepapers/
+current state of the evidence and next steps. Environ Health Perspect. ao_/Esri_Data_and_Maps_10.pdf.
+2021;129:51302. 35. Cronenwett JL, Birkmeyer JD. The Dartmouth Atlas of Vascular Health
+11. Pritchett N, Spangler EC, Gray GM, et al. Exposure to outdoor particu- Care. Cardiovasc Surg. 2000;8:409–410. Available at: https://www.ncbi.
+late matter air pollution and risk of gastrointestinal cancers in adults: a nlm.nih.gov/pubmed/11184739.
+systematic review and meta-analysis of epidemiologic evidence. Environ 36. Center for International Earth Science Information Network CCU.
+Health Perspect. 2022;130:36001. Gridded Population of the World, Version 4 (GPWv4): Population
+12. Hasegawa K, Tsukahara T, Nomiyama T. Association between air pol- Density, Revision 11. NASA Socioeconomic Data and Applications
+lutants and cancer incidence rates in Japan: An ecological study. Med Sci Center (SEDAC); 2018.
+Forum. 2021;4:15. 37. Datzmann T, Markevych I, Trautmann F, Heinrich J, Schmitt J, Tesch F.
+13. Poulsen AH, Hvidtfeldt UA, Sørensen M, et al. Air pollution with Outdoor air pollution, green space, and cancer incidence in Saxony: a
+NO2, PM2.5, and elemental carbon in relation to risk of breast can- semi-individual cohort study. BMC Public Health. 2018;18:715.
+cer– a nationwide case-control study from Denmark. Environ Res. 38. Justice CO, Vermote E, Townshend JRG, et al. The Moderate
+2023;216:114740. Resolution Imaging Spectroradiometer (MODIS): land remote sens-
+14. Chu H, Xin J, Yuan Q, et al. A prospective study of the associations ing for global change research. IEEE Trans Geosci Remote Sens.
+among fine particulate matter, genetic variants, and the risk of colorectal 1998;36:1228–1249.
+cancer. Environ Int. 2021;147:106309. 39. 2015 Area Deprivation Index. University of Wisconsin School of
+15. Villeneuve PJ, Goldberg MS, Crouse DL, et al. Residential exposure Medicine and Public Health. Available at: https://www.neighborhoodat-
+to fine particulate matter air pollution and incident breast cancer in a las.medicine.wisc.edu/.
+cohort of Canadian women. Environ Epidemiol. 2018;2:e021. Available 40. Robins JM, Hernan MA, Brumback B. Marginal structural models and
+at: https://journals.lww.com/environepidem/Fulltext/2018/09000/ causal inference in epidemiology. Epidemiology (Cambridge, Mass).
+Residential_exposure_to_fine_particulate_matter.2.aspx. 2000;11:550–560.
+16. Hvidtfeldt UA, Chen J, Rodopoulou S, et al. Breast cancer inci- 41. Wei Y, Yazdi MD, Di Q, et al. Emulating causal dose-response rela-
+dence in relation to long-term low-level exposure to air pollution tions between air pollutants and mortality in the Medicare population.
+in the ELAPSE pooled cohort. Cancer Epidemiol Biomarkers Prev. Environ Health. 2021;20:53.
+2023;32:105–113. 42. Terrell GR, Scott DW. Variable kernel density estimation. Ann Stat.
+17. Goldberg MS, Villeneuve PJ, Crouse D, et al. Associations between inci- 1992;20: 1236–1265.
+dent breast cancer and ambient concentrations of nitrogen dioxide from 43. Friedman JH. Greedy function approximation: a gradient boosting
+a national land use regression model in the Canadian National Breast machine. Ann Stat. 2001;29:1189–1232. Available at: http://www.jstor.
+Screening Study. Environ Int. 2019;133:105182. org/stable/2699986.
+18. Andersen ZJ, Stafoggia M, Weinmayr G, et al. Long-term exposure to 44. Goshua A, Akdis CA, Nadeau KC. World Health Organization global
+ambient air pollution and incidence of postmenopausal breast cancer air quality guideline recommendations: executive summary. Allergy.
+in 15 European cohorts within the ESCAPE Project. Environ Health 2022;77:1955–1960.
+Perspect. 2017;125:107005. 45. Ma JW, Lai TJ, Hu SY, Lin TC, Ho WC, Tsan YT. Effect of ambient air
+19. Raaschou-Nielsen O, Andersen ZJ, Beelen R, et al. Air pollution and pollution on the incidence of colorectal cancer among a diabetic pop-
+lung cancer incidence in 17 European cohorts: prospective analyses ulation: a nationwide nested case-control study in Taiwan. BMJ Open.
+from the European Study of Cohorts for Air Pollution Effects (ESCAPE). 2020;10:e036955.
+Lancet Oncol. 2013;14:813–822. 46. Youogo LMK, Parent ME, Hystad P, Villeneuve PJ. Ambient air pollu-
+20. Wei Y, Coull B, Koutrakis P, et al. Assessing additive effects of air pollut- tion and prostate cancer risk in a population-based Canadian case-con-
+ants on mortality rate in Massachusetts. Environ Health. 2021;20:19. trol study. Environ Epidemiol. 2022;6:e219.
+21. Berry SD, Ngo L, Samelson EJ, Kiel DP. Competing risk of death: an 47. Vigneswaran HT, Jagai JS, Greenwald DT, et al. Association between
+important consideration in studies of older adults. J Am Geriatr Soc. environmental quality and prostate cancer stage at diagnosis. Prostate
+2010;58:783–787. Cancer Prostatic Dis. 2021;24:1129–1136.
+7
+Wei et al. • Environmental Epidemiology (2023) 7:e265 Environmental Epidemiology
+48. Crouse DL, Goldberg MS, Ross NA, Chen H, Labrèche F. Postmenopausal 54. Avgerinos KI, Spyrou N, Mantzoros CS, Dalamaga M. Obesity and can-
+breast cancer is associated with exposure to traffic-related air pollution cer risk: Emerging biological mechanisms and perspectives. Metabolism.
+in Montreal, Canada: a case-control study. Environ Health Perspect. 2019;92:121–135.
+2010;118:1578–1583. 55. Jbaily A, Zhou X, Liu J, et al. Air pollution exposure disparities across
+49. Andersen ZJ, Ravnskjær L, Andersen KK, et al. Long-term exposure to US population and income groups. Nature. 2022;601:228–233.
+fine particulate matter and breast cancer incidence in the Danish nurse 56. Rosato V, Bosetti C, Negri E, et al. Reproductive and hormonal factors,
+cohort study. Cancer Epidemiol Biomarkers Prev. 2017;26:428–430. family history, and breast cancer according to the hormonal receptor
+50. Hart JE, Bertrand KA, DuPre N, et al. Long-term particulate matter status. Eur J Cancer Prev. 2014;23:412–417. Available at: https://jour-
+exposures during adulthood and risk of breast cancer incidence in the nals.lww.com/eurjcancerprev/Fulltext/2014/09000/Reproductive_and_
+nurses’ health study II prospective cohort. Cancer Epidemiol Biomarkers hormonal_factors,_family_history,.11.aspx.
+Prev. 2016;25:1274–1276. 57. Rossi M, Jahanzaib Anwar M, Usman A, Keshavarzian A, Bishehsari F.
+51. Reding KW, Young MT, Szpiro AA, et al. Breast cancer risk in relation to Colorectal cancer and alcohol consumption-populations to molecules.
+ambient air pollution exposure at residences in the sister study cohort. Cancers (Basel). 2018;10:38.
+Cancer Epidemiol Biomarkers Prev. 2015;24:1907–1909. 58. Wang Y, Bechle MJ, Kim S-Y, et al. Spatial decomposition analysis of
+52. van Donkelaar A, Martin RV, Li C, Burnett RT. Regional estimates of NO2 and PM2.5 air pollution in the United States. Atmos Environ.
+chemical composition of fine particulate matter using a combined geo- 2020;241:117470.
+science-statistical method with information from satellites, models, and 59. Wei Y, Qiu X, Yazdi MD, et al. The impact of exposure measurement
+monitors. Environ Sci Technol. 2019;53:2595–2611. error on the estimated concentration–response relationship between
+53. Hiatt RA, Beyeler N. Cancer and climate change. Lancet Oncol. long-term exposure to PM and mortality. Environ Health Perspect.
+2.5
+2020;21:e519–e527. 2022;130:77006.
+8

@@ -1,0 +1,836 @@
+OriginalInvestigation | Dermatology
+DevelopmentandAssessmentofanArtificialIntelligence–BasedTool
+forSkinConditionDiagnosisbyPrimaryCarePhysiciansandNursePractitioners
+inTeledermatologyPractices
+AyushJain,MS;DavidWay,ME;VishakhaGupta,MS;YiGao,PhD;GuilhermedeOliveiraMarinho,BS;JayHartford,MS;RorySayres,PhD;KimberlyKanada,MD;
+ClaraEng,PhD;KunalNagpal,MS;KarenB.DeSalvo,MD,MPH,MSc;GregS.Corrado,PhD;LilyPeng,MD,PhD;DaleR.Webster,PhD;R.CarterDunn,MS,MBA;
+DavidCoz,MS;SusanJ.Huang,MD;YunLiu,PhD;PeggyBui,MD,MBA;YuanLiu,PhD
+Abstract KeyPoints
+Question Canartificialintelligencehelp
+IMPORTANCE Mostdermatologiccasesareinitiallyevaluatedbynondermatologistssuchas
+primarycarephysiciansandnurse
+primarycarephysicians(PCPs)ornursepractitioners(NPs).
+practitionersdiagnoseskinconditions
+moreaccurately?
+OBJECTIVE Toevaluateanartificialintelligence(AI)–basedtoolthatassistswithdiagnosesof
+dermatologicconditions. Findings Inthisdiagnosticstudyof20
+primarycarephysiciansand20nurse
+DESIGN,SETTING,ANDPARTICIPANTS Thismultiple-reader,multiple-casediagnosticstudy practitionersreviewing1048
+developedanAI-basedtoolandevaluateditsutility.PrimarycarephysiciansandNPsretrospectively retrospectivecases,artificialintelligence
+reviewedanenrichedsetofcasesrepresenting120differentskinconditions.Randomizationwas assistancewassignificantlyassociated
+usedtoensureeachclinicianreviewedeachcaseeitherwithorwithoutAIassistance;eachclinician withhigheragreementwithdiagnoses
+alternatedbetweenbatchesof50casesineachmodality.ThereviewsoccurredfromFebruary21to madebyadermatologistpanel,withan
+April28,2020.DatawereanalyzedfromMay26,2020,toJanuary27,2021. increasefrom48%to58%forprimary
+carephysiciansandanincreasefrom
+EXPOSURES AnAI-basedassistivetoolforinterpretingclinicalimagesandassociated 46%to58%fornursepractitioners.
+medicalhistory. Theseoutcomescorrespondtoabenefit
+for1inevery8to10cases.
+MAINOUTCOMESANDMEASURES Theprimaryanalysisevaluatedagreementwithreference
+Meaning Artificialintelligencemayhelp
+diagnosesprovidedbyapanelof3dermatologistsforPCPsandNPs.Secondaryanalysesincluded
+cliniciansdiagnoseskinconditionsmore
+diagnosticaccuracyforbiopsy-confirmedcases,biopsyandreferralrates,reviewtime,and
+accuratelyinprimarycarepractices,
+diagnosticconfidence.
+wheremostskindiseasesareinitially
+evaluated.
+RESULTS Fortyboard-certifiedclinicians,including20PCPs(14women[70.0%];meanexperience,
+11.3[range,2-32]years)and20NPs(18women[90.0%];meanexperience,13.1[range,2-34]years)
++
+reviewed1048retrospectivecases(672female[64.2%];medianage,43[interquartilerange,30-56] Supplementalcontent
+years;41920totalreviews)fromateledermatologypracticeserving11sitesandprovided0to5 Authoraffiliationsandarticleinformationare
+differentialdiagnosespercase(mean[SD],1.6[0.7]).ThePCPswerelocatedacross12states,andthe listedattheendofthisarticle.
+NPspracticedinprimarycarewithoutphysiciansupervisionacross9states.TheNPshadameanof
+13.1(range,2-34)yearsofexperienceandpracticedinprimarycarewithoutphysiciansupervision
+across9states.Artificialintelligenceassistancewassignificantlyassociatedwithhigheragreement
+withreferencediagnoses.ForPCPs,theincreaseindiagnosticagreementwas10%(95%CI,8%-11%;
+P<.001),from48%to58%;forNPs,theincreasewas12%(95%CI,10%-14%;P<.001),from46%
+to58%.Insecondaryanalyses,agreementwithbiopsy-obtaineddiagnosiscategoriesofmaglignant,
+precancerous,orbenignincreasedby3%(95%CI,−1%to7%)forPCPsandby8%(95%CI,3%-13%)
+forNPs.Ratesofdesireforbiopsiesdecreasedby1%(95%CI,0-3%)forPCPsand2%(95%CI,
+1%-3%)forNPs;therateofdesireforreferralsdecreasedby3%(95%CI,1%-4%)forPCPsandNPs.
+Diagnosticagreementoncasesnotindicatedforadermatologistreferralincreasedby10%(95%CI,
+(continued)
+OpenAccess.ThisisanopenaccessarticledistributedunderthetermsoftheCC-BY-NC-NDLicense.
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 1/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+Abstract(continued)
+8%-12%)forPCPsand12%(95%CI,10%-14%)forNPs,andmedianreviewtimeincreasedslightlyby
+5(95%CI,0-8)secondsforPCPsand7(95%CI,5-10)secondsforNPspercase.
+CONCLUSIONSANDRELEVANCE Artificialintelligenceassistancewasassociatedwithimproved
+diagnosesbyPCPsandNPsfor1inevery8to10cases,indicatingpotentialforimprovingthequality
+ofdermatologiccare.
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249
+Introduction
+With2billionpeopleaffectedglobally,1skinconditionsarealeadingcauseofmorbidity.The
+examinationofsomeskinconditionsbydermatologistsresultsinsignificantlyhigherdiagnostic
+accuracy2-4andisassociatedwithbetterclinicaloutcomes5thannondermatologistexamination.
+However,owingtolackofaccesstodermatologists,only28%ofskincasesareseenbyaspecialist6;
+therefore,nonspecialistsplayapivotalroleintheassessmentofskinlesionsandinitiationofclinical
+managementandreferrals.7Thediagnosticaccuracyofnonspecialistsisreportedlyonly24%to
+70%,4,8-10suggestingthatcurrentlyavailableresources,suchasdermatologytextbooks,medical
+informationportals,andonlineimagesearchengines,remaininsufficienttoguidenonspecialists.
+Severalalgorithmsincorporatingartificialintelligence(AI)havebeendevelopedtohelp
+interpretbothclinical11-15anddermoscopic16-23imagesforavarietyofskinconditions,andtheeffect
+ofAI-basedsupportondermoscopicimageshasbeenstudied.15,24However,anopenquestion
+remainsastowhetherAIassistancecanhelpprimarycarephysicians(PCPs)andnursepractitioners
+(NPs)diagnoseskinconditionsfromclinicalimages(ie,takenwithoutspecializedequipment).
+WedevelopedanAI-basedtoolandconductedamultiple-reader,multiple-casediagnostic
+studyinwhichPCPsandindependentlypracticingNPsretrospectivelyreviewedskincasesfroma
+teledermatologyservice,representing120differentskinconditions.Weusedrandomizationto
+ensurereadersreviewedeachcaseonlyonce,eitherwithorwithoutAIassistance.Ourprimary
+objectivewastomeasuretheAIassistance–associatedchangesindiagnosticaccuracyofPCPsand
+NPswithoutspecialisttrainingindermatology.
+Methods
+ThisstudywasapprovedbytheQuorumInstitutionalReviewBoard,Seattle,Washington,and
+deemedexemptfrominformedconsentbecausealldataandimagesweredeidentified.The
+StandardsforReportingofDiagnosticAccuracy(STARD)25reportingguidelinewasfollowedfor
+thisstudy.
+TheAITool
+Liuetal26previouslydescribedanAIalgorithmthatprovidesadifferentialdiagnosisgivenclinical
+photographsofskinconditionsandthemedicalhistory(eTable1intheSupplement).TheirAImodel
+wasdevelopedusing16114casesandusedaconvolutionalneuralnetworktooutputprediction
+scoresacross419skinconditions.Inthepresentstudy,wecreatedaweb-basedtoolusingtheAI
+modeldescribedbyLiuetalbyincorporatinguserexperienceinsights(Figure1).
+Thetoolprovidesinformationaboutthecase,includingdemographicinformation,historyof
+presentillness,andotherelementsofthepatient’smedicalhistory.Foreachcase,1to6imageswere
+availableforreview(median,4),andreaderscouldtogglebetweenorzoominonimages.Primary
+carephysiciansandNPsreviewedthesecasesusingalaptopandcouldconsultadditionalresources
+astheywouldinclinicalpractice.
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 2/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+TheAIassistancecomponentoftheweb-basedtoolwasonlyavailableduringtheassistedmode
+ofthestudy(describedbelow).Atthetopofthepanel,theinterfacedisplayedtheskinconditions
+thatwereoutputbytheAI,sortedinorderoftheAI’spredictedlikelihoodscores.Artificial
+intelligencepredictionswithlowscores(<0.05)wereremoved,andthelistwaslimitedto5skin
+conditionstoavoidpresentingextraneousinformation.Eachconditioncouldbeclickedontodisplay
+additionalinformation(Figure1andeFigure1andtheAIToolInterfacesectionintheeMethodsin
+theSupplement).
+StudyDesign
+Toevaluatewhetherthistoolcouldassistprimarycarecliniciansindiagnosingskinconditions,we
+conductedamultiple-reader,multiple-casediagnosticstudywith20PCPsand20NPs(Figure1).The
+characteristicsofthecliniciansaredescribedintheReaderCharacteristicssectionoftheeMethods
+andeFigures2and3intheSupplement.Beforereviewingthestudycases,eachreaderwas
+presentedwithmaterialsdescribinghowtousetheAIassistantandgiventheopportunitytopractice
+usingtheAIassistantwith2samplecases(independentofthestudycases).Additionaldetailsofthis
+training27canbefoundintheOnboardingProcesssectionintheeMethodsintheSupplement.
+Thestudyusedcasesfrom2retrospectivedatasetsfromCaliforniaandHawaiipreviouslyused
+tovalidatetheAIalgorithm.26Specifically,thepriorstudyusedavalidationsetAandasubset
+(validationsetB)enrichedforrarerconditionsviarandomsamplingstratifiedbycondition.Validation
+setB(963cases)wasincludedinitsentirety.FromvalidationsetA,all85casesforwhichbiopsy
+resultswereavailablewerealsoincludedtoyieldatotalof1048cases(Table).NoneofthePCPsor
+NPsinthisstudypreviouslyreviewedthesecases,andtheAIalgorithmusedwasidenticaltotheone
+usedinthepreviousstudy.26
+Eachreaderwasrandomlyassignedto1of2readercohorts.The2readercohortsreadthesame
+casesbutwiththeoppositeassistancemodalities(ie,unassistedvsAIassisted)foreachcase.To
+reduceeffectsassociatedwithswitchingmodalities,the1048casesweredividedintobatchesof50
+cases(exceptthelast48cases,whichweredividedinto2batchesof24cases),andtheassistance
+modalityswitchedaftereachbatchofcases.Forthefirstbatchof50cases,readercohort1reviewed
+Figure1.UserInterfaceoftheArtificialIntelligence(AI)–BasedAssistiveToolandtheStudyDesign
+AI assistant: First group of clinicians Second group of clinicians
+• ≤5 Top-matching skin conditions (PCPs) Reader (NPs) Reader
+and AI confidence n = 10 cohort 1 n = 10 cohort 1
+• Additional information about each
+condition Randomization Randomization
+(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:9)(cid:10)(cid:11)(cid:3)(cid:7)(cid:12)(cid:10)(cid:13)(cid:9)(cid:6)(cid:9)(cid:12)(cid:10)(cid:14) n = 10 Reader n = 10 Reader
+cohort 2 cohort 2
+(cid:15)(cid:16)(cid:16)(cid:17)(cid:15)(cid:16)(cid:16)(cid:18)(cid:15)(cid:19)(cid:3)(cid:20)(cid:5)(cid:14)(cid:5)(cid:21)(cid:3)(cid:16)(cid:22)(cid:21)(cid:21)(cid:3)(cid:16)(cid:5)(cid:23)(cid:7)(cid:9)(cid:10)(cid:12)(cid:24)(cid:5)(cid:19)(cid:3)(cid:25)(cid:7)(cid:6)(cid:9)(cid:10)(cid:9)(cid:7)(cid:3)(cid:26)(cid:22)(cid:23)(cid:5)(cid:6)(cid:12)(cid:14)(cid:9)(cid:14)
+(cid:15)(cid:16)(cid:16)(cid:17)(cid:15)(cid:16)(cid:16)(cid:18)(cid:15)
+(cid:25)(cid:14)(cid:14)(cid:9)(cid:14)(cid:6)(cid:5)(cid:10)(cid:6)(cid:3)(cid:7)(cid:12)(cid:10)(cid:27)(cid:9)(cid:13)(cid:22)(cid:10)(cid:7)(cid:22) 1048 cases
+Reader
+(cid:26) (cid:31)(cid:21)(cid:22) (cid:5)(cid:23) "(cid:5) !(cid:6)(cid:9) (cid:22)(cid:10) (cid:14)(cid:12) (cid:19)(cid:3)(cid:7) (cid:12)(cid:28) (cid:27)(cid:6) (cid:6)(cid:22) (cid:22)(cid:3) (cid:10)(cid:24) (cid:3)(cid:27)(cid:5) (cid:12)(cid:21) !(cid:9)(cid:11) (cid:10)(cid:10) (cid:13)(cid:5) (cid:3)(cid:12)(cid:10) (cid:10)(cid:7) (cid:3)(cid:28) (cid:8)(cid:19)(cid:3) (cid:22)(cid:12) (cid:5)(cid:27)(cid:6) (cid:13)(cid:22) (cid:19)(cid:3)(cid:10) (cid:10)(cid:3) (cid:22)(cid:7)(cid:8) (cid:7) (cid:5) (cid:3)(cid:23) (cid:13)(cid:5) (cid:12)(cid:7) (cid:23)(cid:6) (cid:14)(cid:22) (cid:5)(cid:23)(cid:9) (cid:21)(cid:29) (cid:3)(cid:8)(cid:22) (cid:5)(cid:13) (cid:10)(cid:3)(cid:30) (cid:13)(cid:28) (cid:14)(cid:3) (cid:17)(cid:6)(cid:22) (cid:27)(cid:12)(cid:10) (cid:23)(cid:13) (cid:22)(cid:22) (cid:5)(cid:23) (cid:23)(cid:19) (cid:24)(cid:3)(cid:31) (cid:14)(cid:9)(cid:10) (cid:19)(cid:3) (cid:5)(cid:3) (cid:10)(cid:14) (cid:13)(cid:7) (cid:3)(cid:5) (cid:21)(cid:22)(cid:21)(cid:28) (cid:11)(cid:19)(cid:3) (cid:14)(cid:30) (cid:19)(cid:21) (cid:3)(cid:22) (cid:5)(cid:22) (cid:10)(cid:13) (cid:13)(cid:9) (cid:3)(cid:10) (cid:7)(cid:11) (cid:12)(cid:3) (cid:10)(cid:10) (cid:14)(cid:12) (cid:6)(cid:13) (cid:9)(cid:6)! !(cid:21) (cid:6)(cid:22) (cid:9)(cid:10)(cid:14) (cid:11)(cid:3)(cid:5) (cid:3)(cid:6)(cid:10) (cid:8)(cid:13) (cid:22)(cid:3) (cid:3) cohort 1
+(cid:14)(cid:22)(cid:7)(cid:12)(cid:10)(cid:13)(cid:3)(cid:24)(cid:12)(cid:14)(cid:6)(cid:3)(cid:7)(cid:12)(cid:24)(cid:24)(cid:12)(cid:10)(cid:3)(cid:6)(cid:28)(cid:31)(cid:22)(cid:3)(cid:12)(cid:27)(cid:3)(cid:14) (cid:9)(cid:10)(cid:3)(cid:7)(cid:5)(cid:10)(cid:7)(cid:22)(cid:23)#(cid:3)(cid:15)(cid:16)(cid:16)(cid:18)(cid:15)(cid:19)(cid:3)(cid:12)(cid:23)(cid:3)(cid:20)(cid:12)$(cid:22)(cid:10)(cid:3)(cid:13)(cid:9)(cid:14)(cid:22)(cid:5)(cid:14)(cid:22)(cid:19)(cid:3)$(cid:8)(cid:9)(cid:7)(cid:8)(cid:3)(cid:12)(cid:27)(cid:6)(cid:22)(cid:10)(cid:3)(cid:31)(cid:23)(cid:22)(cid:14)(cid:22)(cid:10)(cid:6)(cid:14)
+(cid:5)(cid:14)(cid:3)(cid:14)(cid:7)(cid:5)(cid:21)(cid:28)(cid:19)(cid:3)(cid:31)(cid:9)(cid:10) %(cid:30)(cid:23)(cid:12)$(cid:10)(cid:3)(cid:31)(cid:21)(cid:5)"!(cid:22)(cid:19)(cid:3)(cid:23)(cid:22)(cid:31)(cid:23)(cid:22)(cid:14)(cid:22)(cid:10)(cid:6)(cid:14)(cid:3)(cid:10)(cid:12)(cid:10)(cid:9)(cid:10)&(cid:5)(cid:14)(cid:9)&(cid:22)(cid:3)’(cid:9)(cid:10)(cid:3)(cid:14)(cid:9)(cid:6)!(cid:19)(cid:3)(cid:10)(cid:12)(cid:6)(cid:3)(cid:31)(cid:22)(cid:10)(cid:22)(cid:6)(cid:23)(cid:5)(cid:6)(cid:9)(cid:10)(cid:11)(cid:3)(cid:13)(cid:22)(cid:23)(cid:24)(cid:9)(cid:14)((cid:3)(cid:14)(cid:6)(cid:5)(cid:11)(cid:22)(cid:3) 50 50 50 50 50 24 24
+(cid:12)(cid:27)(cid:3)(cid:15)(cid:16)(cid:16)(cid:3)(cid:6)(cid:8)(cid:5)(cid:6)(cid:3)(cid:24)(cid:5)(cid:28)(cid:3)(cid:31)(cid:23)(cid:12)(cid:11)(cid:23)(cid:22)(cid:14)(cid:14)(cid:3)(cid:6)(cid:12)(cid:3)(cid:9)(cid:10)&(cid:5)(cid:14)(cid:9)&(cid:22)(cid:3)(cid:13)(cid:9)(cid:14)(cid:22)(cid:5)(cid:14)(cid:22)(cid:3)(cid:9)(cid:27)(cid:3)(cid:21)(cid:22)(cid:27)(cid:6)(cid:3)!(cid:10)(cid:6)(cid:23)(cid:22)(cid:5)(cid:6)(cid:22)(cid:13)#
+1048 cases
+)(cid:22)*(cid:6)(cid:30)(cid:12)(cid:12) (cid:3)(cid:9)(cid:24)(cid:5)(cid:11)(cid:22)(cid:14) (cid:18)(cid:31)(cid:24)(cid:23)(cid:22)(cid:5)(cid:14)(cid:11)(cid:22)(cid:22)(cid:10)(cid:14)(cid:6)(cid:3)(cid:5)(cid:12)(cid:6)(cid:27)(cid:9)(cid:3)(cid:12)(cid:15)(cid:10)(cid:16)(cid:16)(cid:17)(cid:15)(cid:16)(cid:16)(cid:18)(cid:15)(cid:3)(cid:14)(cid:9)(cid:24)(cid:9)(cid:21)(cid:5)(cid:23)(cid:3)(cid:6)(cid:12)(cid:3)(cid:31)(cid:5)(cid:6)(cid:9)(cid:22)(cid:10)(cid:6)+(cid:14) Reader
+(cid:2) ,(cid:9)(cid:22)$(cid:3)(cid:6)(cid:22)*(cid:6)(cid:30)(cid:12)(cid:12) (cid:3)(cid:9)(cid:24)(cid:5)(cid:11)(cid:22)(cid:14) (cid:2) ,(cid:9)(cid:22)$(cid:3)(cid:14)(cid:9)(cid:24)(cid:9)(cid:21)(cid:5)(cid:23)(cid:3)(cid:9)(cid:24)(cid:5)(cid:11)(cid:22)(cid:14) cohort 2
+(cid:4)(cid:12)(cid:23)(cid:22)(cid:3)(cid:5)(cid:30)(cid:12)!(cid:6)(cid:3)(cid:6)(cid:8)(cid:9)(cid:14)(cid:3)(cid:7)(cid:12)(cid:10)(cid:13)(cid:9)(cid:6)(cid:9)(cid:12)(cid:10) 50 50 50 50 50 24 24
+Scrolling shows more conditions
+and information AI-assisted cases Unassisted cases
+TheAIassistantshowsasmanyas5toppredictionsofskinconditions,withthe modalityalternatedevery50cases.Foreverycase,eachclinicianwasinstructedtorank
+confidenceineachpredictionshownascoloreddotsandadditionalinformation(eg, asmanyas3differentialdiagnosesusingasearch-as-you-typeinterfaceandselecting
+sampleimagesfromanatlas)availablewithaclick.MoredetailsareavailableineFigure1 matchingskinconditionsfromalistof3961conditions.Iftheirdesiredskinconditionwas
+intheSupplement.Thestudywasdesignedasamultiple-reader,multiple-case(MRMC) notpresent,clinicianscouldprovidefree-textentries.Allskinconditionsweremapped
+studycomprising1048cases.Twogroupsofclinicians(primarycarephysicians[PCPs] toalistof419conditions.SCCindicatessquamouscellcarcinoma;SCCIS,SCCinsitu.
+andnursepractitioners[NPs])reviewedeachcasewithorwithoutAIassistance.The
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 3/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+Table.PatientCharacteristicsintheOriginalDataSetandFinalEnrichedDataSet
+Dataset
+Caseswithdiagnosesfrom
+Characteristic Fullstudy(n=1048)a histologicfindings(n=152)b
+Years 2017-2018 2017-2018
+No.ofsites 11 10
+No.ofimagesincludedinstudy 3935 413
+No.ofpatientsincludedinstudy 1016 152
+Age,median(IQR),ya 43(30-56) 49(35-59)
+Sex,No.(%)
+Female 672(64.2) 99(65.1)
+Male 375(35.8) 53(34.9)
+Raceandethnicity,No.(%)
+AmericanIndianorAlaskaNative 9(0.9) 0
+Asian 102(9.7) 5(3.3)
+BlackorAfricanAmerican 66(6.3) 5(3.3)
+HispanicorLatino 447(42.7) 59(38.8)
+NativeHawaiianorPacificIslander 20(1.9) 2(1.3)
+White 365(34.9) 80(52.6)
+Notspecified 38(3.6) 1(0.7)
+Fitzpatrickskintype(6types),No.(%)
+I 2(0.2) 2(1.3)
+II 109(10.4) 17(11.2)
+III 668(63.8) 111(73.0)
+IV 205(19.6) 14(9.2)
+V 25(2.4) 1(0.7)
+VI 0 0
+Unknown 38(3.6) 7(4.6)
+Skinconditionsbasedonprimarydiagnosis,No.(%)c
+Acne 40(3.8) NA
+Actinickeratosis 39(3.7) 1(0.7)
+Allergiccontactdermatitis 25(2.4) NA
+Alopeciaareata 37(3.5) NA
+Androgeneticalopecia 32(3.1) NA
+Basalcellcarcinoma 36(3.4) 32(21.1)
+Cyst 32(3.1) 1(0.7)
+Eczema 53(5.1) NA
+Folliculitis 32(3.1) 3(2.0)
+Hidradenitis 34(3.2) NA
+Lentigo 32(3.1) 3(2.0)
+Melanocyticnevus 61(5.8) 28(18.4)
+Melanoma 20(1.9) 6(3.9)
+Postinflammatoryhyperpigmentation 28(2.7) NA
+Psoriasis 40(3.8) NA
+Abbreviations:IQR,interquartilerange;NA,not
+SCC/SCCIS 34(3.2) 14(9.2)
+applicable;SCC/SCCIS,squamouscellcarcinoma/
+SK/ISK 52(5.0) 13(8.6) squamouscellcarcinomainsitu;SK/ISK,seborrheic
+Scarcondition 34(3.2) 2(1.3) keratosis/irritatedseborrheickeratosis.
+Seborrheicdermatitis 37(3.5) NA aOnecasewasremovedfromthestudyfor
+Skintag 36(3.4) 3(2.0) logisticalreasons.
+Stasisdermatitis 25(2.4) NA bOf165cases,13hadequivocalbiopsyresultsand
+Tinea 31(3.0) 1(0.7) wereexcludedfromthebiopsyanalysis.Atotalof141
+caseshadgrowthsand53weremalignant.
+Tineaversicolor 34(3.2) NA
+Urticaria 33(3.2) NA
+cEnrichmentwasperformedtoavoidskewtoward
+commonconditions(eg,acneandeczema)as
+Verrucavulgaris 37(3.5) 8(5.3)
+describedpreviouslyandadditionallytoincludeall
+Vitiligo 36(3.4) NA
+availablecaseswithbiopsyconfirmation.
+Otherd 116(11.1) 65(42.8)
+dConditionswithfewerthan10caseseach.
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 4/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+thesecaseswithAIassistance,whereasreadercohort2reviewedthesamecasesunassisted.The
+nextbatchofcaseswerereviewedintheoppositemodality(Figure1).Byensuringeachreader
+reviewedeachcaseonlyonceineithertheassistedorunassistedmodality,thisdesigneliminatedany
+memoryeffectassociatedwithacrossoverstudy(wherememorablecasesmayinflatethediagnostic
+performancewhenreviewedasecondtimebythesamereaders).28,29
+Duringthecasereviews,thereaderseitherprovidedtheirtopdifferentialdiagnosesor
+indicatedthattheywereunabletodiagnoseacase.Theyalsoansweredafewquestionsontheir
+intendedclinicalnextstepsforeachcase(seetheStudyEndPointssectionbelow).Reviewswere
+performedwithouttimeconstraint.ThesereviewsoccurredfromFebruary21toApril28,2020.
+ReferenceDiagnoses
+Referencediagnoseswereprovidedbyapanelofdermatologists.26Briefly,3USboard-certified
+dermatologists(fromapoolof12)independentlyreviewedeachcase.Thedermatologists
+participatedinthestudyviaAdvancedClinical,Deerfield,Illinois;had5to13yearsofexperience
+(mean[SD],7.2[2.7]years);andpracticedinmultiplestates,includingColorado,Hawaii,Iowa,
+Maryland,NewYork,SouthCarolina,Tennessee,andTexas.Referencediagnoseswereobtained
+usingapreviouslydescribedcollectiveintelligenceapproach,whichresultsinmorereproducible
+diagnosesthandiagnosesobtainedbyindividualdermatologistreview(eTable2inthe
+Supplement).26,30Thisapproachassignsavotetoeachdiagnosisbasedonitsranking:thefirst
+diagnosisinadermatologist’sdifferentialwasgivenaweightof1/1=1;thesecondarydiagnosiswas
+givenaweightof1/2=0.5.Thevotesforeachdiagnosisweresummedacrossthe3dermatologists,
+andthetop-voteddiagnosiswasconsideredtheprimarydiagnosisofthepanel.
+Agreementwasalsoassessedagainstbiopsy-confirmeddiagnoseswhenavailable.Diagnoses
+wereextractedfrompathologyreportsbytheteledermatologyservicebeforetransfertostudy
+investigators.ThesediagnoseswerethenmappedtoskinconditionsbyUSboard-certified
+dermatologists(includingK.K.andS.J.H.).Thecasedistributionacrossthesediagnoses(bothclinical
+andhistologic)arepresentedintheTable;of152caseswithavailablebiopsyresults,thediagnosisof
+141caseswasgrowths.
+StudyEndPoints
+Ourstudywasdesignedtoevaluate2prespecifiedprimaryendpoints:(1)theagreementrateofthe
+primarydifferentialdiagnosisofthePCPswiththereferencediagnosisand(2)theagreementrate
+oftheprimarydifferentialdiagnosisoftheNPswiththereferencediagnosis.Basedontherelative
+frequenciesofconditionsinthisdataset,thechanceagreementis3.77%.
+Severalsecondaryanalyseswereplanned.First,forcaseswithbiopsyresults,diagnoseswere
+classifiedasmalignant,precancerous,orbenignandwereevaluatedagainstbiopsy-determined
+diagnoses.Clinicianswerealsoaskedtoreportwhethertheywouldhaverecommendedabiopsyor
+referredthecasetoadermatologist.Forthesubsetofreadsinwhichcliniciansreportedtheywould
+notoptforareferral,weassessedthediagnosticagreementrate.Wealsoanalyzedthetimetaken
+toreviewcasesandself-reporteddiagnosticconfidence.
+Finally,2additionalmetrics(top-3agreementandaverageoverlap)31wereusedformore
+comprehensiveevaluationofcasesinwhichadditionalfollow-upmaybeneededtoarriveata
+definitivediagnosis(AdditionalEvaluationMetricssectionintheeMethodsintheSupplement).An
+exploratoryanalysisalsomeasuredtheeffectofAIassistanceondermatologistagreementwith
+referencediagnoses.
+StatisticalAnalysis
+DatawereanalyzedfromMay26,2020,toJanuary27,2021.Tocomparecliniciansreviewingcases
+withAIassistanceandreviewingcaseswithout,weusedapermutationtest32with1000iterations.
+Ineachiteration,wepermutedtheassignmentofwhetherreadswereassistedorunassisted(ie,
+one-halfofthefullsetofassistedandunassistedreadspercasewereselectedtobeassistedandthe
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 5/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+otherhalfunassisted).Sensitivityanalysisusingapermutationtestthatpreservedthereader
+cohorts’structureandanotherstatisticalanalysisviaageneralizedlinearmixedmodelproduced
+similarresults(seetheAlternativeStatisticalAnalysessectionintheeMethodsintheSupplement).
+Becausethisstudyhad2prespecifiedprimaryendpoints(both1-tailedsuperioritytests),weapplied
+theBonferronicorrection,andP<.0125wasconsideredstatisticallysignificant(halvedfrom
+α=0.05owingto1-tailedtestsandhalvedagainowingtohaving2primaryendpoints).Confidence
+intervalswerecomputedbybootstrappingacrossbothcasesandreadersforeachsampledcase
+(1000iterations;samplingbothcasesandreaderwithreplacementineachiteration).Hypothesis
+testswereconductedinPython,version3.6.7(PythonSoftwareFoundation).
+Results
+Thisstudyinvolvedtheparticipationof40board-certifiedclinicians,including20PCPs(14women
+[70.0%]and6men[30.0%];meanexperience,11.3[range,2-32]years)whowerelocatedacross12
+statesand20NPs(18women[90.0%]and2men[10.0%];meanexperience,13.1[range,2-34]
+years)whopracticedinprimarycarewithoutphysiciansupervisionacross9states.Theseclinicians
+reviewed1048teledermatologycases(672women[64.2%]and375men[35.8%],with1missing;
+medianage,43[interquartilerange,30-56]years)from11sites(Table)andprovided0to5
+differentialdiagnosespercase(mean[SD],1.6[0.7]),foratotalof41920casereviews.EveryPCP
+andNPreviewedeachcaseonlyonce,eitherwithorwithoutAIassistance(Figure1).
+Artificialintelligenceassistancewasassociatedwithsignificantlyhighertop-1agreementwith
+thereferencediagnosis(Figure2AandeTable3intheSupplement).ForPCPs,theincreasein
+diagnosticagreementwas10%(95%CI,8%-11%;P<.001),from48%to58%;forNPs,the
+improvementwas12%(95%CI,10%-14%;P<.001),from46%to58%.Assistancewasassociated
+withimprovementsforall40readers,althoughthemagnitudevariedbyreader(range,2%-22%;
+median,10%)(Figure2B).Similarimprovementswereobservedbeyondtheprimarydiagnosisbased
+onthetop-3agreement,averageoverlap,per-conditionsensitivity,andκvalue(eFigures4and5and
+eTable3intheSupplement).Inanexploratoryanalysis,2dermatologists’agreementwiththe
+referencediagnosisremainedlargelyunchangedwithAIassistance,increasingby2%(95%CI,−1%
+to5%),from63%to66%(eFigures4and5intheSupplement).26
+Forcaseswithavailablebiopsydiagnoses(n=141),thereaders’accuracyatclassifyinglesions
+asmalignant,precancerous,orbenigntrendedupwardby3%forPCPs(95%CI,−1%to7%)from
+64%to67%andby8%forNPs(95%CI,3%-13%)from60%to68%(Figure2C-D).Subgroup
+analysisfurtherfoundthatsensitivityformalignantlesions,precancerouslesions,infectiousskin
+diseases,andcategoriesofhairlosstrendedupwardorremainedsimilarwithassistanceforbothNPs
+andPCPs,withimprovementsrangingfrom−1%to36%(eTable4intheSupplement).
+OnthesubsetofcasesinwhichthetoppredictionofAIwasaccurate(63%ofcases),theuseof
+assistancewasassociatedwithanincreasedtop-1agreementwithreferencediagnosisof18%(95%
+CI,16%-20%)forPCPsand21%(95%CI,19%-23%)forNPs.Onthecontrary,whennoneoftheAI
+tool’spredictionswascorrect(13%ofcases),theagreementwas8%lower(95%CI,5%-12%)for
+PCPsand9%lower(95%CI,6%-12%)forNPs.Theeffectswereintermediatewhenthecorrect
+diagnosiswasinthesecondorthirdpositioninsteadofthefirst(seetheImpactofAIAccuracyon
+AssistancesectionofeMethodsandeFigures6and7intheSupplement).Anexploratoryanalysis
+alsosuggestedthatassistancewasparticularlybeneficialforlessambiguouscases.Forexample,in
+thesubsetofcasesinwhichthedermatologistpanelhadunanimousagreement,theuseofAI
+assistancewasassociatedwithatop-1agreementincreaseof13%(95%CI,10%-15%)forPCPsand
+of16%(95%CI,14%-19%)forNPs(eFigure8intheSupplement).Subanalysesalsoindicatedthat
+assistance-associatedbenefitswereconsistentduringthestudyandacrossseveralskintypes
+(eFigures9and10intheSupplement).
+Artificialintelligenceassistancewasalsoassociatedwithchangesinseveralsimulatedclinical
+decisions(Figure3A-B).Theratesofindicatinganeedforbiopsywere1%lower(95%CI,0%-3%)for
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 6/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+PCPsand2%lower(95%CI,1%-3%)forNPs;therateofdesirewas3%lower(95%CI,1%-4%)for
+bothPCPsandNPs(eTable5intheSupplement).Forcasesinwhichreadersindicatedreferralswere
+unnecessary,theirtop-1agreementratewithdermatologistswashigherby10%forPCPs(95%CI,
+8%-12%),from51%to61%,andby12%forNPs(95%CI,10%-14%),from47%to59%,withasimilar
+effectonreferredcases(Figure3C-DandeFigure11intheSupplement).Inrelatedfindings,self-
+reporteddiagnosticconfidencewassubstantiallyhigherwithAIassistanceforbothreadercohorts
+(Figure4A).Thetop-1agreementofcasesthatwereratedwithmorethan90%confidencewas
+substantiallyhigher(73%vs64%forPCPsand68%vs58%forNPs)(eFigure12intheSupplement).
+Intermsofreviewtimepercase,AIassistancewasassociatedwithaslightlyincreasedmedian
+reviewtime.Adifferenceof5(95%CI,0-8)seconds,from89to94seconds,wasobservedforPCPs
+andadifferenceof7(95%CI,5-10)seconds,from77to84seconds,wasobservedforNPs(Figure4B
+andeFigure9DintheSupplement).WealsopresentrepresentativeexamplesofcasesinwhichAI
+assistancewasassociatedwiththelargestincreasesordecreasesinagreementwithreference
+diagnoses(eFigures13and14intheSupplement)andresultsoffollow-upsurveysinvestigatingthe
+usefulnessofvariousAIassistantfeatures(eFigures15-17intheSupplement).
+Figure2.ComparisonofClinicians’DiagnosticAgreementRateWithDermatologistsWhenAssisted
+byArtificialIntelligence(AI)vsUnassisted
+0.8 0.8
+0.7 0.7
+0.6 0.6
+0.5 0.5
+0.4 0.4
+0.3 0.3
+0.2 0.2
+0.1 0.1
+0
+etar
+,tnemeerga
+1-poT
+A Agreement with reference diagnoses for all cases
+Unassisted Assisted Unassisted Assisted
+PCPs NPs
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+etar
+,tnemeerga
+1-poT
+0
+C Agreement with reference diagnoses for all
+biopsy specimens
+Unassisted Assisted Unassisted Assisted
+PCPs NPs
+)detsissa
+IA(
+etar
+,tnemeerga
+1-poT
+B Agreement with reference diagnoses for all cases,
+assisted vs unassisted diagnoses
+PCPs
+NPs
+0 0.2 0.4 0.6 0.8
+Top-1 agreement, rate (unassisted)
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+)detsissa
+IA(
+etar
+,tnemeerga
+1-poT
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+Everyclinician(primarycarephysicians[PCPs]ornurse
+practitioners[NPs])providedtheirdifferential
+diagnosis(severalrank-orderedconditions),which
+werethenmappedto419skinconditions.Only
+agreementinthetopdifferentialdiagnosis(howoften
+D Agreement with reference diagnoses for all biopsy theclinicians’primarydiagnosisagreedwiththetop
+specimens, assisted vs unassisted diagnoses diagnosisofapanelofdermatologists[top-1
+agreement])isconsidered,withadditionaldetailsin
+PCPs eFigures4and5intheSupplement.PanelsAandB
+NPs coverall1048cases,whereaspanelsCandDcover141
+caseswithgrowthsandbiopsyconfirmation.A,Top-1
+agreementincreasedwithAIassistance(P<.001for
+bothPCPsandNPs).B,Fortop-1agreementfor
+unassistedvsassistedmodalitiesforeachindividual
+clinician,avalueabovethediagonalindicatesthatthe
+clinicianhadahigheragreementwithdermatologists
+whenassistedbyAI.CandD,Asimilaranalysis
+evaluateddiagnosticaccuracyforgrowthswithbiopsy
+confirmationonthe3-wayclassificationofmalignant,
+precancerous,andbenign.Errorbarsrepresent95%
+CIs.AdditionalanalysisofassistancestratifiedbyAI
+0 0.2 0.4 0.6 0.8 agreementwiththereferencediagnosesispresented
+Top-1 agreement, rate (unassisted) ineFigures6and7intheSupplement.
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 7/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+Figure3.ComparingSimulatedClinicalDecisionsbyCliniciansWhenAssistedbyArtificialIntelligence
+vsUnassisted
+50
+40
+30
+20
+10
+0
+% ,etar
+yspoiB
+A Biopsy rate
+Unassisted Assisted Unassisted Assisted
+PCPs NPs
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+etar
+tnemeerga
+1-poT
+C Agreement with reference diagnoses among
+nonreferred cases
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+Unassisted Assisted Unassisted Assisted
+PCPs NPs
+etar
+tnemeerga
+1-poT
+50
+40
+30
+20
+10
+0
+D Agreement with reference diagnoses among
+referred cases
+Unassisted Assisted Unassisted Assisted
+PCPs NPs
+% ,etar
+larrefeR
+B Referral rate
+Unassisted Assisted Unassisted Assisted
+PCPs NPs
+A,Rateofbiopsyforallcases.B,Rateofreferralsforall
+cases.C,Diagnosticaccuracyamongnonreferred
+cases.D,Diagnosticaccuracyamongreferredcases.
+Top-3agreementratesforcasesforwhomtheprimary
+carephysicians(PCPs)andnursepractitioners(NPs)
+didanddidnotindicateareferralarepresentedin
+eFigure11intheSupplement.Errorbarsrepresent
+95%CIs.
+Figure4.ComparingClinicians’ConfidenceandCaseReviewTimeWhenAssistedbyArtificialIntelligence
+vsUnassisted
+11 000 900
+10 000 800
+9000
+700
+8000
+600 7000
+6000 500
+5000 400
+4000
+300
+3000
+200
+2000
+1000 100
+0
+sdaer
+fo .oN
+A Distribution of confidence scores per read
+Confidence of
+top diagnosis
+NA
+<25%
+25%-49%
+50%-74%
+75%-89% ≥90%
+0
+Unassisted Assisted Unassisted Assisted
+PCPs NPs
+s ,emit
+sisongaiD
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+B Distribution of review times per case
+A,Confidenceoftheprimarycarephysicians(PCPs)
+andnursepractitioners(NPs)asastackedbarplot.NA
+indicatescasesforwhichthecliniciancouldnot
+provideadiagnosis.B,Comparisonofthedifferences
+incasereviewtimeforthefullsetof1048casesasa
+boxplot.Theboxedgesrepresentquartiles,whereas thewhiskersextendtothelastobservedpointsthat
+fallwithin1.5timestheinterquartilerangefromthe
+quartiles.Outliersbeyondthewhiskersareindicated
+withdots;atotalof182(0.4%ofthereads)outliers
+beyond900secondsareexcludedfromthe4box
+plotsforeaseofvisualization.Themediantimefor
+Unassisted Assisted Unassisted Assisted diagnosisincreasedfrom89to94secondsforPCPs
+PCPs NPs andfrom77to84secondsforNPs.
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 8/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+Discussion
+Inthisstudy,40clinicianseachreviewed1048teledermatologycases,withAIassistancefora
+randomhalfofthecasesandwithoutAIassistancefortheremaininghalf.Artificialintelligence
+assistancewasassociatedwithahigheragreementratewithdermatologists’referencediagnosesfor
+bothPCPsandNPs.Theabsoluteeffectsizeof10%and12%correspondstoanimproveddiagnosis
+for1inevery8to10cases.
+ForbothPCPsandNPs,AIassistancewasalsoassociatedwithlowerratesofrecommendinga
+biopsyorspecialistreferral,markedincreaseinself-reporteddiagnosticconfidence,andhigher
+diagnosticagreementrates(withdermatologists)innonreferredcases.Theseobservationssuggest
+thatAIassistanceimprovedskinconditiondiagnosisanddiagnosticconfidenceofnonspecialists
+withoutincurringareflexiveincreaseduseofreferralsorbiopsies.Theseimprovementscameata
+modestcostofonlyamedianof5to7additionalsecondspercase.
+OurobservationssuggestthatAIhasthepotentialtoaugmenttheabilityofPCPsandNPs
+independentlypracticingprimarycaretodiagnoseandtriageskinconditionsmoreeffectively.
+Cutaneousdiseaseisthechiefcomplaintin12%to21%ofprimarycarevisits,33-36andaccessto
+dermatologistsislimited.Nonspecialistshavesuboptimaldiagnosticaccuracyandhavebeenshown
+toperformmorebiopsieswhilediagnosingfewermalignantneoplasmsthandermatologists.37
+Therefore,improvingthediagnosticaccuracyofnonreferredcaseswhilereducingunnecessary
+referralsandbiopsiescouldhaveenormousimplicationsforhealthcaresystems.
+AccordingtotheAmericanAcademyofDermatology,38theestimateddirecthealthcarecostof
+skindiseaseintheUSis$75billion,including$46billioninmedicalcosts(officevisits,procedures,
+andtests),withanadditional$11billionofindirectopportunitycostsfrommissedworkordecreased
+productivityforpatientsandtheircaregivers.Appropriatediagnosisofdermatologicconditionsat
+thepointofcareinprimarycaresettingscouldtranslatetofewerdelaysindiagnosisand
+managementandincreasedcapacityfordermatologyoffices.Artificialintelligencealsohasthe
+potentialtoenhancetriagebyimprovingthequalityofinformationinreferralsandenable
+dermatologyofficestobetterprioritizetheurgencyofreferrals.Theclinicalimpactofthistoolwould
+needtobedeterminedinprospectivestudies.
+ThisAItoolusesasinputimagesoftheskinconditionaswellasastructuredmedicalhistory.
+Theseimagesweretakenusingconsumer-gradepoint-and-shootcamerasandmobiledevices
+withoutspecializedhardware.Theinterfaceusedinthisstudywasdesignedforstore-and-forward
+teledermatology;however,extensiontolive,interactiveteledermatologyisinprinciple
+straightforward.Ineithercase,thetelemedicineformatcouldbeparticularlyusefulintheCOVID-19
+era39forpopulationsathighriskofcomplicationsintheeventofinfectionduetoin-personcare.The
+AItoolcouldalsobeusedinanin-personclinicsettingbecauseAIinterpretationofimagesisfeasible
+withinsecondsonmodernsmartphones.Suchusecouldenablephysicianstoconductfollow-up
+tests(eg,potassiumhydroxidetesttoconfirmfundalinfection),askclarifyingquestionsaboutthe
+medicalhistory,orconductacloserphysicalexaminationtorealizegreaterimprovementsin
+diagnosticability.
+Moregenerally,andconsistentwiththeconsensusstatementsfromboththeAmericanMedical
+Association40andtheAmericanAcademyofDermatology,41thistoolwasspecificallydesignedto
+augmentclinicians’diagnosticability.Toimprovetrustandempowerreaderstoevaluatesuggestion
+reliability,thetoolprovidesameasureofitsconfidenceandcanonicalexamplesofeachsuggested
+diagnosis.ForskinconditionsfromwhichtheAIalgorithmhadlimiteddatatolearn,suggestionsare
+accompaniedbyalimiteddatawarning.Thesefeaturesweredesignedtoenablenonspecialiststo
+diagnosecasesmoreaccuratelyandwithgreaterconfidence.
+OtherstudieshaveexploredthepotentialofAI-baseddermatologytools.Hanetal15founda7%
+increaseindiagnosticaccuracywhen2dermatologistsand2residentsreviewed2201casesasecond
+timewithAIassistance.Assistance-associatedimprovementswerealsoseenfor21dermatologists
+and26residentson240imagesfordetectionofmalignantneoplasms.15Tschandletal24highlighted
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 9/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+theimportanceofeffectivehuman/computerinteractionforAItoolsforinterpretingdermoscopic
+images,withimprovementsinshowingmulticlasspredictionprobabilitiesbyskinconditionbutnot
+forbinarypredictionsofmalignantneoplasmsorAI-basedretrievalofsimilarimages.Ourstudy
+complementsthesepriorworks.First,weevaluatedimagesfromnonspecialized,widelyavailable
+devices.Second,wespecificallyexaminedtheeffectofAIassistanceonPCPsandNPs,whoperform
+mostskinconditionassessments.Inaddition,weassessed2pivotalclinicaldecisions:biopsyand
+referral.Finally,ourrandomizedstudydesignavoidsanypotentialmemoryeffectsofreviewingthe
+samecasemorethanonce.
+Limitations
+Thisstudyhassomelimitations.First,thesewereteledermatologycasesthatwereamixofcasesthat
+werereferredfromprimarycareandothercasesthatweresubmittedatthepatient’srequest.The
+potentiallyincreasedcasedifficultyandcaseenrichmentmayhaveaffectedcliniciandiagnostic
+performance.Second,intermsofFitzpatrickskintypes42(whichcategorizeskintoneandpropensity
+totan),typesIandVareunderrepresented,andtypeVIisabsentinthisdataset.26Becausedisease
+canpresentdifferentlyacrossskintypes,thefurtherstudyofadditionalskintypesiswarranted.
+Third,AI-associatedimprovementsformalignantneoplasmswerelowerthanthoseacrossallcases,
+andfutureworkisneededtofurtherimprovetheAItoolformalignantneoplasms.Ourrandomized
+studydesignof1modalitypercase/readerpairprecludesinferencesaboutanyspecificcaseand
+reader.Alternativestudydesignssuchassequentialreading(unassistedfollowedbyassisted)orfully
+crossedsetupscouldbeexplored,althoughbiasesfromanticipationofAIassistanceorincomplete
+washoutwillneedtobeaverted.28Finally,the“store-and-forward”natureofthesecasesrestricted
+theabilityoftheclinicianstoaskfollow-upquestionsandperformtests.Assuch,theinsightshereare
+moredirectlyrelevanttoastore-and-forwardsettingthanin-personclinicsorliveinteractive
+telemedicinevisits.
+Conclusions
+OurAItoolwassignificantlyassociatedwithimprovedPCPandNPdiagnosticagreementwith
+dermatologistsonskinconditioncasesfromateledermatologyservice.Prospectivestudiesare
+warrantedtostudytheimpactofitsuseinbothtelemedicinesettingsandin-personprimary
+carevisits.
+ARTICLEINFORMATION
+AcceptedforPublication:February1,2021.
+Published:April28,2021.doi:10.1001/jamanetworkopen.2021.7249
+OpenAccess:ThisisanopenaccessarticledistributedunderthetermsoftheCC-BY-NC-NDLicense.©2021Jain
+Aetal.JAMANetworkOpen.
+CorrespondingAuthor:YunLiu,PhD,GoogleHealth,3400HillviewAve,PaloAlto,CA94304(liuyun@
+google.com).
+AuthorAffiliations:GoogleHealth,PaloAlto,California(Jain,Way,Gupta,Gao,deOliveiraMarinho,Hartford,
+Sayres,Eng,Nagpal,DeSalvo,Corrado,Peng,Webster,Dunn,Coz,YunLiu,Bui,YuanLiu);GoogleHealthvia
+AdvancedClinical,Deerfield,Illinois(Kanada,Huang);DivisionofHospitalMedicine,UniversityofCalifornia,San
+Francisco(Bui).
+AuthorContributions:DrsBuiandYuanLiucontributedequallytothestudy.MrJainandDrYunLiuhadfull
+accesstoallthedatainthestudyandtakesresponsibilityfortheintegrityofthedataandtheaccuracyofthedata
+analysis.
+Conceptanddesign:Jain,Way,deOliveiraMarinho,Sayres,Eng,Corrado,Peng,Webster,Dunn,Coz,Huang,Yun
+Liu,Bui,YuanLiu.
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 10/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+Acquisition,analysis,orinterpretationofdata:Jain,Way,Gupta,Gao,Hartford,Sayres,Kanada,Nagpal,DeSalvo,
+Dunn,Coz,Huang,YunLiu,Bui,YuanLiu.
+Draftingofthemanuscript:Jain,Gupta,deOliveiraMarinho,Hartford,Sayres,Nagpal,YunLiu,Bui,YuanLiu.
+Criticalrevisionofthemanuscriptforimportantintellectualcontent:Jain,Way,Gao,Sayres,Kanada,Eng,Nagpal,
+DeSalvo,Corrado,Peng,Webster,Dunn,Coz,Huang,YunLiu,Bui,YuanLiu.
+Statisticalanalysis:Jain,Way,Gupta,Gao,YunLiu,YuanLiu.
+Obtainedfunding:Corrado,Peng,Webster,Dunn,Bui,YuanLiu.
+Administrative,technical,ormaterialsupport:Way,Gupta,deOliveiraMarinho,Hartford,Kanada,Eng,DeSalvo,
+Peng,Dunn,Coz,Huang,YunLiu,Bui,YuanLiu.
+Supervision:Corrado,Peng,Webster,Coz,Huang,YunLiu,Bui,YuanLiu.
+ConflictofInterestDisclosures:MrJainreportedapatentpendingandownershipofAlphabetstock.MrWay
+reportedapatentpendingandownershipofAlphabetstock.MrsGuptareportedapatentpendingandownership
+ofAlphabetstock.DrGaoreportedownershipofAlphabetstock.MrdeOliveiraMarinhoreportedownershipof
+Alphabetstock.MrHartfordreportedownershipofAlphabetstock.DrSayresreportedapatentpendingand
+ownershipofAlphabetstock.DrKanadareportedpaidconsultingforGoogleduringtheconductofthestudy.Dr
+EngreportedapatentpendingandownershipofAlphabetstock.MrNagpalreportedownershipofAlphabet
+stock.DrDeSalvoreportedownershipofAlphabetstock.DrCorradoreportedownershipofAlphabetstock.Dr
+PengreportedownershipofAlphabetstock.DrWebsterreportedownershipofAlphabetstock.MrDunnreported
+apatentpendingandownershipofAlphabetstock.MrCozreportedapatentpendingandownershipofAlphabet
+stock.DrHuangreportedpaidconsultingforGoogleduringtheconductofthestudy.DrYunLiureportedmultiple
+patentspendingandownershipofAlphabetstock.DrBuireportedapatentpendingandownershipofAlphabet
+stock.DrYuanLiureportedapatentpendingandownershipofAlphabetstock.Nootherdisclosureswere
+reported.
+Funding/Support:ThisstudywassupportedbyGoogleLLC.
+RoleoftheFunder/Sponsor:GoogleLLCwasinvolvedinthedesignandconductofthestudy;collection,
+management,analysis,andinterpretationofthedata;preparation,review,orapprovalofthemanuscript;and
+decisiontosubmitthemanuscriptforpublication.
+AdditionalContributions:SaraGabriele,BS,DavidYen,BA,T.Saensuksopa,MHCI,ME,CarrieJ.Cai,PhD,William
+Chen,BA,QuangDuong,PhD,MilesHutson,BS,DennisAi,MS,AaronLoh,MS,BilsonCampana,PhD,Jonathan
+Deaton,MS,VivekNatarajan,MS,IgnacioBlanco,BS,ChristopherSemturs,MS,JessicaGallegos,MBA,AnitaMisra,
+BTech,RoyLee,BS,andallemployeesofGoogleLLCprovidedtechnicaladvice,discussion,andsupport.Peter
+Schalock,MD,andSabinaBis,MD,bothconsultantsforGoogleHealthviaAdvancedClinical,assistedwithmapping
+free-textdiagnosestothestructuredlistof419conditions.JustinKo,MD,MBA,andStevenLin,MD,Stanford
+HealthCare,providedhelpfuldiscussions.Noonewasfinanciallycompensatedforthestatedcontributionaside
+fromtheirstandardsalaryandassociatedcompensation.
+REFERENCES
+1. GBD2017DiseaseandInjuryIncidenceandPrevalenceCollaborators.Global,regional,andnationalincidence,
+prevalence,andyearslivedwithdisabilityfor354diseasesandinjuriesfor195countriesandterritories,1990-2017:
+asystematicanalysisfortheGlobalBurdenofDiseaseStudy2017.Lancet.2018;392(10159):1789-1858.doi:10.
+1016/S0140-6736(18)32279-7
+2. ChenSC,PennieML,KolmP,etal.Diagnosingandmanagingcutaneouspigmentedlesions:primarycare
+physiciansversusdermatologists.JGenInternMed.2006;21(7):678-682.doi:10.1111/j.1525-1497.2006.00462.x
+3. GouldingJMR,LevineS,BlizardRA,DeroideF,SwaleVJ.Dermatologicalsurgery:acomparisonofactivityand
+outcomesinprimaryandsecondarycare.BrJDermatol.2009;161(1):110-114.doi:10.1111/j.1365-2133.2009.
+09228.x
+4. FedermanDG,ConcatoJ,KirsnerRS.Comparisonofdermatologicdiagnosesbyprimarycarepractitionersand
+dermatologists:areviewoftheliterature.ArchFamMed.1999;8(2):170-172.doi:10.1001/archfami.8.2.170
+5. PennieML,SoonSL,RisserJB,VeledarE,CullerSD,ChenSC.MelanomaoutcomesforMedicarepatients:
+associationofstageandsurvivalwithdetectionbyadermatologistvsanondermatologist.ArchDermatol.2007;
+143(4):488-494.doi:10.1001/archderm.143.4.488
+6. FeldmanSR,FleischerABJr,WillifordPM,WhiteR,ByingtonR.Increasingutilizationofdermatologistsby
+managedcare:ananalysisoftheNationalAmbulatoryMedicalCareSurvey,1990-1994.JAmAcadDermatol.
+1997;37(5,pt1):784-788.doi:10.1016/S0190-9622(97)70118-X
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 11/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+7. ViolaKV,TolpinrudWL,GrossCP,KirsnerRS,ImaedaS,FedermanDG.Outcomesofreferraltodermatologyfor
+suspiciouslesions:implicationsforteledermatology.ArchDermatol.2011;147(5):556-560.doi:10.1001/
+archdermatol.2011.108
+8. MorenoG,TranH,ChiaALK,LimA,ShumackS.Prospectivestudytoassessgeneralpractitioners’
+dermatologicaldiagnosticskillsinareferralsetting.AustralasJDermatol.2007;48(2):77-82.doi:10.1111/j.1440-
+0960.2007.00340.x
+9. TranH,ChenK,LimAC,JabbourJ,ShumackS.Assessingdiagnosticskillindermatology:acomparisonbetween
+generalpractitionersanddermatologists.AustralasJDermatol.2005;46(4):230-234.doi:10.1111/j.1440-0960.
+2005.00189.x
+10. FedermanDG,KirsnerRS.Theabilitiesofprimarycarephysiciansindermatology:implicationsforqualityof
+care.AmJManagCare.1997;3(10):1487-1492.
+11. EstevaA,KuprelB,NovoaRA,etal.Dermatologist-levelclassificationofskincancerwithdeepneuralnetworks.
+Nature.2017;542(7639):115-118.doi:10.1038/nature21056
+12. HanSS,ParkGH,LimW,etal.Deepneuralnetworksshowanequivalentandoftensuperiorperformanceto
+dermatologistsinonychomycosisdiagnosis:automaticconstructionofonychomycosisdatasetsbyregion-based
+convolutionaldeepneuralnetwork.PLoSOne.2018;13(1):e0191493.doi:10.1371/journal.pone.0191493
+13. SunX,YangJ,SunM,WangK.Abenchmarkforautomaticvisualclassificationofclinicalskindiseaseimages.
+In:LiebeB,MatasJ,SebaN,WellingM,eds.ComputerVision–ECCV2016.Springer;2016:206-222.LectureNotesin
+ComputerScience;vol9910.https://link.springer.com/chapter/10.1007/978-3-319-46466-4_13
+14. Derm101.com.Derm101.AccessedAugust9,2019.https://www.derm101.com/
+15. HanSS,ParkI,EunChangS,etal.Augmentedintelligencedermatology:deepneuralnetworksempower
+medicalprofessionalsindiagnosingskincancerandpredictingtreatmentoptionsfor134skindisorders.JInvest
+Dermatol.2020;140(9):1753-1761.doi:10.1016/j.jid.2020.01.019
+16. Cruz-RoaAA,ArevaloOvalleJE,MadabhushiA,GonzálezOsorioFA.Adeeplearningarchitectureforimage
+representation,visualinterpretabilityandautomatedbasal-cellcarcinomacancerdetection.MedImageComput
+ComputAssistInterv.2013;16(pt2):403-410.doi:10.1007/978-3-642-40763-5_50
+17. CodellaNCF,GutmanD,EmreCelebiM,etal.Skinlesionanalysistowardmelanomadetection:achallengeat
+the2017InternationalSymposiumonBiomedicalImaging(ISBI),hostedbytheInternationalSkinImaging
+Collaboration(ISIC).In:2018IEEE15thInternationalSymposiumonBiomedicalImaging(ISBI2018).IEEE;2018.https://
+faculty.uca.edu/ecelebi/documents/ISBI_2018.pdf
+18. YuanY,ChaoM,LoYC.Automaticskinlesionsegmentationusingdeepfullyconvolutionalnetworkswith
+jaccarddistance.IEEETransMedImaging.2017;36(9):1876-1886.doi:10.1109/TMI.2017.2695227
+19. HaenssleHA,FinkC,SchneiderbauerR,etal;ReaderStudyLevel-IandLevel-IIGroups.Managainstmachine:
+diagnosticperformanceofadeeplearningconvolutionalneuralnetworkfordermoscopicmelanomarecognition
+incomparisonto58dermatologists.AnnOncol.2018;29(8):1836-1842.doi:10.1093/annonc/mdy166
+20. BrinkerTJ,HeklerA,EnkAH,etal.Deeplearningoutperformed136of157dermatologistsinahead-to-head
+dermoscopicmelanomaimageclassificationtask.EurJCancer.2019;113:47-54.doi:10.1016/j.ejca.2019.04.001
+21. MaronRC,WeichenthalM,UtikalJS,etal.Systematicoutperformanceof112dermatologistsinmulticlassskin
+cancerimageclassificationbyconvolutionalneuralnetworks.EurJCancer.2019;119:57-65.doi:10.1016/j.ejca.
+2019.06.013
+22. OkuboyejoDA,OlugbaraOO,OdunaikeSA.Automatingskindiseasediagnosisusingimageclassification.In:
+AoSI,DouglasC,GrundfestWS,BrugstoneJ,eds.ProceedingsoftheWorldCongressonEngineeringandComputer
+Science.Vol2.NewstandLimited;2013:850-854.http://www.iaeng.org/publication/WCECS2013/
+23. TschandlP,CodellaN,AkayBN,etal.Comparisonoftheaccuracyofhumanreadersversusmachine-learning
+algorithmsforpigmentedskinlesionclassification:anopen,web-based,international,diagnosticstudy.Lancet
+Oncol.2019;20(7):938-947.doi:10.1016/S1470-2045(19)30333-X
+24. TschandlP,RinnerC,ApallaZ,etal.Human-computercollaborationforskincancerrecognition.NatMed.
+2020;26(8):1229-1234.doi:10.1038/s41591-020-0942-0
+25. BossuytPM,ReitsmaJB,BrunsDE,etal;STARDGroup.STARD2015:anupdatedlistofessentialitemsfor
+reportingdiagnosticaccuracystudies.BMJ.2015;351:h5527.doi:10.1136/bmj.h5527
+26. LiuY,JainA,EngC,etal.Adeeplearningsystemfordifferentialdiagnosisofskindiseases.NatMed.2020;26
+(6):900-908.doi:10.1038/s41591-020-0842-3
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 12/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+27. CaiCJ,WinterS,SteinerD,WilcoxL,TerryM.“HelloAI”:uncoveringtheonboardingneedsofmedical
+practitionersforhuman-AIcollaborativedecision-making.In:LampinenA,GergleD,ShammaDA.Proceedingsof
+theACMonHuman-ComputerInteraction.AssociationforComputingMachinery;2019;3(CSCW):1-24.doi:10.
+1145/3359206
+28. GallasBD,ChanHP,D’OrsiCJ,etal.Evaluatingimagingandcomputer-aideddetectionanddiagnosisdevices
+attheFDA.AcadRadiol.2012;19(4):463-477.doi:10.1016/j.acra.2011.12.016
+29. EadieLH,TaylorP,GibsonAP.Recommendationsforresearchdesignandreportingincomputer-assisted
+diagnosistofacilitatemeta-analysis.JBiomedInform.2012;45(2):390-397.doi:10.1016/j.jbi.2011.07.009
+30. BarnettML,BoddupalliD,NundyS,BatesDW.Comparativeaccuracyofdiagnosisbycollectiveintelligenceof
+multiplephysiciansvsindividualphysicians.JAMANetwOpen.2019;2(3):e190096.doi:10.1001/
+jamanetworkopen.2019.0096
+31. EngC,LiuY,BhatnagarR.Measuringclinician-machineagreementindifferentialdiagnosesfordermatology.Br
+JDermatol.2020;182(5):1277-1278.doi:10.1111/bjd.18609
+32. DrogeB.PhillipGood:permutation,parametric,andbootstraptestsofhypotheses.Metrika.2006;64(2):
+249-250.doi:10.1007/s00184-006-0088-1
+33. LowellBA,FroelichCW,FedermanDG,KirsnerRS.Dermatologyinprimarycare:prevalenceandpatient
+disposition.JAmAcadDermatol.2001;45(2):250-255.doi:10.1067/mjd.2001.114598
+34. VerhoevenEWM,KraaimaatFW,vanWeelC,etal.Skindiseasesinfamilymedicine:prevalenceandhealthcare
+use.AnnFamMed.2008;6(4):349-354.doi:10.1370/afm.861
+35. SariF,BrianB,BrianM.Skindiseaseinaprimarycarepractice.Skinmed.2005;4(6):350-353.doi:10.1111/j.1540-
+9740.2005.04267.x
+36. BrittH,MillerGC,HendersonJ,etal.GeneralPracticeActivityinAustralia2015-16:BEACH:Betteringthe
+EvaluationandCareofHealth.FamilyMedicineResearchCentre;2016.
+37. AndersonAM,MatsumotoM,SaulMI,SecrestAM,FerrisLK.Accuracyofskincancerdiagnosisbyphysician
+assistantscomparedwithdermatologistsinalargehealthcaresystem.JAMADermatol.2018;154(5):569-573.doi:
+10.1001/jamadermatol.2018.0212
+38. LimHW,CollinsSAB,ResneckJSJr,etal.TheburdenofskindiseaseintheUnitedStates.JAmAcad
+Dermatol.2017;76(5):958-972.e2.doi:10.1016/j.jaad.2016.12.043
+39. GuptaR,IbraheimMK,DoanHQ.TeledermatologyinthewakeofCOVID-19:advantagesandchallengesto
+continuedcareinatimeofdisarray.JAmAcadDermatol.2020;83(1):168-169.doi:10.1016/j.jaad.2020.04.080
+40. AmericanMedicalAssociation.Augmentedintelligenceinhealthcarepolicyreport.June2018.AccessedJune
+3,2020.https://www.ama-assn.org/system/files/2019-01/augmented-intelligence-policy-report.pdf
+41. AmericanAcademyofDermatology.AmericanAcademyofDermatologypositionstatementonaugmented
+intelligence(AuI).May18,2019.AccessedJune3,2020.https://server.aad.org/Forms/Policies/Uploads/PS/PS-
+Augmented%20Intelligence.pdf
+42. SachdevaS.Fitzpatrickskintyping:applicationsindermatology.IndianJDermatolVenereolLeprol.2009;75
+(1):93-96.doi:10.4103/0378-6323.45238
+SUPPLEMENT.
+eMethods.ProceduresandMetrics
+eFigure1.DetailedUserInterfaceoftheArtificialIntelligence(AI)–BasedAssistiveTool
+eFigure2.StatesWhereReadersAreLicensedtoPractice
+eFigure3.SummaryofPriorClinicalExperienceofPrimaryCarePhysician(PCP)andNursePractitioner(NP)
+Readers
+eFigure4.DiagnosticAccuracyofPrimaryCarePhysicians(PCPs)andNursePractitioners(NPs)
+eFigure5.SensitivityfortheTop26MostCommonSkinConditions,WithvsWithoutArtificialIntelligence(AI)
+Assistance
+eFigure6.ImpactofArtificialIntelligence(AI)AssistanceStratifiedbythePositionoftheCorrectDiagnosisinthe
+Assistant’sInterface
+eFigure7.ImpactofArtificialIntelligence(AI)AssistanceStratifiedbytheAI’sConfidenceLevel(asIndicatedby5
+DotsintheAssistant’sInterface)
+eFigure8.ImpactofCaseDifficulty(asMeasuredbyInterdermatologistAgreementWithinthePanelProvidingthe
+ReferenceDiagnosis)onthePerformanceofUnassistedandAssistedReaders
+eFigure9.ChangesDuringtheCourseoftheStudyforTop-1Agreement,Top-3Agreement,AverageOverlap,and
+MedianDiagnosisTime
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 13/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024
+JAMANetworkOpen | Dermatology AI-BasedToolforSkinConditionDiagnosisinTeledermatologyPractices
+eFigure10.ImpactofArtificialIntelligence(AI)AssistanceStratifiedbyEstimatedFitzpatrickSkinTypeforTop-1
+Agreement,Top-3Agreement,andAverageOverlap
+eFigure11.ChangesinTop-3DiagnosticAccuracybyPrimaryCarePhysicians(PCPs)andNursePractitioners(NPs)
+WithoutArtificialIntelligence(AI)AssistancevsWhenUsingAIAssistanceonNonreferredCasesandReferred
+Cases
+eFigure12.BreakdownofAccuracyofCasesBasedonConfidenceofPrimaryCarePhysicians(PCPs)andNurse
+Practitioners(NPs)
+eFigure13.SampleCasesEvaluatedAgainstReferenceDiagnosesProvidedbyaPanelof3Dermatologists
+eFigure14.SampleCasesEvaluatedAgainstBiopsy-ProvidedDiagnoses
+eFigure15.ReaderPerceptionsoftheValueofTrainingMaterialsandLabelingTool
+eFigure16.ReaderPerceptionsoftheValueofArtificialIntelligence(AI)Assistance
+eFigure17.PerceivedUsefulnessofDifferentFeaturesintheArtificialIntelligence(AI)-BasedAssistancefor
+PrimaryCarePhysician(PCP)andNursePractitioner(NP)Readers
+eTable1.ClinicalMetadataUsedinThisStudyforBothAIAlgorithmInputandPresentedtoClinicians
+eTable2.ImprovementinTop-1AgreementandAverageOverlapBetween2DermatologistPanelsUsingthe
+Aggregated(“Voting”)-BasedApproach
+eTable3.AdditionalMetrics(Top-1andTop-3Agreement,AverageOverlap,andKappa)forMeasuringAgreement
+RatesofPCPsandNPs,Respectively,WiththeDermatologistPanel
+eTable4.SubgroupAnalysisfor3CategoriesofSkinConditionforGrowths,Erythematosquamousand
+PapulosquamousSkinDisease,andHairLoss
+eTable5.RatesofRecommendingaBiopsyandReferralforPCPsandNPs
+JAMANetworkOpen.2021;4(4):e217249.doi:10.1001/jamanetworkopen.2021.7249 (Reprinted) April28,2021 14/14
+Downloaded from jamanetwork.com by Chinese University of Hong Kong, Frankie Cheung on 08/24/2024

@@ -1,0 +1,896 @@
+Physiological Reports. 2021;9:e15132. 
+﻿ 
+   |  1 of 11
+https://doi.org/10.14814/phy2.15132
+wileyonlinelibrary.com/journal/phy2
+Received: 14 July 2021  |  Revised: 30 October 2021  |  Accepted: 13 November 2021
+DOI: 10.14814/phy2.15132  
+O R I G I N A L  A R T I C L E
+Application of oxygen saturation variability analysis for the 
+detection of exacerbation in individuals with COPD:  
+A proof-­of-­concept study
+Ahmed Al Rajeh1,2  |   Amar S. Bhogal3,4  |   Yunkai Zhang3  |   Joseph T. Costello5  |    
+John R Hurst1  |   Ali R. Mani3
+This is an open access article under the terms of the Creat​ive Commo​ns Attri​bution License, which permits use, distribution and reproduction in any medium, provided 
+the original work is properly cited.
+© 2021 The Authors. Physiological Reports published by Wiley Periodicals LLC on behalf of The Physiological Society and the American Physiological Society
+1UCL Respiratory, Royal Free Campus, 
+Division of Medicine, University 
+College London, London, UK
+2Department of Respiratory Care, 
+King Faisal University, Al-­Ahsa, Saudi 
+Arabia
+3Network Physiology Laboratory, 
+Division of Medicine, UCL, London, 
+UK
+4Medical School, University of 
+Birmingham, Birmingham, UK
+5Extreme Environment Laboratory, 
+School of Sport, Health and Exercise 
+Science, University of Portsmouth, 
+Portsmouth, UK
+Correspondence
+Ali R Mani, Network Physiology 
+Laboratory, Royal Free Campus, 
+Division of Medicine, UCL, London, 
+NW3 2PF, UK.
+Email: a.r.mani@ucl.ac.uk
+Abstract
+Background: Individuals with chronic obstructive pulmonary disease (COPD) 
+commonly experience exacerbations, which may require hospital admission. 
+Early detection of exacerbations, and therefore early treatment, could be crucial 
+in preventing admission and improving outcomes. Our previous research has 
+demonstrated that the pattern analysis of peripheral oxygen saturation (SpO2) 
+fluctuations provides novel insights into the engagement of the respiratory con-
+trol system in response to physiological stress (hypoxia). Therefore, this pilot 
+study tested the hypothesis that the pattern of SpO2 variations in overnight re-
+cordings of individuals with COPD would distinguish between stable and exacer-
+bation phases of the disease.
+Methods: Overnight pulse oximetry data from 11 individuals with COPD, who 
+exhibited exacerbation after a period of stable disease, were examined. Stable 
+phase recordings were conducted overnight and one night prior to exacerbation 
+recordings were also analyzed. Pattern analysis of SpO2 variations was carried 
+examined using sample entropy (for assessment of irregularity), the multiscale 
+entropy (complexity), and detrended fluctuation analysis (self-­similarity).
+Results: SpO2 variations displayed a complex pattern in both stable and exacerba-
+tion phases of COPD. During an exacerbation, SpO2 entropy increased (p = 0.029) 
+and long-­term fractal-­like exponent (α2) decreased (p = 0.002) while the mean 
+and standard deviation of SpO2 time series remained unchanged. Through ROC 
+analyses, SpO2 entropy and α2 were both able to classify the COPD phases into ei-
+ther stable or exacerbation phase. With the best positive predictor value (PPV) for 
+sample entropy (PPV = 70%) and a cut-­off value of 0.454. While the best negative 
+predictor value (NPV) was α2 (NPV = 78%) with a cut-­off value of 1.00.
+Conclusion: Alterations in SpO2 entropy and the fractal-­like exponent have the 
+potential to detect exacerbations in COPD. Further research is warranted to ex-
+amine if SpO2 variability analysis could be used as a novel objective method of 
+detecting exacerbations.
+
+2 of 11  |     
+AL RAJEH et al.
+1  |  INTRODUCTION
+Chronic obstructive pulmonary disease (COPD) is a 
+global health burden estimated to affect 251 million peo-
+ple worldwide and carries with it high mortality (Husebø 
+et al., 2014; Mathers & Loncar, 2006). In COPD, indi-
+viduals commonly experience exacerbations of their ill-
+ness leading to a sudden deterioration in their health (Al 
+Rajeh et al., 2020). Patients report that exacerbations are 
+the most disruptive aspect of living with COPD (Zhang 
+et al., 2018). This often leads to hospital admissions; with 
+poor prognosis (Al Rajeh et al., 2020). Consequently, the 
+prevention of exacerbations is essential when managing 
+COPD (Hurst, Vestbo, et al., 2010) and better prevention 
+of COPD exacerbations has been identified as a top re-
+search priority (Alqahtani et al., 2021).
+Although several tools have been proposed to help de-
+tect exacerbations earlier, to the best of our knowledge, 
+there is no sensitive method of predicting exacerbation 
+risk or rate accurately (Adibi et al., 2020; Al Rajeh et al., 
+2020; Donaldson et al., 2012; Hurst, Vestbo, et al., 2010). 
+Clinical studies have, however, attempted to investigate 
+the utility of changes in various physiological parameters 
+including heart rate, forced expiratory volume (FEV1), 
+respiratory rate and level of peripheral oxygen saturation 
+(SpO2) before and during exacerbation with limited suc-
+cess (Al Rajeh et al., 2020.; Al Rajeh & Hurst, 2016; Burton 
+et al., 2015; Hurst, Donaldson, et al., 2010; Hurst, Vestbo, 
+et al., 2010; Husebø et al., 2014). While pulse oximetry has 
+some role when monitoring individuals in the commu-
+nity, there is no clear benefit of using mean values and 
+overnight readings with the prediction of exacerbations 
+due to the insignificant magnitude of the changes (Al 
+Rajeh et al., 2020).
+Recent evidence has demonstrated that the complex 
+pattern of variability in SpO2 signals may provide more 
+mechanistic insight than absolute or mean SpO2 values 
+(Bhogal & Mani, 2017; Costello et al., 2020; Jiang et al., 
+2021). SpO2 signals exhibit a complex fractal-­like pat-
+tern in hypoxic individuals (Costello et al., 2020). Using 
+a network physiology approach, we have demonstrated 
+that SpO2 fluctuations are not random and contain use-
+ful information about the engagement of respiratory con-
+trol during hypoxia (Jiang et al., 2021). Furthermore, we 
+also reported that SpO2 entropy, but not absolute or mean 
+SpO2, was correlated with the perception of breathlessness 
+in the same, otherwise healthy, individuals when hypoxic 
+(Costello et al., 2020). These data suggest that there is a 
+significant exchange of information between SpO2 and 
+other respiratory variables (i.e. tidal volume, minute ven-
+tilation, respiratory rate, end-­tidal oxygen, and carbon 
+dioxide pressure) during graded normobaric hypoxia 
+in healthy participants (Jiang et al., 2021). Fluctuations 
+in these respiratory variables were reflected in the SpO2 
+signal, specifically in SpO2 entropy (Jiang et al., 2021), a 
+measure that describes the unpredictability and irregu-
+larity of these SpO2 signals (Richman & Moorman, 2000). 
+Calculated using a well-­established algorithm (Richman 
+& Moorman, 2000), SpO2 entropy may reveal additional 
+information about cardiorespiratory control in health and 
+disease (Jiang et al., 2021).
+To date, the usefulness of SpO2 variability analysis has 
+not been studied extensively in COPD. Accordingly, this 
+pilot study investigated the hypothesis that SpO2 variabil-
+ity would distinguish between the two phases of COPD 
+(stable vs. exacerbation). As SpO2 entropy is easily com-
+puted and incorporated into bedside monitors or smart 
+devices, this method could assist in the earlier detection 
+of COPD exacerbations and, following faster access to 
+the necessary treatment, ultimately result in an improved 
+prognosis (Qureshi et al., 2014; Wilkinson et al., 2004).
+2  |  METHODS
+2.1  |  Participants
+From September 2016 to January 2018, participants were 
+recruited from COPD clinics and pulmonary rehabilitation 
+K E Y W O R D S
+entropy, physiological measurement, Pulse Oximetry, respiratory, SpO2
+New & Noteworthy
+This report provides evidence that the pattern of 
+peripheral oxygen saturation (SpO2) fluctuations 
+detects exacerbations in individuals with COPD. 
+The entropy of SpO2 signal increases a day prior to 
+clinical diagnosis of exacerbation in COPD while 
+mean and total variability of SpO2 signals remain 
+unchanged. This finding has the potential for de-
+velopment of a non-­invasive method for early de-
+tection of exacerbations in COPD.
+
+      |  3 of 11
+AL RAJEH et al.
+classes at three separate sites in London. All participants 
+were fully informed and submitted written consent forms. 
+The UK Health Research Authority and Royal Free 
+Hospital local committee granted ethical approvals on 
+data collection (16/LO/1120). The inclusion criteria con-
+sisted of COPD diagnosis [smoking history ≥10 pack years 
+and post-­bronchodilator FEV1/FVC <0.7 (suggesting a 
+non-­reversible obstructive lung disease pattern)], one or 
+more self-­reported moderate or severe exacerbations of 
+their COPD in the last 12 months, and the ability to at-
+tend scheduled appointments and use study equipment. 
+Individuals were excluded if they had an existing diagnosis 
+of obstructive sleep apnea either via self-­report or results 
+of STOP-­Bang and Epworth questionnaires (Johns, 1991; 
+Nagappa et al., 2015), and/or significant co-­morbidities 
+that prevented participation (Al Rajeh et al., 2020).
+The clinical recordings used for analysis are credited 
+to a recently published pilot randomized controlled trial 
+regarding COPD exacerbation detection (Al Rajeh et al., 
+2020). The data in this analysis derives from one arm 
+of this study looking at overnight monitoring of COPD 
+(n = 44). Some of the data, including individual demo-
+graphics and mean SpO2, but importantly not any SpO2 
+variability data, have already been published in the refer-
+enced study (Al Rajeh et al., 2020). In the original study, 
+only 13 participants exacerbated in the time frame of the 
+study and were included in the analysis. The quality of 
+SpO2 recording for two individuals was limited (less than 
+90 mins continuous SpO2 signal) and therefore these par-
+ticipants were excluded from the analysis (n = 11). In the 
+study, there were 7 male participants and 4 female par-
+ticipants (n = 11) with an average age (SD) of 71.8 (10.4) 
+years. Of these participants, 3 were current smokers, with 
+8 ex-­smokers. The baseline clinical characteristics for the 
+population studied can be found in Table 1.
+2.2  |  Data collection
+Each participant received a wristband pulse oximeter 
+(Nonin 3150, Nonin Medical Inc.) and was instructed by 
+researchers on using it. Each pulse oximeter measured the 
+SpO2 time series of each participant overnight. In the origi-
+nal clinical trial, participants were closely monitored during 
+the first 2 weeks of the study to ensure they were using the 
+equipment properly and recording data accurately. They 
+were considered “stable” during this 2-­week period when 
+there was no incidence of exacerbation. An exacerbation 
+was defined as the need for oral corticosteroids or antibiot-
+ics, as judged by the patient's clinician or self-­management 
+plan (Al Rajeh et al., 2020). The first set of continuous SpO2 
+time series available from the stable phase was used for the 
+calculation of SpO2 variability indices in this study. The 
+sampling rate of SpO2 recording was 0.25 Hz (one sample 
+recorded every 4  s). SpO2 signals were saved as comma-­
+separated value (csv.) files for stability and one day prior to 
+exacerbation phase separately. The data were chosen one 
+day prior to exacerbation, as this offered insight into a use-
+ful window for the early detection of an exacerbation. In 
+this report, the signals recorded a day prior to clinical diag-
+nosis of exacerbation are called “exacerbation phase”.
+2.3  |  SpO2 variability
+The longest duration of time that all individuals had of un-
+interrupted SpO2 data was ~90 min, so the first available 90-­
+min recording was used for the analyses. Well-­established 
+measures within this field to analyze the patterns of vari-
+ability (Bhogal & Mani, 2017), including standard devia-
+tion (SD), sample entropy, Multiscale Entropy (MSE), and 
+Detrended Fluctuation Analysis (DFA) (Bhogal & Mani, 
+2017) were employed.
+Details of these methods and associated algorithms 
+are described in detail elsewhere [DFA (Peng et al., 1995), 
+MSE (Costa et al., 2002), and sample entropy (Richman 
+& Moorman, 2000)]. In brief, sample entropy looks at the 
+complexity of a time series by analyzing the probability 
+of repetition of a signal, with a particular length (m) and 
+degree of tolerance (r). In this study, sample entropy was 
+determined under the settings of m at 2 and r at 0.2 as 
+previously described (Richman & Moorman, 2000). MSE 
+looks at entropy at different time scales, and as such is 
+seen as an extension of sample entropy. The trends of en-
+tropy change within this time scales provide further infor-
+mation on the complexity of a data set. For this analysis, 
+MSE was used over five scales in accordance with current 
+practice (Costa et al., 2002). Finally, to examine the frac-
+tality of the SpO2 data, we employed DFA as it looks at 
+the self-­similarity of a time series providing information 
+on the fractal-­like dynamics present (Peng et al., 1995). 
+In a DFA plot, the logarithm of fluctuation (standard 
+Age
+BMI
+MRC Dyspnea 
+Scale
+FEV1 (%)
+All Participants 
+(n = 11)
+71.8 ± 10.4
+24.6 ± 6.70
+2.82 ± 0.874
+47.7 ± 18.8
+All data are expressed as mean ±SD
+TABLE 1  Summary of the baseline 
+demographics of the study participants
+
+4 of 11  |     
+AL RAJEH et al.
+deviation) of detrended time series is plotted against the 
+logarithm of scale (n). The slope of this line is known as 
+the scaling exponent (α). Previous studies proved there to 
+be a “cross-­over” in SpO2 DFA graph, thus the short-­term 
+and long-­term scaling exponent, α1 and α2 are calculated 
+separately as described elsewhere (Bhogal & Mani, 2017). 
+All calculations were completed in MATLAB (Matworks 
+R2020b).
+2.4  |  Statistical analysis
+All statistical tests were performed using MATLAB 
+(Matworks R2020b) and SPSS software. A paired two-­
+tailed Student's t-­test was employed for comparing the 
+mean, SD, α1 and α2 of COPD individuals (n = 11) during 
+a stable phase to that of the same cohort a day prior to the 
+clinical diagnosis of an exacerbation. A two-­way ANOVA 
+was used to analyze the results of MSE, with statistical 
+significance taken as a p-­value less than 0.05. Receiver 
+operating characteristic (ROC) curves of sample entropy 
+at 5 scales, α1 and α2 of individuals were plotted by SPSS 
+for further investigation of the differences in these indi-
+ces between the two phases and their potential to detect 
+early exacerbation (exacerbation phase). Area under the 
+curve (AUC), sensitivity, specificity, positive predictive 
+value (PPV), negative predictive value (NPV), and a cut-­
+off value of each index were also determined from ROC 
+curves.
+3  |  RESULTS
+3.1  |  Pattern analysis of SpO2 variability
+The SpO2 signals for exacerbation and stable phase show 
+a complex pattern (see Figure 1). A summary of mean 
+SpO2 and the various variability indices are displayed in 
+Table 2. Overall, mean SpO2 during the stable phase was 
+not statistically different to that of the exacerbation phase 
+(91.4 ± 1.89% vs. 90.6 ± 2.11%; p = 0.125), likewise, the 
+mean SD of both phases were similar (Table 2).
+Mean sample entropy increased (0.395  ±  0.101 vs. 
+0.505 ± 0.159; p < 0.05) during exacerbation. This indi-
+cates an increased irregularity of the signal; however, in 
+order to assess whether this change was random or com-
+plex, we analyzed the data using MSE (Bhogal & Mani, 
+2017). This difference is constantly observed across the 
+increasing scale factor using MSE (Figure 2), where the 
+values of mean sample entropy during exacerbation were 
+all higher than that of the stable phase. Two-­way ANOVA 
+analysis showed that there was a significant difference 
+in the MSE between the stable phase and exacerbation 
+phase (Fgroup = 8.63, p = 0.004), highlighting the increased 
+amount of information and complexity during an exacer-
+bation. Additionally, an increasing trend of sample en-
+tropy value from scale 1 to 5 in both COPD phases was 
+observed (Figure 2), revealing that fluctuated SpO2 time 
+series is not a random process (Costa et al., 2002).
+From DFA, the short-­term scaling exponent, α1 of 
+the stable phase (α1  =  1.17  ±0.110) and exacerbation 
+(α1 = 1.15 ± 0.137) were between values expected from 
+FIGURE 1  Representative 90-­minute SpO2 signals recorded 
+from an individual with COPD at (a) stable phase and (b) a day 
+prior to clinical diagnosis of exacerbation (exacerbation phase). 
+X-­axis is the data points of the pulse oximeter signals recording 
+(1 sample every 4 seconds), and Y-­axis is the SpO2 (%)
+TABLE 2  Summary of SpO2 mean and variability indices in 11 individuals with COPD during stable phase and exacerbation phase
+Mean SpO2 
+(%)
+Standard 
+deviation
+Sample 
+entropy
+DFA (α1)
+DFA (α2)
+COPD stable
+91.4 ± 1.89
+1.33 ± 0.440
+0.395 ± 0.101
+1.17 ± 0.110
+1.04 ± 0.114
+COPD exacerbation
+90.6 ± 2.11
+1.33 ± 0.444
+0.505 ± 0.159
+1.15 ± 0.137
+0.925 ± 0.107
+p-­value
+0.125
+0.963
+0.029
+0.555
+0.002
+All data are expressed as mean ±SD, and the p-­value is calculated using a Student's paired t-­test.
+Bold values reflect a statistically significant difference between the groups (p-­value < 0.05).
+
+      |  5 of 11
+AL RAJEH et al.
+Brownian noise (α = 1.50) and 1/f dynamics (α = 1.00); 
+however, their values did not differ between phases 
+(p  =  0.55). However, the long-­term scaling exponent, 
+α2, of both phases approached closer to 1/f dynamics 
+(α2 = 1.04 ± 0.114 in stable and α2 = 0.925 ± 0.107 in 
+exacerbation), confirming that SpO2 fluctuations have a 
+fractal-­like pattern (Bhogal & Mani, 2017). Statistical sig-
+nificance was shown between α2 of exacerbation vs stable 
+phase (p < 0.01), validating there was a slight reduction 
+in scaling exponent and shift toward white noise dynam-
+ics during exacerbation. Two example graphs of the DFA 
+analysis obtained from the SpO2 time series are shown in 
+Appendix A.
+3.2  |  ROC analysis of SpO2
+ROC curves assessing the sensitivity and specificity of SpO2 
+variability indices in classifying stable from exacerbation 
+phase are presented in Figure 3. Sample Entropy and α2 
+exhibited a significant AUC with values of 0.702 and 0.777 
+respectively (Table 2). MSE indices at scales 2 and 3, also 
+had a significant statistical AUC with values of 0.711 and 
+0.719 respectively (Table 2). The best positive predictor 
+value (PPV) was for sample entropy (PPV = 70%) with a 
+cut-­off value of 0.454. The best negative predictor value 
+(NPV) was for α2 (NPV = 78%) with a cut-­off value of 1.00.
+4  |  DISCUSSION
+This study tested the hypothesis that the pattern of SpO2 
+variations in overnight recordings of individuals with 
+COPD would distinguish between stable and exacerbation 
+phases. In support of the hypothesis, our novel findings 
+suggest that sample entropy at different scales increases, 
+while the long-­term scaling exponent (α2) decreases, a day 
+prior to the clinical diagnosis of an exacerbation of COPD. 
+These indices were also different during the stable and 
+FIGURE 2  Multiscale entropy (MSE) graph describing the 
+overall complexity of the individuals with COPD at stable phase 
+and exacerbation. The error bars are calculated sample error of the 
+mean values
+FIGURE 3  ROC curve for classifying COPD phase (stable or exacerbation) based on SpO2 variability indices
+
+6 of 11  |     
+AL RAJEH et al.
+exacerbation phases, while mean SpO2 remained stable 
+throughout. Furthermore, in terms of sensitivity, specific-
+ity, PPV, and NPV from ROC analyses, sample entropy of 
+the original SpO2 time series and α2 of DFA appear to have 
+the best diagnostic capabilities to support earlier detection 
+of COPD exacerbations.
+This study extends our earlier work in SpO2 variabil-
+ity analysis in healthy individual after exposure to hy-
+poxia to individuals with chronic lung disease (Bhogal 
+& Mani, 2017; Costello et al., 2020; Jiang et al., 2021). We 
+have shown an increased in sample entropy in healthy 
+participants during exposure to normobaric hypoxia 
+(Costello et al., 2020; Jiang et al., 2021) and here we 
+have similarly demonstrated a higher sample entropy 
+0.395–­0.505, and in all scales in MSE, following COPD 
+exacerbation. Interestingly, these previous reports es-
+tablished that there is an inverse correlation between 
+mean SpO2 and SpO2 Sample Entropy under both nor-
+moxic and hypoxic environments in healthy individuals 
+(Bhogal & Mani, 2017; Costello et al., 2020), with lower 
+oxygen saturation correlated with higher SpO2 entropy. 
+This relationship was not observed in the current study 
+(Appendix B), which could suggest a compromise in the 
+cardiorespiratory integrity in COPD (O’Donnell et al., 
+2020). Another consideration for the lack of correlation 
+between mean SpO2 and sample entropy in our cohort; 
+could be the wide range of SpO2 values included in the 
+present study (individuals with COPD) versus the other 
+reports in healthy participants. Nevertheless, future 
+studies with a larger number of participants could test 
+this hypothesis.
+According to Pincus (1994), higher entropy signifies 
+greater amounts of information being processed in a com-
+plex physiological system, reflecting the enhanced con-
+nections and communications across various components 
+within that system (Pincus, 1994). In terms of the cardio-
+respiratory system and its homeostatic control of oxygen 
+saturation, Jiang et al. (2021) provided further insight by 
+using a network physiology approach to show that the 
+information controlling oxygen saturation was communi-
+cated across several key components of the cardiorespira-
+tory system. Therefore, when this system is under hypoxic 
+stress either through a decrease in the fraction of inspired 
+oxygen or in a clinical state (COPD); the transfer of infor-
+mation is increased across these components to maintain 
+mean SpO2. This is demonstrated by the rise in sample 
+entropy when healthy individuals are hypoxic (Costello 
+et al., 2020), as well as during an exacerbation in COPD 
+(see Figure 2 and Table 2).
+The sample entropy in both stable and exacerbation 
+phases of COPD (0.395 ± 0.101 vs. 0.505 ± 0.159) is no-
+tably less than the sample entropy value of healthy indi-
+viduals (0.98 ± 0.28) with the same mean value of mean 
+SpO2 (93.94  ±  1.85%) during hypoxic challenge (Jiang 
+et al., 2021). This may be attributed to the disruption 
+of functional connectivity within cardiorespiratory sys-
+tem when COPD is diagnosed (Donaldson et al., 2012). 
+This is reflected in the impaired response to hypoxia 
+and changes in ventilation that often lead to hyper-
+capnia (Abdo & Heunks, 2012). This disruption in the 
+control system limits the adaptive response to hypoxia 
+during exacerbation, thus reflected by a limited increase 
+in sample entropy. This hypothesis requires further 
+examination with more stringent control of possible 
+confounders such as age, lifestyle (e.g., smoking), and 
+environment. For example, we have reported that aging 
+reduces SpO2 entropy in otherwise healthy individuals 
+(Bhogal & Mani, 2017). This supports the theory that the 
+integrity of cardiorespiratory control system is affected 
+by aging and chronic diseases such as COPD (O’Donnell 
+et al., 2020; Strait & Lakatta,). However, future stud-
+ies should aim to compare SpO2 entropy between age-­
+matched healthy cohorts and COPD individuals in 
+different phases to help explain the changes seen in an 
+exacerbation and better predict future exacerbations.
+It is now well-­established that the DFA of SpO2 sig-
+nals results in two scaled components, one representing 
+short-­term (α1) and the other long-­term (α2) fractal-­
+like fluctuations (Bhogal & Mani, 2017). Table 2 illus-
+trates a statistically significant decrease in α2 upon 
+exacerbation while α1 remains stable. Interestingly, this 
+data trend contradicts a study assessing DFA’s useful-
+ness in diagnosing childhood sleep apnea-­hypopnoea 
+(Vaquerizo-­Villar et al., 2018). Like COPD, sleep apnea 
+is also associated with hypoxia; however, it is due to 
+episodic upper airway collapse during sleep (Stradling 
+et al., 2004). By applying DFA in their study, Vaquerizo-­
+Villar et al. (2018) observed an increased α1 with inten-
+sified apnea-­hypopnoea severity while α2 was unaltered. 
+These results are likely due to the different underlying 
+pathophysiology in the two diseases. Despite both lead-
+ing to dyspnea, apnea-­hypopnoea is associated with 
+acute episodic hypoxia reflected by alternation in the 
+short-­term scaling component (α1). While in COPD, in-
+dividuals suffer from chronic hypoxia leading to changes 
+in the long-­term scaling component (α2) (Khatri & 
+Ioachimescu, 2016). Furthermore, the faster breathing 
+pattern in younger children, and the associated dynam-
+ics of apnea-­hypopnoea occurrences, may also translate 
+to shorter time scales being more sensitive than longer 
+time scales in disease relative to adults.
+Although the values of the ROC analysis of the sample 
+entropy and α2 showed moderate levels of sensitivity and 
+specificity, this was the first attempt to suggest their po-
+tential in supporting earlier diagnosis of COPD exacerba-
+tions. Judging from the ‘zigzag’ shape of the ROC analysis 
+
+      |  7 of 11
+AL RAJEH et al.
+(Figure 3) and repeated values in sensitivity and specific-
+ity (Table 3), we speculate that this was due to the small 
+sample size in the current study (n = 11) or insufficient 
+heterogeneity/range in the predictor measures. Previous 
+work had proposed the effectiveness of COPD Assessment 
+Test (CAT) questionnaire to evaluate disease severity, as 
+CAT score significantly increases during exacerbation 
+(Mackay et al., 2012). However, this method showed an 
+AUC of 0.64 for the CAT questionnaire in 491 COPD indi-
+viduals in detecting exacerbations (Lee et al., 2014), which 
+is less than that of both sample entropy (AUC = 0.702) 
+and α2 (AUC  =  0.777) in our analysis. CAT is a well-­
+established scoring system for monitoring COPD, but its 
+diagnostic value may be compromised by its subjectivity. 
+As SpO2 analysis is a useful predictor of dyspnea, and a 
+key component of the CAT questionnaire (Costello et al., 
+2020), combining the objective SpO2 analysis with the CAT 
+questionnaire could provide the most accurate predictor 
+of future exacerbations.
+In the present data, we had access to 90 min of signal 
+in all individuals and showed that SpO2 variability indices 
+can distinguish between stable and exacerbation phases. 
+In a preliminary analysis, we also examined shorter inter-
+vals of SpO2 signals (i.e., 60, 50, 40, 30, and 15 min). As 
+shown in Appendix C, we applied Bland-­Altman analysis 
+to the data and found that 60 min is also sufficient for SpO2 
+sample entropy analysis, while DFA requires 90 min to 
+detect an exacerbation. While this might not be clinically 
+feasible for spot-­checking hypoxia in acute scenarios, this 
+analysis combined with better SpO2 wearable technology 
+may improve management in individuals experiencing 
+chronic hypoxia (Buekers et al., 2019).
+4.1  |  Limitations and future research
+Like other pilot studies, the major limitation of the cur-
+rent study is the small sample size. The source of SpO2 re-
+cording data in this study was from a pilot randomized 
+controlled trial testing the effectiveness of overnight 
+physiological monitoring to predict COPD exacerbation 
+(Al Rajeh et al., 2020). With the limited sample, there is 
+a risk of low statistical power and type II error. However, 
+despite the small sample size, our results reached statisti-
+cal significance. This demonstrates the potential of SpO2 
+variability analysis in non-­invasively detecting early ex-
+acerbations for timely treatment and the need for future 
+studies with larger sample sizes. This method also has the 
+potential to monitor exacerbation recovery and provide 
+an objective tool for discharge in these individuals, and 
+future studies can help determine this.
+Since data were obtained from a randomized clinical 
+trial with regular follow-­up of the participants, the chance 
+of selection bias is low. However, a possible source of bias 
+in this study is the availability of long (>90 min) contin-
+uous SpO2 signal in the participants. In the present study, 
+two participants had less than 90  min continuous SpO2 
+signals in their stable phase and were not included in this 
+study. Future studies can investigate this limitation in a 
+larger multicentre trial to assess the value of SpO2 pattern 
+analysis in the prediction of exacerbation.
+It is difficult to estimate an accurate cut-­off for sepa-
+ration of stable versus exacerbation phase based on such 
+a small sample size. To further test the validity of the cut-­
+off value, we randomly selected samples from stable pe-
+riods of the same participants recorded at different days 
+and measured SpO2 Sample Entropy. The mean (±SD) of 
+the randomly selected samples was 0.341 ± 134 (n = 11) 
+which was not significantly different from data presented 
+in Table 2 for the SpO2 Sample Entropy of stable phase 
+(0.395 ± 0.101). Furthermore, the rate of false positive was 
+18% when the cut-­off in Table 3 was used for the predic-
+tion of exacerbation. While these pilot results are promis-
+ing, a comprehensive analysis of the reportability of SpO2 
+variability indices is required prior to the translation of 
+these findings into clinical practice.
+Another limitation of this study is the severity of ex-
+acerbation was not measured. An exacerbation was de-
+fined as the need for oral corticosteroids or antibiotics, as 
+judged by the patient's clinician or self-­management plan. 
+TABLE 3  Summary for ROC analysis of SpO2 variability indices for detection of exacerbation
+AUC
+p-­value
+Cut-­off
+Sensitivity
+Specificity
+PPV
+NPV
+Sample entropy
+0.702
+0.029
+0.454
+0.636
+0.727
+0.700
+0.666
+Sample entropy (scale 2)
+0.711
+0.016
+0.758
+0.727
+0.636
+0.666
+0.700
+Sample entropy (scale 3)
+0.719
+0.031
+0.836
+0.818
+0.545
+0.643
+0.750
+Sample entropy (scale 4)
+0.628
+0.175
+0.844
+0.818
+0.636
+0.692
+0.778
+Sample entropy (scale 5)
+0.636
+0.120
+0.903
+0.818
+0.636
+0.692
+0.778
+DFA (α1)
+0.529
+0.555
+1.17
+0.545
+0.455
+0.500
+0.500
+DFA (α2)
+0.777
+0.002
+1.00
+0.818
+0.636
+0.692
+0.778
+Abbreviations: AUC, area under the curve, PPV, positive predictive value, NPV, negative predictive value.
+Bold values reflect a statistically significant difference between the groups (p-­value < 0.05).
+
+8 of 11  |     
+AL RAJEH et al.
+This practical approach has its shortcomings as the pre-
+scription of oral corticosteroids/antibiotics following the 
+worsening of respiratory symptoms may vary among prac-
+titioners and healthcare systems (Celli et al., 2021 Sep 27).
+Hurst et al., previously reported that a combined ox-
+imetry score (i.e., the positive magnitude in standard de-
+viation units of the fall in SpO2 and the rise in heart rate) 
+could predict the onset of an exacerbation, prior to clinical 
+diagnosis (Hurst, Donaldson, et al., 2010). We had limited 
+access to high quality continuous signals 2–­3 days prior to 
+diagnosis of exacerbation in the current study and could 
+only include SpO2 variability analysis one day prior to clin-
+ical diagnosis of exacerbation. Therefore, future studies 
+can extend our pilot study by developing wearable devices 
+suitable for long-­term signal recording for SpO2 fluctua-
+tion analysis. In addition, similar to this combined oxime-
+try score, novel analytical methods (e.g., transfer entropy) 
+have the potential to assess the interaction of heart rate 
+and SpO2 time series in order to develop a comprehensive 
+physiomarker for the non-­invasive assessment of patients 
+with COPD. Application of these methods in healthcare 
+warrant further investigations in larger studies.
+5  |  CONCLUSION
+This is a proof-­of-­concept study demonstrating that 
+SpO2 fluctuation analysis has the potential to be used to 
+support earlier detection of exacerbations in individuals 
+with COPD. Specifically, the sample entropy increases 
+and there is an alteration in fractal-­like behavior of 
+SpO2  fluctuations during exacerbation. As pulse oxime-
+try has recently been expanded beyond the measurement 
+of absolute peripheral oxygen saturation, measurement 
+of SpO2 dynamics has the potential to be incorporated 
+into smart devices to assist the early diagnosis of COPD 
+exacerbations.
+ACKNOWLEDGMENTS
+We gratefully acknowledge the study participants, and the 
+support we have received from the pulmonary rehabilita-
+tion recruitment sites and staff.
+CONFLICT OF INTEREST
+The authors declare that the research was conducted in 
+the absence of any commercial or financial relationships 
+that could be construed as a potential conflict of interest.
+AUTHOR CONTRIBUTIONS
+Ahmed Al Rajeh and John R Hurst conceived and de-
+signed the original clinical study and collected clinical 
+data. Amar S Bhogal, Joseph T. Costello, and Ali R Mani 
+formulated the concept of oxygen saturation variability 
+analysis in COPD. Yunkai Zhang and Ali R Mani per-
+formed the computational analysis and evaluated the 
+data. Amar S Bhogal, Yunkai Zhang and Ali R Mani wrote 
+the first manuscript draft and all authors revised it for 
+important intellectual content. All authors read and ap-
+proved the final manuscript.
+DATA AVAILABILITY STATEMENT
+The data that support the findings of this study are avail-
+able on request from the corresponding author.
+ORCID
+Ali R. Mani 
+ https://orcid.org/0000-0003-0830-2022 
+REFERENCES
+Abdo, W. F., & Heunks, L. M. A. (2012). Oxygen-­induced hypercap-
+nia in COPD: myths and facts. Critical Care, 16(5), 323. https://
+doi.org/10.1186/cc11475
+Adibi, A., Sin, D. D., Safari, A., Johnson, K. M., Aaron, S. D., 
+FitzGerald, J. M., & Sadatsafavi, M. (2020). The Acute COPD 
+Exacerbation Prediction Tool (ACCEPT): A modelling study. 
+The Lancet Respiratory Medicine, 8(10), 1013–­1021. https://doi.
+org/10.1016/S2213​-­2600(19)30397​-­2
+Al Rajeh, A. M., Aldabayan, Y. S., Aldhahir, A., Pickett, E., Quaderi, 
+S., Alqahtani, J. S., Mandal, S., Lipman, M. C. I., & Hurst, J. R. 
+(2020). Once daily versus overnight and symptom versus physi-
+ological monitoring to detect exacerbations of chronic obstruc-
+tive pulmonary disease: Pilot randomized controlled trial. JMIR 
+mHealth uHealth, 8(11), e17597. https://doi.org/10.2196/17597
+Al Rajeh, A. M., & Hurst, J. R. (2016). Monitoring of Physiological 
+Parameters to Predict Exacerbations of Chronic Obstructive 
+Pulmonary Disease (COPD): A systematic review. Journal of 
+Clinical Medicine, 5(12), 108. https://doi.org/10.3390/jcm51​20108
+Alqahtani, J. S., Aquilina, J., Bafadhel, M., Bolton, C. E., Burgoyne, 
+T., Holmes, S., King, J., Loots, J., McCarthy, J., Quint, J. K., & 
+Ridsdale, H. A. (2021). Research priorities for exacerbations of 
+COPD. The Lancet Respiratory Medicine, 9(8), 803–­936. https://
+doi.org/10.1016/S2213​-­2600(21)00227​-­7
+Bhogal, A. S., & Mani, A. R. (2017). Pattern analysis of oxygen sat-
+uration variability in healthy individuals: Entropy of pulse 
+oximetry signals carries information about mean oxygen satu-
+ration. Frontiers in Physiology, 8, 555. https://doi.org/10.3389/
+fphys.2017.00555/​full
+Buekers, J., Theunis, J., De Boever, P., Vaes, A. W., Koopman, M., 
+Janssen, E. V., Wouters, E. F. M., Spruit, M. A., & Aerts, J.-­M. 
+(2019). Wearable finger pulse oximetry for continuous oxygen 
+saturation measurements during daily home routines of pa-
+tients with Chronic Obstructive Pulmonary Disease (COPD) 
+over one week: Observational study. JMIR mHealth and 
+uHealth, 7(6), e12866. https://doi.org/10.2196/12866
+Burton, C., Pinnock, H., & McKinstry, B. (2015). Changes in tele-
+monitored physiological variables and symptoms prior to 
+exacerbations of chronic obstructive pulmonary disease. 
+Journal of Telemedicine and Telecare, 21(1), 29–­36. https://doi.
+org/10.1177/13576​33X14​562733
+Celli, B. R., Fabbri, L. M., Aaron, S. D., Agusti, A., Brook, R., Criner, 
+G. J., Franssen, F. M. E., Humbert, M., Hurst, J. R., O'Donnell, 
+
+      |  9 of 11
+AL RAJEH et al.
+D., Pantoni, L., Papi, A., Rodriguez-­Roisin, R., Sethi, S., Torres, 
+A., Vogelmeier, C. F., & Wedzicha, J. A. (2021). An Updated defi-
+nition and severity classification of COPD exacerbations: The 
+rome proposal. American Journal of Respiratory and Critical Care 
+Medicine. (in press). https://doi.org/10.1164/rccm.20210​8-­1819PP
+Costa, M., Goldberger, A. L., & Peng, C.-­K. (2002). Multiscale en-
+tropy analysis of complex physiologic time series. Physical 
+Review Letters, 89(6), 068102. https://doi.org/10.1103/PhysR​
+evLett.89.068102
+Costello, J. T., Bhogal, A. S., Williams, T. B., Bekoe, R., Sabir, A., Tipton, 
+M. J., Corbett, J. O., & Mani, A. R. (2020). Effects of normobaric 
+hypoxia on oxygen saturation variability. High Altitude Medicine 
+& Biology, 21(1), 76–­83. https://doi.org/10.1089/ham.2019.0092
+Donaldson, G. C., Seemungal, T. A. R., Hurst, J. R., & Wedzicha, J. A. 
+(2012). Detrended fluctuation analysis of peak expiratory flow and 
+exacerbation frequency in COPD. European Respiratory Journal, 
+40(5), 1123–­1129. https://doi.org/10.1183/09031​936.00180811
+Hurst, J. R., Donaldson, G. C., Quint, J. K., Goldring, J. J., Patel, A. R., 
+& Wedzicha, J. A. (2010). Domiciliary pulse-­oximetry at exacer-
+bation of chronic obstructive pulmonary disease: prospective 
+pilot study. BMC Pulmonary Medicine, 10(1), 52. https://doi.
+org/10.1186/1471-­2466-­10-­52
+Hurst, J. R., Vestbo, J., Anzueto, A., Locantore, N., Müllerova, H., 
+Tal-­Singer, R., Miller, B., Lomas, D. A., Agusti, A., MacNee, W., 
+Calverley, P., Rennard, S., Wouters, E. F. M., & Wedzicha, J. A. 
+(2010). Susceptibility to exacerbation in chronic obstructive 
+pulmonary disease. New England Journal of Medicine, 363(12), 
+1128–­1138. https://doi.org/10.1056/NEJMo​a0909883
+Husebø, G. R., Bakke, P. S., Aanerud, M., Hardie, J. A., Ueland, T., 
+Grønseth, R., Persson, L. J. P., Aukrust, P., & Eagan, T. M. (2014). 
+Predictors of exacerbations in chronic obstructive pulmonary 
+disease–­results from the Bergen COPD cohort study. PLoS One, 
+9(10), e109721. https://doi.org/10.1371/journ​al.pone.0109721
+Jiang, Y., Costello, J. T., Williams, T. B., Panyapiean, N., Bhogal, A. 
+S., Tipton, M. J., Corbett, J., & Mani, A. R. (2021). A network 
+physiology approach to oxygen saturation variability during 
+normobaric hypoxia. Experimental Physiology, 106(1), 151–­159. 
+https://doi.org/10.1113/EP088755
+Johns, M. W. (1991). A new method for measuring daytime sleep-
+iness: the Epworth sleepiness scale. Sleep, 14(6), 540–­545. 
+https://doi.org/10.1093/sleep/​14.6.540
+Khatri, S. B., & Ioachimescu, O. C. (2016). The intersection of obstruc-
+tive lung disease and sleep apnea. Cleveland Clinic Journal of 
+Medicine, 83(2), 127–­140. https://doi.org/10.3949/ccjm.83a.14104
+Lee, S.-­D., Huang, M.-­S., Kang, J., Lin, C.-­H., Park, M. J., Oh, Y.-­M. 
+Kwon, N., Jones, P. W., & Sajkov, D. (2014). The COPD assess-
+ment test (CAT) assists prediction of COPD exacerbations in 
+high-­risk patients. Respiratory Medicine, 108(4), 600–­608. 
+https://doi.org/10.1016/j.rmed.2013.12.014
+Mackay, A. J., Donaldson, G. C., Patel, A. R. C., Jones, P. W., Hurst, 
+J. R., & Wedzicha, J. A. (2012). Usefulness of the Chronic 
+Obstructive Pulmonary Disease Assessment Test to evaluate se-
+verity of COPD exacerbations. American Journal of Respiratory 
+and Critical Care Medicine, 185(11), 1218–­1224. https://doi.
+org/10.1164/rccm.20111​0-­1843OC
+Mathers, C. D., & Loncar, D. (2006). Projections of global mortality and 
+burden of disease from 2002 to 2030. Samet J, editor. PLoS Medicine, 
+3(11), e442. https://doi.org/10.1371/journ​al.pmed.0030442
+Nagappa, M., Liao, P., Wong, J., Auckley, D., Ramachandran, S. K., 
+Memtsoudis, S., Mokhlesi, B., & Chung, F. (2015). Validation of 
+the STOP-­Bang Questionnaire as a screening tool for obstruc-
+tive sleep Apnea among different populations: A systematic 
+review and meta-­analysis. PLoS One, 10(12), e0143697. https://
+doi.org/10.1371/journ​al.pone.0143697
+O’Donnell, D. E., Milne, K. M., James, M. D., de Torres, J. P., & Neder, 
+J. A. (2020). Dyspnea in COPD: New Mechanistic Insights and 
+Management Implications. Advances in Therapy, 37(1), 41–­60. 
+https://doi.org/10.1007/s1232​5-­019-­01128​-­9
+Peng, C.-­K., Havlin, S., Stanley, H. E., & Goldberger, A. L. (1995). 
+Quantification of scaling exponents and crossover phe-
+nomena in nonstationary heartbeat time series. Chaos: an 
+Interdisciplinary Journal of Nonlinear Science, 5(1), 82–­87. 
+https://doi.org/10.1063/1.166141
+Pincus, S. M. (1994). Greater signal regularity may indicate increased 
+system isolation. Mathematical Biosciences, 122(2), 161–­181. 
+https://doi.org/10.1016/0025-­5564(94)90056​-­6
+Qureshi, H., Sharafkhaneh, A., & Hanania, N. A. (2014). Chronic ob-
+structive pulmonary disease exacerbations: latest evidence and 
+clinical implications. Therapeutic Advances in Chronic Disease, 
+5(5), 212–­227. https://doi.org/10.1177/20406​22314​532862
+Richman, J. S., & Moorman, J. R. (2000). Physiological time-­series anal-
+ysis using approximate entropy and sample entropy. American 
+Journal of Physiology-­Heart and Circulatory Physiology, 278(6), 
+H2039–­H2049. https://doi.org/10.1152/ajphe​art.2000.278.6.H2039
+Stradling, J. R., & Davies, R. J. O. (2004). Sleep. 1: Obstructive sleep 
+apnoea/hypopnoea syndrome: definitions, epidemiology, and 
+natural history. Thorax, 59(1):73–­78.
+Strait, J. B., & Lakatta, E. G. (2012). Aging-­associated cardiovascular 
+changes and their relationship to heart failure. Heart Failure 
+Clinics, 8(1), 143–­164. https://doi.org/10.1016/j.hfc.2011.08.011
+Vaquerizo-­Villar, F., Álvarez, D., Kheirandish-­Gozal, L., Gutiérrez-­
+Tobal, G. C., Barroso-­García, V., Crespo, A., del Campo, F., 
+Gozal, D., & Hornero, R. (2018). Detrended fluctuation analy-
+sis of the oximetry signal to assist in paediatric sleep apnoea–­
+hypopnoea syndrome diagnosis. Physiological Measurement, 
+39(11), 114006. https://doi.org/10.1088/1361-­6579/aae66a
+Wilkinson, T. M. A., Donaldson, G. C., Hurst, J. R., Seemungal, T. A. R., 
+& Wedzicha, J. A. (2004). Early therapy improves outcomes of ex-
+acerbations of chronic obstructive pulmonary disease. American 
+Journal of Respiratory and Critical Care Medicine, 169(12), 1298–­
+1303. https://doi.org/10.1164/rccm.20031​0-­1443OC
+Zhang, Y., Morgan, R. L., Alonso-­Coello, P., Wiercioch, W., Bała, M. 
+M., Jaeschke, R. R., Styczeń, K., Pardo-­Hernandez, H., Selva, 
+A., Ara Begum, H., Morgano, G. P., Waligóra, M., Agarwal, A., 
+Ventresca, M., Strzebońska, K., Wasylewski, M. T., Blanco-­
+Silvente, L., Kerth, J.-­L., Wang, M., … Schünemann, H. J. (2018). 
+A systematic review of how patients value COPD outcomes. 
+European Respiratory Journal, 52(1), 1800222. https://doi.
+org/10.1183/13993​003.00222​-­2018
+How to cite this article: Al Rajeh, A., Bhogal, A. 
+S., Zhang, Y., Costello, J. T., Hurst, J. R., & Mani, A. 
+R. (2021). Application of oxygen saturation 
+variability analysis for the detection of exacerbation 
+in individuals with COPD: A proof-­of-­concept 
+study. Physiological Reports, 9, e15132. https://doi.
+org/10.14814/​phy2.15132
+
+10 of 11  |     
+AL RAJEH et al.
+APPENDIX A
+APPENDIX B
+FIGURE A1  Two examples of DFA graphs on SpO2 variability 
+data showing the linear trend when plotting scale and detrended 
+fluctuations on a log-­log scale. This graph represents the stable 
+phase (red dots) and the exacerbation phase (blue dots) of a 
+participant with COPD. α1 and α2 are short-­term and long-­term 
+scaling exponent respectively
+FIGURE B1  (a) Correlation between mean SpO2 and SpO2 Sample Entropy in individuals with COPD in Stable phase. (b) Correlation 
+between mean SpO2 and SpO2 Sample Entropy in individuals with COPD in Exacerbation phase. There is no significant correlation between 
+mean SpO2 and SpO2 entropy in individuals with COPD. This is unlike previous reports in healthy individuals where Entropy of SpO2 
+exhibits a significant inverse correlation with mean SpO2. For more information please see (Bhogal & Mani, 2017; Costello et al., 2020). 
+Sample Entropy is calculated at scale 1 with m = 2 and r = 0.2
+
+      |  11 of 11
+AL RAJEH et al.
+APPENDIX C
+FIGURE C1 
+Bland-­Altman plot of 
+sample entropy (SampEn) in 90 min vs. 
+60 min SpO2 signal duration
+(b)
+

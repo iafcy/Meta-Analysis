@@ -1,0 +1,1052 @@
+cancers
+Article
+Over-Detection of Melanoma-Suspect Lesions by a CE-Certified
+Smartphone App: Performance in Comparison to
+Dermatologists, 2D and 3D Convolutional Neural Networks in
+a Prospective Data Set of 1204 Pigmented Skin Lesions
+Involving Patients’ Perception
+AnnaSophieJahn1,†,AlexanderAndreasNavarini1,†,SaraElisaCerminara1,LisaKostner1,
+StephanieMarieHuber1,MichaelKunz1,Julia-TatjanaMaul2,3 ,ReinhardDummer2 ,SerainaSommer1,
+AnjaDominiqueNeuner1,MitchellPaulLevesque2,3 ,PhilFangCheng2 andLaraValeskaMaul1,*
+1 DepartmentofDermatology,UniversityHospitalofBasel,4031Basel,Switzerland
+2 DepartmentofDermatology,UniversityHospitalofZurich,8091Zurich,Switzerland
+3 FacultyofMedicine,UniversityofZurich,8006Zurich,Switzerland
+* Correspondence:laravaleska.maul@usb.ch;Tel.:+41-61-265-40-80
+† Theseauthorscontributedequallytothiswork.
+Simple Summary: Early detection and resection of cutaneous melanoma are crucial for a good
+Citation:Jahn,A.S.;Navarini,A.A.; prognosis.However,visualdistinctionofearlymelanomasfrombenignneviremainschallenging.
+Cerminara,S.E.;Kostner,L.;Huber, Newartificialintelligence-basedapproachesforriskstratificationofpigmentedskinlesionsprovide
+S.M.;Kunz,M.;Maul,J.-T.;Dummer, screening methods for laypersons with increasing use of smartphone applications (apps). Our
+R.;Sommer,S.;Neuner,A.D.;etal. studyaimstoprospectivelyinvestigatethediagnosticaccuracyofaCE-certifiedsmartphoneapp,
+Over-DetectionofMelanoma-Suspect SkinVision®,inmelanomarecognition.Basedonclassificationintothreedifferentriskscores,theapp
+LesionsbyaCE-Certified
+providesarecommendationtoconsultadermatologist.Inaddition,bothpatients’anddermatologists’
+SmartphoneApp:Performancein
+perspectives towards AI-based mobile health apps were evaluated. We observed that the app
+ComparisontoDermatologists,2D
+classifiedasignificantlyhighernumberoflesionsashigh-riskthandermatologists,whichwould
+and3DConvolutionalNeural
+haveledtoaclinicallyharmfulnumberofunnecessaryexcisions. Thediagnosticperformanceof
+NetworksinaProspectiveDataSetof
+theappindichotomousclassificationof1204pigmentedskinlesions(riskclassificationfornevus
+1204PigmentedSkinLesions
+vs. melanoma)remainedbelowadvertisedrateswithlowsensitivity(41.3–83.3%)andspecificity
+InvolvingPatients’Perception.
+Cancers2022,14,3829. https:// (60.0–82.9%).Theconfidenceintheappwaslowamongbothpatientsanddermatologists,andno
+doi.org/10.3390/cancers14153829 patientfavoredanassessmentbytheappalone.Althoughsmartphoneappsareapotentialmedium
+forincreasingawarenessofmelanomascreeninginthelaypopulation,theyshouldbeevaluatedfor
+AcademicEditor:ÁngelesJuarranz
+certificationwithprospectivereal-worldevidence.
+Received:28June2022
+Accepted:5August2022 Abstract:Theexponentialincreaseinalgorithm-basedmobilehealth(mHealth)applications(apps)
+Published:7August2022 formelanomascreeningisareactiontoagrowingmarket.However,theperformanceofavailable
+appsremainstobeinvestigated.Inthisprospectivestudy,weinvestigatedthediagnosticaccuracyof
+Publisher’sNote:MDPIstaysneutral
+withregardtojurisdictionalclaimsin aclass1CE-certifiedsmartphoneappinmelanomariskstratificationanditspatientanddermatolo-
+publishedmapsandinstitutionalaffil- gistsatisfaction.Pigmentedskinlesions≥3mmandanysuspicioussmallerlesionswereassessedby
+iations. thesmartphoneappSkinVision®(SkinVision®B.V.,Amsterdam,theNetherlands,App-Version6.8.1),
+2DFotoFinderATBM®master(FotoFinderATBM®SystemsGmbH,BadBirnbach,Germany,Ver-
+sion3.3.1.0),3DVectra®WB360(CanfieldScientific,Parsippany,NJ,USA,Version4.7.1)totalbody
+photography(TBP)devices,anddermatologists. Thehigh-riskscoreofthesmartphoneappwas
+Copyright: © 2022 by the authors.
+comparedwiththetwogoldstandards:histologicaldiagnosis,orifnotavailable,thecombinationof
+Licensee MDPI, Basel, Switzerland.
+dermatologists’,2Dand3Driskassessments.Atotalof1204lesionsamong114patients(meanage
+This article is an open access article
+59years;51%females(55patientsathigh-riskfordevelopingamelanoma,59melanomapatients))
+distributed under the terms and
+wereincluded.Thesmartphoneapp’ssensitivity,specificity,andareaunderthereceiveroperating
+conditionsoftheCreativeCommons
+Attribution(CCBY)license(https:// characteristics(AUROC)variedbetween41.3–83.3%,60.0–82.9%,and0.62–0.72%accordingtotwo
+creativecommons.org/licenses/by/ study-definedreferencestandards.Additionally,allpatientsanddermatologistscompletedanewly
+4.0/). createdquestionnaireforpreferenceandtrustofscreeningtype.Thesmartphoneappwasratedas
+Cancers2022,14,3829.https://doi.org/10.3390/cancers14153829 https://www.mdpi.com/journal/cancers
+Cancers2022,14,3829 2of21
+trustworthyby36%(20/55)ofpatientsathigh-riskformelanoma,49%(29/59)ofmelanomapatients,
+and8.8%(10/114)ofdermatologists.Mostofthepatientsratedthe2DTBPimaging(93%(51/55)
+resp.88%(52/59))andthe3DTBPimaging(91%(50/55)resp.90%(53/59))astrustworthy.Askin
+cancerscreeningbycombinationofdermatologistandsmartphoneappwasfavoredbyonly1.8%
+(1/55)resp. 3.4%(2/59)ofthepatients;nopatientpreferredanassessmentbyasmartphoneapp
+alone.Thediagnosticaccuracyinclinicalpracticewasnotasreliableaspreviouslyadvertisedandthe
+satisfactionwithsmartphoneappsformelanomariskstratificationwasscarce.MHealthappsmight
+beapotentialmediumtoincreaseawarenessformelanomascreeninginthelaypopulation,but
+healthcareprofessionalsandusersshouldbealertedtothepotentialharmofover-detectionandpoor
+performance.Inconclusion,wesuggestfurtherrobustevidence-basedevaluationbeforeincluding
+market-approvedappsinself-examinationforpublichealthbenefits.
+Keywords: smartphone; mobile health application; melanoma; early detection; over-detection;
+diagnosticaccuracy
+1. Introduction
+Cutaneousmelanomaisoneofthemostaggressivecancersinhumansandthusre-
+mainsamajorclinicalchallenge[1].TheincidenceofmelanomainWesternpopulationshas
+increasedrapidlyoverrecentdecades[2]. Despiteasignificantimprovementinprevention,
+diagnosis,andtreatment,cutaneousmelanomaisstillassociatedwithahighmortalityand
+morbidityrate[3–5]. Missingawarenessaboutskincancerpreventionandthemedical
+needforbettertechniquestodistinguishnevifromearlymelanomasplayarelevantrole.
+Earlydetectionandresectionofmelanomaarecrucialforimprovingpatientoutcomes[6,7].
+Hence,theriseofartificialintelligence(AI)hasledtothehopeofnovelpatient-autonomous
+melanomadiagnosis. Computer-aideddiagnostictoolshavealsobeendevelopedtoenable
+earlydetectionofmelanomabylaypersonsinthepublic.
+Throughdigitalizationandtheresultingwidespreadaccesstosmartphones,mostadults
+intheworldownasmartphoneanduseapplications(apps).While92%oftheadultpopulation
+intheU.S.ownedamobilephonein2015[8], upto97%hadamobilephonein2021[9].
+Thereby,theuseofmobilehealth(mHealth)appshasrecentlyrisenconsiderablytoprovide
+independenthealthcaretimeandlocation[10]. Between2014–2017,235newappsinthe
+fieldofdermatologywereregisteredrepresentingagrowthof80.8%[11],whilemelanoma-
+related apps increased by 55.8% [12]. Aside from the main functionality as a source of
+informationorawarenessaboutmelanoma,prevention,andskinself-surveillancestrategies,
+theappsincreasinglyprovidediagnosticandmonitoringcapabilitiesforpigmentedskin
+lesions[13,14].
+Appsusingmachinelearningalgorithmstoprovideriskstratificationhaveopened
+newopportunitiesforthedetectionofmelanomabylaypersons,astheyofferimmediate
+supportintheriskclassificationofpigmentedskinlesionsandwhethertheyrequirefurther
+medicaladvice[15]. Currently,onlytheSkinVision® andTeleSkinskinScanappsconstitute
+CE(ConformitéEuropéenne)certifiedmedicalproductsinEurope[15]. Furthermore,only
+onesmartphoneapp,theDermaCompareapp(EmeraldMedicalApplications,Israel),has
+been approved by the United States Food and Drug Administration (FDA) so far [16].
+However,thissmartphoneappisconsideredaCEclass1medicaldevice(self-certified)
+andisnotapprovedforclassifyingskinlesionsdirectly.
+ThesmartphoneappSkinVision®isaCEclass1(self-certified)certifiedmedicalprod-
+uct[17]andthemostdownloadedappofallmelanomascreeningappsintheAndroid
+store[12],reachingapproximately900,000usersin2018[18]. SkinVision® [19]indicated
+promisingresultswithhighsensitivityandspecificitybyevaluatingthediagnosticaccu-
+racyofthismHealthappinriskclassificationofskinlesionsbasedonmachinelearning
+algorithmsinaretrospectivestudy[20]. However,someexpertscriticizethatthereported
+sensitivity(95.1%)andspecificity(78.3%)oftheSkinVision® appwereprobablyoveres-
+Cancers2022,14,3829 3of21
+timated in the released studies based on the nature of the study design and sampling
+errors[21].
+IfmHealthappshavehighdiagnosticaccuracyindistinguishingbenignnevifrom
+malignantlesions,thereisgreatpotentialinsupportingindividualswithsuspiciouspig-
+mentedskinlesionsintheirdecisiontoconsultadermatologistorinreducingfearofskin
+cancer [22]. However, low diagnostic accuracy carries the risk of misinterpretation by
+AI,particularlyover-detectionbymistakenlydiagnosingmelanomaandassociateduser
+anxiety,aswellasmissingmelanoma,whichleadstofatalconsequences. Theseconcerns
+arisefromseveralstudiesthathavedemonstratedpoordiagnosticaccuracyofsmartphone
+appsformelanomadetectioncomparedtodermatologists[23–25].
+Inadditiontothediagnosticaccuracyofsmartphoneapps,knowledgeaboutlayper-
+sons’willingnesstousemHealthappsandtheirpotentialtrustinthesetechnologiesis
+relevant. Therefore,healthcareprofessionals’andlaypersons’personalexperiences,expec-
+tations,andconcernsregardingtheuseofAIinmelanomadetectionneedtobeanalyzed.
+CertainbarrierstomHealthappsmayreducewidespreadacceptancebylaypersonsin-
+cludingconsiderationaboutprivacy,costs,andethics,aswellasfearsaboutqualityand
+reliability[26–29]. Besidescriticalpatients’perspectivesregardingmHealthappsandAI
+inmelanomadetection,beneficialattitudesarebasedonfasterdiagnosis,accesstocare,
+usability,andsupportforphysicians[26,27,30,31].
+To date, there are no prospective validation studies of this CE-certified melanoma
+detectionappcomparingtheriskassessmentswiththoseofdermatologistsandclass1CE-
+certified2Dand3Dtotalbodyphotography(TBP)devicesalongsidehistopathology. The
+smartphoneappSkinVision®providesonlymacroscopicclose-upimagesoftheskin,while
+thedeep-learningalgorithmofthe2Dand3Dconvolutionalneuralnetworks(CNN)uses
+dermoscopic images. Data evaluating the smartphone app by patients and physicians
+are also sparse. Our study aims to assess the diagnostic accuracy of the CE-certified
+smartphoneappSkinVision®inmelanomadetectioninareal-worldsettingandtoprovide
+aninsightintohealthcareprofessionals’andlaypersons’evaluationofmHealthappsfor
+melanomascreening.
+2. MaterialsandMethods
+2.1. StudyDesignandParticipants
+Weperformedthisprospective,single-center,comparativeobservationalcohortstudy
+attheDepartmentofDermatologyattheUniversityHospitalBaselinSwitzerlandbetween
+January2021toJune2021. Sevendermatologists(beginners: <2yearsprofessionalexpe-
+rience, n = 4; intermediate: 2–5 years professional experience, n = 1; experts: >5 years
+professionalexperience, n=2), aswellas114patientswereincludedinthestudywith
+an age of ≥18 years with a high risk for developing a primary cutaneous malignant
+melanomadefinedaspreviousmelanoma(includingmelanomainsitu),≥100melanocytic
+nevi,≥5atypicalnevi,strongfamilyhistoryformelanoma,diagnosisofdysplasticnevus
+syndrome,orknownCDKN2Amutation. Exclusioncriteriawereacutepsychiatricillness
+oracutecrisisandFitzpatricksigntypeV-VI.
+2.2. Procedures
+Inthefirststep,thepatientssignedtheinformedconsentaftertheywereinformed
+byadermatologistaboutthestudydesignandthefollowingexaminations. Subsequently,
+thedermatologistobtainedamedicalhistory,includingahistoryofmelanomatoenable
+classificationintothedifferentriskgroups. Theclassificationofallhigh-riskpatientsinto
+furtherriskcohortsaredefinedbyhowoftenthepatientsrequireskincancerscreening.
+Based on this, we have classified our melanoma patients as high risk, as they come to
+dermatological control every 3–12 months according to the corresponding AJCC stage.
+Patientswithoutmelanomaintheirownmedicalhistoryareseenevery12months.
+Allstudyparticipantsunderwentastandardskincancerscreeningbyadermatologist
+(SupplementaryFigureS1). Thepigmentedskinlesionswereassessedwithdermatoscopy
+Cancers2022,14,3829 4of21
+andclassifiedaseitherbenignormalignant. Thedermatologistdefinedpigmentedskin
+lesionsthatweresuspectedmelanomaandindicatedwhetherlesionssmallerthan3mm
+shouldbeclassifiedwiththedifferentAImodalitiesduetosuspicion. Theregularskin
+cancerscreeningwasperformedbeforeanyAI-basedriskassessmentswereachieved,so
+thedermatologistshadnoknowledgeaboutAIclassificationofthemelanocyticlesions
+uptothispoint. Inthenextstep,allmelanocyticnevi≥3mmoranysmallersuspicious
+melanocyticlesionswereassessedusinganiOS-basediPhoneSEsmartphoneequipped
+witha12-megapixelcameraandtheappSkinVision®(SkinVision®B.V.,Amsterdam,the
+Netherlands,App-Version6.8.1),whichisbasedonamachine-learningalgorithmclassify-
+ingpigmentedlesionsintolow,medium,andhighriskformelanoma. Onlythelesions
+classifiedashigh-risk—indicatingarecommendationtoconsultadermatologist—were
+recorded. Afterwards,patientsreceivedawhole-bodyscreeningusingthe2Dautomated
+totalbodymapping(ATBM®)masterofFotoFinder(FotoFinderATBM®SystemsGmbH,
+Bad Birnbach, Germany, Version 3.3.1.0, risk scoring with MoleAnalyzer Pro), and the
+3DTBPVectra® WB360System(CanfieldScientific,Parsippany,NJ,USA,Version4.7.1,
+risk scoring with DEXI) which was performed by medical students and a study nurse.
+Subsequently,alllesionsover3mmoranysmallersuspiciouslesionswereassessedbythe
+2Dand3DAIdevicesusingtheirdermoscopes(dermoscopemedicam1000(FotoFinder
+ATBM®)andVISIOMED®D200evodermoscope(Vectra®WB360)). Fordermoscopicim-
+agedmelanocyticnevi,weobtainedAI-basedriskscoresbetween0.0–1.0for2DFotoFinder
+ATBM® and0.0–10.0for3DTBPVectra® WB360. FotoFinder’sATBM® mastercreatesa
+2D-imageoftheentiresurfaceofthepatientusing20photostakenfrom8differentparts
+ofthebody,whileVectra®WB360generatesa3D-imageusing92individualphotosthat
+are converted into a 3D Avatar. Finally, the dermatologists assessed the skin lesions a
+secondtimewithknowledgeoftheAIriskassessmentscoresof2DFotoFinderATBM®
+and3DTBPVectra® WB360. Thepatientwasinformedaboutthelesionswithsuspicion
+formelanomabyadermatologistandaboutthe2Dand3DCNNclassificationsabovethe
+study-definedcut-offscores.
+The indication for excision of suspicious lesions was based on the dermatologists’
+suspicion for melanoma and/or malignancy risk assessment scores of the 2D imaging
+toolFotoFinderATBM® and/or3DimagingtoolVectra® WB360indicatingvaluesover
+thestudy-definedcut-offscore(>0.5resp. >5.0). Thepatientwasinformedwhichlesions
+would be removed with the appropriate rationale. A maximum of two excisions were
+performedpervisitandperpatientduetoethicalreasons,withanexceptionforfurther
+biopsiesincasesofhigh-gradesuspicionofmalignancybythedermatologistorpatient
+request. Thereferencestandardforabenignlesionwaseitherthehistologicaldiagnosis(no
+melanoma)orthecombinationofthedermatologist’sevaluation(benignlesion)plusthe
+AIscoresoftwoindependentmedicaldevices(FotoFinderATBM® andVectra® WB360)
+eachbelowthecut-offscore.
+Afteralltheassessments,theparticipatingpatientscompletedananonymous9-item
+questionnairethatsurveyedtheirattitudes,personalpreferences,andconcernsaboutthe
+useofAIinmelanomadetectioncomparedwithskincancerscreeningsbyadermatologist
+inadditiontosociodemographicdata.Thedermatologistscompleteda2-itemquestionnaire
+assessingtheirattitudestowardthesmartphoneappinmelanomascreening,whichwas
+answered specifically for each of the 114 included patients. Neither the patients nor
+dermatologists were informed about the result of the app’s risk assessment due to the
+extremelyhighnumberoffalse-positivefindingstopreventresponsebias. Oursurveywas
+designeddenovoafterliteratureresearch. Allanswerswereoptional. Thequestionnaire
+was available in German, English and French and included binary questions (yes/no),
+multiplechoicequestionsandvisualanaloguescales(VAS)withscoresfrom0–10.
+2.3. StatisticalAnalysis
+ComparisonofcontinuousvariableswastestedwiththeWilcoxonranktest. Com-
+parisonofcategoricalvariableswastestedwithFishersExacttest. Ap-valueoflessthan
+Cancers2022,14,3829 5of21
+0.05wasdeemedassignificant. ReceiverOperatingCharacteristics(ROC)analysiswas
+usedtoassesstheperformanceoftheSkinVision®appagainstthecombinedevaluationof
+FotoFinderATBM®,Vectra®WB360,andthedermatologistandtheSkinVision®appagainst
+histology. AllanalyseswereperformedwithR(version4.1)andvisualizedwithggplot2.
+2.4. Ethics
+Thestudywasapprovedbythelocalethicscommittee(22020-02482),registeredwith
+ClinicalTrials.gov(NCT04605822),andwasconductedincompliancewiththeDeclaration
+ofHelsinkiandGoodClinicalPracticeGCP-rules.
+3. Results
+3.1. StudyPopulation
+Overall, data from 114 patients were analyzed, including 55 patients at high-risk
+for developing a melanoma (mean age 55 years (age range): 22–85), 47% females) and
+59melanomapatients(meanage60years(agerange: 29–81),54%females)(Table1). The
+familyhistoryformelanomawaspositivein19%ofthemelanomapatientsandin56%
+of the non-melanoma patients. Most of the patients used sunscreen SPF 30–50 (51% of
+melanoma patients vs. 62% of patients at high-risk for melanoma) and had previous
+sunburnsinchildhood(54%resp. 69%).
+Table1.Characteristicsofthestudypopulationandtheirskincancerawareness.
+Patientsat
+Patientswith
+AllPatients, High-Riskfor
+Characteristic Melanoma,
+N=1141 Melanoma,
+N=591
+N=551
+Age,n(agerange) 59(22–85) 60(29–81) 55(22–85)
+Sex,n(%)
+Female 58(51%) 32(54%) 26(47%)
+Male 56(49%) 27(46%) 29(53%)
+Riskprofile,n(%)
+Multiplemelanocyticnevi(≥100)
+and/ordysplasticnevi(≥5)and/orpositive
+familyhistoryformelanomaand/or 55(48%) 0(0%) 55(100%)
+diagnosisofdysplasticnevussyndrome
+and/orCDKN2Amutation
+Previousresectedmelanomainsituor
+57(50%) 57(97%) 0(0%)
+primarycutaneousmelanoma
+Metastaticmelanoma 2(1.8%) 2(3.4%) 0(0%)
+Positivefamilyhistoryformelanoma,
+42(37%) 11(19%) 31(56%)
+n(%)
+Frequencyofskincancerscreening,
+n(%)
+Severaltimesperyear 40(35%) 34(58%) 6(11%)
+Every12months 39(34%) 16(27%) 23(42%)
+Every1–2years 8(7%) 4(6.8%) 4(7.3%)
+Every2years 9(7.9%) 2(3.4%) 7(13%)
+Lessthanevery2years 14(12%) 3(5.1%) 11(20%)
+Never 4(3.5%) 0(0%) 4(7.3%)
+Historyofsunburnsinchildhood,
+70(61%) 32(54%) 38(69%)
+n(%)
+Frequencyofsunburns(Child),n(%)
+Rarely(lessthanonceperyear) 44(63%) 20(62%) 24(63%)
+Regularly(onceperyear) 22(31%) 10(31%) 12(32%)
+Often(morethanonceperyear) 4(5.7%) 2(6.2%) 2(5.3%)
+Historyofsunburnsinadulthood,
+39(34%) 18(31%) 21(38%)
+n(%)
+Cancers2022,14,3829 6of21
+Table1.Cont.
+Patientsat
+Patientswith
+AllPatients, High-Riskfor
+Characteristic Melanoma,
+N=1141 Melanoma,
+N=591
+N=551
+Frequencyofsunburns(Adult),n(%)
+Rarely(lessthanonceperyear) 38(97%) 18(100%) 20(95%)
+Regularly(onceperyear) 0(0%) 0(0%) 0(0%)
+Often(morethanonceperyear) 1(2.6%) 0(0%) 1(4.8%)
+Previoustanninginthesolarium,
+38(33%) 13(22%) 25(45%)
+n(%)
+Usageofsunscreen(SPF),n(%)
+SPF6–10 2(1.8%) 1(1.7%) 1(1.8%)
+SPF15–25 10(8.8%) 3(5.1%) 7(13%)
+SPF30–50 64(56%) 30(51%) 34(62%)
+SPF50+ 38(33%) 25(42%) 13(24%)
+1Median(Range);n(%).
+A total of 1204 pigmented skin lesions were assessed in this study (Figure 1). In
+61cases(5.1%),weperformedahistopathologyexamination,while1129lesions(94%)were
+diagnosedtobeclinicallyclearlybenignbasedonthecombinationofariskassessmentby
+Cancers 2022, 14, x FOR PEER REVIEW 7 of 23
+adermatologistandAI-basedriskscoresbelowthecut-off(2Dand3DTBP)andhadno
+indicationforobtaininghistopathology.
+FiFgiugruer e1.1 F.lFolwow chcahrat rotfo aflal lilnicnluclduedde dpipgimgmenetnetded sksiknin lelseisoionns saanndd ththeeiri rhhisistotoppaatthhoollooggiiccaall oouuttccoommee..
+AIA =I =aratirftiicfiicaila ilnintetlellilgigeennccee; ;TTBBPP == ttoottaall bbooddyy pphhoottooggrraapphhyy..
+3.2. DiagnosticAccuracyandPerformanceoftheSmartphoneAppSkinVision®
+3.2. Diagnostic Accuracy and Performance of the Smartphone App SkinVision®
+3.2.1. ComparisonofallRiskAssessments
+3.2.1. Comparison of all Risk Assessments
+ThesmartphoneappSkinVision®classified980(81%)lesionsasbenignandindicated
+aniT nh ce re s am sea drt rp ish ko fn oe r a mp ep l aS nk oin mV ais inio 2n 2®4 cl (a 1s 9s %if )ie cd as 9 e8 s0 , w(8 h1 i% le) tl he esi do en rs m a as tb oe lon gig isn ts a dn id a gin nd oi sc ea dted
+an1 1i9n5cr(e9a9s.3ed% )rilseks iofonrs maselbaennoimgna ainnd 22o4n l(y19n%in)e c(a0s.e7s%, )wahsilseu sthpeic idoeursm. aCtoolnosgeiqsutse ndtilayg,nthoesed
+11C9E5 -(c9e9r.t3ifi%e)d leaspiponhsa dasa b2e7n-ifgonld ahnidg hoenrlyra nteinoef (m0.e7l%an)o ams as-ussupsipciicoiuous.s Cleosniosneqsucoenmtplya,r tehdet CoE-
+cedrteirfmieadt oalpopg ihstasd. Tah 2e7A-foIlsdc ohriegshoefr trhaete2 Dof amndel3aDnoCmNaN-sudsepviiccieosucsl alesssiiofineds cmoomsptlaerseidon tso adser-
+mbaetonligongiasntsd. T47he(3 A.9I% s)colerseiso nosf t(hFeo t2oDFi nandder 3ADT CBMNN®) dreesvpi.ce3s9 c(3la.2s%sif)ileedsi monoss(tV leecstiroan®s WasB b3e6n0i)gn
+anads s4u7s (p3i.c9i%ou)s lefosriomnse l(aFnootmoFain(Fdigeru rAeT2B).M®) resp. 39 (3.2%) lesions (Vectra® WB360) as sus-
+picious for melanoma (Figure 2).
+Figure 2. Comparison of risk assessments with the highest rate of suspected melanoma cases by
+the smartphone app (n = 1204).
+Cancers 2022, 14, x FOR PEER REVIEW 7 of 23
+Figure 1. Flow chart of all included pigmented skin lesions and their histopathological outcome.
+AI = artificial intelligence; TBP = total body photography.
+3.2. Diagnostic Accuracy and Performance of the Smartphone App SkinVision®
+3.2.1. Comparison of all Risk Assessments
+The smartphone app SkinVision® classified 980 (81%) lesions as benign and indicated
+an increased risk for melanoma in 224 (19%) cases, while the dermatologists diagnosed
+1195 (99.3%) lesions as benign and only nine (0.7%) as suspicious. Consequently, the CE-
+certified app had a 27-fold higher rate of melanoma-suspicious lesions compared to der-
+matologists. The AI scores of the 2D and 3D CNN devices classified most lesions as benign
+Cancers2022,14,3829 7of21
+and 47 (3.9%) lesions (FotoFinder ATBM®) resp. 39 (3.2%) lesions (Vectra® WB360) as sus-
+picious for melanoma (Figure 2).
+FFiigguurree 22.. CCoommppaarriissoonn ooff rriisskk aasssseessssmmeennttss wwiitthh tthheeh hiigghheessttr raatteeo offs suussppeecctteeddm meelalannoommaac caasseessb byyt he
+stmhea rstmpahrotnpehoapnep a(npp= (1n2 =0 41)2.04).
+Amongthe224lesionsclassifiedassuspiciousbySkinVision®,193wereconsidered
+clinically benign by the physician and the 2D and 3D CNN AI-risk assessment scores,
+whereasfourpigmentedskinlesionswereclassifiedsuspiciousbythesmartphoneapp,
+dermatologists,2D,and3DTBPdevices(Table2,SupplementaryTableS1). Theknowledge
+ofAI-basedriskassessmentscoresdidnotmeaningfullyaffectdermatologists’classification
+ofskinlesions,astheychangedtheirdecisiontowardstheindicationforexcisioninonly
+threelesionsthatlaterturnedouttobebenign(Table2).
+Table2.Riskassessmentsof1204pigmentedskinlesionsbythesmartphoneappSkinVision®,2D
+imagingFotoFinderATBM®,3DimagingVectra® WB360,dermatologists,anddermatologistsin
+combinationwithknowledgeofFotoFinderATBM®andVectra®WB360AI-scores.
+Characteristic N=12041
+SmartphoneappSkinVision®
+benign 980(81%)
+suspicious 224(19%)
+2DImagingFotoFinderATBM®
+benign 1157(96%)
+suspicious 47(3.9%)
+3DImagingVECTRA®WB360
+benign 1165(97%)
+suspicious 39(3.2%)
+Dermatologists
+benign 1195(99%)
+suspicious 9(0.7%)
+Dermatologistsinformedaboutriskassessmentscoresby
+FotoFinderATBM®+VECTRA®WB360
+benign 1192(99%)
+suspicious 12(1.0%)
+1n(%);AI=artificialintelligence.
+Cancers2022,14,3829 8of21
+3.2.2. DiagnosticAccuracyoftheSmartphoneAppBasedontheCombinationofthe
+Dermatologist’sEvaluationplustheAIRisk-AssessmentScoresofTwoIndependent
+MedicalDevices
+Receiveroperatingcharacteristic(ROC)analysisoftheclassificationofbenignandsus-
+piciouslesionsoftheSkinVision®appcomparedtothecombinedevaluationofFotoFinder
+ATBM®,Vectra® WB360,andthedermatologistshadanareaunderthecurve(AUC)score
+of 0.621, sensitivity of 0.41, and specificity of 0.83 (Figure 3). Although the specificity
+C ancers 2022, 14, x FOR PEER REVIEW
+i s reasonable, the sensitivity is low, thus suggesting that the
+SkinVision®9 o af
+p
+2 p3
+has poor
+diagnosticaccuracy.
+Figure3. Receiveroperatingcharacteristiccurveofthesmartphoneappinrelationtotheresults
+Figure 3. Receiver operating characteristic curve of the smartphone app in relation to the results of
+thoef ctohmebcionmatbioinn aotfi orinsko afsrsiessksmaesnsetss sbmy ednertmsbatyoldoegrismtsa, tFooltoogFiisntdse,rF AotToBFMin®d, aenrdA VTeBcMtra® ®, WanBd36V0e ctra®WB360
+(s(esnesnistiivtiivtyi:t y41:.431%.3, %sp,escpifieccitiyfi:c 8it2y.9:%8)2;. A9%U)C; A= aUrCea =unadreear tuhne dcuerrvteh. ecurve.
+33.2..23..3 D.iDagiangonstoics tAicccAucraccuyr aocf ythoef StmhearStpmhaorntep Ahopnpe BAaspedp oBna sHeidstoopnaHthiosltoogpya thology
+AAmmonogn 6g16 p1igpmigemnteendt eskdinsk leinsiolenssi oenxasmexinaemdi nhiesdtohloisgtiocalollgyi, cwalel yd,ewteectdedet esicxt emdeslaixnom-elanomas,
+m1a9s,m 19e mlaenloancyoctiyctinc envevi,i, 2200 ddyysspplalastsitci cnenvei,v ais, wasellw aes l1l6a osth1e6rwoitshee crlwasissifeiecdl alesssiiofinesd wleersei ons were
+ddiaigangonsoesde (dTa(Tbaleb 3le, F3i,gFuirge u1r).e 1).
+TTaabblel e3.3 D.iDagiangonstoics taicccuacraccuyr aocf ythoef AthI-ebaAseI-db samseadrtpsmhoanret paphpo nSekianpVpisiSokni®n, V2Dis iiomna®g,in2gD FiomtoaFginindgerF otoFinder
+ATBM®, 3D imaging Vectra® WB360, dermatologists, and dermatologists in combination with AI
+ATBM®,3DimagingVectra®WB360,dermatologists,anddermatologistsincombinationwithAIin
+in melanoma detection based on histopathology: sensitivity and specificity.
+melanomadetectionbasedonhistopathology:sensitivityandspecificity.
+Melanocytic Dysplastic
+Histopathologic Melanocytic DMyeslpalnaostmica, Other *,
+N Nevus, Nevus, Melanoma, Other*,
+DHiaigstnoopsaisth ologicDiagnosis N Nevus, NNev =u s6, 1 NN = 6= 116 1 N=161
+N = 19 1 NN= = 1290 11 N=201
+SSmmaratrptphhonone eapappp SkinVision® 61
+61
+SkinVbiesnioignn® 13(68%) 10(50%) 1(17%) 10(62%)
+suspicious 6(32%) 10(50%) 5(83%) 6(38%)
+benign 13 (68%) 10 (50%) 1 (17%) 10 (62%)
+2DimagingFotoFinderATBM® 61
+suspicious 6 (32%) 10 (50%) 5 (83%) 6 (38%)
+benign 7(37%) 11(55%) 1(17%) 4(25%)
+2D imsaugsipnigc iFooutsoFinder 12(63%) 9(45%) 5(83%) 12(75%)
+61
+ATBM®
+benign 7 (37%) 11 (55%) 1 (17%) 4 (25%)
+suspicious 12 (63%) 9 (45%) 5 (83%) 12 (75%)
+3D imaging VECTRA®
+61
+WB360
+Cancers2022,14,3829 9of21
+Table3.Cont.
+Melanocytic Dysplastic
+Melanoma, Other*,
+HistopathologicDiagnosis N Nevus, Nevus,
+N=61 N=161
+N=191 N=201
+3DimagingVECTRA®WB360 61
+benign 18(95%) 9(45%) 1(17%) 8(50%)
+suspicious 1(5.3%) 11(55%) 5(83%) 8(50%)
+Dermatologists 61
+benign 17(89%) 18(90%) 1(17%) 16(100%)
+suspicious 2(11%) 2(10%) 5(83%) 0(0%)
+Beginner:<2years’work
+44 N=15 N=12 N=5 N=13
+experience
+benign 14(93%) 10(83%) 1(20%) 13(100%)
+suspicious 1(6.7%) 2(17%) 4(80%) 0(0%)
+Intermediate:2–5years’work
+5 N=2 N=3 N=0 N=0
+experience
+benign 1(50%) 3(100%) 0(0%) 0(0%)
+suspicious 1(50%) 0(0%) 0(0%) 0(0%)
+Experts:>5years’work
+11 N=2 N=5 N=1 N=3
+experience
+benign 2(100%) 5(100%) 0(0%) 3(100%)
+suspicious 0(0%) 0(0%) 1(100%) 0(0%)
+Dermatologistsinformedabout
+61
+AIscores2
+benign 16(84%) 17(85%) 1(17%) 15(94%)
+suspicious 3(16%) 3(15%) 5(83%) 1(6.2%)
+Beginner:<2years’work
+N=15 N=12 N=5 N=13
+experience
+benign 13(87%) 9(75%) 1(20%) 12(92%)
+suspicious 2(13%) 3(25%) 4(80%) 1(7.7%)
+Intermediate:2–5years’
+N=2 N=3 N=0 N=0
+workexperience
+benign 1(50%) 3(100%) 0(0%) 0(0%)
+suspicious 1(50%) 0(0%) 0(0%) 0(0%)
+Experts:>5years’work
+N=2 N=5 N=1 N=3
+experience
+benign 2(100%) 5(100%) 0(0%) 3(100%)
+suspicious 0(0%) 0(0%) 1(100%) 0(0%)
+1n(%);*Other=pigmentedbasalcellcarcinoma,histiocytoma,lentigosolaris,pigmentedseborrhoickeratosis,
+folliculitiswithperifolliculitis, collisionaltumor: seborrhoickeratosisandnevus, collisionaltumor: actinic
+keratosisandlentigosolaris;2riskassessmentscoresbyFotoFinderATBM®andVECTRA®WB360;AI=artificial
+intelligence.
+Basedonhistopathology,Figure4representstheriskassessmentsofthedermatolo-
+gists,themHealthapp,andthecombinationofAIanddermatologists.BoththeSkinVision®
+appandthe2Dand3DCNNdevicesindicatedfor5of6histologicalverifiedmelanomas
+(83%sensitivity)anelevatedscoreindicatingsuspicionofmelanoma. Thefalse-negative
+rateforallAI-basedmedicaldeviceswas17%. Thethreedifferentfalse-negativeclassified
+melanomaswereallsuperficialspreadingstageIAmelanomas—SkinVision®: superficial
+spreading melanoma, 0.9 mm Breslow thickness, AJCC stage IA (pT1bN0M0); 3D TBP
+Vectra®WB360: superficialspreadingmelanoma,0.3mmBreslowthickness,AJCCstage
+IA(pT1aN0M0); 2DTBPFotoFinderATBM®: superficialspreadingmelanoma,0.7mm
+Breslow thickness, AJCC stage IA (pT1aN0M0). The true-negative rate for melanomas
+(specificity) including melanocytic nevi, dysplastic nevi, and otherwise classified diag-
+noseswas60.0%ofthesmartphoneapp,63.6%ofthe3DVectra®WB360imagingdevice,
+and40.0%ofthe2DFotoFinderATBM® riskassessmenttool. Dermatologistscorrectly
+identifiedfiveofsixmelanomas(83%sensitivity). Thefalse-negativeratewas17%. The
+true-negativerateformelanomas(specificity)includingmelanocyticnevi,dysplasticnevi,
+andotherwiseclassifieddiagnosesamongalldermatologistswas92.7%. Theperformance
+Cancers 2022, 14, x FOR PEER REVIEW 11 of 23
+SkinVision®: superficial spreading melanoma, 0.9 mm Breslow thickness, AJCC stage IA
+(pT1bN0M0); 3D TBP Vectra® WB360: superficial spreading melanoma, 0.3 mm Breslow
+thickness, AJCC stage IA (pT1aN0M0); 2D TBP FotoFinder ATBM®: superficial spreading
+melanoma, 0.7 mm Breslow thickness, AJCC stage IA (pT1aN0M0). The true-negative rate
+for melanomas (specificity) including melanocytic nevi, dysplastic nevi, and otherwise
+classified diagnoses was 60.0% of the smartphone app, 63.6% of the 3D Vectra® WB360
+imaging device, and 40.0% of the 2D FotoFinder ATBM® risk assessment tool. Dermatol-
+ogists correctly identified five of six melanomas (83% sensitivity). The false-negative rate
+Cancers2022,14,3829 was 17%. The true-negative rate for melanomas (specificity) including melanocytic1 0noefv2i1,
+dysplastic nevi, and otherwise classified diagnoses among all dermatologists was 92.7%.
+The performance of the dermatologists strongly correlated with their professional experi-
+oefntchee. Hdeenrmcea, ttohleo gtriustes-pstorsointigvley rcaotersre floart emdewlainthomthae wireprreo gfersesaitoenr afolre xepxpereiretns caen.dH deenrcme,atthoel-
+torugies-tpso wsiittihv einrtaetremsfeodriamtee leaxnpoemriaenwceer e(1g0r0e%at esrenfosirtievxiptye)r tcsoamnpdadreerdm toat boelogginisntserws i(t8h0i%nt seernmsei--
+dtiivaitteye);x wpehreireenacse t(h1e0 0tr%ues-ennesgitaitvivitey )ractoems wpaerreed sitmobileagr i(n9n3e.3r%s( r8e0s%p.s 9e2n.s5i%tiv siptye)c;ifwichiteyr)e (aTsatbhlee
+t3r)u. e-negativeratesweresimilar(93.3%resp. 92.5%specificity)(Table3).
+FFiigguurree 44.. HHiissttoollooggyy aanndd ccoorrrreessppoonnddiinnggd diaiaggnnoossisiso offl elessioionnssa asssesessseseddb byyd deremrmataotloolgogisitsst,ss, martphone
+aspmpaSrtkpihnoVnisei oanp®p, SaknidnVdeisrimona®to, alongdis dtseramndatAolIo(gnis=ts6 a1n).d AI (n = 61).
+Cancers 2022, 14, x FOR PEER REVIEW 12 of 23
+Figure5revealsseveralpigmentedskinlesionsthatwerecorrectlyandincorrectly
+Figure 5 reveals several pigmented skin lesions that were correctly and incorrectly
+classifiedasmelanomasbythesmartphoneappSkinVision®.
+classified as melanomas by the smartphone app SkinVision®.
+ROC analysis of the classification of melanoma of the SkinVision® app compared to
+histology had an area under the curve (AUC) score of 0.717, sensitivity of 0.83, and speci-
+ficity of 0.6 (Figure 6). Using histology as the gold standard, the SkinVision® app had high
+sensitivity but mediocre specificity.
+Figure5.CorrectlyandfalselyclassifiedmelanomasbythesmartphoneappSkinVision®:(A,B).True-
+Figure 5. Correctly and falsely classified melanomas by the smartphone app SkinVision®: (A,B).
+Trupeo-psiotsiviteivcela cslsaifisseidfiemde lmaneolamnao;m(Ca;, D(C).,DFa)l.s Fe-aplsoes-iptiovseitcilvaess cifilaesdsimfieedla nmoemlaan;o(Em,Fa); .(TEr,uFe).- nTerguaet-inveegcalatisvsiefi ed
+clasmsiefileadn ommeala;n(Gom).aF;a (lGse)-.n Feaglaseti-vneegclaatsivsiefi celdasmsiefileadn ommeala.noma.
+ROC analysis of the classification of melanoma of the SkinVision® app compared
+to histology had an area under the curve (AUC) score of 0.717, sensitivity of 0.83, and
+specificityof0.6(Figure6). Usinghistologyasthegoldstandard,theSkinVision®apphad
+highsensitivitybutmediocrespecificity.
+Figure 6. Receiver operating characteristic curve of the smartphone app in relation to the results of
+the histology (sensitivity of 83.3%, specificity 60.0%); AUC = area under the curve.
+3.3. Patient Perspective on AI in Melanoma Screening
+3.3.1. Confidence in Dermatologists vs. Smartphone App
+Most of the patients at high-risk for melanoma (55% (30/55)) and patients with mela-
+noma (53% (31/59)) reported being very confident about a mole examination by a derma-
+tologist (rating scale 10/10). In contrast, only a minority of high-risk patients (16% (9/55))
+Cancers 2022, 14, x FOR PEER REVIEW 12 of 23
+Figure 5. Correctly and falsely classified melanomas by the smartphone app SkinVision®: (A,B).
+Cancers2022,14,3829 11of21
+True-positive classified melanoma; (C,D). False-positive classified melanoma; (E,F). True-negative
+classified melanoma; (G). False-negative classified melanoma.
+Figure6.Receiveroperatingcharacteristiccurveofthesmartphoneappinrelationtotheresultsof
+Figure 6. Receiver operating characteristic curve of the smartphone app in relation to the results of
+thehistology(sensitivityof83.3%,specificity60.0%);AUC=areaunderthecurve.
+the histology (sensitivity of 83.3%, specificity 60.0%); AUC = area under the curve.
+3.3. PatientPerspectiveonAIinMelanomaScreening
+3.3. Patient Perspective on AI in Melanoma Screening
+3.3.1. ConfidenceinDermatologistsvs. SmartphoneApp
+3.3.1. Confidence in Dermatologists vs. Smartphone App
+Most of the patients at high-risk for melanoma (55% (30/55)) and patients with
+melanMomosat o(5f 3t%he (p3a1t/ie5n9t)s) arte phiogrhte-rdisbke fionrg mveelraynocmonafi (d5e5n%t (a3b0o/5u5t))a amndo lpeateixeanmtsi wnaitthio mneblya-
+andoemrma a(5to3l%og (i3s1t/(5r9a)t)in rgepsocartleed1 0b/e1in0g). vInercyo cnotrnafsidt,eonntl yabaomuti nao mriotyleo efxhaimghin-raistikopn abtyie na tdse(r1m6%a-
+(9to/l5o5g)i)sat n(rdatminegl asncaolme a10p/a10ti)e. nInts c(o1n2%tra(s7t/, o5n9)ly) fae lmtvineoryritsya foef whihgehn-rbisekin pgaitnievnetsst i(g1a6t%ed (9b/y55a))
+smartphoneappalone. Nosignificantdifferenceinratingswasidentifiedbetweenthetwo
+riskgroups(p<0.9;p<0.7)(SupplementaryTableS2).
+3.3.2. TrustworthinessoftheSmartphoneApp
+Allparticipantsprimarilyratedphysicianexamination(100%(55/55)amonghigh-
+riskpatients,100%(59/59)amongmelanomapatients)astrustworthy,andthemajority
+didsofor2DTBPimaging(93%(51/55)resp. 88%(52/59))and3DTBPimaging(91%
+(50/55)resp. 90%(53/59)). Thesmartphoneappwaslessfrequentlyratedastrustworthy,
+withonly36%(20/55)amongpatientsathigh-riskformelanomaand49%(29/59)among
+melanomapatients(Table4). Theagerevealedasignificantcorrelationwiththeevaluation
+ofsmartphones’trustworthiness(p<0.004), witholderpatients(>60yearsold)having
+trustedtheappthreetimesmorethanyoungerpatients(≤60yearsold)(Figure7). Neither
+previousmelanomavs. high-riskcriteriaformelanomanorsexsignificantlyinfluencedthe
+evaluationofthetrustworthinessofthesmartphoneapp.
+Cancers2022,14,3829 12of21
+Table4.AssessmentoftrustworthinessoftheAI-basedsmartphoneappSkinVision®,2Dimaging
+FotoFinderATBM®,and3DimagingVectra®WB360comparedtodermatologists.
+Patientsat
+Patients
+High-Risk
+with
+Characteristic N for p-Value2
+Melanoma,
+Melanoma,
+N=591
+N=551
+Thefollowingexaminationwas
+trustworthy:Smartphone 114 0.3
+appassessment
+Yes 29(49%) 20(36%)
+No 5(8.5%) 8(15%)
+Idon’tknow 23(39%) 22(40%)
+Noanswer 2(3.4%) 5(9.1%)
+Dermatologistassessment 114
+Yes 59(100%) 55(100%)
+No 0(0%) 0(0%)
+Idon’tknow 0(0%) 0(0%)
+Noanswer 0(0%) 0(0%)
+2DTBPassessment 114 0.3
+Yes 52(88%) 51(93%)
+No 0(0%) 0(0%)
+Idon’tknow 7(12%) 3(5.5%)
+Noanswer 0(0%) 1(1.8%)
+3DTBPassessment 114 0.3
+Yes 53(90%) 50(91%)
+No 0(0%) 0(0%)
+Idon’tknow 6(10%) 3(5.5%)
+Cancers 2022, 14, x FOR PEER REVIEW Noanswer 0(0%) 2(3.6%) 14 of 23
+1n(%);2Fisher’sexacttest;Pearson’sChi-squaredtest;TBP=totalbodyphotography.
+FFiigguurree 77.. OOddddss rraattiioo ffoorr vvaarriiaabblleess iinnflfulueennccininggt htheet rturustswtwoortrhthininesessso fofs msmaratrpthpohnoense’sr’i srikska sassessessmsmenetnitn
+mine mlaenloamnoamdae tdeectteiocnti.on.
+3.3.3. Impact of AI vs. Dermatologists’ Examination on Patients’ Fear of Developing Skin
+Cancer
+Most participants indicated that an examination by a physician reduced their fear of
+developing skin cancer, namely in 89% (49/55) among high-risk patients and 81% (48/59)
+among melanoma patients. Comparably, the 2D TBP imaging achieved the same effect in
+78% (43/55) resp. 76% (45/59), and the 3D TBP device in 82% (45/55) resp. 75% (44/59). In
+contrast, the assessment with the smartphone app appeased fear of skin cancer in only
+33% (18/55) of patients at high-risk for melanoma and in 32% (19/59) of patients with mel-
+anoma. Indeed, one high-risk patient (1.8%) even reported an increased fear of developing
+skin cancer by using the smartphone app (Supplementary Table S2).
+3.3.4. Patients’ Subjective Assessment of the Accuracy of AI vs. Dermatologists
+Patients expected reliable results with the highest accuracy by both the assessment
+by a physician (98% (54/55) among high-risk patients, 92% (54/59) among melanoma pa-
+tients) and by the 2D TBP imaging (82% (45/55) resp. 86% (51/59)) as well as the 3D TBP
+device (89% (49/55) resp. 88% (52/59)). Only 16% (9/55) of high-risk patients and 31%
+(18/59) of melanoma patients expected reliable results from the smartphone app (Supple-
+mentary Table S2). No significant differences were identified between the two risk groups
+in the evaluations.
+3.3.5. Patient Preference for Skin Cancer Screening
+Both cohorts favored a combination of dermatologist and 3D TBP risk assessment for
+the examination of pigmented skin lesions (64% (35/55) among patients at high-risk for
+melanoma, 51% (30/59) among melanoma patients), while neither preferred assessment
+by a smartphone app alone (Figure 8A, Supplementary Table S2). The combination of der-
+matologist and smartphone app was favored by only 1.8% (1/55) of patients at high-risk
+for melanoma and 3.4% (2/59) of patients with melanoma.
+Cancers2022,14,3829 13of21
+3.3.3. ImpactofAIvs. Dermatologists’ExaminationonPatients’FearofDeveloping
+SkinCancer
+Mostparticipantsindicatedthatanexaminationbyaphysicianreducedtheirfearof
+developingskincancer,namelyin89%(49/55)amonghigh-riskpatientsand81%(48/59)
+amongmelanomapatients. Comparably,the2DTBPimagingachievedthesameeffectin
+78%(43/55)resp. 76%(45/59),andthe3DTBPdevicein82%(45/55)resp. 75%(44/59). In
+contrast,theassessmentwiththesmartphoneappappeasedfearofskincancerinonly33%
+(18/55)ofpatientsathigh-riskformelanomaandin32%(19/59)ofpatientswithmelanoma.
+Indeed,onehigh-riskpatient(1.8%)evenreportedanincreasedfearofdevelopingskin
+cancerbyusingthesmartphoneapp(SupplementaryTableS2).
+3.3.4. Patients’SubjectiveAssessmentoftheAccuracyofAIvs. Dermatologists
+Patientsexpectedreliableresultswiththehighestaccuracybyboththeassessment
+by a physician (98% (54/55) among high-risk patients, 92% (54/59) among melanoma
+patients)andbythe2DTBPimaging(82%(45/55)resp. 86%(51/59))aswellasthe3D
+TBPdevice(89%(49/55)resp. 88%(52/59)). Only16%(9/55)ofhigh-riskpatientsand
+31% (18/59) of melanoma patients expected reliable results from the smartphone app
+(SupplementaryTableS2). Nosignificantdifferenceswereidentifiedbetweenthetworisk
+groupsintheevaluations.
+3.3.5. PatientPreferenceforSkinCancerScreening
+Bothcohortsfavoredacombinationofdermatologistand3DTBPriskassessmentfor
+theexaminationofpigmentedskinlesions(64%(35/55)amongpatientsathigh-riskfor
+Cancers 2022, 14, x FOR PEER REVIEW 15 of 23
+melanoma,51%(30/59)amongmelanomapatients),whileneitherpreferredassessment
+by a smartphone app alone (Figure 8A, Supplementary Table S2). The combination of
+dermatologistandsmartphoneappwasfavoredbyonly1.8%(1/55)ofpatientsathigh-risk
+formelanomaand3.4%(2/59)ofpatientswithmelanoma.
+Figure8.Cont.
+Figure 8. (A) Patient preference for mole assessment (patients at high-risk for melanoma, n = 55;
+patients with melanoma, n = 59); (B) Patient preference for AI in skin cancer screening (patients at
+high-risk for melanoma, n = 55; patients with melanoma, n = 59).
+Regarding patient preference for skin cancer screenings, almost all high-risk patients
+(98% (54/55)) and melanoma patients (95% (56/59)) indicated their belief that AI can im-
+prove a physician’s diagnostic performance. Most patients (64% (35/55) among high-risk
+patients, 54% (32/59) among melanoma patients) would prefer that the physicians would
+always consider the result of AI in their diagnosis (Figure 8B) (Supplementary Table S2).
+Cancers 2022, 14, x FOR PEER REVIEW 15 of 23
+Cancers2022,14,3829 14of21
+Figure8. (A)Patientpreferenceformoleassessment(patientsathigh-riskformelanoma,n=55;
+Figurpea 8ti.e n(Ats)w Pitahtmieenlat npormeafe,nre=n5c9e) ;f(oBr) Pmatoielen tapsrseefesrsemnceenfot r(ApaItiniesnktisn caatn hceigrhsc-rreiesnki nfgo(rp matieenlatsnaotma, n = 55;
+patienhtisg hw-riisthk fmoremlaenlaonmomaa, ,nn == 5559;)p; a(tBie)n tPsawtiiethnmt pelraenfoemrean,nce= f5o9r). AI in skin cancer screening (patients at
+high-risk for melanoma, n = 55; patients with melanoma, n = 59).
+Regardingpatientpreferenceforskincancerscreenings,almostallhigh-riskpatients
+(98%(54/55))andmelanomapatients(95%(56/59))indicatedtheirbeliefthatAIcanimprove
+Regarding patient preference for skin cancer screenings, almost all high-risk patients
+aphysician’sdiagnosticperformance.Mostpatients(64%(35/55)amonghigh-riskpatients,
+(98%5 (45%4/(5352/))5 9a)nadm moneglamneolamnoam paaptaietinentsts )(9w5o%ul d(5p6r/e5fe9r))t hiantdthiceaptehdys itchiaenisr wbeoluiledf atlhwaaty As I can im-
+proveco an spidheyrsthiceiraensu’slt dofiaAgIninotshteicir pdeiargfnoorsmisa(Fnicgeu.r eM8Bo)s(tS uppaptileemnetsn t(a6ry4%Ta b(l3e5S/25)5.) among high-risk
+patients, 54% (32/59) among melanoma patients) would prefer that the physicians would
+3.3.6. Dermatologists’PerspectiveofSmartphoneAppsforMelanomaScreening
+always consider the result of AI in their diagnosis (Figure 8B) (Supplementary Table S2).
+Amongthesevendermatologists,theystatedinonly5.3%oftheskincancerscreenings
+(6/114)thatthesmartphoneappincreaseddiagnosticconfidenceandinonly8.8%ofthe
+assessments(10/114)theytrustedtheapp(SupplementaryTableS3).
+4. Discussion
+4.1. DiagnosticAccuracyandPotentialConsequencesoftheSmartphoneAppSkinVision®
+In this prospective validation study of the CE-certified mHealth app SkinVision®
+basedonadeeplearningalgorithm,weobservedalowdiagnosticaccuracyindetecting
+melanoma. Thesmartphoneapp’ssensitivityvariedbetween41.3–83.3%,thespecificity
+between60.0–82.9%,andtheAUROCbetween0.62–0.72%accordingtothestudy-defined
+goldstandardsofhistopathologyresp. combinationofdermatologists’,2D,and3Drisk
+assessments. Theapp’sassessmentclassifiedpigmentedskinlesions27timesmoreoften
+assuspiciousthanthedermatologists’evaluation. Itisimportanttorecognizethattheapp
+onlyprovidesriskstratification,notdiagnosis. However,ifonlytheapp’sassessmentwere
+consideredinestablishingadiagnosis,thiswouldresultinanexcisionrateofskinlesions
+that is several times higher compared to the dermatologists’ evaluation. Notably, even
+dermatologiststypicallyhavealowthresholdforexcisionoflesions,leadingtoanumber
+neededtotreat(NNT)formelanomadiagnosisof9.60[32]. Extrapolatingourresultsbased
+Cancers2022,14,3829 15of21
+onthisnumber,theSkinVision®appmayleadtodramaticratesofover-detection(NNTfor
+diagnosisofmelanoma259.20)andthusneedlessmorbidity.
+SincetheincorporationofAItechnologyhasbecomeavailableinsmartphoneappsfor
+laypersonsandthusmaypotentiallyreplaceamedicalconsultation,concernsaboutrelia-
+bilityanddiagnosticaccuracyarerising. Previousstudieshavecontroversiallydiscussed
+thediagnosticperformanceofSkinVision®andothersmartphoneappsformelanomade-
+tectionduetohighvariabilityintheirdiagnosticaccuracy[15,33–35]. Aprospectivestudy
+evaluatingthediagnosticaccuracyofSkinVision® comparedtodermatologists’clinical
+diagnoses and histological results demonstrated that the smartphone app was inferior
+tothediagnosticperformanceofdermatologistswithasensitivityof73%vs. 88%anda
+specificityof83%vs. 97%[36]. Basedonthehistopathologicalreferencestandard,theapp
+achievedaslightlyhighersensitivityof83%inourstudy,whilethespecificitywaslowerat
+60%. Thehighcountofdysplasticneviinourfindingscouldhaveposeddifficultiesforthe
+app’salgorithmindichotomousclassification(riskclassificationfornevusvs. melanoma),
+whichcouldexplainthelowspecificitydeterminedonhistologyinourresults. Arecent
+prospectivemulticenterdiagnosticaccuracystudyofSkinVision®including785lesionsin-
+dicatedasensitivityof89.8%andaspecificityof32.9%fortheapp’salgorithmbasedonthe
+histopathologicaloutcome[37]. Comparedtothehistology,weobtainedsimilarresultsfor
+sensitivity. Nevertheless,thespecificitywassuperiorinourstudy. Aprospectivestudyex-
+aminingtheeffectivenessofthreemelanomaappsinriskstratificationofpigmentedlesions
+alsorevealedlowratesofsensitivity(56.8%)andspecificity(50%)fortheSkinVision®app
+oniOSdevices[33]. Contrarytotheseresults,theapp’ssensitivityinourstudyachieved
+41% compared to the gold standard of the combination of dermatologists plus 2D and
+3Driskassessmentscores. Theevenlowersensitivityinourstudycomparedwithother
+findingscouldbeexplainedbythedesignofourstudy,whichrepresentedareal-world
+settingwithawidevariabilityoflesionsandincorporatedahighnumberofbenignskin
+lesions(melanocyticanddysplasticnevi)and,comparatively,asmallercountofmelanomas.
+However,arecentstudyinvestigatingtheaccuracyofthesmartphoneappSkinVision® for
+riskassessmentofskinlesionsrevealedasensitivityof95.1%andaspecificityof78.3%
+forthedetectionofmalignantorpremalignantlesions,whichthusindicatesapromising
+result[20]. Nevertheless, someexpertshavealreadycriticizedthefindingsasprobably
+overestimatedduetothenatureofthestudydesignandsamplingerrors[21]. Considering
+theapp’sassumedsensitivityofaround95%andspecificityofapproximately80%ina
+low prevalence setting, for example in the UK with an incidence of 257 per 100,000 for
+non-melanomaskincancer,theappwouldhaveapositivepredictivevalueofonly1.2%,
+whichwouldresultin20,000false-positiveoutcomesper100,000users[22]. Puttingour
+resultsintoperspectivewiththepublishedstudywithahighrateoffalse-positivescores,
+wealsoperceivethelatter’sresultstobeoverestimatedandnotrepresentative.
+Asidefromweaknessesintheperformanceoftheapp’salgorithm,weconsidermacro-
+scopicimagesasthemajorlimitationinthesmartphoneappforclassifyingskinlesions.
+Under the current conditions, clinical close-up dermoscopic images are needed for the
+mostaccuratediagnosisbothwhenevaluatedbyaphysicianandbyanAI-basedalgorithm.
+Theinvestigatedapponlyreferstomacroscopicimages,butalreadyavailablesmartphone
+magnifying glass attachments could provide more detailed images. However, such an
+implementationoftheseattachmentsinvolvesadditionalexpensivecostsforlaypersonsin
+thecontextofanindependentscreeningviaappandpotentialhandlingchallenges.
+Aprospective,multicenterstudyincluding1550imagesofskinlesionsacquiredwith
+smartphoneanddigitalsingle-lensreflexcamerasinvestigatedtheaccuracyindetecting
+melanoma of an AI-based algorithm trained using previously published dermoscopic
+images[38]. ThealgorithmachievedanAUROCof90.1%forbiopsiedlesionsand95.8%
+forcontrollesions,asensitivityof100%,andaspecificityof64.8%forimagesobtainedwith
+aniPhone. Comparedtotheseresultsindermoscopicimages,thedeep-learningalgorithm
+ofthesmartphoneappSkinVision®revealeddecreaseddiagnosticaccuracyinmelanoma
+recognitionbasedonmacroscopicimagesinourstudywithanAUROCof62–72%. The
+Cancers2022,14,3829 16of21
+studybyPhillipsetal. exemplifiesthatmostresearchonthediagnosticperformanceof
+AI-basedalgorithmfocusesondermoscopicimages,whiletheaccuracyofmacroscopic
+imagesinmelanomadetectionislowerandlessstudied.
+The dermatologists in our study demonstrated high diagnostic accuracy in terms
+of specificity (92.7%; beginners: 92.5% vs. experts: 93.3%), which is consistent with
+other findings [36]. As might have been expected, the comparatively lower sensitivity
+of all dermatologists (83%) was dependent on professional experience (beginners: 80%
+vs. experts: 100%). Thus, compared with the diagnostic accuracy of the smartphone
+app,thedermatologistsinourstudyperformedequallyindetectingmelanomaregarding
+sensitivity. The different levels of sensitivity and specificity among the dermatologists
+can be explained by the years of professional experience. Dermatologists with longer
+professionalexperiencehaveclassifiedmorepigmentedskinlesionscorrectlyaccordingto
+theirmalignancyriskthandermatologistswithlessprofessionalexperience. Therefore,the
+errorrateintheclassificationofmelanomaishigherinnovicepractitioners. Incontrast
+to the app, which classifies according to a machine-learning algorithm, the diagnostic
+accuracyofdermatologistsseemstocorrelatewiththenumberofself-classifiedlesions.
+However,thespecificityofdermatologistswassignificantlyhighercomparedtotheapp’s
+AI-basedriskassessment. Eventhoughourstudywasunderpoweredtorevealarelevant
+advantage in the combination of dermatologists and artificial intelligence, we suggest
+that at least beginners might benefit from AI-based risk assessments in the near future.
+Futurestudiesshouldaimtooptimizediagnosticaccuracyinearlymelanomadetection
+by synergistically leveraging the high specificity of dermatologists with the diagnostic
+performanceofAI-basedtechnologies.
+Ontheonehand,asignificantriskposedbythelowspecificityofsmartphoneappsis
+over-detection,leadingtomisclassificationofbenignpigmentedskinlesionsasmelanoma.
+Weintendtoraiseawarenessthatfalse-positivelesionscouldleadtounnecessarysurgical
+interventions, overextensionofthehealthsystem, aswellasanxietyandpsychological
+distressforpatients. Ontheotherhand,whenapplyingappswithlowsensitivityanda
+highfalse-negativerate,underdiagnosisofmelanomasinsomecasesisanobviousrisk[34].
+Thismightconveyafalsesenseofsecuritytopatientsanddiscouragethemfromseeinga
+dermatologist,whichislikelytoresultinfatalconsequences. Wesuggestthatlaypersons
+shouldusenewsmartphone-basedscreeningtoolswithextremecautionintheabsenceof
+robustevidence-basedvalidationstudies,astheymaycausepotentialharmtotheuser.
+Arecentsystematicreviewaboutthediagnosticaccuracyofalgorithm-basedsmart-
+phone apps for assessing skin cancer risk has criticized the fact that many diagnostic
+accuracystudieshaveweakevidenceduetopoorstudydesignandthusdonotsupport
+theimplementationofthecurrentapps[15]. TheCEmedicaldeviceclassification1that
+was applied for SkinVision® may be inadequate [39]. Although it is non-invasive and
+doesnottransferenergyinthebody,thedecision-supportthattheappprovidescanhave
+drasticclinicalconsequencesandthusthepublicisnotprotectedsufficientlyfrompotential
+risks. TheFDA,ontheotherhand,enforcesamorerigorousapprovalprocess[22]andhas
+authorizedonlyoneappformelanomariskstratificationthusfar[16]. Regulatedapproval
+ofmHealthappsaccordingtoanevidence-basedprocessisparticularlyimportant,asthey
+influencelaypersonsintheirdecision-makingprocessregardingfurthermedicaladvicein
+apotentiallyfataldisease[22].
+Althoughdeeplearningalgorithmsforskincancerscreeninginappsarecontinuously
+evolving,wesuggestwithourfindingsthatmHealthappsshouldnotcurrentlyreplace
+face-to-faceconsultationwithadermatologist.
+4.2. TheLayandDermatologistPerspectivesontheUseofSmartphoneAppsandOtherAIDevices
+inMelanomaScreening
+AcceptancebybothdoctorsandpatientsiscrucialforthesuccessfuluseofmHealth
+apps in daily life. Regarding laypersons’ perspectives towards the use of smartphone
+appsinmelanomariskstratification,weobservedapoorratingoftheapp’sdiagnostic
+Cancers2022,14,3829 17of21
+accuracy compared to the dermatologists’ examinations. Furthermore, the minority of
+patientstrustedtheapp(49%resp. 36%). Overall,mostpatientspreferredthecombination
+of dermatologist and AI devices applied by physicians for skin cancer screenings and
+perceived AI to support dermatologists’ diagnostic performance. The sole use of the
+smartphone app was not favored for skin cancer screening. However, dermatologists
+remainedmorecriticaloftheuseofsmartphoneappsthantheirpatients,trustingtheapp’s
+riskassessmentinonly8.8%ofexaminations.
+Thegenerallyinferiorratingofthesmartphoneappbypatientscouldbeexplained
+byseveralfactors. Alackofskillsaswellasconcernsaboutdatausemightnegatively
+influencepatients’assessment[40]. OurresultsareinaccordancewithSangersetal.,who
+consideredtheuntrustworthinessofmHealthappsandthepreferenceforaphysician
+insteadofasmartphoneappinmelanomadetectionasapossiblebarrier[26]. Contrary
+to our assumptions, older patients (>60 years) revealed higher confidence in the app
+in our findings, which might be related to greater awareness and sensitization of the
+disease in older age. However, other studies indicated that younger patients have
+morepositiveattitudestowardsmartphoneappsformelanomadetectioncomparedto
+elderly patients [40,41]. Whereas in a web-based questionnaire study on the patient
+perspectiveofAIinskincancerdiagnostics,therewasnosignificantdifferencebetween
+age groups [31]. Regarding the evaluation of smartphone apps’ trustworthiness for
+melanomarecognition,ourfindingsdemonstratedatendencyforfemalestohavemore
+confidence in the app compared to men. In contrast to our results, previous studies
+have revealed a gender-specific correlation in the assessment of mHealth apps with
+more males convinced of the technology [40,41]. A cross-sectional study including
+200 patients represented significantly lower agreement on whether skin cancer apps
+couldcomplementapersonalskinexaminationbyaphysicianwithonly42.6%,while
+98% of high-risk patients and 95% of melanoma patients in our study affirmed this
+thesisfortheuseofAIinmelanomascreening[41]. Ourresultsareinaccordancewitha
+2020publishedstudyexaminingthepatientperspectiveofAIinskincancerdiagnosis
+among298participants,with94%ofthesurveyedpatientssupportingtheuseofAIasa
+physicianassistancesystem[31].
+Weassumethatpatientswithahistoryofmelanomaindicatingthattheyaremore
+confident in the app compared to patients at high-risk for melanoma might be based
+onahigherawarenessofregularskinexaminationsduetotheirpersonalhistoryalong
+withanincreasedwillingnesstointegratesmartphoneappsintotheirindependentskin
+examination. Our findings are in line with a cross-sectional study demonstrating that
+patientswithapersonalhistoryofmelanomahadamorepositiveattitudetowardtheuse
+ofsmartphoneappsthannon-melanomapatients[41].
+Mostpatientsinourstudywouldpreferaskincancerscreeningbyacombination
+of dermatologists and AI, especially 3D and 2D CNN devices and not mHealth apps,
+emphasizing the lack of smartphone app’s acceptance. Computer-aided noninvasive
+diagnostic systems based on dermoscopic images and neural networks have recently
+alreadyachievedcomparableperformancecomparedtodermatologistsunderexperimental
+conditions[42]. OurfindingssuggestthatpatientsperceivegreatbenefitfromAIinskin
+cancerscreeningandthatAIcanassistdermatologists[30,43]. However,acceptanceseems
+to be closely linked to the assumption that the decision-making of computer-assisted
+diagnosticsystemsisreliable,transparent,andcomprehensible[31,44].
+Regarding physicians’ attitudes toward the use of smartphone apps in melanoma
+detection,wedetectedanevenmorecriticalattitudecomparedtotheparticipatingpatients.
+Jandaetal. reportedhighersatisfactionwhenevaluatinghealthcarepractitioners’perspec-
+tivesonstore-and-forwardteledermoscopyservicesforthediagnosisofskincancer. 52%
+oftheparticipantsindicatedthatmobileteledermoscopycouldimprovethequalityoftheir
+patientcare,whereas,inoursurveyonly5.3%perceivedanincreaseindiagnosticaccuracy
+bysmartphoneapps[45]. ThelowconfidenceofdermatologistsinmHealthappscould
+beduetofearedadditionalworkload, technicalproblems, orequipmentcosts[45]. We
+Cancers2022,14,3829 18of21
+particularlyemphasizethelimitationsofappsintermsofqualityofimagesandalgorithms,
+reliability, false reassurance for concerning lesions and unnecessary for benign lesions,
+patientsafetyandsecurity,andadditionalcostsaspotentialconcerns.
+Based on robust validation studies, we encourage dermatologists to inform their
+patientsabouttheadvantagesanddisadvantagesofavailableappsformelanomascreening.
+4.3. StrengthsandLimitations
+Thestrengthsofthisstudyarethereal-worldsetting,thesizeoftheincludedlesions
+(>1000),andthevalidationofamarket-approvedAI-basedmHealthapp. Anotherstrength
+isthatwedidnotonlyconsiderthedermatologist’sassessmentasareferencestandard
+besideshistologybutcombinedthephysician’sassessmentwiththeAI-basedriskscoresof
+the2Dand3DTBPdevices. However,duetocertainlimitations,thegeneralizabilityof
+theresultsshouldbeconsideredwithcaution. Limitationsofourstudyarethatphotos
+were taken by medically trained staff at the hospital and not by patients themselves at
+home. Histologywasnotavailableforalllesionsduetoahighnumberoffalse-positive
+findingsreportedbytheapp,whichwouldhaveresultedina27-foldexcessiveexcisionrate.
+Anotherlimitationisthatdermatologistsincombinationwith2Dand3DCNNclassification
+asagoldstandardcarriestheriskofmissingmelanoma. Thenumberofmelanomaswas
+relativelylowinthisstudy. WehaveonlyimagedpigmentedskinlesionswithaniOS-
+basedsmartphoneandthereforecouldnotverifypossibledifferencesindiagnosticaccuracy
+betweeniOSandAndroiddevices.Furthermore,biasduetoapreselectedcohortofpatients
+athigherriskofmelanomacannotbeexcluded. Furthercomparativestudiesofdifferent
+smartphone apps with adequate power for detecting the sensitivity and specificity of
+melanomadetectionareneeded.
+5. Conclusions
+Ourstudyrevealedaworryingover-detectionofsuspiciouslesionsbythemHealth
+app SkinVision® as well as inferior diagnostic accuracy in melanoma detection in clin-
+ical practice. Thus, the app is not as reliable as previously advertised and indeed may
+potentiallycauseharmbymakingusersfeeluncertainandoverwhelmingthehealthsys-
+tem. Furthermore, the acceptance among both patients and dermatologists was scarce
+for the AI-based smartphone app. Although we suggest that smartphone apps should
+currentlynotreplacediagnosisbyadermatologist,westillbelievethatAIhasthepotential
+tosupportphysiciansingradingpigmentedskinlesions. Underthecurrentcircumstances,
+dermoscopyisneededtoachievethemostaccuratediagnosisbyhumanorAI.Itwillbeour
+taskasdermatologiststobalancetheconsequencesoftheAIdecisionsupporttoreachan
+optimalnumberneededtotreat,andwewillneedprospectivestudiestoachievethis.Given
+thewidespreaduseofsmartphones,algorithm-basedmHealthappsformelanomarecogni-
+tionmightalsobeapotentialmediumtoincreaseawarenessformelanomascreeningin
+thelaypopulation. However,furtherrobustclinicalevidenceiscrucialbeforeincluding
+market-approvedappsinself-examinationbylaypersonsforpublichealthbenefits. We
+encouragehealthcareprofessionalstoadvisecautionandavoidpotentialharmaslongas
+solidprospectiveevidenceforamelanoma-detectionappislacking.
+Supplementary Materials:Thefollowingsupportinginformationcanbedownloadedat: https://
+www.mdpi.com/article/10.3390/cancers14153829/s1,TableS1:Combinationofallriskassessmentsof
+1204pigmentedskinlesionsbythesmartphoneappSkinVision®,2DimagingFotoFinderATBM®,
+3DimagingVectra® WB360,dermatologistsanddermatologistsincombinationwithknowledge
+ofFotoFinderATBM®andVectra®WB360AI-scores;TableS2:Patients’preferenceforskincancer
+screeningandtheirassessmentoftheAI-basedsmartphoneappSkinVision®,2DimagingFotoFinder
+ATBM®,and3DimagingVectra®WB360comparedtodermatologists;TableS3:Dermatologists’per-
+spectiveofsmartphoneappsformelanomascreening;FigureS1:Flowchartofthestudyprocedures.
+CNN=Convolutionalneuralnetwork,TBP=Totalbodyphotography,AI=Artificialintelligence.
+Cancers2022,14,3829 19of21
+AuthorContributions: Conceptualization,L.V.M.andA.A.N.;datacuration,S.E.C.,L.K.,S.M.H.,
+M.K.,S.S.,A.D.N.andL.V.M.;formalanalysis,P.F.C.,A.S.J.andL.V.M.;investigation,S.E.C.,L.K.,
+S.M.H., M.K. and L.V.M.; methodology, L.V.M., A.S.J. and P.F.C.; resources, L.V.M. and A.A.N.;
+writing—originaldraftpreparation,A.S.J.,P.F.C.andL.V.M.;writing—reviewandediting,A.S.J.,
+A.A.N.,S.E.C.,L.K.,S.M.H.,M.K.,J.-T.M.,R.D.,S.S.,A.D.N.,M.P.L.,P.F.C.andL.V.M.;visualization,
+P.F.C.,A.S.J.andL.V.M.;supervision,L.V.M.;projectadministration,L.V.M.;fundingacquisition,
+L.V.M.andA.A.N.Allauthorshavereadandagreedtothepublishedversionofthemanuscript.
+Funding: This research project was fully funded by the Department of Dermatology, as well as
+in minor part by Research Foundation for Young Researchers Grant of the University of Basel,
+Switzerland, andbytheVoluntaryAcademicSocietyGrant, Basel, Switzerland. Nofundingby
+companiesproducingthetestedproductswasreceived,nordidcompanieshavetheopportunityto
+commentorinfluencethemanuscript.
+Institutional Review Board Statement: The study was approved by the local ethics committee
+(22020-02482),registeredwithClinicalTrials.gov(NCT04605822)andwasconductedincompliance
+withtheDeclarationofHelsinkiandGoodClinicalPracticeGCP-rules.
+InformedConsentStatement:Informedconsentwasobtainedfromallsubjectsinvolvedinthestudy.
+DataAvailabilityStatement:Fullyanonymizeddatacanberequestedfromthecorrespondingauthor.
+Acknowledgments:Specialthanksgotoallparticipantswhovoluntarilyparticipatedinthisstudy
+andmadesuccessfulimplementationofthisstudypossible.L.V.M.gratefullyacknowledgessupport
+fromtheResearchFoundationforYoungResearchersGrantoftheUniversityofBasel,Switzerland
+andbytheVoluntaryAcademicSocietyGrant,Basel,Switzerland.
+ConflictsofInterest:A.S.J.declaresnoconflictofinterest.A.A.N.declaresbeingaconsultantand
+advisorand/orreceivingspeakingfeesand/orgrantsand/orservedasaninvestigatorinclinical
+trialsforAbbVie,Almirall,Amgen,Biomed,BristolMyersSquibb,BoehringerIngelheim,Celgene,Eli
+Lilly,Galderma,GlaxoSmithKline,LEOPharma,Janssen-Cilag,MSD,Novartis,Pfizer,PierreFabre
+Pharma,Regeneron,Sandoz,Sanofi,andUCB.S.E.C.declarenoconflictofinterest.L.K.hasreceived
+speakingfeesinapresentationsponsoredbyBoehringerIngelheim.S.M.H.declaresnoconflictsof
+interest.M.K.declaresnoconflictsofinterest.J.-T.M.isandhasservedasadvisorand/orreceived
+speakingfeesand/orparticipatedinclinicaltrialssponsoredbyAbbVie,Almirall,Amgen,BMS,
+Celgene,EliLilly,LEOPharma,Janssen-Cilag,MSD,Novartis,Pfizer,PierreFabre,Roche,Sanofi,and
+UCB.R.D.hasintermittent,projectfocusedconsultingand/oradvisoryrelationshipswithNovartis,
+MerckSharp&Dhome(MSD),Bristol-MyersSquibb(BMS),Roche,Amgen,Takeda,PierreFabre,Sun
+Pharma,Sanofi,Catalym,SecondGenome,Regeneron,Alligator,T3Pharma,MaxiVAXSA,Pfizer,
+andtouchIMEoutsidethesubmittedwork. S.S.declaresnoconflictofinterest. A.N.declaresno
+conflictofinterest.M.P.L.receivesprojectspecificresearchsupport,outsidethescopeisthiswork,
+fromRoche,Novartis,MolecularPartners,andOncobit.P.F.C.declarenoconflictofinterest.L.V.M.
+hasservedasadvisorand/orreceivedspeakingfeesand/orparticipatedinclinicaltrialssponsored
+byAlmirall,Amgen,BMS,Celgene,EliLilly,MSD,Novartis,PierreFabre,Roche,andSanofi.
+References
+1. Chacón,M.;Pfluger,Y.;Angel,M.;Waisberg,F.;Enrico,D.UncommonSubtypesofMalignantMelanomas:AReviewBasedon
+ClinicalandMolecularPerspectives.Cancers2020,12,2362.[CrossRef]
+2. Leiter,U.;Keim,U.;Garbe,C.EpidemiologyofSkinCancer:Update2019.Adv.Exp.Med.Biol.2020,1268,123–139.[CrossRef]
+3. Larkin, J.; Chiarion-Sileni, V.; Gonzalez, R.; Grob, J.J.; Rutkowski, P.; Lao, C.D.; Cowey, C.L.; Schadendorf, D.; Wagstaff, J.;
+Dummer,R.;etal.Five-YearSurvivalwithCombinedNivolumabandIpilimumabinAdvancedMelanoma.N.Engl.J.Med.2019,
+381,1535–1546.[CrossRef][PubMed]
+4. Hamid,O.;Robert,C.;Daud,A.;Hodi,F.S.;Hwu,W.J.;Kefford,R.;Wolchok,J.D.;Hersey,P.;Joseph,R.;Weber,J.S.;etal.Five-year
+survivaloutcomesforpatientswithadvancedmelanomatreatedwithpembrolizumabinKEYNOTE-001.Ann.Oncol.2019,30,
+582–588.[CrossRef][PubMed]
+5. Robert,C.;Grob,J.J.;Stroyakovskiy,D.;Karaszewska,B.;Hauschild,A.;Levchenko,E.;ChiarionSileni,V.;Schachter,J.;Garbe,C.;
+Bondarenko,I.;etal.Five-YearOutcomeswithDabrafenibplusTrametinibinMetastaticMelanoma.N.Engl.J.Med.2019,381,
+626–636.[CrossRef]
+6. Ahmed,B.;Qadir,M.I.;Ghafoor,S.MalignantMelanoma:SkinCancer-Diagnosis,Prevention,andTreatment.Crit.Rev.Eukaryot.
+GeneExpr.2020,30,291–297.[CrossRef]
+Cancers2022,14,3829 20of21
+7. Swetter,S.M.;Tsao,H.;Bichakjian,C.K.;Curiel-Lewandrowski,C.;Elder,D.E.;Gershenwald,J.E.;Guild,V.;Grant-Kels,J.M.;
+Halpern,A.C.;Johnson,T.M.;etal.Guidelinesofcareforthemanagementofprimarycutaneousmelanoma.J.Am.AcadDermatol.
+2019,80,208–250.[CrossRef]
+8. Anderson,M.TechnologyDeviceOwnership: 2015. Availableonline: https://www.pewresearch.org/internet/2015/10/29
+/technology-device-ownership-2015/(accessedon21July2021).
+9. PewResearchCenter.MobileFactSheet.Availableonline:https://www.pewresearch.org/internet/fact-sheet/mobile/(accessed
+on30July2021).
+10. Al-Azzam,M.K.ResearchontheImpactofmHealthAppsonthePrimaryHealthcareProfessionalsinPatientCare.Appl.Bionics
+Biomech.2021,2021,7611686.[CrossRef]
+11. Flaten,H.K.;StClaire,C.;Schlager,E.;Dunnick,C.A.;Dellavalle,R.P.Growthofmobileapplicationsindermatology—2017
+update.Dermatol.OnlineJ.2018,24,1–4.[CrossRef]
+12. Ngoo,A.;Finnane,A.;McMeniman,E.;Soyer,H.P.;Janda,M.FightingMelanomawithSmartphones:ASnapshotofWhereWe
+areaDecadeafterAppStoresOpenedTheirDoors.Int.J.Med.Inform.2018,118,99–112.[CrossRef]
+13. Ouellette,S.;Rao,B.K.UsefulnessofSmartphonesinDermatology:AUS-BasedReview.Int.J.Environ.Res.PublicHealth2022,
+19,3553.[CrossRef][PubMed]
+14. Kassianos,A.P.;Emery,J.D.;Murchie,P.;Walter,F.M.Smartphoneapplicationsformelanomadetectionbycommunity,patient
+andgeneralistclinicianusers:Areview.Br.J.Dermatol.2015,172,1507–1518.[CrossRef]
+15. Freeman,K.;Dinnes,J.;Chuchu,N.;Takwoingi,Y.;Bayliss,S.E.;Matin,R.N.;Jain,A.;Walter,F.M.;Williams,H.C.;Deeks,J.J.
+Algorithmbasedsmartphoneappstoassessriskofskincancerinadults:Systematicreviewofdiagnosticaccuracystudies.BMJ
+2020,368,m127.[CrossRef]
+16. Jaworek-Korjakowska,J.;Kleczek,P.eSkin:StudyontheSmartphoneApplicationforEarlyDetectionofMalignantMelanoma.
+Wirel.Commun.Mob.Comput.2018,2018,5767360.[CrossRef]
+17. Kent,C.NewAnalysisRaisesConcernsoverAccuracyofSkinCancerRiskApps.Availableonline:https://www.medicaldevice-
+network.com/news/skin-cancer-apps/(accessedon28May2022).
+18. deCarvalhoDelgadoMarques,T.;Noels,E.;Wakkee,M.;Udrea,A.;Nijsten,T.Developmentofsmartphoneappsforskincancer
+riskassessment:Progressandpromise.JMIRDermatol.2019,21,e13376.[CrossRef]
+19. SkinVision.Availableonline:https://www.skinvision.com/(accessedon25July2021).
+20. Udrea, A.; Mitra, G.D.; Costea, D.; Noels, E.C.; Wakkee, M.; Siegel, D.M.; deCarvalho, T.M.; Nijsten, T.E.C.Accuracyofa
+smartphoneapplicationfortriageofskinlesionsbasedonmachinelearningalgorithms.J.Eur.AcadDermatol.Venereol.2020,34,
+648–655.[CrossRef]
+21. Deeks,J.J.;Dinnes,J.;Williams,H.C.SensitivityandspecificityofSkinVisionarelikelytohavebeenoverestimated.J.Eur.Acad
+Dermatol.Venereol.2020,34,e582–e583.[CrossRef]
+22. Matin,R.N.;Dinnes,J.AI-basedsmartphoneappsforriskassessmentofskincancerneedmoreevaluationandbetterregulation.
+Br.J.Cancer2021,124,1749–1750.[CrossRef]
+23. Thissen,M.;Udrea,A.;Hacking,M.;vonBraunmuehl,T.;Ruzicka,T.mHealthAppforRiskAssessmentofPigmentedand
+NonpigmentedSkinLesions-AStudyonSensitivityandSpecificityinDetectingMalignancy.Telemed.e-Health2017,23,948–954.
+[CrossRef][PubMed]
+24. Chung,Y.;vanderSande,A.A.J.;deRoos,K.P.;Bekkenk,M.W.;deHaas,E.R.M.;Kelleners-Smeets,N.W.J.;Kukutsch,N.A.
+Pooragreementbetweentheautomatedriskassessmentofasmartphoneapplicationforskincancerdetectionandtheratingby
+dermatologists.J.Eur.Acad.Dermatol.Venereol.2020,34,274–278.[CrossRef]
+25. Nabil,R.;Bergman,W.;Kukutsch,N.A.Conflictingresultsbetweentheanalysisofskinlesionsusingamobile-phoneapplication
+andadermatologist’sclinicaldiagnosis:Apilotstudy.Br.J.Dermatol.2017,177,583–584.[CrossRef][PubMed]
+26. Sangers,T.E.;Wakkee,M.;Kramer-Noels,E.C.;Nijsten,T.;Lugtenberg,M.Viewsonmobilehealthappsforskincancerscreening
+inthegeneralpopulation:Anin-depthqualitativeexplorationofperceivedbarriersandfacilitators.Br.J.Dermatol.2021,185,
+961–969.[CrossRef][PubMed]
+27. Blum,A.;Bosch,S.;Haenssle,H.A.;Fink,C.;Hofmann-Wellenhof,R.;Zalaudek,I.;Kittler,H.;Tschandl,P.Artificialintelligence
+andsmartphoneprogramapplications(Apps):Relevancefordermatologicalpractice.Hautarzt2020,71,691–698.[CrossRef]
+28. Chao,E.;Meenan,C.K.;Ferris,L.K.Smartphone-BasedApplicationsforSkinMonitoringandMelanomaDetection.Dermatol.
+Clin.2017,35,551–557.[CrossRef]
+29. Lucivero,F.;Jongsma,K.R.Amobilerevolutionforhealthcare?Settingtheagendaforbioethics.J.Med.Ethics2018,44,685–689.
+[CrossRef]
+30. Nelson,C.A.; Pérez-Chada,L.M.; Creadore,A.; Li,S.J.; Lo,K.; Manjaly,P.; Pournamdari,A.B.; Tkachenko,E.; Barbieri,J.S.;
+Ko,J.M.;etal.PatientPerspectivesontheUseofArtificialIntelligenceforSkinCancerScreening:AQualitativeStudy.JAMA
+Dermatol.2020,156,501–512.[CrossRef]
+31. Jutzi,T.B.;Krieghoff-Henning,E.I.;Holland-Letz,T.;Utikal,J.S.;Hauschild,A.;Schadendorf,D.;Sondermann,W.;Fröhling,S.;
+Hekler,A.;Schmitt,M.;etal.ArtificialIntelligenceinSkinCancerDiagnostics:ThePatients’Perspective.Front.Med.2020,7,233.
+[CrossRef]
+32. Petty,A.J.; Ackerson,B.; Garza,R.; Peterson,M.; Liu,B.; Green,C.; Pavlis,M.Meta-analysisofnumberneededtotreatfor
+diagnosisofmelanomabyclinicalsetting.J.Am.Acad.Dermatol.2020,82,1158–1165.[CrossRef]
+Cancers2022,14,3829 21of21
+33. Ngoo, A.; Finnane, A.; McMeniman, E.; Tan, J.M.; Janda, M.; Soyer, H.P. Efficacy of smartphone applications in high-risk
+pigmentedlesions.Australas.J.Dermatol.2018,59,e175–e182.[CrossRef][PubMed]
+34. Chuchu, N.; Takwoingi, Y.; Dinnes, J.; Matin, R.N.; Bassett, O.; Moreau, J.F.; Bayliss, S.E.; Davenport, C.; Godfrey, K.;
+O’Connell,S.;etal.Smartphoneapplicationsfortriagingadultswithskinlesionsthataresuspiciousformelanoma. Cochrane
+DatabaseSyst.Rev.2018,12,Cd013192.[CrossRef]
+35. Sun, M.D.; Kentley, J.; Mehta, P.; Dusza, S.; Halpern, A.C.; Rotemberg, V.Accuracyofcommerciallyavailablesmartphone
+applicationsforthedetectionofmelanoma.Br.J.Dermatol.2021,186,744–746.[CrossRef][PubMed]
+36. Maier,T.;Kulichova,D.;Schotten,K.;Astrid,R.;Ruzicka,T.;Berking,C.;Udrea,A.Accuracyofasmartphoneapplicationusing
+fractalimageanalysisofpigmentedmolescomparedtoclinicaldiagnosisandhistologicalresult.J.Eur.Acad.Dermatol.Venereol.
+2015,29,663–667.[CrossRef][PubMed]
+37. Sangers,T.;Reeder,S.;vanderVet,S.;Jhingoer,S.;Mooyaart,A.;Siegel,D.M.;Nijsten,T.;Wakkee,M.ValidationofaMarket-
+ApprovedArtificialIntelligenceMobileHealthAppforSkinCancerScreening:AProspectiveMulticenterDiagnosticAccuracy
+Study.Dermatology2022,238,649–656.[CrossRef]
+38. Phillips,M.;Marsden,H.;Jaffe,W.;Matin,R.N.;Wali,G.N.;Greenhalgh,J.;McGrath,E.;James,R.;Ladoyanni,E.;Bewley,A.;etal.
+AssessmentofAccuracyofanArtificialIntelligenceAlgorithmtoDetectMelanomainImagesofSkinLesions.JAMANetw.Open
+2019,2,e1913436.[CrossRef][PubMed]
+39. EuropeanCommission.MedicalDevices:GuidanceDocument.Availableonline:https://ec.europa.eu/docsroom/documents/
+10337/attachments/1/translations/en/renditions/pdf(accessedon30May2022).
+40. Kessel,K.A.;Vogel,M.M.;Kessel,C.;Bier,H.;Biedermann,T.;Friess,H.;Herschbach,P.;vonEisenhart-Rothe,R.;Meyer,B.;
+Kiechle,M.;etal.MobileHealthinOncology:APatientSurveyAboutApp-AssistedCancerCare.JMIRMhealthUhealth2017,
+5,e81.[CrossRef]
+41. Steeb,T.;Wessely,A.;Mastnik,S.;Brinker,T.J.;French,L.E.;Niesert,A.C.;Berking,C.;Heppt,M.V.PatientAttitudesandTheir
+AwarenesstowardsSkinCancer-RelatedApps:Cross-SectionalSurvey.JMIRMhealthUhealth2019,7,e13844.[CrossRef]
+42. Haenssle,H.A.;Fink,C.;Schneiderbauer,R.;Toberer,F.;Buhl,T.;Blum,A.;Kalloo,A.;Hassen,A.B.H.;Thomas,L.;Enk,A.;etal.
+Managainstmachine: Diagnosticperformanceofadeeplearningconvolutionalneuralnetworkfordermoscopicmelanoma
+recognitionincomparisonto58dermatologists.Ann.Oncol.2018,29,1836–1842.[CrossRef]
+43. Polesie,S.;Gillstedt,M.;Kittler,H.;Lallas,A.;Tschandl,P.;Zalaudek,I.;Paoli,J.Attitudestowardsartificialintelligencewithin
+dermatology:Aninternationalonlinesurvey.Br.J.Dermatol.2020,183,159–161.[CrossRef]
+44. Haggenmüller, S.; Krieghoff-Henning, E.; Jutzi, T.; Trapp, N.; Kiehl, L.; Utikal, J.S.; Fabian, S.; Brinker, T.J.DigitalNatives’
+Preferences on Mobile Artificial Intelligence Apps for Skin Cancer Diagnostics: Survey Study. JMIR Mhealth Uhealth 2021,
+9,e22909.[CrossRef]
+45. Janda,M.;Horsham,C.;Koh,U.;Gillespie,N.;Vagenas,D.;Loescher,L.J.;Curiel-Lewandrowski,C.;Hofmann-Wellenhof,R.;
+PeterSoyer,H.Evaluatinghealthcarepractitioners’viewsonstore-and-forwardteledermoscopyservicesforthediagnosisofskin
+cancer.Digit.Health2019,5,2055207619828225.[CrossRef]

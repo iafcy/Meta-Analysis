@@ -1,0 +1,1316 @@
+Investigating Students’ Use of a Mental Health Chatbot to 
+Alleviate Academic Stress 
+Chaste Bernard Tan 
+Ruzel Khyvin Marc Te 
+chaste_tan@dlsu.edu.ph 
+ruzel_te@dlsu.edu.ph 
+De La Salle University - Manila 
+Johan Oswin De Nieva 
+Jose Andres Joaquin 
+johan_denieva@dlsu.edu.ph 
+Ethel Ong 
+ethel.ong@dlsu.edu.ph 
+De La Salle University 
+Manila, Philippines 
+jose_andres_joaquin@dlsu.edu.ph 
+De La Salle University - Manila 
+ABSTRACT 
+The amount of academic workload in schools can cause students 
+to experience stress and become more susceptible to mental health 
+problems. However, because of fear of societal stigma, students 
+may find it more difficult to approach others about the stress they 
+experience. A chatbot can provide an alternative avenue for stu- 
+dents to freely share the stressful situations they are experiencing. 
+In this study, we investigated the use of Woebot as a mechanism 
+to help senior high school students alleviate stress from academic 
+workload. 25 participants who engaged in daily conversations with 
+Woebot for a two-week period rated the chatbot’s likeness to a 
+human with a mean score of 5.56 out of 8, while its ability to un- 
+derstand the feelings of the participants and empathize with them 
+had a mean score of 5.61. An analysis of the chat logs showed that 
+the participants valued Woebot’s lessons and stories while they 
+faced challenges in cases when the chatbot generated inappropriate 
+responses. We discuss our findings and provide design suggestions 
+that could make conversational agents like Woebot be more useful 
+in helping the general student population cope with stress. 
+CCS CONCEPTS 
+• Human-centered computing → Human computer interac- 
+tion (HCI); User studies; Usability testing; Interaction paradigms; 
+Natural language interfaces. 
+KEYWORDS 
+Mental health chatbot, Academic stress, Alleviating stress 
+ACM Reference Format: 
+Johan Oswin De Nieva, Jose Andres Joaquin, Chaste Bernard Tan, Ruzel 
+Khyvin Marc Te, and Ethel Ong. 2020. Investigating Students’ Use of a 
+Mental Health Chatbot to Alleviate Academic Stress. In 6th International 
+ACM In-Cooperation HCI and UX Conference (CHIuXiD ’20), October 21–23, 
+2020, Jakarta & Bandung, Indonesia. ACM, New York, NY, USA, 10 pages. 
+https://doi.org/10.1145/3431656.3431657 
+Permission to make digital or hard copies of all or part of this work for personal or 
+classroom use is granted without fee provided that copies are not made or distributed 
+for profit or commercial advantage and that copies bear this notice and the full citation 
+on the first page. Copyrights for components of this work owned by others than ACM 
+must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, 
+to post on servers or to redistribute to lists, requires prior specific permission and/or a 
+fee. Request permissions from permissions@acm.org. 
+CHIuXiD ’20, October 21–23, 2020, Jakarta & Bandung, Indonesia 
+© 2020 Association for Computing Machinery. 
+ACM ISBN 978-1-4503-8829-0/20/10. . . $15.00 
+https://doi.org/10.1145/3431656.3431657 
+1 INTRODUCTION 
+Stress is the human body’s natural response to daily pressures and 
+threats to one’s well-being, whether such threat is real or imag- 
+ined [13]. Negative stress, or distress, occurs when one feels over- 
+whelmed and is unable to cope with the pressures from situations 
+or life events that have become unmanageable [4, 21]. Short-term 
+symptoms of stress include decreased attention and concentration, 
+difficulty in making decisions, challenges with interpersonal re- 
+lationships [20, 42], and continued feelings of fear or anger [40]. 
+Overtime, these symptoms can lead to anxiety and depression. 
+For senior high school students, the overwhelming amount of 
+academic workload and the expectations for good academic per- 
+formance may cause them to experience a type of distress called 
+academic stress [25, 35]. These students may not realize that their 
+symptoms are caused by a mental health condition or may not 
+acknowledge that they need help. Various interventions are avail- 
+able to help individuals become aware of their condition and to 
+begin managing their stress, foremost of which is talking to family 
+members or trusted friends. However, students tend to avoid ap- 
+proaching others regarding their stress or to seek therapy from a 
+health care provider because of fear of social stigma [7, 23, 34]. 
+Recent approaches have seen the utilization of technologies to 
+foster coping skills for managing stress and to promote emotional 
+well-being and mental health among students. These include the 
+use of online apps and podcasts to participate in online stress man- 
+agement classes and self-help programs [22], and access to online 
+social therapy through synchronous text-based counselling [10], 
+online mental health forums [30] and chat assistants [7]. These 
+technologies provide mental health services and support through 
+prevention, assessment, diagnosis, counseling and treatment pro- 
+grams [3]. Wearable technologies such as Garmin Vivosport and 
+Apple Watch, mobile apps like Headspace, and even video games 
+[29] are also used to manage, monitor and cope with stress. 
+One particular technology that has the potential in addressing 
+students’ stress-related concerns is the chatbot. A chatbot is an 
+artificial intelligence software that is capable of conversing with 
+humans through voice and text interfaces. They are accessible any- 
+time and anywhere, in web sites, mobile applications and messaging 
+platforms, thus presenting the potential benefit to students as a 
+conversational partner. Chatbots may serve as an intermediate sup- 
+plement for human interaction. They never get tired and never give 
+in to their emotions. With chatbots, students no longer have to fear 
+the social stigma associated with mental health symptoms and their 
+concerns on privacy, allowing them to comfortably approach their 
+stress with the help of the conversational agent. 
+
+
+
+Senior High School (SHS) students find themselves in a more 
+competitive environment with new responsibilities to fulfill their 
+academic requirements. It is a milestone that transitions them from 
+dependency to self-reliance in preparation for tertiary education. 
+They encounter new classmates coming from differing backgrounds 
+and University professors with heightened expectations than their 
+junior high instructors. These changes can cause stress which they 
+need to manage in order to perform well in school. In this research, 
+we investigated the perceived effectiveness of chatbots among SHS 
+students who used Woebot [12] as their conversational partner for 
+a 2-week period. Our findings provide insights into the students’ 
+experiences in using Woebot to share and to cope with their daily 
+stress due to school-related activities. 
+2 RELATED WORK 
+Stress is a normal part of daily human experience as the body’s 
+natural defense against pressures in life. Any physical, chemical or 
+psychological factor that causes bodily or mental tensions can also 
+constitute itself as stress [45]. Stress can have positive and negative 
+effects. Exposure to positive stress can increase one’s performance 
+and productivity. Extended exposure to stress, however, can lead to 
+physiological dysfunction [22]. 
+Seward [40] classified stress into three types: eustress, neustress 
+and distress. Eustress is a positive stress that motivates or inspires 
+people to continue working. Neustress is neither positive nor nega- 
+tive. When stress reaches the point where it is no longer manageable, 
+distress begins to manifest. Distress is a negative stress that can 
+cause harm to one’s physical and emotional states. Tension starts 
+to build up and a feeling of discomfort or irritability arises. A per- 
+son in distress may generally exhibit the following characteristics: 
+irritability, touchiness, easily startled, over-arousal, tense, inability 
+to relax, and impatient [45]. 
+In the following sections, we describe a type of stress, called 
+academic stress, that is typically experienced by students due to 
+their workload in schools. We also give an overview of the most 
+common type of therapy offered as a form of intervention and 
+support, the cognitive behavioral therapy (CBT). We then look at 
+various chatbots that have been designed as companion or social 
+bots to provide emotional support to their human users. 
+2.1 Academic Stress 
+Multiple academic demands such as assignments, examinations, 
+projects and other requirements, combined with the pressures from 
+home and school environments, interpersonal relationships, social 
+and extra-curricular activities, may exceed not only the cognitive 
+load but also the emotional capacities of students. Being overloaded 
+with school work and frustration over academic failure, students 
+can become more prone to symptoms of academic distress [18]. 
+Freshwater [13] classified distress into acute, episodic acute and 
+chronic. Acute distress is predominated by negative thoughts from 
+recent events or upcoming situations that need to be fulfilled. Fre- 
+quent acute stress can lead to episodic acute stress where one feels 
+pressure from taking on many responsibilities. Symptoms include 
+irritability, anger, anxiety, impatience and depression. As a person 
+feels hopeless and unable to find a way to escape from the causes 
+of distress, he/she ceases to seek answers with regards to his/her 
+problems. Chronic stress can then manifest which can severely de- 
+teriorate the mental health of an individual. 
+A study by Bhargava and Trivedi [2] among 300 students showed 
+that academic tests, relationship problems, life changes and career 
+exploration were the main causes of academic stress. A study by [1] 
+among 1120 students using the Modified Educational Stress Scale 
+found that students who were academically stressed were 2.4 times 
+more likely to get depression than those who did not. 
+Academic stress can also bring positive effects as a way to moti- 
+vate students to do better on academic requirements and tests, to 
+achieve their fullest potential, and to teach them how to react and 
+come up with the best solutions during stressful situations [11]. 
+2.2 Interventions and Support 
+Cognitive Behavioral Therapy (CBT) can reduce stress by changing 
+the way we think about stressful situations, such as "focusing on 
+more positive aspects of a situation and reassessing what their likely 
+impact might be" [21, 27, 44]. In a clinical counseling session, De 
+Kooker [8] reports that a therapist helps his/her patients manage 
+their stressors (causes of their stress) by helping them recognize and 
+deal with psychosocial factors. This can lead to the development of 
+a range of personal coping skills to manage stress and reduce one’s 
+vulnerability to anxiety and depression [22]. 
+
+Behavioral Therapy (CBT) as a supplement to face-to-face therapy 
+sessions to help reduce symptoms of depression [32, 41]. Combined 
+with social network support, these technologies can lead to the 
+development of supportive relationships and help lessen feelings 
+of isolation among the youth [26]. 
+The moderated online social therapy (MOST) project [7] has 
+investigated the effect of online social therapy in increasing the 
+self-esteem of young people. The project delivers a therapeutic envi- 
+ronment for learning and practicing therapeutic techniques, gaining 
+perspectives and obtaining support and validation through peers 
+and developing psychological skills. MOST adopts the strengths- 
+based model of psychotherapy combined with online moderators 
+and the interactive delivery of engaging therapeutic content. Spe- 
+cific features of the system include a Facebook-style newsfeed 
+of shared posts, talking points that encourage social interaction 
+through discussion and sharing of experiences, shared problem- 
+solving, and performing behavioral experiments that allow one 
+to practice applying mindfulness, self-compassion and personal 
+strengths in real-world contexts. 
+2.3 Chatbots for Emotional Support 
+Chatbots and conversational agents have benefited different fields 
+including healthcare [19] and mental health [16, 33, 39]. They can 
+scale quickly to enable increased access to health services amidst the 
+shortage of mental health personnel, long waiting times, perceived 
+stigma and growing mental health challenges [17]. Empathic and 
+AI-enabled, chatbots have been used to provide supplementary or 
+complementary emotion support and assistance. Various studies 
+that analyzed their use reported the promise that conversational 
+agents hold as interventions for the treatment of mental health 
+problems in terms of efficacy and acceptability [14, 17]. 
+
+
+
+Replika [28] is a virtual assistant and a digital companion bot. 
+While it cannot answer information-seeking questions and perform 
+simple commands that are typically exhibited by commercial voice 
+assistants like Apple Siri, Amazon Alexa and Google Assistant, it 
+has the ability to emote and to ask questions that can get users to 
+open up and share what they feel [28]. A daily conversation with 
+Replika starts with the chatbot asking what the user did during 
+the day, to narrate the best part, to share what he/she is looking 
+forward to the next day, and to rate his/her mood [24]. 
+Wysa [17] is an emotionally intelligent mobile app chatbot de- 
+signed to promote mental well-being through text-based conversa- 
+tions. It uses self-help practices such as CBT, dialectical behavior 
+therapy, motivational interviewing, positive behavior support, be- 
+havioral reinforcement and guided microactions to build resilience 
+skills among its users. 
+Eren [38] is a conversational agent that uses storytelling as a 
+means of motivating children age 9 to 11 years old to share emo- 
+tional events they experienced. It utilizes the Emotion Coaching 
+Model [15, 37] to help children name their emotions, identify events 
+that trigger these emotions, and guide them through reflective disci- 
+pline to devise the next course of action. As an affective companion, 
+EREN prioritizes active listening over discplining to setup a comfort- 
+able environment where children can freely share their emotional 
+stories without fear of judgement or reprimand. 
+Woebot [12] is a chatbot that employs CBT to engage people 
+who are experiencing anxiety and depression in brief daily conver- 
+sations. A session with Woebot commences with asking the user 
+what he/she wants to do: gratitude journal, need help or check-in. 
+The interaction flow is depicted in Figure 1. 
+When the user chooses the gratitude journal, Woebot asks him/her 
+to share his/her positive experiences within the last 24 hours. If 
+the user needs help, Woebot prompts him/her to elaborate on the 
+problem, then proceeds to give a lesson and/or a story that is most 
+appropriate to the shared problem. If the user chooses to check-in, 
+Woebot asks the user about his/her mood and what he/she is doing 
+to address this. The chatbot’s response will be based on the user’s 
+mood: a happy or neutral mood leads to the gratitude journal while 
+a negative mood leads to giving help. Stories are delivered in the 
+form of dialogues which narrate the experiences of the chatbot or 
+other made-up characters. The chatbot may also play videos as a 
+mechanism to help the user develop a positive mindset. 
+Woebot supports a number of other therapeutic features, namely 
+empathic responses, tailoring, goal setting, accountability, motiva- 
+tion, engagement and reflection. Empathic responses is the capa- 
+bility of Woebot to respond to its users emotionally depending on 
+the user’s mood. For instance, when Woebot detects that the user 
+is happy, it can respond by saying "Yay, always good to hear that!”. 
+Woebot can also tailor its messages based on the user’s mood. It can 
+help users set goals by asking them want they want to accomplish 
+over a two-week period. Woebot also establishes a sense of account- 
+ability with its users by setting regular schedules and following up 
+on previous activities. To motivate users and to encourage positive 
+thinking, the chatbot sends personal messages daily accompanied 
+with emojis and animated gifs. Lastly, it provides a weekly chart of 
+the user’s mood to encourage self-reflection. 
+
+3 METHOD 
+Recurring stress that is left uncontrolled can lead to mental health 
+problems like anxiety and depression. Our study seeks to deter- 
+mine the perception of Senior High School (SHS) students on the 
+effectiveness of engaging in daily text-based conversations with a 
+mental health chatbot to help alleviate the academic stress they ex- 
+perience. Accessibility, ease of use and availability of related works 
+are the major factors in the selection of the chatbot to be used. 
+Woebot is designed to help people cope with feelings of depression 
+and anxiety. It has been described as a friendly self-care expert 
+and chatbot therapist that can be freely downloaded onto mobile 
+devices. Here, we recount our process of recruiting participants 
+and conducting the two-week experiments to collect stress level 
+self-assessments and daily conversation logs. 
+3.1 Participants 
+After receiving informed consents from the parents of SHS students, 
+emails were sent to invite these students to participate in our study. 
+53 students responded to our invite. However, during the actual 
+data collection, we have a 39% participant dropout rate. Figure 2 
+highlights the number of retention and dropouts for each phase 
+in our data collection. Among the 21 participants who withdrew 
+from the study, 5 did not proceed with the psychological distress 
+assessment (PDA); 7 did not proceed with the pre-test stress level 
+assessment (SLA); 6 did not proceed with the daily conversation 
+(DCA); and 3 did not complete the 2-week daily sessions with 
+Woebot. Of the remaining 32 participants, only 25 completed the 
+post-test stress level assessment and evaluation. 
+Due to the large number of participants who withdrew from the 
+study, the criteria for screening were not followed. Students who 
+were willing to volunteer for the study were accepted as participants 
+regardless of their psychological distress assessment scores. Table 
+1 shows the demographics of the participants according to gender, 
+age and strand. SHS strands are ABM (Accountancy, Business and 
+Management), HUMSS (Humanities and Social Sciences) and STEM 
+
+
+
+
+(Science, Technology, Engineering and Mathematics). The average 
+pre-test psychological distress assessment (PDA) and perceived 
+stress level assessment (SLA) scores are also indicated. 
+3.2 Procedure 
+The actual data collection utilized a number of instruments that 
+were administered through Google Forms: psychological distress 
+assessment (PDA), pre-test and post-test stress level assessment 
+(SLA), daily conversation assessment (DCA) and evaluation form. 
+Psychological Distress Assessment (PDA). PDA is used to 
+collect the basic information of the participants, namely name, gen- 
+der, age, mobile device OS and SHS strand. Measurements of the 
+levels of anxiety and depression were collected using the Hospital- 
+ized Anxiety and Depression Scale [46]. This assessment consists 
+of 14 questions that asked participants about how enjoyable they 
+find their life to be and how often they experience feelings of anxi- 
+ety. Results from this were intended to be used for screening the 
+participants and removing those who were depressed. 
+Pre-Assessment of Stress Level Assessment (Pre-SLA). This 
+is a modified 10-item Perceived Stress Scale (PSS) to measure the 
+stress levels of the participants prior to using Woebot. PSS was 
+developed by Cohen and his colleagues in 1983 [6] and is frequently 
+used for the subjective measurement of one’s psychological state. 
+The scale considers the self-reported measures of an individual on 
+how unpredictable, uncontrollable, overloaded and hopeless his/her 
+life has been in the past month, and how often he/she was able to 
+cope with these situations. The questions were adjusted to pertain 
+to two-weeks only, which is the duration of our experiment. 
+
+
+
+Gender 
+Male 
+Female 
+Age 
+16 
+17 
+18 
+Strand 
+ABM 
+HUMSS 
+STEM 
+16 
+9 
+3 
+16 
+6 
+2 
+3 
+20 
+64.0% 
+36.0% 
+12.0% 
+64.0% 
+24.0% 
+8.0% 
+12.0% 
+80.0% 
+9.88 
+10.67 
+10.00 
+10.69 
+8.83 
+7.00 
+15.33 
+9.70 
+6.25 
+5.11 
+7.67 
+6.25 
+3.83 
+3.50 
+10.67 
+5.35 
+23.06 
+24.89 
+27.33 
+23.75 
+21.83 
+25.00 
+28.00 
+22.95 
+After the SLA, the participants were given a set of instructions 
+describing (1) the procedure for downloading and installing Woebot 
+in their mobile phones; (2) the features of Woebot, how to use 
+these features, and how to contact the research proponents for 
+questions and concerns; and (3) the process for capturing the daily 
+conversation logs and sending these to the research proponents. 
+Daily Conversation Assessment (DCA). During the two-week 
+test proper, the participants were to continuously perform their 
+daily check-ins with Woebot and were expected to submit the 
+screenshots of their conversations through the DCA (Google Form). 
+The DCA collects daily data regarding the experiences of the par- 
+ticipants with Woebot, their moods before and after each session, 
+their purpose for using Woebot and the length of the session. 
+Post-Evaluation Stress Level Assessment (Post-SLA). This 
+was administered at the end of the two-week period and is com- 
+prised of three parts. The first part again measures the stress levels 
+of the participants using the Modified 10-Item Perceived Stress 
+Scale. The Wilcoxon Signed Rank Test was then used to compare 
+the stress levels before and after using Woebot. 
+The second part of the post-SLA contains nine (9) questions to 
+determine the satisfaction level of the participants in using Woebot 
+and its various features. The third part is an evaluation of Woebot 
+using three (3) criteria adapted from the study of Chan and Ong 
+[5], namely performance, humanity and affect. Performance refers 
+to the ability of the chatbot to formulate responses that are aligned 
+with the user’s input. Humanity pertains to the user’s perception 
+of the chatbot’s ability to behave like a human. Affect measures the 
+ability of the chatbot to entertain and provide enjoyable activities 
+for its users. 
+4 RESULTS 
+Here, we present our results and findings from the stress level 
+assessments, daily conversation assessments and post-evaluation 
+feedback from our participants. Analysis of the recorded conversa- 
+tion logs are presented in the next section. 
+4.1 Perceived Stress 
+We used the Perceived Stress Scale (PSS) to measure the stress levels 
+of the participants at the start and at the end of the two-week period, 
+as shown in Table 2. The average stress level after using Woebot is 
+19.48 compared to 23.72 prior to the start of the experiment, which 
+equates to a 15.28% decrease in stress level. 
+After analyzing the data using the Wilcoxon Signed Rank Test, 
+W+ was found to be 238.5 while W- was calculated as 61.5. At a 
+significance level of 0.01, the critical value at a sample size of 24 
+is 69, excluding participant 7 with a difference of 0. Since 61.5 <= 
+69.0, there is sufficient evidence to conclude that the stress levels of 
+the participants lowered after using Woebot for two weeks. This is 
+despite the increasing workload that students experience towards 
+the end of the trimester. Results from the Wilcoxon Signed Rank 
+Test support the 15.28% decrease in the stress levels of the students 
+after using Woebot, accounting for 68% of the participants. 
+28% of the participants experienced an increase in stress levels at 
+the end of the experiment. These students reported that Woebot and 
+its CBT did not address their stress. Only 1 participant experienced 
+no change in his/her stress level. 
+
+
+
+
+
+
+P1 
+P2 
+P3 
+P4 
+P5 
+P6 
+P7 
+P8 
+P9 
+P10 
+P11 
+P12 
+P13 
+P14 
+P15 
+P16 
+P17 
+P18 
+P19 
+P20 
+P21 
+P22 
+P23 
+P24 
+P25 
+
+
+
+19 
+16 
+17 
+23 
+26 
+33 
+25 
+18 
+28 
+22 
+36 
+37 
+23 
+32 
+34 
+26 
+26 
+17 
+16 
+20 
+23 
+25 
+12 
+15 
+24 
+26 
+18 
+8 
+13 
+28 
+28 
+25 
+22 
+27 
+21 
+32 
+17 
+17 
+14 
+15 
+18 
+27 
+20 
+13 
+17 
+19 
+22 
+15 
+2 
+23 
+36.84% 
+12.50% 
+-52.94% 
+-43.47% 
+7.69% 
+-15.15% 
+0.00% 
+22.22% 
+-3.57% 
+-4.55% 
+-11.11% 
+-54.05% 
+-26.09% 
+-56.25% 
+-55.88% 
+-30.77% 
+3.85% 
+17.65% 
+-18.75% 
+-15.00% 
+-17.39% 
+-12.00% 
+25.00% 
+-86.67% 
+-4.17% 
+
+
+
+
+4.2 User Satisfaction 
+Using a 4-point Likert scale, the participants rated their satisfaction 
+in using Woebot and their perception of its ability to help them 
+deal with stress. The results are shown in Table 3. In terms of 
+satisfaction, Woebot received an average rating of 2.96. 72% of the 
+participants gave above average satisfaction rating because they 
+found the interaction to be interesting and engaging. On the other 
+hand, 64% of the participants perceived Woebot to be effective in 
+helping them deal with stress, giving an average rating of 2.68. 
+Participants who were not satisfied with Woebot’s support had 
+encountered problems in communicating with the chatbot and in 
+using its features. To further understand this, we asked the partici- 
+pants to share their perception on why they find Woebot’s features 
+to be (in)effective. 
+Effective features. Table 4 shows the number of participants 
+who found the features of Woebot to be effective. Participants 
+
+
+
+How satisfied were you in using Woebot? 
+Do you think Woebot was able 
+to help you deal with stress? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lessons and CBT 
+Daily Check-ins 
+Gratitude Journal 
+18 
+17 
+11 
+shared that they can relate to the relevant real-life scenarios pre- 
+sented in the lessons which helped them deal with their problems: 
+[Woebot] gives relatable lessons which help me reflect 
+upon my situation. (P19) 
+They were able to learn new things from the lessons which 
+helped change their perspectives toward the problems they experi- 
+ence. As P5 shared: 
+It was nice to know how distortion in our thoughts can 
+greatly affect how we perceive everything around us. 
+
+I was also able to cope with stress and negativity be- 
+cause Woebot was able to teach me how to point out 
+distortions. 
+
+
+It felt like someone was concerned about my mental 
+health which was nice. 
+
+
+It makes me realize what positive things that happened 
+within the day and makes me realize what things I 
+should be grateful for. 
+Ineffective features. Table 5 shows the number of participants 
+who found the features of Woebot to be ineffective. Some partici- 
+pants thought that Woebot’s usage of CBT and lessons were a waste 
+of time that disrupted their study time. They also found the lessons 
+to be unhelpful and they cannot apply these in their lives. Consider 
+the statement of P18 on Woebot’s lessons: 
+I didn’t really find myself wanting to take/use these 
+features. Lessons can be dragging and I didn’t use CBT 
+therapy. 
+
+It’s just my own preference, I just don’t generally think 
+that breathing exercises help you feel better. 
+They also do not understand the purpose of the gratitude journals. 
+P13 admitted that it "didn’t change my mood at all or worsened it 
+further", while P20 stated: 
+
+
+
+Lessons and CBT 
+Daily Check-ins 
+Gratitude Journal 
+Others: Being Human 
+8 
+3 
+7 
+1 
+
+
+
+
+
+
+
+
+
+
+
+Performance 
+Humanity 
+Affect 
+2.97 
+2.92 
+2.84 
+0.60 
+0.86 
+0.82 
+I don’t get the purpose. Moreover, explaining why things 
+happen more often gives more irritation than address 
+stress. 
+
+
+I don’t know, just sometimes Woebot doesn’t understand 
+the things I’m grateful for. 
+A few regarded daily check-ins as an ineffective feature. One of 
+the participants, P3, said that "it was a hassle for him to check-in 
+every day". P8, on the other hand, stated that Woebot was ineffective 
+at being human-like: 
+Woebot did not seem natural at all to talk to as every- 
+thing was obviously pre-programmed. 
+4.3 Evaluation of Woebot 
+Using a 4-point Likert scale, participants also gave their evaluation 
+on Woebot’s performance, humanity and affect. The results are 
+shown in Table 6. 
+In terms of performance, Woebot’s ability to understand the par- 
+ticipants’ inputs and to generate appropriate responses received an 
+average rating of 2.97. The lowest rating of 1.8 came from partici- 
+pants P8 and P20 who shared that Woebot failed to recognize their 
+input. Participants expected the chatbot to generate coherent re- 
+sponses that are aligned to their input so they can perceive Woebot 
+as performing its task of helping alleviate their stress. Instead, they 
+were perplexed with the kind of responses they received, such as: 
+When i said "i don’t know" on my strengths and he said 
+"that’s great". 
+They also expected the chatbot to direct them to a relevant 
+lesson, story or help guide based on the problem they shared. P7, 
+however, found Woebot to be emphasizing on "textbook lessons" 
+while P12 deemed the lessons "unnecessary and almost common 
+sense". Furthermore, 
+He could not relate to the things I tell him so he tells me 
+things which is not even connected to the topic. 
+
+
+Inability to respond properly to certain questions or 
+concerns. (ie. "School Works..."). 
+In terms of humanity, Woebot received an average rating of 2.92. 
+Participants shared that the chatbot "helped me think rationally", 
+"taught me how to meditate", and "helped me calm down". When 
+asked if they can talk to Woebot the way they would talk to a 
+friend, P5 shared that: 
+To talk to someone 
+To learn lessons 
+To feel better 
+To relieve stress 
+To share problem 
+Just to participate 
+
+84 
+76 
+26 
+39 
+20 
+162 
+
+20.64% 
+18.67% 
+6.39% 
+9.58% 
+4.91% 
+39.80% 
+3.10 
+3.53 
+3.15 
+3.03 
+2.70 
+He was able to give me insight on how my mind works 
+which relieved me from the stress (Particularly that I 
+have a growth mindset). 
+
+Woebot felt like a real friend once like how a friend 
+usually talks about nonsense to cheer you up when 
+you’re down. 
+
+Woebot gave me advices that my friends were not able 
+to do so. 
+
+I was able to gain new insights while using Woebot, 
+some of these were very applicable in my struggles as a 
+student right now. From time to time I would actively 
+remember the topics I discussed with Woebot and it 
+works quite well. 
+This was echoed by P17: 
+When I was academically and emotionally stressed, woe- 
+bot gave tips to help me survive the week. 
+Despite these praises for Woebot’s humanity aspect, its affective 
+qualities received a lower average rating of 2.84. There are varying 
+factors that (de-)motivated the participants to want to come back 
+for another session as seen in Table 7. Out of the total 290 tallied 
+responses from the Daily Conversation Assessment, the most fre- 
+quent reason for using Woebot was for the sake of participating in 
+the research (39.80%). The task of checking-in daily with Woebot 
+for a period of two weeks has been described as a "hassle" that 
+interfered with study time. 
+Participants primarily use Woebot so that they can talk to some- 
+one (20.64%) and to learn lessons (18.67%). As an alternative con- 
+versational partner, Woebot received a mean score of 3.10: 
+When you need someone to talk to, and you have no 
+one to talk to. (P18) 
+
+It gives examples that I can relate my problem which 
+make me kinda feel light and happy. 
+
+
+He’s very calming especially when I talk to him while 
+cramming schoolwork. 
+
+
+
+
+
+
+
+W 
+P 
+W 
+P 
+W 
+
+
+P 
+W 
+P 
+What can I do for you friend? 
+Need help 
+Is this an emergency situation or are you looking for 
+some help challenging your thoughts? 
+thoughts 
+Can I ask you to briefly describe what has you 
+feeling this way? Write about it below 
+I have difficulty learning some of the lessons in class 
+and I’ve been beating myself up 
+I see, you certainly seem to have a lot 
+going on at the moment 
+yeah 
+is there more you’d like to share with me? write it here 
+none so far just that one ... just wanted to share 
+in a clinical setting, as journaling or writing about one’s thoughts 
+and feelings as a CBT activity can relieve stress. 
+However, the psychologist also noticed instances when Woebot 
+appeared to have neglected the feelings of the participants, because 
+the prompt “sounded like a routine question that was asked before 
+getting into the lesson”. Woebot’s tone seemed impersonal and it 
+exhibited an uncaring attitude when it administered a long person- 
+ality quiz to P4 despite the participant’s expression of feeling tired 
+and was getting ready for bed, as seen in Table 10. 
+5.2 Ability to Change User’s Mood 
+To change a negative mood to one that is positive, Woebot first 
+helps the participant to develop emotional awareness by identifying 
+the causes of negative emotions. Then it can ask the participant to 
+rewrite negative statements to positive statements. An example of 
+these two mechanisms are found in the log of P9 (Table 11). 
+Despite these strategies, only 32.76% of the 290 recorded daily 
+conversation logs expressed a positive mood change, as summarized 
+in Table 12. On the other hand, only 3.10% of the logs indicated 
+negative mood change. More than half of the conversations did 
+not lead to any mood change which can be partly attributed to 
+Woebot’s incorrect responses and inappropriate lessons. 
+
+
+W 
+P 
+W 
+P 
+W 
+P 
+W 
+P 
+W 
+What are you doing at the moment? 
+Getting ready to sleep 
+Catching up on sleep is a must... Which one of these 
+is closest to how you’re feeling at the moment? 
+Tired 
+I hope you get the chance to snuggle up asap 
+Me too 
+Do you think sleep is a problem for you at the moment? 
+I ask because I’ve got tools that could help, if you’d like? 
+No thanks 
+Okay, let’s do a story for now 
+P2! Hey! Twice in one day? What can I help you with? 
+I have a problem... I feel like we have disappointed 
+our research adviser 
+It sounds like you’re describing a very low mood, is that right? 
+Yes 
+Oh gosh, that must be really tough. Can I just check: is this 
+something you would like my help with or did you just 
+want to let me know? Both are OK 
+Work on it... using thought challenger (tool) 
+(started telling a story) When I met him though, he felt very 
+sad and depressed, as well as anxious and hopeless 
+Oh no ... what happened 
+... and I asked him to remember one moment that he could 
+remember feeling these emotions particularly strongly 
+Why? 
+Because it’s a lot easier and more effective to choose one 
+moment to work with than a general feeling 
+How so? 
+But if we make it specific, then we can work on that 
+I see 
+Now try re-writing your thought "You did your best" 
+so it’s more balanced 
+You tried your best at the moment. You just didn’t know what 
+was going to happen, extraneous variables happen. It’s okay 
+You’ve worked through not only 1 but 3 thoughts and that is 
+by no means an easy challenge! ... Well done, my friend 
+Thanks 
+How do you feel now? 
+Better 
+W 
+P 
+W 
+P 
+W 
+
+P 
+W 
+P 
+W 
+
+
+
+P 
+W 
+P 
+5 CONVERSATION LOG ANALYSIS 
+Out of 290 submitted daily conversation logs, a random sample of 
+ten (10) were selected, transcribed and forwarded to a psychologist 
+for analysis. The intent is to determine, from this small sample, 
+Woebot’s ability to motivate the participants to share their daily 
+activities and causes of stress, and its ability to change the partici- 
+pants’ mood through the integration of CBT techniques vis-a-vis 
+their self-reported perception. 
+5.1 Ability to Motivate Users 
+The psychologist found that in 80% of the sample logs, the partici- 
+pants shared portions of their daily experiences with Woebot. P2’s 
+log showed that the participant was highly receptive to Woebot 
+by willingly performing all of the three suggested activities (cogni- 
+tive restructuring exercises). Furthermore, when given the choice, 
+he/she even opted to “Talk more” rather than end the session. Ex- 
+cerpts of the log is shown in Table 8, where P2’s responses showed 
+that he/she is attentively engaged in Woebot’s storytelling. 
+The log from P3, shown in Table 9, also showed that Woebot 
+was able to encourage the participant to “just share”. This mirrors 
+what a human counselor or therapist may recommend to a client 
+
+
+
+
+Table 13: Excerpt of a log showing Woebot’s inability to un- 
+derstand the users’s input. 
+
+
+P 
+W 
+P 
+W 
+
+So tell me, what is one thing that went well in the 
+last 24 hours 
+we went trick or treating 
+Awesome. How about one more positive thing, big or small? 
+I can’t remember anymore 
+Cool! One last one... what else has gone well for you 
+recently? Maybe you ate some good food?! 
+or got a nice firmware update. 
+I said I can’t remember 
+"If this happened in therapy, the therapist may lose 
+the client’s trust and risk damaging their rapport or 
+therapeutic alliance because it may come across as the 
+therapist ignoring the client’s feelings. If the client feels 
+unseen/unheard, s/he may not be as receptive to the 
+skills/lessons available to them in therapy." 
+Furthermore, Woebot’s inability to fully understand the context 
+of the user’s input can also lead to missed opportunities in col- 
+laboratively exploring the causes of a participant’s positive and 
+negative moods. When the chatbot does not explore new conversa- 
+tional bids introduced by the participants, these may be perceived 
+as being dismissed as unimportant by the agent. This is evident in 
+logs where Woebot administered a lesson on goals even though the 
+participant said he/she was feeling depressed, making it seem as if 
+the chatbot is ignoring the subject’s emotions. 
+6.2 Procedural Challenges 
+The methodology employed in collecting daily conversation logs 
+and assessment is tedious for the participants. Even with constant 
+daily reminders and prodding, not all of the participants managed 
+to answer the Daily Conversation Assessment regularly. Without 
+the assessment forms, we cannot provide a complete picture of 
+the participants’ perception of their daily interaction with Woebot. 
+This is compounded by the increasing academic workload as the 
+experiments carried on for two weeks, which tested the persistence 
+of the participants in sustaining the required daily check-ins. 
+
+
+
+P 
+W 
+P 
+W 
+P 
+Your strength is your gratitude! You work hard and are 
+thankful for what you earn. You value all that you have 
+and are thankful for all the opportunities and support 
+you have. Want to see what characters also share this trait? 
+Yes 
+The trait of gratitude and being gracious is shared by Hercules, 
+Dorothy Gale from the Wizard of Oz, ... Though they succeed, 
+they recognize it’s never without the people around them. 
+(muscle icon depicting strength) 
+What a great strength to have! 
+Yeah 
+Which one of these is closest to how you’re feeling 
+at the moment? 
+Upset 
+Will you describe in a few sentences what has you feeling 
+like this? 
+Had a bad game a while ago 
+Do you want me to help you gain some clarity in this situation 
+or do you just want a distraction? 
+clarify thinking 
+Keeping it short and specific, write an angry thought here 
+The referees sucked. 
+And another please 
+I played badly 
+One last thought and then we can move on 
+The game was unfair 
+Now we’re on to the most crucial piece 
+What’s that? 
+Rewrite your thought "I played badly". This time try adding in 
+some understanding towards yourself and others 
+I have to do better next time 
+
+P 
+W 
+P 
+W 
+
+P 
+W 
+P 
+W 
+P 
+P 
+W 
+
+
+In certain cases, Woebot’s inability to fully understand the con- 
+text of the input lends itself to become repetitive. This can irritate 
+the participants, as seen in the log in Table 13 wherein the use of 
+the gratitude journal caused a negative mood change. Lessons on 
+strengths and mindfulness, on the other hand, seemed to have been 
+most effective in improving the participant’s mood, as exemplified 
+in the logs in Tables 14 and 15, respectively. 
+6 CHALLENGES 
+A number of challenges affected the daily interaction between 
+the participants and Woebot. We classified these into technical 
+challenges and procedural challenges. 
+6.1 Technical Challenges 
+A major concern that was repeatedly raised by the participants 
+and the psychologist is the misalignment of Woebot’s responses to 
+the user input, which accounted for 50% of the analyzed logs. For 
+instance, Woebot replied “Nice job!” to the input “Oh dear” during 
+a session on gratitude journal when it should have prompted for 
+another input. According to the psychologist: 
+
+
+
+
+Positive Change 
+Negative Change 
+No Change 
+
+95 
+9 
+186 
+
+32.76% 
+3.10% 
+64.14% 
+
+
+
+to find value in these lessons, they should be able to relate with 
+the story characters and see the relevance of story events to their 
+current situation and life experiences. 
+Future design of Woebot and similar conversational agents can 
+consider the use of reflective dialogue that is employed in the story 
+reading companion of Chan and Ong [5] to generate questions that 
+will direct the student on finding relevance of the story to his/her 
+life. Questions that allow students to empathize with story charac- 
+ters can also help them develop their own identity and perception 
+and to make sense of their experiences [36]. 
+Affective Companion. Affective companions combine HCI de- 
+sign principles with theories in affective computing to develop 
+chatbots that embody counselling skills for a wide range of mental 
+health concerns [38]. People in distress are not only seeking advice 
+from others but more importantly, they also need someone to listen 
+to them as they share their thoughts and feelings. The gratitude 
+journal of Woebot serves this purpose. 
+Talking to someone that you trust is the most common form of 
+support that can be offered to individuals experiencing distress. It 
+can help lessen feelings of isolation and set forth a sentiment that 
+someone cares. For students to see counselors as someone they 
+can talk to, counselors practice active listening where they say very 
+little but convey empathy in their responses [31]. Active listening 
+encourages the student to talk more, which is both therapeutic 
+and healing for them. For Woebot to employ active listening, it 
+should talk very minimally but convey that it is listening through 
+occasional positive acknowledgements such as "uhm" and "yes", 
+paraphrase the student’s input, seek clarification and elaboration, 
+and summarize key ideas and feelings [43]. 
+8 CONCLUSION 
+Workload and expectations to perform well in the school environ- 
+ment are causing the rise of academic stress among students. When 
+left unmanaged, it can lead to anxiety and depression. Comput- 
+ing technologies have been considered as alternative platforms for 
+the delivery of intervention programs to help students cope with 
+academic stress. In this paper, we investigated the influence of en- 
+gaging in conversations with a mental health chatbot – Woebot – 
+to help alleviate the stress of senior high school students. 
+During the two-week period of the experiments, we collected 
+varying data including the psychological distress assessment, the 
+pre- and post-stress level assessment, the daily conversation assess- 
+ment and recorded logs, and the user’s evaluation and feedback on 
+their experience with Woebot. Our findings showed mixed senti- 
+ments regarding the perceived usefulness of Woebot’s CBT-based 
+lessons, daily check-ins and gratitude journal. The interaction is 
+influenced by the chatbot’s formulated responses when participants 
+share their mood and life events. 
+Further work will entail a deeper analysis on how the demo- 
+graphics, i.e., gender, age and academic strand, contribute to the 
+students’ acceptance of Woebot as a daily conversational partner to 
+provide front-line support for their stress. Analysis of the remain- 
+ing 280 logs will also be conducted to gain better insights within 
+a single individual and across clusters of participants to draw the 
+set of characteristics of people who may be open and receptive to 
+mental health chatbots such as Woebot. 
+
+And finally, notice how the air leaves your body as you exhale, 
+leaving your belly, chest, throat and mouth and exhaling... 
+Continue and see if you can notice your breath 
+at every step of the process 
+ok 
+Repeat this process for as many breaths as you’d like. 
+Got it 
+
+P 
+W 
+P 
+
+Furthermore, the lengthy instructions also caused confusion 
+among the participants. This is particularly evident when accom- 
+plishing the Stress Level Assessment forms that were embedded 
+within the given instructions, and in capturing and submitting 
+the conversation logs. Participants also encountered difficulties in 
+using Longshot to capture their chat logs, which led to delay in up- 
+loads and the submission of incomplete and unreadable screenshots 
+which affected the log analysis. 
+7 DISCUSSION 
+Mental health chatbots should be designed to expand opportuni- 
+ties in providing intervention and support to individuals who are 
+experiencing stress. They should help students respond to daily 
+pressures, overwhelming workload, and decreased attention and 
+concentration in academic requirements. A number of interaction 
+design implications can be gleaned from the students’ perception 
+and feedback on Woebot’s effectiveness in alleviating their aca- 
+demic stress. Here, we report design implications from our findings 
+to inform future development of conversational agents in general 
+and better chatbot for psychological help in particular. 
+Story-based Conversation. Stories and storytelling have long 
+been used from the time we were preschoolers as an approach to 
+help us build awareness of our emotions [9]. Story-based conver- 
+sation that encourages the sharing of one’s daily experiences can 
+bring to surface the causes of positive or negative moods and stres- 
+sors. Similar to Replika, Woebot asks questions to get students to 
+open up with what they feel [28], and to ask them to share their 
+day and rate their mood [24]. 
+A crucial aspect to human-agent conversation is the chatbot’s 
+performance in formulating responses that are aligned to the stu- 
+dent’s input. While participants valued Woebot’s stories, an analysis 
+of the chat logs showed that they faced challenges in cases when 
+the chatbot generated inappropriate responses. Participants have 
+reported that Woebot is capable of detecting their mood. How- 
+ever, they also repeatedly expressed confusion and irritation in the 
+chatbot’s out-of-context responses to the life events they shared. 
+Communication breakdowns such as this can cause feelings of 
+mistrust in the chatbot’s ability. Furthermore, misalignment in re- 
+sponses can be perceived as ignoring one’s feelings, as seen in the 
+example log in Table 13. 
+Lessons, delivered as stories, allow Woebot to give advice to 
+students to help them manage their stress, similar to how Wysa 
+offers self-help practices based on CBT [17]. However, for students 
+
+
+
+REFERENCES 
+[1] Jayanthi Arul, M Thirunavukarasu, and Rajamanickam Rajkumar. 2015. Aca- 
+demic stress and depression among adolescents: A cross-sectional study. Indian 
+Pediatrics 52, 3 (2015), 217–219. https://doi.org/10.1007/s13312-015-0609-y 
+[2] Deepti Bhargava and Hemant Trivedi. 2018. A study of causes of stress and stress 
+management among youth. IRA International Journal of Management and Social 
+Sciences 11, 3 (Jun 2018), 108–117. https://doi.org/10.21013/jmss.v11.n3.p1 
+[3] Katherine M. Boydell, Michael Hodgins, Antonio Pignatiello, John Teshima, 
+Helen Edwards, and David Willis. 2014. Using technology to deliver mental 
+health services to children and youth: A scoping review. Journal of the Canadian 
+Academy of Child and Adolescent Psychiatry 23, 2 (May 2014), 87–99. 
+[4] Victoria Branson, Matthew J. Dry, Edward Palmer, and Deborah Turnbull. 2019. 
+The Adolescent Distress-Eustress Scale: Development and validation. SAGE Open 
+9, 3 (July 2019), 1–14. https://doi.org/10.1177/2158244019865802 
+[5] Lynette Danielle Chan and Ethel Ong. 2018. Engaging children in conversations 
+during story reading. In Proceedings of the 26th ICCE Workshop on Innovative 
+Technologies for Enhancing Interactions and Learning Motivation. 128–137. 
+[6] Sheldon Cohen, Tom Kamarck, and Robin Mermelstein. 1983. A global measure of 
+perceived stress. Journal of Health and Social Behavior 24, 4 (Dec 1983), 385–396. 
+https://doi.org/10.2307/2136404 
+[7] Simon D’Alfonso, Olga Santesteban-Echarri, Simon M. Rice, Greg Wadley, Reeva 
+Lederman, John Gleeson, and Mario Alvarez-Jimenez. 2017. Artificial intelligence- 
+assisted online social therapy for youth mental health. Frontiers in Psychology 8 
+(June 2017), 796. https://doi.org/10.3389/fpsyg.2017.00796 
+[8] Margo De Kooker. 2008. Mind, immunity and health - The science and clinical 
+application of psychoneuroimmunology. Continuing Medical Education 26, 1 (Jan 
+2008), 18–20. 
+[9] Susanne Ayers Denham and Rosemary Burton. 2003. Social and Emotional preven- 
+tion and Intervention Programming for Preschoolers. Kluwer-Plenum Publishers, 
+New York. https://doi.org/10.1007/978-1-4615-0055-1 
+[10] Meera Dhesi. 2018. A qualitative study to investigate in what ways are the dis- 
+tinctive features of synchronous text-based counselling experienced as being helpful 
+and/or unhelpful by young people. Ph.D. Dissertation. 
+
+
+
+[12] Kathleen Kara Fitzpatrick, Alison Darcy, and Molly Vierhile. 2017. Delivering 
+Cognitive Behavior Therapy to young adults with symptoms of depression and 
+anxiety using a fully automated conversational agent Woebot: A randomized 
+controlled trial. JMIR Mental Health 2017 4, 2 (2017), e19. https://doi.org/10. 
+2196/mental.7785 
+
+
+[14] Hannah Gaffney, Warren Mansell, and Sara Tai. 2019. Conversational agents 
+in the treatment of mental health problems: Mixed-method systematic review. 
+JMIR Mental Health 6, 10 (Oct. 2019), e14166. https://doi.org/10.2196/14166 
+[15] John M. Gottman, Lynn Fainsilber Katz, and Carole Hooven. 1996. Parental 
+Meta-emotion Philosophy and the Emotional Life of Families: Theoretical models 
+and Preliminary Data. Journal of Family Psychology 10, 3 (1996), 243–268. https: 
+//doi.org/10.1037/0893-3200.10.3.243 
+[16] Simon Hoermann, Kathryn L. McCabe, David N. Milne, and Rafael A. Calvo. 
+2017. Application of synchronous text-based dialogue systems in mental health 
+interventions: Systematic review. Journal of Medical Internet Research 19, 8 (July 
+2017), e267. https://doi.org/10.2196/jmir.7023 
+[17] Becky Inkster, Shubhankar Sarda, and Vinod Subramanian. 2018. An empathy- 
+driven, conversational artificial intelligence agent (Wysa) for digital mental 
+well-being: real-world data evaluation mixed-methods study. JMIR mHealth and 
+uHealth 6, 11 (2018), e12106. https://doi.org/10.2196/mhealth.12106 
+[18] Krishan Lal. 2014. Academic stress among adolescent in relation to intelligence 
+and demographic factors. American International Journal of Research in Humani- 
+ties, Arts and Social Sciences 5, 1 (2014), 123–129. 
+[19] Liliana Laranjo, Adam G. Dunn, Huong Ly Tong, Ahmet Baki Kocaballi, Jessica 
+Chen, Rabia Bashir, Didi Surian, Bianca Gallego, Farah Magrabi, Annie Y. S. Lau, 
+and Enrico Coiera. 2018. Conversational agents in healthcare: A systematic 
+review. Journal of American Medical Information 25, 9 (Sept. 2018), 1248–1258. 
+https://doi.org/10.1093/jamia/ocy072 
+[20] Brian W Maclaughlin, Dan Wang, Anne-Michelle Noone, Nan Liu, Nancy Haraz- 
+duk, Michael Lumpkin, Aviad Haramati, Pamela Saunders, Maryann Dutton, 
+and Hakima Amri. 2011. Stress biomarkers in medical students participating 
+in a mind body medicine skills program. Evidence-Based Complementary and 
+Alternative Medicine 12 (Jun 2011). https://doi.org/10.1093/ecam/neq039 
+[21] MentalHealth.org.uk. n.d.. Stress. Retrieved April 17, 2020 from https://www. 
+
+
+
+[23] Tally Moses. 2010. Being treated differently: Stigma experiences with family, 
+peers, and school staff among adolescents with mental health disorders. Social 
+Science & Medicine 70, 7 (April 2010), 985–993. https://doi.org/10.1016/j.socscimed. 
+2009.12.022 
+
+
+
+
+[26] Gwenn Schurgin O’Keefe, Kathleen Clarke-Pearson, Council on Communications, 
+and Media. 2011. The impact of social media on children, adolescents, and families. 
+Pediatrics 127, 4 (Apr 2011), 800–804. https://doi.org/10.1542/peds.2011-0054 
+
+
+
+Wired (Jan. 2016). https://www.wired.com/story/replika-open-source/ 
+[29] Anne Marie Porter and Paula Gooklasian. 2019. Video games and stress: How 
+stress appraisals and game content affect cardiovascular and emotion outcomes. 
+Frontiers in Psychology 10 (May 2019). https://doi.org/10.3389/fpsyg.2019.00967 
+[30] Julie Prescott, Terry Hanley, and Katalin Ujhelyi. [n.d.]. Peer communication in 
+online mental health forums for young people: Directional and nondirectional 
+support. JMIR Mental Health 4, 3 ([n. d.]). https://doi.org/10.2196/mental.6921 
+[31] Perinatal Mental Health Project. n.d.. Basic Counselling Skills: A Guide for Health 
+https://www.mhinnovation.net/resources/basic- 
+Workers in Maternal Care. 
+counselling-skills-guide-health-workers-maternal-care 
+[32] Judith G. Proudfoot, C Ryden, David Goldberg, Andre Tylee, B Everett, Anthony 
+Mann, and D Shapiro. 2005. ’Beating the Blues’: A computer CBT program for 
+anxiety and depression. Australian Journal of Psychology 57, 245 (Jan. 2005). 
+[33] Simon Provoost, Ho Ming Lau, Jeroen Ruwaard, and Heleen Riper. 2017. Embodied 
+conversational agents in clinical psychology: A scoping review. Journal of Medical 
+Internet Research 19, 5 (May 2017), e151. https://doi.org/10.2196/jmir.6553 
+[34] Alejandra Randol. 2019. The impact of stigma on adolescents’ willingness to seek 
+treatment. Master’s thesis. California State University, San Bernardino. 
+[35] K Jayasankara Reddy, Karishma Menon, , and AnjanaThattil. 2017. Understanding 
+academic stress among adolescents. Artha-Journal of Social Sciences 16, 1 (2017), 
+39–52. https://doi.org/10.12724/ajss.40.4 
+[36] Judy Robertson and Jon Oberlander. 2006. Ghostwriter: Educational drama and 
+presence in a virtual environment. Journal of Computer-Mediated Communication 
+8, 1 (Jun 2006). https://doi.org/10.1111/j.1083-6101.2002.tb00159.x 
+[37] Janet Rose, R. McGuire-Snieckus, and L. Gilbert. 2015. Emotion Coaching: A 
+New Approach to Supporting Children’s Behaviour in Schools. The European 
+Journal of Social and Behavioral Sciences (2015), 1766–1790. https://doi.org/10. 
+15405/ejsbs.159 
+[38] Kyle-Althea Santos, Ethel Ong, and Ron Resurreccion. 2020. Therapist Vibe: 
+Children’s expressions of their emotions through storytelling with a chatbot. In 
+Proceedings of the ACM Conference on Interaction Design and Children. https: 
+//doi.org/10.1145/3392063.3394405 
+[39] Mark R. Scholten, Kaskia M. Kelders, and Julia Ewc Van Gemert-Pijnen. 2017. 
+Self-guided web-based interventions: Scoping review on user needs and the 
+potential of embodied conversational agents to address them. Journal of Medical 
+Internet Research 19, 11 (Nov. 2017), e383. https://doi.org/10.2196/jmir.7351 
+[40] Brian Luke Seaward. 2015. Managing Stress: Principles and Strategies for health 
+and Well Being. Jones & Bartlett Learning, Chapter 1: The Nature of Stress. 
+[41] Suvena Sethi, Andrew J. Campbell, and Louise A. Ellis. 2010. The use of 
+computerized self-help packages to treat adolescent depression and anxiety. 
+https: 
+Journal of Technology in Human Services 28, 3 (Aug 2010), 144–160. 
+//doi.org/10.1080/15228835.2010.508317 
+[42] Shauna L. Shapiro, Daniel E. Shapiro, and Gary E. Schwartz. 2000. Stress man- 
+agement in medical education: A review of the literature. Academic Medicine 75, 
+7 (Jul 2000), 748–759. https://doi.org/10.1097/00001888-200007000-00023 
+
+
+
+[44] Liza Varvogli and Christina Darviri. 2011. Stress Management Techniques: 
+Evidence-based procedures that reduce stress and promote health. Health Science 
+Journal 5, 2 (2011), 74–89. 
+[45] Vivek B. Waghachavare, Girish B. Dhumale, Yugantara R. Kadam, and Alka D. 
+Gore. 2013. A study of stress among students of professional colleges from an 
+urban area in India. Sultan Qaboos University Medical Journal 13, 3 (Aug 2013), 
+429–436. 
+[46] A. S. Zigmond and R. Philip Snaith. 1983. The Hospital and Anxiety Depression 
+Scale. Acta Psychiatrica Scandinavica 67, 6 (Jun 1983), 361–370. https://doi.org/ 
+10.1111/j.1600-0447.1983.tb09716.x 
+

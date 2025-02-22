@@ -1,0 +1,610 @@
+HHS Public Access
+Author manuscript
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Published in final edited form as:
+Neurorehabil Neural Repair. 2015 June ; 29(5): 407–415. doi:10.1177/1545968314550369.
+SIRRACT: An international randomized clinical trial of activity
+feedback during inpatient stroke rehabilitation enabled by
+wireless sensing
+Andrew K. Dorsch, MD1,3, Seth Thomas, BS1,3, Xiaoyu Xu, PhD2,3, William Kaiser, PhD2,3,
+and Bruce H. Dobkin, MD1,3 on behalf of the SIRRACT investigators
+1Department of Neurology, University of California Los Angeles, Geffen School of Medicine, Los
+Angeles, CA
+2Samueli School of Engineering and Applied Sciences, University of California Los Angeles, Los
+Angeles, CA
+3UCLA Wireless Health Institute, University of California Los Angeles, Los Angeles, CA
+Abstract
+Background—Walking-related disability is the most frequent reason for inpatient stroke
+rehabilitation. Task-related practice is a critical component for improving patient outcomes.
+Objective—To test the feasibility of providing quantitative feedback about daily walking
+performance and motivating greater skills practice via remote sensing.
+Methods—In this phase III randomized, single blind clinical trial, patients participated in
+conventional therapies while wearing wireless sensors (tri-axial accelerometers) at both ankles.
+Activity-recognition algorithms calculated the speed, distance, and duration of walking bouts.
+Three times a week, therapists provided either feedback about performance on a 10-meter walk
+(speed-only) or walking speed feedback plus a review of walking activity recorded by the sensors
+(augmented). Primary outcomes at discharge included total daily walking time, derived from the
+sensors, and a timed 15-meter walk.
+Corresponding Author: Bruce H. Dobkin MD, University of California Los Angeles, Geffen School of Medicine, Department of
+Neurology, RNRC, 710 Westwood Plaza, Los Angeles, CA 90095. ph (310) 206-6500, f (310) 206-6500, bdobkin@mednet.ucla.edu.
+AUTHOR’S NOTE
+The following is a list of the SIRRACT investigators. Ain Shams University, Cairo, Egypt: Tamer Emara, MD. Burke Rehabilitation
+Hospital, White Plains, NY: Dylan Edwards, PhD, PT and Pasquale Fonzetti, MD. Burwood Hospital, Christchurch, New Zealand:
+John Maasch, MD. Chonnam National University Medical School and Hospital, Gwanju, South Korea: Sam-Gyu Lee, MD, PhD.
+College of Medicine, UCH, University of Ibadan, Ibadan, Nigeria: Mayowa O. Owolabi, MBBS, MSC, DMed and Talhatu K.
+Hamzat, PhD. Fairlawn Rehabilitation Hospital, Worcester, MA: Corey J. LeBlanc, MSPT/DPT and Regina Morse, DPT. Father
+Muller Medical College, Mangalore, India: Narasimman Swaminathan, MPTh. Gazi University, Ankara, Turkey: Gulcin Kaymak
+Karatas, MD. Hospital de l’Esperanca, Barcelona, Spain: Roser Boza, MD. Mayo Clinic, Rochester, MN: Allen W. Brown, MD.
+Morinomiya Hospital, Osaka, Japan: Ichiro Miyai, MD, PhD and Teiji Kawano, MD. National Taiwan University Hospital, Taipei,
+Taiwan: Ssu-Yuan Chen, MD, PhD. Princess Margaret Hospital, Christchurch, New Zealand: H. Carl Hanger, MBChB, FRACP. San
+Camillo Hospital, Venice, Italy: Carla Zucconi, DPT. San Raffaele Hospital, Milan, Italy: Silvia Mammi, MD and Chiara Ghislanzoni,
+PT. University Hospital of Vigo, Vigo, Spain: Francisco Juan, MD, PhD. Washington University School of Medicine, St. Louis, MO:
+Catherine E. Lang, PT, PhD.
+DECLARATION OF CONFLICTING INTERESTS
+The authors declared no conflicts of interest with respect to the authorship and/or publication of this article.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 2
+Results—Sixteen rehabilitation centers in 11 countries enrolled 135 participants over 15 months.
+Sensors recorded more than 1800 days of therapy, 37,000 individual walking bouts, and 2.5
+million steps. No significant differences were found between the two feedback groups in daily
+walking time (15.1±13.1min vs. 16.6±14.3min, p=0.54) or 15-meter walking speed (0.93±0.47m/s
+vs. 0.91±0.53m/s, p=0.96). Remarkably, 30% of participants decreased their total daily walking
+time over their rehabilitation stay.
+Conclusions—In this first trial of remote monitoring of inpatient stroke rehabilitation,
+augmented feedback beyond speed alone did not increase the time spent practicing or improve
+walking outcomes. Remarkably modest time was spent walking. Wireless sensing, however,
+allowed clinicians to audit skills practice and provided ground truth regarding changes in clinically
+important, mobility-related activities.
+Keywords
+stroke; rehabilitation; telemedicine; wireless technology; accelerometer; walking
+INTRODUCTION
+Mobility outcomes after disabling stroke are highly dependent on the intensity of
+rehabilitation training and practice.1–3 Surveys using a diary or videotaping of physical and
+occupational therapy sessions, however, describe modest amounts of supervised skills
+practice during inpatient stroke rehabilitation.4–6 Given the sense that perhaps too little
+treatment of sufficient cardiovascular intensity is provided,7 sporadic efforts have been
+made to increase the type and quantity of skills practice.8–10
+Past interventions to increase patient participation in therapies have been limited by the lack
+of an objective, inexpensive method to continuously measure the quantity and quality of
+patients’ movements, i.e., parameters that go beyond a step counter in the case of walking.
+Wireless health technologies, including unobtrusive physiologic sensors and advanced
+activity-recognition algorithms, offer the possibility of daily patient monitoring.11–13 When
+tested for several days in patients with chronic hemiparetic stroke,14 these wireless sensors
+returned accurate, reliable activity summaries even for patients who walked slowly (i.e. <0.5
+m/s).
+The Stroke Inpatient Rehabilitation Reinforcement of ACTivity (SIRRACT) trial is the first
+international, multi-center trial to deploy a wireless, Internet-based remote sensing strategy
+in patients disabled by stroke. It was designed as a follow-up to the multicenter Stroke
+Inpatient Rehabilitation With Reinforcement of Walking Speed (SIRROWS) trial that found
+that feedback about walking speed, from a timed 10-meter walk three times a week, led to
+significantly higher speeds at discharge from inpatient stroke rehabilitation as compared to
+no such feedback.8 For SIRRACT, investigators employed remote wireless sensing to
+monitor all lower extremity movements performed by patients during the course of daily
+activities. Activity summaries derived from sensor data were used to provide an augmented
+feedback intervention that was compared to feedback about walking speed alone.
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 3
+Our aim for this trial was to motivate patients and their therapists to engage in greater skills
+practice to obtain improved walking-related outcomes. We endeavored to demonstrate the
+feasibility of deploying sensors in inpatient rehabilitation centers regardless of culture,
+language, or familiarity with clinical research. Finally, we anticipated using the rich data set
+generated by the wireless sensors during inpatient therapy to characterize changes in a
+variety of walking-related parameters.
+METHODS
+Study design and setting
+This phase III, single blind, parallel group, randomized control trial was carried out at 12
+international and 4 American inpatient rehabilitation centers. Investigators at the UCLA
+Wireless Health Institute designed and managed all aspects of the trial. Since no funding
+was provided to individual sites, the protocol was designed for implementation within each
+site’s usual rehabilitation practices and structure. Instructions about procedures were
+provided from an online manual of operations with videos (http://www.sirract.ucla.edu).
+Training webinars, email responses to questions, and automated assessment reminders
+enabled trial management via the Internet. All demographic information and blinded study
+outcomes were entered into a secure online clinical database with separate logins and
+webpage views for the treating clinicians and blinded assessors.
+Selection criteria
+Sites were recruited from the membership of the World Federation of NeuroRehabilitation
+and the American Society of NeuroRehabilitation. Inclusion criteria included stroke of any
+type with residual hemiparesis, the ability to walk 5 steps within 10 days of admission for
+rehabilitation, and admission to the facility within 35 days of stroke. Exclusion criteria
+included aphasia limiting the ability to follow 2-step commands and ongoing medical
+disease limiting participation in physical therapy. Patients who had suffered a prior stroke
+were eligible for participation if they had experienced full motor recovery.
+Randomization and baseline data collection
+After eligibility criteria were entered into the central database, participants were assigned to
+a speed-only feedback (SF) or augmented feedback (AF) trial arm by a computer using a
+concealed allocation sequence. A block randomization design was employed to achieve
+equal group numbers at each study site.
+Baseline demographic data including age, gender, stroke type, hemiparetic side, and NIH
+Stroke Scale score were entered into the clinical database by site investigators. A blinded
+observer at each location collected a stopwatch-timed 15-meter walk, the distance walked in
+3 minutes, and Functional Ambulation Category (FAC) score.
+Wireless sensor system
+The inertial sensor system and activity-recognition algorithms were previously described
+and tested for short-term reliability.14 Three sets of tri-axial accelerometers (Gulf Coast
+Data Concepts, Waveland, MS) were mailed to each site’s coordinator. Therapists placed
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 4
+one sensor on each ankle before participants got out of bed each morning and removed them
+once they were in bed at the end of the day; sensor use during weekends was optional. A soft
+snap band secured each sensor proximal to the medial malleolus, flush against the bony
+tibia. Every night, sensors were plugged into a local computer to recharge while
+accelerometer data were uploaded to the central server at UCLA for secure storage and
+processing.
+Sensor calibration and data processing
+In recognition of the variations in gait speed and stand and swing symmetry that occur in
+patients who need inpatient rehabilitation after stroke, we chose to generate individual
+templates of each participant’s gait from a pair of standardized walks. On study entry
+participants performed two stopwatch-timed 10-meter walks at self-selected casual and
+safest fast walking speeds. A hybrid classifier employing dynamic time warping and Naïve
+Bayes algorithms generated statistical models of each participant’s gait based on the two
+walks. Repeat walks were performed and the templates updated weekly for the remainder of
+each participant’s rehabilitation stay to account for expected changes in gait parameters.
+New activity data that were uploaded to the central server at UCLA underwent
+preprocessing followed by classification to identify periods of a participant’s daily activity
+that matched his or her walking template. For this trial, a bout of walking was defined as
+lasting at least 5 seconds. Bouts separated by 5 seconds or more were labeled as separate
+walking episodes. After classification the system calculated gait parameters for each
+identified walking bout (speed, duration), as well as for each day’s total walking activity
+(number of walking bouts, average walking speed, total time spent walking, total distance,
+total steps). Personalized bar graphs summarizing daily step count, average and maximum
+walking speed, and distance walked were updated and made available to therapists for the
+AF intervention.
+Feedback intervention
+Three times a week after performing a stopwatch-timed 10-meter walk at their fastest safe
+walking speed, all participants received standardized verbal feedback from their therapists
+similar to that used in SIRROWS. For example, “Very good! You walked that in (number
+of) seconds.” Then, (a) “Keep working to improve further” or (b) “Keep up the good work
+and continue to practice” or (c) “I believe you will soon be walking faster with more
+practice.”
+In addition to receiving immediate verbal feedback about walking speed, participants in the
+AF group also reviewed the results of their summary activity graphs with the therapists.
+Using a scripted statement, therapists encouraged these patients to meet or exceed their prior
+activity levels. For example, (a) “You are showing some improvement” or (b) “You have
+not yet increased your (walking speed, distance, steps).” Then, “Let’s see if you can make
+further improvements today.”
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 5
+Study outcomes
+Primary outcomes were the average daily time spent walking recorded by the sensors and a
+stopwatch-timed fastest safe 15-meter walking speed collected by a blinded observer prior to
+patient discharge from the rehabilitation unit. The blinded observer also collected FAC
+scores and 3-minute walking distances at the time of discharge to serve as secondary
+outcomes. Participants’ perceptions of their function were collected using the Stroke Impact
+Scale (SIS-16). Sensor ease of use was assessed using Likert-style questionnaires.
+Power analysis
+We aimed to increase the time spent walking by 30%. Our power calculation was based
+upon admission-to-discharge changes in walking speed reported in the SIRROWS trial.8 An
+effect size of 0.4 could be detected with a two-sided significance level of 0.05 and a power
+of 0.8 if 92 subjects were recruited to each group, assuming no more than 10% attrition. An
+interim futility analysis to be performed by a statistician blinded to intervention assignment
+was planned after the first 100 subjects had completed participation in the trial.
+Statistical analyses
+Baseline comparisons between the SF and AF groups were performed using t-tests, chi-
+squared tests, or Wilcoxon rank-sum tests as appropriate. Primary outcomes for all
+participants who received the intervention were analyzed using t-tests. Linear mixed effects
+models were constructed to evaluate for differences in the rate of change in walking time
+between feedback groups. Functional walking groups were identified from within baseline
+15-meter walking speeds by post hoc quartile analysis. Two-way ANOVAs were used to
+compare primary outcomes between functional sub-groups. Statistical analyses were
+performed using SAS (SAS Institute Inc., Cary, NC).
+Protocol approvals, registrations, and patient consent
+Investigators at UCLA provided a standard IRB template that was approved by each site’s
+local institutional review board after any necessary modifications. All subjects provided
+written informed consent prior to participation. The study was registered at
+ClinicalTrials.gov (NCT01246882). A Data Safety Monitoring Committee was not formed
+for this trial given the low perceived risk to participants and the simplicity of the trial’s
+design.
+RESULTS
+Recruitment and baseline demographics
+Study sites reported screening 156 patients who were highly likely to meet entry criteria
+between March 2011 and October 2012 (Figure 1). Interim outcomes analysis performed
+after the first 100 participants completed the study did not identify any significant difference
+between groups and the decision was made to halt the trial after a total of 125 subjects had
+completed participation. On closure of the study, 135 patients had received the intervention
+and 125 completed the trial (83% of all randomized participants).
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 6
+At baseline, subjects in the two intervention groups were found to be equally matched for
+age, gender, stroke location, and disability (Table 1). Patients with a range of walking
+disabilities at entry were included. There was no significant difference in either the length of
+stay in rehabilitation or in the median number of days of trial participation between the two
+intervention groups (Table 2).
+Wireless sensor usage and algorithm outputs
+We recorded 2117 days of rehabilitation from the 135 participants. Accounting for
+weekends and holidays, sensor data were obtained for 84.4% of all study days. Technical
+problems including sensor desynchronization, hardware failure, and incorrectly collected
+walking templates prevented the machine-learning algorithms from classifying activity for
+226 therapy days. We obtained 18,579 hours of fully processed data from 1891 therapy
+days. The algorithms identified over 37,000 discrete walking episodes and 2.5 million steps.
+On average, the sensors were actively recording data for over 8 hours a day.
+Outcomes
+We found no significant difference between groups in the average daily time spent walking
+over the duration of the trial (SF: 15.1 ± 13.1 min; AF: 16.6 ± 14.3 min; p=0.54). Between
+study entry and discharge from rehabilitation, there was no difference between groups in the
+rate of change in time spent walking (p=0.32). No significant difference in final 15-meter
+walking speed was found between groups after accounting for baseline demographic
+variables (SF: 0.93 ± 0.47 m/s; AF: 0.91 ± 0.53 m/s; p=0.96). The intervention groups did
+not differ on secondary or patient-reported outcomes including the FAC, 3-min walking
+distance, and SIS-16 scores (Table 2). Questionnaires completed by study participants at
+discharge revealed that the sensors had been comfortable to wear (87%) and did not interfere
+with movement (97.6%) either some or all of the time.
+By post-hoc analysis, we identified three functional impairment groups based on mean
+baseline 15-m walking speeds of 0.13m/s (severely affected), 0.38m/s (moderately affected),
+and 1.12m/s (mildly affected). The SF and AF interventions did not differ in the distribution
+of participants between functional groups (p=0.15). As shown in Figures 2 and 3, both the
+time spent walking and 15-m walking speed differed between functional groups (time:
+F=13.48, p<0.001; speed: F=45.31, p<0.001). Remarkably, the mean time spent in walking
+practice was less than 8 min a day in the severe group and 12 min daily in the moderate
+group. Within each functional group, the SF and AF interventions did not result in
+significantly different primary outcomes (time: F=0.48, p=0.62; speed: F=0.29, p=0.75).
+Unique sensor-derived outcomes
+Daily remote monitoring with sensors provided a unique opportunity to evaluate walking
+performance and patterns of activity during inpatient rehabilitation. As seen in Figure 4,
+participants employed a range of speeds when walking, with the greatest variation in speeds
+present during shorter walking bouts. Across all study participants, the majority of
+continuous daily walking bouts lasted between 10 and 30 seconds. 124 participants had at
+least one therapy day during which they engaged in continuous walking for 2 or more
+minutes, and on average 62% of these participants’ days included longer walking bouts. AF
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 7
+was not associated with a greater amount of time spent in longer (≥ 2 minutes) walking
+bouts (SF:7.5 ± 6 min; AF:9.0 ± 8 min; p=0.33). Remarkably, when evaluating for changes
+in total time spent walking over the course of rehabilitation we found that 30% of
+participants decreased their total daily walking time.
+Over the duration of the study, sensor-derived average daily walking speeds closely
+paralleled those of the weekly casual 10-meter template walks (r=0.977, p<0.001). A weaker
+positive correlation was present between the maximum daily speed calculated from the
+sensors and 15-meter walking speeds collected by the blinded observer (r=0.647, p<0.001).
+These findings support the reliability, validity, and sensitivity to change of hybrid motion
+classification algorithms using bilateral inertial sensor recordings.
+DISCUSSION
+The SIRRACT investigators completed the first large, multicenter randomized clinical trial
+that demonstrates the feasibility, validity, and sensitivity of continuous remote activity
+monitoring to facilitate a walking-related intervention. International study sites of varied
+cultures and languages, some of which do not routinely participate in clinical research, were
+able to obtain laboratory quality data on a daily basis. Data were successfully collected,
+transferred, and processed solely by Internet-based protocols in a timely fashion, which
+greatly lowered the cost of the trial. Therapists and patients were highly compliant with
+sensor use and the devices were reported to be an unobtrusive means of recording walking
+activities during inpatient rehabilitation.
+Across all participants, the augmented feedback intervention was not associated with a
+greater amount of time spent walking. Disability did not appear to be the primary factor
+limiting participation, as post-hoc analysis demonstrated that even patients who walked at
+potential community ambulation speeds (i.e. ≥0.8 m/s)15 on study entry did not increase
+their practice time with augmented feedback. Two patterns in the daily activity data suggest
+explanations for why additional feedback did not result in more practice. First, only a
+fraction of all walking bouts were of sufficient length that one could assume they
+represented practice directed at skilled walking and not the performance of activities of daily
+living. Second, almost a third of all participants decreased the time spent walking over the
+course of their stay in rehabilitation. These patterns likely reflect constraints inherent to the
+acute rehabilitation environment (e.g. hallway length, practice time used to reduce gait
+pattern deviations and learn to employ an assistive device or orthotic, scheduled therapist
+time, patient fatigue) and the time allocated to manage other rehabilitation priorities. Given
+that the design of this trial was not meant to change how rehabilitative therapies were
+delivered, these constraints may have limited participants’ opportunities to ambulate more
+frequently regardless of walking ability. Clearly, walking was not used specifically to
+improve cardiovascular fitness.
+Although there were no between-group differences in 15-meter walking speed, distance
+walked in 3 minutes, or FAC scores, both intervention groups significantly increased their
+average 15-meter walking speed between study entry and discharge, surpassing the criterion
+for a meaningful change in gait speed.16 A fair correlation was found between daily walking
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 8
+speeds and those on the 15-meter outcome test, suggesting that, although participants
+increased their ability to walk faster over the course of inpatient rehabilitation, this was not
+reflected as much in their daily self-selected walking speed. The magnitude of the walking
+speed achieved by the SF and AF groups at discharge was similar to that reported for the
+179 participants in SIRROWS8 (0.91m/s for feedback vs. 0.73m/s for no feedback about
+walking speed). Indeed, given the degree of improvement in SIRROWS, the investigators
+were uncertain that further improvements would be achieved in SIRRACT through
+additional feedback. The changes in walking speed seen in both studies (0.45m/s in
+SIRROWS and 0.39m/s in SIRRACT) were greater than those reported for more intensive
+interventions, including robotic step training17 and outpatient body weight-supported
+treadmill with over-ground training and home-based exercise.18 A direct comparison with
+these interventions is not possible, however, due to study differences including time from
+stroke onset and range of initial walking speeds. SIRRACT does confirm the positive effect
+of regular verbal feedback on walking speed, a simple intervention that has not yet been
+incorporated into most inpatient rehabilitation practices.
+Limitations of this trial were primarily related to the absence of funding. The site PIs and
+coordinators carried out all tasks voluntarily, so they could not screen all admissions for
+eligibility, possibly allowing for bias in subject recruitment. The requirement for participants
+to provide two 10-meter walks for sensor calibration may have served as an inadvertent
+additional selection criterion leading to the recruitment of less affected patients, although the
+protocol allowed a timed walk over a shorter distance if necessary. In addition, the central
+UCLA site could not monitor how consistently feedback was delivered to the AF group at
+study sites, potentially confounding the feedback’s effect on participants and preventing the
+determination of whether therapists were introducing bias. Information regarding the content
+and dose of therapies provided at each study site was not collected, precluding a comparison
+of participants’ walking performed during versus outside of formal therapy times. As
+mentioned above, the allocation of time spent across a range of rehabilitation activities may
+have constrained the ability of therapists to increase the amount of time devoted to physical
+practice in the inpatient setting, limiting the potential effectiveness of the AF intervention.
+Finally most sites were unable to follow up their patients after discharge. The study protocol
+asked them to try to obtain a 30-day and 90-day follow-up, but this was not practical due to
+transportation and funding constraints. Thus, we could not identify delayed effects from the
+two interventions.
+Wireless sensors and classification algorithms enabled an appraisal of skills practice that
+was novel for a stroke rehabilitation trial. For example, participants’ engagement in the
+practice of skills other than walking was identified from within the continuous data streams.
+We collected templates and monitored the frequency with which repetitive movements
+including cycling, knee extensions, and leg lifts were performed (not shown, due to wide
+variations across sites). Most important for the conduct and outcomes of this study, the
+system was able to recognize and quantify walking performed at speeds below 0.5m/s, a
+recognized limitation of pedometers19 and other commercial inertial sensor systems.20 We
+have also begun to examine the data for more complex daily and weekly motor skill changes
+over the course of rehabilitation, such as stride-to-stride variations, limb asymmetries in
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 9
+stance and swing times, and smoothness of lower extremity swing accelerations. The
+acquisition of such data usually requires a formal gait laboratory assessment.
+Our findings argue for the feasibility and utility of continuous activity monitoring to
+accurately assess skills practice as it is actually performed by patients during formal and
+self-directed rehabilitative activities. Related technologies have assessed gait speed in
+community dwelling elderly21 and quantified changes in gait22 as well as aspects of the
+intensity of physical activity7 for patients participating in acute inpatient rehabilitation at a
+single site. Additional advancements in reducing sensor size, increasing energy efficiency,
+and developing inexpensive communications standards will make possible real-time
+feedback based upon the continuous collection of data from the home and community.
+Wireless health technologies, in combination with telemedicine infrastructure, may become
+valued neurologic tools for clinical trials or daily care that monitor compliance with skills
+training and exercise for secondary prevention, as well as provide feedback and ratio-scale,
+ecologically sound outcome measurements.23
+Acknowledgments
+Team members at each study site volunteered their time as a function of their interest in participating in clinical
+trials under the aegis of the World Federation of NeuroRehabilitation and the American Society of
+NeuroRehabilitation. The UCLA Wireless Health Institute provided the wireless sensors and data processing
+algorithms. We thank Chi-hong Tseng, PhD in Biomathematics at UCLA for assistance with statistical analyses.
+SOURCES OF FUNDING
+Data analysis and support for study coordination at UCLA was partially funded by NIH/NICHD R01 HD07809 to
+Dr. Dobkin and by NIH/NCATS grant UL1TR000124.
+References
+1. Langhorne P, Bernhardt J, Kwakkel G. Stroke rehabilitation. Lancet. 2011; 377:1693–1702.
+[PubMed: 21571152]
+2. Duncan PW, Sullivan KJ, Behrman AL, et al. Body-weight-supported treadmill rehabilitation after
+stroke. N Engl J Med. 2011; 364:2026–36. [PubMed: 21612471]
+3. Wolf SL, Winstein CJ, Miller JP, et al. Effect of constraint-induced movement therapy on upper
+extremity function 3 to 9 months after stroke: the EXCITE randomized clinical trial. JAMA. 2006;
+296:2095–2104. [PubMed: 17077374]
+4. De Wit L, Putman K, Lincoln N, et al. Stroke rehabilitation in Europe: what do physiotherapists and
+occupational therapists actually do? Stroke. 2006; 37:1483–9. [PubMed: 16645135]
+5. Lang CE, Macdonald JR, Reisman DS, et al. Observation of amounts of movement practice
+provided during stroke rehabilitation. Arch Phys Med Rehabil. 2009; 90:1692–8. [PubMed:
+19801058]
+6. Latham NK, Jette DU, Slavin M, et al. Physical therapy during stroke rehabilitation for people with
+different walking abilities. Arch Phys Med Rehabil. 2005; 86:S41–S50. [PubMed: 16373139]
+7. Prajapati SK, Mansfield A, Gage WH, Brooks D, McIlroy WE. Cardiovascular responses associated
+with daily walking in subacute stroke. Stroke Res Treat. 2013; 2013:612458. [PubMed: 23476892]
+8. Dobkin BH, Plummer-D’Amato P, Elashoff R, et al. International randomized clinical trial, Stroke
+Inpatient Rehabilitation With Reinforcement of Walking Speed (SIRROWS), improves outcomes.
+Neurorehabil Neural Repair. 2010; 24:235–42. [PubMed: 20164411]
+9. Cooke EV, Mares K, Clark A, Tallis RC, Pomeroy VM. The effects of increased dose of exercise-
+based therapies to enhance motor recovery after stroke: a systematic reviews and meta-analysis.
+BMC Med. 2010; 8:60. [PubMed: 20942915]
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 10
+10. van Wijk R, Cumming T, Churilov L, Donnan G, Bernhardt J. An early mobilization protocol
+successfully delivers more and earlier therapy to acute stroke patients: further results from Phase II
+of AVERT. Neurorehabil Neural Repair. 2012; 26:20–6. [PubMed: 21807984]
+11. Dobkin BH, Dorsch A. The promise of mHealth: daily activity monitoring and outcome
+assessments by wearable sensors. Neurorehabil Neural Repair. 2011; 25:788–98. [PubMed:
+21989632]
+12. Clifford GD, Clifton D. Wireless technology in disease management and medicine. Annu Rev
+Med. 2012; 63:479–92. [PubMed: 22053737]
+13. Patel S, Park H, Bonato P, Chan L, Rodgers M. A review of wearable sensors and systems with
+application in rehabilitation. J Neuroeng Rehabil. 2012; 9:21. [PubMed: 22520559]
+14. Dobkin BH, Xu X, Batalin M, Thomas S, Kaiser W. Reliability and validity of bilateral ankle
+accelerometer algorithms for activity recognition and walking speed after stroke. Stroke. 2011;
+42:2246–50. [PubMed: 21636815]
+15. Perry J, Garrett M, Gronley JK, Mulroy SJ. Classification of walking handicap in the stroke
+population. Stroke. 1995; 26:982–9. [PubMed: 7762050]
+16. Tilson JK, Sullivan KJ, Cen SY, et al. Meaningful gait speed improvement during the first 60 days
+poststroke: minimal clinically important difference. Phys Ther. 2010; 90:196–208. [PubMed:
+20022995]
+17. Hidler J, Nichols D, Pelliccio M, et al. Multicenter randomized clinical trial evaluating the
+effectiveness of the Lokomat in subacute stroke. Neurorehabil Neural Repair. 2009; 23:5–13.
+[PubMed: 19109447]
+18. Nadeau SE, Wu SS, Dobkin BH, et al. Effects of task-specific and impairment-based training
+compared with usual care on functional walking ability after inpatient stroke rehabilitation:
+LEAPS trial. Neurorehabil Neural Repair. 2013; 27:370–80. [PubMed: 23504552]
+19. Carroll SL, Greig CA, Lewis SJ, et al. The use of pedometers in stroke survivors: are they feasible
+and how well do they detect steps? Arch Phys Med Rehabil. 2012; 93:466–70. [PubMed:
+22373934]
+20. Yang S, Zhang JT, Novak AC, Brouwer B, Li Q. Estimation of spatio-temporal parameters for
+post-stroke hemiparetic gait using inertial sensors. Gait Posture. 2013; 37:354–8. [PubMed:
+23000235]
+21. Wang F, Stone E, Skubic M, Keller JM, Abbott C, Rantz M. Toward a passive low-cost in-home
+gait assessment system for older adults. IEEE J Biomed Health Inform. 2013; 17:346–55.
+[PubMed: 24235111]
+22. Prajapati SK, Gage WH, Brooks D, Black SE, McIlroy WE. A novel approach to ambulatory
+monitoring: investigation into the quantity and control of everyday walking in patients with
+subacute stroke. Neurorehab Neural Repair. 2011; 25:6–14.
+23. Dobkin BH. Wearable motion sensors to continuously measure real-world physical activities. Curr
+Opin Neurol. 2013; 26:602–8. [PubMed: 24136126]
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 11
+Figure 1.
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 12
+Figure 2.
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 13
+Figure 3.
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 14
+Figure 4.
+A and B: Speed and duration of every walking bout for one day of rehabilitation in two
+participants. Dotted lines represent the casual 10-meter walking speeds of template walks for
+that respective week of rehabilitation. C: Median number of daily walking bouts across all
+study participants sorted by bout duration.
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 15
+Table 1
+Baseline clinical demographics.
+SF (n=73) AF (n=78) p-value
+Age, years 65.0 ± 13.2 61.8 ± 15.7 0.18
+Women, n (%) 28 (40.0) 31 (40.3) 0.98
+Stroke type, n (%) 0.45
+large vessel ischemic 41 (56.2) 45 (57.7)
+lacunar 11 (15.0) 18 (23.0)
+hemorrhagic 14 (19.2) 13 (16.7)
+unknown 7 (9.6) 2 (2.6)
+Hemiparetic side, n (%) 0.73
+right 42 (59.2) 44 (56.4)
+left 29 (40.8) 34 (43.6)
+Second stroke, n (%) 4 (5.5) 3 (3.9) 0.63
+Time from stroke to rehabilitation, days 8.5 [4.2, 14.8] 8 [5, 16] 0.70
+NIHSS score 6 [4,9] 6 [4,7] 0.50
+FAC score, n (%) 0.68
+0: non-functional ambulation 6 (9.0) 6 (8.2)
+1: manual assistance, heavy 21 (31.2) 28 (38.4)
+2: manual assistance, light 20 (30.0) 19 (26.0)
+3: stand-by assistance 9 (13.4) 8 (11.0)
+4: assistance for stairs 9 (13.4) 7 (9.6)
+5: independent 2 (3.0) 5 (6.8)
+15-meter walking speed, m/s 0.52 ± 0.47 0.52 ± 0.45 0.96
+3-minute walking distance, m 79.7 ± 68.5 80.9 ± 67.5 0.92
+Abbreviations: SF: speed-only feedback, AF, augmented feedback; NIHSS, NIH Stroke Scale; FAC, Functional Ambulation Category. Values are
+presented as mean ± SD, median [interquartile range], or n (%).
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Author
+Manuscript
+Dorsch et al. Page 16
+Table 2
+Sensor and secondary clinical outcomes data at discharge from inpatient rehabilitation.
+SF (n=63) AF (n=72) p-value
+Rehabilitation length of stay, days 25 [18, 36.5] 25 [17, 36] 0.64
+Participation in trial, days 20 [14, 33] 22.5 [13.8, 31] 0.92
+Days with processed sensor data 10 [7, 18.5] 13 [9, 18.8] 0.14
+Daily activity monitoring, hours 8.7 [7.8, 10.8] 8.7 [7.9, 9.9] 0.78
+FAC ≥ 4 34 (58.6) 41 (61.2) 0.39
+3-minute walking distance, m 137.4 ± 72.8 137.1 ± 69.9 0.98
+SIS-16 score 72.9 ± 21.5 71.4 ± 18.9 0.68
+Abbreviations: SF: speed-only feedback, AF, augmented feedback; FAC, Functional Ambulation Category; SIS, Stroke Impact Scale. Values are
+presented as mean ± SD, median [interquartile range], or n (%).
+Neurorehabil Neural Repair. Author manuscript; available in PMC 2016 June 01.

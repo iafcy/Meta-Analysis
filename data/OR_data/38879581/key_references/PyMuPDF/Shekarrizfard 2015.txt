@@ -1,0 +1,876 @@
+Investigating the role of transportation models in epidemiologic stu-
+dies of trafﬁc related air pollution and health effects
+Maryam Shekarrizfard a,1, Marie-France Valois c,2, Mark S. Goldberg c,2, Dan Crouse d,
+Nancy Ross e,3, Marie-Elise Parent f,4, Shamsunnahar Yasmin b,1, Marianne Hatzopoulou g,n
+a Department of Civil Engineering and Applied Mechanics, McGill University, 817 Sherbrooke St. W., Room 492, Montréal, Québec, Canada H3A 2K6
+b Department of Civil Engineering & Applied Mechanics, McGill University, Suite 483, 817 Sherbrooke St. W., Montréal, Québec, Canada H3A 2K6
+c Department of Medicine, McGill University, Division of Clinical Epidemiology, McGill University Health Centre, QC, Canada H3A 1A1
+d Department of Sociology, University of New Brunswick, Fredericton, New Brunswick, Canada
+e Department of Geography, McGill University, 805 Sherbrooke St. W., Montreal, Quebec, Canada H3A 2K6
+f INRS-Institut Armand-Frappier, Institut national de la recherche scientiﬁque, Unité d'épidémiologie et biostatistique, 531, Boul. des Prairies, Laval, Québec,
+Canada H7V 1B7
+g Department of Civil Engineering and Applied Mechanics, McGill University, Macdonald Engineering Building, Room 278b, 817 Sherbrooke St. W., Montréal,
+Québec, Canada H3A 2K6
+a r t i c l e i n f o
+Article history:
+Received 19 June 2014
+Received in revised form
+1 April 2015
+Accepted 2 April 2015
+Keywords:
+Trafﬁc-related emissions
+Trip-level NOx emissions
+MOVES
+Air pollution
+Land-use regression
+a b s t r a c t
+In two earlier case–control studies conducted in Montreal, nitrogen dioxide (NO2), a marker for trafﬁc-
+related air pollution was found to be associated with the incidence of postmenopausal breast cancer and
+prostate cancer. These studies relied on a land use regression model (LUR) for NO2 that is commonly used
+in epidemiologic studies for deriving estimates of trafﬁc-related air pollution. Here, we investigate the
+use of a transportation model developed during the summer season to generate a measure of trafﬁc
+emissions as an alternative to the LUR model. Our trafﬁc model provides estimates of emissions of ni-
+trogen oxides (NOx) at the level of individual roads, as does the LUR model. Our main objective was to
+compare the distribution of the spatial estimates of NOx computed from our transportation model to the
+distribution obtained from the LUR model. A secondary objective was to compare estimates of risk using
+these two exposure estimates. We observed that the correlation (spearman) between our two measures
+of exposure (NO2 and NOx) ranged from less than 0.3 to more than 0.9 across Montreal neighborhoods.
+The most important factor affecting the “agreement” between the two measures in a speciﬁc area was
+found to be the length of roads. Areas affected by a high level of trafﬁc-related air pollution had a far
+better agreement between the two exposure measures. A comparison of odds ratios (ORs) obtained from
+NO2 and NOx used in two case–control studies of breast and prostate cancer, showed that the differences
+between the ORs associated with NO2 exposure vs NOx exposure differed by 5.2–8.8%.
+& 2015 Elsevier Inc. All rights reserved.
+1. Introduction
+Trafﬁc-related air pollution has a large impact on public health;
+in numerous studies associations have been found between
+chronic and acute exposures to trafﬁc emissions and respiratory
+and cardiovascular effects (Cesaroni et al., 2012; Clark et al., 2012;
+Gan et al., 2011; Janssen et al., 2011; Carlsten et al., 2011; Brook
+et al., 2010; Jerrett et al., 2009; Marshall et al., 2008; Pope and
+Dockery 2006). In particular, two recent studies conducted in
+Montreal, Canada, have shown positive associations between an-
+nual estimates of concentrations of nitrogen dioxide (NO2), an
+accepted marker of trafﬁc-related air pollution, and the incidence
+of postmenopausal breast cancer (Crouse et al., 2010) and of
+prostate cancer (Parent et al., 2013).
+In urban areas, air pollution exhibits substantial seasonal and
+spatial variability. Different methods have been used to quantify
+spatial variability, including using data from ﬁxed-site monitoring
+stations (Brauer and Brook, 1997), land-use regression (LUR)
+(Johnson et al., 2010; Hoek et al., 2008; Ryan and LeMasters, 2007;
+Contents lists available at ScienceDirect
+journal homepage: www.elsevier.com/locate/envres
+Environmental Research
+http://dx.doi.org/10.1016/j.envres.2015.04.002
+0013-9351/& 2015 Elsevier Inc. All rights reserved.
+n Corresponding author. Fax: þ1 514 398 7361.
+E-mail addresses: maryam.shekarrizfard@mail.mcgill.ca (M. Shekarrizfard),
+marie-france.valois@mcgill.ca (M.-F. Valois),
+mark.goldberg@mcgill.ca (M.S. Goldberg), dlcrouse@gmail.com (D. Crouse),
+nancy.ross@mcgill.ca (N. Ross), marie-elise.parent@iaf.inrs.ca (M.-E. Parent),
+shamsunnahar.yasmin@mail.mcgill.ca (S. Yasmin),
+marianne.hatzopoulou@mcgill.ca (M. Hatzopoulou).
+1 Fax: þ1 514 398 7361.
+2 Fax: þ1 514 843 1493.
+3 Fax: þ1 514 398 3747.
+4 Fax: þ1 450 686 5599.
+Environmental Research 140 (2015) 282–291
+
+Gilbert et al., 2005), and dispersion models (Tartakovsky et al.,
+2013; Hatzopoulou and Miller, 2010; Beckx et al., 2009; Cook et al.,
+2008; Dhondt et al., 2012; Lefebvre et al., 2013). LUR models have
+been developed for many metropolitan areas and are often used to
+investigate associations between air pollution exposure and spe-
+ciﬁc health effects (Crouse et al., 2009; Arain et al., 2007). How-
+ever, their reliability in predicting accurate exposures depends on
+the density of the established monitoring network, which in turn,
+largely affects the costs of developing a LUR model.
+In this paper, we used a transportation model (Sider et al.,
+2013) with a detailed capability to model emissions from trafﬁc.
+This transportation model simulates trafﬁc ﬂows and emissions
+over an entire metropolitan region, and estimates trafﬁc emissions
+of nitrogen oxides (NOx) at the level of individual roads. We also
+make use of a LUR model for nitrogen dioxide (NO2) developed
+previously by us for Montreal (Crouse et al., 2009). Finally, we use
+data from a case–control study of postmenopausal breast cancer
+and another case–control study of prostate cancer that were pre-
+viously used to estimate associations with annual trafﬁc-related
+concentrations of NO2 estimated at the residences of all partici-
+pants (Crouse et al., 2010; Parent et al., 2013). Our main objective
+was to compare the distribution of the spatial estimates of NOx
+computed from our transportation model to the distribution of
+NO2 obtained from a LUR model. A secondary objective was to
+compare estimates of risk using these two exposure estimates; in
+doing so, we exploited two case–control studies of cancer con-
+ducted previously. In fact, an advantage of using emission models
+to derive exposure relates to their “policy sensitivity”, one could
+potentially evaluate the effects of changes in land-use, transpor-
+tation infrastructure, and travel demand on trafﬁc emissions and
+re-investigate the same associations with health outcomes.
+A number of studies have addressed the question of un-
+certainty in estimating the contribution of trafﬁc to air pollution
+while others have evaluated the effects of different indices of ex-
+posure to trafﬁc-related air pollution (e.g. NO2, NOx, proximity to
+trafﬁc, total trafﬁc volume) on health outcomes (Wu et al., 2011;
+Molitor et al., 2007; Ryan et al., 2007). As an example, Wu et al.
+(2011) compared different exposure methods: a LUR model, a
+dispersion model (using the simple Gaussian CALINE4 software),
+and a trafﬁc-density measure. The authors observed that the risk
+of adverse pregnancy outcomes (such as preterm birth) associated
+with exposure to trafﬁc-related air pollution was smaller when
+exposures were assigned based on trafﬁc density as compared to
+LUR or dispersion modeling. Molitor et al. (2007) emphasized the
+importance of improving exposure assessment through the con-
+sideration of advanced techniques in lieu of spatial models such as
+LUR although no direct comparison between measures was con-
+ducted. Their study was mainly focused on the role of spatial au-
+tocorrelation in the estimation of health effects.
+In this study, our focus is on comparing exposure estimates and
+evaluating how they may change depending on the model. Our
+measure of exposure to trafﬁc-generated NOx goes beyond trafﬁc-
+density (emissions are affected by trafﬁc ﬂows but also by ﬂeet
+characteristics, speed, and road conﬁguration) and we hypothesize
+that this measure would be more representative of trafﬁc-related
+air pollution. Because ambient NO2 is largely emitted by vehicular
+trafﬁc in urban areas, we hypothesize that concentrations of NO2
+would be associated with emissions of trafﬁc-related NOx. How-
+ever, because ambient NO2 is also affected by other sources (such
+as industries), we would expect that a model of trafﬁc NOx emis-
+sions will underestimate the impact of trafﬁc on NO2 away from
+the roadways. While trafﬁc is not always captured as a predictor in
+land-use regression models of NO2, the results of LUR may differ
+from those obtained from transport emission models (Health Ef-
+fects institute, 2010; Solomon et al., 2012). For example, Crouse
+et al. (2009) found that the predictive power of their proposed LUR
+(as measured by the R-squared) was improved by 2–4% after
+adding trafﬁc data as a predictor.
+Our speciﬁc objectives were: 1) to generate road-level emis-
+sions of NOx in Montreal for summer conditions; 2) to determine
+the correlation between emissions of NOx with concentrations of
+NO2 derived from a LUR model estimated from sampling in a
+summer period; and 3) to explore the resulting estimates of risk
+using these two exposure measures. We only consider the case of
+comparing “current” estimates of exposure and not of estimating
+historical ones, although we note that Crouse et al. (2010) have
+found that the spatial distributions do not vary dramatically over a
+10–20 year period. We emphasize that these comparisons in risk
+are only meant for the purposes of showing a range of plausible
+estimates between these two methods of estimating exposure to
+Model A
+Model B
+Simulation -based model for NOx road 
+emissions (Sider et al., 2013)
+Land-use regression model of NO2
+concentrations (Crouse et al., 2009)
+NOx map for the road and links
+NO2 map for the metropolitan area
+Cross validation and exposure analysis 
+Allocating NO2 levels per polygon in 
+the study area
+Emissions 
+modelling
+Traffic 
+modelling
+Allocating NOx levels per polygon in 
+the study area
+Logistic analysis
+Fig. 1. Study methodology including description of data sources (transport model for NOx and LUR for NO2, both reﬂecting summer conditions), comparing the estimates of
+NOx and NO2, and estimating odds ratios (OR) for breast and prostate cancer based on the two measures of exposure.
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+283
+
+markers of trafﬁc-related air pollution; the risk estimates shown in
+Crouse et al. (2010) and Parent et al. (2013) derived from an annual
+LUR model (Crouse et al., 2009) should be considered as the de-
+ﬁnitive ones.
+2. Materials and methods
+Fig. 1 presents the study methodology illustrating that we ex-
+amined the spatial variability of NO2 concentrations generated
+from a LUR model for the summer season with NOx emissions si-
+mulated also for summer conditions across the Island of Montreal.
+We used both models to generate trafﬁc-related air pollution ex-
+posure measures and compared these two measures. Fig. 2 pre-
+sents the Island of Montreal where the comparative analysis was
+undertaken.
+2.1. Description of data sources
+2.1.1. NOx emissions
+We developed a trafﬁc assignment model for the Montreal
+region that is linked with an emission model capable of simulating
+trafﬁc emissions occurring on the road network at the level of each
+individual driver (Sider et al., 2013). The trafﬁc assignment model
+(developed in the PTV VISUM platform; PTV Vision, 2009) allo-
+cates vehicle ﬂows on the road network using data reﬂecting the
+origins and destinations of individual/household trips in an urban
+area. The model includes road types ranging from expressways to
+local roads, with details regarding capacity, speed limits, inter-
+section types, and turning restrictions. A dataset of daily travel
+diaries from the 2008 Origin-Destination (OD) survey was used as
+input to this model. This survey is conducted every ﬁve years in
+Montreal by the Agence Metropolitaine de transport (AMT, 2008)
+and contains information on travel behavior for 5% of the Montreal
+region's households (which can be scaled up to the entire popu-
+lation using sampling weights derived for each geographic sub-
+area). Our trafﬁc assignment model was validated against trafﬁc
+counts for the same year at 35 major intersections within the
+region as well as ﬁve bridges linking the Island of Montreal with
+the rest of the region. The comparison between actual counts vs.
+predicted counts provides an R2 value for the 6–7 a.m. period of
+0.78 and a R2 value for the 7–8 a.m. period of 0.65.
+In addition, we developed a vehicle allocation algorithm (Sider
+et al., 2013) to assign a speciﬁc vehicle to each driving trip in the
+2008 OD survey (162,364 trips). Working at the household level,
+the main elements involved with vehicle allocation are the num-
+ber of vehicles owned by a household, each vehicle's time of
+availability and geographic coordinates, as well as the vehicle type
+distribution in the household's neighborhood (which we obtained
+from the Quebec motor vehicle registry). The database that we
+obtained from the provincial registry contains information on
+vehicle age and type. Therefore, every driving trip in the OD survey
+was allocated a vehicle type and model year that remained con-
+stant over a day's worth of trips.
+Our output includes trafﬁc ﬂow, average speed, and vehicle mix
+on every road segment (intersection to intersection) in the region.
+Using this output, we estimated emissions of nitrogen oxides
+(NOx) at the level of every individual vehicle based on its type, age,
+speed, and type of road it is circulating on (e.g. highway vs. arterial
+road with intersections). Emissions were based on a multi-di-
+mensional look-up table of emission factors in grams/vehicle.
+kilometer that we generated using the Mobile Vehicle Emissions
+Simulator (MOVES) platform developed by the United States En-
+vironmental Protection Agency (USEPA) updated with Montreal-
+speciﬁc data. Individual emission factors that accounted for ve-
+hicle type, model year, speed, road type, and season (winter and
+summer) were generated. In fact, our emission factors were based
+on hourly temperatures and relative humidity. We also calculated
+start emissions and these were a function of ambient conditions at
+the time of starting the vehicle. A total of 4080 EFs were generated.
+Total emissions on every roadway segment result from sum-
+ming the individual emissions of all vehicles on that segment.
+Because of randomness in the vehicle path choices (trafﬁc as-
+signment) and vehicle type allocation, we ran the model ﬁve dif-
+ferent times and used averaged emissions for every link. The
+standard errors associated with the mean emissions are low
+Commercial 
+Governmental and Institutional 
+Open Area 
+Parks and Recreational 
+Residential 
+Resource and Industrial 
+Waterbody 
+Fig. 2. Land use map for the Montreal region featuring the Island of Montreal.
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+284
+
+(approximately 1%) indicating that even though allocations may
+vary drastically at the individual level, segment emissions over the
+entire day (mean of 24 hourly outputs) remain relatively stable. In
+this paper, we make use of the NOx emissions derived for summer
+conditions that represent typical August temperatures and relative
+humidity.
+2.1.2. NO2 concentrations
+We made use of estimates of concentrations of NO2, a marker of
+trafﬁc-related air pollution, from a LUR model that we developed
+and described previously (Crouse et al., 2009). The model was
+based on data collected during a series of dense sampling cam-
+paigns in 2005 and 2006 to estimate integrated two-week NO2
+concentrations at individual points in space throughout the entire
+island. Although we measured concentrations of NO2 over a
+number of periods, in this paper, we are only making use of the
+August 2006 campaign. During this campaign, two-sided Ogawa
+passive samplers (Ogawa and Co., USA) were installed at a height
+of 2.5 m near the sidewalk at 133 locations across Montreal. We
+then generated a set of variables describing speciﬁc land use and
+road density characteristics measured at different radial distances
+away from the samplers (100, 300, 500 and 700 m). With these
+variables, we developed a LUR model to predict concentrations of
+NO2 where measurements were not taken. The resulting model,
+using concentrations averaged over a two-week sampling period
+in August, predicted 72% of the variability in NO2. The variables
+selected for this model included area of commercial land-use, re-
+sidential land-use, industrial land-use, parks and open water as
+well as population and building density, length of primary high-
+ways and major roads as well as their trafﬁc conditions and dis-
+tances to shoreline, to National Pollutant Release Inventory Facility
+(NPRI) and to primary highways. For each 5  5 m2 cell, we then
+used the linear predictor coupled with the land use characteristics
+of the cell to assign concentrations. The highest concentrations
+were observed to occur along highways and major urban streets.
+2.2. NO2–NOx comparison
+Emissions of NOx (summer conditions) derived from the
+transport model and concentrations of NO2 obtained from the LUR
+model were compared over the entire Island of Montreal (Fig. 2).
+The concentrations of NO2 represent integrated 2-week sampling
+and the NOx emissions represent a sum of 24-h emissions. Al-
+though emissions of NOx on the road network were available for
+the entire metropolitan region, the LUR model was estimated only
+for the Island, therefore restricting our analysis to this geographic
+area.
+While concentrations of NO2 were available from a raster-based
+map at a resolution of 5 m  5 m, emissions of NOx were only
+derived on the road network. In order to compare the two mea-
+sures, the Island of Montreal was subdivided into a mesh of grid
+cells each with dimensions 80 m  80 m amounting to a total of
+approximately 75,000 grid cells. We allocated to each gridcell a
+concentration of NO2 (in parts per billion, ppb) and a quantity of
+NOx (in grams). For this purpose, buffers with a radius of 100 m
+were drawn using the center of every gridcell; the total NOx
+emissions generated on the roadway and falling within each buffer
+were summed and allocated to adjacent gridcells. As such, grid-
+cells located in areas with high street density, would receive a
+larger amount of NOx emissions while gridcells located in regions
+with low street density would receive little or no emissions.
+In contrast, NO2 values per gridcell were estimated as the
+average of the raster values. Different gridcell and buffer sizes
+were tested and evaluated in terms of how they balanced the
+following three objectives: 1) minimizing the standard deviation
+in the NO2 values contributing to the average NO2 in each gridcell
+(we observed that 80  80 m2 was the largest gridcell size which
+achieved this objective), 2) maximizing the number of gridcells
+with non-zero NOx (which led us to create the 100 m buffer that
+slightly increases the amount of NOx in each gridcell while al-
+lowing many gridcells to have a small NOx value rather than a 0),
+and 3) avoiding a large gap in the NO2 and NOx spatial resolutions
+(if we had generated larger buffer sizes, the NO2 and NOx would
+represent very different areas of inﬂuence). Fig. 3 presents the
+gridcells, buffers, and intersection with road network layer in a
+small section of Montreal.
+We compared the NOx emission load with the concentration of
+NO2 in each gridcell. In addition, we conducted a comparison of
+the NOx emission load with the measured NO2 concentration at
+each of the 133 passive monitoring stations where ambient NO2
+was measured in the development of the LUR model as an addi-
+tional dimension to the validation of our NOx estimates.
+We generated scatter plots of NOx vs. NO2 and we tested LOESS
+smoothers with different spans varying from 1% to 75%. To com-
+plement the scatter plots and further illustrate the relation be-
+tween NO2 and NOx, we plotted the mean and median NOx within
+each NO2 decile. In addition, we segmented the population of
+gridcells (and monitoring stations) according to proximity to
+roadways (using the total length of roads) and examined the cor-
+relation between NOx and NO2 within each category.
+Fig. 3. A schematic representation of buffer generation and intersection with roadway segments. Red lines represent the roads. The buffers are drawn around the center of
+every gridcell. All road segments intersecting a buffer contribute to the NOx emissions allocated to the gridcell. (For interpretation of the references to color in this ﬁgure
+legend, the reader is referred to the web version of this article.)
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+285
+
+Finally, in order to map NO2 and NOx values in a way that al-
+lowed us to visualize areas with stronger agreement between the
+two measures, we categorized the 75,000 raw values of NOx and
+NO2 into deciles and assigned to each gridcell the decile number
+for NO2 and for NOx. In this respect, scaled NOx and NO2 values
+ranged from 1 to 10, with 1 indicating the lowest decile. This
+scaling allowed us to calculate scaled pollutant differences as NO2
+minus NOx (ranging from 9 to þ9). These scaled differences are
+referred to as the ‘indicator of agreement’. When the difference is
+‘small’ (between 1 and þ1), NO2 and NOx values agree while
+large negative differences indicate a much higher NOx value and
+large positive differences indicate a much higher NO2 value. Using
+the scaled difference values for each of the 75,000 polygons, we
+generated an ‘agreement map’ highlighting the areas where the
+two measures agree and areas with high disparities. This type of
+scaling was only used to visually represent the data; it was not
+used in subsequent statistical analyses. Finally, we computed the
+mean and median NOx in each NO2 decile and observed their re-
+lationship. In a recent study, Han et al. (2011) observed that the
+correlation between NOx and NO2 near-roadway is different in the
+daytime and night-time periods with better correlation during the
+day indicating that integrated measures would mask these nuan-
+ces. It is important to note that our transport model provides es-
+timates of hourly NOx emissions throughout the day therefore
+accounting for trafﬁc patterns and diurnal temperature changes.
+2.3. Deriving exposures and associations with breast cancer and
+prostate cancer
+The estimated spatial emissions of NOx and concentrations of
+NO2 were linked to the residences of 792 and 1722 participants in
+the breast cancer and prostate cancer case–control studies, re-
+spectively (Crouse et al., 2010; Parent et al., 2013). We ﬁrst com-
+pared exposures for the study participants and regenerated the
+comparative tests that were described in the previous sections to
+evaluate whether the same relationships hold for the two samples
+in the case–control studies.
+We then estimated ORs for both cancers using estimates of NO2
+and NOx by adopting the same methodology and covariates as the
+original studies. For this purpose, an unconditional logistic re-
+gression model was used to estimate ORs and associated 95% CI.
+Each exposure measure was included as a continuous linear vari-
+able (after verifying this assumption through the use of natural
+cubic functions of the exposure–response curves). Different sets of
+covariates were included in the two different cancer studies, and
+these variables included the cancer-speciﬁc set of accepted and
+suspected risk factors. All risk factors including descriptions of
+cancer cases and controls are presented as supplementary mate-
+rial. Covariates were included in the analysis in both forms of
+linear and natural cubic spline functions. We presented ORs for an
+increase across the interquartile range (IQR) of NO2 and NOx:
+2.71 ppb and 481.37 g, respectively. The IQR is deﬁned based on
+the exposures of subjects (cases and controls).
+3. Results and discussion
+3.1. NO2–NOx comparison
+Table 1 describes the distribution of concentrations of NO2 and
+NOx across the 75,000 gridcells; values of NO2 and NOx ranged
+from 0 to 46.88 ppb and 0 to 21589.51 g respectively. Fig. 4a pre-
+sents segment-level NOx emissions clearly showing that the most
+emitting facilities are the major highways running across the city
+as well as main arterial roads. The red and green lines in Fig. 4a
+represent the segments with the highest and lowest emission le-
+vels, respectively. NOx emissions were classiﬁed using ArcMap
+based on natural data groups which are located between two
+consecutive low points (valleys) in a histogram. As a result of this
+technique, the differences between classes are maximized. Fig. 4b
+presents the NO2 raster map generated using the August LUR
+model for the same geographic area (Crouse et al., 2009). The
+shades of gray refer to the NO2 concentrations with the highest
+concentrations represented in the lightest shade and occurring
+around the highways and in the downtown area. The scale of the
+NO2 LUR map is inverted (highest concentrations in the lightest
+shades) in order to better visualize the overlay between the NO2
+map and NOx emissions on roads presented in Fig. 4c. Qualita-
+tively, we can observe that road segments highlighted in bright
+red and orange (which represent the highest emitting roads)
+overlap with the light shaded areas on the NO2 map.
+Using the NO2 and NOx levels for the 75,000 gridcells, we cal-
+culated the Spearman correlation coefﬁcient to be 0.28 (95% CI:
+0.27–0.29). Fig. 5 presents the scatterplot of NO2 vs. NOx and
+LOESS smoother with a 1% span illustrating a non-linear re-
+lationship between the two measures. The correlation between
+simulated NOx and observed NO2 at the 133 monitoring stations
+was also estimated; the Spearman correlation coefﬁcient was 0.45
+(95% CI: 0.31–0.58). Fig. 6 presents the scatterplot and LOESS
+smoother of 15% also illustrating a non-linear relationship.
+These same relationships between NO2 and NOx across the
+75,000 gridcells and at the 133 stations can also be visualized in
+Figs. 7 and 8 where the mean and median NOx values are plotted
+within each NO2 decile. We observed that the fastest increase in
+mean NOx, occurs when NO2 concentrations are in the highest
+deciles characterizing concentrations near roadways. Indeed, clo-
+ser to the roadways, NOx emissions are highest since NOx emis-
+sions are estimated only on the roads.
+In order to investigate the effect of proximity to a roadway on
+the relationship between NO2 and NOx, polygons were classiﬁed
+according to the total lengths of roads (in meters) within their
+buffer. Spearman correlation coefﬁcients were calculated in each
+category. Fig. 9 shows that the correlation between NO2 and NOx
+increases signiﬁcantly with the increase in the density of roads
+within a polygon. For polygons affected by close to 1400 m of
+roadways within their buffers, the correlation with NO2 is 0.85
+while at road densities of about 400 m per polygon, the correlation
+drops to less than 0.3. Fig. 10 illustrates that the same trend is
+observed when comparing NOx with the NO2 concentrations at the
+133 monitoring stations.
+Table 1
+Descriptive statistics for NOx and NO2 across gridcells.
+Variable
+Minimum
+Maximum
+Mean
+Median
+Variance
+Percentiles
+IQRa
+25
+50
+75
+NO2 (ppb)
+0.00
+46.88
+7.91
+7.56
+9.72
+6.028
+7.56
+9.37
+3.342
+NOx (g)
+0.00
+21589.51
+788.84
+174.34
+4.2e6
+28.57
+174.35
+527.03
+498.46
+a IQR, interquartile range.
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+286
+
+In order to spatially map NO2 and NOx values and using the
+scaled difference values for each of the 75,000 polygons, we
+generated an ‘agreement map’ highlighting the areas where the
+two measures agree and areas with high disparities (Fig. 11). When
+the difference is close to 0 (between 1 and þ1), it indicates a
+good agreement between both measures. A large positive differ-
+ence indicates that the NO2 scaled value is much higher (this is
+expected to occur in areas with little roadways) while a large
+negative difference indicates that the NOx value is larger (this is
+expected to occur in the vicinity of roadways). Trafﬁc emissions of
+NOx are the precursor to NO2 in urban areas. Therefore NO2 is high
+where NOx emissions are high as well. Therefore closer to road-
+ways, we expect that NO2 and NOx values are correlated because
+the variation in NOx (due to a variation in trafﬁc volumes, speeds,
+and composition) will be followed by a similar variation in NO2.
+Far from the roadways, other sources of NO2 (albeit small) will
+become more important. In this situation, we expect that the
+Fig. 4. Visualizing NOx and NO2 levels across the Montreal region. (a) Segment emissions presented at four different levels with green segments as the lowest emitting and
+red segments with the highest emissions; (b) NO2 August concentrations illustrated at ﬁve different levels with dark shades representing the lowest concentrations and light
+shades the highest concentrations; and (c) overlay of the two maps in a and b to visualize agreement between NO2 and NOx. (For interpretation of the references to color in
+this ﬁgure legend, the reader is referred to the web version of this article.)
+Fig. 5. Predicted NO2 vs. simulated NOx across the 75,000 gridcells with LOESS (1%
+span).
+Fig. 6. Observed NO2 vs. simulated NOx at the 133 stations with LOESS (15% span).
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+287
+
+transport/emission model will underestimate exposure. Fig. 11a
+illustrates the frequency distribution of scaled pollutant differ-
+ences across the 75,000 polygons. We observed that for 38.9% of
+polygons, the agreement was between 1 and þ1. Similarly
+Fig. 11b provides a map of the scaled difference for each polygon
+across the Island of Montreal. It illustrates that the regions with
+highest agreement are close to the roadways and within the
+central areas of the city (highly populated) while regions with
+positive scaled differences are far from roadways and regions with
+negative scaled differences are very close to some roadways
+whereby the NOx level per polygon would be extremely high. This
+indicates a potential limitation of the NOx model which does not
+include atmospheric dispersion therefore tending towards over-
+estimating the contribution of trafﬁc to air pollution in the vicinity
+of roads and underestimating air pollution away from roadways
+(where
+the
+contribution
+of
+other
+sources
+becomes
+more
+important).
+3.2. Differences in risk estimates obtained using the NOx model and
+the summer LUR: examples from two case–control studies
+Fig. 12 illustrates a ‘heat map’ representing the home locations
+of the 792 breast cancer participants (cases and controls) over-
+laying our ‘agreement map’. We observed that 34% of the partici-
+pants lived in areas with scaled differences between both mea-
+sures of 1, 0, and þ1 (indicating ‘reasonable agreement’) and
+0.86% lived in areas where the scaled differences are 8 and 9
+indicating close proximity to roadways. Fig. 13 shows that for 50%
+of the participants, the Spearman correlation between NOx and
+NO2 is 0.5 or higher (up to 0.9). Comparing this ﬁgure with Fig. 9
+that presented the correlations for the entire domain based on
+road length; we found that the road length in the buffers where
+breast cancer subjects reside was higher. Similar results were
+found for subjects from the prostate cancer study (data not
+shown).
+We estimated separate ORs using concentrations of NO2 and
+emissions of NOx as measures of exposure, both for the breast
+cancer and prostate cancer case–control studies. In total, 792 in-
+dividuals were included in the breast cancer study and 1772
+subjects were included in the prostate cancer analysis (including
+both cases and controls). Table 2 shows that the odds ratios esti-
+mated using the two exposure metrics differed between 5.2% and
+8.8%, suggesting that wither method for estimated trafﬁc-related
+pollution would produce similar estimates of risk.
+We reiterate that the purpose of this analysis is not to show
+whether there is an association for these limited exposure data, as
+we have already published on these using the land use regression
+models (Crouse et al., 2010; Parent et al., 2013), but rather whether
+the estimates of risk are similar between the two types of ex-
+posure measures.
+4. Conclusions
+Land use regression (LUR) techniques are generally used for
+deriving exposure levels in epidemiologic studies of air pollution
+Fig. 7. Mean and median NOx emissions vs. mean and median NO2 concentrations
+in each NO2 decile (using data from the 75,000 gridcells).
+Fig. 8. Mean and median NOx emissions vs. mean and median NO2 concentrations
+in each NO2 decile (based on NO2 at the 133 monitoring stations).
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+Length (m)
+Correlation coefficient
+Fig. 9. Spearman correlations between NOx and NO2 for different polygon sets
+classiﬁed using the road length in each polygon (using the 75,000 polygons). The
+correlation coefﬁcients are higher at higher road density.
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+1800
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+Length (m)
+Correlation coefficient
+Fig. 10. Spearman correlations between NOx and NO2 for different ﬁxed stations
+classiﬁed using the road length in each polygon containing the station (using the
+133 stations). The correlation coefﬁcients are higher at higher road density.
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+288
+
+and health effects. However, they often necessitate the deploy-
+ment of large air quality sampling campaigns with extensive
+spatial and temporal coverage. In this paper, we compared a
+measure of exposure to trafﬁc-related air pollution generated by a
+transportation model with NO2 concentrations derived from LUR.
+We compared the measures of NO2 and NOx across the Montreal
+Island as well as included a comparison of health risks associated
+with these exposures.
+Our results indicate reasonable agreement between the two
+models in terms of the spatial distribution of emissions and air
+quality. In addition, we observe that the two measures lead to
+similar ORs for breast and prostate cancers. While this study
+compares modeled concentrations of NO2 (ppb) to modeled
+emissions of NOx (grams) a number of studies have used modeled
+concentrations of NO2 and NOx at participants' home locations to
+compare risk estimates. Using LUR-modeled NO2/NOx concentra-
+tions and NOx derived from a simple Gaussian dispersion model,
+Wu et al. (2011) found that the differences in the ORs for preterm
+birth based on LUR output and dispersion model output vary be-
+tween 50% and 77% (with the dispersion model output leading to
+more attenuated ORs); an order of magnitude higher than the
+difference we observed in this study. Andersen et al. (2011) used a
+Cox proportional hazard model for obstructive pulmonary disease
+in Denmark. In the fully adjusted model for age, smoking status,
+duration, intensity, and environmental tobacco smoke, the authors
+observed an OR of 1.08 (95% CI: 1.02–1.14) with a 35-year average
+exposure to measured NO2 levels and 1.05 (95% CI: 1.01–1.10) with
+a 35-year average exposure to measured NOx levels. In a study by
+Fig. 11. (a) Frequency distribution (cdf: cumulative distribution function and pdf: probability density function) and spatial distribution (b) of scaled pollutant differences (or
+‘indicator of agreement’). The red areas indicate a good agreement between both measures occurring in the vicinity of roadways. The green areas indicate that the NO2 scaled
+value is much higher. A large negative difference between the scaled values of NO2 minus NOx is presented in yellow. (For interpretation of the references to color in this
+ﬁgure legend, the reader is referred to the web version of this article.)
+Fig. 12. Distribution of sample of breast cancer subjects based on home location.
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+289
+
+Chen et al. (2007) on the relation between lung cancer and mea-
+sured NOx vs. NO2 concentrations, the authors found that among
+trends of different air pollutants (including NOx, PM10, VOC, SO2,
+Lead), the one with a pattern most similar to the trend in lung
+cancer incidence was NOx.
+The analysis we presented in this study sheds light on the use
+of two different measures of exposure to trafﬁc-related air pollu-
+tion. Our two measures are not perfectly correlated; while NOx
+emissions from trafﬁc are highly correlated with near-road NO2
+levels, in the absence of a dispersion model, we could be over or
+underestimating the exposure to NOx emissions away from the
+roadways. Similarly, LUR techniques are associated with a number
+of uncertainties and highly depend on the diversity and density of
+sampling locations. The differences in the ORs for breast and
+prostate cancers using both measures are small.
+Information on funding sources supporting the work
+This study was funded by a collaborative grant from the Ca-
+nadian Institutes of Health Research and the Natural Sciences and
+Engineering Research Council of Canada.
+Funding sources for the cancer studies
+The breast and prostate cancer studies were supported ﬁnan-
+cially through grants from the Canadian Cancer Society, the Cancer
+Research Society, the Fonds de Recherche du Québec—Santé
+(FRQS), FRQS-RRSE, and the Ministère du Développement écono-
+mique, de l’Innovation et de l’Exportation du Québec. Marie-Élise
+Parent has held career awards from the FRQS.
+Appendix A. Supplementary material
+Supplementary data associated with this article can be found in
+the online version at http://dx.doi.org/10.1016/j.envres.2015.04.
+002.
+References
+AMT, Agence Metropolitaine de Transport (AMT), 2008. La mobilite des personnes
+dans la region de Montreal: Faits Saillants. Enquete Origine-Destination.
+Andersen, Z.J., Hvidberg, M., Jensen, S.S., Ketzel, M., Loft, S., Sorensen, M., et al.,
+2011. Chronic obstructive pulmonary disease and long-term exposure to trafﬁc-
+related air pollution: a cohort study. Am. J. Respir. Crit. Care Med. 183, 455–461.
+Arain, M.A., Blair, R., Finkelstein, N., Brook, J.R., Sahsuvaroglu, T., Beckerman, B.,
+et al., 2007. The use of wind ﬁelds in a land use regression model to predict air
+pollution concentrations for health exposure studies. Atmos. Environ. 41 (16),
+3453–3464.
+Beckx, C., Int Panis, L., Arentze, T., Janssens, D., Torfs, R., Broekx, S., et al., 2009. A
+dynamic activity-based population modelling approach to evaluate exposure to
+air pollution: methods and application to a dutch urban area. Environ. Impact
+Assess. Rev. 29, 179–185.
+Brauer, M., Brook, J.R., 1997. Ozone personal exposures and health effects for se-
+lected groups residing in the Fraser valley. Atmos. Environ. 31 (14), 2113–2121.
+Brook, R.D., Rajagopalan, S., Pope III, C.A., Brook, J.R., Bhatnagar, A., Diez-Roux, A.V.,
+et al., 2010. Particulate matter air pollution and cardiovascular disease: an
+update to the scientiﬁc statement from the American Heart Association. Cir-
+culation 121, 2331–2378.
+Carlsten, C., Dybuncio, A., Becker, A., Chan-Yeung, M., Brauer, M., 2011. Trafﬁc-re-
+lated air pollution and incident asthma in a high-risk birth cohort. Occup.
+Environ. Med. 68, 291–295.
+Cesaroni, G., Boogaard, H., Jonkers, S., et al., 2012. Health beneﬁts of trafﬁc-related
+air pollution reduction in different socioeconomic groups: the effect of low-
+emission zoning in Rome. Occup. Environ. Med. 69, 133–139.
+Chen, F., Cole, P., Bina, W.F., 2007. Time trend and geographic patterns of lung
+adenocarcinoma in the United States, 1973–2002. Cancer Epidemiol. Biomark.
+Prev. 16 (12), 2724–2729.
+Clark, C., Crombie, R., Head, J., van Kamp, I., van Kempen, E., Stansfeld, S.A., 2012.
+Does trafﬁc-related air pollution explain associations of aircraft and road trafﬁc
+noise exposure on children's health and cognition? A secondary analysis of the
+United Kingdom sample from the RANCH project. Am. J. Epidemiol. 176,
+327–337.
+Cook, R., Isakov, V., Touma, J.S., Benjey, W., Thurman, J., Kinnee, E., et al., 2008.
+Resolving local-scale emissions for modeling air quality near roadways. Air
+Waste Manag. Assoc. 58, 451–461.
+Crouse, D.L., Goldberg, M.S., Ross, N.A., Chen, H., Labrèche, F., 2010. Postmenopausal
+breast cancer is associated with exposure to trafﬁc-related air pollution in
+Montreal, Canada: a case–control study. Environ. Health Perspect. 118 (11),
+1578–1583.
+Crouse, D.L., Goldberg, M.S., Ross, N.A., 2009. Prediction-based approach to mod-
+elling temporal and spatial variability of trafﬁc-related air pollution in Mon-
+treal, Canada. Atmos. Environ. 43 (32), 5075–5084.
+Dhondt, S., Beckx, C., Degraeuwe, B., Lefebvre, W., Kochan, B., Bellemans, T., et al.,
+2012. Health impact assessment of air pollution using a dynamic exposure
+proﬁle: implications for exposure and health impact estimates. Environ. Impact
+Fig. 13. Frequency of breast cancer subjects (represented as BC frequency) and
+spearman correlation between NOx and NO2 for areas with different road lengths.
+The continuous blue line presents the correlation coefﬁcient. This ﬁgure shows that
+the correlation between NOx and NO2 and the frequency of BC subjects increase
+with the increase in the density of roads within a polygon. (For interpretation of the
+references to color in this ﬁgure legend, the reader is referred to the web version of
+this article.)
+Table 2
+Odds ratios for breast and prostate cancer for pollutants modeled as linear effects
+for a change equivalent to the IQR, age-adjusted and fully-adjusted models.
+Model and exposure measure
+For increase of IQRa for OR and 95%
+CI
+OR
+95% CI for OR
+Breast cancer
+Age adjustedb
+August NO2
+1.09
+0.92, 1.28
+Summer NOx
+1.04
+0.99, 1.10
+Percent difference in
+ORs
+5.5%
+Fully adjusted
+August NO2
+1.14
+0.94, 1.38
+Summer NOx
+1.04
+0.98, 1.10
+Percent difference in
+ORs
+8.8%
+Prostate cancer
+Age adjustedb
+August NO2
+1.08
+0.97, 1.21
+Summer NOx
+1.02
+0.98, 1.06
+Percent difference in
+ORs
+5.5%
+Fully adjusted
+August NO2
+0.97
+0.85, 1.10
+Summer NOx
+1.02
+0.98, 1.06
+Percent difference in
+ORs
+5.2%
+a The IQR for breast cancer is 2.706 ppb for the August NO2 and 481.376 g for
+summer NOx. The IQR for prostate cancer is 2.76 ppb for the August NO2 and
+419.16 g for summer NOx.
+b Age is modeled as a linear effect.
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+290
+
+Assess. Rev. 36, 42–51.
+Gan, W.Q., Koehoorn, M., Davies, H.W., Demers, P.A., Tamburic, L., Brauer, M., 2011.
+Long-term exposure to trafﬁc-related air pollution and the risk of coronary
+heart disease hospitalization and mortality. Environ. Health Perspect. 119,
+501–507.
+Gilbert, N.L., Goldberg, M.S., Beckerman, B., Brook, J.R., Jerrett, M., 2005. Assessing
+spatial variability of ambient nitrogen dioxide in Montreal, Canada, with a land-
+use regression model. J. Air Waste Manag. 55, 1059–1063.
+Han, S., Hai, B., Yinchang, F., Aixia, L., Xiangjin, L., Fang, Z., et al., 2011. Analysis of the
+relationship between O3, NO and NO2 in Tianjin, China. Aerosol Air Qual. Res.
+11, 128–139.
+Hatzopoulou, M., Miller, E.J., 2010. Linking an activity-based travel demand model
+with trafﬁc emission and dispersion models: transport’s contribution to air
+pollution in Toronto. Transp. Res. D: Transp. Environ. 15 (6), 315–325.
+Health Effects Institute, 2010. Trafﬁc-Related Air Pollution: A Critical Review of the
+Literature on Emissions, Exposure, and Health Effects. Health Effects Institute,
+Boston, MA.
+Hoek, G., Beelen, R., De Hoogh, K., Vienneau, D., Gulliver, J., Fischer, P., et al., 2008. A
+review of land-use regression models to assess spatial variation of outdoor air
+pollution. Atmos. Environ. 42, 7561–7578.
+Janssen, N.A.H., Hoek, G., Simic-Lawson, M., Fischer, P., van Bree, L., ten Brink, H.,
+et al., 2011. Black carbon as an additional indicator of the adverse health effects
+of airborne particles compared with PM10 and PM2.5. Environ. Health Perspect.
+119, 1691–1699.
+Jerrett, M., Finkelstein, M.M., Brook, J.R., Arain, M.A., Kanaroglou, P., Stieb, D.M.,
+et al., 2009. A cohort study of trafﬁc-related air pollution and mortality in
+Toronto, Ontario, Canada. Environ. Health Perspect. 117, 772–777.
+Johnson, M., Isakov, V., Touma, J.S., Mukerjee, S., Özkaynak, H., 2010. Evaluation of
+land-use regression models used to predict air quality concentrations in an
+urban area. Atmos. Environ. 44, 3660–3668.
+Lefebvre, W., Degrawe, B., Beckx, C., Vanhulsel, M., Kochan, B., Bellemans, T., et al.,
+2013. Presentation and evaluation of an integrated model chain to respond to
+trafﬁc-and health-related policy questions. Environ. Model. Softw. 40, 160–170.
+Marshall, J.D., Nethery, E., Brauer, M., 2008. Within-urban variability in ambient air
+pollution: comparison of estimation methods. Atmos. Environ. 42, 1359–1369.
+Molitor, J., Jerrett, M., Chang, C.-C., Molitor, N.-T., Gauderman, J., Berhane, K., et al.,
+2007. Assessing uncertainty in spatial exposure models for air pollution health
+effects assessment. Environ. Health Perspect., 1147–1153.
+Parent, M.E., Goldberg, M.S., Crouse, D.L., Ross, N.A., Chen, H., Valois, M.F., Liautaud,
+A., 2013. Trafﬁc-related air pollution and prostate cancer risk: a case–control
+study in Montreal, Canada. Occup. Environ. Med. 70 (7), 511–518.
+Pope, C.A., Dockery, D.W., 2006. Health effects of ﬁne particulate air pollution: lines
+that connect. J. Air Waste Manag. Assoc., 709–742.
+PTV Vision, 2009. VISUM 11.0 Basics, PTV AG. PTV Vision, Karlsruhe, Germany.
+Ryan, P.H., LeMasters, G.K., 2007. A review of land-use regression models for
+characterizing intraurban air pollution exposure. Inhal. Toxicol. 19 (s1),
+127–133.
+Ryan, P.H., LeMasters, G.K., Biswas, P., Levin, L., Hu, S., Lindsey, M., et al., 2007b. A
+comparison of proximity and land use regression trafﬁc exposure models and
+wheezing in infants. Environ. Health Perspect. 115, 278–284.
+Sider, T., Alam, A., Zukari, M., Dugum, H., Goldstein, N., Eluru, N., Hatzopoulou, M.,
+2013. Land-use and socio-economics as determinants of trafﬁc emissions and
+individual exposure to air pollution. J. Transp. Geogr. 33, 230–239.
+Solomon, P.A., Costantini, M., Grahame, T.J., Gerlofs-Nijland, M.E., Cassee, F.R.,
+Russell, A.G., et al., 2012. Air pollution and health: Bridging the gap from
+sources to health outcomes: conference summary. Air Qua. Atmos. Health 5,
+9–62.
+Tartakovsky, D., Broday, D.M., Stern, E., 2013. Evaluation of AERMOD and CALPUFF
+for predicting ambient concentrations of total suspended particulate matter
+(TSP) emissions from a quarry in complex terrain. Environ. Pollut. 179, 138–145.
+Wu, J., Wilhelm, M., Chung, J., Ritz, B., 2011. Comparing exposure assessment
+methods for trafﬁc-related air pollution in an adverse pregnancy outcome
+study. Environ. Res. 111, 685–692.
+M. Shekarrizfard et al. / Environmental Research 140 (2015) 282–291
+291
+

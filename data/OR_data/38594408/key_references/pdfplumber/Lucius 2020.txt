@@ -1,0 +1,778 @@
+diagnostics
+Article
+Deep Neural Frameworks Improve the Accuracy of
+General Practitioners in the Classification of
+Pigmented Skin Lesions
+MaximilianoLucius1,JorgeDeAll2,JoséAntonioDeAll2,MartínBelvisi1,LucianaRadizza3,
+MarisaLanfranconi2,VictoriaLorenzatti2andCarlosM.Galmarini1,*
+1 TopaziumArtificialIntelligence,PaseodelaCastellana40Pl8,28046Madrid,Spain;
+mlucius@topazium.com(M.L.);info@topazium.com(M.B.)
+2 SanatorioOtamendi,C1115AABBuenosAires,Argentina;jorgedeall@yahoo.com.ar(J.D.A.);
+jose.deall@medicus.com.ar(J.A.D.A.);rrpp@otamendi.com.ar(M.L.);victorialorenzatti@hotmail.com(V.L.)
+3 InstitutodeObraSocialdelasFuerzasArmadas,C1115AABBuenosAires,Argentina;lradizza@gmail.com
+* Correspondence: cmgalmarini@topazium.com;Tel.:+34-91-184-7846
+(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1)
+Received: 20October2020;Accepted: 17November2020;Published: 18November2020 (cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7)
+Abstract: This study evaluated whether deep learning frameworks trained in large datasets can
+helpnon-dermatologistphysiciansimprovetheiraccuracyincategorizingthesevenmostcommon
+pigmentedskinlesions. Open-sourceskinimagesweredownloadedfromtheInternationalSkin
+ImagingCollaboration(ISIC)archive. Differentdeepneuralnetworks(DNNs)(n=8)weretrained
+basedonarandomdatasetconstitutedof8015images. Atestsetof2003imageswasusedtoassess
+theclassifiers’performanceatlow(300×224RGB)andhigh(600×450RGB)imageresolutionand
+aggregateddata(age,sexandlesionlocalization). Wealsoorganizedtwodifferentconteststocompare
+theDNNperformancetothatofgeneralpractitionersbymeansofunassistedimageobservation.
+Bothatlowandhighimageresolution,theDNNframeworkdifferentiateddermatologicalimages
+withappreciableperformance. Inallcases,theaccuracywasimprovedwhenaddingclinicaldatato
+theframework. Finally,theleastaccurateDNNoutperformedgeneralpractitioners. Thephysician’s
+accuracywasstatisticallyimprovedwhenallowedtousetheoutputofthisalgorithmicframeworkas
+guidance. DNNsareproventobehighperformersasskinlesionclassifiersandcanimprovegeneral
+practitionerdiagnosisaccuracyinaroutineclinicalscenario.
+Keywords: artificialintelligence;dermatology;deeplearning;skindiseases;melanoma
+1. Introduction
+Diagnosisindermatologyislargelybasedonthevisualinspectionofalesiononthesuspicious
+skinarea. Therefore,diagnosticabilityandaccuracydependgreatlyontheexperienceandtraining
+of dermatologists or general practitioners, in areas where dermatological services are not readily
+available [1]. When dermatologists have no access to additional technical support, they have an
+approximately a 65–70% accuracy rate in melanoma diagnosis [2–4]. If the lesion is suspicious,
+the visual inspection is supplemented with different diagnostic tools (e.g., dermoscopy, confocal
+microscopyoropticalcoherencetomography)providingtheabilitytoexploretheskininvivo,indepth
+andatahigherresolution[5,6]. However,accesstotheseinstrumentsremainslimitedduetotime,
+logistical and cost concerns. Even when this technical support is feasible, dermatologists rarely
+achieveaverageratesgreaterthan85%[7,8]. Thesituationisevenworseifweconsiderthatthere
+is a shortage of dermatologists whilst the diagnostic accuracy of non-expert clinicians is sensibly
+belowthanwhatisobservedwithdermatologists,reachingestimateratesbetween20and40%[9–13].
+Diagnostics2020,10,969;doi:10.3390/diagnostics10110969 www.mdpi.com/journal/diagnostics
+Diagnostics2020,10,969 2of15
+Thus,newdiagnostictoolsassistingdermatologistsorgeneralpractitionerstoaccuratelydiagnose
+skinlesionsshouldbedeveloped,evaluatedandoptimized.
+Artificialintelligence(AI)isacomputersciencethatinvolvescreatingsequencesofdata-related
+instructionsthataimtoreproducehumancognition[14]. TheuseofAItoassistphysicianshasbeen
+applied to various medical fields. In dermatology, image recognition using a set of algorithms
+called deep neural networks (DNNs) has proven to be of significant aid to physicians in the
+diagnosis of pigmented skin lesions. These algorithms achieve accuracies comparable to those
+ofdermatologists[1,15–18]. Inaddition,Hekleretal. demonstratedthatthecombinationofhumanand
+artificialintelligenceissuperiortotheindividualresultsofdermatologistsorDNNsinisolation[19].
+Similarresultswereobservedinthecaseofnon-pigmentedskinlesionssuchasacne,rosacea,psoriasis,
+atopicdermatitisorimpetigo. Thus,thesetechnologiesshowtremendouspromisetoimproveskin
+lesiondiagnosisandmayextendscreeningfarbeyondtheclinicalsetting. However,manyaspectsof
+theirusehaveyettobeelucidatedandimproved.
+Thisstudyaimedtoevaluatewhetherdeeplearningframeworkstrainedinlargedatasetscan
+helpnon-dermatologistphysiciansimprovetheiraccuracyincategorizingthesevenmostcommon
+pigmentedskinlesionsrepresentingmorethan90%ofthepigmentedskinlesions. Forthispurpose,
+we(i)comparedtheaccuracyofeightdifferentDNNsindifferenttrainingconditionssuchastheinput
+oflowandhighimageresolutionandwithorwithoutclinicaldatatoselecttheleastperformingDNNs;
+(ii)comparetheaccuracyofthisDNNagainstnon-dermatologistgeneralpractitioners;(iii)assessif
+thesephysiciansimprovedtheirclassificationperformancewhenusingtheframeworkasanassisting
+tool. Additionally,wedevelopedaninformationmaximizinggenerativeadversarialnetwork(infoGAN)
+togeneratesyntheticdermatologicalimages[20].
+2. MaterialsandMethods
+2.1. PigmentedSkinImageDataset
+This study used images from the anonymous and annotated HAM10000 dataset publicly
+availablethroughtheInternationalSkinImagingCollaboration(ISIC)archive[21]. Alldownloaded
+imageswereselectedusingarandomgeneratorfromthesetofavailableimagesintheISICarchive.
+Westochasticallysplitthemastersetof10,015dermoscopicimagesintotraining(n=8313;83%)and
+test(n=1702;17%)datasetsthatwerecompletelydisjoint. Imagesincludedarepresentativecollection
+ofall-importantdiagnosticcategoriesacrossthesevendifferenttypesofpigmentedlesionsasdetailed
+in Tschandl et al. [21]. These included melanocytic nevus, vascular skin lesions (including cherry
+angiomas, angiokeratomas, pyogenic granulomas and hemorrhages), benign keratoses (including
+seborrheickeratoses,solarlentigoandlichen-planus-likekertoses),dermatofibroma,intraepithelial
+carcinoma (including actinic keratoses and Bowen’s disease), basal cell carcinoma and melanoma.
+ExamplesofimagesofeachlesiontypearedepictedinFigure1. Thefinalcompositionofeachdataset
+isshowninTable1.
+Table1. Descriptionofthetrainingandtestdatasets.
+Class TrainingSet(n) TestSet(n)
+Melanocyticnevi 5565 1140
+Benignkeratoses1 912 186
+Vascularlesions2 118 24
+Dermatofibroma 96 20
+Intraepithelialcarcinoma3 271 56
+Basalcellcarcinoma 427 87
+Melanoma 924 189
+Total 8313 1702
+1 includes seborrheic keratoses, solar lentigo and lichen-planus like keratoses. 2 includes cherry angiomas,
+angiokeratomas,pyogenicgranulomasandhemorrhage.3includesactinickeratosesandintraepithelialcarcinoma
+(Bowen’sdisease).
+Diagnostics 2020, 10, x FOR PEER REVIEW 3 of 15
+Diagnostics2020,10,969 3of15
+a 65, F, LE b 70, M, B c 5, M, B d 40, M, LE
+e 75, M, H f 55, F, B g 55, M, T
+FFiigguurree 11.. EExxaammpplleess ooff iimmaaggeess ddoowwnnllooaaddeedd ffrroomm tthhee HHAAMM1100000000 ddaattaasseett.. TThheessee iimmaaggeess aarree ppuubblliiccllyy
+aavvaaiillaabbllee tthhrroouugghht htheeI nItnetrenrantaiotinoanlaSl kSinkiInm IamgaingginCgo Cllaoblloarbaotiroantio(InS I(CIS)IaCrc) hairvcehaivned arenpdr erseepnrtemseonrte mthoarne
+9th5a%n o9f5a%ll poigf maleln pteidgmleesniotends elnecsoiounnst eernedcoduunrtienrgedc lidnuicrainlgp raclcitnicicea(lT spcrhaacntidcel P(T2s0c1h8a).n(dal) MP e2la01n8o)c. y(taic)
+nMeevluasn;o(cby)tibc enneivgunsk; e(bra) tobseinsi;g(nc )kvearastcousliasr; (lec)s ivoans;c(udl)ard leersmioant;o (fidb)r odmeram;a(teo)fiinbrtroamepa;i t(hee)l iianltrcaaerpciitnhoemliaal;
+(cfa)rbcainsoamlcae;l l(fc)a brcaisnaol mceall; caanrdci(ngo)mmae; laanndo m(ga). mLeelgaennodmsain. Lsiedgeeneadcsh inimsidage eearecphr iemseangtes rcelpinriecsaelndtsa tcalisnuiccahl
+adsaatag seu,scehx aasn adgelo, sceaxli zaantdio lnocaaslsizoactiiaotned astosotchieatiemda tgoe t.hFe :ifmemagael.e F;:M fe:mmaallee;; MLE: m:laolwe;e LrEe:x ltorewmerit eyx;tBre:mbaictyk;;
+HB:: bhaacnkd; ;HT:: htraunndk;. T: trunk.
+2.2. DeepNeuralNetworks
+2.2. Deep Neural Networks
+WeevaluatedeightdifferentDNNs,eachcharacterizedbyaspecificarchitecture. VGG16and
+We evaluated eight different DNNs, each characterized by a specific architecture. VGG16 and
+VGG19 contain 16 and 19 convolutional layers, respectively, with very small receptive fields,
+VGG19 contain 16 and 19 convolutional layers, respectively, with very small receptive fields, five
+fivemax-poolinglayersofsizeforcarryingoutspatialpooling, followedbythreefullyconnected
+max-pooling layers of size for carrying out spatial pooling, followed by three fully connected layers,
+layers, with the final layer as the soft-max layer [22]. Rectification nonlinearity (ReLu) activation
+with the final layer as the soft-max layer [22]. Rectification nonlinearity (ReLu) activation is applied
+isappliedtoallhiddenlayers. Themodelalsousesdropoutregularizationinthefullyconnected
+to all hidden layers. The model also uses dropout regularization in the fully connected layers.
+layers. ResNet34isa34-layerresidualnetworkwhileResNet50andResNet101are50-and101-layers
+ResNet34 is a 34-layer residual network while ResNet50 and ResNet101 are 50- and 101-layers deep,
+deep,respectively. ThearchitectureofalltheseDNNsissimilartotheonefoundinVGGconsisting
+respectively. The architecture of all these DNNs is similar to the one found in VGG consisting mostly
+mostlyof3×3filters,however,instead,shortcutconnectionsareinsertedresultingintoaresidual
+of 3 × 3 filters, however, instead, shortcut connections are inserted resulting into a residual network.
+network. SEResNet50 architecture is based on ResNet. A squeeze-and-excitation block is applied
+SEResNet50 architecture is based on ResNet. A squeeze-and-excitation block is applied at the end of
+attheendofeachnon-identitybranchofresidualblock[23]. Differently,andinsteadofincreasing
+each non-identity branch of residual block [23]. Differently, and instead of increasing its size by
+its size by adding more or deeper layers, EfficientNetB5 scales up the network width, depth and
+adding more or deeper layers, EfficientNetB5 scales up the network width, depth and resolution with
+resolutionwithasetoffixedscalingcoefficients[24]. Finally,MobileNetusesdepth-wiseseparable
+a set of fixed scaling coefficients [24]. Finally, MobileNet uses depth-wise separable convolutions
+convolutionswhichsignificantlyreducethenumberofparameterswhencomparedtoanetworkbased
+which significantly reduce the number of parameters when compared to a network based on
+onstandardconvolutionsandthesamedepthacrossthestructureinthenetworks[25]. Theframework
+standard convolutions and the same depth across the structure in the networks [25]. The framework
+is54layersdeep.
+is 54 layers deep.
+ForeachDNN,theinitialweightsofalllayersofthenetworkweresetupafterpretrainingwith
+For each DNN, the initial weights of all layers of the network were set up after pretraining with
+ImageNet. Toassessboththeperformanceofthealgorithmandtheenhancedtrainingtechniques
+ImageNet. To assess both the performance of the algorithm and the enhanced training techniques as
+asaccuratelyaspossible,weretrainedeachDNNatotaloffivetimes(folds),andeachtrainingrun
+accurately as possible, we retrained each DNN a total of five times (folds), and each training run
+consistedof90epochs. Trainingusingthecuratedimagepatchestookapproximately6htocomplete,
+consisted of 90 epochs. Training using the curated image patches took approximately 6 h to complete,
+45kiterationsona4GeForceGTX1080GPUconfiguration. Trainingaccuracyforthecuratedpatches
+45k iterations on a 4 GeForce GTX 1080 GPU configuration. Training accuracy for the curated patches
+reachedmaximumaccuracy(100%)ataroundepoch32,whereasthepretrainedmodelonlybegan
+reached maximum accuracy (100%) at around epoch 32, whereas the pretrained model only began to
+to converge around epoch 25. All these DNNs were trained and tested with two different image
+converge around epoch 25. All these DNNs were trained and tested with two different image input
+inputsize: 300×224RGBand600×450RGB.Thelow-resolutionimageswereobtainedbycropping,
+size: 300 × 224 RGB and 600 × 450 RGB. The low-resolution images were obtained by cropping,
+distortingandlinearresizingtheoriginalhigh-resolutionimages. DNNswerealsotrainedandtested
+distorting and linear resizing the original high-resolution images. DNNs were also trained and tested
+without or with the clinical features (sex, age and location of the lesion) associated to every image in
+the HAM10000 database.
+Diagnostics2020,10,969 4of15
+withoutorwiththeclinicalfeatures(sex,ageandlocationofthelesion)associatedtoeveryimagein
+theHAM10000database.
+2.3. ImagePreprocessing
+Whenadeepconvolutionalneuralnetworkoverfits,itworksextremelywellontrainingdata
+butpoorlyondataithasneverseenbefore. Thisisespeciallyimportantinthefieldofdermatology
+becauseofthevariabilitythatexistsintheimagesthattheneuralnetworkwillbeanalyzing. Twosteps
+weretakentoreduceoverfitting. First,adropoutlayerwasaddedandsetto0.5. Thisresultsin50%of
+theneuronstoberandomlyturnedoffduringthetrainingprocessandthereforereducethelikelihood
+ofoverfitting. Thesecondsteptakentoreduceoverfittingwastousedataaugmentation. Indata
+augmentation, the images are modified to account for some of the variability that exists in image
+taking. Toaccountforthegridlocation,thesizeofthedermatologicalmanifestationandtheangle
+oftheimage,thetrainingimagesfedintothemodelwerealteredusingzoom(25%probabilitytobe
+increasedbetween−1and2%,rotatedbetween−6ºand6ºandvertical/horizontaltransferfrom−2to
+2%),rotation(25%probabilityofbeingrandomlyrotated90ºclockwise),transposing(15%probability
+of making a random axial symmetry in one of its diagonals) and horizontal and vertical flipping
+randomly(50%probabilityofmakingahorizontalorvertical“mirror”orboth)orfollowingoptical
+parametersfromthedifferenttypesofphonecamerassuchasshearandbrightness(30%probability
+ofcontrastmodificationbetween−8and8%)oroptical(80%probabilityofbeingdistortedwitha
+rangebetween−6and6%)orgrid(75%probabilityatstep4witharangeof−28–28%)distortions.
+Thesemodificationswereappliedto66%oftheinputimages. Themodelwasrunoncewithoutdata
+augmentationwithdropoutandoncewithdataaugmentationincludingdropoutinbothinstances.
+2.4. GenerationofSyntheticPigmentedSkinLesionImagesUsinganinfoGAN
+Generativeadversarialnetworks(GANs)areatypeofgenerativemodelthatattempttosynthesize
+noveldatathatareindistinguishablefromthetrainingdata[26]. Theyconsistoftwoneuralnetworks,
+lockedincompetition: ageneratorthatcapturesthedatadistributionandcreatessynthesizeddata
+(e.g.,animage),andadiscriminatorthatestimatestheprobabilitythatasamplecamefromthetraining
+data rather than from the generator. The two networks are sealed in a zero-sum game, where the
+successofonecorrespondstothefailureoftheother. Thetrainingprocedureforthegeneratoristo
+maximizetheprobabilityofthediscriminatormakinganerror[27]. Thus,thisframeworkisbasedon
+avaluefunctionthatonemodelseekstomaximizeandtheotherseekstominimize. Sincethetwo
+networksaredifferentiable,thesystemgeneratesagradientthatcanbeusedtosteerbothnetworksto
+therightdirection.
+Wetrainedaninformationmaximizinggenerativeadversarialnetwork(infoGAN)composed
+of a generator and a discriminator, on all high resolution images of the HAM10000 dataset [20].
+TheinfoGANwasadaptedtotheprogressivearchitectureofthemodelbysplittingthestructured
+codeintopartsandfeedingeachparttothenetworkbyconditioningactivationinthecorresponding
+block of the generator (Supplementary Figure S1). To prevent detrimental competition between
+the discriminator and generator, and to achieve convergence in an efficient way, we followed the
+recommendationsdetailedinChenetal.[20]. Briefly,thediscriminatorandgeneratorwerecomposed
+ineightprogressiveblockswithaninput/outputofspatialresolutionof4×4intheinitialstepupto
+512×512instep7. TheBatchsizehasgonedynamicallyfrom128instep0to2inthelaststep. Boththe
+generatoranddiscriminatorwereoptimizedusingAdamwithaninitiallearningrateof0.0075and
+exponentialdecayof0.99andaWassersteinfunctionwithgradientpenalty. Thetraininghasprogressed
+inphasesofprogressiveincreasedresolution. Morespecifically,themodelwascapableofgenerating
+highresolutionimageswithisolatedsemanticfeaturescontrolledbyasetofrealvaluedvariables. Color,
+age,sex,localizationandtypeoflesionwerethemostimportantsemanticfeaturesdiscoveredduring
+thetraininginacompletelyunsupervisedfashionwithouthumaninput. Aftertraining,thegenerator
+producednovelimages,similartothoseinthedataset.
+Diagnostics2020,10,969 5of15
+2.5. ContestsamongGeneralPractitioners
+To compare the accuracy of DNNs with non-dermatologist practitioners, we conducted two
+differentchallenges. Thefirstaimedtoestablishtheaccuracyofgeneralpractitionersinclassifying
+imagesfromtheHAM10000datasetwithouttimeconstraint. Forthispurpose,agroupof22general
+practitioners from any given center in Buenos Aires (Argentina) were given access to 163 images
+ofthedifferentskinpigmentedlesionsthroughananonymouswebsitespecificallycreatedforthis
+purpose. Physicians could enter and exit the website without limitation. Alongside the image,
+recordedfactorssuchastheage,sexandlocalizationofthelesionwereshown. Allphysicianswere
+askedtoclassifyeveryimagewithinthesevendifferentdiagnostics. Noincentiveswereofferedfor
+participation. Toensurefaircomparisonsbetweentheresultsdeterminedbygeneralpractitionersand
+thosedeterminedbytheDNNs,thesame162imageswererunwiththeDNNframeworkwhichhad
+theworseaccuracymetricsinlow-resolutionandwithoutaggregatedclinicalfeaturesoftheeight
+DNNstested.
+To determine if physicians could benefit from access to the algorithmic tool during the own
+classification task, a second evaluation was conducted. A group of 19 general practitioners that
+voluntarily accepted to participate in the study was first asked to assess 35 images in a simulated
+exercisewithtimeconstraints(physicianshad45stoclassifyeveryimage). Inasecondstep,physicians
+had access to the predictions of the same algorithmic framework used during the first challenge,
+thesamegrouphavingclassifiedeachimagebasedonboththeircriteriaandthealgorithmicoutput.
+For this task, a new set of 35 images was shown with the same time constraints. In both contests,
+theethicscommitteewaivedethicalapprovalowingtotheuseofanonymizeddermatologicimages
+obtainedfromthepubliclyavailableHAM10000dataset.
+2.6. StatisticalAnalysis
+After the model had been trained, a test step was performed in which 1702 images of the
+sevendermatologicalmanifestationswereusedasinputandtheresultswerestatisticallyanalyzed.
+Aconfusionmatrixwasconstructedbasedoncomparingtheframeworks’predictionwitheachof
+theactuallabels. AllanalyseswereperformedandprogrammedviaaJupyternotebookinPython.
+Sensitivity,specificity,geometricmean,accuracyanderrorratewerecalculatedforeachdermatological
+manifestation [28]. Sensitivity or true positive rate (TPR) represented the positive and correctly
+classifiedsamplestothetotalnumberofpositivesamples. Thespecificityortruenegativerate(TNR)
+wasestimatedastheratioofthecorrectlyclassifiednegativesamplestothetotalnumberofnegative
+samples. Geometric meanswerecalculatedby usingtheproductof TPRandTNR.Accuracywas
+definedastheratiobetweenthecorrectlyclassifiedsamplestothetotalnumberofsamples[28]. Wealso
+calculatedtheerrorrateasthecomplementofaccuracy. Allthesemeasuresaresuitabletoevaluatethe
+classificationperformancebasedonimbalanceddataasfoundintheHAM10000database. Allmetric
+resultswerecalculatedwithrespecttotheclasslabelsdocumentedintheHAM10000databasearchive.
+AsummarydiagramisdepictedonSupplementaryFigureS2.
+3. Results
+3.1. ClassificationMetricsacrossEightDifferentDNNs
+TheresultsofglobalaccuracyanderrorrateforeachDNNfortheclassificationofsevenpigmented
+skinlesionsatlowimageresolution(300×224RGB)areshowninTable2. Theaverageglobalaccuracy
+fortheeightDNNsreached76.30%±2.79,rangingfrom74.05%(EfficientNetB5)to82.47%(MobileNet).
+AsshowninSupplementaryTableS1,theTPR,TNRandgeometricmeanforeachdiseasesubtype
+variedaccordingtothetestedDNN.AlmostallDNNsshowedthehighestTPRformelanocyticnevi
+classificationwhencomparedtotheotherpigmentedlesions,withobservedgeometricmeanvalues
+equal or lower than 0.65; interestingly, VGG16, VGG19 and MobileNet also showed high TPR for
+vascularlesionclassification(geometricmeanvalueslowerthan0.65). Inthecaseofmelanomaand
+Diagnostics2020,10,969 6of15
+benignkeratosisclassification,allofthemshowedaTPRofapproximately0.5,withgeometricmean
+valuesaround0.75. Likewise,basalcellcarcinomaclassificationshowedaTPRofapproximately0.5and
+geometricmeanvalueshigherthan0.75usingResNet50,ResNet101,SEResNet50andEfficientNetB5.
+SimilarresultswereobservedforSEResNet5andMobileNetandintraepithelialcarcinomaclassification.
+Table2.ClassificationmetricsofHAM10000imagesattwodifferentresolutionsandwithoutaggregated
+clinicalfeaturesusingeightdifferentDNNs.
+Low-ResolutionImages1 High-ResolutionImages
+DNN2 Accuracy3 ErrorRate Accuracy ErrorRate
+ResNet34 75.32 24.68 76.73 23.27
+ResNet50 74.56 25.44 75.97 24.03
+ResNet101 75.62 24.38 77.02 22.98
+SEResNet50 77.82 22.22 79.13 20.87
+VGG16 76.85 23.15 78.25 21.75
+VGG19 74.21 25.79 75.62 24.38
+EfficientNetB5 74.05 25.91 75.50 24.5
+MobileNet 82.47 17.53 83.88 16.12
+1low-resolutionimage:300×224RGB;high-resolutionimage:300×224RGB.2Deepneuralnetwork.3accuracy
+anderrorratesareexpressedaspercentages.
+Usinghigherimageresolution(600×450RGB)improvedtheglobalaccuraciesacrossallDNNs
+(Table 2). The global accuracy average for the eight DNNs tested was 77.76 ± 2.77, ranging from
+75.50(EfficientNetB5)to83.88%(MobileNet). Althoughhigherthanthemeanaverageobservedwith
+low-resolutionimages,thedifferencewasnotstatisticallysignificant(p=0.07;Mann–WhitneyUtest).
+TheTPR,TNRandgeometricmeanvaluesforeachdiseasesubtypearedetailedinSupplementary
+TableS2. ThehighestTPRwasobservedformelanocyticneviacrossallDNNs, andinthecaseof
+vascular lesions using VGG16 and MobileNet. On the contrary, the lowest TPR was observed for
+dermatofibrosisandintraepithelialcarcinomawithResNet34,ResNet50,SEResnet50andEfficientNetB5.
+Whencomparedwiththelow-resolutionimageparallelcases, theTPR,TNRandgeometricmean
+valueswerequitesimilarformostofthediseasesubtypes. However,adrasticimprovementofTPRwas
+observedfordermatofibrosisusingResNet34(from0.23to0.34),ResNet50(from0.29to0.55),ResNet101
+(from0.26to0.42),VGG16(from0.17to0.4),VGG19(from0.26to0.40)andMobileNet(from0.39to0.5).
+SimilarTPRimprovementswereobservedfortheintraepithelialcarcinomaclassificationusingVGG19
+(from0.26to0.40). Theaveragecascadeframeworkruntimeofthehigh-resolutionclassificationmodel
+was21.46+/−2.3millisecondsperimage,whereasthelow-resolutionmodelrequiredonly18.6+/−1.22
+millisecondsperimage. Altogether, theseresultsindicatethatthetestedDNNscanclassifyseven
+differenttypesofpigmentedskinlesionswithaccuracieshigherthan0.7. Nomajordifferencesin
+runtimewereobservedbetweenthecascadeframeworkinputwithlow-orhighresolution.
+3.2. ClassificationMetricsofDifferentDNNsAggregatingImageandClinicalFeatures
+Wetheninvestigatedifaddingclinicalfeaturestotheanalysiscouldimprovetheclassification
+accuracyofeachDNN.AstheHAM10000datasetprovidesthesex,ageandlocalizationoftheskin
+lesionassociatedtoeveryimage,wegatheredtheseclinicalfeaturesandaggregatedthemwiththe
+correspondingimagetobeusedasinputforeachofthetestedDNNs. ResultsareshowninTable3.
+Forlow-resolutionimages,theadditionofclinicaldataimprovedtheglobalperformanceofallDNNs
+butMobileNet. TheaverageglobalaccuracyfortheeightDNNswas78.86%±1.81,rangingfrom
+75.73(EfficientNetB5)to81.24%(MobileNet). Thisrepresentedastatisticallysignificantincreasein
+comparisontotheglobalaccuracyofDNNstestedwithlow-resolutionimageswithoutaggregated
+clinicalfeatures(p=0.004; Mann–WhitneyUtest). ThehighestincreasewasobservedforVGG19
+raisingfrom74.21%to79.43(5.22%). AsshowninSupplementaryTableS3,classificationimprovements
+were observed in almost all pigmented skin lesions for all DNNs. The highest marginal increases
+Diagnostics2020,10,969 7of15
+in accuracy were observed for dermatofibrosis where the TPR values for ResNet 50, SEResNet50,
+VGG16,EfficientNetB5andMobileNetwereraisedby15,51,22,28and46%,respectively. Similarly,
+inthecaseoftheintraepithelialcarcinomacondition,TPRvaluesincreased13and26%forSEResnet50
+andVGG19,respectively,andforbasalcellcarcinomaclassification,increasedby11,14and12%for
+ResNet50,VGG19andEfficientNetB5,respectively. Forvascularlesions,theTPRvaluesincreasedby
+34,14and29%forResNet101,VGG19andEfficientNetB5,respectively. Finally,addingclinicalfeatures
+toskinimagesalsoimprovedthemelanomaconditionaccuracyforVGG16(from0.47to0.61)and
+VGG19(from0.44to0.58). Ofnote,adecreasedTPRwasobservedforResNet101intheclassificationof
+dermatofibrosis(from0.26to0.16)andintraepithelialcarcinoma(from0.37to0.29),andinmelanoma
+forMobileNet(from0.90to0.72).
+Table3. ClassificationmetricsofHAM10000low-andhigh-resolutionimageswithaggregatedclinical
+datausingeightdifferentDNNs.
+Low-ResolutionImages1 High-ResolutionImages
+DNN2 Accuracy3 ErrorRate Accuracy ErrorRate
+ResNet34 77.43 22.57 78.84 21.16
+ResNet50 79.31 20.69 80.72 19.28
+ResNet101 77.55 22.45 78.96 21.04
+SEResNet50 80.01 19.99 80.72 19.28
+VGG16 80.25 19.75 81.65 18.35
+VGG19 79.43 20.57 79.02 20.98
+EfficientNetB5 75.73 24.27 77.14 22.86
+MobileNet 81.24 18.76 84.73 15.27
+1low-resolutionimage:300×224RGB;high-resolutionimage:300×224RGB.2Deepneuralnetwork;3accuracy
+anderrorratesareexpressedaspercentages.
+Forhigh-resolutionimages, theaverageglobalaccuracyalsoincreasedwhenclinicalfeatures
+wereaddedtothemodel(Table3). Theaverageglobalaccuracywas80.22%±2.30, rangingfrom
+77.14(EfficientNetB5)to84.73%(MobileNet). Thisrepresentedastatisticallysignificantincreasein
+comparisontotheglobalaccuracyofDNNstestedwithhigh-resolutionimageswithoutaggregated
+clinicalfeatures(p=0.02;Mann–WhitneyUtest). ThiswasparticularlyevidentinthecaseofResNet50
+performance with an increase of 4.75%. The TPR, TNR and geometric mean values are shown in
+SupplementaryTableS4. MajorTPRimprovementswereobservedfordermatofibrosiswithResNet34
+(26%),ResNet101(20%),VGG19(17%)andEfficientNetB5(28%). TPRincreaseswerealsoobservedfor
+basalcellcarcinomawithResNet50(12%)andEfficientNetB5(13%),forvascularlesionswithResNet101
+(37%)andEfficientNetB5(28%),formelanomawithVGG16(14%),VGG19(32%)andMobileNet(16%)
+andintraepithelialcarcinomawithVGG16(24%). Interestingly,theTPRofResNet50andSEResNet50
+werereducedfordermatofibrosisfrom0.55to0.20andfrom0.44to0.29,respectively. Whencompared
+totheDNNs’performancewithlow-resolutionimagesandclinicalfeatures,nomajordifferenceswere
+observed(p=0.21; Mann–WhitneyUtest). Ofinterest, fordermatofibrosisclassification, theTPR
+increasedforResNet34(35%),ResNet101(50%),VGG16(50%)andVGG19(24%);theexceptionwas
+ResNet50withaTPRreductionfrom0.44to0.2. Altogether,theseresultsindicatethattheadditionof
+informationrelatedtosex,ageandlocalizationofthelesionimprovestheaccuracyofDNNs.
+3.3. PerformanceacrossSyntheticPigmented-SkinLesionImages
+WeappliedaninfoGANtogeneratesyntheticimagesfromtheHAM10000dataset. Asshownin
+Figure2,thesyntheticimagesseemedrealisticanddiverse. Wethencalculatedtheglobalaccuracy
+forEfficientNetB5fortheclassificationofsevenpigmentedskinlesions. Ofthe40syntheticimages
+analyzed,thenetworkmadeasingleerror,sothecertaintyindexwas97.5%;however,thisvaluelacks
+anyrelevancesincetheGANusedforpseudo-labelingdeliberatelyincreasesthedefinitionlimitof
+eachclass,inducinganimprovementinthecertaintyoftheclassifier. Altogether,thesedataindicate
+Diagnostics2020,10,969 8of15
+thatthesyntheticsamplesarehighlyrealisticandcanbeusedasinputstotrainDNNsonpigmented
+sDkiaignnolestsiciso 2n02c0l,a 1s0s,i xfi FcOatRio PnE.ER REVIEW 8 of 15
+A B C D
+E F G
+FFiigguurree 22.. EExxaammpplleess ooff ssyynntthheettiicc iimmaaggeess ggeenneerraatteedd wwiitthh tthhee iinnffoorrmmaattiioonn mmaaxxiimmiizziinngg ggeenneerraattiivvee
+aaddvveerrssaarriiaall nneettwwoorrkk ((ininfofoGGAANN):) :(A(A) )mmelealnaoncoyctyicti ncenveuvsu; s(B; )( Bb)enbiegnni gknerkaetorasitso;s (iCs;) (vCa)scvualsacru lleasriolnes; i(oDn);
+(dDer)mdeartmofaibtorofimbrao;m (Ea); i(nEt)rainetpriatehpeiltihale lciaarlccianrocminao;m (Fa); b(Fa)sabla csealll ccealrlccianrocminao;m aan;da (nGd)( mGe)lmaneolamnao.m a.
+3.4. PerformanceacrossGeneralPractitionerswithandwithoutAssistancefromDNNsOutput
+3.4. Performance across General Practitioners with and without Assistance from DNNs Output
+In the first challenge, 22 general practitioners were asked to classify 162 images without any
+In the first challenge, 22 general practitioners were asked to classify 162 images without any time
+timeconstraint. Themeanglobalaccuracyandmeanerrorratewere27.74and72.26%,respectively.
+constraint. The mean global accuracy and mean error rate were 27.74 and 72.26%, respectively. These
+Theseresultsweresimilartothosepreviouslypublishedfornon-dermatologists[9,10]. ThebestTPR
+results were similar to those previously published for non-dermatologists [9,10]. The best TPR (0.79)
+(0.79) was obtained for the melanocytic nevi while the worse metrics were observed for vascular
+was obtained for the melanocytic nevi while the worse metrics were observed for vascular lesions
+lesions(0.02),dermatofibrosis(0.01)andintraepithelialcarcinoma(0.07)(SupplementaryTableS5).
+(0.02), dermatofibrosis (0.01) and intraepithelial carcinoma (0.07) (Supplementary Table S5). As
+As EfficientNetB5 was slightly less accurate than the other tested DNNs, we decided to use this
+EfficientNetB5 was slightly less accurate than the other tested DNNs, we decided to use this
+frameworkasacomparator(seeTable1). Inthesamedataset,thisDNNhadameanglobalaccuracy
+framework as a comparator (see Table 1). In the same dataset, this DNN had a mean global accuracy
+of 78.40% and mean error rate 21.60% (Table 4). Compared to physicians, this was a relevant and
+of 78.40% and mean error rate 21.60% (Table 4). Compared to physicians, this was a relevant and
+significantdifferenceasEfficientNetB5showedahigherTPRinalldiseasesubtypes(Supplementary
+significant difference as EfficientNetB5 showed a higher TPR in all disease subtypes (Supplementary
+TableS5).
+Table S5).
+Table4. Classificationmetricsofnon-dermatologists,generalpractitionerswithorwithoutuseofthe
+Table 4. Classification metrics of non-dermatologists, general practitioners with or without use of the
+algorithmicplatformandwithtimeconstraints.
+algorithmic platform and with time constraints.
+Condition Accuracy1 ErrorRate
+Condition Accuracy 1 Error Rate
+EfficientNetB5 77.14 22.86
+EfficientNetB5 77.14 22.86
+GPs2 17.29 82.71
+GG PsP+s A2
+I
+421 .7 4. 329 578 .2 5. 771
+GPs + AI 42.43 57.57
+1accuracyanderrorrateareexpressedaspercentages.2GPs:generalpractitioners;AI:artificialintelligence.
+1 accuracy and error rate are expressed as percentages. 2 GPs: general practitioners; AI: artificial intelligence.
+Inthesecondchallenge,19generalpractitionerswereaskedtoclassify35imageswithatime
+In the second challenge, 19 general practitioners were asked to classify 35 images with a time
+constraintof45sperimage. Theglobalaccuracyforthisclassificationwas17.29%(Table4). Inthesame
+constraint of 45 s per image. The global accuracy for this classification was 17.29% (Table 4). In the
+dataset,EfficientNetB5achievedaglobalaccuracyof77.14%,significantlyoutperformingphysicians.
+same dataset, EfficientNetB5 achieved a global accuracy of 77.14%, significantly outperforming
+When general practitioners were given the opportunity to access the output of EfficientNetB5 per
+physicians. When general practitioners were given the opportunity to access the output of
+image,theglobalaccuracyincreasedto42.42%. Thisrepresentedanincreaseof25.13%. Thisresult
+EfficientNetB5 per image, the global accuracy increased to 42.42%. This represented an increase of
+alsoindicatedthat,insomecases,physiciansdidnotfollowtherecommendationoftheDNN.Ofnote,
+25.13%. This result also indicated that, in some cases, physicians did not follow the recommendation
+theaccessofphysicianstoDNNpredictionincreasedTPRforbasalcellcarcinoma(from0.10to0.54)
+of the DNN. Of note, the access of physicians to DNN prediction increased TPR for basal cell
+carcinoma (from 0.10 to 0.54) and melanoma (from 0.08 to 0.35) (Supplementary Table S6). In contrast,
+a small decrease in TPR for benign keratosis was observed (see Supplementary Table S6).
+Altogether, these results show that DNNs have the capability to classify seven different
+pigmented skin lesions with a level of competence higher to that of the general practitioners
+Diagnostics2020,10,969 9of15
+andmelanoma(from0.08to0.35)(SupplementaryTableS6). Incontrast,asmalldecreaseinTPRfor
+benignkeratosiswasobserved(seeSupplementaryTableS6).
+Altogether,theseresultsshowthatDNNshavethecapabilitytoclassifysevendifferentpigmented
+skinlesionswithalevelofcompetencehighertothatofthegeneralpractitionersparticipatinginthese
+challenges. TheaccessofDNNoutputbyphysiciansimprovestheirabilitytoclassifypigmentedskin
+lesions,particularlybasalcellcarcinomaandmelanoma.
+4. Discussion
+Our results demonstrate that deep learning frameworks trained on large, open source image
+datasetscanhelpnon-dermatologistphysiciansimprovetheiraccuracytocategorizethesevenmost
+frequent pigmented skin lesions. Additionally, we showed that image resolution does not affect
+theperformanceofeightdifferentDNNs. Instead,theaggregationofclinicalfeatures(age,sexand
+lesion localization) significantly increases DNN performance with both low-resolution and with
+high-resolutionimageinputs. Theuseofartificialintelligenceasadiagnosticaidisagrowingtrendin
+dermatology. Adigitalautomatedskinassistancetoolprovidesundeniablehelpfordermatologists
+andgeneralpractitionerstoreducethemorbidityandmortalitylinkedtodermatologicaldiseasesby
+favoringearlydiagnosisandbytheavoidanceofunnecessaryprocedures. Theadventofdeep/machine
+learningalgorithmshasmadetheautomatedclassificationofcutaneouslesionsanachievabletarget
+milestone[29].
+Differentdermatologicstudieshavereportedearlysuccessintheclassificationofpigmentedskin
+lesions from both clinical and dermoscopic images with a level of accuracy comparable to that of
+dermatologists. Estevaetal. wereamongthefirstonestodescribeaDNNthatperformedaswellas
+dermatologistswhenidentifyingimageswithmalignantlesions[15]. TheauthorsusedaGoogleNet
+Inceptionv3architecturethatwaspre-trainedonapproximately1.28millionimages. Then,theyused
+129,450skinimagesof2032differentdiseasestotrainandultimatelyvalidatethesystemusingtwo
+classes(benign/malignant). Themodelwascomparedtotheperformanceof21dermatologistsusinga
+testsetof135biopsy-provenlesionclinicalanddermoscopicimages. Theperformanceofthisbinary
+classificationmethodwasonparwiththatofallofthedermatologistswhoparticipated. Haenssleetal.
+presentedaverysimilarapproachtoEstevaetal.[1]. Theycomparedthediagnosticperformanceof58
+dermatologistswithaGoogleNetInceptionv3modelthatwasadaptedforskinlesionclassification
+withtransferlearning,wherebytheweightswerefine-tunedinalllayers. Theanalysiswaslimitedto
+dermoscopicimagesofmelanomavs. benignnevi. Inthetestdatasetof300biopsy-provenimages,
+theaccuracyoftheDNNcomparedfavorablywiththeonebydermatologists. Likewise,Hanetal.
+presentedaResNet152classifierfor12differentskindiseasesbasedonclinicalimagesthatperformed
+comparably to the performance of 16 dermatologists [16]. Fujisawa et al. used a dataset of 4867
+clinical images to train a DNN to differentiate 14 different clinical conditions that included both
+malignantandbenignconditions[30]. Themachine’sperformancewasthencomparedagainstthatof
+13dermatologistsandninedermatologytraineesandtestedon1142imagesdistincttothoseusedfor
+training. TheDNNoutperformedthedermatologistsacrosseveryfield. Additionally,asetofother
+recentstudiesalsoreacheddermatologist-levelskincancerclassificationbyusingDNNs[31–37].
+Incontrasttoallthesepreviouslymentionedpublicationscomparingtheperformanceacross
+different DNN configurations to the one by dermatologists, our study was carried out with
+non-dermatologistpractitioners. Ourresultsshowthatthetestedframeworksclassifypigmentedskin
+lesionsmuchbetterthanthegeneralpractitionersthatparticipatedinthisstudy. Ourresultsaresimilar
+tothoserecentlypublishedbyTschandletal.[38]. TheseauthorshavematchedasetofDNNswith
+humanreadersforthediagnosisofsevenclinicallyrelevanttypesofpigmentedskinlesionsanalyzedin
+ourstudyusingtheHAM10000dataset. Fromthe511humanreadersinvolvedintheirstudy,83were
+generalpractitioners. TheauthorsshowedthatthetopthreeDNNsoutperformedphysicianswith
+respecttomostoutcomemeasures. However,humanmetricswereonlydisclosedfordermatology
+experts,andthus,wecannotcompareourmetricstothem. Althoughpromising,ourresultsshould
+Diagnostics2020,10,969 10of15
+beanalyzedwithinthecontextastheyarederivedfromasetofpre-existingimagesandnotfroma
+real-lifepatientobservation. Indeed,generalpractitionersarenottrainedtodiagnoseoveranimage,
+particularlyiftheyhavejustafewsecondstodecide. Moreover,inareal-worldsituation,theywould
+considerotherclinicalfeaturesbesidesaskinimageandgivencomplementarydata;theywouldbe
+evaluatingthepatientasawhole,notjustaskinlesion. Inspiteofthis,ourresultsshowingthata
+physician’saccesstoastandardindividualDNNoutputimprovedtheirabilitytoclassifypigmented
+skinlesionsareencouraging. Moreover,thisassistanceimprovedthepositiveclassificationofbasal
+cellcarcinomas,oneofthemostcommonofalltypesofcancer,andthemostdangerousmelanoma.
+Atamoretechnicallevel,ourresultsareinagreementwithvariousotherpublicationsthathave
+alsodemonstratedthecapacityofmultipleDNNconstructstoclassifyclinicalordermoscopicskin
+images[17,39–45]. Someoftheseclassifiershavebeentranslatedontoonlineplatformsandsmartphone
+applications for use by dermatologists or individuals in the community setting (e.g., modelderm,
+MoleMapper,MoleAnalyzerPro)[46]. Mostofthesepublishedworksusenon-publicarchives[1,15].
+Thismakesitverydifficulttoreproducetheresultsandcomparetheperformanceofpublishedclassifiers
+againsteachother. Thus,wedecidedtocomparetheperformanceofeightdifferentindividualDNNs
+usingauniqueandpublicdataset,namelytheHAM10000. Amongotherthings,weshowedthatthe
+qualityoftheinputimagesmarginallyaffectstheperformanceofaclassificationtaskforagivenDNN,
+assimilarachievementshavebeenmadewithbothlow-andhigh-resolutionimageasinput. According
+toourresults,thehighertheresolutionoftheimage,thebettertheperformanceofagivenDNNis;
+however,theimprovementswerenotsoevidentlycomparedtothoseobservedwiththeadditionofa
+fewclinicalfeaturestotheanalysis. Indeed,thealgorithmstrainedwithlow-resolutionimagesand
+aggregatedclinicalfeaturesachievelevelsofprecisionsimilartothoseobtainedwithbetterresolution
+imageswithoutclinicalfeatures. Thisisinlinewitharecentpublicationthatshowedthatadding
+clinical information to skin lesion images improves the diagnostic accuracy of dermatologists [1].
+Thisresultissignificantasitimpliesthataddingclinicalfeaturesismoreimportantthantheresolution
+oftheinputimage,thebestsituationbeingthecombinationofhigh-resolutionimagesandclinical
+features. Fromaclinicalperspective,itisimportanttonotethatotherauthorshaveusedothercomplex
+mathematicaltechniquestoimprovethealgorithm’sperformance,suchasdropout,dataaugmentation
+andbatchnormalization[47–49]. Dataaugmentationalongwithalargerdatabaseincludingbothhigher
+resolutionimagesandclinicaldatasuchassymptomsandthelocalizationofsuchanimagecould
+sensiblyimprovetheimagewithhigherprobability. Ofnote,MobileNetshowedtheconsistentbest
+performancewhileoneofthelatestdevelopedDNN(EfficientNetB5)gavesurprisinglyconsistently
+theworstperformance. ThisseemscounterintuitiveasMobileNetisconsideredasimplifiedversionof
+theotherdeeplearningnetworks. TheMobileNetmodelisbasedondepthwiseseparableconvolutions
+whichisaformoffactorizedconvolutionswhichfactorizeastandardconvolutionintoadepthwise
+convolutionanda1×1convolutioncalledapointwiseconvolution[25]. Thisfactorizationhasthe
+effectofdrasticallyreducingthecomputationandmodelsize. Webelievethatthebestperformanceof
+MobileNetcouldbeduetothefactthatthisnetworkextractstheoptimalnumberandthemostrelevant
+features better compared to other neural networks. Indeed, a recent study has described that the
+optimalnumberofextractedfeaturesondermoscopicimagesseemstovarydependingonthemethod’s
+goal,andthatextractingalargenumberoffeaturescanleadtoalossofmodelrobustness[50]. Similarly,
+althoughdescribedasaparticularperformantdeepnetwork,EfficientNetB5couldbeshowingworse
+performance in extracting the optimal number and more relevant features for the dermatological
+imagesusedinthisstudy.
+Inthiswork, weusedtheHAM10000datasetfromtheISICarchive(https://isic-archive.com/)
+(accessdate: 1November2019)[21]. Asmembersofthescientificcommunity,wearetrulygratefulto
+theresearcherswhohavegeneratedthisdatasetandweacknowledgetheenormouseffortinvestedinit.
+Becauseofpermissivelicensing,well-structuredavailability,andlargesize,itiscurrentlythestandard
+sourcefordermoscopicimageanalysisresearch. Althoughotheropenskinlesionsdatasetscontaining
+clinicalanddermoscopicimagesareavailable,thesearenotaslargeastheHAM10000,leavingitas
+Diagnostics2020,10,969 11of15
+theonlypubliconethatcanbeusedforthetrainingandvalidationofnewalgorithms[51]. Weset
+outtosolvethisproblembygeneratingsyntheticimagesusinganinfoGAN.Thisframeworkconsists
+ofageneratornetworkthattriestoproducerealisticlookingimages,whileadiscriminatornetwork
+aimstoclassifywellbetweensamplescomingfromrealtrainingdataandfakesamplesgeneratedby
+thegenerator[26,27]. Ourresultsshowthatthesyntheticskinimagescanbeusedasinputimagesby
+DNNs,similartothatobservedwithrealimagesoftheHAM10000dataset. Thisindicatesthatthis
+syntheticdatasetcanbeusedtotrainandtestdifferentalgorithmicframeworks,overcomingthelackof
+skinimagedatabasesrepresentingthediversityofskintypesobservedintherealworld. Asdescribed
+inTschandletal.,however,theHAM10000datasetpresentssomeflaws[21]. First,itisbiasedtowards
+melanocytic lesions (12,893 of 13,786 images are nevi or melanomas). Likewise, although it is an
+excellentcuratedimagedataset,itismostlycomposedofskinimagesofamostlyfair-skinnedCaucasian
+population thus making difficult to extrapolate the results to other racial groups. Indeed, it was
+recentlyreportedthataDNNtrainedonanimagedatasetcomposedmainlyofCaucasianpopulation
+skin images (Fitzpatrick 1 and 2 skin types) could not be extrapolated to African-black skin color
+patients[52]. Inthatstudy,theDNN’saccuracywasaslowas17%. Otheropenskinlesionsdatasets
+containing clinical and dermoscopic images from non-Caucasian human skin types are available,
+however, these are not as large as the HAM10000 or are not publicly available [51]. To tackle this
+problem,andbasedontheresultsshowninthiswork,wearegeneratingsyntheticimagesrepresenting
+thedifferentpigmentedlesionsoftheHAM10000datasetonthesixhumanskintypesaccordingtothe
+FitzpatrickscaleusinganinfoGAN[20].
+In terms of the limitations within our study, firstly, the algorithms were bound to only seven
+differentdiseaseclasseswhichdoesnotreflectclinicalrealityasmanymoreoptionsshouldbetaken
+into account when diagnosing [53]. As a consequence, the use of these classification algorithms
+shouldberegardedasanassistingtoolfordermatologistsorgeneralpractitionersthatmayimprove
+accuracywithinalimitedscopebutnotasareplacementforindependentdiagnosesqualifiedbya
+supervisingphysician. Secondly,deeplearningmodelsarepowerful“blackbox”modelswhichremain
+relativelyuninterpretablecomparedtothestatisticalmethodsusedinmedicalpractice[54]. Computer
+visionmodelscombinepixel-basedvisualinformationinahighlyintricateway,makingitdifficult
+tolinkthemodeloutputbacktothevisualinput. Athirdlimitationisthatalthoughthetestdataset
+wasdisjunctfromthetrainingdataset,alltheimagesbelongedtothesamedatabase(HAM10000),
+raisingconcernsabouttheirabilitytogeneralizeonatrulyexternaltestsetcomingfromadifferent
+image bank. It is known that the efficacy of DNNs varies based on the set of images with which
+theyaretrained. Eachmodelmayhavedifferentsensitivitiesandspecificitiesandmaybesubject
+toauniquesetofbiasesandshortcomingsinpredictionintroducedbytheimagetrainingset. Ina
+recentstudy,abinary-classificationDNNformelanocyticnevusvs. melanoma,trainedonISICimages,
+showedgoodperformanceonanISICtestdatasetbutperformedbadlyonanexternaltestdataset
+fromthePH2dermoscopicimagesource[1,51]. Usingjust100imagesfromtheexternaldatabasefor
+fine-tuningtheDNNsufficedtocompletelyrestoretheoriginalperformance. Anotherimportantissue
+isrelatedtotheartifactsobservedinclinicalordermoscopicimages,suchassurgicalskinmarkings,
+darkcorners,gelbubbles,superimposedcolorcharts,overlayedrulers,andoccludinghairthatcan
+affectimageclassificationbyautomatedalgorithms[55]. Variousmethodshavebeenreportedfor
+theremovalofsuchartifactsandstrategiesforpreprocessingimagesweredescribedtoimprovethe
+classificationoutcomesofDNNs[55–58]. Finally,amajorpointofweaknessofourstudywasthelackof
+comparisonwithtraditional,hand-designedimagedescriptors[50,59,60]. Althoughithasalreadybeen
+publishedthattheeffectivenessofDNNsoutperformsthoseofhand-crafteddescriptors,thesemethods
+were shown to be better at discriminating stationary textures under steady imaging conditions
+andprovedmorerobustthanDNN-basedfeaturesto,forexample,imagerotation[61]. Moreover,
+theconcatenationofhandcraftedfeatures(shape,skeleton,color,andtexture)andfeaturesextracted
+from the most powerful deep learning architectures followed by classification using for standard
+classifiers (e.g., support vector machines) was shown to offer high classification performance [62].
+Diagnostics2020,10,969 12of15
+Futureeffortswouldbedirectedtoconfirmifourapproachoffersanyadvantagescomparedtothe
+hand-designedmethods.
+5. Conclusions
+In conclusion, our findings show that deep learning algorithms can successfully assist
+non-dermatologistphysiciansinpotentiatingtheirclassificationperformanceacrosssevendifferent
+pigmented skin lesions. Moreover, this technology would help primary care physicians in the
+decision-makingprocessonwhichpatientsareathighestriskforskincancer,withsubsequentreferral
+to dermatology for total body skin examination. These models could be easily implemented in a
+mobileapp,onawebsite,orevenintegratedintoanelectronicmedicalrecordsystemenablingfastand
+cheapaccessskinscreenings,evenoutsidethehospital. Futureresearchshouldcarefullyvalidateour
+resultsusingotherimagedatasetscontainingpatientsacrossablendofdifferentagesandethnicities,
+includingadditionalcutaneouslesionsandskincolortypes. Ultimately,automateddiagnosticsystems
+basedonDNNswillallowclinicianstoenhancepatientcarebymeansofimprovingtheirclassification
+skillsoutsideoftheirfieldofexpertise.
+SupplementaryMaterials: Thefollowingareavailableonlineathttp://www.mdpi.com/2075-4418/10/11/969/s1,
+Figure S1: Representation of a generic block; Figure S2: Summary diagram of the methodology; Table S1:
+Classification metrics for each skin lesion subset of the HAM10000 images using eight different CNNs and
+low-resolutionimageswithoutassociatedclinicalfeatures,TableS2: Classificationmetricsforeachskinlesion
+subsetoftheHAM10000imagesusingeightdifferentCNNsandhigh-resolutionimageswithoutassociatedclinical
+features,TableS3: ClassificationmetricsforeachskinlesionsubsetoftheHAM10000usingeightdifferentCNNs
+andlow-resolutionimageswithaggregatedclinicaldata,TableS4: Classificationmetricsforeachskinlesion
+subsetoftheHAM10000usingeightdifferentCNNsandhigh-resolutionimageswithaggregatedclinicaldata,
+TableS5:Classificationmetricsforeachskinlesionin163imagesoftheHAM10000databasebynon-dermatologist,
+generalpractitionerswithoutaccesstoalgorithmicoutputsandnotimeconstraint,TableS6: Classificationmetrics
+foreachskinlesionin70imagesoftheHAM10000databasebynon-dermatologist,generalpractitionerswithout
+(n=35)orwithaccess(n=35)toalgorithmicoutputsandtimeconstraintof45sec/image.
+Author Contributions: Conceptualization, M.L. (Maximiliano Lucius) and C.M.G.; methodology, M.L.
+(MaximilianoLucius), M.B., J.D.A.andC.M.G.; software, M.L.(MaximilianoLucius); experimentation, M.L.
+(MaximilianoLucius),J.D.A.,J.A.D.A.,M.B.,L.R.,M.L.(MarisaLanfranconi),V.L.andC.M.G.;datacuration
+andanalysis,M.L.(MaximilianoLucius),M.B.,J.A.D.A.andC.M.G.;writing—originaldraftpreparation,M.L.
+(MaximilianoLucius),M.B.,J.A.D.A.andC.M.G.;reviewandediting,M.L.(MaximilianoLucius),J.D.A.,J.A.D.A.,
+M.B.,L.R.,M.L.(MarisaLanfranconi),V.L.andC.M.G.Allauthorshavereadandagreedtothepublishedversion
+ofthemanuscript.
+Funding: Thisresearchreceivednoexternalfunding.
+ConflictsofInterest: MaximilianoLuciusandCarlosM.GalmariniareassociatesatTopazium. MartínBelvisi
+isanadvisorofTopazium. JorgeDeAll,JoséAntonioDeAll,MarisaLanfranconiandVictoriaLorenzattiare
+associatesatSanatorioOtamendi. LucianaRadizzaisanassociateofIOSFA.
+References
+1. Haenssle,H.A.; Fink,C.; Schneiderbauer,R.; Toberer,F.; Buhl,T.; Blum,A.; Kalloo,A.; Hassen,A.B.H.;
+Thomas,L.;Enk,A.;etal. Managainstmachine: Diagnosticperformanceofadeeplearningconvolutional
+neuralnetworkfordermoscopicmelanomarecognitionincomparisonto58dermatologists. Ann. Oncol.
+2018,29,1836–1842. [CrossRef][PubMed]
+2. Annessi,G.;Bono,R.;Sampogna,F.;Faraggiana,T.;Abeni,D.Sensitivity,specificity,anddiagnosticaccuracy
+ofthreedermoscopicalgorithmicmethodsinthediagnosisofdoubtfulmelanocyticlesions: Theimportance
+oflightbrownstructurelessareasindifferentiatingatypicalmelanocyticnevifromthinmelanomas. J.Am.
+Acad. Dermatol. 2007,56,759–767. [CrossRef][PubMed]
+3. Argenziano,G.;Soyer,H.P.Dermoscopyofpigmentedskinlesions–avaluabletoolforearlydiagnosisof
+melanoma. LancetOncol. 2001,2,443–449. [CrossRef]
+4. Brochez,L.;Verhaeghe,E.;Grosshans,E.;Haneke,E.;Pierard,G.;Ruiter,D.;Naeyaert,J.M.Inter-observer
+variationinthehistopathologicaldiagnosisofclinicallysuspiciouspigmentedskinlesions. J.Pathol. 2002,
+196,459–466. [CrossRef]
+Diagnostics2020,10,969 13of15
+5. Russo,T.;Piccolo,V.;Lallas,A.;Giacomel,J.;Moscarella,E.;Alfano,R.;Argenziano,G.Dermoscopyof
+malignantskintumours: What’snew? Dermatology2017,233,64–73. [CrossRef]
+6. Witkowski,A.M.;Ludzik,J.;Arginelli,F.;Bassoli,S.;Benati,E.;Casari,A.;DeCarvalho,N.;DePace,B.;
+Farnetani,F.; Losi,A.; etal. Improvingdiagnosticsensitivityofcombineddermoscopyandreflectance
+confocal microscopy imaging through double reader concordance evaluation in telemedicine settings:
+Aretrospectivestudyof1000equivocalcases. PLoSONE2017,12,e0187748. [CrossRef]
+7. Kittler,H.;Pehamberger,H.;Wolff,K.;Binder,M.Diagnosticaccuracyofdermoscopy. LancetOncol. 2002,
+3,159–165. [CrossRef]
+8. Vestergaard,M.E.;Macaskill,P.;Holt,P.E.;Menzies,S.W.Dermoscopycomparedwithnakedeyeexamination
+for the diagnosis of primary melanoma: A meta-analysis of studies performed in a clinical setting.
+Br. J.Dermatol.2008,159,669–676. [CrossRef]
+9. Federman,D.G.;Concato,J.;Kirsner,R.S.Comparisonofdermatologicdiagnosesbyprimarycarepractitioners
+anddermatologists. Areviewoftheliterature. Arch. Fam. Med. 1999,8,170–172. [CrossRef]
+10. Federman,D.G.; Kirsner,R.S.Theabilitiesofprimarycarephysiciansindermatology: Implicationsfor
+qualityofcare. Am. J.Manag. Care1997,3,1487–1492.
+11. Moreno,G.;Tran,H.;Chia,A.L.;Lim,A.;Shumack,S.Prospectivestudytoassessgeneralpractitioners’
+dermatological diagnostic skills in a referral setting. Australas J. Dermatol. 2007, 48, 77–82. [CrossRef]
+[PubMed]
+12. Suneja,T.;Smith,E.D.;Chen,G.J.;Zipperstein,K.J.;Fleischer,A.B.,Jr.;Feldman,S.R.Waitingtimestoseea
+dermatologistareperceivedastoolongbydermatologists: Implicationsforthedermatologyworkforce.
+Arch. Dermatol. 2001,137,1303–1307. [CrossRef][PubMed]
+13. Tran,H.;Chen,K.;Lim,A.C.;Jabbour,J.;Shumack,S.Assessingdiagnosticskillindermatology:Acomparison
+betweengeneralpractitionersanddermatologists. AustralasJ.Dermatol. 2005,46,230–234. [CrossRef]
+14. Galmarini,C.M.;Lucius,M.Artificialintelligence: Adisruptivetoolforasmartermedicine. Eur. Rev. Med.
+Pharmacol. Sci. 2020,24,7571–7583.
+15. Esteva, A.; Kuprel, B.; Novoa, R.A.; Ko, J.; Swetter, S.M.; Blau, H.M.; Thrun, S. Dermatologist-level
+classificationofskincancerwithdeepneuralnetworks. Nature2017,542,115–118. [CrossRef]
+16. Han,S.S.;Kim,M.S.;Lim,W.;Park,G.H.;Park,I.;Chang,S.E.Classificationoftheclinicalimagesforbenign
+andmalignantcutaneoustumorsusingadeeplearningalgorithm. J.Investig. Dermatol. 2018,138,1529–1538.
+[CrossRef]
+17. Marchetti,M.A.;Codella,N.C.F.;Dusza,S.W.;Gutman,D.A.;Helba,B.;Kalloo,A.;Mishra,N.;Carrera,C.;
+Celebi,M.E.;DeFazio,J.L.;etal. Resultsofthe2016internationalskinimagingcollaborationinternational
+symposium on biomedical imaging challenge: Comparison of the accuracy of computer algorithms to
+dermatologistsforthediagnosisofmelanomafromdermoscopicimages. J.Am. Acad. Dermatol. 2018,
+78,270–277.e271. [CrossRef]
+18. Tschandl,P.;Argenziano,G.;Razmara,M.;Yap,J.Diagnosticaccuracyofcontent-baseddermatoscopicimage
+retrievalwithdeepclassificationfeatures. Br. J.Dermatol. 2019,181,155–165. [CrossRef]
+19. Hekler,A.;Utikal,J.S.;Enk,A.H.;Hauschild,A.;Weichenthal,M.;Maron,R.C.;Berking,C.;Haferkamp,S.;
+Klode,J.;Schadendorf,D.;etal. Superiorskincancerclassificationbythecombinationofhumanandartificial
+intelligence. Eur. J.Cancer2019,120,114–121. [CrossRef]
+20. Chen,X.;Duan,Y.;Houthooft,R.;Schulman,J.;Sutskever,I.;Abbeel,P.Infogan: Interpretablerepresentation
+learningbyinformationmaximizinggenerativeadversarialnets. arXiv2016,arXiv:1606.03657.
+21. Tschandl,P.;Rosendahl,C.;Kittler,H.TheHAM10000dataset,alargecollectionofmulti-sourcedermatoscopic
+imagesofcommonpigmentedskinlesions. Sci. Data2018,5,180161. [CrossRef][PubMed]
+22. Simonyan,K.;Zisserman,A.Verydeepconvolutionalnetworksforlarge-scaleimagerecognition. arXiv2014,
+arXiv:1409.1556.
+23. Hu, J.; Shen, L.; Albanie, S.; Sun, G.; Wu, E. Squeeze-and-excitation networks. arXiv 2019,
+arXiv:1709.01507v01504.
+24. Tan,M.; Le,Q.V.Efficientnet: Rethinkingmodelscalingforconvolutionalneuralnetworks. arXiv2019,
+arXiv:1905.11946v11942.
+25. Howard, A.G.; Zhu, M.; Chen, B.; Kalenichenko, D.; Wang, W.J.; Weyand, T.; Andreeto, M.;
+Adam, H. Mobilenets: Efficient convolutional networks for mobile vision applications. arXiv 2017,
+arXiv:1704.04861v04861.
+Diagnostics2020,10,969 14of15
+26. Goodfellow,I.;Pouget-Abadie,J.;Mirza,M.;Xu,B.;Warde-Farley,D.;Ozair,S.;Courville,A.;Bengio,Y.
+Generativeadversarialnets. InProceedingsoftheNeuralInformationProcessingSystems2014,Montreal,
+QC,Canada,8–13December2014;pp.2672–2680.
+27. Goodfellow,I.;Pouget-Abadie,J.;Mirza,M.;Xu,B.;Warde-Farley,D.;Ozair,S.;Courville,A.;Bengio,Y.
+Generativeadversarialnets. arXiv2014,arXiv:1406.2661.
+28. Tharwat,A.Classificationassessmentmethods. Appl. Comput. Inform. 2018,15,1–13. [CrossRef]
+29. LeCun,Y.;Bengio,Y.;Hinton,G.Deeplearning. Nature2015,521,436–444. [CrossRef]
+30. Fujisawa, Y.; Otomo, Y.; Ogata, Y.; Nakamura, Y.; Fujita, R.; Ishitsuka, Y.; Watanabe, R.; Okiyama, N.;
+Ohara,K.;Fujimoto,M.Deep-learning-based,computer-aidedclassifierdevelopedwithasmalldatasetof
+clinicalimagessurpassesboard-certifieddermatologistsinskintumourdiagnosis. Br. J.Dermatol. 2018,
+180,373–381. [CrossRef]
+31. Brinker,T.J.;Hekler,A.;Enk,A.H.;Berking,C.;Haferkamp,S.;Hauschild,A.;Weichenthal,M.;Klode,J.;
+Schadendorf,D.;Holland-Letz,T.;etal. Deepneuralnetworksaresuperiortodermatologistsinmelanoma
+imageclassification. Eur. J.Cancer2019,119,11–17. [CrossRef]
+32. Brinker, T.J.; Hekler, A.; Enk, A.H.; Klode, J.; Hauschild, A.; Berking, C.; Schilling, B.; Haferkamp, S.;
+Schadendorf,D.; Frohling,S.; etal. Aconvolutionalneuralnetworktrainedwithdermoscopicimages
+performedonparwith145dermatologistsinaclinicalmelanomaimageclassificationtask. Eur. J.Cancer
+2019,111,148–154. [CrossRef][PubMed]
+33. Brinker, T.J.; Hekler, A.; Enk, A.H.; Klode, J.; Hauschild, A.; Berking, C.; Schilling, B.; Haferkamp, S.;
+Schadendorf, D.; Holland-Letz, T.; et al. Deep learning outperformed 136 of 157 dermatologists in a
+head-to-headdermoscopicmelanomaimageclassificationtask. Eur. J.Cancer2019,113,47–54. [CrossRef]
+[PubMed]
+34. Brinker,T.J.;Hekler,A.;Hauschild,A.;Berking,C.;Schilling,B.;Enk,A.H.;Haferkamp,S.;Karoglan,A.;
+vonKalle,C.;Weichenthal,M.;etal.Comparingartificialintelligencealgorithmsto157germandermatologists:
+Themelanomaclassificationbenchmark. Eur. J.Cancer2019,111,30–37. [CrossRef][PubMed]
+35. Harangi,B.Skinlesionclassificationwithensemblesofdeepconvolutionalneuralnetworks.J.Biomed. Inform.
+2018,86,25–32. [CrossRef][PubMed]
+36. Jinnai,S.;Yamazaki,N.;Hirano,Y.;Sugawara,Y.;Ohe,Y.;Hamamoto,R.Thedevelopmentofaskincancer
+classificationsystemforpigmentedskinlesionsusingdeeplearning. Biomolecules2020,10,1123. [CrossRef]
+37. Phillips, M.; Marsden, H.; Jaffe, W.; Matin, R.N.; Wali, G.N.; Greenhalgh, J.; McGrath, E.; James, R.;
+Ladoyanni,E.;Bewley,A.;etal. Assessmentofaccuracyofanartificialintelligencealgorithmtodetect
+melanomainimagesofskinlesions. JAMANetw. Open2019,2,e1913436–e1913448. [CrossRef]
+38. Tschandl,P.;Codella,N.;Akay,B.N.;Argenziano,G.;Braun,R.P.;Cabo,H.;Gutman,D.;Halpern,A.;Helba,B.;
+Hofmann-Wellenhof,R.; etal. Comparisonoftheaccuracyofhumanreadersversusmachine-learning
+algorithmsforpigmentedskinlesionclassification: Anopen,web-based,international,diagnosticstudy.
+LancetOncol. 2019,20,938–947. [CrossRef]
+39. Nasr-Esfahani,E.;Samavi,S.;Karimi,N.;Soroushmehr,S.M.;Jafari,M.H.;Ward,K.;Najarian,K.Melanoma
+detectionbyanalysisofclinicalimagesusingconvolutionalneuralnetwork. Conf. Proc. IEEEEng. Med.
+Biol.Soc. 2016,2016,1373–1376.
+40. Yu, C.; Yang, S.; Kim, W.; Jung, J.; Chung, K.Y.; Lee, S.W.; Oh, B. Acral melanoma detection using a
+convolutionalneuralnetworkfordermoscopyimages. PLoSONE2018,13,e0193321.
+41. Pomponiu,V.;Nejati,H.;Cheung,N.M.Deepmole: Deepneuralnetworksforskinmolelesionclassificatioz.
+InProceedingsofthe2016IEEEInternationalConferenceonImageProcessing(ICIP),Phoenix,AZ,USA,
+25–28September2016.
+42. Codella,N.;Cai,J.;Abedini,M.;Garnavi,R.;Halpern,A.;Smith,J.R.Deeplearning,sparsecoding,andsvm
+formelanomarecognitionindermoscopyimages. InProceedingsofthe6thInternationalWorkshopon
+MachineLearninginMedicalImaging,Munich,Germany,5–9October2015;pp.118–126.
+43. Kawahara,J.;BenTaieb,A.;Hamarneh,G.Deepfeaturestoclassifyskinlesions. InProceedingsofthe2016
+IEEE13thInternationalSymposiumonBiomedicalImaging(ISBI),Prague,CzechRepublic,13–16April
+2016.
+44. Bi,L.;Kim,J.;Ahn,E.;Feng,D.Automaticskinlesionanalysisusinglarge-scaledermoscopyimagesand
+deepresidualnetworks. arXiv2017,arXiv:1703.04197.
+Diagnostics2020,10,969 15of15
+45. Sun,X.;Yang,J.;Sun,M.;Wang,K.Abenchmarkforautomaticvisualclassificationofclinicalskindisease
+images. InProceedingsoftheEuropeanConferenceonComputerVision,Amsterdam,TheNetherlands,
+8–16October2016.
+46. Chuchu,N.;Takwoingi,Y.;Dinnes,J.;Matin,R.N.;Bassett,O.;Moreau,J.F.;Bayliss,S.E.;Davenport,C.;
+Godfrey,K.; O’Connell,S.; etal. Smartphoneapplicationsfortriagingadultswithskinlesionsthatare
+suspiciousformelanoma. CochraneDatabaseSyst. Rev. 2018,12,CD013192. [CrossRef]
+47. Srivastava,N.;Hinton,G.E.;Krizhevsky,A.;Sutskever,I.;Salakhutdinov,R.Dropout: Asimplewayto
+preventneuralnetworksfromoverfitting. J.Mach. Learn. Res. 2014,15,1929–1958.
+48. Ioffe,S.;Szegedy,C.Batchnormalization: Acceleratingdeepnetworktrainingbyreducinginternalcovariate
+shift. arXiv2015,arXiv:1502.03167.
+49. Lemley,J.;Bazrafkan,S.;Corcoran,P.Smartaugmentationlearninganoptimaldataaugmentationstrategy.
+arXiv2017,arXiv:1703.08383. [CrossRef]
+50. Talavera-Martinez,N.;Biblioni,P.;Gonzalez-Hidalgo,M.Computationaltexturefeaturesofdermoscopic
+imagesandtheirlinktothedescriptiveterminology: Asurvey. Comput. MethodsProgramsBiomed. 2019,
+182,105049. [CrossRef]
+51. Mendonca,T.;Ferreira,P.M.;Marques,J.S.;Marcal,A.R.;Rozeira,J.Ph(2)—Adermoscopicimagedatabase
+forresearchandbenchmarking. Conf. Proc. IEEEEng. Med. Biol. Soc. 2013,2013,5437–5440.
+52. Kamulegeya,L.H.;Okello,M.;Bwanika,J.M.;Musinguzi,D.;Lubega,W.;Rusoke,D.;Nassiwa,F.;Borve,A.
+Usingartificialintelligenceondermatologyconditionsinuganda: Acasefordiversityintrainingdatasets
+formachinelearning. BioRxiv2019,826057. [CrossRef]
+53. Maron,R.C.;Weichenthal,M.;Utikal,J.S.;Hekler,A.;Berking,C.;Hauschild,A.;Enk,A.H.;Haferkamp,S.;
+Klode,J.;Schadendorf,D.;etal. Systematicoutperformanceof112dermatologistsinmulticlassskincancer
+imageclassificationbyconvolutionalneuralnetworks. Eur. J.Cancer2019,119,57–65. [CrossRef]
+54. Hulstaert,E.; Hulstaert,L.Artificialintelligenceindermato-oncology: Ajointclinicalanddatascience
+perspective. Int. J.Dermatol. 2019,58,989–990. [CrossRef]
+55. Winkler,J.K.; Fink,C.; Toberer,F.; Enk,A.; Deinlein,T.; Hofmann-Wellenhof,R.; Thomas,L.; Lallas,A.;
+Blum,A.;Stolz,W.;etal. Associationbetweensurgicalskinmarkingsindermoscopicimagesanddiagnostic
+performanceofadeeplearningconvolutionalneuralnetworkformelanomarecognition. JAMADermatol.
+2019,155,1135–1141. [CrossRef]
+56. Yoshida, T.; Celebi, M.E.; Schaefer, G.; Iyatomi, H. Simple and effective pre-processing for automated
+melanomadiscriminationbasedoncytologicalfindings. InProceedingsoftheIEEEInternationalConference
+onBigData,Washington,DC,USA,6December2016.
+57. Jafari,M.;Karimi,N.;Nasr-Esfahani,E.Skinlesionsegmentationinclinicalimagesusingdeeplearning.
+In Proceedings of the 23rd International Conference on Pattern Recognition (ICPR), Cancun, Mexico,
+4December2016.
+58. Salido,J.;Ruiz,C.Usingdeeplearningtodetectmelanomaindermoscopyimages.Int.J.Mach.Learn.Comput.
+2018,8,61–68. [CrossRef]
+59. Maglogiannis,I.;Doukas,C.N.Overviewofadvancecomputervisionsystemsforskinlesionscharacterization.
+IEEETrans. Inf. Technol. Biomed. 2009,13,721–733. [CrossRef]
+60. Riaz,F.;Hassan,A.;Javed,M.Y.;Coimbra,M.T.Detectingmelanomaindermoscopyimagesusingscale
+adaptivelocalbinarypatterns. Annu. Int. Conf. IEEEEng. Med. Biol. Soc. 2014,2014,6758–6761.
+61. Bello-Cerezo,R.;Bianconi,F.;DiMaria,F.;Napoletano,P.;Smeraldi,F.Comparativeevaluationofhand-crafted
+imagedescriptorsvs. Off-the-shelfcnn-basedfeaturesforcolourtextureclassificationunderidealand
+realisticconditions. Appl. Sci. 2019,9,738. [CrossRef]
+62. Filali,Y.;ElKhoukhi,H.;Sabri,M.A.;Arab,A.Efficientfusionofhand-craftedandpre-trainedcnnsfeatures
+toclassifymelanomaskincancer. Multimed. ToolsAppl. 2020,79,31219–31238. [CrossRef]
+Publisher’sNote: MDPIstaysneutralwithregardtojurisdictionalclaimsinpublishedmapsandinstitutional
+affiliations.
+©2020bytheauthors. LicenseeMDPI,Basel,Switzerland. Thisarticleisanopenaccess
+articledistributedunderthetermsandconditionsoftheCreativeCommonsAttribution
+(CCBY)license(http://creativecommons.org/licenses/by/4.0/).

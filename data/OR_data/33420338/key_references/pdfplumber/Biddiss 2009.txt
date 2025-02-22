@@ -1,0 +1,412 @@
+RESEARCH Original article
+.................................................................................................................................
+Q
+Predicting need for intervention in individuals
+with congestive heart failure using
+a home-based telecare system
+Elaine Biddiss*†‡, Simon Brownsell*§ and Mark S Hawley*§
+*SchoolofHealthandRelatedResearch,UniversityofSheffield,Sheffield,UK;†BloorviewResearchInstitute,BloorviewKidsRehab,
+Toronto,Canada;‡InstituteofBiomaterialsandBiomedicalEngineering,UniversityofToronto,Toronto,Canada;§DepartmentofMedical
+PhysicsandClinicalEngineering,BarnsleyHospitalNHSFoundationTrust,Barnsley,UK
+Summary
+Wehavestudiedhowwelltheneedforamedicalinterventioncanbepredictedbyatelecaremonitoringsystem.Duringa
+studyperiodofabout18months,45elderlyindividualswithcongestiveheartfailureusedahomehealthmonitortoenter
+dailyinformationpertainingtotheirsymptomsandhealthstatus.Atotalof8576alertsweregeneratedbythemonitoring
+system,although in most cases,patientand service providerinteraction wasnot required.Whensystem alertswere
+consideredtobeserious,orifsymptomspersisted,thepatientwascontacted.Atotalof171keymedicalevents(6deaths;
+28 hospitaladmissions; 59changes inmedication; 54cases of advice given; 24instanceswhere immediatemedical
+attentionwasrecommended)were recorded inthe monitoring logs. Amultivariatelogistic regression model was
+developed topredict these medicalinterventions/events.Themodel correctlypredictedkeymedicalevents in75% of
+caseswithaspecificityof74%andanoverallcross-validatedaccuracyof74%(95%CI,68–80%).Keypredictorsincluded
+the numberof system alerts,self-ratedmobility, self-rated healthand self-ratedanxiety.Thissuggeststhat subjective
+measuresare usefulin additiontophysiological onesforpredictinghealthstatus.Amultivariate decisionsupport model
+has potential tosupplementpractitioners and current telecare systems in identifyingheart failure patients inneed of
+medicalintervention.
+Introduction predictedbyatelecaremonitoring systembasedon
+.............................................................. self-rated health-related qualityof life(HQOL), physical
+symptoms,lifestyleand physiological measurementsin
+Inthe UnitedStates, 4.8 million peopleareaffected by individualswith CHF.
+chronicheartfailure(CHF).Theassociatedhealth-carecosts
+amountto $38.1 billion annually.1 Regularmonitoring is
+especiallypertinenttothemanagementofCHFwheresigns
+of diminishing healthmaybe subtle and difficultto
+Methods
+recognize.1,2Nevertheless,ithasbeensuggestedthatmany ..............................................................
+of thesesymptomsof worseninghealth (i.e.oedema,
+dyspnoea,weight gain)present8 to 12daysbefore A review ofBarnsleyHospital records identifiedpotential
+hospitalization.3Telecaresystemsmay beacost-effective participantsfor thestudy.Allparticipantshad
+and patient-acceptablewayofidentifying theproblems.3,4 echocardiographicevidence ofheartfailureand
+Despitegrowinginterestand investment in thisarea, conventionalsymptoms. The exclusioncriteriawere: (1)
+thereremainnumerous questionsasto howto achieve the ejectionfraction .40%; (2)unstable angina; (3)ageless
+greatestincreasein clinicaland costeffectiveness.5 than 60years;(4) debilitating dementiaorpsychiatric
+Forinstance,questionsremainaboutthebestpredictorsfor disorder; (5)inabilityto comprehendwordspresentedon
+a particularcardiovascularpopulation.6 Wehavetherefore anelectronicscreen;(6)plannedcoronaryrevascularization
+studiedhowwelltheneedforamedicalinterventioncanbe procedures; (7)onawaitinglistfor hearttransplantation;
+(8)participationin another,conflicting heartfailure
+research studywithinthe past6 months; (9)lackof an
+Accepted31March2009 operational hometelephoneline and anearbyelectrical
+Correspondence:ElaineBiddiss,BloorviewResearchInstitute,150KilgourRoad,
+socket;and (10) not livingin themainstreamhousing
+Toronto,OntarioM4G1R8,Canada(Fax:þ14164251634;
+Email:elaine.biddiss@utoronto.ca) sector(e.g. residentialornursing care).
+JournalofTelemedicineandTelecare2009;15:226–231 DOI:10.1258/jtt.2009.081203
+Downloaded from jtt.sagepub.com at UNIV WASHINGTON LIBRARIES on March 23, 2015
+EBiddissetal. Predictinghealthneedsusingtelecare
+Data collection monitoringhealth-carepractitioners.The rationalefor this
+approach wastwo-fold:
+Participants were provided with a health monitor
+(Doc@Home, Docobo Inc, Sheffield, UK) through which
+(1) Datawerecollected withvaryingfrequency(either
+theyentered daily information pertaining to their
+weekly,twiceaweekordaily);
+symptoms and health statusthrough a set of questions
+(2) A time lagwasevidentbetween user-inputteddata,
+developed by the research and clinical team. Daily
+generated systemalerts and nurseresponses.
+measurements of blood pressure and pulse ratewere
+recorded using awireless monitor (UA-767 Plus BT, A&D
+Stepwise,forwardselectionbasedontheloglikelihoodratio
+Medical). Daily weight was also measured (HCV800,
+was usedtoavoidover-fittingthe model.8The importance
+Hanson). Twiceweekly, patients also completed a
+ofallpotentialinteractionswasevaluatedviathelikelihood
+health-related qualityof life measure (EQ-5D)7 directlyon
+ratiotest.Themodel’sgoodnessoffitwasassessedbasedon
+thehealthmonitoringunit,givingdataonself-ratedhealth
+changesin deviance(i.e. .4indicating a poorfit).12
+(visual analogue scale), mobility, self-care, usual activities,
+ModelswereevaluatedusingK-foldcrossvalidationwith
+pain/discomfort and anxiety/depression. The datawere
+K¼10.Duetothelargenumberofnon-events(i.e.a
+transmitted at night through telephone lines and screened
+meaningfulhealth-careinterventionwasnotrequired)in
+forabnormalities.Ifthedatafelloutsideuser-specificlimits,
+comparisontokeyevents(i.e.ameaningfulhealth-care
+clinicians were notified. Thistherefore provided two
+interventionwasrequired),over-sampling13,14wasusedto
+additional sets of data: (a) a daily record of system alerts
+obtainabalanceddataset.Theapproximateproportionofkey
+generated by the home monitoring system in accordance
+eventstonon-eventswasmaintainedineachtestset.
+withthevariableslistedinTable1,and(b)aqualitativelog
+Thesensitivity(i.e.theproportionofkeyeventsthatwere
+ofclinicalinterventionsandmedicaleventsrecordedbythe
+correctlyclassified),specificity(i.e.theproportionofnon-
+monitoringhealth-carestaff.Thestudywasapprovedbythe
+eventsthatwerecorrectlyclassified)andoverallprediction
+appropriate ethics committee.
+accuracywereusedtoevaluatetheperformanceofthemodel.
+Results
+Data analysis ..............................................................
+The data analysis wasconducted usingstandardstatistical
+Ofthe 45 participants,six individualsdiedduring the
+software(SPSS14.0). LogisticRegression (LR)8–12 was used
+courseof thestudyandeight returned theirequipment.
+to predict the occurrenceof keymedicalevents/
+The averagedurationof datacollectionwas 18months
+interventionsasextractedfromthehealth-carepractitioner
+(SD¼5).The patientcharacteristicsaresummarised in
+logs.Foreachweekofthestudy,theaverage/medianvalues
+Table 2.
+ofpredictorvariableswerecalculated,thenumberofsystem
+alerts wasenumerated, and the presenceof a key medical
+Predicting the need for medical intervention
+eventor intervention wasnoted from the logs of
+A total of8576 alertsweregenerated bythemonitoring
+system.Inmostcases,theresponsetosystemalertsdidnot
+requirepatientand serviceproviderinteraction. When
+Table1 Defaultcriteriausedbythemonitoringsystemtogenerate
+systemalertswereconsideredofgreater severity,or if
+systemalerts.Specificlimitscouldbesetforeachindividual,as
+appropriate symptomspersisted,the patientwascontacted. Atotal of
+171 keymedicalevents(6 deaths;28 hospitaladmissions;
+Healthfactorquery Alertgeneratedif...
+59 changesin medication;54 cases ofadvice given;24
+Daytimeshortnessof Morethanusual instances where immediate medicalattentionwas
+breath recommended)wererecordedinthemonitoringlogs.There
+Night-timeshortness Morethanusual
+were 154weeks during which oneormorekey medical
+ofbreath
+Needforextrapillows Yes eventsoccurredand 2779weeks during whichno key
+Swollenankles Morethanusual medicaleventswere observedfor the participants.
+Bloatedstomach Morethanusual
+Generationof asystemalertand subsequentresponse bya
+Dizziness Morethanusual
+Urineexcretion Lessthanusualþincreaseddizzinessþincreased health-carepractitioner wasnot considereda keymedical
+bloating eventunless aspecific actionwasactuallyrequiredand
+Cough Neworworsethanusual
+taken(i.e.false alarmswerenot countedaskey medical
+Weightgain Ifweightincreasesby2lbsincepreviousdayorif
+weightincreasesby3lbinarolling7days events).Inorder toobtain anapproximately balanced
+Systolicbloodpressure Ifbelow100mmHgordropsby20mmHgfrom dataset, keymedicaleventswere over-sampledbya rate of
+previousreading
+18 times.The averagenumberof medicalevents
+Pulserate Ifbelow55perminorabove120permin
+Diet(i.e.eatingwell) Noor‘lessthanusual’foraconsecutive7days experiencedperpatientper year was3.5(witha medianof
+Medicationtaken No 2andaninterquartilerangeof1–4).Theaveragenumberof
+Angina Morethanusual
+non-keyalertsgeneratedperpatientperyearwas49(witha
+JournalofTelemedicineandTelecare Volume15 Number5 2009 227
+Downloaded from jtt.sagepub.com at UNIV WASHINGTON LIBRARIES on March 23, 2015
+EBiddissetal. Predictinghealthneedsusingtelecare
+Table2 Patientcharacteristics(n¼45) examined for inclusionin thelogisticregression modelin
+accordancewiththe guidelinesin Hosmer& Lemeshow.12
+Characteristic Participants(%)
+Someof thevariableswerehighly correlated(see Table3).
+Gender Forexample, self-rated mobilityand self-rated painwere
+Male 83 highly correlated (r¼0.74, P,0.01). Inthesecases, the
+Female 17
+strongestpredictorin thegroup ofcorrelatedvariables
+NYHAclassification
+2 43 was selectedfor inclusion inthe model.
+2–3 17 The best multivariate logistic regression modelfor
+3 40
+predictionofkeymedicalinterventions/eventsisshownin
+Age(years)
+60–64 10 Table 4. Thenumberofalerts generated bythe system
+65–69 26 emergedasthe primary predictor.As shown bytheodds
+70–74 26
+ratio (eb¼1.196) listedin Table4, foreveryadditional
+75–79 24
+80–84 10 systemalertgenerated, the probabilityofa key medical
+85–89 5 eventincreased by19.6%. On itsown, thisvariable
+Livingarrangements
+predicted82%ofnon-eventsand61%ofkeyeventswithan
+Alone 26
+Withpartner/spouse 62 unadjustedcoefficient ofb¼0.183. The additionof
+Morethan2peopleinhousehold 12 subjectivefactors(i.e. self-rated mobility,healthand
+Smoking
+anxiety)improvedprediction significantly(log likelihood
+Non-smoker 82
+Smoker 18 ratio,P,0.001).TheROC(receiver-operatorcurve)forthis
+Exercise revisedmodelis shown inFigure1a. Withaclassification
+None 67
+cut-off probabilityof0.5, theoverall cross-validated
+Light 28
+Moderate 5 predictionaccuracywas74%(95% CI,68–80). Most
+Numberofprescribedmedications importantly,the sensitivity(i.e. prediction of keyevents)
+,5 13
+was increasedfrom61% to75% witha specificity
+5–10 59
+11–15 23 (prediction of non-events) of74%. Witha maximum
+.15 5 sensitivityofapproximately80%,thespecificitydroppedto
+67%(cut-off¼0.62). The sensitivityand specificityofthe
+modelforarangeofclassificationcut-offvaluesisshownin
+medianof 49and aninterquartile rangeof47–51).
+Figure1b.Ofthedata,100%ofkeymedicaleventsand97%
+The averagepercentage oftotal alertsthatwere identified
+ofnon-eventswerewell-fitted(i.e.changeindeviance ,4).
+askeymedicaleventswas 6.4%(with a medianof4 and
+Approximately 72%of poorlyfitteddatapoints were
+aninterquartile rangeof1.4–8).
+associatedwith fourparticular participants.A significantly
+Table3 summarizesthe univariatesignificance of
+highernumberof dailysystemalerts (1.5)wereassociated
+predictor variables. Allvariableswitha P value ,0.1 were
+with these patients as compared to the average (0.5),
+P,0.001.
+Finally,a breakdownof all the dailysystemalerts (n¼
+Table3 Variablesconsideredaspredictorsofkeymedicalevents/
+8576) generatedbythe telecaremonitoring system
+interventionsbasedonunivariatestatisticalsignificance(chi-squared
+indicated thata large proportionof the totalnumberof
+testforbinarypredictors;independentt-testforcontinuous)
+alerts wereattributableto the physiologicalmeasurements,
+Variable Scale P
+namely pulserate,bloodpressureand weight gain.
+Numberofsystemalerts Continuous ,0.001 Inresponseto these alerts,monitoringpractitioners
+Qualityofsleep Binary(0¼asusualormore; ,0.001 typicallyflaggedthepatientforelevatedobservation.Ifthe
+1¼lessthanusualornone)
+symptom persisted, atelephonecallwas madeto ascertain
+Extrapillowsneeded Binary(0¼no;1¼yes) ,0.001
+Shortofbreath(day) Binary(0¼asusualorless; ,0.001 the healthof the patientand possiblereasons forthe
+1¼morethanusual) physiologicalchange(e.g.over-eatingoranunrelatedcold).
+Diet Binary(0¼asusualormore; 0.001
+1¼lessthanusual)
+Cough Binary(0¼asusualornone; ,0.001
+1¼neworworsecough) Table4 Logisticregressionmodelforpredictionofkeymedical
+Weight Binary(0¼withinparameters; ,0.001 interventions/events
+1¼outsideofparameters)
+Fatigue Binary(0¼asusualorless; ,0.001 Coefficient Standard Oddsratio(eb)
+1¼morethanusual) Variables (b) error P [95%CI]
+Self-ratedhealth Continuous ,0.001
+Self-ratedmobility Binary(0¼noproblems; 0.001 Systemalerts 0.179 0.008 ,0.001 1.196[1.178–1.214]
+1¼someproblemsorunable) Self-rated 0.441 0.093 ,0.001 1.559[1.299–1.871]
+Self-ratedanxiety Binary(0¼none;1¼moderateor 0.002 mobility
+extreme) Self-rated 20.009 0.002 0.012 0.991[0.986–0.995]
+Exercise Binary(0¼someexercise;1¼no 0.002 health
+exercise) Self-rated 0.144 0.084 0.19 1.157[0.982–1.364]
+Self-ratedpain Binary(0¼none;1¼moderateor 0.012 anxiety
+extreme) Constant 20.863 0.216 0.436
+228 JournalofTelemedicineandTelecare Volume15 Number5 2009
+Downloaded from jtt.sagepub.com at UNIV WASHINGTON LIBRARIES on March 23, 2015
+EBiddissetal. Predictinghealthneedsusingtelecare
+Inapproximately 86%of cases, alerts generatedbythese
+physiological measures werenot accompaniedbyakey
+medicalevent/intervention. Alerts pertaining tophysical
+and psychological symptoms,such asanxiety,swollen
+ankles and theneed forextra pillows at night,were most
+oftencorrect inpredictinga keyevent (Figure2).
+Discussion
+..............................................................
+Themodelpredictedkeymedicalevents/interventionswith
+anoverall accuracyof 74%(95% CI,68–80). Witha
+classificationcut-offprobabilityof0.5,thesensitivityofthe
+modelwas 75%and the specificitywas74%. Tominimize
+the riskof notidentifying the needfor medical
+intervention, a higherclassification cut-offprobability
+could beused. Thisincreasein sensitivityis ofcourse
+accompaniedbya decreasein specificity(i.e.morefalse
+alarms). The strongestpredictorinthis modelwasthe
+cumulative numberof systemalerts generated ina given
+week. Ascan beseenin Figure 2, it isthe system alerts
+stemmingfrom patients’subjectivedescriptions oftheir
+symptomsas opposedto thephysiologicalmetricsthatare
+mostindicativeof theneed formedical intervention.
+Thisimpliesthatpatientsaregiving medicallymeaningful
+reportsoftheirsymptoms.Withadditionalpredictorsbased
+onsubjective healthperceptions (i.e.self-rated mobility,
+healthand anxiety),correctpredictionsof keymedical
+eventswereimprovedfrom 61%to 75%. Consequently,
+in orderto increasetheeffectiveness oftelecaresystems, it
+maybe importantto recordmorethan justphysiological
+Figure1 Performanceofthelogisticregressionmodelinpredictingkey variables.Further research toexplore awider range of
+medicalinterventions/events.(a)Receiver-operatorcurve(b)Sensitivity
+potentialpredictorsis needed.
+andspecificityforarangeofclassificationcut-offvalues
+The performanceofthe model’spredictionswas
+comparedtothe clinicians’ responses.Toestimatethe
+positive predictivity (i.e.the ratio oftruekeyeventsto the
+Figure2 Numberofsystemalertsaccordingtoclass(e.g.weightgain,increasedanxiety,worsened
+cough).Foreachclassofalert,theproportionassociatedwithakeymedicalintervention/eventis
+indicated(inblack).Forexample,reportsofweightgaingenerated422alertsduringthecourseofthe
+study.Inapproximately15%ofcases,thissymptomwasassociatedwithakeymedicalintervention/
+event,whereasin85%ofcases,itwasnotassociatedwithakeymedicalintervention/event
+JournalofTelemedicineandTelecare Volume15 Number5 2009 229
+Downloaded from jtt.sagepub.com at UNIV WASHINGTON LIBRARIES on March 23, 2015
+EBiddissetal. Predictinghealthneedsusingtelecare
+total numberof keyeventspredicted)ofthe clinicians, likely toinclude potentiallyunimportant variables,rather
+the assumptionwasmadethatcontactwith a patientthat than excludingimportantpredictors.23Although the odds
+ensuedfromamedicalconcern,butdidnotresultinakey ratios arelikely tobe similar,standard errorsmay be
+intervention, wasafalse alarm (i.e. afalse positive). underestimated incomparisonwith methodsthat account
+Thusthe positivepredictivity wasestimatedto be39% for for repeatedmeasuressuch asgeneralized estimating
+clinicians ascomparedto 75%for the decision-support equations (GEE).23The latterapproach, however,requires
+model.Twothirdsofallfalsealarmsgeneratedbythemodel the assumptionthatmissingdataoccurcompletelyat
+(i.e.incorrectlypredictedkeyevents)wereinstances where randomandindependentlyoftheoutcomevariable.Inour
+the clinicianinvolvedalso demonstrated a heightened study,missingdatawerecommonly due tohospitalization
+concernforthepatientanddecidedtoincreasemonitoring andthepatient’sinabilitytoaccesstheirhomemonitoring
+of and/orcontactthe patientbasedonthe information system.Forcomparison purposes,a GEE modelwas
+collected. Thissuggeststhat, althoughincorrectin its constructed. Systemalerts and self-rated mobilityemerged
+predictionof a keymedical event inthese cases, the astheprimarypredictorswithoddsratiossimilartothoseof
+decision-support modeldididentify instancesof elevated the simplelogistic regressionmodel. Asexpected, the
+risk inlinewith clinicians’ assessments. standarderrorscalculatedthroughGEEweresignificantly
+larger for bothsystemalerts (SE¼0.017) andself-rated
+mobility (SE¼0.225). The goodness-of-fit measurefor the
+Clinical significance GEEmodelincorporating systemalerts and self-rated
+mobility wasslightlyhigherthan the modelwhich also
+Itisimportanttoemphasizethatpredictivemodelsshould
+includedself-rated healthand self-rated anxiety.
+be regardedasatooltoassist, notsupersede, clinical
+Thisimpliesthatthe latter twovariables, althoughnot
+decision makingand prioritizing.Furthermore, ‘non-key
+significantpredictors,maycontributetothegoodness-of-fit
+interventions’(i.e.contactwithpatientsthatdidnotresult
+of theGEE model.
+inatangiblemedicalintervention),maystillhaverendered
+The necessityof carryingoutanalysesonaweekly
+a meaningful health-care servicebypromotingpatient
+basistoaccountfor time delaysbetween userinputs,
+satisfaction,increasingconfidencein the qualityofcare
+systemresponse and clinicalaction,shouldalso be noted.
+provided,alleviating feelings ofsocialisolation,increasing
+Inconsistent adjustmentsofsystemparametersby
+perceivedsocialsupport, encouraging adherenceto
+monitoringpractitioners mayalso haveoccurred.
+treatment recommendations, addressingaco-morbidityor
+Forexample, for someindividuals whosephysiological
+otherproblem,and improvingclinician-patient
+measurementshad greateracceptablefluctuationsthan
+relationships.Allofthesesocialandhealth-careperceptions
+others,systemlimitswerechangedtoeliminatesuperfluous
+havebeenimplicatedasfactorsin hospitalre-admission
+alerts,whileforothers, these alerts weresimplyignored.
+rates,mortalityand/orqualityoflifeinCHFpatients.1,2,15–
+Thismay haveaffectedthe modelfit and issuedahigher
+18 Increasingly,emphasisis beingplaced onpatientswith
+numberof false alarms.Differences ineach individual’s
+CHFto self-carethrough initiatives suchasthe Expert
+abilityto self-manage(e.g. medication, diet)werenot
+PatientProgramme.19 Itmay bethe casethattelecare
+capturedin thisanalysis. Itis also possible that some
+systemswithpredictivemodellingcould complementsuch
+individualsmay havebeenmoreintunewith theirhealth
+initiatives. Afterall,early identificationof high-risk
+needsthanothers andthatthe modelcould berefined to
+patients, improvedhome care,and educationon heart
+reflectpatientvariationsin sensitivityoranxietyregarding
+failureand self-management, are fundamentalstrategiesto
+perceivedsymptoms.
+decreasemorbidityand mortalityamongpatients,and to
+alleviate the economic burdenoffrequenthospital
+re-admissions.20–22
+Conclusions
+Four importantconclusionsemergedfromthe studywith
+Study limitations and future work
+respecttothe performanceand developmentoftelecare
+The present studyexploredthe developmentofa systems.First,thesystemforhealthmonitoringusedinthis
+decision-support toolthat incorporatedphysiological studyproveduseful inindicating whenmedical
+measurements,physicalsymptomsand subjective interventions are needed.Second, the performanceof the
+perspectivesonhealthandwell-being.Wehaveidentifieda systemscouldbeimprovedbyincludingtargetedquestions
+fewimportantpredictorsofhealthstatusandhaveexplored relatingtohealthoutcomes.Third,self-perceivedsymptoms
+the factors framing self-rated HQOL.Largerdatasetswill and healthstatus werevaluable indicators.Last,
+enable thedevelopmentofmoreaccurate,robustand a multivariate decisionsupport modelhaspotential to
+generalizedmodelsthatcanpredictnotonlytheoccurrence supplement practitioners andcurrenttelecare systems in
+ofakeymedicaleventand/orneedforintervention,butthe identifyingCHFpatientsin needof medicalintervention.
+level of severityof the event. Inclusionofsuchsystemsinrealtimecouldenhancesystem
+Logistic regression doesnot accountfor the longitudinal effectiveness,enable preventativehealth careand increase
+natureofthe data.It is a ‘safe’ estimate inthatit is more practitionerefficiency.
+230 JournalofTelemedicineandTelecare Volume15 Number5 2009
+Downloaded from jtt.sagepub.com at UNIV WASHINGTON LIBRARIES on March 23, 2015
+EBiddissetal. Predictinghealthneedsusingtelecare
+Acknowledgements: The presentstudy waspart-fundedby 10 JohanssonU,Bernspa˚ngB.Predictingreturntoworkafterbraininjury
+the EPSRC(GR/S29058/01, EP/F001835/1).We thank usingoccupationaltherapyassessments.DisabilRehab2001;23:474–80
+11 BiddissEA,ChauTT.Multivariatepredictionofupperlimbprosthesis
+Bloorview KidsRehab forfinancialsupportof EB’s
+acceptanceorrejection.DisabilRehabilAssistTechnol2008;3:181–92
+fellowshipatthe Universityof Sheffield.Wearegratefulto 12 HosmerDW,LemeshowS.AppliedLogisticRegression.NewYork:Wiley,
+DrMichaelCampbell(Universityof Sheffield)for statistics 1989;307
+13 EitrichT,KlessA,DruskaC,MeyerW,GrotendorstJ.Classificationof
+guidance.
+highlyunbalancedCYP450dataofdrugsusingcostsensitivemachine
+learningtechniques.JChemInfModel2007;47:92–103
+14 KotsiantisS,KanellopoulosD,PintelasP.Handlingimbalanceddatasets:a
+References review.GESTSIntTransCompSciEng2006;30:25–36
+15 YuDS,LeeDT,WooJ,ThompsonDR.Correlatesofpsychologicaldistress
+1 ZickmundSL,BlasioleJA,BraseV,ArnoldRM.Congestiveheartfailure inelderlypatientswithcongestiveheartfailure.JPsychosomRes
+patientsreportconflictwiththeirphysicians.JCardFail2006;12:546–53 2004;57:573–81
+2 VinsonJM,RichMW,SperryJC,ShahAS,McNamaraT.Earlyreadmission 16 GorkinL,SchronEB,BrooksMM,etal.Psychosocialpredictorsof
+ofelderlypatientswithcongestiveheartfailure.JAmGeriatrSoc mortalityintheCardiacArrhythmiaSuppressionTrial-1(CAST-1).
+1990;38:1290–5 AmJCardiol1993;71:263–7
+3 ClarkRA,InglisSC,McAlisterFA,ClelandJG,StewartS.Telemonitoring 17 WilliamsRB,BarefootJC,CaliffRM,etal.Prognosticimportanceofsocial
+orstructuredtelephonesupportprogrammesforpatientswithchronic andeconomicresourcesamongmedicallytreatedpatientswith
+heartfailure:systematicreviewandmeta-analysis.BMJ2007;334:942–51 angiographicallydocumentedcoronaryarterydisease.JAMA
+4 Pare´G,JaanaM,SicotteC.Systematicreviewofhometelemonitoringfor 1992;267:520–4
+chronicdiseases:theevidencebase.JAmMedInformAssoc 18 MurbergTA,BruE.Socialrelationshipsandmortalityinpatientswith
+2007;14:269–77 congestiveheartfailure.JPsychosomRes2001;51:521–7
+5 BrownsellS.SupportingLongTermConditionsandDiseaseManagement 19 GriffithsC,FosterG,RamsayJ,EldridgeS,TaylorS.Howeffectiveare
+throughTelecareandTelehealth:EvidenceandChallenges.Seehttp://www. expertpatient(layled)educationprogrammesforchronicdisease?
+icn.csip.org.uk/nl/?l=202_1_1_3(lastchecked27March2009) BMJ2007;334:1254–6
+6 ArtinianN.Telehealthasatoolforenhancingcareforpatientswith 20 LennieTA,MoserDK,HeoS,ChungML,ZambroskiCH.Factors
+cardiovasculardisease.JCardiovascNurs2007;22:25–31 influencingfoodintakeinpatientswithheartfailure:acomparisonwith
+7 LenzenMJ,ScholteopReimerWJ,PedersenSS,etal.Theadditionalvalue healthyelders.JCardiovascNurs2006;21:123–9
+ofpatient-reportedhealthstatusinpredicting1-yearmortalityafter 21 ProctorEK,Morrow-HowellN,LiH,DoreP.Adequacyofhomecareand
+invasivecoronaryprocedures:areportfromtheEuroHeartSurveyon hospitalreadmissionforelderlycongestiveheartfailurepatients.Health
+CoronaryRevascularisation.Heart2007;93:339–44 SocWork2000;25:87–96
+8 BagleySC,WhiteH,GolombBA.Logisticregressioninthemedical 22 ClineCM,IsraelssonBY,WillenheimerRB,BromsK,ErhardtLR.
+literature:standardsforuseandreporting,withparticularattentionto Costeffectivemanagementprogrammeforheartfailurereduces
+onemedicaldomain.JClinEpidemiol2001;54:979–85 hospitalisation.Heart1998;80:442–6
+9 WielandtT,MckennaK,ToothL,StrongJ.Factorsthatpredictthe 23 WilliamsonDS,BangdiwalaSI,MarshallSW,WallerAE.Repeated
+post-dischargeuseofrecommendedassistivetechnology(AT).Disabil measuresanalysisofbinaryoutcomes:applicationstoinjuryresearch.
+RehabilAssistTechnol2006;1:29–40 AccidAnalPrev1996:28:571–9
+JournalofTelemedicineandTelecare Volume15 Number5 2009 231
+Downloaded from jtt.sagepub.com at UNIV WASHINGTON LIBRARIES on March 23, 2015

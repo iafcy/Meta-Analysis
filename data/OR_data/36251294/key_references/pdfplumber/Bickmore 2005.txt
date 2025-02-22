@@ -1,0 +1,899 @@
+InteractingwithComputers17(2005)711–735
+www.elsevier.com/locate/intcom
+‘It’s just like you talk to a friend’ relational agents for
+older adults
+Timothy W. Bickmorea,*, Lisa Carusob, Kerri Clough-Gorrb,
+Tim Heerenc
+aDepartmentofMedicine,MedicalInformationSystemsUnit,BostonUniversitySchoolofMedicine,
+Boston,MA,USA
+bDepartmentofGeriatrics,BostonUniversitySchoolofMedicine,Boston,MA,USA
+cDepartmentofBiostatistics,BostonUniversitySchoolofPublicHealth,Boston,MA,USA
+Availableonline30September2005
+Abstract
+Relational agents—computational artifacts designed to build and maintain long-term social–
+emotional relationships with users—may provide an effective interface modality for older adults.
+This is especially true when the agents use simulated face-to-face conversation as the primary
+communicationmedium,andforapplicationsinwhichrepeatedinteractionsoverlongtimeperiods
+arerequired,suchasinhealthbehaviorchange.Inthisarticle,wediscussthedesignofarelational
+agent for older adults that plays the role of an exercise advisor, and report on the results of a
+longitudinalstudyinvolving21adultsaged62–84,halfofwhominteractedwiththeagentdailyfor2
+monthsintheirhomesandhalfwhoservedasastandard-of-carecontrol.Resultsindicatetheagent
+wasacceptedandliked,andwassignificantlymoreefficaciousatincreasingphysicalactivity(daily
+stepswalked)thanthecontrol.
+q2005ElsevierB.V.Allrightsreserved.
+Keywords:Relationalagents;Socialinterfaces;Human–computerinteraction
+*Correspondingauthor.Presentaddress:CollegeofComputerandInformationScience,202WestVillageH,
+Northeastern University, 360 Huntington Avenue, Boston, MA 02115-5000, USA. Tel.: C1 617 638 8170;
+fax:C1617373-5477.
+E-mailaddresses:bickmore@ccs.neu.edu(T.W.Bickmore),lisa.caruso@bmc.org(L.Caruso),kmclough@
+bu.edu(K.Clough-Gorr),tch@bu.edu(T.Heeren).
+0953-5438/$-seefrontmatterq2005ElsevierB.V.Allrightsreserved.
+doi:10.1016/j.intcom.2005.09.002
+712 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+1.Introduction
+Between2010and2030thenumberofolderadultsintheUnitedStatesisprojectedto
+morethandouble,withtheoverallfastestgrowingsegmentbeingthoseage85andolder
+(DHHS, 1991). This shift in US demographics towards an older society has motivated a
+growing body of research in human–computer interaction for older adults over the last
+decade.Whilesomestudieshavefoundthatolderadultsembracenewtechnology,others
+haveconcludedthatmanyolderadultshavesignificantproblemsusingstandardcomputer
+interfaces. The burden of physical and cognitive impairments in this age group may
+explainsomeofthedifficultiesolderadultshaveusingcomputers.Computeranxietymay
+also be one of many factors that have led to a low adoption rate of computers by older
+adults.Asagroup,adultsage55andoverownfewercomputersthananyotheradultage
+group. Only 25.8% of senior households have a computer compared to 46.0–54.9% for
+adultsaged25–54.AccesstotheInternetlagsaswell:14.6%ofallseniorhouseholdshave
+Internet access compared to30.1–35.0% for adults aged 25–54(NTIA, 1999).
+Embodiedconversationalagents(ECAs)—animatedcomputercharactersthatsimulate
+face-to-face conversation with users (Cassell et al., 2000)—may constitute an especially
+effective form of human–computer interface for older adults. One skill that many older
+adultsretain,evenwithsignificantcognitiveimpairment,istheabilitytoengageinface-
+to-face conversation. This primal form of interaction is learned in infancy and early
+childhood and comprises tacit, crystallized knowledge in older adulthood. The ability to
+engage others is thus available even when individuals have difficulty learning new
+interfacesthatrequiremoreadaptive,‘fluid’intelligence(Horn,1982).Face-to-facedialog
+ismulti-modal.Itincorporatesawiderangeofnon-verbalandparaverbalbehaviortocarry
+semanticcontentredundantlywithspeech,enablingindividualswithimpairmentsinsome
+channels (e.g. hearing) to compensate by attending to redundant information in other
+channels (e.g. hand gesture). Face-to-face dialog also has well-established repair
+mechanisms that enable listeners to request repetition or clarification by a speaker (e.g.
+communicatedbytheabsenceofgroundingbehaviorsuchasaheadnod;ClarkandKrych,
+2004).Finally,thisformofinteractionhasmechanismsforconstrainingtheinteractants’
+focusofattention(GroszandSidner,1986).Thisfocusisimportantforolderadultswho
+have difficulty individing their attentionor dealing with distractions common incurrent
+windows-based interfaces (Hartley, 1992).
+Inadditiontotask-orientedconversationsthatECAscanholdwithusers,wefeelthat
+incorporating social, emotional and relational aspects of face-to-face interaction into a
+computeragentisalsocrucialforagentsdesignedtointeractwitholderadults,especially
+overlongperiodsoftime.Asignificantamountofresearchoverthelastthreedecadeshas
+demonstrated the importance of social support on health and well-being in the elderly
+(Berkman andSyme, 1979; Berkmanand Glass, 2000).In addition, studies across many
+disciplinesofhumanhelpinghavedemonstratedthesignificantpositiveeffectsofahigh-
+qualityrelationshipbetweenthehelperandthehelpedontherapeuticoutcomes(Horvath
+andSymonds,1991).Assumingtheseeffectsholdforhuman–computerrelationships,an
+idealinterfaceagentforolderadultsinhelpingtasksshoulduserelationship-buildingand
+maintenance behaviors in addition to being a competent conversationalist, which
+comprises akind ofinterface we refer to asa ‘relational agent’.
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 713
+Suchinterfacesmovebeyondtheparadigmofcomputerastool,tomakesystemsthat
+are delightful andengaging sothatuserswant touse them over and overagain,andthat
+they will trust and really care about, as well as feel cared for by them (Cassell and
+Bickmore, 2003; Bickmore and Picard, 2004). Although many studies of social and
+embodiedagentshaveshowntheseeffectsinbriefinteractions(DehnandMulken,2000),
+an important question raised by this research is whether these results are durable or not;
+that is, they may simplybe the resultof anoveltyeffect that quickly wears off.
+In our work, we have developed a relational agent that plays the role of an exercise
+advisor, designed to be used by older adults in their homes on a daily basis over an
+extendedperiodoftime.Onereasonweselectedthisapplicationdomainisthatthedaily
+protocol—driven by the current government recommendations for daily physical
+activity—provides ample contact time to establish a social relationship with users over
+the duration of the study. In addition, older adults are in particular in need of physical
+activity interventions: only 12% of adults over 75 get the minimum level of physical
+activity currently recommended by the Centers for Disease Control and Prevention, and
+65% report no leisure time physical activity (DHHS,2000).
+Inthisarticle,webeginbydefininganddescribingrelationalagents,arguingthatthey
+areuniquelysuited tolong-termhelpingapplicationsforolderadults,andthenpresenta
+review of related work. We then discuss the design details of our relational agent
+application,includingbothgeneralprinciplesofdesigningsocialinterfaceagentsforlong-
+termuseandissuesspecifictoourapplication.Wethendescribeourevaluationstudyand
+quantitativeresults,followedbyanextendeddiscussionoftheramificationsofthestudy,
+supported by qualitative results from semi-structured interviews with study participants.
+Weconcludewithadiscussionofpromisingfuturedirectionsofresearchinthisarea.Inan
+earlier conference paper we presented a synopsis of the acceptance and usability results
+from this study (Bickmore, 2005); in the current article we present all results from the
+study,inadditiontoadetaileddesignrationaleanddiscussionofimplicationsandfuture
+work.
+2. Relational agents
+Relationalagentsarecomputationalartifactsdesignedtobuildandmaintainlong-term
+social–emotionalrelationshipswithusers(Bickmore,2003).Thesecanbepurelysoftware
+humanoid animated agents—as developed in this work—but they can also be non-
+humanoid or embodied in various physical forms including robots, wearables and hand-
+held computers. Central to the notion of relationship is that it is a persistent construct,
+spanningmultipleinteractions;thus,relationalagentsareexplicitlydesignedtoremember
+past history and manage future expectations in their interactions with users. Finally,
+relationships are fundamentally social and emotional, and detailed knowledge of human
+social psychology must be incorporated into these agents if they are to effectively build
+relationships with usersin the most natural manner possible.
+ThisworkusesarelationalagentthatisaspecializedkindofECA.Inadditiontothe
+reasonscitedinSection1,anECAwasselectedbecauselanguageistheprimarymodality
+usedtobuildhumanrelationships(Duck,1995),face-to-faceconversationistheprimary
+714 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+siteofhumanlanguageuse,andmanyoftherelationalstrategiesthathumansusewithin
+conversation are non-verbal(Andersen andGuerrero, 1998).
+Although some forms of relationship can be constructed without language (e.g.
+‘relationships’ with pets) language is crucial for the development and management of
+human relationships (Duck, 1994). Given this, our agent uses natural language and
+synchronizednon-verbalconversationalbehaviortocommunicatewithusers.Userinput,
+however,ismoreproblematic.Whilewewouldliketouseunconstrainedspeechinput,we
+find the state of the art in speech recognition (especially for older adults) and natural
+languageunderstanding(especiallyforunconstrainedsocialdialog)doesnotsupportthis.
+Consequently, we offer users on-screen, multiple-choice inputs, dynamically updated
+duringeachturnoftheconversation.Whilethiscanbeveryconstrainingforsomeusers,
+properlyconstructedagentdialoganduserresponsechoicescanstillmaintainthefeelof
+socialinteraction,andwasshownintheMITFitTrackstudy(Section3.4)tobesufficient
+for establishing social bonds between a relational agent and user over time. In addition,
+thisformofuserinput,whichreliesonrecognitionratherthanrecallandsynthesis,maybe
+easier to use for many older adults who suffer from language production impairments
+(Ulatowski et al., 1985).
+3.Related work
+3.1. Dialog systems for healthcommunication with olderadults
+A number of dialog systems have been developed for older adults, particularly in the
+area ofhealth communication.
+TheTLC-ACT systemwasanautomatedtelephonesystemthatusedrecordedspeech
+output and touch-tone input to promote exercise adoption (Jarvis et al., 1997). Weekly
+callsweremadeovera3-monthperiodto41olderadults(averageage66),whilea‘usual
+medical care’ control group received printed information on the benefits of walking.
+Subjects in the intervention group who walked 15min or less at baseline significantly
+increased the number of minutes walked at the end of the intervention compared to
+controls.Inaddition,subjectswereverysatisfiedwiththesystem,givingitascoreof8.6
+(range:1Z‘verydissatisfied’and10Z‘verysatisfied’),and74%oftheinterventiongroup
+rated their satisfaction as10 of10.
+A number of automated reminder systems have been developed for older adults with
+mildtomoderatecognitiveimpairment.Perhaps,themostsophisticatedsystemdeveloped
+in this area is Autominder, which incorporates sensing, planning and scheduling
+capabilities to adapt to the activities of the older adult user (Pollack et al., 2003).
+Autominder also communicates to its users in natural language, and uses a custom text
+generation algorithm to generate reminders that are as effective and non-repetitive as
+possible. However, it does not engage users in an interactive dialog or have any social
+aspects to itsplannedcommunication.
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 715
+3.2. Embodied conversational agents for older adults
+ECAs have rarely been used as interfaces for older adults. Besides the animated pill
+usedintheMedicationAdvisor,theonlyECAsysteminthisareathatweareawareofis
+theGrandChairsystem(Fig.1)(Smith,2000).Inthissystem,theagenthadtheappearance
+of a 6-year-old child, and was designed to elicit narratives from older adult users. The
+system used user posture and speech intonation to provide continuation prompts at
+appropriateintervals(‘tellmemore’).Inastudyinvolving15grandmothers(aged55–65)
+the agent was found to elicit significantly more and longer stories than a text-prompt
+control condition. Fourteen of the 15 users enjoyed the experience, and all users
+automatically adopted achild-directed speakingstyle appropriate for a 6-year-oldchild.
+3.3. Emotionalcare-taking robotsfor olderadults
+Several recent efforts in academia and industry have focused on creating robotic pets
+for older adults in order to achieve the same beneficial effects found in animal-assisted
+therapy,namelytodecreasestress,anxietyandlonelinessandimprovemood(e.g.Banks
+andBanks,2002).The‘mentalcommit’robotstaketheformofcutestuffedanimalssuch
+asacatoraharpsealpup,andaredesignedtofosteranattachmentwithusers.Onestudy
+comparedtheeffectsoftheserobotsonolderadultsinanursinghomewiththeeffectsof
+anidentical robotthathadamuchsimplerbehavioralrepertoire,however,nosignificant
+differenceswerefound(Wadaetal.,2003).Althoughtherobotwasusedingroupsessions
+by the same individuals 4 days per week for 3 weeks, and has long-term memory and a
+reinforcementlearningmechanism,itisnotpossibleforittomodelarelationshipwithany
+Fig.1.GrandChair,anearlyconversationalsystemforolderadults.
+716 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+particular user given that it does not have the ability to discriminate between users.
+AnotherstudycomparedtheuseofaSonyAIBOroboticdogwithastuffedtoydoganda
+‘clothed’ AIBO by a group of older adults with severe dementia. This study found that
+patients actually interacted more with the stuffed toy than either of the AIBOs, but the
+differenceswere notsignificant (Tamura et al., 2004).
+There is also an emerging commercial market for robotic dolls targeted at the older
+adultmarket,particularlyinJapan.BandailaunchedthePrimopueldollin1999,whichis
+designedtoresemblea5-year-oldboywhocontinuallyaskstobehuggedandentertained.
+Dream Supply released the Snuggling Ifbot in 2004, intended to be a speech-based
+conversationalpartnerfortheelderly.TomyrecentlyannouncedthereleaseoftheYumel
+doll,whichalsoconverseswitholderadultsusingspeech,andassistsusersinmaintaining
+healthy behaviors such as good sleep hygiene (AFP, 2005). None of these systems have
+been formallyevaluated.
+3.4. MIT FitTrack
+The FitTrack system was developed to investigate the ability of relational agents to
+establish and maintain long-term, social–emotional relationships with users, and to
+determine if these relationships could be used to increase the efficacy of health
+communicationandhealthbehaviorchangeprogramsdeliveredbytheagent(Bickmoreet
+al.,toappear;BickmoreandPicard,toappear).Thesystemwasdesignedusingaclient–
+server architecture, with the client application running on users’ home computers. The
+client bundledan ECA, web browser, input screens, andspeech synthesizer (see Fig.2),
+while the server maintained the relational database, web server (for forms, educational
+content,and self-monitoring graphs)and dialog engine.
+In FitTrack, interaction dialogs are scripted using a custom scripting language that
+compiles into Augmented Transition Networks (ATNs; Woods, 1986) so that common
+sub-dialogs could be factored out and re-used across interactions. Each state in the
+network generally specifies: (1) an output utterance for the agent that can be tailored at
+runtime using template-filling (agent non-verbal behavior is automatically generated at
+system compile time using BEAT; Cassell et al., 2001); (2) a set of allowable user
+utterances thatwillbepresentedtotheuserasamultiplechoiceselectionmenu;and(3)
+next state specification and actions toperform for each user utterance.
+An evaluation of the physical activity advisor agent was conducted in a longitudinal,
+between-subjectsdesignstudy,involving101MITstudentsandstaffinteractingwiththe
+agent daily for 30 days. The user–agent relationship was evaluated using the Working
+AllianceInventory,whichisastandardizedmeasureusedinpsychotherapytoevaluatethe
+quality oftherapist–client working relationships (Horvath and Greenberg,1989).
+Thestudyhadthreetreatments:RELATIONAL,NON-RELATIONAL,andabaseline
+CONTROL condition. In each study arm, subjects received standard behavioral
+interventions, including goal setting and self-monitoring via progress charts showing
+their activity levels over time. All subjects were also provided with daily web pages of
+educational content on the topic of walking for exercise. All subjects in RELATIONAL
+andNON-RELATIONALconditionshadadaily‘conversation’withthevirtualexercise
+advisor named Laura about their progress, any obstacles they had to exercising, and
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 717
+Fig.2.MITFitTrackclientinterface,usedinanearlierstudy.
+the educational content. In the RELATIONAL group, the agent also used relational
+strategiesinanattempttobuildaworkingalliancerelationshipwithsubjects,whereasin
+the NON-RELATIONAL condition the relationalfunctionality hadbeen removed.
+Subjects in the RELATIONAL condition had significantly higher Working Alliance
+scores (on the bond subscale of the measure) compared with subjects in the NON-
+RELATIONALcondition,bothat1weekintotheintervention(t(58)Z1.75,p!0.05)and
+at the end of the 30-day intervention (t(57)Z2.26, p!0.05). Subjects in the
+RELATIONAL and NON-RELATIONAL groups combined increased their number of
+days per week over the 30min per day of moderate-or-greater physical activity goal
+(during the intervention period) significantly more than subjects in the CONTROL
+condition,t(86)Z1.98,p!0.05.However,there werenosignificantdifferencesbetween
+the RELATIONAL and NON-RELATIONAL groups with respect to gains in physical
+activity.
+4. Design ofa relational agent for older adults
+In this section, we first describe some general design principles for relational agents,
+and then discuss the specific system we implemented for olderadultusers.
+718 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+4.1. Principles ofrelational agent design
+Relationalagentsthatwillbeusedforextendedperiodsoftimerequirespecialdesign
+considerations compared to systems that are either only used for brief interactions or do
+notengagetheuserinsocialinteraction.Anoverridinggoalindesigningthesesystemsis
+tomakethemcontinuallyengagingtousesothatpeoplewanttokeepusingthemoverand
+over again.
+4.1.1. Model ofuser–agent relationship
+If the user–agent relationship is expected to change over the projected period of use,
+thenakeyelementofthesystemisamodelofthisrelationship,methodsforupdatingit,
+and its use in planning dialog and other interaction behaviors. There are many kinds of
+relational models (see Bickmore and Picard, to appear for a summary), but perhaps the
+simplestisonethatvariesalongafixedtrajectorybasedonnumberofinteractionsortotal
+contact time with the user. For example, an agent might be designed so that initial
+interactions with it by a particular user will be relationally distant and professional, but
+graduallybecomemorepersonalandsocialovertime,asreflectedbyincreasingturnsof
+social dialog and increasing frequency of other kinds of relational behavior. This is the
+relational model used in the FitTrack system (for a more sophisticated example, see
+Cassell and Bickmore, 2003).
+4.1.2. Use ofrelational behavior
+Thereisawiderangeofrelationalbehavioranagentcanuseinattemptstomanipulate
+ormaintainitsrelationshipwithauser,and,conversely,thattheagentcouldrecognizein
+theuser’sbehavior toinfertheir relational stance. These include social dialog, empathy,
+meta-relational communication (talk about the relationship), humor, and self-disclosure;
+seeBickmoreandPicard,toappearforanextendeddiscussion).Empathy,inparticular,is
+frequentlymentionedinthehelpingliteratureasthemostimportantfactorinestablishinga
+workingalliance(GelsoandHayes,1998).Empathymayalsobeespeciallyimportantin
+systems developed for older adults, since older adults are much more prone to relating
+painfulinformationabouttheirlivesinsocialdialogthanyoungeradults(Couplandetal.,
+1991).
+4.1.3. Persistent memory
+Acrucialelementinarelationalagentsystemisamemoryofpastinteractionswitha
+user. While this is theoretically not a necessary element of the relational model
+(relationships can be characterized categorically or via specific expectations about the
+future; Bickmore, 2003), it is necessary for the proper use of many relational behaviors,
+such as talking about the past and future together (Planalp and Benson, 1992; Planalp,
+1993) andcontinuity behaviors (talk about the time spent apart; Gilbertsonet al., 1998).
+SeveralsubjectsintheMITFitTrackstudyreportedthattheyfirstnoticedthattherewas
+somethingspecialabouttheagentwhenitrememberedsomethingaboutthemfromapast
+interaction.
+Persistent memoryshouldultimately berepresentedasanepisodicstorerecordingall
+details of all (or key) past interactions with the user. At a minimum, however, it can be
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 719
+designedtorecordspecificfactsthatcanbereferencedinfutureconversations.Examples
+inthephysicalactivitydomainincluderememberingthenameofauser’swalkingbuddy
+or favorite walking location, as well as purely social (off-task) facts, such as the user’s
+favoritetelevisionprogramandwhethertheyhadanybigplansfortheupcomingweekend
+ornot.FitTrackusesaslightlymoresophisticatedversionofpersistentmemory,inwhich
+it records facts indexed tospecific conversations,so thatthe agent can tell, for example,
+whetherthe user has notbeen feeling well for the last four interactions.
+4.1.4. Variability in agent behavior
+People continuously vary their language in subtle ways in response to changes in
+context,mood,interactionhistory,and,ofcourse,relationshipwiththeirlistener.Imagine
+howstrangeitwouldbeifeverytimeyouranintoanacquaintancetheyusedexactlythe
+samelanguageintheirconversationwithyou.Notonlywouldthisseemunnatural,butit
+wouldalsosendthemessagethattheirpasthistorywithyouisunimportant.Thus,inorder
+toestablishasocialbondwiththeuserandtomaintaintheirengagementoverlongperiods
+of time, some variability in a relational agent’s verbal and non-verbal behavior is
+important.IntheMITFitTrackstudy,manysubjectsfeltthattheagentwasrepetitiveafter
+the first week or two. This was not just an annoyance; several subjects said that it had a
+significantnegativeimpactontheirengagementwiththesystemandontheirmotivationto
+exercise.
+Determining appropriate types and amounts of behavior variability to maintain
+engagement remains an important area of research. There are several approaches to
+providingvariability,however,thatareusedinFitTrackandarerelativelystraightforward
+toimplement.First,ateachstateinthedialog,multipleagentutterancesarespecifiedand
+randomly selected from at runtime, providing some variability in the agent’s verbal and
+non-verbalbehaviorforeverypossibleutteranceitmightmake.Second,theuseofitems
+from persistent memory to both condition logical branches in the dialog and to fill in
+utterance template slots provides variability over time. Overall dialog structure is also
+varied, asdescribed inSection 4.1.5.
+4.1.5. Dialogstructure
+Somevariabilityinoveralldialogstructureisimportantaswell.However,iftheATN-
+scripting approach to dialog is used, this can be an imposing task, especially if each
+interaction is scripted as a separate dialog and every dialog has a significant amount of
+branching.ThiswastheapproachtakenintheMITFitTracksystem,anditclearlyisnot
+scalable.Inthesystemforolderadults,weuseafixedtop-leveldialogstructure,butwith
+‘hooks’ at each location at which dialog variants can be inserted (e.g. for social dialog).
+Thisiscoupledwithadatabaseofdialogfragmentsthatareindexedbyinteractionsothat,
+ratherthanhavingtowriteentiretop-levelscriptsforeachinteraction,onlytheelements
+that are different from the standard task-oriented interactionneed tobe authored.
+ThedialogstructureusedinthesystemforolderadultsisshowninFig.3.Socialdialog
+fragments can be inserted between any of the steps in the above structure, based on the
+number of interactions the agent has had with the user. In addition, many of these
+fragments are written so that they could be re-used, such as talking to users about the
+weather,their weekendplans,orwhetherthey were enjoying their exerciseornot.
+720 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+1. Greeting
+2. Ask about user’s physical & emotional state (“how are you?”)
+3. Talk about events that have occurred in user’s life since previous contact.
+4. Ask about user’s pedometer readings (includes showing self-monitoring
+graph of steps walked vs. agent-suggested goals over time)
+5. Review user’s exercise progress with respect to long-term goals and short-
+term commitments (includes positive reinforcement and problem solving)
+6. Negotiate next walking commitment (includes tips and affirmations)
+7. Ask about when user will contact the agent again
+8. Farewell
+9. Introduce educational content page for the day
+Fig.3.Top-leveldialogstructurefornewFitTracksystem.
+4.2. FitTrack for older adults
+FitTrackwasadaptedforapopulationofolderadultusers(aged65andover)withlittle
+or no previous computer experience. The system was designed to be easy to use, with a
+veryconsistentandintuitiveuserinterface.Toachievetheseobjectivesdesktopcomputers
+were chosen, but instead of using a keyboard and mouse, large (1700) color touch screen
+monitorswereused.TheECAdisplayareawasenlargedtofillmostofthescreeninorder
+to accommodate visual impairments, and the scrolling list of user input options at the
+bottomofthescreenwasreplacedwithalistoflargebuttonswithenlargedtextalongthe
+right edge of the screen (see Fig. 4). The self-monitoring graph and educational content
+was displayed by temporarily replacing the ECA, in order to maintain large font sizes
+throughout (Fig. 5, left and center, respectively). Subjects were required to enter a daily
+Fig.4.InterfacefornewFitTracksystem,showingconversationalagent.
+Fig.5.AdditionalinterfacedisplaysfornewFitTracksystem:(left)self-monitoringchart;(middle)educationalpage;(right)pedometerentry.
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+721
+722 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+pedometerreading.Forthis,anumerickeypadentryscreenwasusedsothatitappearedin
+the same area asall other user inputs (Fig. 5,right).
+The FitTrack architecture was redesigned to run stand-alone on one computer to
+eliminate the need for Internet access, with a local database maintaining the persistent
+memory and logs of all user interface actions for evaluation and troubleshooting.
+Participants were provided with a dedicated-use PC and table for use during the study
+period.ThesystemwasconfiguredsothatparticipantssimplypushedthePCpowerbutton
+toautomaticallyruntherelationalagentinterface,conductthe5–10mindailyinteraction,
+andautomaticallyshutdownthesystemoncecompleted.Inordertopreventlossofdata
+due to system crashes or theft, a concern given the implementation neighborhoods, the
+system was designed towalk the user througha weekly floppy-disk backup procedure.
+MostofthedialogcontentfromtheoriginalMITFitTracksystemwasre-authoredfor
+anolderadultpopulation.Theconversationalscriptsusedbytheagentweredesignedtobe
+useddailyovera2-monthperiodoftime,followingthestructureoutlinedinSection4.1.5.
+The daily conversation involved having participants enter the number of steps they had
+walked on the previous day, showing them a self-monitoring graph of their progress,
+providing positive feedback when warranted, discussing obstacles to exercise, and
+negotiating a walking goal for the following day which was ‘shaped’ to gradually allow
+themtoworkfromtheirbaselineleveluptotheir2-monthgoal.Sincetherewasverywide
+variabilityexpectedintheamountofwalkingourparticipantswouldbeperforminggiven
+1. A: Hello, Bertha. Great to see you.
+2. U: Hi Laura.
+3. A: How are you feeling today?
+4. U: I'm not feeling so great.
+5. A: I am sorry to hear that.
+6. A: Tell me more about how you are feeling.
+7. U: I'm tired.
+8. A: How tired are you feeling?
+9. U: I'm pretty beat.
+10.A: Good grief, I hope you’re not getting sick. Can you get some rest soon?
+11.U: I think so.
+12.A: That is great. I hope you come back feeling refreshed.
+13.U: Me too!
+14.A: So, are you from the East Coast originally?
+…
+24.A: So, is there anything I can do to help make this a more productive working
+relationship?
+25.U: Nope, everything is OK.
+26.A: That's wonderful.
+27.U: Yeah.
+28.A: So, let us talk about your pedometer readings.
+…
+40.A: Looks like mission accomplished on the exercise.
+41.A: We're doing some great work together.
+…
+Fig.6.Partialtranscriptofsampleconversationbetweensubjectandagent(A,Agent;U,User).
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 723
+theheterogeneityofphysicalfunctionamongolderadults,wesetdifferent2monthsgoals
+forparticipantsbasedontheirfirstweek’sbaselinedata.Thegoalwas:5000steps/dayif
+their baseline was below 5000 steps/day; 10,000 steps/day if their baseline was 5000–
+10,000 steps/day, otherwise it was set to maintain their baseline level. In addition, the
+agent used the relational behaviors used in the MIT FitTrack system, including social
+dialogue,empathyexchanges,meta-relationalcommunication,andnon-verbalimmediacy
+behavior, adapted for the new subject population. For example, social dialog about MIT
+and Cambridge was replaced with dialog about television shows and Boston
+neighborhoods. Fig. 6 shows part of a transcript from one of 211 interactions conducted
+with subjects during the study.
+The60pagesofeducationalcontentwereassembledfrompubliclyavailablewebpages
+on exercise topics, particularly walking for older adults, from the American Council on
+Exercise (ACE, 2005), the National Institutes of Health, and the Centers for Disease
+Controland Prevention.
+4.3. Pre-teststudy
+Priortotheinterventionstudy,theinterfacewaspre-testedwithfiveparticipantsinthe
+GeriatricAmbulatoryPractice(GAP)clinicatBostonMedicalCenter,theprimarysafety
+net hospital in the Boston area. All participants found the system easy to use with the
+exception of the floppy-disk backup procedure. Two participants accidentally re-booted
+the PC while attemptingtoeject the disk.
+Four of the five reacted positively to the agent and indicated that they would be
+interestedinhavingtheagentintheirhomestotalktothemdailyaboutexercise.Wealso
+gaveparticipants11designsforECAcharactersdevelopedbyananimatorfortheproject,
+intended to more closely match the subject population in age, race and body build.
+Fig.7.Top-ratedanimatedconversationalagentchoicesbygeriatricpatients.
+724 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+Subjectswereaskedtopickthecharactertheywouldfeelmostcomfortableworkingwith.
+Fig.7 shows the top-ratedchoices.
+Based on these results we eliminated the floppy-disk backup procedure from the
+protocol(nolossofdataactuallyoccurredduringtheinterventionstudy).Unfortunately,
+givenbudgetandschedulingconstraints,the‘Laura’characterusedintheMITstudywas
+re-usedratherthanusingtheselectedcharacter,althoughweplantousethesecharactersin
+futurestudies.Thisturnedouttonotbeaproblem,sincetherewerenocomplaintsabout
+Laura’sappearancefrominterventionstudyparticipants.Infact,theLauracharacterhad
+been intentionally designed to be racially ambiguous, and one subject in the study
+commented thatthey liked the fact that Laura was a ‘person ofcolor’.
+5.Evaluation ofFitTrack for older adults
+Toevaluatetheacceptanceandefficacyoftheexerciseadvisoragentbyolderadultswe
+conductedarandomizedtrialcomparingparticipantswhointeractedwiththeagentdaily
+in their homes for 2 months (RELATIONAL) with a standard of care control group
+(CONTROL).TheCONTROLgroupusedaphysicalactivityinterventionthathadalready
+been designed and planned for use in the GAP clinic, and involved giving subjects
+pedometers andprinted materials on the benefits ofwalking for exercise.
+Theprimary hypothesesevaluated inthe studywere:
+H1. Subjects in the RELATIONAL group would enjoy using the relational agent on a
+regular basis.
+H2. Subjects in the RELATIONAL group would perform more physical activity than
+subjectsin the CONTROLgroup.
+Wewerealsointerestedinwhethertheuseofarelationalagentbyolderadultswould
+lead to increases in well-being and, more specifically, decreases in loneliness. This was
+motivatedbythegeneralassociationfoundbetweensocialsupportandwell-being inthe
+elderly,andsincetheuseofanimal-assistedtherapyhasbeenshowntoreduceloneliness
+inolder adults (Banks and Banks, 2002).
+H3. SubjectsintheRELATIONALgroupwouldhavesignificantincreasesinwell-being
+and decreasesin loneliness compared tosubjects inthe CONTROL group.
+ThestudytookplaceinBostonneighborhoodsbetweenJulyandDecember,2003,and
+was approved by the Institutional Review Boardat Boston Medical Center.
+5.1. Procedure
+Subjects were referred by GAP physicians and nurses if they met the study eligibility
+requirements—(1)nosignificantcognitiveimpairments,(2)Englishspeakingability,and(3)
+abilitytobeginanewexerciseprogram—andiftheyexpressedaninterestinparticipatingin
+the study. Following GAP referral, subjects were contacted by telephone to complete
+screeningandtoscheduleaninitialmeetingwithanexperimenterintheirhome.Duringthis
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 725
+meeting, consent was obtained, demographic, literacy, health, well-being and loneliness
+questionnaires were completed, and pedometer use was demonstrated. Subjects were
+instructed to keep track of their daily steps on a paper log sheet. Subjects in the
+RELATIONAL group then had the computer installed in their home, after which they
+participatedinabrieftrainingsessioninwhichtheyconductedaninitialinteractionwiththe
+agentunderthedirectionoftheexperimenter.Theywereaskedtousethesystemdaily,but
+informedthattheycouldmissadayortwoduringthe2-monthstudyperiod.Subjectsinthe
+CONTROLgroupwereleftwiththeprintedmaterialsonexercisefromtheGAP.
+Attheendof2months,anexperimenterconductedafollow-upmeetingwithsubjectsat
+which well-being and loneliness questionnaires were completed again and the paper log
+sheetsofstepswalkedwerecollectedbytheexperimenter.ForsubjectsintheRELATIONAL
+group,aquestionnaireevaluatingvariousaspectsoftheinterventionwasalsocompletedas
+wellasa15–30minute,taperecorded,semi-structuredinterviewwiththeexperimenter,after
+whichtheexperimenterdismantledandremovedthecomputersystem.
+5.2. Subjects
+Twenty-oneparticipantswererecruitedintothestudybasedonreferralsfromtheGAP
+clinic: 10 in the RELATIONAL group and 11 in the CONTROL group (see Table 1).
+Participantsrangedinagefrom63to85(mean74.0),were86%female,and76%African
+Table1
+Subjectdemographics
+CONTROL RELAT’L ALL
+Numberofsubjects 11 10 21
+Withdrawalsfrom 2 2 4
+study
+Age 74.2 73.8 74.0
+Gender Male 27% 0% 14%
+Female 63% 100% 86%
+Livesalone 27% 30% 29%
+Bodymassindex 30.4 27.9 29.2
+(BMI)a
+Overallhealth Physical(PCS-12) 41.6 45.8 43.4
+(SF-12)b Mental(MCS-12) 56.6 50.7 54.1
+Ethnicity AfricanAmerican 64% 90% 76%
+Caucasian 27% 10% 19%
+Other 9% 0% 5%
+Computer Neverused 27% 50% 38%
+experience Usedafewtimes 27% 30% 29%
+Useregularly 45% 10% 29%
+Expertuser 0% 10% 5%
+Literacyscorec 65.4 61.6 63.6
+a BMIof25–29.9is‘overweight’,30ormoreis‘obese’(NHLBI,1998).
+b SF-12meansforUScitizens:age65–74,PCS-12Z46.36,MCS-12Z55.31,forage75orgreater,PCS-12Z
+38.68,MCS-12Z53.53(Wareetal.,1996).
+c Literacyscorebelow75is‘lowliteracy’(Lobachetal.,2003).
+726 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+American. Seventeen (77%) were overweight or obese (based on body mass index from
+reported height and weight), and 19 (86%) were scored as having low reading literacy
+(Lobach et al., 2003). Eight (38%) reported never having used a computer before and
+another six (29%) reported having used one‘a fewtimes’.
+There were no significant differences between the groups with respect to age, body
+massindexoroverallhealth.OverallhealthscoresfromtheSF-12werenearthenational
+averagesbasedonage(Wareetal.,1996).Participantswerecompensatedfortheirtime.
+5.3. Measures
+InteractionHistorywasrecordedinlogfilesonthesubjects’computersthatkepttrack
+ofall actions RELATIONAL participants took with their system.
+StepsWalkedwasmeasuredbyapedometer.Participantswereinstructedtowritetheir
+stepsdown each day onalogsheet, andsubjectsinthe RELATIONALgroup werealso
+promptedtoenterthese into the computerduringconversations with the agent.
+Satisfactionwith,Repetitiveness,Friendliness,Informativeness,Interestingness,Liking
+of, and Trust in the agent (for subjects in the RELATIONAL group) were measured by
+single itemson seven-point semantic differentialscales at the endof the intervention, as
+wereEaseofUseofthesystem,DesiretoContinueusingthesystem,andRelationshipto
+the agent.
+Well-being was measured using the Satisfaction with Life Scale (Diener et al., 1985)
+andthe UCLALonelinessscale(Russell et al., 1980),administeredto allsubjectsat the
+start and endof the intervention.
+Overall health was measured using the 12 Item Short Form Health Survey (SF-12),
+with subscales for physical health (PCS-12) and mental health (MCS-12) (Ware et al.,
+1996).
+In addition, semi-structured interviews were held with each participant during the
+follow-up meeting at the end ofthe intervention.
+5.4. Results
+5.4.1. Usage
+Two participants in the RELATIONAL group and two in the CONTROL group
+withdrewfromthestudybeforetheendofthe2-monthintervention,allreportedlydueto
+health problems with themselves or a family member. In addition, one participant was
+foundtohavenotturnedthesystemononcefollowingtheintakemeeting,eventhoughshe
+claimed to have used it. Following an intent-to-treat protocol, data from all subjects are
+includedin the quantitative results.
+For subjects in the RELATIONAL group, actual use during the 60-day intervention
+rangedfrom0to54interactions,with90%ofsubjectsaveragingatleastonecontactper
+week, 40% averaging at least two contacts per week and 30% averaging at least three
+contactsperweek.Atypicalusagepatternwasdailyduringthefirstweek,taperingoffto
+onceortwiceaweekbytheendofthestudyperiod.Whenaskediftheylookedforwardto
+the interactions with the agent, subjects gave a range of responses, with most (75% of
+those who commented) responding positively:
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 727
+Yes,I.yes.BecausethosetwonightsIforgot—Ithink,maybeIhadbeenoutlate
+orwhatever—butIwasreallysurprised,Iwaslike‘OhIforgotLaura.’ThenI’dturn
+thelightonandtalktoher.ButitwassomethingIlookedforwardto,I’dsayitwas
+mylittle night cap.
+Ienjoyedcominginand turning iton, and talking with her.
+Ican’tsay that Ilooked forward toit. If Idid Iwould have called ineveryday.
+RELATIONAL participants also indicated that they would like to continue using the
+system,givingthis an average rating of6.4 (range: 1Z‘not at all’ to7Z‘verymuch’).
+5.4.2. Usability
+Allsubjectsfoundthesystemeasytouse,withanaverageratingof1.9ona1(‘easy’)to
+7(‘difficult’)scale.Exceptforsomeproblemsenteringpedometersteps(describedbelow)
+and a few other minor problems, none of the subjects reported having any significant
+difficulty using the system.
+Anumberofparticipantsdidhaveproblemsusingthetouchscreenkeypadtoentertheir
+pedometersteps.Comparedtotheirwrittenrecordstheymadeerrorsindataentry49%ofthe
+time,oftenbydroppingorduplicatingadigit,causinganorder-of-magnitudeerror.Thiswasa
+majorproblemifitoccurredduringthefirstweekwhenthesystemwascollectingbaseline
+data, as it caused the agent to set an unrealistically high goal for two participants. Two
+participantsalsoreportedproblemswithtouchscreenalignmentthatmadeselectiondifficult.
+Participantsfeltthatthesimulatedconversationworkedreasonablywell.Whenaskedif
+theyfeltthattheyandtheagentunderstoodeachother,participantsratedthisat5.4(with
+1Z‘notatall’and7Z‘verymuch’).OnlyoneinstanceofaproblemtalkingtoLaurawas
+reported:theparticipantthoughttheagentaskedher“areyoutired?”whenshewasreally
+asking“areyouretired?”causingtheagenttoaskheraseriesofinappropriatefollow-up
+questions. Several participants mentioned that they could not express themselves
+completely using the constrained, multiple-choiceinteraction:
+When she ask me questions . Ican’task her back the way I want.
+I felt that she was programmed to answer. She was programmed to listen to the
+questionsthatyouputonthescreen.ShewouldaskaquestionandIwouldhavea
+choice, one,two,three, four.ButIcouldneverexplain.Orshe couldneverfollow
+up, orfollow through with another question.
+Whenasked,participantsuniversallysaidtheywouldhavepreferredspeakingtoLaura,
+rather than using a touch screen. However, they preferred the touch screen over typing,
+even though it meant havinga muchmorerestrictive conversation:
+The only difference is that even if you wanted to say more it was, you know, you
+couldjusttouch,youcouldn’ttype,tosaysomething.Thatwasthedifference.But,I
+believe that I would have handled this better. I’m rarely typing in my words.
+BecauseI’m nottoofamiliarwith computers.
+Several participants mentioned that they enjoyed the social dialog with Laura and
+would have liked the opportunityto chat more with her:
+728 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+Shesays‘GoodMorningCamille’[laughs].Yeah,it’snice.Ilikedthat.Youknowa
+lot of more people would likethat becausethey’re lonely.
+ItoldyouIliketotalk,sothatwas,youknow,goodchit-chat’n.Ifounditverygood,
+youknow, chit-chat’nwith her.
+I wanted to have moreconversation with her.
+Participantsalsomentionedthattheywouldhavelikedtotalkmoreabouttheirhealth
+problems with Laura, especiallyas they relatedtotheir ability to do morewalking:
+There was a couple of times when I wasn’t feeling good I didn’t go walking, you
+know.AndIfeltthat.So,Iwouldhavelovedtosaytoher,‘wellLauraIthink.’
+andshesaytome‘Ihopeyoufeelbetter.’Ithinkthatcameup.Isaid‘I’mgettingthe
+flu,’and Iwanted tosay toher ‘I wasn’tfeeling well’ soI won’t go walking.
+Idon’tthinksheunderstoodaboutmycondition.No,notme.But,probablysomeone
+else.Becauseshekeptsayingyouhavetodo10,000steps.nowaycouldIdothat.
+5.4.3. Physical activity
+Comparisons between the RELATIONAL and CONTROL groups on daily recorded
+pedometerstepswerebasedongeneralizedestimatingequations(GEE)regressionmodels
+for longitudinal data. GEE regression accounts for the repeated-measures nature of the
+data by modeling the correlation between repeated observations from the same subject,
+and adjusting both parameter estimates and standard errors for this correlation. GEE
+regression has several advantages over traditional repeated-measures ANOVA, in that it
+Fig.8.Studyresults:subjectswhousedrelationalagentwalkedmore.
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 729
+allowsunequallyspacedobservationsovertimeandallowsinclusionofsubjectswhoare
+missing data from some follow-up points. This approach also allows the flexibility of
+regressionmodelingin describingtrends over time and controllingfor othercovariates.
+Wemodeledalinearincreaseinstepsoverthestudyperiod,andallowedadifferential
+increaseinstepsintheRELATIONALvs.CONTROLgroupbyincludinganinteraction
+termbetweentimeandstudygroupinthemodel.Theestimatedslope(increaseperweek
+in mean steps walked) for the CONTROL group was 83.9, while the slope for the
+RELATIONAL group was estimated at 411.1 (see Fig. 8). The difference in slopes was
+significant(pZ0.004).Therewasnosignificantincreaseinstepsoverthestudyperiodin
+theCONTROL group (pZ0.295forthe test of0slope),whiletheincreaseinstepsover
+time inthe RELATIONAL group was significant(pZ0.001).
+5.4.4. Well-beingand loneliness
+TherewerenosignificantchangesintheSatisfactionWithLifeScalescoresforeither
+the RELATIONAL (paired t(9)Z0.34, pZ0.75) or CONTROL (paired t(7)Z0.80, pZ
+0.45) groups during the intervention, nor were there significant differences between the
+twogroupsonthismeasureeitherbefore(t(18)Z0.557,pZ0.58)oraftertheintervention
+(t(17)Z0.316, pZ0.76).
+TheCONTROLgroupdidseeasignificantdecreaseinlonelinessovertheintervention
+period(pairedt(7)Z2.74,p!0.05),butthiswasnotreflectedintheRELATIONALgroup
+(paired t(9)Z0.50, pZ0.63). There were no significant differences between the two
+groups on this measure either before (t(18)Z0.658, pZ0.52) or after the intervention
+(t(17)Z1.635, pZ0.12).
+5.4.5. Ratings and perceptions ofrelationalagent
+Reviews ofthe relational agent weremostlypositive,as shown inTable 2:
+She’s nice. She’s really good. Really good. She asks you the right questions. She
+tellsifyouifyou’renotdoinguptopar,youknow,andallthat.Andifyou’redoing
+good,she’ll tellyou.If you’renotshe’lltell you.And it’s honest.And itworks. It
+really does. I like it.I liketalking toher.
+She was nice andfriendly,and honest, with the stuff she say.
+She’s nice. She’s really good. Really good.
+Table2
+Ratingsofrelationalagent
+Measure Min(1) Max(7) Mean
+Satisfactionwith Notatall Very 5.4
+Likingof Notatall Verymuch 6.3
+Trustin Notatall Verymuch 6.4
+Relationshipwith Stranger Closefriend 6.8
+Friendly Notatall Very 6.7
+Informative Notatall Very 6.5
+Repetitive Notatall Very 4.8
+Interesting Boring Interesting 6.4
+730 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+I enjoyed her, I enjoyed Laura, and I’m quite sure somebody elsewould.
+Eight of the 10 subjects in RELATIONAL anthropomorphized the agent to some
+degree, putting Laura inacategory somewhere between acomputerand a person:
+You’d betalkingto her and sometimesyou forget and think she’s areal person.
+IwouldaskherofcourseandthenI’dsay‘ohthisisnotaperson’[laughs].THISIS
+NOTAPERSON[laughing].Youknowafteryoutalktoherforsolongyougetto
+thinking ofLaura asa person.
+Well,justturningonthecomputereverynight,andrealizingthatthisisnotahuman
+being, though I am carrying on an intelligent conversation with this, with Laura.
+And,likeIsaidaftermaybethethirdorfourthnight,thatthoughtwasn’teveninmy
+mindanymore.Iwasnottalkingtoacomputer.Irealizeditwasnotahumanbeing
+butit was notacomputer.
+A telephoneis a machine.But, Iwouldnot say that Laura is a machine.
+Idon’tfeelthatitgetsthetruefeeling,thetrueexperienceofaperson.Likeareal
+live person. . It was an animation. You know those questions [on the follow-up
+questionnaire] were inappropriate.
+Two subjects compared talking to Laura to talking to a character on TV, or having
+people on TV tell them what todo:
+It was like talkingto the TV. I talkto the TV, too. [laughs]
+There were many comments about the agent–subject relationship and relational
+dynamics. The general relational trajectory seemed to be that the relationship and
+interaction seemed strange at first, became more familiar over time, with liking and
+trusting of and even caring for the agent common by the end of the 2 months. Several
+participants said they also felt that Laura liked and cared about them:
+Um, she took getting used to. But, um, by maybe the third or the fourth night she
+appeared to befamiliar, you know.
+By the way that she sound, she sound like she like me.
+IrememberoneweekendIwenttoWareham.Youknow,Ibegantofeelbadabout
+Laura, stuck inthat box.
+It was funny when it stopped. [strangeness felt after the last interaction]
+Rather than serve to further isolate older adult subjects, two subjects mentioned that
+Lauraactuallyprovidedaformofsocialnetworksupportforthem.Onesaidthattalkingto
+Laura became a regular activity that she did with her granddaughter watching, while
+another mentioned thather friends would often remind her totalkto Laura:
+Ibroughtmyfriendsuphereacoupleoftimestolistentoher.Mygirlfriendshecame
+upstairswithmeandIshowit.Shesay‘what’sthat?’andIsay‘letmeshowyou.’SoI
+talktoher.Soeverytimeshetalktomeshesay‘DidyoutalktoLauralastnight?.’
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 731
+6. Discussion
+Overall, the study was successful in demonstrating the acceptance and usability of a
+relationalagentbyolderadults—eventhoughmostofthesubjectsintheRELATIONAL
+group had little or no computer experience—and in demonstrating the efficacy of this
+agent in motivating them to walk more. We conclude that our first two hypotheses
+regardingenjoyment ofthe system andhealthbehavior change efficacy were confirmed.
+Satisfaction with the overall intervention was very high, with most participants
+acknowledging that it was for their benefit:
+Iappreciatedhavingthatkindofareminder,becauseIdon’thaveanybodywhowill
+tellmewhattodo,toremindme,youknow,togetup,getoutandgetsomefreshair.
+Itwasthebestthingthathappenedtome,tohavesomethingthatpushedmeoutand
+get me walking.
+ParticipantsinourstudyhadveryfewproblemsusingthePCbasedsystemortalkingto
+the agent:
+Thatissoeasy.Thatissogood.RegularcomputersIdon’tdo.But,thatwassoeasy,
+even a baby could do that.
+Theonlynotableexceptionwasthepartoftheinteractionthatwasnon-conversational:
+pedometer step entry.
+Both survey results and interview responses indicated that most participants in the
+RELATIONAL group felt that they had established some kind of social bond with the
+systemoverthedurationoftheinterventionandthatthisbond,ataminimum,servedasa
+motivatorfor them to continue interacting with the agent.
+Our third hypothesis, regarding the impact of the relational agent on well-being and
+loneliness,wasnotconfirmed.Thismaybeduetotheshortinterventioninterval,thesmall
+numberofsubjects,andespeciallytheevensmallernumberofsubjectswholivedalone:
+most subjects either lived with their spouse or in a multi-generational household. The
+significantdecreaseinlonelinessintheCONTROLgroupisalittlehardertoexplain,but
+may beduetothe small(butnotsignificant)increaseinphysicalactivityexperienced in
+thisgroupandtheaccompanyingincreaseinsocialcontactthatiscommonwithwalking
+forexercise.WhythiseffectwasnotseenintheRELATIONALgroupisanopenquestion.
+7. Future work
+There are a number of important and interesting directions for future research on
+relational agents for older adults. First is that more sophisticated models of dialogue
+planning should be developed, so that users can engage in richer conversations and can
+more freely express themselves. Doing this while maintaining the ease of use of the
+multiple-choice selection input modality will be a very challenging undertaking.
+Replacing the touch screen with automated speech recognition would have been
+welcomed by all participants in this study, but commercial systems would need to be
+732 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+thoroughly evaluated to ensure that they could provide high enough reliability given the
+variability and differencesin voice quality inolderadults compared tothe voice models
+they were developed for.
+Many participants indicated that interactions with Laura became somewhat repetitive
+over the course of the 2 months, and the solution to this problem remains an interesting
+area of research. In addition to the techniques described in Section 4.1.4, other possible
+solutions include: providing a wider range of dialog scripts; more variability in agent
+utterances for any given dialog state; and the incorporation of external data that is
+dynamicallyupdated(e.g.weatherreports).OnesubjectsuggestedthatjusthavingLaura
+change her clothing occasionally would have helped break the monotony. Ultimately,
+whatisneededistheuseofdialogplanningandtextgenerationtechniquestodynamically
+synthesizetheagent’sbehavioranddialogsothatitcanbesubtlyvariedeveryinteraction,
+for example,based onsimulated agent mood or the user’s affectivestate.
+Thegeneralrelationshipbetweenuser–agentsocialbond,systemusageandbehavioral
+outcomes needs to be more thoroughly explored. Certainly social bond and engagement
+influences usage and there is some dose–response association between usage and
+outcomes,but the details need tobe teased outina much larger study.
+Future systems like FitTrack that rely on sensor readings (such as pedometer step
+counts)shouldbedesignedtoautomatethetransferofdatafromthesensingdevicestothe
+computertoeliminate user data entryerrors.
+Therearealsosomeissuesinvolvedwithjustinstallingcomputersinthehomesofolder
+adults,especiallythosewithminimalcomputerexpertise.First,manyolderadultslivein
+very small homes filled with possessions accumulated over a lifetime. Just finding an
+appropriate space for a desktop computer system can be very challenging. Two subjects
+had to put the computer on part of their dining room table. Second, multi-generational
+households with small children can be problematic when installing fragile electronic
+equipment such as a home computer. One woman dealt with this by including her
+granddaughter in all of her conversations with Laura. Finally, one participant was
+concernedthatthecomputer,whichwasinstalledasastand-alonesystem,wassomehow
+collecting information about her and broadcasting itback tothe hospital.
+8.Conclusion
+In this article, we have examined the use of a new kind of computer interface—
+relational agents—for older adult users, specifically in the context of a health education
+and behavior change application. Based on this experience, we believe that the caring,
+social,anthropomorphicinterfaceenabledthesystemtobereadilyaccepted,usablewith
+minimaltraining,andefficaciousinachievingadesiredbehavioraloutcomewiththisuser
+population.
+Relationalagentsmayprovetobeanespeciallyeffectivemodalityfordeliveringhealth
+communication toolderadultswithlowfunctionalhealth,reading, orcomputerliteracy,
+problems that are especially acute in underserved populations. In a 1995 study of 2659
+predominately indigent and minority patients at two urban public hospitals it was found
+that 86% of the English speaking elderly had inadequate or marginal functional health
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 733
+literacy,defined astheabilitytoreadandfollowbasic medical instructions(Williamset
+al., 1995). A relational agent that uses the universally understood and non-threatening
+format offace-to-face conversation, relying minimally on text comprehension and using
+multi-modal cues to maximize comprehension, may be an ideal platform to provide an
+effective automated health educator with unbounded patience and empathy for these
+patients.
+Relationalagentsystemssuchastheonepresentedheremayalsobeeffectiveinnursing
+homesettingsforengagingresidentsinsocialconversationandmotivatingthemtoengage
+insocialactivities,inadditiontomotivatingthemtoobtainphysicalactivity.Studieshave
+shown that these residents typically spend over half of their time alone doing nothing,
+leading to loneliness, low self-esteem, depression and, consequently, an overall low
+qualityoflife.Inaddition,becauseresidentsspendsuchalargeportionoftheirdaysitting
+orlayingdown,theyareatgreatriskformuscleatrophyandskinbreakdown(Ice,2002).
+While social and relational interaction is certainly not appropriate for all kinds of
+computer interfaces, we feel that health communication with older adults is one area in
+which these interface features are not only efficacious but are sincerely appreciated by
+users.
+Acknowledgements
+This work was supported by a grant from the Evans Foundation at the Boston
+UniversitySchoolofMedicine.ThankstoAnnMcDonough,RN,forherhelpinrecruiting
+subjects from the GAP clinic. Thanks also to Jennifer Smith, Rosalind Picard, Ramesh
+Farzanfar,JeffreyMignault,andRobertFriedmanfortheirmanyhelpfulcommentsonthis
+article.
+References
+ACE 2005. American Council on Exercise. Retrieved from the World Wide Web onApril 9, http://www.
+acefitness.org.
+AFP2005.AsJapangoesgrey,toymakersdesigndollsfortheelderly.AFPOnline,2005,availableathttp://
+www.antara.co.id/en/seenws/?idZ1109,accessed18Aug.
+Andersen,P.,Guerrero,L.,1998.Thebrightsideofrelationalcommunication:interpersonalwarmthasasocial
+emotion.In:Andersen,P.,Guerrero,L.(Eds.),HandbookofCommunicationandEmotion.AcademicPress,
+NewYork,pp.303–329.
+Banks,M.,Banks,W.,2002.Theeffectsofanimal-assistedtherapyonlonelinessinanelderlypopulationinlong-
+termcarefacilities.JournalGerontologyMedicineSciences57A,M428–M432.
+Berkman,L.,Syme,S.,1979.Socialnetworks,hostresistance,andmortality:anineyear followupstudyof
+alamedacountyresidents.AmericanJournalofEpidemiology109,186–204.
+Berkman,L.,Glass,T.,2000.Socialintegration,socialnetworks,socialsupport,andhealth.In:Berkman,L.,
+Kawachi,I.(Eds.),SocialEpidemiology.OxfordPress,NewYork.
+Bickmore,T.,2003.Relationalagents:effectingchangethroughhuman-computerrelationships,Massachusetts
+InstituteofTechnologyPhDDissertation,Cambridge,MA:MIT.
+Bickmore, T., 2005. Acceptance and Usability of a Relational Agent Interface by Urban Older Adults.
+ProceedingsofCHI’05,Portland,OR.
+734 T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735
+Bickmore, T., Gruber, A., Picard, R. (to appear). Establishing the Computer-Patient Working Alliance in
+AutomatedHealthBehaviorChangeInterventions.PatientEducationandCounseling.
+Bickmore,T.,Picard,R.,2004.TowardsCaringMachines.ProceedingsofCHI’04,Vienna.
+Bickmore,T.,Picard,R.,(toappear).EstablishingandMaintainingLong-TermHuman-ComputerRelationships,
+ACMTransactionsonComputerHumanInteraction.
+Cassell,J.,Bickmore,T.,2003.NegotiatedCollusion:ModelingSocialLanguageanditsRelationshipEffectsin
+IntellientAgents.UserModelingandAdaptiveInterfaces13,89–132.
+Cassell,J.,Sullivan,J.,Prevost,S.,Churchill,E.(Eds.),2000.EmbodiedConversationalAgents.TheMITPress,
+Cambridge,MA.
+Cassell, J., Vilhja´lmsson, H., Bickmore, T., 2001. BEAT: The Behavior Expression Animation Toolkit.
+ProceedingsofSIGGRAPH’01,LosAngeles,CA.
+Clark,H.,Krych,M.,2004.Speakingwhilemonitoringaddresseesforunderstanding.JournalofMemoryand
+Language50,62–81.
+Coupland,N.,Coupland,J.,Giles,H.,1991.Language,society,andtheelderly.Blackwell,Oxford.
+Dehn, D., Mulken, S.v., 2000. The impact of animated interface agents: a review of empirical research.
+InternationalJournalofHuman-ComputerStudies52,1–22.
+DHHS,1991.Anon.,1991.AgingAmerica.DepartmentofHealthandHumanServices,Washington,DC.
+DHHS,2000.HealthyPeople2010.OfficeofDiseasePreventionandHealthPromotion,USDeptofHealthand
+HumanServices,Washington,DC.
+Diener, E., Emmons, R., Larsen, J., Griffin, S., 1985. The Satisfaction with Life Scale. Journal Personality
+Assessment49,71–75.
+Duck,S.,1994.MeaningfulRelationships.SAGEPublications,London.
+Duck,S.,1995.Talkingrelationshipsintobeing.JournalofSocialandPersonalRelationships12,535–540.
+Gelso,C.,Hayes,J.,1998.Thepsychotherapyrelationship:theory,researchandpractice.Wiley,NewYork.
+Gilbertson,J.,Dindia,K.,Allen,M.,1998.RelationalContinuityConstructionalUnitsandtheMaintenanceof
+Relationships.JournalofSocialandPersonalRelationships15,774–790.
+Grosz,B.,Sidner,C.,1986.Attention,intentions,andthestructureofdiscourse.ComputationalLinguistics12,
+175–204.
+Hartley,A.,1992.Attention.In:Craik,F.,Salthouse,T.(Eds.),TheHandbookofAgingandCognition.Erlbaum,
+Hillsdale,NJ.
+Horn,J.,1982.Thetheoryoffluidandcrystallizedintelligenceinrelationtoconceptsofcognitivepsychology
+andaginginadulthood.In:Craik,F.,Trehub,S.(Eds.),AgingandCognitiveProcesses.PlenumPress,New
+York.
+Horvath,A.,Greenberg,L.,1989.Developmentandvalidationoftheworkingallianceinventory.Journalof
+CounselingPsychology36,223–233.
+Horvath,A., Symonds, D., 1991. Relation between workingalliance and outcome in psychotherapy a meta-
+analysis.JournalofCounselingPsychology38,139–149.
+Ice,G.,2002.Dailylifeinanursinghome:hasitchangedin25years?JournalofAgingStudies16,345–359.
+Jarvis,K.,Friedman,R.,Heeren,T.,Cullinane,P.,1997.Olderwomenandphysicalactivity:usingthetelephone
+towalk.WomensHealthIssues7,24–29.
+Lobach, D., Hasselblad, V., Wildemuth, B., 2003. Evaluation of a Tool to Categorize Patients by Reading
+Literacy and Computer Skill to Facilitate the Computer-Administered Patient Interview. Proceedings of
+AMIA,Washington,DC.
+NHLBI,1998.Clinicalguidelinesontheidentification,evaluationandtreatmentofoverweightandobesityin
+adults.Bethesda,MD:DepartmentofHealthandHumanServices,NationalInstitutesofHealth,National
+Heart,LungandBloodInstitute.
+NTIA, 1999. Falling through the Net: defining the digital divide. A report on thetelecommunications and
+information technology gap in America. Washington, DC: National Telecommunication and Information
+Administration.
+Planalp,S.,1993.Friends’andacquaintances’conversationsII:codeddifferences.JournalofSocialandPersonal
+Relationships10,339–354.
+Planalp,S.,Benson,A.,1992.Friends’andacquaintances’conversationsI:perceiveddifferences.Journalof
+SocialandPersonalRelationships9,483–506.
+T.W.Bickmoreetal./InteractingwithComputers17(2005)711–735 735
+Pollack,M.,Brown,L.,Colbry,D.,McCarthy,C.E.,Orosz,C.,Peintner,B.,Ramakrishnan,S.,Tsamardinos,I.,
+2003.Autominder:anintelligentcognitiveorthoticsystemforpeoplewithmemoryimpairment.Roboticsand
+AutonomousSystems44,273–282.
+Russell, D., Peplau, L., Curtrona, C., 1980. The revised UCLA lonelines scale: concurrent and discriminant
+validityevidence.JournalofPersonalityandSocialPsychology39,472–480.
+Smith, J., 2000. GrandChair: conversational collection of grandparent’s stories. Massachusetts Institute of
+TechnologyPhDDissertation,Cambridge,MA.
+Tamura,T.,Yonemitsu,S.,Itoh,A.,Oikawa,D.,Kawakami,A.,Higashi,Y.,Fujimooto,T.,Nakajima,K.,2004.
+Is an entertainment robot useful in the care of elderly people with severe dementia? The Journals of
+Gerontology59A,83–85.
+Ulatowski,H.,Cannito,M.,Hayashi,M.,Fleming,S.,1985.Languageabilitiesintheelderly.In:Ulatowski,H.
+(Ed.),TheAgingBrain:CommunicationintheElderly.College-HillPress,SanDiego,CA,pp.125–139.
+Wada,K.,Shibata,T.,Saito,T.,Tanie,K.,2003.EffectsofRobotAssistedActivitytoElderlyPeoplewhoStayat
+aHealthServiceFacilityfortheAged,Proceedingsofthe2003IEEE/RSJIntlConferenceofIntelligent
+RobotsandSystems,LasVegas,NV.
+Ware, J., Kosinski, M., Keller, S., 1996. A 12-item short form health survey: construction of scales and
+preliminarytestsofreliabilityandvalidity.MedCare34,220–233.
+Williams,M.,Parker,R.,Baker,D.,Parikh,N.,Pitkin,K.,Coates,W.,Nurss,J.,1995.Inadequatefunctional
+healthliteracyamongpatientsattwopublichospitals.JAMA274,1677–1720.
+Woods, W., 1986. Transition network grammars for natural language analysis. In: Grosz, B.J., Jones, K.S.,
+Webber, B.L. (Eds.), Readings in Natural Language Processing. Morgan Kaufmann Publishers, Inc, Los
+Altos,CA,pp.71–88.

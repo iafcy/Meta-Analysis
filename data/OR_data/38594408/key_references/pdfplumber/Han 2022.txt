@@ -1,0 +1,586 @@
+See related commentary on pg 2301 ORIGINAL ARTICLE
+e
+Evaluation of Artificial Intelligence Assisted
+Diagnosis of Skin Neoplasms: A Single-Center,
+Paralleled, Unmasked, Randomized Controlled
+Trial
+Seung Seog Han1,2,6, Young Jae Kim3,6, Ik Jun Moon3,6, Joon Min Jung3, Mi Young Lee3, Woo Jin Lee3,
+Chong Hyun Won3, Mi Woo Lee3, Seong Hwan Kim4, Cristian Navarrete-Dechent5 and
+Sung Eun Chang3
+Trial design: This was a single-center, unmasked, paralleled, randomized controlled trial. Methods: A ran-
+domizedtrialwasconductedinatertiarycareinstituteinSouthKoreatovalidatewhetherartificialintelligence
+(AI)couldaugmenttheaccuracyofnonexpertphysiciansinthereal-worldsettings,whichincludeddiverseout-
+of-distributionconditions.Consecutivepatientsaged>19years,havingoneormoreskinlesionssuspiciousfor
+skin cancer detected by either the patient or physician, were randomly allocated to four nondermatology
+trainees and four dermatology residents. The attending dermatologists examined the randomly allocated pa-
+tients with (AI-assisted group) or without (unaided group) the real-time assistance of AI algorithm (https://
+b2020.modelderm.com#world;convolutionalneuralnetworks;unmaskeddesign)aftersimplerandomizationof
+thepatients.Results: Using576consecutivecases(FitzpatrickskinphototypesIIIorIV)withsuspiciouslesions
+out of the initial 603 recruitments, the accuracy of the AI-assisted group (n ¼ 295, 53.9%) was found to be
+significantlyhigherthanthoseoftheunaidedgroup(n¼281,43.8%;P¼0.019).Whereastheaugmentationwas
+moresignificantfrom54.7%(n¼150)to30.7%(n¼138;P<0.0001)inthenondermatologytraineeswhohadthe
+least experience indermatology, it was not significant in the dermatology residents. The algorithm couldhelp
+trainees in the AI-assisted group include more differential diagnoses than the unaided group (2.09 vs. 1.95
+diagnoses;P¼0.0005).However,a12.2%dropinTop-1accuracyofthetraineeswasobservedincasesinwhich
+all Top-3 predictions given by the algorithm were incorrect. Conclusions: The multiclass AI algorithm
+augmented the diagnostic accuracy of nonexpert physicians in dermatology.
+JournalofInvestigativeDermatology(2022)142,2353e2362;doi:10.1016/j.jid.2022.02.003
+INTRODUCTION randomized controlled trials (RCTs) were published in
+With advancement of deep learning algorithms, prom- 2021 (Zhou et al., 2021), and to the best of our knowl-
+ising results have been reported in the diagnosis of skin edge, no RCT studies have been published in derma-
+cancer, but most of the studies were retrospective (Esteva tology. Unlike retrospective studies, the cases of a
+et al., 2017; Haenssle et al., 2020; Han et al., 2020c; prospective study include untrained diseases (out-of-dis-
+Maron et al., 2021; Tanaka et al., 2021; Tschandl et al., tribution), and the results are affected by the quality of
+2019). A relatively small number of prospective studies photographs and the expertise of the user.
+have been reported in machine learning research (Liu In the field of dermatology, only a small number of
+et al., 2019; Topol, 2020). Among them, only 11 prospective (non-RCT) studies have been reported (Dascalu
+and David, 2019; Mun˜oz-Lo´pez et al., 2021; Navarrete-
+1DepartmentofDermatology,IDermatologyClinic,Seoul,Korea;2IDerma, Dechent et al., 2021). A commercial dermoscopy algo-
+Inc,Seoul,Korea;3DepartmentofDermatology,AsanMedicalCenter, rithm showed 88.1% sensitivity and 78.8% specificity,
+UlsanUniversityCollegeofMedicine,Seoul,Korea;4DepartmentofPlastic
+compared with teledermoscopists (MacLellan et al., 2021).
+andReconstructiveSurgery,KangnamSacredHeartHospital,Hallym
+An algorithm using dermoscopic lens attachments showed
+UniversityCollegeofMedicine,Seoul,Korea;and5Departmentof
+Dermatology,SchoolofMedicine,PontificiaUniversidadCatolicade the ability to identify melanoma with an accuracy similar
+Chile,Santiago,Chile to that of specialists (Phillips et al., 2019). Finally, the
+6Theseauthorscontributedequallytothiswork. performance of onychomycosis algorithm that out-
+Correspondence:SungEunChang,DepartmentofDermatology,Asan performed all 42 dermatologists on the receiver operating
+MedicalCenter,UlsanUniversityCollegeofMedicine,88,OLYMPIC-RO43- characteristic curve in a retrospective study (Han et al.,
+GILSongpa-gu,Seoul05505,Korea..E-mail:csesnumd@gmail.com 2018) was found to be equivalent to that of 5 dermatolo-
+Abbreviations: AI,artificialintelligence;GP,generalpractitioner;RCT,ran- gists in the prospective study (Kim et al., 2020).
+domizedcontrolledtrial
+Wepreviouslydevelopedaunifiedmulticlassskindisease
+Received3November2021;revised26January2022;accepted8February
+classifier (Model Dermatology; https://modelderm.com) and
+2022;acceptedmanuscriptpublishedonline18February2022;corrected
+proofpublishedonline2June2022 showedthatthealgorithmcouldclassify134skindisordersat
+ª2022TheAuthors.PublishedbyElsevier,Inc.onbehalfoftheSocietyforInvestigativeDermatology. www.jidonline.org 2353
+SS Han et al.
+ARCTonAI-AssistedDiagnosis ofSkin Neoplasms
+Table 1. Demographics and the Status of the Randomization
+Variable UnaidedGroup(n[281) AIGroup(n[295) Overall(n[576)
+Age(y) 58.6(cid:2)18.0 58.7(cid:2)18.0 58.6(cid:2)18.0
+Sex(male) 48.4%(136) 41.4%(122) 44.8%(258)
+Fitzpatrickskinphototype
+TypeIII 75.1%(211) 79.0%(233) 77.1%(444)
+TypeIV 24.9%(70) 21.0%(62) 22.9%(132)
+Race AllAsian AllAsian AllAsian
+Onset(y)1 4.3(cid:2)7.7 5.7(cid:2)8.6 5.0(cid:2)8.2
+Size(mm) 10.9(cid:2)11.0 9.8(cid:2)9.6 10.3(cid:2)10.3
+Recentchanges
+Size 54.1%(152) 48.8%(144) 51.4%(296)
+Color 14.2%(40) 14.6%(43) 14.4%(83)
+Shape 11.7%(33) 14.6%(43) 13.2%(76)
+Site
+Headandneck 41.6%(117) 43.7%(129) 42.7%(246)
+Trunk 23.1%(65) 22.0%(65) 22.6%(130)
+Arm 15.3%(43) 12.2%(36) 13.7%(79)
+Leg 19.9%(56) 22.0%(65) 21.0%(121)
+Familyhistoryofskincancer 2.1%(6) 1.7%(5) 1.9%(11)
+Suspectedbypatients 45.2%(127/277) 47.1%(139/295) 46.2%(266/576)
+Pathologicallydiagnosedcases 91.8%(258) 90.2%(266) 91.0%(524)
+Malignancy 16.0%(45) 13.2%(39) 14.4%(83)
+Benign 75.8%(213) 76.9%(227) 76.6%(441)
+Clinically-diagnosedcases 8.2%(23) 9.8%(29) 9.0%(52)
+Trainees
+Non-DERtrainees 49.1%(138) 50.8%(150) 50.0%(288)
+Dermatologyresidents 50.9%(143) 49.2%(145) 50.0%(288)
+Participatedperiod(day) 18.4(cid:2)14.3 17.6(cid:2)13.8 18.0(cid:2)14.1
+ParticipatedNo.ofcases 40.9(cid:2)26.6 39.1(cid:2)25.9 40.0(cid:2)26.2
+Attendingdermatologists
+Experienceaftertheboardcertification(y) 12.4(cid:2)8.9 11.4(cid:2)8.6 11.9(cid:2)8.8
+Useofdermoscopy 19.2%(54) 20.0%(59) 19.6%(113)
+Abbreviations:AI,artificalintelligence;DER,dermatology;No.,number.
+1Atotalof88.6%(249cases),90.2%(266cases),and89.4%(515cases)onsetrecordswereavailableintheunaidedgroup,AIgroup,andtheoverall,
+respectively.
+adermatologyresidentlevel(Hanetal.,2020c).However,in AI groupversusunaidedgroup
+a prospective study using 340 consecutive teledermatology To evaluate that the two groups were truly comparable, ac-
+cases (Mun˜oz-Lo´pez et al., 2021), Top-1 accuracy of the al- curaciesof the attending dermatologists and trainees(before
+gorithm (41.2%) was lower than that of the general practi- interventions) were compared. Top-1 accuracy of attending
+tioners (49.3%), probably because 10.3% of the dermatologists (62.3%) and trainees (43.8%) of the unaided
+teledermatologycasesbelongedtotheuntrainedclasses(out- group were higher than those of the AI group
+of-distribution). (dermatologists¼60.3%,trainees¼41.0%),whichindicated
+In this study, we performed a single-center, paralleled, thateasiercaseswerenotdisproportionatelyallocatedtothe
+unmasked, RCT to investigate whether a multiclass artificial AI group (Table 1 and Figure 1).
+intelligence (AI) algorithm can instantly improve the accu- Overall,theTop-1accuracyoftheAIgroupwas53.9%and
+racy(primaryoutcome)andsensitivity/specificity(secondary that of the unaided was 43.8% (all trainees; chi-square test,
+outcome) of nondermatologists who examined patients with P ¼ 0.019; Figure 2 and Table 2). There were significant
+suspicious skin neoplasms detected by either the patient or differencesintheresultdependingonwhethertheparticipant
+the physician. wasanondermatologytrainee(generalpractitioner[GP])ora
+dermatology resident (resident). The Top-1 accuracy of the
+AI group (54.7%) was markedly higher than that of unai-
+GP
+RESULTS ded group (29.7%; chi-square test, P < 0.0001), whereas
+GP
+This study is reported per the Consolidated Standards of the Top-1 accuracy of the AI group and the unaide-
+resident
+Reporting TrialseArtificial Intelligence guidelines (Liu et al., d group was 53.1% and 57.3%, respectively (chi-
+resident
+2020). Top-(n) accuracy is the accuracy of the Top-(n) di- square test, P ¼ 0.55). In the AI group, we compared the
+agnoses. If any one of the Top-(n) diagnoses is correct, it judgment before and after receiving assistance of the algo-
+counts as ’correct’. rithm,andtherewasasignificantenhancementin theTop-1
+2354 JournalofInvestigativeDermatology(2022),Volume142
+SS Han et al.
+ARCTonAI-Assisted DiagnosisofSkinNeoplasms
+Figure1.Flowchart.AI,artificialintelligence.
+accuracy of the AI group (before augmentation ¼ 30.7%, equivalent to those of the attending dermatologists. In the
+GP
+after augmentation ¼ 54.7%; McNemar test, P < 0.0001). 258 biopsy-proven cases of the unaided group, the Top-1/
+However, in the AI group, the change was not signifi- Top-3 accuracy of trainees and attending dermatologists
+resident
+cant (before augmentation ¼ 51.7%, after augmentation ¼ were 42.6%/57.4% and 58.9%/68.6%, respectively.
+53.1%; McNemar test, P ¼ 0.86). As shown in Malignancy determination affects clinical decisions such
+SupplementaryTable S1, a greaterimprovement in accuracy asorderingabiopsyifthereisanymalignancyamongTop-
+was observed for the subsequent cases, up to þ25.0% 3 predictions. Based on the Top-3 predictions, the sensi-
+and þ37.5% for Top-1 and Top-3 accuracy, respectively, tivity/specificity of the AI group and the unaided were
+althoughtheaccuracyforTop-1andTop-3wasimprovedby 84.6%/69.5% and 75.6%/62.7%, respectively (chi-square
+onlyþ0.0%andþ15.0%,respectively,forthefirstfivecases. test, P ¼ 0.45/0.13; Table 2). The sensitivity/specificity of
+When the analysis was restricted to 266 cases that were the AI group and the unaided group were 80.0%/
+GP GP
+biopsied, the Top-1/Top-3 accuracy of the standalone algo- 81.5%and56.3%/68.9%,respectively(chi-squaretest,P¼
+rithm, trainees before augmentation, trainees after augmen- 0.24/0.029).Thesensitivity/specificityoftheAI group
+resident
+tation, and attending dermatologists were 51.5%/75.9%, and the unaided group were 89.5%/57.1%
+resident
+40.2%/49.2%, 56.0%/71.4%, and 56.0%/66.2%, respec- and 86.2%/56.1%, respectively (chi-square test, P ¼ 1.0/
+tively. The accuracies of the AI-augmented trainees were 0.98).
+www.jidonline.org 2355
+SS Han et al.
+ARCTonAI-AssistedDiagnosis ofSkin Neoplasms
+Figure2.Topaccuraciesfordiagnosingexactdiseases.(a)Alltrainees:AI(n¼295)versusunaided(n¼281).(b)Alltrainees:beforeandaftertheassistanceof
+thealgorithmintheAIgroup(n¼295).(c)Non-DERtrainees:AI(n¼150)versusunaided(n¼138).(d)Non-DERtrainees:beforeandaftertheassistanceofthe
+algorithmintheAIgroup(n¼150).(e)DERresidents:AI(n¼145)versusunaided(n¼143).(f)DERresidents:beforeandaftertheassistanceofthealgorithmin
+theAIgroup(n¼145).Overall,eighttraineesparticipated(fourdermatologyresidentsandfournondermatologytrainees).TheTopaccuracystratifiedby82
+disordersisdescribedinSupplementaryTableS6.TheP-valuesofTopaccuraciesbetweentheAIgroupandtheunaidedgroupandbetweenbeforeandafterthe
+assistanceofthetraineesaredescribedinTable2.AI,artificialintelligence;DER,dermatology.
+There was a significant difference in the number of differ- Before andafter comparison:Individualanalysis
+entialdiagnosesbetweentheAIgroupandtheunaidedgroup The Top-1 and Top-3 accuracy before the use of AI was
+(2.09 vs. 1.95; Wilcoxon rank-sum test, P ¼ 0.0005). The 41.3%(cid:2)15.7%and49.2%(cid:2)13.2%,respectively(8trainees
+numberofdifferentialdiagnosesoftheAI group(2.00)was with295cases;SupplementaryTableS2).TheTop-1andTop-
+GP
+higher than that of the unaided group (1.88; Wilcoxon 3accuracyaftertheassistanceofAIwasincreasedto53.6%
+GP
+rank-sum test, P < 0.0001). The number of differential di- (cid:2) 9.3% and 69.8% (cid:2) 10.6%, respectively.
+agnosesoftheAI group(2.17)wasalsohigherthanthat Individual improvement in Top-1 diagnostic accuracy for
+resident
+of the unaided group (2.01; Wilcoxon rank-sum test, each trainee ranged from 5.4% to þ41.4%, with an average
+resident
+P ¼ 0.019). (SD) of þ12.2% (16.6%), which was not statistically
+2356 JournalofInvestigativeDermatology(2022),Volume142
+Table 2. Accuracy, Sensitivity, and Specificity of the Participants and Algorithm
+AIGroup UnaidedGroup BeforeVersusAfterAugmentation AIVersusUnaidedGroup
+TraineeBefore TraineeAfter Attending Attending
+PerformanceIndex Augmentation Augmentation StandaloneAI Dermatologist Trainee Dermatologist Difference(95%CI)1 P-Value2 Difference(95%CI)1 P-Value3
+Alltrainees(295cases,8trainees) AllTrainees(281cases,8trainees)
+Accuracy(Top-1) 41.0%(121/295) 53.9%(159/295) 50.5%(149/295) 60.3%(178/295) 43.8%(123/281) 62.3%(175/281) þ12.9%(þ4.9%eþ20.9%) 0.0002 þ10.1%(þ2.0%eþ18.3%) 0.019
+Accuracy(Top-3) 49.5%(146/295) 70.2%(207/295) 74.9%(221/295) 69.8%(206/295) 58.0%(163/281) 71.2%(200/281) þ20.7%(þ12.9%e28.4%) <0.0001 þ12.2%(þ4.4%eþ19.9%) 0.0031
+SensitivityfromTop-1 64.1%(25/39) 64.1%(25/39) 66.7%(26/39) 71.8%(28/39) 53.3%(24/45) 64.4%(29/45) 0.0%(e21.3%toþ21.3%) 1.00 þ10.8%(e10.2%toþ31.7%) 0.44
+SpecificityfromTop-1 85.9%(220/256) 90.6%(232/256) 90.6%(232/256) 91.8%(235/256) 85.2%(201/236) 91.5%(216/236) þ4.7%(e1.0%toþ8.7%) 0.059 þ5.5%(e0.3%toþ11.2%) 0.085
+SensitivityfromTop-3 82.1%(32/39) 84.6%(33/39) 84.6%(33/39) 89.7%(35/39) 75.6%(34/45) 88.9%(40/45) þ2.6%(e14.0%toþ19.1%) 1.00 þ9.1%(e7.8%toþ26.0%) 0.45
+SpecificityfromTop-3 60.9%(156/256) 69.5%(178/256) 61.3%(157/256) 67.2%(172/256) 62.7%(148/236) 66.5%(157/236) þ8.6%(þ0.4%eþ16.8%) 0.017 þ6.8%(e1.5%to15.2%) 0.13
+Non-DERTrainees(150Cases,4 Non-DERTrainees(138Cases,4
+Trainees) Trainees)
+Accuracy(Top-1) 30.7%(46/150) 54.7%(82/150) 51.3%(77/150) 63.3%(95/150) 29.7%(41/138) 63.8%(88/138) þ24.0%(þ13.1%toþ34.9%) <0.0001 þ25.0%(þ13.9%toþ36.0%) <0.0001
+Accuracy(Top-3) 41.3%(62/150) 68.7%(103/150) 74.0%(111/150) 72.0%(108/150) 42.8%(59/138) 71.0%(98/138) þ27.3%(þ16.5%toþ38.2%) <0.0001 þ25.9%(þ14.8%toþ37.0%) <0.0001
+SensitivityfromTop-1 65.0%(13/20) 55.0%(11/20) 65.0%(13/20) 85.0%(17/20) 43.8%(7/16) 50.0%(8/16) þ10.0%(e20.2%toþ40.2%) 0.77 þ11.3%(e21.4%toþ43.9%) 0.74
+SpecificityfromTop-1 85.4%(111/130) 94.6%(123/130) 92.3%(120/130) 91.5%(119/130) 83.6%(102/122) 95.1%(116/122) þ9.2%(þ2.0%eþ16.4%) 0.014 þ11.0%(þ3.4%eþ18.6%) 0.0088
+SensitivityfromTop-3 75.0%(15/20) 80.0%(16/20) 80.0%(16/20) 90.0%(18/20) 56.3%(9/16) 93.8%(15/16) þ5.0%(e20.8%toþ30.8%) 1.00 þ23.8%(e6.2%toþ53.7%) 0.24
+SpecificityfromTop-3 70.0%(91/130) 81.5%(106/130) 65.4%(85/130) 72.3%(94/130) 68.9%(84/122) 67.2%(82/122) þ11.5%(þ1.2%eþ21.9%) 0.025 þ12.7%(þ2.1%eþ23.3%) 0.029
+DERResidents(145Cases,4 DERResidents(143Cases,4
+Trainees) Trainees)
+Accuracy(Top-1) 51.7%(75/145) 53.1%(77/145) 49.7%(72/145) 57.2%(83/145) 57.3%(82/143) 60.8%(87/143) þ1.4%(e10.1%toþ12.9%) 0.86 þ4.2%(e7.2%to15.7%) 0.55
+Accuracy(Top-3) 57.9%(84/145) 71.7%(104/145) 75.9%(110/145) 67.6%(98/145) 72.7%(104/143) 71.3%(102/143) þ13.8%(þ2.9%eþ24.7%) 0.0008 þ1.0%(e9.3%toþ11.3%) 0.95
+SensitivityfromTop-1 63.2%(12/19) 73.7%(14/19) 68.4%(13/19) 57.9%(11/19) 58.6%(17/29) 72.4%(21/29) þ10.5%(e18.8%toþ39.9%) 0.68 þ15.1%(e11.6%toþ41.8%) 0.45
+SpecificityfromTop-1 86.5%(109/126) 86.5%(109/126) 88.9%(112/126) 92.1%(116/126) 86.8%(99/114) 87.7%(100/114) 0.0%(e8.4%toþ8.4%) 1.00 e0.3%(e8.9%toþ8.3%) 1.00
+SensitivityfromTop-3 89.5%(17/19) 89.5%(17/19) 89.5%(17/19) 89.5%(17/19) 86.2%(25/29) 86.2%(25/29) 0.0%(e19.5%toþ19.5%) 1.00 þ3.3%(e15.4%toþ21.9%) 1.00
+SpecificityfromTop-3 51.6%(65/126) 57.1%(72/126) 57.1%(72/126) 61.9%(78/126) 56.1%(64/114) 65.8%(75/114) þ5.6%(e6.7%toþ17.8%) 0.34 þ1.0%(e11.6%toþ13.6%) 0.98
+Abbreviations:AI,artificialintelligence;CI,confidenceinterval;DER,dermatology.
+1The95%CIsfortwoindependentbinomialproportionswerecalculatedusingtheWaldmethod(wald2ciofthePropCIspackage;Rversion4.1.1).
+2McNemartestwasperformedforthepairedvalues.
+3Chi-squaretestwasperformed.PositivepredictivevalueandnegativepredictivevaluearelistedintheSupplementaryTableS8.
+www.jidonline.org
+2357
+ARCTonAI-Assisted
+DiagnosisofSkinNeoplasms
+SS
+Han
+et
+al.
+SS Han et al.
+ARCTonAI-AssistedDiagnosis ofSkin Neoplasms
+Figure3.SensitivityandspecificityontheROCcurvefordeterminingmalignancyintheAIgroup.(a)AlltraineesintheAIgroup(n¼295).(b)
+NondermatologytraineesintheAIgroup(n¼150).(c)DermatologyresidentsintheAIgroup(n¼145).Darkbluecross(þ):traineesbeforeaugmentation;
+malignancydecisionderivedfromTop-3predictions.Palebluecross(þ):traineesbeforeaugmentation;malignancydecisionderivedfromTop-1prediction.
+Darkbluex-cross((cid:3)):traineesafteraugmentation;malignancydecisionderivedfromTop-3predictions.Palebluex-cross((cid:3)):traineesafteraugmentation;
+malignancydecisionderivedfromTop-1prediction.Darkredcross(þ):attendingdermatologists;malignancydecisionderivedfromTop-3predictions.Palered
+cross(þ):attendingdermatologists;malignancydecisionderivedfromTop-1prediction.Blackcross(þ):algorithm;malignancydecisionderivedfromTop-3
+predictions.Paleblackcross(þ):algorithm;malignancydecisionderivedfromTop-1prediction.Blackline:algorithm;malignancydecisionderivedfrom
+themalignancyscore.Blackdot(C):algorithmatthehigh-sensitivitythreshold.Paleblackdot(C):algorithmatthehigh-specificitythreshold.AI,artificial
+intelligence;ROC,receiveroperatingcharacteristic.
+significant(pairedt-testafterShapiro-Wilknormalitytest,P¼ There were four cases of malignancy (three basal cell car-
+0.076). On the contrary, Top-3 accuracy was improved cinomasandoneBowen’sdisease)forwhichthetraineeshad
+byþ0%eþ41.4%,withanaverageimprovementofþ20.6% initially included a malignant condition in their Top-3 but
+(12.9%),whichwasstatisticallysignificant(pairedt-testafter ruled out malignancy in their final Top-3 recorded after the
+Shapiro-Wilk normality test, P ¼ 0.0027). There was indi- useofthealgorithm.Ofthesefourcases,twowerepredicted
+vidual variation in the degree of improvement: the Top-1 to be conditions requiring follow-up visits (dysplastic nevus
+accuracy of one dermatology resident decreased (e5.3%), and actinic keratosis).
+whereas that of one nondermatology trainee was improved
+by þ41.4%.
+DISCUSSION
+Standaloneperformanceofthe algorithm
+InthisRCTanalyzing576cases,weshowedthatamulticlass
+ThestandaloneTop-1andTop-3accuracyofthealgorithmin
+AI algorithm helped improve the diagnostic accuracy of the
+theAIgroupwas50.5%and74.9%,respectively.Areaunder
+trainees. The augmentation was significant in non-
+the curve for determining malignancy was 0.894 (95% con-
+dermatology trainees who had only minimal experience in
+fidence interval ¼ 0.838e0.950; DeLong method), which
+dermatology, whereas the augmentation was nonsignificant
+wasequivalenttothatoftheattendingdermatologistsonthe
+in dermatology residents. Regarding the standalone perfor-
+receiveroperatingcharacteristiccurve(Figure3).Atthehigh-
+mance with 266 biopsied cases, the accuracies of the AI-
+sensitivethreshold,thesensitivityandspecificitywere92.3%
+augmented trainees were comparable to those of the
+and 62.1%, respectively, and at the high-specificity
+attending dermatologists. In addition, the standalone algo-
+threshold, the sensitivity and specificity were 84.6% and
+rithm using the malignancy score showed comparable per-
+78.5%, respectively. The sensitivity/specificity of the stand-
+formance to attending dermatologists in determining
+alone algorithm derived from the Top-1 was 66.7%/90.6%
+malignancy. This is a unique result because this study was
+and that from the Top-3 was 84.6%/61.3% (Table 2).
+conductedinthereal-worldsettings,whichincludeddiverse
+Adverseeffectsoftheincorrectpredictionsfromthe out-of-distribution conditions.
+algorithm Although several retrospective studies have showed suc-
+A12.2%dropinTop-1accuracyofthetraineeswasobserved cessfulresultsregardingthediagnosisofskinlesionsusingAI
+incaseswhereallTop-3predictionsfromthealgorithmwere algorithms, most were carried out in experimental settings
+incorrect (Supplementary Tables S3 and S4). In out-of- (Haggenmu¨ller et al., 2021). Various factors, including but
+distribution cases where Top-3 predictions from the algo- notlimitedtothoselistedinthisstudy,makethesepromising
+rithm were inevitably incorrect, the Top-1 accuracy of the results unlikely to be reproduced in real-life.
+trainees dropped by 5.6%.
+Both sensitivity/specificity derived from Top-3 predictions 1. Clever-Hans type bias (Lapuschkin et al., 2019): the pre-
+of trainees were negatively affected (before augmentation ¼ dictionsofalgorithmsmaybedrawnfromhiddenfeatures
+84.6%/60.7%andafteraugmentation¼61.5%/59.0%)when with no relevance, especially if the amount of training
+all Top-3 predictions from the algorithm were incorrect. dataissmall.However,itisverydifficultforresearchersto
+2358 JournalofInvestigativeDermatology(2022),Volume142
+SS Han et al.
+ARCTonAI-Assisted DiagnosisofSkinNeoplasms
+check whether the Clever-Hans bias exists during a et al., 2020a). The importance of in-person examination
+retrospective experiment. was also shown in a study using dermoscopic images in
+2. The presence of out-of-distribution in training classes: al- which the diagnostic accuracy of the reader test was lower
+gorithms have no diagnostic ability at all on untrained than that of the physicians who actually performed the der-
+diseases. Although our old algorithm showed a moscopic evaluation (Dinnes et al., 2018).
+dermatologist-level of performance with the in- In this study, there was a marked improvement in the ac-
+distribution 134 disorders (Han et al., 2020c), the perfor- curacy of the nondermatology trainees having only minimal
+mance deteriorated in the prospective study (Mun˜oz- experienceindermatology.Thisfindingissimilartowhathas
+Lo´pez et al., 2021) with consecutive patients having been reported in a previous article (Tschandl et al., 2020).
+diverse disorders, which indicates the relevance of the Anotherinterestingfindingisthattheaugmentedaccuracyof
+out-of-distribution problem. Although algorithms are thetrainees(Top-1/Top-3¼56.0%/71.4%)wasequivalentto
+trainedonrarediseases,thediagnosticabilitymaybepoor that of attending physicians (Top-1/Top-3 ¼ 56.0%/66.2%)
+becauseonlyasmallamountoftrainingdatafortheserare for the 266 biopsied cases. The accuracies of both the
+diseases is available for the training. standalonealgorithmandtraineeswerelowerthanthatofthe
+3. The presence of out-of-distribution in characteristics: in attending dermatologists, but synergy was found in the AI-
+retrospective experiments, cases with typical features are augmented trainees. All potential diagnoses presented by
+selected, whereas cases with atypical morphology are the algorithm were reviewed by the trainees capable of per-
+usuallydroppedout.Moreover,idealphotographsinterms forming a physical examination and history taking, which
+ofqualityandcompositionareusuallyincludedinthetest, may result in the synergy.
+whichdoesnotwellrepresentthecasesintherealworld. With the current technology, improving the accuracy and
+In a prospective study with consecutive cases, an algo- reducing biases of algorithms require a huge amount of
+rithm may show uncertainty to all kinds of out-of- data. It may be better for humans to understand the
+distribution cases. diagnostic strengths and limitations of the AI and to adapt
+4. Fitdiseaseprevalenceoftrainingdataset:accuracycanbe to the diagnostic characteristics of the machines. The per-
+optimized according to the disease prevalence of the formance of the algorithm using the malignancy score was
+training dataset. A model may be prone to predict disor- equivalent to that of the attending dermatologists for
+derswithhighprevalencetoachievehighaccuracyinthe determining malignancy on the receiver operating charac-
+internal validation, rather than learning the disease teristic curve (Figure 3). At the high-sensitivity cut-off
+features. threshold, the malignancy score showed 92.3% sensitivity
+5. Unpaired comparison (Genin and Grote, 2021): derma- that can compensate for the low sensitivity (66.7%) derived
+tologists do not make clinical diagnosis based solely on from the Top-1 prediction. However, trainees did not show
+photographs. The clinicians in the real world use all synergy in the binary determination as much as they did in
+clinical inputs (i.e., clinically history, touch, body distri- the augmented accuracy (multiclass classification). In
+bution),and having noaccessto otherdiagnostic inputis addition, there was no increase in Top-1 accuracy in the
+thus an unpaired comparison. In most circumstances, first five cases, whereas improved Top-1 accuracy was
+history taking and physical examination significantly observed in the following cases, meaning that it took time
+improve the physician’s diagnostic ability except for the for the participants to make full use of the algorithm. If the
+mass diagnostic tests such as mammography. participants had a better understanding of the characteris-
+tics of the algorithm, the results could have been further
+Although algorithms outperformed dermatologists in pre- improved. Therefore, detailed instructions on the diagnostic
+vious retrospective studies, they may perform inferior to characteristics of algorithms should be provided for the
+dermatologistsinreal-worldprospectivestudies.Inthisstudy, users to improve diagnostic performance in future studies
+suspected skin neoplasms were selected as an intended use (Daneshjou et al., 2021).
+becausetheperformanceofthealgorithmforskinneoplasms There are certain limitations of this study that need to be
+wasbetter than that of dermatologists in the previous reader addressed. First, this study was designed to represent the
+tests(Hanetal.,2020a,2020c),andmostkindsofneoplastic actualclinicalsettingsinaprimarycareclinic.Weintended
+disorders were in-distribution. In addition, acquiring proper to showhowa general physician, with scarce experience in
+compositiondoesnotrequiredermatologicalknowledgeand dermatology,couldbenefitfromanalgorithmwhendeciding
+could be standardized. Nevertheless, in this study, the whethertoreferapatienttoatertiaryhospital.However,the
+standalone Top-1 accuracy of the algorithm (50.5%) was experimental conditions in which this study was carried out
+inferiortothatoftheattendingdermatologists(60.3%)inthe were not totally identical to the actual settings in primary
+real-world settings. careclinics.Becausethisstudywasperformedprospectively
+Dermatology does not merely deal with visual assessment inatertiarycarecenter,thereferredcasescouldnotrepresent
+of skin lesions. Although algorithms can outperform derma- alldiversebenignconditionsseeninprimarycareclinics.In
+tologists in reader tests, it does notmeanthat thealgorithms addition,theintendeduser(primarycarephysicians)maynot
+outperform dermatologists in real-world settings. In a cohort even think about using the algorithm owing to the lack of
+studywith43skintumors,theaccuracyofthealgorithmwas dermatology knowledge. In addition, if the intended user is
+superiortothatofthedermatologistsinthereadertest(49.5% proficient in using other tools such as dermoscopy, the al-
+vs. 37.7%) but inferior to the attending physicians who gorithmmaynotbeofgreatassistanceforthoseexperienced
+examined the patients in person (68.1% vs. 49.5%) (Han physicians.
+www.jidonline.org 2359
+SS Han et al.
+ARCTonAI-AssistedDiagnosis ofSkin Neoplasms
+Second, although there was a time gap between the figshare.6454973), the high-sensitivity threshold for determining
+trainingofthealgorithmandthetest,theremaybeahidden malignancy was defined as the threshold at which 90% sensitivity
+bias(e.g.Clever-Hanstype[Lapuschkinetal.,2019])thatwe wasobtainedbecausethesensitivityoftheattendingdermatologists
+were not aware of because the clinical images, previously was at the level of 88.1% (Han et al., 2020a). The high-specificity
+collected from Asan Medical Center, were used for the threshold was defined as the threshold at which 80% sensitivity
+training. wasobtained.
+Third, validation was conducted only in Asians, mostly Inapreviouspilotstudy(Kimetal.,2022),theTop-1accuracyof
+with Fitzpatrick skin phototypes III and IV. To enable gener- traineeswas47.9%.If25%enhancementaftertheassistancewere
+alizability, further prospective studies should be performed regarded as significant, the sample size was calculated as 548
+because disease prevalence, subtype distribution, andvisual (alpha ¼ 0.05 and power ¼ 0.8), and we planned to recruit 600
+characteristics of disorders may differ between ethnicities, cases(Rosner,2011).
+countries, and regions. The retrospective results of the algo- All patients signed an informed consent before inclusion in the
+rithmusingtheEdinburghdatasetfromthewhitepopulation study.Weincludedconsecutivepatients(aged>19years)whohad
+(1,300 images; Top-1/Top-3 accuracy ¼ 65.2%/84.8%, area one or more skin lesions suspicious for skin cancer, detected by
+under the curve for determining malignancy ¼ 0.937; either the patient or physician. Exclusion criteria of patients and
+SupplementaryFigure S1andSupplementaryTableS5)need inputdataincludedpatientrefusal(10cases),wrongrecruitment(6
+to be validated in prospective studies. cases; aged (cid:4)19 years), biopsy refusal (2 cases), and nonreal-time
+Fourth, owing to the limited number of physicians who analysis (9 cases). Broken blindness and disclosure of the biopsy
+tookpartinthisstudy(n¼8),aslightvariationinindividual results in the referral note were also in the exclusion criteria, but
+performance may cause abiased overall result. Tominimize therewasnosuchcase,andtherewasnoperformanceerrorforthe
+the effect of individual variation and enhance representa- lossofinternetconnectionorothertechnicalissues.Formalpatho-
+tivenessof theresults, futurestudieswithalargernumberof logicdiagnosis(504cases)wasusedasthegroundtruth;however,if
+participants are warranted. thepathologicreportconsistedofapathologicdescriptiononly(i.e.,
+Finally,indeterminingmalignancy,therewasnostatistical lichenoid reaction), the pathologic diagnosis was determined by
+difference in the sensitivity and specificity between the AI clinicopathological correlation (20 cases). Clinical diagnosis of the
+groupandtheunaidedgroupexceptforthespecificityofthe attending dermatologists was used as the ground truth for the 52
+nondermatology trainees. This suggests the need for further cases where biopsy was not performed because the attending der-
+clinical evaluation of the algorithm in terms of malignancy matologistsdecidednottobiopsythedefinitelybenigncases.Ulti-
+detection. In addition, only nine melanoma cases were mately,524biopsy-provencasesand52clinically-diagnosedcases
+included in this study. Because melanoma prevalence is wereincludedinthefinalanalysisamongthe603casesoftheinitial
+relatively low in skin phototypes III and IV, future studies recruitment(Table1).AsshowninSupplementaryTablesS6andS7,
+including other skin phototypes and more melanoma cases a total of 53 conditions were within the trained 178 classes (in-
+seem necessary. distribution) and 29 conditions were not trained by the algorithm
+In conclusion, our algorithm could enhance the accuracy (out-of-distribution). There were no cases in which train-test
+of nonspecialists in diagnosing suspected cutaneous neo- contamination could be concerned, although there were 15 cases
+plasmsinreal-worldsettings.Theassistanceofthealgorithm withphotographstakenpreviously.
+was the greatest for the least experienced physicians. In A total of four attending physicians (3, 4, 6, and 22 years of
+addition, the algorithm could help nondermatology trainees experience after board certification), four first-year dermatology
+include more diagnoses in the list of differentials. To further residents, and four nondermatology trainees (doctors in their first
+improve the algorithm’s performance, combining additional year after getting a medical license who rotate between various
+input data (e.g., metadata, dermoscopic images) with lesion departments) participated in this study. Attending physicians
+imagesseemsnecessary.Furtherlargermulticenterstudiesin routinely recorded their impressions after thorough examinations.
+various regions and ethnicities are required to validate the After the simple randomization using a custom randomizer (rand
+generalizability of our results. function ofthe PHPlanguage) bythe attendingdermatologists, the
+trainee took the patient’s medical history, performed physical ex-
+MATERIALS AND METHODS aminations, took photographs, and recorded their diagnostic hy-
+This prospective study was approved by the Institutional Review pothesisinrealtime.
+BoardofAsanMedicalCenter(Seoul,Korea)(S2018-1703-0001).It In the AI group, trainees captured and selected 1e3 photo-
+wasperformedintheDepartmentofDermatologyatAsanMedical graphs with age and sex metadata as an input data and uploaded
+Center, a tertiary care center in Korea. The study was conducted them to http://b2020.modelderm.com#world using internet
+from 30 November 2020 to 9 September 2021 after online regis- browsers. Then the after-diagnoses was recorded, referring to the
+tration(KCT0005614; cris.nih.go.kr). Thedevelopmentof thealgo- five diagnoses suggested by the algorithm and the malignancy
+rithm (Model Dermatology, Build2020; https://b2020.modelderm. score (Supplementary Figure S2). The photographs that the
+com#world) is described in the Supplementary Materials, and the trainees thought to be of adequate quality and composition by
+algorithm wasfixed on 19 September 2020. Alongwith thepredic- themselves were uploaded. Trainees were instructed so that only
+tionoffivedifferentialdiagnoses,thealgorithmreportsamalignancy macroimages having the large lesion of interest at the center are
+score (range ¼ 0e100). The malignancy score was defined as the uploaded. In the unaided group, trainees performed routine ex-
+sum of malignant outputs and 0.2 (cid:3) premalignant outputs as used aminations and recorded the three most probable diagnoses,
+previously (Han et al., 2020b). Using the subset of the Seoul Na- without the assistance of the algorithm. The use of dermoscopy
+tional University dataset (240 images; https://doi.org/10.6084/m9. was not allowed for all trainees.
+2360 JournalofInvestigativeDermatology(2022),Volume142
+SS Han et al.
+ARCTonAI-Assisted DiagnosisofSkinNeoplasms
+Statisticalanalysis DinnesJ,DeeksJJ,ChuchuN,FerrantediRuffanoL,MatinRN,ThomsonDR,
+In calculating the Top accuracy, only the exact diagnosis was et al. Dermoscopy, with and without visual inspection, for
+diagnosing melanoma in adults. Cochrane Database Syst Rev 2018;12:
+recordedascorrect,butgivingaspecificsubtypeofthediseasewas
+CD011902.
+also counted to be correct. For example, intradermal nevus was
+EstevaA,KuprelB,NovoaRA,KoJ,SwetterSM,BlauHM,etal.Dermatol-
+countedcorrectforthegroundtruthofjunctionalnevus.Welumped ogist-level classification of skin cancer with deep neural networks [pub-
+together 364 diagnoses in natural language into the 82 diagnosis lished correction apperas in Nature 2017;546:686] Nature 2017;542:
+codes (https://doi.org/10.6084/m9.figshare.16640257). For evalu-
+115e8.
+ating a malignancy prediction, the physicians diagnoses were GeninK,GroteT.RandomizedcontrolledtrialsinmedicalAI:amethodo-
+logicalcritique.PhilosophyofMedicine2021;2.
+transformedintoeithermalignantorbenign.Topaccuracies,sensi-
+HaenssleHA,FinkC,TobererF,WinklerJ,StolzW,DeinleinT,etal.Man
+tivities,andspecificitieswerecomparedusingPearson’schi-square
+against machine reloaded: performance of a market-approved convolu-
+test with Yates’ continuity correction (AI group vs. unaided group) tional neural network in classifying a broad spectrum of skin lesions in
+or McNemar test (before vs. after the assistance of the algorithm) comparisonwith96dermatologistsworkingunderlessartificialconditions.
+usingRversion4.1.1,andP<0.05wasstatisticallysignificant. AnnOncol2020;31:137e43.
+Haggenmu¨ller S, Maron RC, Hekler A, Utikal JS, Barata C, Barnhill RL,
+Dataavailabilitystatement et al. Skin cancer classification via convolutional neural networks: sys-
+tematic review of studies involving human experts. Eur J Cancer
+Therawdataofthisstudyisavailableathttps://doi.org/10.6084/m9.
+2021;156:202e16.
+figshare.16640257. The diagnosis in natural language, converted
+HanSS,MoonIJ,KimSH,NaJI,KimMS,ParkGH,etal.Assessmentofdeep
+diagnosiscode(ALIASsheet),thecasesdeterminedbyclinicopath-
+neuralnetworksforthediagnosisofbenignandmalignantskinneoplasms
+ological correlation, accuracy/sensitivity/specificity/positive predic- incomparisonwithdermatologists:aretrospectivevalidationstudy.PLoS
+tive value/negative predictive value of the participants and Med2020a;17:e1003381.
+algorithm,anddemographicsofsubjectsarelisted.Thealgorithmis HanSS,MoonIJ,LimW,SuhIS,LeeSY,NaJI,etal.Keratinocyticskincancer
+detection on the face using region-based convolutional neural network.
+accessible at https://b2020.modelderm.com/#world or https://
+JAMADermatol2020b;156:29e37.
+modelderm.com (Build2020) for academic purposes, and only the
+HanSS,ParkGH,LimW,KimMS,NaJI,ParkI,etal.Deepneuralnetworks
+images with the permission of the original owner should be
+showan equivalent and oftensuperior performance to dermatologistsin
+uploaded. onychomycosis diagnosis: automatic construction of onychomycosis
+datasets by region-based convolutional deep neural network. PLoS One
+ORCIDs 2018;13:e0191493.
+SeungSeogHan:http://orcid.org/0000-0002-0500-3628
+Han SS, Park I, Eun Chang SE, Lim W, Kim MS, Park GH, et al.
+YoungJaeKim:http://orcid.org/0000-0001-9841-5797
+Augmented intelligence dermatology: deep neural networks empower
+IkJunMoon:http://orcid.org/0000-0002-1123-4166
+medical professionals in diagnosing skin cancer and predicting treat-
+JoonMinJung:http://orcid.org/0000-0003-3432-8306
+ment options for 134 skin disorders. J Invest Dermatol 2020c;140:
+MiYoungLee:http://orcid.org/0000-0002-3991-4390
+1753e61.
+WooJinLee:http://orcid.org/0000-0002-0549-464X
+ChongHyunWon:http://orcid.org/0000-0003-1997-2240 KimYJ,HanSS,YangHJ,ChangSE.Prospective,comparativeevaluationofa
+MiWooLee:http://orcid.org/0000-0003-4669-9454 deepneuralnetworkanddermoscopyinthediagnosisofonychomycosis
+SeongHwanKim:http://orcid.org/0000-0001-6831-5621 [publishedcorrectionappearsinPloSOne2020;15:e0244899]PLoSOne
+CristianNavarrete-Dechent:http://orcid.org/0000-0003-4040-3640 2020;15:e0234334.
+SungEunChang:http://orcid.org/0000-0003-4225-0414
+KimYJ,NaJI,HanSS,WonCH,LeeMW,ShinJW,etal.Augmentingthe
+accuracy of trainee doctors in diagnosing skin lesions suspected of skin
+CONFLICTOFINTEREST
+neoplasmsinareal-worldsetting:aprospectivecontrolledbefore-and-after
+Duringtheperiodofthestudy,SSHfoundedIDerma,Inc,andheisthechief
+study.PLoSOne2022;17:e0260895.
+executiveofficerandchieftechnicalofficerofthecompany.Theremaining
+authorsstatenoconflictofinterest. Lapuschkin S, Wa¨ldchen S, Binder A, Montavon G, Samek W, Mu¨ller KR.
+Unmasking Clever Hans predictors and assessing what machines really
+learn.NatCommun2019;10:1096.
+ACKNOWLEDGMENTS
+Wewouldliketothankthepatientswhoparticipatedinthetrial.SSHandYJK LiuX,FaesL,KaleAU,WagnerSK,FuDJ,BruynseelsA,etal.Acomparison
+had full access to all the data in the study and took responsibility for the ofdeeplearningperformanceagainsthealth-careprofessionalsindetecting
+integrityofthedataandtheaccuracyofthedataanalysis. diseases from medical imaging: a systematic review and meta-analysis
+[publishedcorrectionappearsinLancetDigitHealth2019;1:e334]Lancet
+AUTHORCONTRIBUTIONS
+DigitHealth2019;1:e271e97.
+Conceptualization: SSH, CND, SEC; Data Curation: SSH, YJK, IJM, MYL; Liu X, Rivera SC, Moher D, Calvert MJ, Denniston AK, SPIRIT-AI and
+FormalAnalysis:SSH;Investigation:SSH,YJK,IJM,JMJ,WJL,CHW,MWL, CONSORT-AI Working Group. Reporting guidelines for clinical trial re-
+SEC;Methodology:SSH,SHK,CND,SEC;ProjectAdministration:CND,SEC; ports for interventions involving artificial intelligence: the CONSORT-AI
+Resources:YJK,IJM,JMJ,MYL,WJL,CHW,MWL,SHK,SEC;Software:SSH; extension.BMJ2020;370:m3164.
+Supervision:CND,SEC;Visualization:SSH;Writing-OriginalDraftPrepa-
+MacLellan AN, Price EL, Publicover-Brouwer P, Matheson K, Ly TY,
+ration:SSH,YJK,IJM;Writing-ReviewandEditing:IJM,CND,SEC
+PasternakS,etal.Theuseofnoninvasiveimagingtechniquesinthediag-
+nosis of melanoma: a prospective diagnostic accuracy study. JAm Acad
+SUPPLEMENTARYMATERIAL Dermatol2021;85:353e9.
+Supplementarymaterialislinkedtotheonlineversionofthepaperatwww. MaronRC,SchlagerJG,Haggenmu¨llerS,vonKalleC,UtikalJS,MeierF,etal.
+jidonline.org,andathttps://doi.org/10.1016/j.jid.2022.02.003. Abenchmarkforneuralnetworkrobustnessinskincancerclassification.
+EurJCancer2021;155:191e9.
+REFERENCES Mun˜oz-Lo´pez C, Ram´ırez-Cornejo C, Marchetti MA, Han SS, Del Barrio-
+DaneshjouR,SmithMP,SunMD,RotembergV,ZouJ.Lackoftransparency D´ıaz P, Jaque A, et al. Performance of a deep neural network in tele-
+and potential bias in artificial intelligence data sets and algorithms: a dermatology: a single-centre prospective diagnostic study. J Eur Acad
+scopingreview.JAMADermatol2021;157:1362e9. DermatolVenereol2021;35:546e53.
+Dascalu A, David EO. Skin cancer detection by deep learning and sound Navarrete-DechentC,LiopyrisK,MarchettiMA.Multiclassartificialintelli-
+analysisalgorithms:aprospectiveclinicalstudyofanelementarydermo- gence in dermatology: progress but still room for improvement. J Invest
+scope.EBioMedicine2019;43:107e13. Dermatol2021;141:1325e8.
+www.jidonline.org 2361
+SS Han et al.
+ARCTonAI-AssistedDiagnosis ofSkin Neoplasms
+Phillips M, Marsden H, Jaffe W, Matin RN, Wali GN, Greenhalgh J, et al. TschandlP, Codella N, Akay BN, Argenziano G, BraunRP, CaboH,et al.
+Assessment of accuracy of an artificial intelligence algorithm to detect Comparison of the accuracy of human readers versus machine-learning
+melanomainimagesofskinlesions.JAMANetwOpen2019;2:e1913436. algorithms for pigmented skin lesion classification: an open, web-based,
+international,diagnosticstudy.LancetOncol2019;20:938e47.
+Rosner B. Fundamentals of biostatistics. 7th ed. Boston, MA: Brooks/Cole;
+2011. TschandlP,RinnerC,ApallaZ,ArgenzianoG,CodellaN,HalpernA,etal.
+Tanaka M, Saito A, Shido K, Fujisawa Y, Yamasaki K, Fujimoto M, et al. Humanecomputer collaboration for skin cancer recognition. Nat Med
+Classificationoflarge-scaleimagedatabaseofvariousskindiseasesusing
+2020;26:1229e34.
+deeplearning.IntJComputAssistRadSurg2021;16:1875e87.
+ZhouQ,ChenZH,CaoYH,PengS.Clinicalimpactandqualityofrandomized
+Topol EJ. Welcoming new guidelines for AI clinical research. Nat Med controlled trials involving interventions evaluating artificial intelligence
+2020;26:1318e20. predictiontools:asystematicreview.npjDigitMed2021;4:154.
+2362 JournalofInvestigativeDermatology(2022),Volume142
+SS Han et al.
+ARCTonAI-Assisted DiagnosisofSkinNeoplasms
+SUPPLEMENTARY MATERIALS Toreflectdemographicmetadata(ageandsex),wetraineda
+The training history of our algorithm (Model Dermatology; feed-forward network separately. After calculating the ma-
+https://modelderm.com) was described previously (Han lignancyscoreusingthe178outputs,thesescoreswereused
+et al., 2020a, 2020b, 2018a, 2018b; Mun˜oz-Lo´pez et al., for the input of the feed-forward network. The feed-forward
+2021; Navarrete-Dechent et al., 2021, 2018). First, the al- network consists of three inputs (malignancy score, age,
+gorithm wastrained using 12benign and malignant nodules andsex)asaninput,threehiddenlayerswith200nodes,and
+for classification of the most common skin neoplasm (Han thelast softmaxlayer. Thefeed-forward networkwas trained
+et al., 2018a). Because several benign disorders can mimic using 120 thousand images of the ASAN dataset using the
+skin neoplasms, the algorithm should be a unified classifier NVIDIA Caffe (https://github.com/nvidia/caffe; version
+that can predict a large number of disorders (Han et al., 0.17.2),andthehyperparametersfortrainingwasasfollows:
+2020b). The ASAN and Web datasets were mainly used for learning_rate¼0.01,gamma¼0.1,weight_decay¼0.0001,
+training the convolutional neural networks. The ASAN mini_batch_size ¼ 32, solver ¼ SGD, momentum ¼ 0.9,
+dataset was assembled with 120,780 clinical images ac- total_iteration ¼ 30 epoch, and step_iteration ¼ 10 epoch.
+quiredfrom2003to2016attheDepartmentofDermatology
+at Asan Medical Center (Seoul, Korea). The Web dataset SUPPLEMENTARY TABLES
+consisted of images obtained using a Python script (https:// SupplementaryTablesS1eS8
+github.com/whria78/skinimagecrawler), and 100e500 im-
+agesperdiseaseweredownloadedusingtwosearchengines SUPPLEMENTARYREFERENCES
+(google.com and bing.com) and manually annotated based Han SS, Kim MS, Lim W, Park GH, Park I, Chang SE. Classification
+on the image findings. Furthermore, because numerous of the clinical images for benign and malignant cutaneous tumors
+using a deep learning algorithm. J Invest Dermatol 2018a;138:
+trivial conditions may result in uncertainty, a large training 1529e38.
+dataset for the algorithm was created with the assistance of
+Han SS, Lim W, Kim MS, Park I, Park GH, Chang SE. Interpretation of the
+region-based convolutional neural networks (Han et al., outputsofadeeplearningmodeltrainedwithaskincancerdataset.JInvest
+2020a). The algorithm was trained not only with typical le- Dermatol2018b;138:2275e7.
+sions but also with various lesions generated with the assis- HanSS,MoonIJ,LimW,SuhIS,LeeSY,NaJI,etal.Keratinocyticskincancer
+tance of a region-based convolutional neural network to detection on the face using region-based convolutional neural network.
+JAMADermatol2020a;156:29e37.
+reduce false positives. A total of 4,204,323 images crops
+HanSS,ParkI,EunChangSE,LimW,KimMS,ParkGH,etal.Augmented
+were used and only horizontal flip was applied for the
+intelligence dermatology: deep neural networks empower medical pro-
+augmentation. Using PyTorch (https://pytorch.org; version fessionalsindiagnosingskincancerandpredictingtreatmentoptionsfor
+1.6), we trained our convolutional neural network models 134skindisorders.JInvestDermatol2020b;140:1753e61.
+using a transfer learning method with ImageNet pretrained HeK,ZhangX,RenS,SunJ.Deepresiduallearningforimagerecognition.
+models. Histogram normalization was performed as a pre- 2016IEEEconferenceoncomputervisionandpatternrecognition(CVPR);
+2016.p.770e778.
+processingstepbeforetrainingthemodels.Theoutputvalues
+Hu J, Shen L, Sun G. Squeeze-and-excitation networks. 2018 IEEE/CVF
+of SENet(Huetal.,2018),SE-ResNeXt-101, SE-ResNeXt-50,
+conference on computer vision and pattern recognition; 2018. p.
+ResNeSt-101 (Zhang et al., 20201), and ResNeSt-50 were 7132e7141.
+arithmetically averaged to obtain a final model output. The Mun˜oz-Lo´pez C, Ram´ırez-Cornejo C, Marchetti MA, Han SS, Del Barrio-
+hyperparameters were set as follows: learning_rate ¼ 0.001, D´ıaz P, Jaque A, et al. Performance of a deep neural network in tele-
+gamma¼0.1,weight_decay¼0.00001,mini_batch_size¼ dermatology: a single-centre prospective diagnostic study. J Eur Acad
+32, solver ¼ SGD, momentum ¼ 0.9, total_iteration ¼ 90
+DermatolVenereol2021;35:546e53.
+epoch, and step_iteration ¼ 30 epoch. As a validation set, Navarrete-Dechent C, Dusza SW, Liopyris K, Marghoob AA, Halpern AC,
+Marchetti MA. Automated dermatological diagnosis: hype or reality?
+the subset of the ASAN dataset (17,125 images of nodular JInvestDermatol2018;138:2277e9.
+disorders) was used, and the optimal hyperparameters were
+Navarrete-DechentC,LiopyrisK,MarchettiMA.Multiclassartificialintelli-
+based on previous reports (He et al., 2016; Hu et al., 2018; gence in dermatology: progress but still room for improvement. J Invest
+Keskar et al., 20162). Dermatol2021;141:1325e8.
+1ZhangH,WuC,ZhangZ,ZhuY,LinH,ZhangZ,etal.Resnest:split-attention
+networks.arXiv2020.
+2KeskarNS, Mudigere D, Nocedal J,SmelyanskiyM, Tang PTP.On large-batch
+trainingfordeeplearning:generalizationgapandsharpminima.arXiv2016.
+www.jidonline.org 2362.e1
+SS Han et al.
+ARCTonAI-AssistedDiagnosis ofSkin Neoplasms
+SupplementaryFigureS1.BinaryclassificationfordeterminingmalignancyusingtheEdinburgh1,300images.(a)Malignancydeterminationinthebinary
+classificationusingthe1,300images.Areaunderthecurve:0.937;95%CI¼0.924e0.950(DeLongmethod).(b)Melanomadiagnosisinthemulticlass
+classificationusingthe1,300images.Areaunderthecurve:0.951;95%CI¼0.927e0.975(DeLongmethod).TheROCcurvewasdrawnusingtheone-vs-rest
+methodsinthemulticlassclassification.CI,confidenceinterval;ROC,receiveroperatingcharacteristic.
+SupplementaryFigureS2.Anexampleusingtheonlinealgorithm.Theclinicalphotographswerecapturedinthestudiowithabrightnessof300luxeither
+usingasoftboxorwithoutaflash.ThebodyofthedigitalcamerawaseitherNikonD7100orD7500,andthezoomlenswaseitherAF-PDXNIKKORZoom18-
+55mmf/3.5-5.6GorAF-SDXNikkorZoom18-55mmf/3.5-5.6G.Algorithm’sfivediagnoses,theirprobabilities,andmalignancyscorewereusedforthe
+experiment.Multiplemacroimageshavingthelargelesionofinterestatthecenterwereuploaded.InterpretationoftheTopoutputsandmalignancyoutputwas
+instructedasfollows:(i)Topoutput:theTopoutputrangefrom0.0to1.0(Topoutput(cid:5)0.2:thepredicteddiagnosisisameaningfuldifferentialdiagnosisand
+Topoutput<0.2:onlyasmallchanceforthepredicteddiagnosis).(ii)Malignancyoutput:themalignancyoutputrangesfrom0to100(malignancyscore(cid:5)20:
+highchanceofmalignancy;malignancyscore(cid:5)10and<20:stillsomechanceofmalignancy;andmalignancyscore<10:maybebenign).Thepatientpictured
+inthisfigureconsentedtothepublicationoftheimage.
+2362.e2 JournalofInvestigativeDermatology(2022),Volume142

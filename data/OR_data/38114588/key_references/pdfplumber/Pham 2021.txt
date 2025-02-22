@@ -1,0 +1,613 @@
+4040 IEEEROBOTICSANDAUTOMATIONLETTERS,VOL.6,NO.2,APRIL2021
+Negative Emotion Management Using a Smart Shirt
+and a Robot Assistant
+MinhPham ,HaManhDo ,ZhidongSu ,AlexBishop,andWeihuaSheng
+Abstract—Negativeaffectssuchasanger,fear,nervousness,de- anxiety, or hostility may increase human’s susceptibility to
+pression, etc., may increase human’s susceptibility to illness. In illness[3].Emotionregulationdeficitscontributetothedevelop-
+thisletter,weproposeanegativeemotionmanagementsystemthat
+mentofdepressionandanxiety,panic,andstressdisorders[4].
+is able to recognize negative emotions through ECG signal and
+Todealwithsuchmentaldisorders,acommontechniqueistouse
+performemotionregulationthrougharobotassistant,whichhas
+apotentialforreducinghealthrisks.Asmartshirtisdevelopedto cognitive behavioral therapy (CBT), or conversations between
+collecttheECGsignalfromthehumanbody.Therobotassistant a therapist and a patient. Recently virtual therapists or robot
+has the ability to engage in verbal conversations with humans. assistantssuchasWoebot[5]andPARO[6]havebeendeveloped
+RecurrenceQuantitativeAnalysis(RQA)isusedtoextractECG
+to deliver CBT. However, it will be even better if robots can
+features for emotion classification purpose. Along with our own
+preventpeoplefromdevelopingmentalillness.
+dataset, two other public datasets, RECOLA and DECAF, are
+alsousedtoevaluateourmethodology.Thedetectionofnegative Therefore it is crucial to prevent humans from being in
+emotioncantriggertherobotassistanttohelptheusergetoutof negative emotions for a long time. To this end, we need to
+such situations through interactive conversations. We tested and solve two problems: 1) how to detect negative emotions, and
+evaluatedtheproposedframeworkthroughexperiments.Wealso
+2) how to help the human get out of such emotions when
+assessedtheeffectivenessoftheinteractionswiththerobotonthe
+detected. Human emotions can be recognized based on facial
+emotionalwell-beingofolderadults.
+expression,voice,orbodygestures.However,thesesignalscan
+Index Terms—Human-centered robotics, robot companions, beconsciouslycontrolledbythehumanandmaynotreflectareal
+socialhuman-robotinteraction.
+emotion.Anotherapproachistorecognizehumanemotionusing
+physiologicalsignalssuchasheartactivity(Electrocardiogram
+I. INTRODUCTION -ECG)[7],brainsignal(Electroencephalography-EEG)[8],or
+galvanicskinresponse[9],whicharemorereliableandobjective
+A. Motivation
+sources of information about human emotion. A person can
+MENTALhealthreferstobehavioral,cognitive,andemo- regulate his or her own emotions, which refers to an intrinsic
+tionalwell-beingwhichaffectshowwefeel,think,and emotionregulation,bypunchingapillow,textingortalkingto
+act[1].Positiveemotionalstatescorrelatewithhealthypatterns afriend,takinganap,orlisteningtomusic.Ontheotherhand,
+of responding in cardiovascular activity and the immune sys- aperson’semotionscanbealteredthroughconversationswith
+tem[2]whilenegativeemotionalstatescancauseunhealthypat- other persons, or so-called extrinsic emotion regulation [10].
+ternsofphysiologicalfunctioningandloweredimmuneactivity. Social robots have proved their capabilities in providing com-
+Negative affects such as anger, fear, nervousness, depression, panionshipandimprovingtheusers’mood[11].Thereforewe
+believethatsocialrobotscanofferasolutiontoextrinsicemotion
+regulation.
+ManuscriptreceivedOctober14,2020;acceptedFebruary28,2021.Dateof
+publicationMarch23,2021;dateofcurrentversionApril6,2021.Thisletter ThisletterpresentsanEmotionManagementSystem(EMS)
+wasrecommendedforpublicationbyAssociateEditorW.JohalandEditorG. whichconsistsofasmartshirtandarobotassistant.Thesmart
+Ventureuponevaluationofthereviewers’comments.Thisworkwassupportedin
+shirtisusedtocollectECGsignalinordertoclassifyemotional
+partbytheNationalScienceFoundation(NSF)underGrantsCISE/IIS1427345,
+CISE/IIS1910993,EHR/DUE1928711,inpartbyNSFCISE/IIS1838808,NSF states.Onceanegativeemotionisdetected,therobotassistant
+OIA1849213,inpartbyOpenResearchProjectoftheStateKeyLaboratory startsaninteractiveconversationtodistractandhelpthehuman
+of Industrial Control Technology, Zhejiang University, China (under Grant
+out of such negative emotions. The main contributions of this
+ICT2021B14),thisresearchisapprovedbytheOklahomaStateUniversityIRB
+CommitteeunderIRBnumberEG-133.(Correspondingauthor:WeihuaSheng.) letter are three-fold. First, we proposed a closed loop system
+MinhPhamiswiththeBaptistHealthSouthFlorida,CoralGables,FL33143 forhealthmonitoringandhealthcaredeliverywhichproactively
+USA(e-mail:minhtp@ostatemail.okstate.edu).
+intervenes when health situation emerges, while most existing
+HaManhDoiswiththeLouisvilleAutomation&RoboticsResearchInsti-
+tute(LARRI),UniversityofLouisville,Louisville,KY40292USA(e-mail: systemsfocusonhealthmonitoringonly.Second,werealizedthe
+ha.do@okstate.edu). major components of the EMS using wearable computing and
+ZhidongSuandWeihuaShengarewiththeSchoolofElectricalandComputer
+socialroboticstechnologies,whichisthefirstofitskind.Third,
+Engineering,OklahomaStateUniversity,Stillwater,OK74078USA(e-mail:
+zhidong.su@okstate.edu;weihua.sheng@okstate.edu). weconductedexperimentalevaluationofthemajorcomponents
+Alex Bishop is with the Department of Human Development and Fam- oftheEMSwithdifferentagegroupsinalabenvironmentand
+ilyScience,OklahomaStateUniversity,Stillwater, OK74078USA(e-mail:
+tested the robot assistant with local seniors. The preliminary
+alex.bishop@okstate.edu).
+DigitalObjectIdentifier10.1109/LRA.2021.3067867 resultsarepromisingandestablishasolidfoundationforusto
+2377-3766©2021IEEE.Personaluseispermitted,butrepublication/redistributionrequiresIEEEpermission.
+Seehttps://www.ieee.org/publications/rights/index.htmlformoreinformation.
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.
+PHAMetal.:NEGATIVEEMOTIONMANAGEMENTUSINGASMARTSHIRTANDAROBOTASSISTANT 4041
+pursuefurtherresearchinthisdirection.Theletterisorganizedas
+follows:therestofSectionIgivesareviewofpreviousworkson
+emotionrecognitionandemotionregulation.SectionIIpresents
+anoverviewoftheEMS.SectionIIIdescribesourmethodology
+ofnegativeemotionrecognitionandemotionregulation.Section
+IV presents the results of negative emotion recognition and
+emotion regulation by the robot assistant. Section V gives the
+conclusionandfuturework.
+Fig.1. Theemotionmanagementsystem.
+B. LiteratureReview
+1) Emotion Recognition: Recognizing emotion based on
+physiological signals is more reliable than external behaviors
+likefacialexpressionorspeech[12].Signalssuchaselectrical
+activities of human brain and heartbeat have been used in the
+researchofemotionrecognition[8].Comparedtobrainsignal,
+the heartbeat is easier to collect in practice. In [13], support
+vector machine was used to recognize emotions like amuse-
+ment,sadness,andneutralfromphysiologicalsignals.Theheart
+rate and galvanic skin response were utilized as the emotional
+features. In [14], several convolutional and recurrent neural
+networkswereusedtopredictaffectfromelectrocardiogramand
+electrodermal activities. A regularized deep fusion framework
+basedonmultimodalphysiologicalsignalswasusedforemotion
+Fig.2. Thesmartshirtandtherobotassistant.
+recognitionin[15].Emotionrecognitionbasedonphysiological
+signals using convolution neural networks were also proposed
+in[16]and [17].ECG-based emotionrecognition has recently
+distress. According to [23], through experiments, the authors
+been adopted in human health research and human-computer
+claimthatpeoplecanbedistractedfromnegativeemotionsby
+interaction(HCI).ECGsignalcanbecollectedandprocessedin
+loading their working memory. The more working memory is
+manydifferentways.Forexample,in[7],theauthorsproposed
+being used by a distracting activity, the less room will remain
+amethodtoperformECGsynthesis,signaldecomposition,and
+fornegativeemotionstopersist.Experimentalresultsfrom[23]
+featureextractionbasedontheEmpiricalModeDecomposition
+demonstratethatsolvingamathproblemisanefficientwayto
+(EMD) method. They used the International Affective Picture
+load working memory. The participants in those experiments
+System(IAPS)datasetandtheirowndatasetforemotionrecog-
+reported that their negative emotion was reduced after solving
+nition.In[18],timeandfrequencydomainanalysisisappliedfor
+mathproblems.
+featureextraction.Severalnonlinearindicesareextractedbased
+onApproximateEntropy,LaggedPointcarePlotandDetrended
+II. SYSTEMOVERVIEW
+FluctuationAnalysis(DFA).Theirexperimentalresultsshowa
+recognitionaccuracyof84.72%onthevalencedimension,and A. Overview
+84.26%onthearousaldimension.In[19],thenon-linearfeature
+AsshowninFig.1theproposedEmotionManagementSys-
+Hurst is computed using Rescaled Range Statistics (RRS) and
+tem (EMS) works as follows. Through a wearable unit called
+Finite Variance Scaling (FVS) methods. The accuracy of clas-
+smart shirt, human’s ECG signal is collected and processed to
+sifying six emotional states (happiness, sadness, fear, disgust,
+detectnegativeemotions.Thisdetectionresultissharedwiththe
+surpriseandneutral)is92.87%,and76.45%usingrandomand
+robotassistant.Ifanegativeemotionisdetected,therobotassis-
+subjectindependentvalidationrespectively.
+tant engages the human in interactive conversations, therefore
+2) Emotion Regulation: Emotion self-regulation is consid-
+formingaclosed-loophealthmonitoringandhealthcaredelivery
+ered human’s ability to control emotional reactions. However,
+system.
+regulation failure is common, especially when people are in
+negative emotions [20]. The failure of emotion self-regulation
+B. SmartShirtandRobotAssistant
+may lead to failures of self-regulation in other behaviors [21].
+It is desirable to get the human out of negative emotion once The smart shirt consists of textile ECG electrodes, a respi-
+it occurs. One of the solutions is to distract them. In [22], ration belt, a sensor platform and a microcontroller as shown
+the laboratory studies show that inducing depressed people to inFig.2(a).Tomakeitmorecomfortable,weusetextileelec-
+focus on positive distractions can reduce their negative affect. trodes and conductive threads to collect physiological signals.
+Those studies also show that inducing depressed people to Conductivemetalizednylonfabricischosenbecauseithasgreat
+be distracted from negative thoughts leads to relatively more conductivity and is easy to sew by using a fusing method. A
+positiveappraisalsofsituations,betterproblemsolving,andless singleleadECGsignaliscollectedfromthegarmentusingthe
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.
+4042 IEEEROBOTICSANDAUTOMATIONLETTERS,VOL.6,NO.2,APRIL2021
+Lead-IIconfiguration.Thesignalisamplifiedandsampledata
+rateof200Hz,whichissufficientfordetectingheartrate,study-
+ingheartratevariabilityandarrhythmias[24].Therespiration
+belt is an inductive transducer which measures the changes in
+thoracicorabdominalcircumferenceduringrespiration.Inthis
+work, we only used the ECG signal for emotion recognition
+because:1)Therespirationdatawasnotprovidedbythepublic
+data sets RECOLA and DECAF; 2) Using only ECG to build
+modelswillallowthisresearchtoextendtomanycommercial
+wearable devices suchsmartwatches, wristbandsthatcan only
+collectECGsignals.
+Fig.3. RecurrenceplotofECGsignalwithnon-negativeemotion.
+As shown in Fig. 2(b), the robot assistant is a 3D printed
+desktop robot. Its software features a conversational interface
+thatcombinesspeechrecognition,spokenlanguageunderstand-
+ing and speech synthesis, which makes it capable of verbal
+conversations with humans. It consists of three parts: a robot
+head, abody, andabase.The robot’shead hastwodegrees of
+freedomandcanturntothedirectionwherethesoundiscoming
+from.Therobotalsofeaturesavisionsystemthatconsistsofan
+RGB-Dcamerausedforfacedetectionandanauditorysystem
+of four microphones allowing speech recognition and sound
+localization. Details of the robot design can be found in our
+previouswork[25].
+Fig.4. RecurrenceplotofECGsignalwithnegativeemotion.
+III. METHODOLOGY
+A. EmotionRecognition
+andtimedelay.
+WeusethesmartshirttocollecttheECGdatafromthehuman.
+The raw ECG signal is filtered using a bandpass filter within x(cid:3) i =(u(i),u(i+τ),...,u(i+τ(m−1))), (2)
+the frequency band at 5-15 Hz to remove unwanted noise, for
+where u(i) is the time series, τ is the embedding time delay
+example,electricalandmuscleartifacts.Then,featuresareex- andmistheembeddingdimension.Toestimatethetimedelay,
+tractedusingaslidingwindowof4-secondwidthand2-second
+we use mutual information analysis [28], and the time delay
+step size. The ECG signal ready for analysis has a sampling
+τ which minimizes the mutual information is selected. The
+rate of 200 Hz. From the ECG data, the heart rate and heart delay time τ =14 is chosen. The embedding dimension m
+ratevariabilitycanbederivedbydetectingRpeaks.Featuresin
+of the ECG signal is determined by using the False Nearest
+time and frequency domain, as well as nonlinear features, are
+Neighbors (FNN) method [29]. An appropriate dimension is
+extractedastheinputtotheclassificationmodels.Inthiswork
+selected in such a way that most of the nearest neighbors do
+wefocusonrecurrencequantitativeanalysis(RQA),whichisa
+notmoveapartsignificantlyinthenexthigherdimension.The
+methodofnonlineardataanalysis,toinvestigatethedynamicsof
+embeddingdimensionm=5isselected.Eachpointofthephase
+heart’selectronicreactivitytoemotionchanges.Thereareonly spacetrajectoryx i isevaluatedifitiscloseenoughtoanother
+afewstudiesapplyingRQAonECGsignaltorecognizehuman
+point of the trajectory x j (less than a specified threshold (cid:2)).
+emotion. Recently, Goshvarpour et al. [26] indicated that the
+In the 2-D recurrence plot, the states at time i and time j are
+RQAisoneofthemostsignificantfeaturestodifferentiatetwo denotedbyblackpointsifR
+i,j
+≡1andwhitepointsifR
+i,j
+≡0.
+groups,menorwomen,basedonECGresponseswhilewatching
+Fig.3andFig.4showtherecurrenceplotsof4-secondsECG
+sadimages.Ithasalsobeenshownthatnonlinearfeatureshave
+datacorrespondingtonon-negativeandnegativeemotionlabel,
+the advantage in physiological signals processing to deal with respectively, with τ =14, m=5 and (cid:2)=0.07. Based on the
+negativeaffect.
+recurrence plot, the RQA measures are extracted and used to
+1) RecurrencePlot(RP): TheRQAmeasuresarecalculated
+buildtheclassificationmodels.
+basedonrecurrenceplots,whichisagraphvisualizingthetimes
+2) RQAMeasures: BasedontheRP,theRQAmeasuressuch
+thataphasespacetrajectorytravelstothesameplaceagain[27].
+as RR, DET, LMAX, VMAX, ENT, TND, LAM, and TT are
+ThedefinitionofRPisshownbelow
+extracted[30].
+(cid:2)
+R i,j =Θ((cid:2) i−x(cid:3) i−x(cid:3) j), x(cid:3) i ∈Rm, i,j =1,...,N (1) RecurrencerateRR:Thepercentageofrecurrencepoints
+whereN isthenumberofconsideredstatesx i,(cid:2) iisathreshold (cid:2) i Dn ea ten rmRP in: iR smR D= ETN1 :2 Tsu hm
+e
+N i p, ej= rc1 eR nti a,j
+ge of recurrence points
+distance, (cid:3)·(cid:3) a norm and Θ(·) the Heaviside function. In our
+whichformdiagonallines:
+case,onlyonetimeseriesofECGsignalisavailable,therefore (cid:2) N lP(l)
+thephasespacecanbereconstructedbyembeddingdimension
+DET = (cid:2)l= Nlmin
+lP(l)
+l=1
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.
+PHAMetal.:NEGATIVEEMOTIONMANAGEMENTUSINGASMARTSHIRTANDAROBOTASSISTANT 4043
+(cid:2)
+Longest diagonal line LMAX: The length of the longest
+diagonalline:
+LMAX =max({l ; i=1,...,N })
+(cid:2) i l
+Longest vertical line VMAX: The length of the longest
+verticalline:
+VMAX =max({v ; i=1,...,N })
+(cid:2) i v Fig.5. Theconversationalinterfaceoftherobotassistant.
+Entropy ENT: The Shannon entropy of the probability
+distributionofthediagonallinelengthsp(l):
+(cid:2)
+ENT =− N p(l)lnp(l)
+(cid:2) l=l min 40ms.OurmodelsusedRQAmeasuresextractedfrom4-second
+TrendTND:ThepalingoftheRPtowardsitsedges:
+(cid:2)
+TREND = (cid:2) N i˜ =1(i (cid:2)−N
+N
+i˜˜ =/ 12 (i) −(R N˜R /i 2− )2(cid:5)RR i(cid:6))) w o thfi rd eet smh ho ow t lii don snd (o 7fw o 0rs %o evf 8eE 0r %C yG 4 a- ns si deg cn 9oa 0nl %. dT )wh tu oins d, d ew o cwe id,h eaa nd todto kw ed e ee pt ue osrm e rd rin ed je eifa cf tela r tb e hne al t
+t
+TrappingtimeTT:Theaveragelengthoftheverticallines:
+(cid:2) N vP(v) data.Wewouldrejectitif,inthat4-secondwindow,thereisno
+(cid:2)
+TT =TT = (cid:2)v
+N
+v= =v vm min
+inP(v) label with the outcome exceeding the thresholds. The valence
+Laminarity LAM: The percentage of recurrence points valuefluctuatessignificantlyinsmallamountsoftime,whichis
+whichformverticallines: notfeasiblefortheheartsignaltoreactproperlytotheemotion
+(cid:2)
+LAM = (cid:2)N v=vminvP(v) changes. To deal with this issue, first, we took the average of
+N vP(v)
+v=1 allvalencevaluesevaluatedfromsixannotators.Theinter-rater
+Where
+agreement has been evaluated by the authors of the RECOLA
+N ?thenumberofpointsonthephasespacetrajectory.
+and DECAF dataset. A median filter is applied to smoothen
+N l -thenumberofdiagonallinesintherecurrenceplot.
+thevalence,whereweusedtheMATLABfunctionMEDFILT1
+N v ?thenumberofverticallinesintherecurrenceplot.
+with a window size of 200 ms. The valence values are then
+P(l),P(v) - the histogram of the line lengths of diago-
+converted to a binary format with 0 as the threshold point. A
+nal/verticallines.
+N˜
+- the maximal number of diagonals parallel to the LOI
+sliding window with 4-second width and 2-second step size is
+usedtoloopthroughthelabeleddata.Awindowthresholdσis
+whichwillbeconsideredforthecalculationofTND.
+used,whichdetermines theunique labelof thewholewindow
+3) Classification: The emotional state labels include nega-
+size of the data, i.e. 1000 data points. If there are more than
+tive (1) and non-negative (0). In the study, the negative and
+σ% of 1000 data points with the same label, then that label is
+non-negativelabelsarecategorizedbasedonthevalencevalues
+assigned to the window. Otherwise, the window of data is not
+ofindividualemotionsprovidedinthepublicdatasetRECOLA
+usedfortraining.Theσvalueischosenat70%,80%and90%,
+and DECAF. RECOLA dataset [31] was obtained from 23
+respectively.IntheDECAFdataset,anemotionlabelisassigned
+participants, in which their audiovisual and physiological data
+toawholesessionoftheexperimentinwhichapersonwatches
+were collected while performing experiments. The video and
+a movie clip. In this case, the label is kept unchanged and the
+audio data were recorded at 25fps and 44.1 kHz, respectively.
+preprocessingmethodisappliedthesamewayaswedoonour
+Thebio-signalsincludeECGandEDA(ElectrodermalActivity).
+dataset.
+Inaddition,theparticipants’personalinformation,suchasage,
+4) EmotionRecognitionMethod: Weusethefollowingma-
+genderandmothertongue,werealsorecorded.Theannotations
+chine learning algorithms for emotion recognition: neural net-
+were performed on the ANNEMO web-based annotation tool
+work, decision tree, gradient boosting and SVM RBF. Those
+by six people, three females and three males. The label of
+respectivemodelsarebuiltbyusingtheSASsoftware.A5-fold
+emotions,presentedasvalenceandarousal,wasmarkedwitha
+crossvalidationstrategyisusedtotrainthemodels.
+framerateof40ms.DECAFdataset[32]wasobtainedfrom30
+participants(14femalesand16males).Therecordedbiosignals
+B. EmotionRegulation
+include brain signal (Magnetoencephalogram -MEG), ECG,
+Bi-polar horizontal Electro-oculogram (hEOG) and Bi-polar Therobotinitiatesinteractiveconversationswiththehuman
+trapeziusElectro-myogram(tEMG).TheNear-Infra-Red(NIR) in order to help the human get out of negative emotions if
+facialdatawerealsorecorded.Theemotionalstatuswaselicited detected. A conversational interface (CI) is developed in the
+by letting the participants watch different music videos and robot, which provides functions such as converting voice to
+movievideoclips.Weclassifiedtheemotionswithvalenceless text, analyzing intents and actions, generating responses and
+than0asnegativeemotions,whichincludeanger,disgust,fear converting text to speech. As shown in Fig. 5, the CI features
+and sadness. Emotions with valence greater than or equal to a speech recognizer, a natural language interpreter, a dialogue
+0 are grouped in non-negative category, which includes calm, state tracker, dialogue response selection, a natural language
+happiness,andexcitement. generator, and a text-to-speech synthesizer. Automatic Speech
+We apply the same methodology of data preprocessing and Recognizer converts a speech signal to a sequence of words
+featureextractiontotheRECOLAandDECAFdatasetforcom- usingGoogleCloudSpeechAPIs.NaturalLanguageInterpreter
+parisonpurpose.However,weneedtodosomeextradatapro- isresponsibleforextractingthestructureandmeaningofinput
+cessingonemotionlabels.IntheRECOLAdataset,anemotion text,whichisenabledbyGoogleCloudNaturalLanguageAPIs.
+intermsofvalenceandarousalislabeledbysixannotatorsevery Dialogue State Tracker and Dialogue Response Selection are
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.
+4044 IEEEROBOTICSANDAUTOMATIONLETTERS,VOL.6,NO.2,APRIL2021
+supportedbytheGoogleAPIAI.WecombinetheAPIAIwith
+the expression evaluation in our emotion regulation system.
+This allows the conversations to be tracked properly. Natural
+LanguageGeneratorisusedtogeneratetextualsummariesfrom
+theinputdataset.Generally,itconsistsofdataanalysisandtext
+generator.Inourcase,theinputdataisonlyfromwhatthehuman
+saysduringtheconversation.Text-to-SpeechSynthesizerisused
+to convert normal language text into speech with proper tones
+ofvoice.Googletext-to-speechisusedintherobotassistant.
+According to the literature [23], an efficient way to distract
+humansistomakethemactivelyusetheirworkingmemoryarea,
+forexamplesolvingasimplemathematicsproblem.Therefore, Fig.6. EmotionelicitationusingOculusRift.
+in this study, our idea is to enable the robot to engage the
+human in interactive conversations. We develop several types
+of conversation with different complexity levels to adapt to using traditional methods of watching 2D videos, our method
+different intensities of the negative emotions the human may makesiteasiertoinducetheparticipant’semotion.Videosare
+have.Theconversationsbetweenthehumanandtherobotcan manually classified into different categories corresponding to
+beusedforanalysisandimprovingtheinteractiveconversations emotional states such as anger, disgust, fear, sadness, neutral,
+inthefuture.Asampleconversationbetweentherobotandthe calm,andhappiness.
+humanrunsasasfollows. 2) Data Collection: The experiment is conducted in a dark
+(cid:2)
+Robot:HiMinh,howareyoudoingnow? room so that the participants can be immersed in the virtual
+Human:Iamalittlebitsad. environment as much as possible. There are totally ten male
+(cid:2)
+Robot:Iamsorrythatyoufeelsad.Canyoujoinmeplaying participants taking part in this data collection activity, who
+something?Canyougivemetwonumbers,please? are graduate students of age between 26 and 40. The current
+Human:It’sOK.Number7andnumber3. version of the garment prototype we developed did not work
+(cid:2)
+Robot:Whatisthesummationof7and3? well with female bodies in terms of data acquisition quality.
+Human:Itis10. Therefore,onlymaleparticipantswererecruited.Aspartofthe
+(cid:2)
+Robot: Awesome, it’s correct. What are you feeling now, future work, we will redesign the garment to make it fit for
+Minh? femalebodies.Eachparticipantwearsthesmartshirtwithtextile
+Human:Iamstillsad. electrodesintegratedtocollecttheECGsignalwhilewatching
+(cid:2)
+Robot: I am sorry that you are still sad. Can you do thevideos.Wesearched3Dand360-degreevideosonYouTube
+multiplicationof7and3andplus5. using emotional power words in each emotion category. The
+Human:Itis24,correct? totallengthofthecollectedvideosis132minutes36seconds.
+(cid:2)
+Robot:No,it’swrong.Canyoutryonemoretime? We had 3 people who watched the videos and assessed them.
+Human:Oh,itis26. We collected 43 videos with different categories. The lengths
+(cid:2)
+Robot:Awesome,it’scorrect.Howdoyoufeelnow,Minh? of the videos are around 2 to 4 minutes. Finally, 43 videos
+Human:Ifeelbetternow. wereselectedfortheexperiment,including:anger:6,disgust:8,
+(cid:2)
+Robot:Iamgladthatyoufeelbetternow.Doyouwantto fear:8,sadness:7,calm:8,happiness:6,excitement:6.Duringthe
+chatwithmeforawhile? experiments,eachparticipantwasaskedtowatchaneutralvideo
+Human:No,Ihavetogoout. before watching a video for emotion elicitation, then he was
+(cid:2)
+Robot:Ok,byefornow. asked a few questions such as in which parts of the video that
+hefeltsad/disgusted/etc.,andthecorrespondingintensitywith
+IV. EXPERIMENTALEVALUATION ascaleof1to10.Thenumberofvideosshowntoparticipants
+were also different because different participants had different
+A. EmotionRecognitionExperiment
+reactionstothesamevideo.
+1) Experimental Setup: In order to elicit emotion and col- Tomakesuretheyreallyexperiencethedesiredemotion,on
+lect data from the participants, a set of hardware components one hand, we use different categories of video. On the other
+includingasmartshirt,anOculusRift,andakeypadareused, hand, a post-interview is conducted after each video to ask
+asshowninFig.6.RecentdevelopmentofVirtualReality(VR) abouttheirfeeling.Inaddition,weequipthemwithawireless
+technologyprovidesa3Dimmersiveenvironmentandoffersa keypad so that they can press a button to mark the moment
+better solution to inducing user emotion reactions [33]. In our whentheyfeeltheyareexperiencing acertainemotionduring
+research, we use the Oculus Rift headset and a set of videos experiments,asshowninFigure6.Eachvideoinourcollection
+toconducttheexperiment.BywearingtheVRgoggletowatch was used to elicit a single emotion, i.e. anger, disgust, fear,
+videos,thewearerisisolatedfromthesurroundingenvironment, sadness, neutral, calm, or happiness. Thus, only one key was
+soitcanminimizeunwantedinterferencefromoutsideaffecting usedtomarktheemotion.TheECGdataatthattimeismarked
+his/her emotion. This equipment works with 3D videos, 360◦ with the label of that emotion. All data from the shirt and the
+videos,aswellasnormal2Dvideos.Comparedtootherstudies keypadaresynchronizedandsenttoacomputerwirelesslyfor
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.
+PHAMetal.:NEGATIVEEMOTIONMANAGEMENTUSINGASMARTSHIRTANDAROBOTASSISTANT 4045
+to the RECOLA dataset with the window threshold σ =70%.
+When applying classification models on the DECAF dataset,
+however,thehighestaccuracyisonly60%.
+The difference in classification accuracy among the three
+datasetsmaybecausedbythedifferenceinthewayofeliciting
+andlabelingemotions.Inourdatacollectionprocess,usingthe
+Oculus Rift offers an immersive VR environment to elicit ex-
+pectedemotions.Anemotionlabelismarkedbytheparticipant
+whilewatchingmovieclips,andthecorrespondingone-minute
+ECG signal is marked too. That one-minute ECG reflects the
+emotionchanges,andthetrainingdatabuiltupfromsuchECG
+signalsresultsinhigheraccuracy.Thisresultalsoshowsthatour
+methodoffersabetterwaytocollectdataforemotionrecognition
+usingECGdata.
+B. EmotionRegulationExperiment
+1) ExperimentalSetup: Anotherexperimentwasconducted
+withthesametensubjectsinthedatacollectionphasetoevaluate
+theinteractiveconversation.Thepurposeofthisexperimentis
+tomaketheparticipantshavenegativeemotionbywatchingthe
+Fig.7. Emotionrecognitionresultsonourowndataset,RECOLAdataset,and
+videothroughtheOculusRift.Thebinaryclassificationmodel
+DECAFdataset.
+whichwasbuiltinthepreviousphasewasappliedtothereal-time
+ECGdatatoclassifyemotion.Therobotengagedtheparticipant
+TABLEI inaconversationifanegativeemotionwasdetected.Finally,a
+RESULTOFNEGATIVEEMOTIONCLASSIFICATION survey was conducted in which they were asked if they really
+experiencedacertainemotionwithalevelofintensity(from1
+to10),andiftheyfeltdistractedornotaftertheconversationwith
+the following choices: 1) Not distracted at all or 2) Distracted
+(orsomewhatdistracted).
+2) Results: The survey result shows that out of ten people,
+six felt sad and their mean arousal is 5.3 out of 10. Four felt
+disgustedandtheirmeanarousalis7.3outof10.Ourexperiment
+showsthat90%ofpeoplegotsomewhatdistractedordistracted
+and that people who had higher intensity were more likely to
+be distracted. The result is shown in Fig. 8. In order to test
+storinganddataanalysispurposes.Tenparticipantswereasked
+thewholesystem,weaskedeachparticipanttowearthesmart
+to watch videos in different categories. We selected 43 videos
+shirtandwatchasadnessvideoplayedbytherobot.TheECG
+and a normal movie had a 3-minute length. Each participant
+signalwascollectedforemotionrecognition.Asdemonstrated
+watched 1 or 2 videos of each category (anger, disgust, fear,
+in Fig. 9,when a sad emotion was detected, the robot started
+and sadness, calm, happiness, and excitement). Therefore, for
+an interactive conversion to ask him or her to solve simple
+eachofthe43videos,thereare15observationsonaverage.The
+mathematicsproblemsuntilsheorhegotoutofthesademotion.
+totalwatchingtimeisapproximately310minutes,butonly120
+TheexperimentsshowthattheproposedEMScanbeusedfor
+minutesweremarkedwithlabels,andthecorrespondingECG
+negativeemotionmanagement.
+signalswereusedfordataprocessing.
+3) Results: A summary of classification results on our
+C. EffectivenessExperimentoftheRobotas
+dataset, RECOLA dataset, and DECAF dataset is shown in
+CompanionsforOlderAdults
+Fig.7.Fig.7isavisualizationoftheconfusionmatriceswhen
+applyingdifferentmodelsondifferentdatasets.Class0means 1) ExperimentalSetup: Therobotwasusedinexperimentsto
+Non-Negative emotion and Class 1 means Negative emotion. furtherassesstheimpactofabriefsocialinteractionbetweenthe
+Beforeapplyingthemodels,toavoidbiasinclassification,we robotandolderadultsonsubjectiveratingsrelatedtoemotional
+performedunder-samplingtomakethenumberofobservations well-being. In this study, 26 community-dwelling older adults
+ofeachclasssimilartoeachother,whichmeans50%negative in a mid-sized community in North-Central Oklahoma, aged
+and 50% non-negative. Blue potions are true positive and true 60 to 92, were recruited to take part in an experimental study.
+negative.Redportionsarefalsepositive,andfalsenegative.As These26participantsincluded17femalesand9males,whoare
+showninTableI,forourdataset,theGradientBoostingmodel primarilyidentifiedasWhite/Caucasian(73.08%).Onaverage,
+hasthehighestaccuracyofclassification,whichis82.8%.The most participants reported having good overall health, vision,
+NeuralNetworkresultsinthehighestaccuracywhenitisapplied andhearing.
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.
+4046 IEEEROBOTICSANDAUTOMATIONLETTERS,VOL.6,NO.2,APRIL2021
+scale from 1 (Never) to 5 (Always). Summary scores for each
+subscalewerecalculatedwithhighscoresindicatinghighlevels
+of positive/negative affect. Fatigue was measured using the
+Iowa Fatigue Scale (IFS) [36] which is an 11-item measure
+adapted to address current levels of fatigue. The IFS assess
+overallfatiguerelatingtocognition,drowsiness,energylevels,
+and productivity. Participants rated how much each statement
+represented how they were feeling using a 5-point Likert-type
+scalefrom1(Notatall)to5(Extremely).Asummaryscorewas
+calculatedinwhichahighscorereflectedhighfatigueandalow
+scorerepresentedlowfatigue.
+We utilized innovative statistical methods to adopt a more
+person-centered analytical approach. Data were analyzed with
+concatenateordinalanalysesusingObservationOrientedMod-
+eling(OOM)[37].TheresultingstatisticsfromOOManalysis
+includeapercentcorrectclassification(PCC)index,indicative
+of the percentage of participants whose responses match the
+predicted pattern, as well as a c-value, or chance value. The
+chancevalueusesaseriesofrandomizedtrialstodeterminethe
+Fig.8. Experimentalresult. probabilityofobtainingtheresultingPCCvalue.
+2) Results: UsingOOMwefound16ofthe24experimental
+participantsfitthehypothesizedpatternandreporteddecreased
+feelings of loneliness after interacting with the robot (PCC
+= 66.67, c-value =. 05). For positive affect, OOM analyses
+indicated that 16 experimental participants reported increased
+positiveaffect(PCC=61.54,c-value=.03).Whenassessing
+negativeaffect,OOManalysesindicatedthattheexperimental
+conditionagainmatchedthehypothesizedpattern,suchthat18
+participants reported decreased negative affect (PCC = 69.23,
+c-value=.004).Therefore,itappearsthattheinteractionwith
+therobotreducedfeelingsofnegativeaffectforbothconditions
+fairly equally. Changes in fatigue were assessed using scores
+Fig.9. Adashboardmonitoringthereal-timephysiologicalsignals(right)and
+on the IFS. OOM analyses revealed that 21 experimental par-
+aninteractiveconversationbeingtriggeredafterthenegativeemotionisdetected
+(left). ticipantsreporteddecreasedfeelingsoffatigueafterinteracting
+withtherobot(PCC=80.77,c-value=.002).
+Priortoparticipation,allindividualsreadandsignedauniver-
+V. CONCLUSIONANDFUTUREWORK
+sity approved IRB informed consent. Prior to the engagement
+phase,participantscompletedapre-surveywhichincludedques- Inthisletter,wedevelopedanemotionmanagementsystem
+tions regarding personal demographics and self-reported lone- that recognizes human negative emotions based on the ECG
+liness,fatigue,andaffectbeforecompletingcondition-specific signalandregulatestheemotionthrougharobotassistant.The
+activities. Next, participants completed their activities during RQA, a nonlinear data analysis method, is used for feature
+the engagement phase. Participants engaged in a one-on-one extractionandresultsinhighaccuracyofnegativeemotionde-
+interactionwiththerobotandcompletedvariousactivitieswith tection.Ourrobotassistantcaninitiateinteractiveconversations
+therobot,includingconversationaltasks(e.g.,askingaboutthe to help the human get out of negative emotions. Based on our
+time,weather,andnews),hearinganinspirationalquote,telling experiment,theaccuracyofthenegativeemotionclassificationis
+knock-knockjokes,playingRock-Letter-Scissors,doingasim- around82.8%.Themajorcomponentsoftheclosedloopsystem
+plemathproblem,andlisteningtomusic.Aftertheengagement were validated in a lab environment and the companion robot
+phase concluded, all participants completed the post-survey, wasalsousedinatestwithlocalseniorstoevaluateitseffective-
+whichwasidenticaltothepre-survey. nessinpromotingemotionalwell-being.Thepreliminaryresults
+Perceptions of loneliness and social isolation were mea- are promising with noticeable improvement on test subjects’
+sured using the UCLA Loneliness scale [34]. To address cur- moodaftertheinteractions.Ourmethodcanbefurtherimproved.
+rent emotional well-being (affect), participants completed the Itisdesirabletoconductalargescaletestofthecompletesystem
+PANAS [35]. Half of the questions address positive affect inmorerealisticenvironments.Alsotherearesituationswhere
+(PANAS-P) whereas the other half address negative affect negativeemotionscanbebeneficialwhichisnotconsideredin
+(PANAS-N).Participantsratedcurrentpositiveornegativeemo- thiswork.Anotherlimitationofourworkisthatthesuppression
+tions (e.g., upset, hostile, inspired, attentive) on a Likert-type ordistractionfromnegativemoodisnotasustainablesolution
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.
+PHAMetal.:NEGATIVEEMOTIONMANAGEMENTUSINGASMARTSHIRTANDAROBOTASSISTANT 4047
+especially as an intervention by a robotic assistant. The robot [17] M.Lee,Y.K.Lee,M.-TOrcID.Lim,andT.-K.Kang,“Emotionrecog-
+needstobemoreintelligenttounderstandthecontextinwhich nitionusingconvolutionalneuralnetworkwithselectedstatisticalphoto-
+plethysmogramfeatures,”Appl.Sci.,vol.10,2020,Artno.3501.
+thenegativeemotionoccurs.Morereactionsorfunctionsshould
+[18] M.Nardelli,G.Valenza,A.Greco,A.Lanata,andE.P.Scilingo,“Recog-
+beimplementedfortherobotsotheycanbeusedaccordingly. nizingemotionsinducedbyaffectivesoundsthroughheartratevariability,”
+Inthefuture,weplantocombineECGandaudiovisualsignals IEEETrans.AffectiveComput.,vol.6,no.4,pp.385–394,Oct.-Dec.2015.
+[19] J.Selvaraj,M.Murugappan,K.Wan,andS.Yaacob,“Classificationof
+such as facial expression and voice. Such a multi-modality
+emotionalstatesfromelectrocardiogramsignals:Anon-linearapproach
+fusion method will allow us to recognize negative emotions basedonhurst,”Biomed.Eng.Online,vol.12,no.1,pp.1–18,2013.
+more accurately in more circumstances, especially when the [20] T. F. Heatherton and D. D. Wagner, “Cognitive neuroscience of self-
+regulationfailure,”TrendsCogn.Sci.,vol.15,no.3,pp.132–139,2011.
+ECGqualityisnotgood.
+[21] E. J. Leehr, K. Krohmer, K. Schag, T. Dresler, S. Zipfel, and K. E.
+Giel,“Emotionregulationmodelinbingeeatingdisorderandobesity-a
+REFERENCES systematicreview,”Neurosci.BiobehavioralRev.,vol.49,pp.125–134,
+2015.
+[1] MentalHealth.gov,WhatisMentalHealth?Accessed:Mar.31,2021.[On- [22] S. Nolen-Hoeksema, B. E. Wisco, and S. Lyubomirsky, “Rethinking
+line]. Available: https://www.mentalhealth.gov/basics/what-is-mental- rumination,”PerspectivesPsychol.Sci.,vol.3,no.5,pp.400–424,2008.
+health [23] L.F.VanDillenandS.L.Koole,“Clearingthemind:Aworkingmemory
+[2] P.Salovey,A.J.Rothman,J.B.Detweiler,andW.T.Steward,“Emotional model ofdistraction from negativemood,” Emotion, vol. 7, no. 4, pp.
+statesandphysicalhealth,”Amer.Psychol.,vol.55,no.1,pp.110–121, 715–723,2007.
+2000. [24] A. J. Camm et al., “Heart rate variability. standards of measurement,
+[3] S.Cohen,W.J.Doyle,D.P.Skoner,P.Fireman,J.M.GwaltneyJr,andJ.T. physiologicalinterpretation,andclinicaluse,”Eur.HeartJ.,vol.17,no.3,
+Newsom,“StateandtraitnegativeaffectasPredictorsobjectivesubjective pp.354–381,1996.
+symptoms of respiratory viral infections,” J. of personality and Social [25] F.ErivaldoFernandes,H.M.Do,K.Muniraju,W.Sheng,andA.J.Bishop,
+Psychol.,vol.68,no.1,pp.159–169,1995. “Cognitiveorientationassessmentforolderadultsusingsocialrobots,”in
+[4] M.BerkingandB.Whitley,“Emotionregulation:Definitionandrelevance Proc.IEEEInt.Conf.Robot.Biomimetics,2017,pp.196–201.
+formentalhealth,”AffectRegulationTraining.Berlin,Germany:Springer, [26] A.Goshvarpour,A.Abbasi,andA.Goshvarpour,“Domenandwomen
+2014,pp.5–17. havedifferentecgresponsestosadpictures?”Biomed.SignalProcess.
+[5] K.K.Fitzpatrick,A.Darcy,andM.Vierhile,“Deliveringcognitivebehav- Control,vol.38,pp.67–73,2017.
+iortherapytoyoungadultswithsymptomsofdepressionandanxietyusing [27] J.-P. Eckmann, S. O. Kamphorst, and D. Ruelle, “Recurrence plots of
+afullyautomatedconversationalagent(woebot):Arandomizedcontrolled dynamicalsystems,”EPL(EurophysicsLett.),vol.4,no.9,pp.973–977,
+trial,”JMIRMent.Health,vol.4,no.2,p.e19,2017. 1987.
+[6] R.Yuetal.,“Useofatherapeutic,sociallyassistivepetrobot(paro)in [28] A.M.FraserandH.L.Swinney,“Independentcoordinatesforstrange
+improvingmoodandstimulatingsocialinteractionandcommunicationfor attractorsfrommutualinformation,”Phys.Rev.A,vol.33,no.2,1986,Art
+peoplewithdementia:Studyprotocolforarandomizedcontrolledtrial,” no.1134.
+JMIRRes.Protoc.,vol.4,no.2,2015,Art.no.e4189. [29] M.B.Kennel,R.Brown,andH.D.Abarbanel,“Determiningembedding
+[7] F.Agrafioti,D.Hatzinakos,andA.K.Anderson,“ECGpatternanalysis dimensionforphase-spacereconstructionusingageometricalconstruc-
+for emotion detection,” IEEE Trans. Affective Comput., vol. 3, no. 1, tion,”Phys.Rev.A,vol.45,no.6,1992,Artno.3403.
+pp.102–115,Jan.-Mar.2012. [30] N. Marwan, N. Wessel, U. Meyerfeldt, A. Schirdewan, and J. Kurths,
+[8] S.Nasehi,H.Pourghassem,andI.Isfahan,“Anoptimaleeg-basedemotion “Recurrence-plot-based measures of complexity and their application
+recognitionalgorithmusinggabor,”WSEASTrans.SignalProcess.,vol.3, to heart-rate-variability data,” Phys. Rev. E, vol. 66, no. 2, 2002, Art
+no.8,pp.87–99,2012. no.026702.
+[9] M.Liu,D.Fan,X.Zhang,andX.Gong,“Humanemotionrecognition [31] F.Ringeval,A.Sonderegger,J.Sauer,andD.Lalanne,“Introducingthe
+basedongalvanicskinresponsesignalfeatureselectionandsvm,”inProc. recolamultimodalcorpusofremotecollaborativeandaffectiveinterac-
+Int.Conf.SmartCitySyst.Eng.,2016,pp.157–160. tions,” in Proc. 10th IEEE Int. Conf. Workshops Autom. Face Gesture
+[10] J.ZakiandW.C.Williams,“Interpersonalemotionregulation,”Emotion Recognit.,2013,pp.1–8.
+(Washington, D.C.), vol. 13, no. 5, pp. 803–810, Oct. 2013. [Online]. [32] M.K.Abadi,R.Subramanian,S.M.Kia,P.Avesani,I.Patras,andN.
+Available:https://doi.org/10.1037/a0033839 Sebe,“DECAF:MEG-basedmultimodaldatabasefordecodingaffective
+[11] S.Sabanovic,C.C.Bennett,W.-L.Chang,andL.Huber,“PAROrobot physiologicalresponses,”IEEETrans.AffectiveComput.,vol.6,no.3,
+affectsdiverseinteractionmodalitiesingroupsensorytherapyforolder pp.209–222,Jul.-Sep.2015.
+adults with dementia,” in Proc. IEEE 13th Int. Conf. Rehabil. Robot., [33] J.Marín-Moralesetal.,“Affectivecomputinginvirtualreality:Emotion
+Jun.2013,pp.1–6. recognitionfrombrainandheartbeatdynamicsusingwearablesensors,”
+[12] L. Shu et al., “A review of emotion recognition using physiological Sci.Rep.,vol.8,no.1,pp.1–15,Sep.2018.
+signals,”Sensors,vol.18,Jun.2018,Artno.2074. [34] D.W.Russell,“Uclalonelinessscale(version3):Reliability,validity,and
+[13] J.Domínguez-Jiménez,K.Campo-Landines,J.Martínez-Santos,E.De- factorstructure,”J.Pers.Assessment,vol.66,no.1,pp.20–40,1996.
+lahoz,andS.Contreras-Ortiz,“Amachinelearningmodelforemotion [35] D.Watson,L.A.Clark,andA.Tellegen,“Developmentandvalidationof
+recognitionfromphysiologicalsignals,”Biomed.SignalProcess.Control, briefmeasuresofpositiveandnegativeaffect:Thepanasscales,”J.Pers.
+vol.55,2020,Artno.101646. SocialPsychol.,vol.54,no.6,1988,Artno.1063.
+[14] G.Keren,T.Kirschstein,E.Marchi,F.Ringeval,andB.Schuller,“End- [36] A.Hartz,S.Bentler,andD.Watson,“Measuringfatigueseverityinprimary
+to-endlearningfordimensionalemotionrecognitionfromphysiological carepatients,”J.PsychosomaticRes.,vol.54,no.6,pp.515–521,2003.
+signals,”inProc.IEEEInt.Conf.MultimediaExpo.,2017,pp.985–990. [37] J.W.Grice,ObservationOrientedModeling:AnalysisofCauseinthe
+[15] X. Zhang et al., “Emotion recognition from multimodal physiological BehavioralSciences.1sted.Oxford,UK:AcademicPress,2011.
+signalsusingaregularizeddeepfusionofkernelmachine,”IEEETrans.
+Cybern.,pp.1–14,2020.
+[16] T.Song,G.Lu,andJ.Yan,“Emotionrecognitionbasedonphysiologi-
+calsignalsusingconvolutionneuralnetworks,”inProc.12thInt.Conf.
+Mach.Learn.Comput.,NewYork,NY,USA:Assoc.Comput.Machinery,
+2020,pp.161–165.[Online].Available:https://doi.org/10.1145/3383972.
+3384003
+Authorized licensed use limited to: National Changhua Univ. of Education. Downloaded on May 16,2021 at 23:04:12 UTC from IEEE Xplore. Restrictions apply.

@@ -1,0 +1,885 @@
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 BMC Psychiatry
+https://doi.org/10.1186/s12888-024-05532-6
+RESEARCH Open Access
+Demographic and clinical characteristics
+associated with anxiety and depressive
+symptom outcomes in users of a digital mental
+health intervention incorporating a relational
+agent
+Emil Chiauzzi1, Andre Williams1, Timothy Y. Mariano1,2,3, Sarah Pajarito1, Athena Robinson1,
+Andrew Kirvin‑Quamme1 and Valerie Forman‑Hoffman1*
+Abstract
+Background Digital mental health interventions (DMHIs) may reduce treatment access issues for those experienc‑
+ing depressive and/or anxiety symptoms. DMHIs that incorporate relational agents may offer unique ways to engage
+and respond to users and to potentially help reduce provider burden. This study tested Woebot for Mood & Anxiety
+(W‑MA‑02), a DMHI that employs Woebot, a relational agent that incorporates elements of several evidence‑based
+psychotherapies, among those with baseline clinical levels of depressive or anxiety symptoms. Changes in self‑
+reported depressive and anxiety symptoms over 8 weeks were measured, along with the association between each
+of these outcomes and demographic and clinical characteristics.
+Methods This exploratory, single‑arm, 8‑week study of 256 adults yielded non‑mutually exclusive subsamples
+with either clinical levels of depressive or anxiety symptoms at baseline. Week 8 Patient Health Questionnaire‑8 (PHQ‑
+8) changes were measured in the depressive subsample (PHQ‑8 ≥ 10). Week 8 Generalized Anxiety Disorder‑7 (GAD‑7)
+changes were measured in the anxiety subsample (GAD‑7 ≥ 10). Demographic and clinical characteristics were exam‑
+ined in association with symptom changes via bivariate and multiple regression models adjusted for W‑MA‑02 utiliza‑
+tion. Characteristics included age, sex at birth, race/ethnicity, marital status, education, sexual orientation, employ‑
+ment status, health insurance, baseline levels of depressive and anxiety symptoms, and concurrent psychotherapeutic
+or psychotropic medication treatments during the study.
+Results Both the depressive and anxiety subsamples were predominantly female, educated, non‑Hispanic white,
+and averaged 38 and 37 years of age, respectively. The depressive subsample had significant reductions in depres‑
+sive symptoms at Week 8 (mean change =—7.28, SD = 5.91, Cohen’s d = ‑1.23, p < 0.01); the anxiety subsample had
+significant reductions in anxiety symptoms at Week 8 (mean change = ‑7.45, SD = 5.99, Cohen’s d = ‑1.24, p < 0.01). No
+significant associations were found between sex at birth, age, employment status, educational background and Week
+8 symptom changes. Significant associations between depressive and anxiety symptom outcomes and sexual orien‑
+tation, marital status, concurrent mental health treatment, and baseline symptom severity were found.
+*Correspondence:
+Valerie Forman‑Hoffman
+valerie_hoffman@woebothealth.com
+Full list of author information is available at the end of the article
+© The Author(s) 2024. Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which
+permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the
+original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or
+other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line
+to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory
+regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this
+licence, visit http://creativecommons.org/licenses/by/4.0/. The Creative Commons Public Domain Dedication waiver (http://creativecom‑
+mons.org/publicdomain/zero/1.0/) applies to the data made available in this article, unless otherwise stated in a credit line to the data.
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 2 of 18
+Conclusions The present study suggests early promise for W‑MA‑02 as an intervention for depression and/or anxi‑
+ety symptoms. Although exploratory in nature, this study revealed potential user characteristics associated with out‑
+comes that can be investigated in future studies.
+Trial Registration This study was retrospectively registered on ClinicalTrials.gov (#NCT05672745) on January 5th,
+2023.
+Keywords Digital mental health intervention, Chatbot, Conversational agent, Relational agent, Depression, Anxiety,
+User characteristics, Natural language processing, Artificial intelligence
+Background may be particularly useful for those who wish to receive
+Mental health issues have consistently contributed help without speaking to a clinician due to stigma or
+to the worldwide disease burden [1]. This held true cost concerns [13]. Recent meta-analyses of conver-
+before but was exacerbated by the COVID-19 pan- sational agent delivered DMHIs indicate that they are
+demic, given its associated increase of 25% in depres- generally viewed favorably by users and may enhance
+sive and anxiety disorders [2]. Stressing already limited access to mental health care and improve mental health
+mental health treatment access and provider capacity, outcomes [11, 13, 19].
+the increased prevalence has left even more individu- When conversational agents are built to form an alli-
+als without needed care [3, 4]. In order to mitigate such ance with users over time, they may be referred to as
+prolific access and capacity issues, people experiencing relational agents [20, 21]. Some data have demonstrated
+symptoms of depression and anxiety may seek interven- that relational agents are able to form a working thera-
+tions with alternative delivery modalities [5]. Indeed, peutic alliance with users [22], which has been linked to
+the heightened need for treatment access has led to an improved mental health outcomes [23]. These capabili-
+increase in the use and study of technology-delivered ties, coupled with their immediate availability in some-
+mental health interventions [6]. Such interventions, one’s moment of need, offer the potential for relational
+known as digital mental health interventions (DMHIs), agents to extend the current menu of mental health ser-
+offer self-guided (no human support), guided (human vices available to those in need. Unfortunately, little is
+support specific to the DMHI offered via telephone, known about the characteristics of users who may benefit
+video, or text), or blended (a combination of DMHI plus from relational agent-delivered DMHI [11].
+human support) approaches to deliver treatment mod- The broader, non-relational agent-specific DMHI lit-
+ules and skill-building interventions [7]. DMHIs have erature provides some clues about what types of user
+included therapeutic techniques from one or more evi- demographic or clinical characteristics might be asso-
+dence-based psychotherapies, such as cognitive behav- ciated with outcomes among relational agent users, but
+ioral therapy (CBT) [7]. In aggregate, DMHIs have been much of the evidence has been inconclusive. DMHI stud-
+shown to produce at least moderate improvements in ies of depression and anxiety have reported inconsistent
+depressive and anxiety symptoms [8–10]. findings in outcomes by characteristics such as gender,
+Among DMHIs, there has been increased attention on age, marital status, or education [24–29]. Although there
+and proliferation of mental health chatbots [11, 12] also is preliminary evidence of the feasibility and acceptabil-
+known as conversational agents [13, 14]. Conversational ity of DMHI interventions for racial/ethnic, LGBTQ (les-
+agent-delivered interventions are often available on a bian, gay, bisexual, transgender, queer or questioning),
+smartphone application (app), enabling users access at and other marginalized or underserved groups, these
+any time for support and to address immediate prob- demographic and self-identity characteristics have been
+lems contextually in real time. Like the broader DMHI underexplored as predictors of outcomes in the DMHI
+category, conversational agent-delivered interventions literature [30, 31]. Individual DMHI studies address-
+may be founded in evidence-based psychotherapeu- ing racial and ethnic minorities have shown promise in
+tic approaches such as CBT, Acceptance and Commit- reducing depressive symptoms, but large scale prospec-
+ment Therapy (ACT), and Dialectical Behavior Therapy tive studies are lacking [31].
+(DBT) [7, 15–17]. In addition to thoughtful conversa- With regard to clinical characteristics, non-relational
+tional design, some conversational agents are bolstered agent-specific DMHI studies have generally found that
+by artificial intelligence and/or natural language pro- users with higher severity levels of anxiety and depression
+cessing (NLP) [18], which may enable response by deliv- tend to achieve greater improvement in these symptoms
+ery of therapeutic intervention and psychoeducational than those with lesser severity [8, 10, 32], likely an arti-
+content. Conversational agent-delivered interventions fact that these users have more room for improvement
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 3 of 18
+[8]. Surprisingly, the association between concurrent 3. Does the amount of depressive and anxiety symptom
+mental health treatment (i.e., psychotherapy and/or psy- reduction at Week 8 of a relational agent-delivered
+chotropic medications) and DMHI-related changes in DMHI differ by demographic characteristics, clinical
+depression and anxiety symptoms has seen little inves- characteristics (i.e., baseline anxiety and depression
+tigation. One study of health care workers during the symptom severity), and involvement in concurrent
+COVID-19 pandemic found that exposure to a mobile mental health treatment?
+phone–based mental health intervention did not signifi-
+Methods
+cantly affect Depression Anxiety Stress Scale-21 (DASS-
+21) scores in the overall sample, but a subgroup analysis Overall study description
+of those receiving psychotherapy or psychotropic medi- This exploratory study was non-randomized, single-
+cations found significant improvements in this group armed, and open-labeled. Study procedures were approved
+[33]. While some data exist on demographic and clinical by the WIRB-Copernicus IRB Group (WCG) institutional
+characteristic associations with mental health outcomes review board on January 20th, 2022. All participants pro-
+among the broad category of DMHIs, the authors could vided informed consent. Data was collected from W-MA-
+find no such data in the literature specific to relational 02 participants between May 11th, 2022 and July 20th,
+or conversational agent-delivered DMHIs. Thus, further 2022. The study was retrospectively registered on Clinical-
+exploration of putative demographic and clinical char- Trials.gov (#NCT05672745) on January 5th, 2023.
+acteristics among users of a relational agent-delivered
+DMHI is needed to illuminate optimal uses as well as Recruitment
+perhaps tailor interventions to the unique needs of indi- A convenience sample was recruited via social media
+viduals experiencing anxiety and depressive symptoms. advertisements, such as Facebook and Instagram, con-
+This present study evaluated Woebot for Mood and taining an embedded hyperlink to the study’s electronic
+Anxiety (W-MA-02), an intervention delivered via Woe- consent form. Upon signing the consent form, study staff
+bot, a relational agent that utilizes thoughtful conversa- emailed participants a link to complete the self-report
+tional design and some NLP to incorporate elements screening (assessing inclusion and exclusion criteria) and
+of CBT, Interpersonal Psychotherapy (IPT), and DBT baseline survey questions. The inclusion criteria were: (1)
+into a text-based interface on a smartphone app. Fea- 18 years of age or older, (2) residence in the United States
+sibility, acceptability, and efficacy studies using Woe- (U.S.), (3) reported English literacy, (4) availability to com-
+bot-based interventions have shown promise in young plete study activities, and (5) ownership or regular access
+adults reporting depressive symptoms [34], adults with to a smartphone with WiFi and sufficient data access for
+substance abuse issues [35], adolescents with depres- the duration of the study. The exclusion criteria were: (1)
+sive and/or anxiety symptoms [36], and adult women current suicidal ideation with a plan or intent to act or a
+with postpartum mood concerns [37, 38]. The present suicide attempt within the past 12 months, (2) a reported
+study sought to address gaps in the literature specific to lifetime diagnosis of a psychotic disorder (including schiz-
+a relational agent-delivered DMHI by first measuring ophrenia or schizoaffective disorder) or bipolar disorder,
+depressive or anxiety symptom changes after 8 weeks or (3) previous use of a Woebot application.
+of W-MA-02 use among participants with self-reported Participants who met inclusion and exclusion crite-
+clinical levels of depressive or anxiety symptoms at base- ria and who completed the baseline survey assessments
+line, respectively. In addition, the study explored asso- within 7 days of receipt were immediately provided
+ciations between participant demographic and clinical with a link to access and download W-MA-02. They
+characteristics and depressive and anxiety symptom out- were instructed to complete registration within 3 days
+comes. The research questions in this exploratory study using the study’s referral code and the same credentials
+included the following: entered at consent. Those who failed to register within
+3 days became ineligible for the study and thus were not
+1. Do participants with clinically elevated depressive enrolled. Participants who did not meet eligibility criteria
+symptoms at baseline have significant decreases in were thanked for their interest, given a list of national cri-
+symptoms at Week 8 of a relational agent-delivered sis resources, and exited from the study.
+DMHI?
+2. Do participants with clinically elevated anxiety Study procedures
+symptoms at baseline have significant decreases in Enrolled participants entered the 8-week intervention
+symptoms at Week 8 of a relational agent-delivered period, where they were invited to engage with W-MA-
+DMHI? 02 daily. Participants completed survey assessments
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 4 of 18
+Fig. 1 Participant Flow Through Study. EOI = end of intervention. EOS = end of study
+that were delivered outside of the application via email W‑MA‑02 intervention
+invitation at Day 3, Week 4 (mid-intervention), and W-MA-02 is intended for users seeking help with mood
+Week 8 (end of intervention; EOI). Upon the comple- management and tracking; it is not mental health dis-
+tion of the final survey, participants exited the study order-specific. The application is accessible as an iOS
+and their access to W-MA-02 was discontinued. Par- or Android smartphone application and hosts the rela-
+ticipants received a maximum of $100 in Amazon gift tional agent Woebot to guide users through psycho-
+cards for completing study assessments ($20, $30, and therapeutic content delivered via text-based messages.
+$50 for Day 3, Week 4, and Week 8, respectively; pay- Using proprietary natural language processing, the user
+ments were not linked to app usage). This study reports experience centers around goal-oriented conversations
+data collected at baseline and Week 8 (EOI). Figure 1 based on self-reported real-time needs. These conver-
+describes the participant flow through the study. sations are tailored to help the user develop emotion
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 5 of 18
+regulation skills in the context of problems experienced from the settings menu or by entering “SOS” in free
+in their everyday lives. W-MA-02 is grounded in scien- text. Potential concerning language detection triggers
+tifically validated psychotherapies (e.g., CBT, IPT, DBT) and confirmations were not actively monitored by staff
+and helps users address mood monitoring and manage- during the study.
+ment, as well as utilizes tools such as progress reflection, Due to the low-risk profile of this study, adverse
+gratitude journaling, and mindfulness practice. Previous events (AEs) were assessed by spontaneous participant
+studies of various Woebot applications, including the reports communicated outside of W-MA-02 and fol-
+W-MA-02 intervention, have provided evidence of fea- lowed a predetermined safety protocol. In the event of a
+sibility, acceptability and efficacy [34, 35, 38, 39], as well spontaneously reported AE to any study staff, the Prin-
+as demonstrated its ability to form a working alliance cipal Investigator would be immediately alerted with all
+with users [22]. Sample screenshots from W-MA-02 are available clinical and other details of the event. Based
+shown in Fig. 2. on this initial report, appropriate steps would be taken
+to gather further information as needed and address
+Ethical considerations the AE. During this study, no such AEs were reported.
+W-MA-02 is not a crisis service. However, it is
+equipped with an NLP algorithm that detects pat-
+terns in user free-text input that may suggest potential Assessments
+concerning language. Upon detection, W-MA-02 asks Participants were emailed links to survey assessments
+the user to confirm if they are in crisis. For all confir- through the Castor Electronic Data Capture (EDC) [40]
+mations, W-MA-02 provides a list of resources that platform, with a 7-day window to complete the baseline
+includes emergency contact phone numbers and sui- and Week 8 surveys reported herein. Completion of
+cide crisis hotline information. W-MA-02 then offers the baseline survey was considered Day 1 of the inter-
+tools to assist with addressing upsetting emotions and vention period. We tracked the assessment comple-
+thoughts in the moment. The list of resources is also tion rate, defined as completion of both the PHQ-8 and
+immediately available at any time to the user either GAD-7 at baseline and Week 8.
+Fig. 2 Screenshots of Mood Monitoring within W‑MA‑02
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 6 of 18
+Demographic battery intervention was defined as logging in to W-MA-02
+The baseline survey assessed demographic charac- during at least 50% (i.e., at least 4 of 8) of the study weeks
+teristics, including age, race/ethnicity, marital status, (yes vs. no).
+education, sexual orientation, employment status, and
+health insurance. Gender identity, while collected, did Statistical analysis
+not yield enough individuals who identified outside of Each set of analyses was performed on the two analytic
+the most common categories (Man or Woman) to allow subsamples: study participants with PHQ-8 ≥ 10 at base-
+for inclusion in the models. Instead, we included sex line and those with GAD-7 ≥ 10 at baseline. Participants
+assigned at birth. with clinically elevated symptoms of both depressive
+and anxiety symptoms were included in both subsam-
+Clinical characteristics ples (although multiple regression models adjusted for
+Concurrent mental health treatment the presence of the other symptoms in analyses). Con-
+Concurrent treatment was defined as mental health tinuous demographic and clinical variables were sum-
+treatment at any point in the study. At baseline, partici- marized by means and standard deviations; discrete and/
+pants were asked to indicate if they were currently see- or ordinal variables were summarized by reporting the
+ing a therapist for mental health concerns and/or if they sample size and proportion of participants in each cat-
+were taking medications for a psychiatric condition. At egory. Response was defined as having a 50% reduction
+the Week 8 assessment, participants were asked if psy- in PHQ-8 measured depressive symptoms among those
+chotropic medications and/or psychotherapy were con- with PHQ-8 ≥ 10 at baseline and having a 50% reduction
+tinued or if either was started during the course of the in GAD-7 measured anxiety symptoms among those with
+8-week study intervention. GAD-7 ≥ 10 at baseline.
+To address the first research question, a paired t-test
+Patient Health Questionnaire (PHQ‑8) was applied to the baseline and Week 8 PHQ-8 scores for
+the subgroup defined as having a baseline PHQ-8 ≥ 10.
+The PHQ-8 is a widely used 8-item self-report measure,
+Similarly, for those with elevated anxiety symptoms at
+with demonstrated reliability and sensitivity to clini-
+baseline (GAD-7 ≥ 10), a paired t-test was applied to the
+cal change. It is used to screen for depression, measure
+baseline and Week 8 GAD-7 scores to address the sec-
+symptom severity, and assess outcome [41]. Respond-
+ond research question. For both instances, the tests were
+ents are asked to consider symptoms over the past two
+intent-to-treat and two-sided, with alpha = 0.05.
+weeks and to indicate frequency of symptoms from not
+To assess the third research question, sets of bivari-
+at all (0) to nearly every day (3). The total sum scores
+ate and multiple linear regression models were sepa-
+range from 0–24, with the following severity cutoffs—
+rately fit to the subgroups with baseline PHQ-8 ≥ 10 and
+minimal (0–4), mild (5–9), moderate (10–14), moder-
+baseline GAD-7 ≥ 10. Each regression model included
+ately severe (15–19), and severe (20–24). A score of 10
+change in depressive or anxiety symptom scores as out-
+or greater is considered an acceptable clinical cutoff for
+comes, respectively, and each demographic and clinical
+current depression [41]. PHQ-8 scores at baseline and
+characteristic as independent variables. First, bivariate
+Week 8 were analyzed in this study.
+regressions were run between each outcome and each
+demographic and clinical characteristic, separately. Then,
+Generalized Anxiety Disorder (GAD‑7) a multiple regression model that included all demographic
+The GAD-7 is a brief self-report tool to assess the fre- and clinical characteristics as well as an indicator of uti-
+quency and severity of anxious thoughts and behav- lization to adjust for W-MA-02 use (dichotomous vari-
+iors [42]. Respondents are asked to indicate frequency able of having any W-MA-02 use in at least 50%, or 4 of
+of symptoms from not at all (0) to nearly every day (3) 8, weeks of the study) were run and, using Akakie’s Infor-
+over the previous two weeks. Total sum scores range mation Criterion (AIC) for model selection, rerun until
+from 0–21, with the following severity cutoffs—minimal the final model was attained. Final models also removed
+(0–4), mild (5–9), moderate (10–14), and severe (15– all variables with Variance Inflation Factors greater than
+21). A score of 10 or greater is considered a reasonable 4 to account for multicollinearity. Each model was run on
+clinical cutoff for generalized anxiety disorder [42]. the ITT population with no accommodations for miss-
+ing data (i.e., those with missing data were dropped from
+individual bivariate or multiple regression models in each
+W‑MA‑02 utilization
+instance). Sensitivity analyses were performed with the PP
+Over the course of the study, we tracked participant population, which included participants who used the app
+W-MA-02 log-ins. Completion of the. in at least 4 of 8 study weeks and who completed the end
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 7 of 18
+of study (EOS) PHQ-8 and GAD-7 assessments; the same baseline assessments were conducted, an additional 358
+modeling approach used for the intention to treat (ITT) participants with unauthorized accounts (e.g., duplicate
+population was applied to the PP population. The level of registrants) were withdrawn from the study and excluded
+significance for all final models was 0.05. All analyses were from the analyses. Of the original 262 enrollees, an addi-
+performed with the R statistical software program [43]. tional six unauthorized registrants began to complete study
+procedures but were subsequently removed from the ana-
+Results
+lytic sample because they were initially missed as a result of
+Sample a clerical error. Thus, the final analytic sample consisted of
+As detailed in the CONSORT diagram (Fig. 3), 1105 poten- 256 participants. Of these 256 participants, 245 completed
+tial participants were screened. Of these, 485 were excluded the Day 3 survey, 236 completed the Week 4 surveys, and
+for not meeting eligibility criteria. After screening and 234 completed the Week 8 surveys.
+Fig. 3 CONSORT diagram. Although Day 3 and Week 4 survey data were collected as part of the parent study, they were not part of the analyses
+included in the present report. Six participants were removed after enrollment due to a clerical error; they should have been removed prior
+to enrollment
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 8 of 18
+Sample characteristics to the intervention. In bivariate regression models, the
+The analytic subsamples included 111 participants with amount of symptom decline did not significantly differ
+elevated baseline levels of depressive symptoms and by age, educational level, employment, or baseline level
+107 participants with elevated baseline levels of anxiety of anxiety symptoms but did significantly differ across
+symptoms at baseline as defined by a PHQ-8 score ≥ 10 several characteristics tested (Table 2). Non-Hispanic
+and/or GAD-7 score ≥ 10, respectively. The sample size Blacks, those who were single, and those with severe
+for the combined (elevated on PHQ-8 or GAD-7) groups levels of baseline depressive symptoms demonstrated
+comprised 139 participants; some participants with ele- significantly greater amounts of decline in depressive
+vated symptoms of both depressive and anxiety symp- symptoms than Non-Hispanic Whites, those who were
+toms were in both analytic subsamples (n = 79). Both the married/partnered/cohabiting, and those with moder-
+depressive symptom and anxiety symptom samples were ate levels of baseline depressive symptoms, respectively.
+predominantly female, educated, and employed, identi- Females, participants identifying as sexual minorities,
+fied as non-Hispanic white and heterosexual, and had those with private or government-based health insurance,
+private health insurance (Table 1) with mean ages of 38 those who used the program on at least 4 of the 8 weeks,
+and 37 years, respectively. Among those with clinical lev- and those in concurrent mental health treatment demon-
+els of depressive symptoms, 50% had symptoms falling in strated significantly lower amounts of decline in depres-
+the moderately severe or severe range (PHQ-8 score ≥ 15) sive symptoms than males, participants identifying as
+and 49% reported concurrent mental health treatment heterosexuals, those with no health insurance or who
+during the study. Among those with clinical levels of anx- declined to answer the health insurance question, those
+iety symptoms, 44% had symptoms falling in the severe who used the program on less than 4 of the 8 weeks, and
+range (GAD-7 score ≥ 15) and 53% reported concurrent those not in concurrent mental health treatment, respec-
+mental health treatment during the study. tively. After removing race/ethnicity, insurance, and
+employment from consideration because of multicolline-
+Per Protocol (PP) characteristics arity, the final multiple regression model indicated signif-
+The assessment completion rate at Week 8 was 91%. The icant differences in the amount of decrease in depressive
+PP population examined in sensitivity analyses com- symptoms at Week 8 by sexual orientation, marital sta-
+prised 177 (69%) of the 256 participants in the analytic tus, baseline depressive symptom severity category, and
+sample after removing 67 (26%) who used W-MA-02 for concurrent mental health treatment (Table 3) in the same
+at most 3 of 8 weeks and removing 22 (9%) whose EOS directions as each bivariate model described above (in
+PHQ-8 and GAD-7 assessments at Week 8 were fully addition, divorced individuals had greater amounts of
+missing (no item scores were completed for each meas- depressive symptom declines as compared with married/
+ure); the removals were not mutually exclusive (n = 10 partnered, cohabiting). Although a few bivariate analy-
+met both criteria). Sixty-four percent (N = 71/111) of the ses had varying levels of significance across ITT and PP
+elevated depressive symptoms subgroup met PP and 59% analyses (Supplemental Table 1), the multiple regression
+(N = 63/107) of the elevated anxiety symptoms subgroup model largely confirmed the full sample findings (Supple-
+met these criteria. mental Table 2).
+Adverse events Anxiety symptoms
+No study participant reported an AE or serious adverse Average GAD-7 scores for each subgroup of interest
+event (SAE) during the study. Over the course of the significantly decreased over the course of the study. In
+study, 127,773 messages were sent by the 256 partici- the subgroup with clinically elevated anxiety symptoms
+pants. A subset of 71 participants provided text inputs at baseline, GAD-7 scores significantly decreased over
+containing language suggestive of a potential crisis. Of the 8-week study period (mean change -7.45, SD = 5.99,
+these participants, four confirmed being in a crisis situa- Cohen’s d = -1.24, p < 0.001); 58% responded to the inter-
+tion and were automatically provided resources and sup- vention. The amount of symptom decline did not signif-
+port as described in the Ethical Considerations section of icantly differ by use of W-MA-02 at least 4 of 8 weeks,
+the Methods. age, sex at birth, educational level, or employment,
+but did significantly differ across several characteris-
+Depressive symptoms tics tested (Table 4). Non-Hispanic Blacks, those who
+In the subgroup with clinically elevated depres- were single, those with severe levels of baseline depres-
+sive symptoms, PHQ-8 scores significantly decreased sive symptoms, and those with severe levels of anxiety
+over the 8-week study period (mean change -7.28, symptoms demonstrated greater amounts of decline in
+SD = 5.91, Cohen’s d = -1.23, p < 0.001); 43% responded anxiety symptoms than Non-Hispanic Whites, those who
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 9 of 18
+Table 1 Baseline sociodemographic and clinical characteristics, adherence, and satisfaction among participants with clinical levels of
+baseline depressive or anxiety symptoms
+Participants with PHQ‑8 baseline score ≥ 10 N = 111 Participants with GAD‑7
+n (%) baseline score ≥ 10 N = 107
+n (%)
+Sociodemographic Characteristic
+Age in years (mean, sd) 38 (13.57) 37 (12.28)
+Race/ethnicity
+Non‑Hispanic Black 37 (33%) 32 (30%)
+Non‑Hispanic White 55 (50%) 56 (52%)
+Other 19 (17%) 19 (18%)
+Sex at Birth
+Female 83 (75%) 81 (76%)
+Male 28 (25%) 26 (24%)
+Sexual Orientation
+Sexual Minority 19 (17%) 19 (18%)
+Heterosexual 92 (83%) 88 (82%)
+Education
+Graduate or Postgraduate Degree 32 (29%) 24 (23%)
+College Degree 43 (39%) 43 (41%)
+Some College or technical school 21 (19%) 22 (21%)
+High School (Grades 9—12) 14 (13%) 16 (15%)
+Employment
+Full Time Employed 53 (49%) 57 (54%)
+Part Time Employed 11 (10%) 9 (9%)
+Not Employed 29 (27%) 22 (21%)
+Other 15 (14%) 17 (16%)
+Marital Status
+Divorced/Separated/Widowed 10 (9%) 10 (10%)
+Married/Partnered/cohabiting 50 (47%) 48 (46%)
+Single 47 (44%) 47 (45%)
+Health Insurance
+Government Based Insurance 40 (37%) 37 (36%)
+Private Insurance 46 (43%) 45 (43%)
+No Insurance/ Prefer not to answer 21 (20%) 22 (21%)
+Clinical Characteristics
+Baseline Depressive symptom severity
+Minimal 0 (0%) 7 (7%)
+Mild 0 (0%) 21 (20%)
+Moderate 55 (50%) 25 (23%)
+Moderate‑severe 30 (27%) 29 (27%)
+Severe 26 (23%) 25 (23%)
+Baseline Anxiety symptom severity
+Minimal 3 (3%) 0 (0%)
+Mild 29 (26%) 0 (0%)
+Moderate 37 (33%) 60 (56%)
+Severe 42 (38%) 47 (44%)
+Concurrent Mental Health Treatmenta
+Any (Concurrent treatment) 54 (49%) 57 (53%)
+None (Woebot only) 57 (51%) 50 (47%)
+Adherence Metrics
+App Utilization
+Use of W‑MA‑02 in at least 4 of 8 weeks 74 (67%) 69 (64%)
+Per protocol data set 71 (64%) 63 (59%)
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 10 of 18
+Table 1 (continued)
+“Per protocol” was defined as using W-MA-02 in at least 4 of 8 study weeks and completing end of study PHQ-8 and GAD-7 assessments
+GAD-7 Generalized Anxiety Disorder-7 item scale, PHQ-8 Patient Health Questionnaire-8 item scale
+a Concurrent mental health treatment = any psychotherapy or psychotropic medication use at any time during the study
+Table 2 Unadjusted bivariate linear regression models of characteristics associated with change scores from baseline to Week 8 in
+depressive symptoms among those with clinically elevated levels of baseline depressive symptoms: PHQ‑8 ≥ 10
+Characteristics of Interest PHQ‑8: Week 8 Change Scores
+Estimates 95% CI p‑value
+Use of W‑MA‑02 in at least 4 of 8 weeks 2.90 0.51, 5.40 0.02
+Age 0.03 ‑0.05, 0.12 0.40
+Race/Ethnicity
+Non‑Hispanic White Reference Level
+Non‑Hispanic Black ‑6.00 ‑8.30, ‑3.70 < 0.01
+Other 0.02 ‑2.80, 2.90 > 0.90
+Sex at Birth
+Male Reference Level
+Female 2.70 0.09, 5.30 0.04
+Sexual Orientation:
+Heterosexual Reference Level
+Sexual Minority 5.60 2.60, 8.60 < 0.01
+Education
+High School Reference Level
+College Degree ‑1.90 ‑5.60, 1.80 0.30
+Graduate or postgraduate degree ‑0.68 ‑4.40, 3.10 0.70
+Some college or technical school 1.10 ‑3.10, 5.30 0.60
+Employment
+Full Time Reference Level
+Not Employed 2.40 ‑0.36, 5.20 0.09
+Other 3.10 ‑0.49, 6.80 0.09
+Part Time Employed 3.60 ‑0.32, 7.40 0.07
+Marital Status
+Married/Partnered/Cohabiting Reference Level
+Divorced/Separated/Widowed ‑2.20 ‑6.20, 1.70 0.30
+Single ‑4.10 ‑6.60, ‑1.70 < 0.01
+Health Insurance:
+No Insurance/Prefer not to answer Reference Level
+Government based Insurance 6.90 4.20, 9.70 < 0.01
+Private Insurance 7.50 4.80, 10.00 < 0.01
+BL Depressive Symptom Severity
+Moderate Reference Level
+Moderate‑Severe ‑1.10 ‑3.20, 1.00 0.30
+Severe ‑9.30 ‑12.00, ‑7.00 < 0.01
+BL Anxiety Symptom Severity
+Minimal Reference Level
+Mild ‑1.60 ‑9.50, 6.20 0.70
+Moderate ‑2.10 ‑9.90, 5.70 0.60
+Severe ‑7.10 ‑15.00, 0.71 0.07
+Concurrent Mental Health Treatmenta 3.20 0.94, 5.40 < 0.01
+BL baseline, PHQ-8 Patient Health Questionnaire-8 item scale
+a Concurrent mental health treatment = any psychotherapy or psychotropic medication use at any time during the study
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 11 of 18
+Table 3 Adjusted linear regression model (Multiple Regression) of change scores from baseline to Week 8 in depressive symptoms
+among those with clinically elevated levels of baseline depressive symptoms: PHQ‑8 ≥ 10
+Characteristics of Interest PHQ‑8: Week 8 Change Scores
+Estimates 95% CI p‑value
+(Intercept) ‑2.46 ‑10.16 – 5.24 0.53
+Used the app in at least 4 of 8 weeks 0.20 ‑1.75 – 2.15 0.84
+Age 0.05 ‑0.03 – 0.14 0.23
+Sex at Birth
+Male Reference Level
+Female ‑0.96 ‑3.24 – 1.32 0.41
+Sexual Orientation
+Heterosexual Reference Level
+Sexual Minority 5.71 2.88 – 8.54 < 0.01
+Education
+High School Reference Level
+College Degree ‑1.63 ‑4.33 – 1.07 0.23
+Graduate or postgraduate degree ‑0.24 ‑3.18 – 2.70 0.87
+Some college or technical school 0.88 ‑2.26 – 4.01 0.58
+Marital Status
+Married/Partnered/Cohabiting Reference Level
+Divorced/Separated/Widowed ‑3.86 ‑7.38 – ‑0.34 0.03
+Single ‑3.75 ‑5.78 – ‑1.72 < 0.01
+BL Depressive Symptom Severity
+Moderate Reference Level
+Moderate‑Severe ‑0.09 ‑2.44 – 2.25 0.94
+Severe ‑5.32 ‑8.16 – ‑2.47 < 0.01
+BL Anxiety Symptom Severity
+Minimal Reference Level
+Mild ‑3.97 ‑10.29 – 2.35 0.215
+Moderate ‑4.50 ‑11.02 – 2.02 0.17
+Severe ‑5.59 ‑12.17 – 0.99 < 0.01
+Concurrent Mental Health Treatmenta 2.62 0.80 – 4.43 < 0.01
+Final models did not consider race/ethnicity, employment, or insurance status because of multicollinearity
+BL baseline, PHQ-8 Patient Health Questionnaire-8 item scale
+a Concurrent mental health treatment = any psychotherapy or psychotropic medication use at any time during the study
+were married/partnered/cohabiting, those with minimal health treatment reaching marginal significance (p = 0.05,
+levels of baseline depressive symptoms, and those with Supplementary Table 3).
+moderate levels of baseline anxiety symptoms, respec- After removing race/ethnicity, employment, and insur-
+tively. Participants identifying as sexual minorities, those ance status from consideration due to multicollinearity,
+with private or government-based health insurance, and the final multiple regression model indicated significant
+those in concurrent mental health treatment demon- differences in the amount of decrease in anxiety symp-
+strated lower amounts of decline in anxiety symptoms toms at Week 8 by sexual orientation, marital status,
+than heterosexuals, those with no health insurance or baseline anxiety symptom severity category, and con-
+who declined to answer the health insurance question, current mental health treatment (Table 5) in the same
+and those without concurrent mental health treatment, direction as those previously described in each bivariate
+respectively. PP analyses largely confirmed the full sam- regression model. PP analyses largely confirmed the full
+ple findings, with the exception of concurrent mental sample findings (Supplemental Tables 3 and 4).
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 12 of 18
+Table 4 Unadjusted bivariate linear regression models of change scores from baseline to Week 8 in anxiety symptoms among those
+with clinically elevated levels of baseline anxiety symptoms: GAD‑7 ≥ 10
+Characteristics of Interest GAD‑7: Week 8 Change Scores
+Estimates 95% CI p‑value
+Use of W‑MA‑02 in at least 4 of 8 weeks 2.20 ‑0.25, 4.70 0.08
+Age 0.03 ‑0.07, 0.14 0.50
+Race/Ethnicity
+Non‑Hispanic White Reference Level
+Non‑Hispanic Black ‑5.7 ‑8.20, ‑3.20 < 0.01
+Other ‑0.12 ‑3.00, 2.80 > 0.90
+Sex at Birth
+Male Reference Level
+Female 1.80 ‑1.00, 4.60 0.20
+Sexual Orientation
+Heterosexual Reference Level
+Sexual Minority 3.70 0.65, 6.80 0.02
+Education
+High School Reference Level
+College Degree ‑1.70 ‑5.30, 1.90 0.30
+Graduate or postgraduate degree ‑1.80 ‑5.70, 2.10 0.40
+Some college or technical school ‑0.28 ‑4.50, 3.90 0.90
+Employment
+Full Time Reference Level
+Not Employed 2.10 ‑1.00, 5.20 0.20
+Other 1.20 ‑2.20, 4.70 0.50
+Part Time Employed 2.30 ‑2.2, 6.8 0.3
+Marital Status
+Married/Partnered/Cohabiting Reference Level
+Divorced/Separated/Widowed ‑1.50 ‑5.80, 2.80 0.50
+Single ‑2.90 ‑5.40, ‑0.37 0.03
+Health Insurance
+No Insurance/Prefer not to answer Reference Level
+Government based Insurance 5.10 2.10, 8.00 < 0.01
+Private Insurance 6.80 3.90, 9.60 < 0.01
+BL Depressive Symptom Severity
+Minimal Reference Level
+Mild ‑1.40 ‑6.20, 3.40 0.60
+Moderate ‑0.71 ‑5.30, 3.90 0.80
+Moderate‑Severe ‑0.12 ‑4.60, 4.40 > 0.90
+Severe ‑7.3 ‑12.00, ‑2.70 < 0.01
+BL Anxiety Symptom Severity
+Moderate Reference Level
+Severe ‑4.90 ‑7.10, ‑2.70 < 0.01
+Concurrent Mental Health Treatmenta 3.20 0.90, 5.60 < 0.01
+BL baseline, GAD-7 Generalized Anxiety Disorder-7 item scale
+a Concurrent mental health treatment = any psychotherapy or psychotropic medication use at any time during the study
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 13 of 18
+Table 5 Adjusted Linear Regression Model (Multiple Regression) of change scores from baseline to Week 8 in anxiety symptoms
+among those with clinically elevated levels of baseline anxiety symptoms: GAD‑7 ≥ 10
+Characteristics of Interest GAD‑7: Week 8 Change Scores
+Estimates 95% CI p‑value
+(Intercept) ‑4.68 ‑10.40 – 1.03 0.11
+Used the app in at least 4 of 8 weeks 1.26 ‑1.06 – 3.59 0.28
+Age 0 ‑0.11 – 0.11 0.98
+Sex at Birth:
+Male Reference Level
+Female ‑1.76 ‑4.63 – 1.10 0.22
+Sexual Orientation:
+Heterosexual Reference Level
+Sexual Minority 4.47 1.20 – 7.74 0.01
+Education Level:
+High School Reference Level
+College Degree ‑1.7 ‑4.79 – 1.39 0.28
+Graduate or postgraduate degree ‑1.12 ‑4.72 – 2.48 0.54
+Some college or technical school ‑0.55 ‑4.38 – 3.28 0.78
+Marital Status:
+Married/Partnered/Cohabiting Reference Level
+Divorced/Separated/Widowed ‑2.85 ‑7.30 – 1.61 0.21
+Single ‑4.19 ‑6.69 – ‑1.68 < 0.01
+BL Anxiety Symptom Severity:
+Moderate Reference Level
+Severe ‑3.88 ‑6.14 – ‑1.62 < 0.01
+Concurrent Mental Health Treatmenta 3.2 0.95 – 5.45 < 0.01
+Final models did not consider race/ethnicity, employment, and insurance status due to multicollinearity
+BL baseline, GAD-7 Generalized Anxiety Disorder-7 item scale
+a Concurrent mental health treatment = any psychotherapy or psychotropic medication use at any time during the study
+Discussion rates are notable given that attrition remains a peren-
+In this single-arm exploratory trial of W-MA-02, an nial problem in mobile health app studies [44], with
+intervention employing an NLP-supported relational one recent systematic review of depression DMHI app
+agent, the objective was to explore the magnitude of the RCTs suggesting that dropout rates may range from
+reduction in self-reported depressive (PHQ-8) and anx- 26 to 48%, even when participant reimbursement was
+iety (GAD-7) symptoms between baseline and Week included in the analysis [45].
+8 EOI as well as the associative relationships between In the absence of a control group, it is difficult to draw
+demographic and clinical characteristics and each out- conclusions about the efficacy of W-MA-02, especially
+come, among those that had elevated scores on these given evidence that approximately one-third of untreated
+measures at baseline. On average, study participants major depression or generalized anxiety disorder cases
+with elevated depressive symptoms at baseline experi- may spontaneously remit within 6 months [46–48].
+enced significant declines in self-reported depressive However, in both the clinically elevated depressive and
+symptoms across the intervention period; study par- anxiety groups, we noted significant decreases in self-
+ticipants with elevated anxiety symptoms at baseline reported symptoms at Week 8. The mean level of change
+experienced significant declines in self-reported anxi- was greater than seven points on both change in PHQ-8
+ety symptoms across the intervention period. In addi- among those with clinically elevated depressive symp-
+tion, analyses revealed significant associations between toms at baseline as well as change in GAD-7 among those
+depressive and anxiety symptom changes and demo- with clinically elevated anxiety symptoms at baseline.
+graphic and clinical characteristics in both bivariate This is noteworthy given that these outcomes were two
+and, in many cases, multiple regression models. The and three points greater, respectively, than the typically
+high assessment completion and W-MA-02 utilization accepted change score cutoff of five and four points to
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 14 of 18
+define a clinically significant response on the PHQ-8 and more improved outcomes compared to their married/
+GAD-7 measures, respectively [49, 50]. partnered/cohabiting peers in adjusted analyses. These
+Our adjusted analyses did not find significant associa- results are somewhat consistent with a study of an
+tions between sex at birth, age, educational background, online cognitive behavior intervention compared to a
+employment, and clinical outcomes, which is consistent waiting list control that demonstrated greater improve-
+with prior psychotherapeutic and DMHI meta-analy- ments in depression outcomes at 4 months among sep-
+ses and systematic reviews [8, 51–53]. However, several arated, widowed, or divorced individuals as compared
+studies of internet-based CBT (iCBT) have found bet- to married participants [60]. Due to the importance of
+ter depression outcomes for females [26, 54] and greater social support in mental health treatment [51], a more
+probability of non-response in anxiety disorders and detailed assessment of factors such as relationship
+depression for males [55]. Our results may support the quality may better explain the relationship between
+finding that age and sex at birth may be more important marital status and clinical outcomes [51].
+to the epidemiology of depression than to prognosis with Finally, we found that greater baseline depression and
+an intervention [53]. anxiety symptom severity was associated with greater
+The associations that were found in adjusted analyses symptom improvements in the elevated depression and
+between significant improvements in depression and anxiety groups, respectively. It is notable that 50% of the
+anxiety symptoms and sexual orientation, concurrent elevated depression group reported either moderately
+mental health treatment, marital status, and baseline severe or severe levels of baseline symptoms and 44% of
+symptom severity suggest that these may be demographic the elevated anxiety groups reported severe symptoms.
+predictors of intervention response to DMHIs employing DMHIs have often been considered as interventions for
+relational agents. However, a series of purpose-designed mild to moderate symptoms [61], but these findings may
+follow-up studies to test each of these putative predictors suggest promise for populations with a broader range of
+of clinical outcome in a randomized clinical trial (RCT) severity. While it is true that those with elevated symp-
+design is needed before any definitive conclusions can be toms have more room to improve [8], we nonetheless
+made. Given that LGBTQ individuals have demonstrated believe that this finding suggests that there may be clini-
+higher rates of depression and anxiety [56] that are fur- cal utility for programs like this beyond mild to moderate
+ther compounded by access barriers and stigma [31], severity levels with adequate safety checks in place.
+DMHIs may present an unique opportunity to provide
+safe and accessible support to this group. LGBTQ indi-
+viduals are also more likely to seek health information Strengths and limitations
+with digital resources than their non-LGBTQ counter- The present study adds to the extant mental health out-
+parts [57] and a high proportion of people accessing digi- comes literature by extending the investigation of impor-
+tal text-based support services identify as belonging to tant demographic and clinical characteristics in DMHI
+sexual and gender minorities [58]. Thus, further studies interventions to one delivered specifically via a relational
+among this group should be a research priority. Finally, agent. To our knowledge, this is the first study that has
+our study noted significant differences in the association been expressly designed for this purpose. The recruit-
+of concurrent care involvement with changes in anxi- ment of a demographically diverse naturalistic sample
+ety and depression symptoms, but this concurrent care allowed a broad assessment of characteristics that have
+was received independently and therefore no details on been traditionally underexplored in digital health stud-
+its characteristics (e.g., description of intervention, fre- ies, such as racial/ethnic membership, sexual orientation,
+quency, fidelity to psychotherapeutic treatment model, employment status, and health insurance status. There
+modality of delivery, dose, and route of psychopharmaco- has been increasing attention to the lack of diversity in
+logical agents) were available. Future studies should test marginalized and underserved participants involved
+if this association holds in a study using a prospective, in DMHI studies [31], and this study notably recruited
+RCT design as well as in a true blended care model that much higher proportions of sexual minorities [62] and
+tightly integrates the relational-agent-delivered DMHI non-Hispanic Black [63] individuals than are found in
+with human support. the U.S. population. Despite a generally demographically
+Further, historical findings regarding the link diverse sample, it should be noted that this sample was
+between marital status and psychotherapy outcomes about 75% female sex at birth, a proportion that is not
+have been decidedly mixed [59], but in this study we unusual for health behavior studies [64]. Greater recruit-
+found that single or divorced/separated/widowed indi- ment based on gender identity and participation of males
+viduals in the elevated depression group and single would improve sample diversity in future studies to allow
+individuals in the elevated anxiety group experienced for greater generalization of findings.
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 15 of 18
+Several limitations must be noted. First, the study was relational agent usage and the relationship of outcomes to
+not an RCT and did not include a control group, so there user characteristics.
+may have been additional confounders or other factors
+Conclusions
+affecting the efficacy of the intervention. For example,
+researchers have identified user expectancies related to The present study suggests early promise for a DMHI
+digital device use (a.k.a.“digital placebo effect”) that may that employs an easily scalable NLP-based relational
+affect mental health outcomes [65]. Subgroup differ- agent incorporating elements of CBT, DBT, and IPT to a
+ences, some of which had small sample sizes so limited demographically diverse naturalistic sample experienc-
+power to detect such differences, observed in the pre- ing self-reported symptoms of depression and/or anxiety.
+sent study are preliminary and should ideally be tested Although exploratory in nature, this study reveals intrigu-
+in RCTs with larger sample sizes and a priori power cal- ing areas for further research that can help optimize the
+culations. Second, because the intervention was delivered unique role DMHIs that include relational agents can
+over an 8-week period, the longer-term durability of any play in filling a mental health service gap that has only
+effects is not known. Changes that did occur might be widened in the wake of the COVID-19 pandemic.
+explained by measurement reactivity, as small effects have
+been observed in health behavior change [66] and digital
+Abbreviations
+health studies [67]. Symptom improvements may also be ACT Acceptance and commitment therapy
+explained in part by spontaneous remission [46, 47, 68] or AE/SAE Adverse and serious adverse events
+CBT Cognitive behavioral therapy
+other participant characteristics that were not assessed as
+DASS‑21 Depression Anxiety Stress Scale‑21
+part of the study. Third, symptoms and concurrent treat- DBT Dialectical Behavior Therapy
+ments were assessed via self-report and there was no inde- DMHI Digital Mental Health Intervention
+EDC Electronic Data Capture
+pendent confirmation of participants’ clinical presentation
+EOI End of intervention
+or therapeutic involvements. Although about half of the EOS End of study
+sample reported receiving concurrent treatment (consist- GAD‑7 Generalized Anxiety Disorder
+iCBT Internet‑based cognitive behavior therapy
+ent with national findings that only about half of those in
+IPT Interpersonal Psychotherapy
+need receive mental health care [69]), we do not know the ITT Intention to treat
+nature, duration, or intensity of psychotherapies or psy- LGBTQ Lesbian, gay, bisexual, transgender, queer or questioning
+MBCT Mindfulness‑based cognitive therapy
+chotropic medications received or if participants engaged
+NLP Natural language processing
+in other interventions (i.e., not delivered by a therapist or PHQ‑8 Patient Health Questionnaire
+receipt of medication) In addition, although we collected PP Per protocol
+RCT Randomized controlled trials
+information about both psychotherapy and psychotropic
+U.S. United States
+medications separately, the sample size was not sufficient
+to make comparisons between these modalities and so Supplementary Information
+they were pooled for analysis. Future studies would ide-
+The online version contains supplementary material available at https:// doi.
+ally collect detailed information about the psychotherapies org/ 10. 1186/ s12888‑ 024‑ 05532‑6.
+being received, as well as full details about concurrent psy-
+chotropic medications. Fourth, studies of online interven- Additional file 1.
+tions can be affected by certain types of data quality issues
+(e.g. fraudulent participants, distraction, inattention, or Acknowledgements
+intoxication during use) that may benefit from inclusion of We would like to thank Robbert Zusterzeel, M.D., Ph.D., MPH, Alison Darcy,
+Ph.D., and Megan Flom, Ph.D. for their helpful comments, as well as Adam
+quality checks in future experimental design [70, 71]. Fifth,
+Platt, M.Sc. for his assistance in preparing the manuscript and figures.
+although demographically diverse for a naturalistic sample,
+the study population was nonetheless majority college or Authors’ contributions
+EC, AW, TYM, SP, AR, AKQ, and VFH contributed to the conceptualization, study
+advanced degree holders and employed. Additional stud-
+design, implementation, and manuscript preparation of this study. AW and
+ies targeting the mental health needs of those with lower VFH reviewed the study design and provided the statistical analysis plan. AW
+levels of educational attainment and/or who may be facing conducted the statistical analysis. All authors reviewed, edited, and approved
+the final manuscript.
+under- or unemployment are needed. Finally, our defini-
+tion of “per protocol” as using W-MA-02 in at least 4 of Funding
+8 study weeks and completing EOS depressive and anxi- This study was funded by Woebot Health.
+ety symptom assessments may not have been granular
+Availability of data and materials
+enough to account fully for achieved outcomes or to reveal The datasets underlying the results of this study are confidential and include
+unique patterns of disengagement. Exploring alternative proprietary commercial information. Requests can be submitted to the cor‑
+responding author and will be subject to review and approval.
+engagement metrics would enhance our understanding of
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 16 of 18
+Declarations 10. Serrano‑Ripoll MJ, Zamanillo‑Campos R, Fiol‑DeRoque MA, Castro A,
+Ricci‑Cabello I. Impact of smartphone app–based psychological interven‑
+Ethics approval and consent to participate tions for reducing depressive symptoms in people with depression:
+This study was conducted in accordance with the principles of the Declaration systematic literature review and meta‑analysis of randomized controlled
+of Helsinki. This study and all study procedures were approved by the WIRB‑ trials. JMIR MHealth UHealth. 2022;10(1):e29621. https:// doi. org/ 10. 2196/
+Copernicus IRB Group (WCG) institutional review board [Protocol #20216751] 29621.
+on January 20, 2022. All participants provided informed consent. 11. Boucher EM, Harake NR, Ward HE, Stoeckl SE, Vargas J, Minkel J, et al.
+Artificially intelligent chatbots in digital mental health interventions: a
+Consent for publication review. Expert Rev Med Devices. 2021;18(sup1):37–49. https:// doi. org/ 10.
+Not applicable. 1080/ 17434 440. 2021. 20132 00.
+12. Parmar P, Ryu J, Pandya S, Sedoc J, Agarwal S. Health‑focused conversa‑
+Competing interests tional agents in person‑centered care: a review of apps. NPJ Digit Med.
+Authors EC, AW, TYM, SP, AR, AKQ, and VFH were employees of Woebot Health 2022;5(1):21. https:// doi. org/ 10. 1038/ s41746‑ 022‑ 00560‑6.
+at the time of submission. TYM is an employee of the US Department of Vet‑ 13. Vaidyam AN, Wisniewski H, Halamka JD, Kashavan MS, Torous JB. Chatbots
+erans Affairs. The views expressed in this article are those of the authors and and conversational agents in mental health: a review of the psychiatric
+do not necessarily reflect the position or policy of the Department of Veterans landscape. Can J Psychiatr. 2019;64(7):456–64. https:// doi. org/ 10. 1177/
+Affairs or the United States government. 07067 43719 828977.
+14. Gaffney H, Mansell W, Tai S. Conversational agents in the treatment of
+DIsclaimer mental health problems: mixed‑method systematic review. JMIR Ment
+Woebot for Mood & Anxiety (W‑MA‑02) is an investigational medical device. It Health. 2019;6(10):e14166. https:// doi. org/ 10. 2196/ 14166.
+has not been evaluated, cleared, or approved by the FDA. 15. Beatty C, Malik T, Meheli S, Sinha C. Evaluating the therapeutic alliance
+with a free‑text CBT conversational agent (Wysa): a mixed‑methods
+Author details study. Front Digit Health. 2022;4:847991. https:// doi. org/ 10. 3389/ fdgth.
+1 Woebot Health, 535 Mission Street, 14th Floor, San Francisco, CA 94105, 2022. 847991.
+USA. 2 RR&D Center for Neurorestoration and Neurotechnology, VA Provi‑ 16. Schroeder J, Wilkes C, Rowan K, Toledo A, Paradiso A, Czerwinski M, et al.
+dence Healthcare System, Providence, RI, USA. 3 Department of Psychiatry Pocket skills: a conversational mobile web app to support dialectical
+and Human Behavior, Warren Alpert Medical School of Brown University, behavioral therapy. In: Proceedings of the 2018 CHI Conference on
+Providence, RI, USA. Human Factors in Computing Systems. New York, NY, USA: 2018. https://
+doi. org/ 10. 1145/ 31735 74. 31739 72
+Received: 17 January 2023 Accepted: 17 January 2024 17. Fulmer R, Joerin A, Gentile B, Lakerink L, Rauws M. Using psychological
+artificial intelligence (Tess) to relieve symptoms of depression and anxi‑
+ety: randomized controlled trial. JMIR Ment Health. 2018;5(4):e64. https://
+doi. org/ 10. 2196/ mental. 9782.
+18. Denecke K, Abd‑Alrazaq A, Househ M. Artificial intelligence for chatbots
+References in mental health: opportunities and challenges. In: Househ M, Borycki
+1. GBD 2019 Mental Disorders Collaborators. Global, regional, and E, Kushniruk A, editors. Multiple Perspectives on Artificial Intelligence in
+national burden of 12 mental disorders in 204 countries and territories, Healthcare. Cham: Springer International Publishing; 2021. p. 115–
+1990–2019: a systematic analysis for the Global Burden of Disease Study 28. https:// doi. org/ 10. 1007/ 978‑3‑ 030‑ 67303‑1_ 10.
+2019. Lancet Psychiatry. 2022;9(2):137–50. https:// doi. org/ 10. 1016/ S2215‑ 19. Abd‑Alrazaq AA, Rababeh A, Alajlani M, Bewick BM, Househ M. Effective‑
+0366(21) 00395‑3. ness and safety of using chatbots to improve mental health: systematic
+2. COVID‑19 Mental Disorders Collaborators. Global prevalence and burden review and meta‑analysis. J Med Internet Res. 2020;22(7):e16021. https://
+of depressive and anxiety disorders in 204 countries and territories in doi. org/ 10. 2196/ 16021.
+2020 due to the COVID‑19 pandemic. Lancet. 2021;398(10312):1700–12. 20. Bickmore T, Gruber A. Relational agents in clinical psychiatry. Harv Rev
+https:// doi. org/ 10. 1016/ S0140‑ 6736(21) 02143‑7. Psychiatry. 2010;18(2):119–30. https:// doi. org/ 10. 3109/ 10673 22100 37075
+3. Evans AC, Bufka LF. The critical need for a population health approach: 38.
+addressing the nation’s behavioral health during the COVID‑19 pandemic 21. Chaudhry BM, Islam A. A mobile application‑based relational agent as a
+and beyond. Prev Chronic Dis. 2020;17:E79. https:// doi. org/ 10. 5888/ health professional for COVID‑19 patients: design, approach, and implica‑
+pcd17. 200261. tions. Int J Environ Res Public Health. 2022;19(21):13794. https:// doi. org/
+4. World Health Organization. The impact of COVID‑19 on mental, neuro‑ 10. 3390/ ijerp h1921 13794.
+logical and substance use services: results of rapid assessment. Geneva: 22. Darcy A, Daniels J, Salinger D, Wicks P, Robinson A. Evidence of
+World Health Organization; 2020. Available from: https:// www. who. int/ human‑level bonds established with a digital conversational agent:
+publi catio ns‑ detail‑ redir ect/ 97892 40124 55. Cited 14 Dec 2022. cross‑sectional, retrospective observational study. JMIR Form Res.
+5. Philippe TJ, Sikder N, Jackson A, Koblanski ME, Liow E, Pilarinos A, et al. 2021;5(5):e27868. https:// doi. org/ 10. 2196/ 27868.
+Digital health interventions for delivery of mental health care: systematic 23. Wampold BE. How important are the common factors in psychotherapy?
+and comprehensive meta‑review. JMIR Ment Health. 2022;9(5):e35159. An update World Psychiatry. 2015;14(3):270–7. https:// doi. org/ 10. 1002/
+https:// doi. org/ 10. 2196/ 35159. wps. 20238.
+6. Sorkin DH, Janio EA, Eikey EV, Schneider M, Davis K, Schueller SM, et al. 24. Hedman E, Andersson E, Lekander M, Ljótsson B. Predictors in internet‑
+Rise in use of digital mental health tools and technologies in the United delivered cognitive behavior therapy and behavioral stress management
+States during the COVID‑19 pandemic: survey study. J Med Internet Res. for severe health anxiety. Behav Res Ther. 2015;64:49–55. https:// doi. org/
+2021;23(4):e26994. https:// doi. org/ 10. 2196/ 26994. 10. 1016/j. brat. 2014. 11. 009.
+7. Lattie EG, Stiles‑Shields C, Graham AK. An overview of and recommenda‑ 25. El Alaoui S, Ljótsson B, Hedman E, Kaldo V, Andersson E, Rück C, et al.
+tions for more accessible digital mental health services. Nat Rev Psychol. Predictors of symptomatic change and adherence in internet‑based cog‑
+2022;1:87–100. https:// doi. org/ 10. 1038/ s44159‑ 021‑ 00003‑1. nitive behaviour therapy for social anxiety disorder in routine psychiatric
+8. Moshe I, Terhorst Y, Philippi P, Domhardt M, Cuijpers P, Cristea I, et al. Digi‑ care. PLoS ONE. 2015;10(4):e0124258. https:// doi. org/ 10. 1371/ journ al.
+tal interventions for the treatment of depression: a meta‑analytic review. pone. 01242 58.
+Psychol Bull. 2021;147(8):749–86. https:// doi. org/ 10. 1037/ bul00 00334. 26. Donker T, Batterham PJ, Warmerdam L, Bennett K, Bennett A, Cuijpers P,
+9. Pauley D, Cuijpers P, Papola D, Miguel C, Karyotaki E. Two decades of et al. Predictors and moderators of response to internet‑delivered inter‑
+digital interventions for anxiety disorders: a systematic review and meta‑ personal psychotherapy and cognitive behavior therapy for depression.
+analysis of treatment effectiveness. Psychol Med. 2021;53:1–13. https:// J Affect Disord. 2013;151(1):343–51. https:// doi. org/ 10. 1016/j. jad. 2013. 06.
+doi. org/ 10. 1017/ S0033 29172 10019 99. 020.
+C hiauzzi et al. BMC Psychiatry (2024) 24:79 Page 17 of 18
+27. Catarino A, Bateup S, Tablan V, Innes K, Freer S, Richards A, et al. 45. Torous J, Lipschitz J, Ng M, Firth J. Dropout rates in clinical trials of
+Demographic and clinical predictors of response to internet‑enabled smartphone apps for depressive symptoms: a systematic review and
+cognitive–behavioural therapy for depression and anxiety. BJPsych Open. meta‑analysis. J Affect Disord. 2020;263:413–9. https:// doi. org/ 10. 1016/j.
+2018;4(5):411–8. https:// doi. org/ 10. 1192/ bjo. 2018. 57. jad. 2019. 11. 167.
+28. Edmonds M, Hadjistavropoulos HD, Schneider LH, Dear BF, Titov N. 46. Whiteford HA, Harris MG, McKeon G, Baxter A, Pennell C, Barendregt JJ,
+Who benefits most from therapist‑assisted internet‑delivered cognitive et al. Estimating remission from untreated major depression: a systematic
+behaviour therapy in clinical practice? Predictors of symptom change review and meta‑analysis. Psychol Med. 2013;43(8):1569–85. https:// doi.
+and dropout. J Anxiety Disord. 2018;54:24–32. https:// doi. org/ 10. 1016/j. org/ 10. 1017/ S0033 29171 20017 17.
+janxd is. 2018. 01. 003. 47. Wittchen HU, Zhao S, Kessler RC, Eaton WW. DSM‑III‑R generalized anxi‑
+29. Warmerdam L, Van Straten A, Twisk J, Cuijpers P. Predicting outcome ety disorder in the National Comorbidity Survey. Arch Gen Psychiatry.
+of internet‑based treatment for depressive symptoms. Psychother Res. 1994;51(5):355–64. https:// doi. org/ 10. 1001/ archp syc. 1994. 03950 05001
+2013;23(5):559–67. https:// doi. org/ 10. 1080/ 10503 307. 2013. 807377. 5002.
+30. Anderson‑Lewis C, Darville G, Mercado RE, Howell S, Di Maggio S. mHealth 48. Wittchen HU, Hoyer J. Generalized anxiety disorder: nature and course. J
+technology use and implications in historically underserved and minority Clin Psychiatry. 2001;62(Suppl 11):15–9 (discussion 20‑1).
+populations in the United States: systematic literature review. JMIR MHealth 49. Kroenke K, Spitzer RL. The PHQ‑9: a new depression diagnostic and sever‑
+UHealth. 2018;6(6):e128. https:// doi. org/ 10. 2196/ mheal th. 8383. ity measure. Psychiatr Ann. 2002;32(9):509–15. https:// doi. org/ 10. 3928/
+31. Schueller SM, Hunter JF, Figueroa C, Aguilera A. Use of digital men‑ 0048‑ 5713‑ 20020 901‑ 06.
+tal health for marginalized and underserved populations. Curr 50. Toussaint A, Hüsing P, Gumz A, Wingenfeld K, Härter M, Schramm E, Löwe
+Treat Options Psychiatry. 2019;6(3):243–55. https:// doi. org/ 10. 1007/ B. Sensitivity to change and minimal clinically important difference of
+s40501‑ 019‑ 00181‑z. the 7‑item Generalized Anxiety Disorder Questionnaire (GAD‑7). J Affect
+32. Mohr DC, Kwasny MJ, Meyerhoff J, Graham AK, Lattie EG. The effect of Disord. 2020;265:395–401.
+depression and anxiety symptom severity on clinical outcomes and app use 51. Tanguay‑Sela M, Rollins C, Perez T, Qiang V, Golden G, Tunteng JF,
+in digital mental health treatments: meta‑regression of three trials. Behav et al. A systematic meta‑review of patient‑level predictors of psycho‑
+Res Ther. 2021;147:103972. https:// doi. org/ 10. 1016/j. brat. 2021. 103972. logical therapy outcome in major depressive disorder. J Affect Disord.
+33. Fiol‑DeRoque MA, Serrano‑Ripoll MJ, Jiménez R, Zamanillo‑Campos R, 2022;317:307–18. https:// doi. org/ 10. 1016/j. jad. 2022. 08. 041.
+Yáñez‑Juan AM, Bennasar‑Veny M, et al. A mobile phone–based interven‑ 52. Amati F, Banks C, Greenfield G, Green J. Predictors of outcomes for
+tion to reduce mental health problems in health care workers during the patients with common mental health disorders receiving psychological
+COVID‑19 pandemic (PsyCovidApp): randomized controlled trial. JMIR therapies in community settings: a systematic review. J Public Health
+MHealth UHealth. 2021;9(5):e27039. https:// doi. org/ 10. 2196/ 27039. (Oxf). 2018;40(3):e375–87. https:// doi. org/ 10. 1093/ pubmed/ fdx168.
+34. Fitzpatrick KK, Darcy A, Vierhile M. Delivering cognitive behavior therapy 53. Buckman JEJ, Saunders R, Stott J, Arundell LL, O’Driscoll C, Davies MR,
+to young adults with symptoms of depression and anxiety using a fully et al. Role of age, gender and marital status in prognosis for adults with
+automated conversational agent (Woebot): a randomized controlled trial. depression: an individual patient data meta‑analysis. Epidemiol Psychiatr
+JMIR Ment Health. 2017;4(2):e19. https:// doi. org/ 10. 2196/ mental. 7785. Sci. 2021;30:e42. https:// doi. org/ 10. 1017/ S2045 79602 10003 42.
+35. Prochaska JJ, Vogel EA, Chieng A, Kendra M, Baiocchi M, Pajarito S, et al. 54. Spek V, Nyklícek I, Cuijpers P, Pop V. Predictors of outcome of group and
+A therapeutic relational agent for reducing problematic substance internet‑based cognitive behavior therapy. J Affect Disord. 2008;105(1–
+use (Woebot): development and usability study. J Med Internet Res. 3):137–45. https:// doi. org/ 10. 1016/j. jad. 2007. 05. 001.
+2021;23(3):e24850. https:// doi. org/ 10. 2196/ 24850. 55. Rozental A, Andersson G, Carlbring P. In the absence of effects: an
+36. Nicol G, Wang R, Graham S, Dodd S, Garbutt J. Chatbot‑delivered cogni‑ individual patient data meta‑analysis of non‑response and its predictors
+tive behavioral therapy in adolescents with depression and anxiety in internet‑based cognitive behavior therapy. Front Psychol. 2019;10:589.
+during the COVID‑19 pandemic: feasibility and acceptability study. JMIR https:// doi. org/ 10. 3389/ fpsyg. 2019. 00589.
+Form Res. 2022;6(11):e40242. https:// doi. org/ 10. 2196/ 40242. 56. Plöderl M, Tremblay P. Mental health of sexual minorities. A systematic
+37. Darcy A, Beaudette A, Chiauzzi E, Daniels J, Goodwin K, Mariano TY, et al. review. Int Rev Psychiatry. 2015;27(5):367–85. https:// doi. org/ 10. 3109/
+Anatomy of a Woebot® (WB001): agent guided CBT for women with 09540 261. 2015. 10839 49.
+postpartum depression. Expert Rev Med Devices. 2022;19(4):287–301. 57. Bowen D, Jabson J, Kamen C. mHealth: an avenue for promoting health
+https:// doi. org/ 10. 1080/ 17434 440. 2022. 20757 26. among sexual and gender minority populations? Mhealth. 2016;2(9):36.
+38. Suharwardy S, Ramachandran M, Leonard S, Gunaseelan A, Robinson A, https:// doi. org/ 10. 21037/ mheal th. 2016. 09. 01.
+Darcy A, et al. Effect of an automated conversational agent on postpar‑ 58. Pisani AR, Gould MS, Gallo C, Ertefaie A, Kelberman C, Harrington D, et al.
+tum mental health: a randomized, controlled trial. Poster presented at: Individuals who text crisis text line: key characteristics and opportuni‑
+Society for Maternal‑Fetal Medicine’s 40th Annual Pregnancy Meeting; ties for suicide prevention. Suicide Life Threat Behav. 2022;52(3):567–82.
+2020 Feb 3–8; Grapevine, TX. https:// doi. org/ 10. 1111/ sltb. 12872.
+39. Prochaska JJ, Vogel EA, Chieng A, Baiocchi M, Maglalang DD, Pajarito 59. Chen CK, Nehrig N, Chou LJ, McGowan R, Guyton AF, Mustafiz F, et al.
+S, et al. A randomized controlled trial of a therapeutic relational agent Patient extratherapeutic interpersonal problems and response to psycho‑
+for reducing substance misuse during the COVID‑19 pandemic. Drug therapy for depression. Am J Psychother. 2019;72(4):101–22. https:// doi.
+Alcohol Depend. 2021;227:108986. https:// doi. org/ 10. 1016/j. druga lcdep. org/ 10. 1176/ appi. psych other apy. 20190 005.
+2021. 108986. 60. Button KS, Wiles NJ, Lewis G, Peters TJ, Kessler D. Factors associated with
+40. Castor EDC. Castor Electronic Data Capture. 2019. Available from: https:// differential response to online cognitive behavioural therapy. Soc Psy‑
+casto redc. com. chiatry Psychiatr Epidemiol. 2012;47(5):827–33. https:// doi. org/ 10. 1007/
+41. Kroenke K, Strine TW, Spitzer RL, Williams JBW, Berry JT, Mokdad AH. The s00127‑ 011‑ 0389‑1.
+PHQ‑8 as a measure of current depression in the general population. J 61. Torous J, Bucci S, Bell IH, Kessing LV, Faurholt‑Jepsen M, Whelan P, et al.
+Affect Disord. 2009;114(1–3):163–73. https:// doi. org/ 10. 1016/j. jad. 2008. The growing field of digital psychiatry: current evidence and the future
+06. 026. of apps, social media, chatbots, and virtual reality. World Psychiatry.
+42. Spitzer RL, Kroenke K, Williams JBW, Löwe B. A brief measure for 2021;20(3):318–35. https:// doi. org/ 10. 1002/ wps. 20883.
+assessing generalized anxiety disorder: the GAD‑7. Arch Intern Med. 62. Jones JM. LGBT Identification in U.S. ticks up to 7.1%. 2022. Available
+2006;166(10):1092–7. https:// doi. org/ 10. 1001/ archi nte. 166. 10. 1092. from: https:// news. gallup. com/ poll/ 389792/ lgbt‑ ident ifica tion‑ ticks‑ up.
+43. R Core Team. R: A language and environment for statistical comput‑ aspx. Cited 14 Dec 2022.
+ing. Vienna: R Foundation for Statistical Computing; 2021. Available 63. United States Census Bureau. 2020 Census illuminates racial and ethnic
+from: https:// www.R‑ proje ct. org/. composition of the country. 2021. Available from: https:// www. census.
+44. Amagai S, Pila S, Kaat AJ, Nowinski CJ, Gershon RC. Challenges in participant gov/ libra ry/ stori es/ 2021/ 08/ impro ved‑ race‑ ethni city‑ measu res‑ reveal‑
+engagement and retention using mobile health apps: literature review. J united‑ states‑ popul ation‑ much‑ more‑ multi racial. html. Cited 14 Dec
+Med Internet Res. 2022;24(4): e35120. https:// doi. org/ 10. 2196/ 35120. 2022.
+Chiauzzi et al. BMC Psychiatry (2024) 24:79 Page 18 of 18
+64. Ryan J, Lopian L, Le B, Edney S, Van Kessel G, Plotnikoff R, et al. It’s not
+raining men: a mixed‑methods study investigating methods of improv‑
+ing male recruitment to health behaviour research. BMC Public Health.
+2019;19:814. https:// doi. org/ 10. 1186/ s12889‑ 019‑ 7087‑4.
+65. Torous J, Firth J. The digital placebo effect: mobile mental health meets
+clinical psychiatry. Lancet Psychiatry. 2016;3(2):100–2. https:// doi. org/ 10.
+1016/ S2215‑ 0366(15) 00565‑9.
+66. Rodrigues AM, O’Brien N, French DP, Glidewell L, Sniehotta FF. The
+question–behavior effect: genuine effect or spurious phenomenon? A
+systematic review of randomized controlled trials with meta‑analyses.
+Health Psychol. 2015;34:61–78. https:// doi. org/ 10. 1037/ hea00 00104.
+67. König LM, Allmeta A, Christlein N, Van Emmenis M, Sutton S. A systematic
+review and meta‑analysis of studies of reactivity to digital in‑the‑moment
+measurement of health behaviour. Health Psychol Rev. 2022;16(4):551–
+75. https:// doi. org/ 10. 1080/ 17437 199. 2022. 20470 96.
+68. Hengartner MP. Is there a genuine placebo effect in acute depression
+treatments? A reassessment of regression to the mean and spontaneous
+remission. BMJ Evid Based Med. 2020;25(2):46–8. https:// doi. org/ 10. 1136/
+bmjebm‑ 2019‑ 111161.
+69. Substance Abuse and Mental Health Services Administration. Highlights
+for the 2020 National Survey on Drug Use and Health. 2021. Available
+from: https:// www. samhsa. gov/ data/ sites/ defau lt/ files/ 2021‑ 10/ 2020_
+NSDUH_ Highl ights. pdf. Cited 11 Jan 2023.
+70. Lee CT, Palacios J, Richards D, Hanlon AK, Lynch K, Harty S, Claus N,
+Swords L, O’Keane V, Stephan KE, Gillan CM. The precision in psychiatry
+(PIP) study: testing an internet‑based methodology for accelerating
+research in treatment prediction and personalisation. BMC Psychiatry.
+2023;23(1):25. https:// doi. org/ 10. 1186/ s12888‑ 022‑ 04462‑5. PMID: 36627
+607; PMCID: PMC98 32676.
+71. Glazer JV, MacDonnell K, Frederick C, Ingersoll K, Ritterband LM. Liar!
+Liar! Identifying eligibility fraud by applicants in digital health research.
+Internet Interv. 2021;25:100401.
+Publisher’s Note
+Springer Nature remains neutral with regard to jurisdictional claims in pub‑
+lished maps and institutional affiliations.

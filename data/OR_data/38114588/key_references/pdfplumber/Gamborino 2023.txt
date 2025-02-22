@@ -1,0 +1,542 @@
+Mood Estimation as a Social Profile Predictor in an Autonomous,
+Multi-Session, Emotional Support Robot for Children
+Edwinn Gamborino, Hsiu-Ping Yueh, Weijane Lin, Su-Ling Yeh and Li-Chen Fu, Member, IEEE
+Abstract— In this work, we created an end-to-end general public to have a deeper, more intimate understanding
+autonomous robotic platform to give emotional support to when communicating with their human counterparts. For this
+children in long-term, multi-session interactions. Using a mood purpose, the robot must be able to get information not only
+estimation algorithm based on visual cues of the user’s behaviors from the explicit communication channels (e.g. words and
+through their facial expressions and body posture, a multi-
+gestures), but also from the implicit, mostly non-verbal
+dimensional model predicts a qualitative measure of the
+behaviors (e.g. motivations and drives) of their human
+subject’s affective state. Using a novel Interactive Reinforcement
+counterparts. Previous research [2] has indicated that
+Learning algorithm, the robot is able to learn over several
+autonomous cognitive and social profiling of the user are key
+sessions the social profile of the user, adjusting its behavior to
+match their preferences. Although the robot is completely to deploying social robots in environments outside of the
+autonomous, a third party can optionally provide feedback to laboratory (e.g. in hospitals, schools or at home). In order to
+the robot through an additional UI to accelerate its learning of perform this cognitive and social profiling, robots must
+the user’s preferences. To validate the proposed methodology, interpret the behavior of their users through implicit cues in
+we evaluated the impact of the robot on elementary school aged their facial expression and body gestures to infer mental
+children in a long-term, multi-session interaction setting. Our
+states, personalities and emotions and, using this information,
+findings show that using this methodology, the robot is able to
+use a decision making process to determine how to best
+learn the social profile of the users over a number of sessions,
+interact with a specific user.
+either with or without external feedback as well as maintain the
+One possible approach to achieve this preference learning
+user in a positive mood, as shown by the consistently positive
+rewards received by the robot using our proposed learning is through Machine Learning techniques. However, one of the
+algorithm. main difficulties of applying such techniques on Human-
+Robot Interaction (HRI) problems is the sheer amount of data
+I. INTRODUCTION
+required for the machine to learn anything meaningful. This
+Socially Assistive Robotics is an emerging is particularly harsh in HRI research for three reasons: (1) the
+interdisciplinary field which is currently of interest to several problems addressed tend to be very application specific, (2)
+researchers in psychology, sociology, computer science and due to the variety of hardware and software configurations,
+robotics. One of the main reasons being the rapid change in there is yet no consensus as to what functions a social robot
+the demographic structure, mostly in developed countries [1]; should or should not have and (3) due to the specificness
+it is prospected that there will not be enough people to care problem, the datasets available online are scarce.
+for the weaker social groups (e.g. the elderly and children), Furthermore, due to the social nature of the field, it is very
+both in and out of healthcare facilities in the short term. labor intensive to design and execute experiments to validate
+While advances in human-computer interaction and the hypothesis with a statistically significant number of
+collaborative robots have produced several methods for subjects. To address these issues, we proposed [3] an
+human and technology to interact with each other somewhat implementation using an Interactive Reinforcement Learning
+successfully (e.g. through touch screens and natural language algorithm by which a third party (e.g. a caregiver or relative
+understanding), Socially Assistive Robots are expected by the of the user) can provide additional input to the robot through
+a user interface (Fig. 1), thereby dramatically increasing the
+*This research was supported in part by the Ministry of Science and
+Technology of Taiwan (MOST 107-2634-F-002-018), National Taiwan ability of the robot to learn the user profile in a relatively short
+University, Center for Artificial Intelligence & Advanced Robotics, and Joint time while at the same time maintaining a coherent and fluent
+Research Center for AI Technology and All Vista Healthcare.
+social interaction.
+E. Gamborino is with the Center for Artificial Intelligence and Advanced
+Robotics, National Taiwan University, Taipei, Taiwan. (phone: +886 958
+376 105; e-mail: gamborino@ntu.edu.tw).
+H.-P. Yueh is with the Department of Psychology and the Department of
+Bio-Industry Communication and Development, National Taiwan
+University, Taipei, Taiwan. (e-mail: yueh@ntu.edu.tw)
+W. Lin is with the Department of Library and Information Science,
+National Taiwan University (e-mail: vjlin@ntu.edu.tw)
+S.-L. Yeh is with the Department of Psychology, the Graduate Institute of
+Brain and Mind Sciences and the Center for Artificial Intelligence and
+Advanced Robotics, National Taiwan University, Taipei, Taiwan. (e-mail:
+suling@g.ntu.edu.tw)
+L.-C. Fu is with the Center for Artificial Intelligence and Advanced
+Robotics, the Department of Electrical Engineering and the Department of Figure 1. System Overview: The robot has a database of pre-programmed
+Computer Science and Information Engineering, National Taiwan social interactions and learns from the user’s affective state and the trainer’s
+University, Taipei, Taiwan (e-mail: lichen@ntu.edu.tw). feedback through an IRL algorithm.
+As mentioned before, this work is an extension of [3], making platform between different ludic activities –
+where the authors used a Wizard-of-Oz implementation to collaborative sorting, creative dance and quiz – in order to
+show the effectiveness of the reinforcement learning engage young children over extended periods of time (over
+algorithm and the ability of the system to interact with real the course of a few weeks). While the robot could perform
+children. In addition to our previous findings, the main each of the ludic activities autonomously, due to limitations
+contributions of the present work are: in the State-of-the-Art in key technologies, the robot was
+1. To develop a fully autonomous system that is able to unable to determine when to pause/change activities (e.g. if
+interact with the user without the need for a remote the child looks bored or when there is an external
+operator. interruption). Therefore, the authors used a Wizard-of-Oz
+2. The improvement of the emotion recognition algorithm interface to monitor and control the transition between
+and the addition of body posture as a secondary channel activities. Their results show that by giving the child a choice
+for learning feedback. of what activity they preferred to play with the robot, the kids
+3. The validation of the proposed autonomous often chose the activity they enjoyed the most, thereby
+implementation through a long-term interaction increasing their willingness to interact with it for longer
+experiment with 15 children. periods.
+The rest of this paper is organized as follows: In Section II, The team of Dr. Mataric has also published a number of
+we highlight some of the related works in the field of papers [8-10] in relation to Socially Assistive Robots for the
+emotional support robots. Section III describes a system general public and, more specifically, with children in the
+overview and the methodology followed through the design school environment. Of the greatest relevance to the present
+of the proposed system. Section IV discusses the experiment work is [9], where the authors introduce their design process
+design as well as briefly describe the interaction flow and in creating a robot that is suitable to interact with a specific
+participant demographics. Section V includes a thorough demographic (i.e. children). The authors highlight that in HRI
+analysis of the data obtained from the experiment as well as implementations there must be a balance between
+some discussion and, finally, Section VI closes the document technological prowess and domain portability. Furthermore,
+with a few concluding remarks. the authors mention that, as of yet, there are no established
+baseline measurements for HRI performance, with most
+II. BACKGROUND AND RELATED WORKS
+authors reporting academic performance (e.g. correct
+Pet therapy is a well-documented [4, 5] social therapy for responses in a quiz for a school setting) or self-reported
+people presenting symptoms of depression and isolation. In features (e.g. rapport and engagement) as metrics of the
+2007, Shibata and Wada first introduced Paro – the robotic platform performance. In this work, we developed a system
+seal – in order to investigate whether a robotic pet could have for the robot to automatically assess the affective state of the
+similar effects to its real counterpart on the residents of an user through interaction, with the ability to learn over time in
+elder nursing home in Tsukuba City, Japan. Their purpose a multi-session setting, being one of the first examples of a
+was to overcome the difficulties associated with keeping self-assessed, learning social robot.
+animals in delicate environments such as hospitals and Dr. Brezeal et al. also have a breadth of research [11-13]
+nursing homes. In the results of their six-month longitudinal on human robot interaction aimed at children. We briefly
+study [6], using tools such as social network analysis and highlight one of their works as background for this paper.
+urine sampling, they reported that the patients who actively First, Huggable [11] was a robotic companion used to
+(and voluntarily) engaged with Paro showed an increase in mitigate anxiety, stress and pain in pediatric patients by
+sociability both with other guests of the nursing home as well engaging them in playful interactions. The authors presented
+as caregivers. This is one of the first documented examples of a Wizard-of-Oz interface for a child life specialist to interact
+using robots for social and emotional support. The main indirectly with pediatric patients. In a preliminary study, the
+lesson to learn from Paro is that Socially Assistive Robots do authors aimed to determine the superiority of a robotic partner
+not necessarily require to possess advanced cognitive for emotional support over other types of interventions,
+understanding of the user to be effective in improving the namely a regular plush teddy bear or a virtual avatar of
+quality of life of their users. Huggable, with positive results.
+The ALIZ-E Project (Adaptive Strategies for Sustainable More recently, in [2] Gunes et al. reported their efforts at
+Long-Term Social Interaction) was a collaboration between developing HRI systems with automatic emotion and
+several European universities and research institutions with personality prediction algorithms. They reported on their
+the aim of developing a comprehensive cognitive system for experiences and lessons learned through several
+robots to offer a consistent experience during long-term implementations and public HRI demonstrations. In the
+Human-Robot Interaction (HRI) scenarios. In particular, the paper, they detail their implementation of autonomous
+project focuses on the group comprised of 8-11 years old emotion and personality predictors as cues of a user’s social
+children with diabetes for their target study. Several papers profile. While they note that their predictors are fully
+focused on solving different areas of the long-term child- developed and describe the interaction flow and reaction of
+robot interaction (cHRI) problem: speech, non-verbal bodily the subjects to the robot, the robotic side of their
+expression, small talk, gaze, touch and proximity, among implementation is done through a Wizard-of-Oz interface.
+others. A relevant antecedent of the present work is presented Compared to their contribution, in this work we developed a
+in [7], where the authors developed a high-level decision fully autonomous system using facial expression as a cue of
+the subject’s internal affective state. Nonetheless, there are
+valuable lessons to learn from this publication. For example,
+more often than not, people would be more interested in the
+shape and motion of the robot than what it is actually saying,
+therefore they would not carefully listen to the instructions
+given by it and have to rely on the experimenter to
+successfully complete the interactions.
+III. PROPOSED METHODOLOGY
+A. System Overview
+Figure 2. System Architecture
+In this section we briefly describe the system architecture
+otherwise it will be low, resulting in a binary value for each
+(Fig. 2) and how each part interacts with each other. In the
+time instant. The state of time interval [𝑡 ,𝑡 ], then will be the
+following subsections we will further detail each module. We 0 𝑛
+most frequent in the post-classifier pool.
+used a set of RGB cameras to capture the subject’s facial
+Similarly, body posture has been shown [17] to be a good
+expression and body posture in interaction with the robot.
+predictor of engagement. In particular, head orientation and
+This information is used to estimate their internal affective
+the leaning angle of the upper body are important indicators
+state on-the fly as a reaction to the robot’s social actions (e.g.
+of engagement. To achieve automatic, on-the-fly engagement
+dance, joke). Over time, the robot learns which of its social
+prediction we leverage the open source software OpenPose
+actions are more likely to cheer up the user when they are in
+[18]. Using an approach similar to the temporal averaging of
+a given affective state. The robot associates a user profile with
+emotions, we can obtain an average of engagement over a
+their facial features for future sessions. Furthermore, although
+certain time interval.
+the robot can act autonomously, using the principle of
+We then created a mapping of which states represent a
+Interactive Reinforcement Learning, a third party can provide
+good, neutral or bad mood using the following heuristic rules:
+additional feedback to it. This can be particularly useful when
+Those time instants where positive emotions (i.e. joy and
+interacting with children, where visual feedback may not
+surprise) are high will be considered as good mood, time
+always be reliable due to excessive motion from the subject.
+instants with only neutral emotion as high will be neutral
+B. Mood Estimation mood, all others will be considered as bad mood. In terms of
+Although there exists more than one proposal to model engagement, if the person is detected as engaged at each time
+human emotions, in this work we adopt one of the most interval, the robot will receive an additional small reward,
+common interpretations of Paul Ekman’s six basic emotions otherwise the reward value remains unchanged.
+(e.g. joy, fear, sadness, anger, disgust and surprise). We used
+C. Action Database and Interaction Manager
+an in-home developed algorithm [14], which utilizes a
+In the context of this work, we define the actions of the
+temporal-contrastive appearance network to determine the
+robot as social behaviors that enable it to engage and interact
+saliency of each feature compared to a neutral facial
+with the child, with the possibility of having a positive impact
+expression. The results reported in our 2018 paper on open
+on their mood. Examples of these actions that can be found in
+source databases achieved an average accuracy of 84.2%,
+the recent literature [7, 19] include verbal (e.g. conversation,
+outperforming the State-of-the-Art.
+story-telling, quizzes and jokes) non-verbal (e.g. dance,
+Mood is defined [15] as a long lasting affective state,
+imitation game) and complex items, such as playing games
+usually measured qualitatively (e.g. good or bad mood). On
+through a secondary device (tablet or computer). We propose
+the other hand, the Discrete Emotion Theory [16] poses that
+a set of behaviors that, based on concepts from previous cHRI
+there exists a set of core emotions. These emotions manifest
+research (e.g. care-receiving robots [20]) as well as concepts
+themselves through different channels (e.g. facial
+from pediatric psychology (puppet therapy [21]), are likely to
+expressions, body gestures, physiological signals) in specific,
+cheer up a child through ludic interactions and conversation.
+discernible and unique ways. Furthermore, core emotions are
+Based on the previous survey, we defined six types of
+semantically unique, whereas complex emotions are thought
+selectable interactions in this iteration of the system: joke,
+to be composed of different core emotions. Then, in
+riddle, chit-chat, tale, dance and video. Inside each category,
+mathematical terms, the set of core emotions may be
+there were on average ten different interactions for the robot
+described as a linear basis that spans a vector space containing
+to choose from. The robot would not repeat the same single
+the set of complex emotions. In other words, complex
+interaction twice with a given user. Each interaction included
+emotions are linear combinations of core emotions.
+a predefined set of sentences for the robot to speak out.
+Based on this abstraction, we hypothesize that a good state
+Furthermore, in contrast to our previous Wizard-of-Oz
+classifier for the mood of a person can be achieved by
+implementation, in order to make the system fully
+determining whether each one of the core emotions is either
+autonomous, we created a behavior executor, which has basic
+low or high during a specific time interval. To achieve this,
+Natural Language Processing capabilities. For example, the
+for each frame 𝑡 ∈[𝑡 ,𝑡 ], the classifier calculates a
+𝑖 0 𝑛 robot could issue a different reply depending on whether the
+dimension-wise mean of the pool of vectors stored up until
+user’s response was positive or negative (e.g. would you like
+that point. Then, if the value in time 𝑡 is greater than the
+𝑖 to hear a funny joke?), a predefined expected answer (e.g. the
+current average, the emotion will be considered as high,
+B oE d y Pstim oa stu re
+tio n
+M o o d P re d
+U s e
+E mR
+e c o
+ic tio n
+r
+o tio n
+g n itio n
+In te ra c tio n
+M a n a g e rIn te ra c tiv e
+R e in fo rc e m e n t
+L e a rn in gIn
+te ra c tiv e M o d e lR
+e in fo rc e m e n t
+Le a rn in g M o d e l
+T r a in e r
+U se r
+P ro file
+S o c ia l
+A c tio n
+D a ta b a se
+IV. EXPERIMENT DESIGN
+Results of our previous work showed that there was a
+statistically significant decrease in the negative affect of the
+children after playing with the robot for the first time.
+However, one could argue that the novelty effect [25] had a
+major role in the mood improvement on that pilot study.
+Furthermore, given the early prototype stage of the system,
+the control of the robot was achieved through a Wizard-of-Oz
+implementation. Therefore, we designed a follow-up
+experiment focused on the validation of a completely
+Figure 3. Screenshot of the UI for the trainer/experimenter. The personal data autonomous action selector and interaction manager for
+of the user as well as the current mood estimate can be observed. The bars to
+the right represent the likelihood that the robot will perform that action next.
+human-robot interaction and the long term effectiveness of
+the robot intervention for emotional support of children.
+answer to a riddle) and even save keywords from the user’s
+The experiment took place in the Computer and
+utterance (e.g. name and gender), and use them in subsequent
+Information Networking Center, National Taiwan University.
+interactions.
+In total, 19 participants were recruited for this experiment. All
+D. Interactive Reinforcement Learning and User Profiling participants were elementary school aged children (avg.=
+10.7, σ= 1.1, 31% female). However, the data of five
+Briefly, what distinguishes Interactive Reinforcement
+participants had to be excluded because they did not complete
+Learning (IRL) from classic RL is the use of a trainer that
+the full four sessions.
+modifies either the reward from the environment, known as
+The participants enrolled voluntarily in the experiment as
+reward shaping [22], the action of the agent, known as policy
+a part of a robotics holiday course, the parents or guardians of
+shaping [23] or both (hybrid approaches). In this work we
+each student signed a consent form to participate in the
+propose the use of a hybrid algorithm to maximize the
+experiment. The duration of this course was of five
+learning rate. Our model is built following the SARSA
+consecutive days. During each of the first four class days,
+methodology, where the only noteworthy change in the
+each of the students was taken out of the classroom to a
+following equation is the change/addition of the reward term:
+separate environment to perform the experiment individually.
+𝑄(𝑠 ,𝑎 )←𝛼[𝑟𝑟 +𝑟𝑝 +𝛾𝑄(𝑠 ,𝑎 )−𝑄(𝑠 ,𝑎 )]
+𝑡 𝑡 𝑡+1 𝑡+1 𝑡+1 𝑡+1 𝑡 𝑡 In order to avoid cross-contamination in terms of the
+The policy reward 𝑟𝑝 is designed to encourage the agent
+𝑡+1 expectations regarding the experiment, each participant was
+to transition from bad mood states to the good mood states
+asked not to discuss the content of the experiment with their
+and stay in good mood by providing a negative reward for a
+classmates until after the experiment was finished.
+transition to a bad mood state a and a positive reward for a
+Two experimenters were present in each session with
+transition to a good mood state. The trainer reward 𝑟𝑟 , on
+𝑡+1 different roles: One would brief the participant on how to
+the other hand, relies on the trainer’s feedback (Fig. 3). By
+interact with the robot and perform tests to obtain a baseline
+pressing a button, the trainer will override the next action of
+of different psychologic al parameters (Section V), while the
+the robot, which will in turn modify the value of 𝑟𝑟 for the
+𝑡+1 other would act as the trainer of the robot, observing the
+next learning iteration. These changes are represented in real
+participant’s reaction to the robot’s actions and providing
+time on the bar graph.
+feedback through the UI (Fig. 3). Both researchers were
+By using the IRL algorithm, the robot stores a set of values
+trained on how to recognize affective states from facial
+for each state-action pair available, where the states are
+expressions following the guidelines outlined in the BROMP
+associated with the qualitative measurement of the user’s
+protocol [26]. Each interactive session lasted for
+mood (good, neutral or bad) and engagement, whereas the
+approximately 10 minutes. The robot deployed to perform the
+actions correspond to the social actions of the robot. In the
+experiment with the child participants is RoBoHoN, a small
+literature these values are commonly known as q-values. The
+humanoid robot smartphone. Although it does not possess
+action selection is performed using the ε-greedy algorithm,
+top-of-the-line sensing abilities, its speech capabilities and the
+which, for the current state, will usually pick the action with
+ability to produce body gestures through the motion of its
+the highest q-value. However, to encourage exploration it
+head and arms make it an ideal candidate for human-robot
+may randomly pick other sub-optimal actions.
+interaction research.
+At the beginning of the first interaction, the robot is
+programmed to ask basic profile details from the user (e.g.
+name, age) and associates these data with the facial profile of
+the user. At the end of each interaction, the robot will save the
+preferences (q-values and overall reward) of the user for each
+interaction to persistent memory to be used in subsequent
+interactions. From the second interaction onward, the robot
+will confirm the profile of the user through dialog. This
+behavior was design in alignment with the findings of Fischer
+[24], where the authors point out that the ability of an entity
+Figure 4. Samples of the emotion and mood estimation algorithms during the
+to recognize users is paramount to creating social bonds.
+interactive sessions with the robot.
+In addition to the robot we utilized two cameras to capture
+the facial expression and body posture of the participants on
+real time (Fig. 4). This configuration enabled the system to
+perform analysis and control of the robot on-the-fly with good
+performance.
+V. EXPERIMENTAL RESULTS
+A. Performance Metrics
+To gauge the effectiveness of the system in interaction with
+the children we focused on the autonomous nature of the
+platform, relying on the rewards received by the learning
+algorithm through continuous interaction. As explored in
+Section III, there are two metrics collected by the system
+automatically during interaction: q-values (2-dimensional
+vectors) and overall rewards (scalars). Higher q-values
+indicate a positive reward was received for a given mood-
+social action combination; therefore, it follows that the Figure 6. Comparison of the total reward by policy. The x-axis represents the
+actions with the highest values are considered by the robot as day of interaction whereas the y-axis represents the reward earned by the
+appropriate when the user is in a specific affective state. The robot from the mood estimation algorithm. The dotted lines represent the
+reward of each individual user, the bold line represents an average of all users
+reward, on the other hand, is stored as a scalar after each
+with the same policy. The top graph shows the data of the group of users with
+interaction and only the overall value after one whole the learning robot, whereas the bottom graph shows the same data for the
+interactive session is stored in persistent memory. The overall group that interacted with a robot with random action policy.
+reward value is related with the perceived enjoyment of the
+values. Qualitatively speaking, we can observe that in the first
+interaction by the user, as defined by the robot itself through
+two blocks negative values are rather scarce whereas in the
+mood and engagement estimation or by the trainer through the
+latter two red areas dominate the blocks. A straightforward
+rewards given.
+interpretation of this is that when the robot used the IRL
+B. Results and Discussion policy it tended to receive more positive feedback, either from
+the user or the trainer, than when using a random policy.
+In order to determine whether the Interactive
+Furthermore, we can observe that certain users had an
+Reinforcement Learning policy had any significant effect on
+unusually high or low affinity with the robot, as certain rows
+the user’s reaction to the robot, the participant population was
+in either block have a higher concentration of green or red
+divided into two groups: a control group with which the robot
+blocks, respectively. Unfortunately, due to the small sample
+would perform the interactions with the IRL policy as
+size we were yet unable to identify a pattern between the
+described in Section III, whereas with the other group the
+user’s profile and their action preference.
+robot would perform the same type of interaction but without
+In terms of the overall reward, Fig. 6 shows the day-by day
+learning the user’s preference, that is, picking actions
+reward obtained by the robot for all users. The dotted lines
+randomly. In order to avoid bias from the trainer when
+represent each individual participant’s data whereas the bold
+assigning rewards to the robot, the system was programmed
+line represents the average of all data points for each group,
+to randomly assign an IRL or random policy when meeting
+divided by the policy the robot used. Again, due to the small
+each new participant, while keeping the number of
+sample size of our test group, quantitative validation is rather
+participants in each group balanced.
+difficult, so instead we provide a qualitative analysis of the
+Due to the relatively small size of the dataset, in order to
+graph. We can observe there is a clear difference between the
+make a more significant analysis, the q-values obtained by the
+tendency of each group. While in the IRL policy group the
+robot from each interaction were sorted into bad and good
+overall reward tends to increase, in the random group there is
+mood (neutral mood was grouped together with good mood).
+a higher variance and the overall reward is negative for almost
+Fig. 5 shows a h eat map representation of the q-values for
+all participants at the end of the fourth day. These findings
+each policy and affective state for each user in each group.
+further validate the effectiveness of the proposed IRL
+For each sub-figure, the x-axis represents one of the social
+algorithm for extended periods of time.
+actions of the robot whereas the y-axis is one of the users in
+that group. Darker green values represent more positive
+values whereas darker red values represent more negative
+VI. CONCLUSIONS
+In this paper, we outlined an end-to-end autonomous
+socially assistive robot for the emotional support of children.
+The system used an Interactive Reinforcement Learning-
+based methodology to learn the social profile of the users
+through social interactions. Under this paradigm, the robot
+could learn either by observing the user’s reaction to its own
+social actions or with the assistance of a trainer, who could
+Figure 5: Heat map representations of the q-values for each kind of policy.
+3
+2
+1
+3
+0
+2
+-1
+1
+0
+-1
+0
+0
+1
+1
+D
+D
+2
+A Y S
+2
+A Y S
+3
+3
+4
+4
+optionally provide additional feedback through a separate [10] E. S. Short, E. C. Deng, D. J. Feil-Seifer and M. J. Matarić,
+interface. "Understanding Agency in Interactions Between Children with Autism
+and Socially Assistive Robots". In Transactions on Human-Robot
+In our experiment, we had a group of elementary school
+Interaction, 6(3):21-47, 2017.
+children come and play with the robot. The objective of the
+[11] S. Jeong, “Developing a Social Robotic Companion for Stress and
+experiment was to validate the ability of the robot to achieve Anxiety Mitigation in Pediatric Hospitals”, Master Thesis, Department
+long term engagement with its users, as well as to determine of Electrical Engineering and Computer Science, Massachusetts
+Institute of Technology (MIT), 2014.
+whether the automatic mood estimation algorithm could
+[12] G. Gordon, C. Breazeal and S. Engel, “Can Children Catch Curiosity
+provide some insight into the user’s social profile. To achieve
+from a Social Robot?”. In Proceedings of the Tenth Annual ACM/IEEE
+this, we separated the participant pool into two groups, to International Conference on Human-Robot Interaction (pp. 91-98),
+compare the performance of the robot with the learning policy ACM. 2015.
+against a robot performing actions randomly. Results showed [13] K. Westlund, S. Jeong, H. W. Park, S. Ronfard, A. Adhikari, P. L.
+Harris, D. DeSteno and C. Breazeal, “Flat versus expressive
+that there was a remarkable difference between the two
+storytelling: young children’s learning and retention of a social robot’s
+groups, both in terms of preference for individual actions as
+narrative”. In Frontiers in Human Neuroscience, 11. 2017.
+well as overall for interacting with the robot. Furthermore, a [14] Z. J. Li, Y. H Liu, A. S. Liu, Y. H. Yang, T. H. Yeh and L. C. Fu,
+cross-correlation analysis of the robot’s behaviors with the “Temporal-Contrastive Appearance Network for Facial Expression
+profile of the user defined by questionnaires revealed that Recognition”. In 2018 IEEE International Conference on Systems, Man
+and Cybernetics (SMC), 2018.
+certain behaviors of the robot may exacerbate the negative
+[15] R. Ketal, “Affect, Mood, Emotion and Feeling: Semantic
+feelings a person may have towards robots.
+Considerations,” in The American Journal of Psychiatry, Vol. 132,
+While these results are promising in terms of the Issue 11, pp. 1215-1217, 1975.
+effectiveness of the IRL algorithm to sustain long-term [16] P. Ekman and W. V. Friesen, “Constants across Cultures in the Face
+and Emotion” in Journal of Personality and Social Psychology, vol. 17,
+interactions with children for longer, it is yet unclear whether
+no. 2, pp. 124-129, 1971.
+this algorithm could clearly define a user’s social profile
+[17] G. Doherty-Sneddon, V. Bruce, L. Bonner, S. Longbotham and C.
+through sufficient interactions. Furthermore, due to the Doyle, Development of Gaze Aversion as Disengagement from Visual
+relatively small subject pool, it is difficult to draw statistically Information”, Advance Online Publication, 2011.
+significant conclusions from these results alone. In the future, [18] Z. Cao, G. Hidalgo, T. Simon, S. E. Wei and Y. Sheikh, “OpenPose:
+Realtime Multiperson 2D Pose Estimation using Part Affinity Fields”,
+we will expand our participant pool in order to provide a
+arXiv:1812.08008, 2018.
+quantitative analysis to further support the propose
+[19] D. Ullrich, S. Diefenbach and A. Butz, “Murphy Miserable Robot – A
+methodology. Companion to Support Children’s Well-being in Emotionally Difficult
+Situations” in CHI’16 Extended Abstracts, 2016.
+REFERENCES [20] F. Tanaka, K. Isshiki, F. Takahashi, M. Uekusa, R. Sei and K. Hayashi,
+“Pepper Learns Together with Children: Development of an
+[1] K. C. Fleming J. M. Evans and D. S. Chutka, “Caregiver and Clinicial Educational Application”, in Proceeding of the IEEE-RAS
+Shortages in an Aging Nation” in Mayo Clinic Proceedings, Vol. 78, 8, International Conference on Humanoid Robots, 2015.
+pp. 1026-1040, 2003. [21] P. Hatava, G. L. Olsson and M. Lagerkranser “Preoperative
+[2] H. Gunes, O. Celiktutan and E. Sariyanidi, “Live human-robot Psychological Preparation for Children Undergoing ENT Operations:
+interactive public demonstrations with automatic emotion and A Comparison of Two Methods” in Journal of Paediatric Anaesthesia
+personality prediction.”. In Phil. Trans. R. Soc. B 374: 20180026, 2019. 10(5):477-86, 2005.
+[3] E. Gamborino and L. C. Fu, “Interactive Reinforcement Learning based [22] A. L. Thomaz and C. Brezeal, “Reinforcement Learning with Human
+Assistive Robot for the Emotional Support of Children”. In 18th Teachers: Evidence of Feedback and Guidance with Implications for
+International Conference on Control, Automation and Systems Learning Performance,” in 21st National Conference in Artificial
+(ICCAS’18), 2018. Intelligence, Vol. 1 pp. 1000-1005, 2006.
+[4] M. M. Baum, N. Bergstrom, N. F. Langston, and L. Thoma, [23] W. B. Knox and P. Stone, “Reinforcement Learning from Human
+“Physiological Effects of Human/Companion Animal Bonding” in Reward: Discounting in Episodic Tasks,” in IEEE Intl. Symposium in
+Journal of Nursing Research, vol. 33, no. 3, pp. 126–129, 1984. Robot-Human Interactive Communication, RO-MAN, 2012.
+[5] Gammonley, J. and J. Yates, “Pet Projects Animal Assisted Therapy in [24] K. Fischer, “Interpersonal Variation in Understanding Robots as Social
+Nursing Homes,” in Journal of Gerontological Nursing, vol. 17, no. 1, Actors” in 2011 6th ACM/IEEE International Conference on Human-
+pp. 12–15, 1991. Robot Interaction (HRI), 2011.
+[6] K. Wada and T. Shibata, “Living with Seal Robots — Its [25] K.L. Koay, D.S. Syrdal, M.L. Walters and K. Dautenhahn, “Living with
+Sociopsychological and Physiological Influences on the Elderly at a Robots: Investigating the Habituation Effect in Participants Preferences
+Care House” in IEEE Transactions on Robotics, Vol. 23, No. 5, 2007. During a Longitudinal Human-Robot Interaction Study” in The 16th
+[7] A. Coninx, P. Baxter, E. Oleari, S. Bellini, B. Bierman, O. Blanson IEEE International Symposium on Robot and Human Interactive
+Henkemans, L. Canamero, P. Cosi, V. Enescu, R. Ros-Espinoza, A. Communication (RO-MAN’07), 2007.
+Hiolle, R. Humbert, B. Kiefer, I. Kurjff-Korbayova, R. Looije, M. [26] J. Ocumpaugh, R.S. Baker and M.T. Rodrigo, “Baker-Rodrigo-
+Mosconi, M. Neerincx, G. Paci, G. Patsis, C. Pozzi, F. Sacchitelli, H. Ocumpaugh Monitoring Protocol(BROMP) 2.0 Technical and Training
+Sahli, A. Sanna, G. Sommavilla, F. Tesser, Y. Demiris and T. Manual”, 2015.
+Belpaeme, “Towards Long-Term Social Child-Robot Interaction:
+Using Multi-Activity Switching to Engage Young Users” in Journal of
+Human-Robot Interaction, Vol. 5, No. 1, pp. 32-67, 2016.
+[8] D. J. Feil-Seifer and M. J. Matarić, "Using Computational Models Over
+Distance-Based Features to Facilitate Robot Interaction with Children".
+In Journal of Human-Robot Interaction, 1(1):55-77, 2012.
+[9] C. Clabaugh, G. Ragusa, F. Sha and M. Matarić, “Designing a Socially
+Assistive Robot for Personalized Number Concepts Learning in
+Preschool Children”. In 5th International Conference on Development
+and Learning and on Epigenetic Robotics (ICDL-EpiRob), 2015.

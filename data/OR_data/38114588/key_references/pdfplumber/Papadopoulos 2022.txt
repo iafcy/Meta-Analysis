@@ -1,0 +1,1411 @@
+International Journal of Social Robotics (2022) 14:245–256
+https://doi.org/10.1007/s12369-021-00781-x
+The CARESSES Randomised Controlled Trial: Exploring
+the Health‑Related Impact of Culturally Competent Artificial
+Intelligence Embedded Into Socially Assistive Robots and Tested
+in Older Adult Care Homes
+Chris Papadopoulos1 · Nina Castro2 · Abiha Nigath1 · Rosemary Davidson1 · Nicholas Faulkes1 ·
+Roberto Menicatti3 · Ali Abdul Khaliq4 · Carmine Recchiuto3 · Linda Battistuzzi3 · Gurch Randhawa1 · Len Merton2 ·
+Sanjeev Kanoria2 · Nak‑Young Chong5 · Hiroko Kamide6 · David Hewson1 · Antonio Sgorbissa3
+Accepted: 18 March 2021 / Published online: 23 April 2021
+© The Author(s) 2021
+Abstract
+This trial represents the final stage of the CARESSES project which aimed to develop and evaluate a culturally competent
+artificial intelligent system embedded into social robots to support older adult wellbeing. A parallel group, single-blind ran-
+domised controlled trial was conducted across older adult care homes in England and Japan. Participants randomly allocated
+to the Experimental Group or Control Group 1 received a Pepper robot for up 18 h across 2 weeks. Two versions of the
+CARESSES artificial intelligence were tested: a fully culturally competent system (Experimental Group) and a more limited
+version (Control Group 1). Control Group 2 (Care As Usual) participants did not receive a robot. Quantitative outcomes
+of interest reported in the current paper were health-related quality of life (SF-36), loneliness (ULS-8), and perceptions
+of robotic cultural competence (CCATool-Robotics). Thirty-three residents completed all procedures. The difference in
+SF-36 Emotional Wellbeing scores between Experimental Group and Care As Usual participants over time was significant
+(F[1] = 6.614, sig = .019, η 2 = .258), as was the comparison between Any Robot used and Care As Usual (F[1] = 5.128,
+p
+sig = .031, η 2 = .146). There were no significant changes in SF-36 physical health subscales. ULS-8 loneliness scores slightly
+p
+improved among Experimental and Control Group 1 participants compared to Care As Usual participants, but this was not
+significant. This study brings new evidence which cautiously supports the value of culturally competent socially assistive
+robots in improving the psychological wellbeing of older adults residing in care settings.
+Keywords CARESSES · Mental health · Socially assistive robots · Experimental trial · Older adults · Cultural competence
+1 Introduction
+*
+Chris Papadopoulos
+chris.papadopoulos@beds.ac.uk
+Health and social care sectors worldwide are facing rising
+1 University of Bedfordshire, Park Square Campus, pressures due to increased demand associated with aging
+Luton LU1 3JU, UK populations, the many complex chronic conditions associ-
+2 Advinia Health Care Limited LTD, 314 Regents Park Road, ated with this population, and now the impact of Covid-19.
+London N3 2JX, UK Therefore, exploring technological solutions that may allevi-
+3 Department of Informatics, Bioengineering, Robotics ate these pressures in a safe, ethical, acceptable and effective
+and Systems Engineering, University of Genova, Via manner is vital.
+all’Opera Pia 13, 16145 Genova, Italy
+The evidence regarding the impact of assistive robotics
+4 School of Science and Technology, Orebro University, for older adults with care needs is emerging and, in rela-
+Orebro, Sweden
+tion to psychological wellbeing, appears encouraging. Abdi,
+5 Japan Advanced Institute of Science and Technology, 1-1 Al-Hindawi, Ng, and Vizcaychipi’s [1] scoping review of
+Asahidai, Nomi, Ishikawa 923-1292, Japan
+socially assistive robots (SARs) within older adult health-
+6 Nagoya University, Furocho, Chikusaku, Nagoya, care settings assessed a range of outcomes from 33 studies,
+Aichi 464-8601, Japan
+Vol.:(0112 33456789)
+2 46 International Journal of Social Robotics (2022) 14:245–256
+totalling 1574 participants and 11 robots. Twenty-eight that embeds cultural competence to achieve patient-centred-
+of these studies reported positive outcomes in relation to ness should boost SARs’ overall quality of user interactions,
+assisting older adults with cognitive training, companion- boost user acceptance, and that further research into produc-
+ship, social facilitation and physiological therapy. However, ing safe, acceptable and effective socially assistive robotic
+the authors conclude that while the evidence for SARs is solutions is needed so to help reduce the strain on the older
+promising, many studies had methodological issues and adult care sector. The current paper specifically presents the
+most only focused upon small robots, in particular the PARO trial’s quantitative results in relation to the intervention’s
+seal robot. impact upon health-related quality of life, mental health
+Systematic reviews by Pu, Moyle, Jones, and Todorovic and loneliness, when culturally competent socially assistive
+[2] and Abbott et al. [3] reached similar conclusions. The robots are used to supplement existing older adult care in
+former examined the effectiveness of SARs for older adults long-term residential care settings.
+from data extracted from nine randomized controlled trials,
+concluding that, overall, social robots do have the potential
+2 Methods
+to reduce anxiety, agitation, loneliness and improve qual-
+ity of life for older adults despite non-significant results in
+2.1 Study Design and Setting
+their meta-analysis. Abbott et al.’s [3] review of qualitative
+and quantitative evidence in relation to the use of robopets
+(small animal‐like companion robots) in improving older The CARESSES project involved a mixed-method, single-
+adults’ wellbeing similarly reported that, on the whole, there blind (among participants receiving a robot only), parallel-
+is evidence of positive impact in relation to reduced agi- group experimental trial was employed within long-term
+tation and loneliness despite non-significance within their older adult care homes in England and Japan during 2019.
+meta-analysis. Both reviews however also highlighted a large A pre-trial pilot study was first employed during late 2018 in
+proportion of evidence has to date been produced by stud- one UK-based care home (which did not feature in the main
+ies using the PARO robot only and that many studies were trial). This established that our planned procedures were
+had a high risk of bias, particularly in relation to allocation likely to be feasible and acceptable, and led to several pro-
+concealment and blinding. cedural and technical improvements that were subsequently
+The current study, part of the CARESSES project, employed to enhance the main trial’s procedures.
+attempted to build on the current evidence-base by con- The University of Bedfordshire’s Research Ethics Com-
+ducting an exploratory RCT using a novel culturally com- mittee approved the UK-based study (Ref: UREC130)
+petent and autonomous artificial intelligence system [4, 5] whereas the Human Subject Research Ethics Review Tech-
+developed earlier in the project, and embedded into the Pep- nical Subcommittee of the Japan Advanced Institute of Sci-
+per humanoid robot using (which has to date been largely ence and Technology Life Science Committee approved the
+overlooked by other similar trials to date) within older adult Japan-based study (Ref: 30–001). Full details on how ethical
+care settings in the UK and Japan. It is the first to employ a considerations, a key component of the overall project, were
+cross-national trial design, and among the first to explore the identified and managed can be found elsewhere [18–20].
+impact of culturally competent artificial intelligence embed- An overview of the methodological approach follows below
+ded into social robotics for enhancing health and wellbeing. although full details pertaining to methodological proce-
+The importance of cultural competence in improving patient dures (including the full suite of data collection measures
+outcomes is widely reported, particularly within the nursing used) have been published elsewhere [20].
+literature [6, 7]. The concept refers to the ability of services
+2.2 Participants
+to effectively meet and leverage the cultural and commu-
+nication needs of clients [6]. Yet despite both its impor-
+tance for enhancing patient-centred care and considerable Participants were recruited on the following basis: they were
+debate around the conceptualisation and construction of aged ≥ 65 years; resided in a single occupancy bedroom /
+‘cultural robotics’ [8–11], the concept has never previously bedroom area within their care home; were unlikely to
+been implemented and evaluated for its utility using a ran- express aggression towards themselves, the robot, and/or the
+domised controlled trial design within healthcare settings. researcher; possessed sufficient cognitive competence and
+Cultural competence has also been linked with improved sufficient physical health; and were able to verbally com-
+patient satisfaction [12] and acceptance [13, 14], which are municate in English (UK site only) or Japanese (Japan site
+two further key aspects of successful assistive robotics solu- only). Residents who self-identified themselves as primarily
+tions [15–17]. belonging to the English or Indian culture were recruited
+The CARESSES project was formed on the aforemen- from UK-based care homes predominantly owned by
+tioned points, namely that producing an artificial intelligence Advinia Health Care (a full research partner in the project),
+1 3
+International Journal of Social Robotics (2022) 14:245–256 247
+whereas the Japanese participants were recruited from the 2.5 Boosting Standardisation
+HISUISUI assisted living facility in Japan.
+To determine eligibility, care home staff first nominated Several procedures took place to boost procedural standardi-
+residents (using initials only to protect anonymity) who they sation between the UK and Japan-based sites. This included
+believed met the inclusion criteria. The research team then regular joint planning meetings, a jointly produced, detailed
+conducted brief structured interviews with staff who made protocol, using the same data collection instruments (includ-
+nominations using the interRAI-Long Term Care Facility ing pre-existing validated Japanese translations where pos-
+‘Cognitive Performance Scale’ and ‘Aggressive Behaviour sible), researchers from both sites undergoing the same
+Scale’ sub-scales [21] to assess cognitive competence and series of training procedures, and step-by-step manuals to
+aggressiveness, and the FRAIL-NH scale [22] to assess aid implementation of procedures.
+frailty (a proxy to physical health). Residents who passed
+screening were then approached by a familiar care home 2.6 Interventions
+staff member and introduced to a researcher who proceeded
+to invite the resident to participate. Participants allocated to the Experimental Group or Control
+Group 1 received a robot for two weeks. The robot hard-
+2.3 Allocation and Blinding
+ware used was ‘Pepper’, a robot manufactured by SoftBank
+Robotics (a study partner). It is 4 ft tall, weighs 63 lb and,
+Participants were allocated to one of following three groups due to its artificial appearance, is not disadvantaged by the
+using random sampling stratified by gender: 1. Experimen- Uncanny Valley effect [23].
+tal group (utilizing a CARESSES experimental robot); 2. The CARESSES Experimental Robot represented our
+Control Group 1 (utilizing a CARESSES control robot); and best effort of producing robotic cultural competence. This
+3. Control Group 2 (Care As Usual only). Participants who involved (a) the robot being made aware of the particu-
+received a robot were blinded to which type of robot they lar participants’ cultural background; (b) pre-loading and
+received (the experimental or control robot). Care home staff employing the appropriate Cultural Knowledge Base (CKB)
+were also blinded and there were no circumstances under during testing (for which three such databases were devel-
+which unblinding was permissible. oped for the English, Indian and Japanese cultures); (c) ini-
+tially tailoring its interactions to a culture-specific level and
+2.4 Trial Preparation
+then, during the second half of testing only, shifting towards
+more personalised interactions after learning more about the
+All research staff were subject to Disclosure & Barring participants’ individual preferences and values; and (d) prop-
+Service checks (in the UK) and criminal record checks (in agating its learning of the participant in one particular area
+Japan). Researchers also completed a series of ethics and automatically to other related areas for improved predictions
+methods training, had weekly supervisory meetings and about the participants’ values and preferences.
+team support on an on-going basis. Care home staff were The CARESSES Control Robot represented our attempt
+prepared via a brief presentation regarding what to expect at ensuring clinical equipoise through producing a robot that
+during testing procedures, to request they continue their jobs was less culturally competent but also not culturally incom-
+as usual, to not rely upon the robot and—to help protect petent (where it might be reasonably likely to expect harm).
+staff morale and concerns about the implications of techno- This robot was therefore not pre-aware of the participant’s
+logical interventions—reminded that the project is explor- cultural background, it did not propagate its learning and
+ing whether and how social robots may support outcomes it pre-loaded a generic and more limited CKB not tailored
+in conjunction with current care rather than replacing care. for any particular cultural profile. However, it did tailor its
+Leaflets that contained this information were also made interactions to become more personalised over time.
+available. An example to illustrate the differences between these
+Technical preparation and set-up procedures lasting versions is that for a participant who primarily identifies
+approximately 1 h took place within each participant’s bed- with the English culture, the Experimental Robot would load
+room prior to the first test either in the presence of the resi- its English CKB upon first meeting the individual, initiate
+dent or without their presence if they preferred and provided a greeting that is likely to be valued (e.g. hand waving),
+consent for. The research team also had a brief preparatory and to begin conversing in topics of conversation likely to
+meeting with participants allocated to receive a robot so to be valued as encoded within the CKB (e.g. talking about
+answer any remaining questions and to collect key personal football, Hollywood movies, Western music, World War 2).
+information required to customise the robot (e.g. name, age Conversations could then lead to the robot asking whether
+and the contact information of close family members the the participant might like to watch videos, listen to music
+robot could use to contact if the resident wished). or play a memory game associated with such interests.
+1 3
+2 48 International Journal of Social Robotics (2022) 14:245–256
+However, for the Control Robot, upon initially meeting the games, and to contact loved ones via text, video messages,
+participant, would instead take a guess at an appropriate video or audio calls. For safety reasons, during each session,
+initial greeting gesture (e.g. a bow), and also make less accu- the robot would remain in its initial position and not move
+rate guesses about what topics of conversation are likely around to follow the resident, although it would swivel to
+to be valued (e.g. asking the English participant whether face the resident as necessary. After testing was complete,
+he/she enjoys Sumo Wrestling or Bollywood movies), also the research team spent additional time to support partici-
+enquiring whether the participant might wish to watch, lis- pants in case they expressed any sadness or distress from
+ten or play a game associated with these topics. During the missing the robot. Control Group 2 (Care As Usual) partici-
+second week of testing, both versions adjust to the specific pants did not engage in any tests and instead continued to
+responses obtained in relation to conversation topics (e.g. if receive their usual level and type of care.
+the participant states he/she does not like football, then both
+2.8 Data Collection
+versions remember this and explore other sports which he/
+she may instead value). If the participant agrees that he/she
+likes Sumo Wrestling, the Experimental robot propagates The quantitative measures of health and wellbeing applied
+this learning to also guess that he/she might also value other during 1–1 structured interviews with residents at baseline
+aspects of Japanese culture, whereas the Control Robot does and post-intervention were: (1) Short Form (36) Health Sur-
+not form such connections. A detailed explanation as to how vey version (SF-36) [27]. This is a widely used and validated
+the conversational interactions were developed and imple- health survey measuring eight dimensions of mental and
+mented during the trial stage has been previously described physical health. This was completed by all participants; (2)
+[24, 25] Short Form UCLA Loneliness Scale (ULS-8) [28]. This is
+The development of the CARESSES experimental and a widely used brief and validated measure of loneliness and
+control robots required finding innovative technological was also completed by all participants.
+solutions in order to embed the robots with the required Arti- The Cultural Competence Assessment Tool–Robotics
+ficial Intelligence, enabling the robot to interact with the par- (CCATool-Robotics) tool was employed to assess percep-
+ticipants using its sensors and algorithms for data processing tions of robotic cultural competence. This is an adapted ver-
+and reasoning. Indeed, the basic version of Pepper provides sion of the RCTSH Cultural Competence Assessment Tool
+basic functionalities for interacting with people, but they (CCATool) [29]. This was completed by participants who
+need to be orchestrated through specific cognitive processes received a robot at the one-week stage and post-interven-
+in order to enable a natural and engaging long-term inter- tion. Measurements were taken during these time periods
+action (given the aim was not to implement Wizard-of-Oz to assess to what degree perceptions of cultural competence
+experiments but rather fully autonomous behaviour). A full changed after personalisation had occurred during week 2.
+explanation on how the artificial intelligence for the experi- All data were collected between February and November
+mental and control robots was developed for the purpose of 2019.
+testing and evaluation has been previously described [26].
+2.9 Data Analysis
+2.7 Testing Procedures
+Data were first checked for accuracy with any discrepancies
+Participants allocated to receive a robot had six sessions audited, discussed and resolved. There were two instances
+with the robot spread across two weeks at convenient times of missing SF-36 data. This scale tolerates small amounts of
+for the residents. Each session lasted for up to 3 h, with missing data due to its use of mean average subscales [27]
+participants free to use the robot as much or as little as they and as such no adjustment or imputation was needed. There
+wished during these times. The first session involved train- was one instance of missing data regarding the ULS-8 data
+ing the participant on how to use the robot and access the for which case mean substitution was used as it was contex-
+various functionalities, how to communicate with it, how to tually appropriate to do so [30]. There were no missing data
+request assistance, and to answer remaining questions. The for the CCATool data.
+subsequent sessions involved the participants using the robot Cronbach’s Alpha scores were good. Specifically, SF-36
+independently and privately (although for safety reasons, scored 0.758 and 0.741, while ULS-8 scored 0.756 and
+sessions were audio–video monitored by researchers nearby 0.830 at baseline and post-intervention respectively.
+which participants were aware of). This involved the robot Kolmogorov–Smirnov Normality Tests were conducted
+initially being placed near to the resident (within 3 feet) who so to establish the normality of distribution among the
+could then specify further how close they wished the robot dependent variables. Further, observation of scale variable
+to remain positioned. Participants then used the robot to differences between means and medians, kurtosis, skew val-
+engage in conversation, listen to music, watch videos, play ues and histogram distributions were also observed. Overall,
+1 3
+International Journal of Social Robotics (2022) 14:245–256 249
+the data was assessed to be non-normally distributed and
+therefore non-parametric tests were applied. For within-
+group repeated analyses, Wilcoxon signed-rank tests were
+applied. Analysis of covariance (ANCOVA) tests were also
+carried out to measure and compare post-intervention out-
+come scores across a grouping variable (controlling for base-
+line scores). Grouping variables were constructed according
+to the group to which they were allocated to (Experimental
+Group, Control Group 1, Control Group 2). To expand the
+available analytical comparisons, an ‘Any Robot’ grouping
+variable was constructed which combined the data collected
+from the Experimental Group and Control Group 1 groups.
+Assessing the impact of perceived cultural competence on
+outcome change was made through assessing the differences
+in outcome scores between all available analytical com-
+parisons (Exp Group vs Control Group 1, Exp Group vs
+Control Group 2, Control Group 1 vs Control Group 2, Exp
+Group + Control Group 1 [‘Any Robot’] vs Control Group 2).
+Significance was set at p < 0.05, two-tailed. IBM SPSS
+Statistics v26 was used to run the analyses.
+3 Results
+3.1 Sample Characteristics
+Nine care homes across England (n = 8) and Japan (n = 1)
+agreed to participate. Across these homes, 134 residents
+were nominated by care staff, 111 of whom passed screen-
+ing. During initial recruitment procedures, it was observed
+that twelve further residents were unlikely to meet eligibil-
+ity criteria (mainly due to perceived memory problems). Of
+the remaining 99 participants, 45 consented although ten
+subsequently dropped out prior to tests commencing. The
+remaining 35 participants commenced procedures although
+two participants (both allocated to control group 1) withdrew
+after 1 session (n = 1) and 2 sessions (n = 1). Thus, overall,
+33 residents fully participated who identified themselves as
+primarily belonging to English (n = 15), Indian (n = 15) or
+Japanese (n = 3) cultures. The recruitment rate (eligible and
+invited / participated) was therefore 35.4%. The main rea-
+sons for declining participation were: ‘too tired’ (n = 14),
+no interest in project (n = 5), against the idea of robots in
+care homes (n = 3), too busy (n = 3) and family refused to
+consent (n = 3).
+As can be seen in Tables 1 and 2, participants’ age ranged
+from 65—98 years (Mean = 81.9; SD = 9.82), the oldest
+of whom were Japanese (M = 86; SD = 9.54) followed by
+English (M = 83.67; SD = 10.3) and Indian participants
+(M = 79.4; SD = 9.36). The sample was predominantly
+female (n = 22), educational level was fairly equally dis-
+tributed, and most participants were married at some point
+in their lives, with a large portion now widowed (n = 23).
+1 3
+gnipuorg
+larutluc
+dna
+llarevO—seicneuqerf
+cihpargomedoicoS
+1 elbaT
+ssensuoigileR
+sutats
+latiraM
+level
+lanoitacudE
+xeS
+egA
+/yreV
+/ylthgilS
+suoigileR
+toN
+wodiW
+toN
+wodiW
+egelloC/lanoisseforP
+/yradnoceS
+ssel
+ro
+yramirP
+M
+F
+naideM
+)DS(
+naeM
+ylemertxE
+yletaredoM
+)%(
+N
+)%(
+N
+)%(
+N
+)%(
+N
+loohcs
+hgiH
+)%(
+N
+)%(
+N
+)%(
+N
+suoigileR
+suoigileR
+)%(
+N
+)%(
+N
+)%(
+N
+)3.03(
+01
+)5.84(
+61
+)2.12(
+7
+)3.03(
+01
+)7.96(
+32
+)3.03(
+01
+)4.63(
+21
+)3.33(
+11
+)3.33(
+11
+)7.66(
+22
+18
+)18.9(
+49.18
+llarevO 33
+=
+N
+)0.3(
+1
+)3.03(
+01
+)1.21(
+4
+)1.21(
+4
+)3.33(
+11
+)1.9(
+3
+)2.51(
+5
+)2.12(
+7
+)2.81(
+6
+)3.72(
+9
+38
+)03.01(
+76.38
+hsilgnE 51
+=
+N
+)3.72(
+9
+)2.81(
+6
+)0.0(
+0
+)2.51(
+5
+)3.03(
+01
+)2.12(
+7
+)2.51(
+5
+)1.9(
+3
+)2.51(
+5
+)3.03(
+01
+08
+)63.9(
+04.97
+naidnI 51
+=
+N
+)0.0(
+0
+)0.0(
+0
+)1.9(
+3
+)0.3(
+1
+)1.6(
+2
+)0(
+0
+)1.6(
+2
+)0.3(
+1
+)0(
+0
+)1.9(
+3
+78
+)45.9(
+00.68
+esenapaJ
+3
+=
+N
+2 50 International Journal of Social Robotics (2022) 14:245–256
+Participants were of multiple specific religious faiths
+which for analytical purposes were categorised as Christian
+(n = 13), Hindu (n = 14) or other (this mostly consisted of
+atheist or ‘non-religious’ people) (n = 6). A full overview of
+participant characteristics per group allocation can be found
+in Table 3.
+3.2 Quantitative outcome measures
+Table 4 describes the overall mean total scores of each out-
+come measure at initial assessment (either Baseline [T0]
+or after one week [T1] depending on tool) and post-inter-
+vention [T2] per group. SF-36 mental health total mean
+scores significantly decreased for the Care As Usual group
+(T0: M = 76.22 [SD = 16.51]; T2: M = 63.30 [SD = 25.3];
+p < 0.05), whereas participants receiving a robot did not
+observe such a reduction, and, in the case of the Experi-
+mental group, a slight increase (T0: M = 77.59 [SD = 16.4];
+T2: M = 78.39 [SD = 12.15]) was observed. For the SF-36
+mental health subscales, small score improvements for the
+Experimental Group can also be seen for the ‘role limita-
+tions—emotional’ (i.e. the degree to which emotional health
+impacts upon one’s ability to conduct their usual roles) (T0:
+M = 86.11 [SD = 33.21]; T2: M = 90.28 [SD = 28.83]) and
+‘energy and fatigue’ subscales (T0: M = 57.92 [SD = 23.82];
+T2: M = 60.00 [SD = 24.31]). However, a significant
+decrease in the ‘role limitations—emotional’ scale was also
+observed for the Control group across the two time points
+(T0: M = 87.88 [SD = 30.81]; T2: M = 60.60 [SD = 44.27];
+Z = − 2.041, sig = 0.041). A numerical although non-sig-
+nificant mean score increase was observed for the ‘emo-
+tional wellbeing’ subscale in the Experimental group
+(T0: M = 83.00 [SD = 11.83]; T2: M = 89.33 [SD = 7.69])
+whereas a considerable numerical decrease was observed
+for the Care As Usual group (T0: M = 82.80 [SD = 12.66];
+T2: M = 67.60 [SD = 29.96]). As seen in Tables 5 and 6,
+ANCOVA comparisons revealed that the relative improve-
+ment of ‘emotional wellbeing’ subscale scores between
+Experimental group participants and Care As Usual partici-
+pants over time was significant (F[1] = 6.614, sig = 0.019,
+η 2 = 0.258), as was the comparison between Any Robot
+p
+(i.e. participants in the Experimental or Control group)
+and Care As Usual (F[1] = 5.128, sig = 0.031, η 2 = 0.146).
+p
+There were no significant changes in mean scores over time
+in SF-36 physical health subscales or with the ULS-8 loneli-
+ness scores. However, for the latter, the ‘Any Robot’, Experi-
+mental and Control groups experienced a slight reduction
+in loneliness severity between T0 and T2 (Exp group: T0:
+M = 14.9 [SD = 4.98]; T2: M = 14.3 [SD = 3.53], Control
+Group: T0: M = 18.8 [SD = 4.73]; T2: M = 17.2 [SD = 6.46])
+whereas the Care As Usual group saw a slight increase in
+loneliness scores (T0: M = 15.7 [SD = 4.73]; T2: M = 16.5
+[SD = 5.4]).
+1 3
+gnipuorg
+tobor
+dna
+noitacollA—seicneuqerf
+cihpargomedoicoS
+2
+elbaT
+ssensuoigileR
+sutats
+latiraM
+level
+lanoitacudE
+xeS
+egA
+/yreV
+/ylthgilS
+suoigileR
+toN
+wodiW
+toN
+wodiW
+-seforP
+/yradnoceS
+ssel
+ro
+yramirP
+M
+F
+naideM
+)DS(
+naeM
+ylemertxE
+yletaredoM
+)%(
+N
+)%(
+N
+)%(
+N
+-loC/lanois
+loohcs
+hgiH
+)%(
+N
+)%(
+N
+)%(
+N
+suoigileR
+suoigileR
+egel
+)%(
+N
+)%(
+N
+)%(
+N
+)%(
+N
+)2.51(
+5
+)4.93(
+31
+)2.51(
+5
+)2.12(
+7
+)5.84(
+61
+)3.72(
+9
+)3.72(
+9
+)2.51(
+5
+)1.93(
+9
+)9.06(
+41
+18
+)84.9(
+56.08
+stobor
+llA
+32
+=
+N
+)0.3(
+1
+)2.42(
+8
+)1.9(
+3
+)2.21(
+4
+)2.42(
+8
+)2.81(
+6
+)2.51(
+5
+)0.3(
+1
+)2.51(
+5
+)2.12(
+7
+97
+)30.9(
+05.97
+tobor
+pxE
+21
+=
+N
+)1.21(
+4
+)2.51(
+5
+)1.6(
+2
+)1.9(
+3
+)2.42(
+8
+)1.9(
+3
+)1.21(
+4
+)1.21(
+4
+)1.21(
+4
+)2.12(
+7
+38
+)32.01(
+19.18
+tobor
+lortnoC 11
+=
+N
+)2.51(
+5
+)1.9(
+3
+)1.6(
+2
+)1.9(
+3
+)2.12(
+7
+)0.3(
+1
+)1.9(
+3
+)2.81(
+6
+)1.6(
+2
+)2.42(
+8
+48
+)44.01(
+09.48
+tobor
+oN
+01
+=
+N
+International Journal of Social Robotics (2022) 14:245–256 251
+Regarding perceptions of cultural competence, both ver-
+sions of the robot produced fairly high levels of CCATool
+scores at both time points. However, the Experimental
+group’s robot performed better than the Control group’s
+robot at both time points in all but two of the subscales (Sub-
+scale B: Cultural Sensitivity at T2 and Subscale D: Cultural
+Competence at T1). CCATool scores increased between T1
+and T2 for all scales within the Experimental group and all
+but in one scale for the Control group (Subscale D: Cul-
+tural Competence—T1: M = 4.91 [SD = 1.51, T2: M = 4.45
+[SD = 1.51]). A full breakdown of CCATool scores can be
+seen in Table 7.
+4 Discussion and Conclusions
+While the findings are nuanced and are the product of an
+exploratory trial with several limitations, overall, the results
+cautiously provide further evidence in support of socially
+assistive robots being used to support older adults in care
+settings in a supplementary way, particularly in relation to
+mental health and emotional wellbeing.
+Firstly, fairly large and positive score changes in the
+‘emotional wellbeing’ subscale were observed in both the
+Any Robot group and the Experimental group, whereas no
+change in score was observed for the Control group and a
+fairly large decrease in scores was observed for the Care As
+Usual group. When assessing the magnitude of change in
+scores over time between groups, the differences between
+improved scores in the Any Robot group compared to the
+Care As Usual group, and between the Experimental group
+compared to the Care As Usual group, were significant. This
+implies that using a CARESSES robot (ideally the Experi-
+mental Robot) compared to not using any robot may indeed
+be likely to improve older adults’ emotional wellbeing, even
+only after a period of 2 weeks. Whether and to what degree
+this effect may hold or change over time is however currently
+unknown.
+When examining the SF-36 mental health total scores,
+which may be argued to be a less precise way of measuring
+mental health than the ‘emotional wellbeing’ subscale alone
+[31, 32], the differences in score change over time between
+groups were close to meeting the statistical significance
+threshold (Experimental group vs Care As Usual group:
+F[1] = 4.249, sig = 0.054; Experimental group vs Control
+group: F[1] = 3.836, sig = 0.065). These findings lend fur-
+ther support to the notion that having access to a version of
+the CARESSES intervention over 2 weeks may be likely to
+protect older adults’ mental health compared to not using
+any robot, and that the Experimental robot is likely to be
+particularly effective at this.
+The Experimental robot also produced better scores
+during testing on the ‘role limitation—emotional’ SF-36
+1 3
+gnipuorg
+tobor
+yb
+tniop
+emit
+rep
+serocs
+elacsbus
+63-FS
+naeM
+3
+elbaT
+latneM—selacsbuS
+63
+FS
+lacisyhP—selacsbuS
+63
+FS
+gninoitcnuf
+laicoS
+gniebllew
+lanoitomE
+eugitaF
+dna
+ygrenE
+—snoitatimil
+eloR
+htlaeh
+lareneG
+niaP
+—snoitatimil
+eloR
+noitcnuf
+lacisyhP
+lanoitomE
+lacisyhP
+naeM
+2T
+naeM
+0T
+naeM
+2T
+naeM
+0T
+naeM
+2T
+naeM
+1T
+2T
+naeM
+0T
+naeM
+2T
+naeM
+0T
+naeM
+2T
+naeM
+0T
+naeM
+2T
+naeM
+0T
+naeM
+2T
+naeM
+0T
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(naeM
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(
+)DS(
+36.67
+34.08
+34.28
+87.87
+84.85
+03.65
+90.67
+69.68
+31.95
+22.56
+34.56
+75.96
+06.06
+23.36
+38.23
+23.43
+ynA
+)57.12(
+)81.32(
+)66.61(
+)61.71(
+)96.22(
+)31.42(
+)91.93(
+)63.13(
+)34.02(
+)75.91(
+)71.82(
+)49.32(
+)54.24(
+)31.14(
+)78.72(
+)60.72(
+tobor 32
+= N
+69.37
+33.38
+33.98
+00.38
+00.06
+29.75
+82.09
+11.68
+71.95
+24.07
+33.86
+80.76
+89.16
+58.85
+52.62
+54.23
+pxE
+)26.12(
+)44.32(
+)96.7(
+)38.11(
+)13.42(
+)28.32(
+)38.82(
+)12.33(
+)78.91(
+)22.31(
+)93.13(
+)65.52(
+)30.93(
+)00.34(
+)66.32(
+)64.82(
+tobor 21
+= N
+55.97
+72.77
+19.47
+81.47
+28.65
+55.45
+*06.06
+*88.78
+90.95
+55.95
+72.26
+72.27
+90.95
+81.86
+00.04
+63.63
+lortnoC
+)55.22(
+)06.32(
+)46.02(
+)91.12(
+)38.12(
+)28.82(
+)72.44(
+)18.03(
+)00.22(
+)32.42(
+)13.52(
+)59.22(
+)97.74(
+)54.04(
+)83.13(
+)56.62(
+tobor 11
+= N
+52.67
+52.68
+06.76
+08.28
+00.65
+05.26
+33.35
+33.37
+00.07
+00.27
+57.27
+52.17
+00.06
+05.75
+05.74
+00.64
+tobor
+oN
+)99.52(
+)31.71(
+)69.92(
+)66.21(
+)64.22(
+)06.81(
+)66.74(
+)48.73(
+)49.42(
+)36.22(
+)31.23(
+)64.53(
+)14.44(
+)12.74(
+)12.73(
+)26.03(
+01
+= N
+htlaeh
+tcefrep
+gnitneserper
+001
+htiw
+001
+ot
+0
+morf
+egnar
+serocs
+63FS
+;)tseT
+sknaR
+dengiS
+noxocliW(
+50.
+< p
+*
+2 52 International Journal of Social Robotics (2022) 14:245–256
+Table 4 Mean outcome scores per time point by robot grouping
+SF36 totals ULS-8 totals+ CCATool totals
+Physical health totals Mental health totals
+T0 T2 T0 T2 T0 T2 T1 T2
+Mean (SD) Mean (SD) Mean (SD) Mean (SD) Mean (SD) Mean (SD) Mean (SD) Mean (SD)
+Any robot 58.11 (20.79) 54.50 (18.28) 75.62 (16.81) 73.41 (18.99) 16.80 (5.13) 15.75 (5.28) 20.17 (4.60) 21.87 (3.44)
+N = 23
+Exp robot 57.20 (20.36) 53.93 (15.21) 77.59 (16.40) 78.39 (12.15) 14.9 (4.98) 14.3 (3.53) 20.83 (4.84) 22.42 (2.91)
+N = 12
+Control robot 59.09 (22.20) 55.12 (21.91) 73.47 (17.79) 67.97 (23.84) 18.8 (4.73) 17.2 (6.46) 19.45 (4.44) 21.27 (4.00)
+N = 11
+No robot 61.69 (27.92) 62.56 (30.41) 76.22* (16.51) 63.30* (25.30) 15.70 (4.73) 16.50 (5.40) – –
+N = 10
+*p < .05 (Wilcoxon Signed Ranks Test); SF36 scores range from 0 to 100 with 100 representing perfect health; ULS-8 scores range from 8 to 32
+with 32 representing severe loneliness; CCATool scores range from 0 to 28 with 28 representing highest perceived cultural competence
+Table 5 ANCOVA results for outcome scores for participants in Table 6 ANCOVA results for outcome scores for participants in ’Any
+’Experimental robot’ group vs ’Care as usual’ group Robot’ group vs ’Care as usual’ group
+Outcome variable F df Sig Partial Outcome variable F df Sig Partial
+eta eta
+squared squared
+SF36 Physical function 1.352 1 .259 .066 SF36 Physical function .512 1 .480 .017
+SF36 Role limitations physical .007 1 .934 .000 SF36 Role limitations physical .057 1 .813 .002
+SF36 Role limitations emotional 3.993 1 .060 .174 SF36 Role limitations emotional 1.203 1 .281 .039
+SF36 Energy and fatigue 1.612 1 .220 .078 SF36 Energy and fatigue .848 1 .364 .027
+SF36 Emotional wellbeing 6.614 1 .019 .258 SF36 Emotional wellbeing 5.128 1 .031 .146
+SF36 Social functioning .031 1 .861 .002 SF36 Social functioning .024 1 .878 .001
+SF36 Pain .009 1 .924 .000 SF36 Pain .665 1 .421 .022
+SF36 General health 2.095 1 .164 .099 SF36 General health .928 1 .343 .030
+SF36 Health change .940 1 .345 .047 SF36 Health change .778 1 .385 .025
+SF36 Physical total .660 1 .427 .034 SF36 Physical total .903 1 .349 .029
+SF36 Mental total 3.836 1 .065 .168 SF36 Mental total 2.251 1 .144 .070
+ULS-8 Total scores+ 1.250 1 .280 .072 ULS-8 Total scores+ 1.163 1 .290 .041
++ Japanese ULS-8 data excluded + Japanese ULS-8 data excluded
+subscale compared to the both the Control and Care As An SF-36 measure that both the versions of the robot per-
+Usual groups. This scale measures how limited indi- formed reasonably well in comparison to the Care As Usual
+viduals are in conducting their usual activities because group was ‘energy and fatigue’, with both robot groups
+of emotional problems. As can be observed in Table 3, showing a slight increase in scores over time whereas the
+the Experimental group mean scores slightly increased, Care As Usual group had a larger, although non-significant
+whereas the Control group’s scores significantly decreased numerical decrease. The reasons for why the robots may
+(Z = − 2.041; sig = 0.041) and the Care As Usual group have protected participants’ energy levels is difficult to
+also observed a large decrease (although a non-signifi- interpret although it may be that gains in mental health and
+cant one). These between-group differences were close emotional wellbeing boosted energy (indeed, a significant
+to significance (Experimental group vs Care As Usual: correlation between emotional wellbeing and energy/fatigue
+F[1] = 3.993, sig = 0.06; Experimental group vs Control can be observed: rho = 0.499; sig = 0.003).
+robot group: F[1] = 3.792, sig = 0.066). These findings The intervention was not able to produce any discernible
+therefore provide some further evidence that using a cul- impact in terms of physical health. These findings are unsur-
+turally competent socially assistive robot may be likely to prising; the intervention was designed with a stronger focus
+protect against mental health problems, including those on boosting mental health through culturally competent
+which impact upon one’s everyday activities. interactions rather than boosting physical health. The robots
+1 3
+International Journal of Social Robotics (2022) 14:245–256 253
+did offer participants the option to watch exercise videos and
+in a few cases the participants attempted to copy some of the
+basic exercises they were watching. However, clearly the
+offer of videos and providing tips about improving physical
+health was not effective in producing clear physical health
+improvements in such a short period of time and with what
+is a frail and physically disabled population. It should also be
+noted that there are limitations associated with the hardware
+given that the Pepper robot is not designed or able to provide
+any physical assistance. The Pepper hardware is also not able
+to dispense medication which in theory could have boosted
+medication adherence and thus physical health may have
+been improved. Furthermore, it may have been helpful for
+the system to have included reminders about taking medi-
+cation; however, this feature was not made available during
+testing due to ethical concerns.
+With regard to loneliness, ULS-8 baseline scores for the
+study samples were identified to be fairly high, which for this
+population is unsurprising [33, 34]. During testing, severity
+of loneliness slightly increased in the Care As Usual group
+whereas slight decreases were observed for the Experimental
+and Control Robot groups. These results can be interpreted
+in several ways. First, they indicate that using a culturally
+competent robot may be reasonably unlikely to increase
+loneliness compared to care as usual. Second, they indicate
+that, even over a short period of time (2 weeks), a slight
+reduction in loneliness may be observed. If these trends
+were to continue over time, these differences may become
+more meaningful. Third, if the full CARESSES culturally
+competent software was made available to the Experimental
+robot from the outset (rather than only during the second
+week of testing), the improvements in outcomes related to
+loneliness (and mental health) would likely have been even
+larger. However, it is clear that more work to improve the
+depth and impact of the system to drive down loneliness is
+required. Such improvements may tie-in with enhancements
+to the ‘social functioning’ part of the system, so that future
+systems can have a stronger focus on improving the social
+capital and circumstances of the individual [35].
+Finally, with regard to perception of cultural compe-
+tence, the results of the CCATool show that after one and
+two weeks of use, both the Experimental group’s robot
+and Control group’s robot were, overall, perceived to be
+reasonably culturally competent. Both versions of the
+robot were perceived to be more culturally competent
+after two weeks than compared to after one week, although
+the Experimental group showed greater improvement in
+scores overall. This may suggest that the changes made to
+the system after week 1, to increase cultural competence
+of the system (e.g. by enabling personalisation towards
+individual cultural values), had a positive impact upon per-
+ceptions of cultural competence and, as expected, a greater
+level of impact with the Experimental group participants.
+1 3
+gnipuorg
+tobor
+yb
+serocs
+selacsbus
+dna
+latot
+looTACC
+7
+elbaT
+D
+elacsbus
+looTACC
+C
+elacsbus
+looTACC
+B
+elacsbus
+looTACC
+A
+elacsbus
+looTACC
+slatot
+looTACC
+)DS(
+naeM
+2T
+)DS(
+naeM
+1T
+)DS(
+naeM
+2T
+)DS(
+naeM
+1T
+)DS(
+naeM
+2T
+)DS(
+naeM
+1T
+)DS(
+naeM
+2T
+)DS(
+naeM
+1T
+)DS(
+naeM
+2T
+)DS(
+naeM
+1T
+)02.1(
+87.4
+)44.1(
+38.4
+)89.0(
+69.5
+)74.1(
+25.5
+)15.1(
+22.5
+)37.1(
+84.4
+)61.1(
+19.5
+)94.1(
+31.5
+)44.3(
+78.12
+)06.4(
+71.02
+32
+= N
+tobor
+ynA
+)97.0(
+80.5
+)24.1(
+57.4
+)09.0(
+80.6
+)88.1(
+85.5
+)91.1(
+71.5
+)37.1(
+29.4
+)80.1(
+80.6
+)45.1(
+52.5
+)19.2(
+24.22
+)48.4(
+38.02
+21
+= N
+tobor
+pxE
+)15.1(
+54.4
+)15.1(
+19.4
+)80.1(
+28.5
+)39.0(
+54.5
+)58.1(
+72.5
+)76.1(
+00.4
+)72.1(
+37.5
+)84.1(
+00.5
+)00.4(
+72.12
+)44.4(
+54.91
+11
+= N
+tobor
+lortnoC
+larutluc
+deviecrep
+tsehgih
+gnitneserper
+7 htiw
+7
+ot
+0
+morf
+egnar
+serocs
+elacsbus
+looTACC
+;ecnetepmoc
+larutluc
+deviecrep
+tsehgih
+gnitneserper
+82
+htiw
+82
+ot
+0
+morf
+egnar
+serocs
+latot
+looTACC
+ecnetepmoc
+2 54 International Journal of Social Robotics (2022) 14:245–256
+However, it may also be that increased scores over time Acknowledgements We wish to acknowledge the kind support of all
+were due to the participants’ growing understanding of of the care home managers, staff and residents that supported the study.
+how to use the system more as time passed. Or, of course,
+Funding This work was funded by the European Union’s ‘Horizon
+a combination of both these explanations.
+2020 Research and Innovation programme’ (No 737858) and from
+There are a number of study limitations. Firstly, the ‘Ministry of Internal Affairs and Communications of Japan’. The
+although the trial represents one of the most rigorous authors declare no competing financial interests.
+and largest of its kind to date, particularly with respect to
+Declarations
+cross-cultural assessments and intervention intensity, sam-
+ple sizes were not statistically powered and may be viewed
+as fairly small (particularly the Japanese sample), con- Conflict of interest The authors declare that they have no conflict of
+interest.
+sequently reducing generalisability. However, given that
+each test required two weeks, that only two robots were Ethical approval The authors assert that all procedures contributing
+available to us, that on average only four residents per care to this work comply with the ethical standards of the relevant national
+home were eligible and agreed to participate and that, to and institutional committees on human experimentation and with the
+Helsinki Declaration of 1975, as revised in 2008. Ethics approval was
+achieve the study sample size spanned 10 months (across
+received from University of Bedfordshire’s Research Ethics Committee
+two countries) with many costs, collecting larger samples approved the UK-based study (Ref: UREC130), as well as the Human
+was not feasible within the overall project timescale. Fur- Subject Research Ethics Review Technical Subcommittee of the Japan
+thermore, even though every attempt to control key poten- Advanced Institute of Science and Technology Life Science Committee
+(Ref: 30–001).
+tial confounding variables was made, and that gender-
+based stratified random group allocation was employed, Consent to participate Informed consent was obtained from all indi-
+it is likely that some confounding variables were present. vidual participants included in the study.
+Further, a likely source of bias was that participants using
+a robot were made aware that they were being audio and Open Access This article is licensed under a Creative Commons Attri-
+video monitored by researchers which may have inhibited bution 4.0 International License, which permits use, sharing, adapta-
+or influenced some of their conversations and interactions tion, distribution and reproduction in any medium or format, as long
+as you give appropriate credit to the original author(s) and the source,
+with the robot. This was a bias that the research team could
+provide a link to the Creative Commons licence, and indicate if changes
+not fully overcome given that it was critical to monitor were made. The images or other third party material in this article are
+participants to ensure their safety and to intervene when included in the article’s Creative Commons licence, unless indicated
+technical problems occurred. Another potential bias could otherwise in a credit line to the material. If material is not included in
+the article’s Creative Commons licence and your intended use is not
+have been that some participants in Control Group 2 who
+permitted by statutory regulation or exceeds the permitted use, you will
+wanted a robot but did not receive one had their mood need to obtain permission directly from the copyright holder. To view a
+negatively affected by being aware of their peers receiving copy of this licence, visit http://c reati vecom mons.o rg/l icens es/b y/4.0 /.
+one. Finally, it should be noted that this trial was based on
+a particular type of population, namely older adults resid-
+ing in care settings without severe dementia, severe mental
+References
+health problems or severe frailty (that would require hos-
+pitalisation). Therefore, inferences made on the potential
+impact of the system on other populations based upon the 1. Abdi J, Al-Hindawi A, Ng T, Vizcaychipi MP (2018) Scoping
+review on the use of socially assistive robot technology in elderly
+current system should be treated with caution, particularly
+care. BMJ Open 8(2):e018815. https://d oi.o rg/1 0.1 136/b mjop
+older adults with severe levels of dementia and frailty. en-2 017-0 18815
+Overall, the CARESSES trial represents one of the largest 2. Pu L, Moyle W, Jones C, Todorovic M (2019) The effective-
+attempts to explore the impact of autonomous social robots ness of social robots for older adults: a systematic review and
+meta-analysis of randomized controlled studies. Gerontologist
+on the health and wellbeing of older adults within social
+59(1):e37–e51. https://d oi.o rg/1 0.1 093/g eront/g ny046
+care settings, and the first to assess the role of culturally 3. Abbott R, Orr N, McGill P, Whear R, Bethel A, Garside R, Stein
+competent systems. Despite the study limitations, it can be K, Thompson-Coon J (2019) How do “robopets” impact the health
+cautiously concluded that the CARESSES system did not and well-being of residents in care homes? A systematic review
+of qualitative and quantitative evidence. Int J Older People Nurs
+fare worse than care as usual in most of the study outcome
+14(3):e12239. https://d oi.o rg/1 0.1 111/o pn.1 2239
+measures and, particularly in relation to mental health and 4. Bruno B, Chong NY, Kamide H, Kanoria S, Lee J, Lim Y, Pandey
+emotional wellbeing, it was able to produce significantly AK, Papadopoulos C, Papadopoulos I, Pecora F, Saffiotti A, Sgor-
+better outcomes. Further research is needed to confirm and bissa A (2017) Paving the way for culturally competent robots: a
+position paper. IEEE Int Symp Robot Human Interact Commun.
+build upon these findings, particularly those driven by sta-
+https://d oi.o rg/1 0.1 109/R OMAN.2 017.8 17235 7
+tistically powered sample sizes, and to assess whether and 5. Bruno B, Recchiuto CT, Papadopoulos I, Saffiotti A, Kouloug-
+how trends change beyond a 2-week period only. lioti C, Menicatti R, Mastrogiovanni F, Zaccaria R, Sgorbissa A
+1 3
+International Journal of Social Robotics (2022) 14:245–256 255
+(2019) Knowledge representation for culturally competent per- 20. Papadopoulos C, Hill T, Battistuzzi L, Castro N, Nigath A, Rand-
+sonal robots: requirements, design principles, implementation, hawa G, Merton L, Kanoria S, Kamide H, Chong NY, Hewson
+and assessment. Int J Soc Robot 11(3):515–538. https://d oi.o rg/ D, Davidson R, Sgorbissa A (2020) The CARESSES study pro-
+10.1 007/s 12369-0 19-0 0519-w tocol: testing and evaluating culturally competent socially assis-
+6. Papadopoulos I (2006) The Papadopoulos, Tilki and Taylor tive robots among older adults residing in long term care homes
+model of developing cultural competence. In: Papadopoulos I through a controlled experimental trial. Arch Public Health 78:26.
+(ed) Transcultural health and social care: development of cultur- https://d oi.o rg/1 0.1 186/s 13690-0 20-0 0409-y
+ally competent practitioners. Edinburgh, Churchill Livingstone 21. Carpenter I, Hirdes J (2013) Using interRAI assessment systems
+Elseviers. ISBN: 9780443101311 to measure and maintain quality of long-term care. In: OECD A
+7. Shen Z (2015) Cultural competence models and cultural com- good life in old age? Monitoring and improving quality in long-
+petence assessment instruments in nursing: a literature review. term care, OECD Publishing. Paris. https://d oi.o rg/1 0.1 787/9 7892
+J Transcult Nurs 26(3):308–321. https://d oi.o rg/1 0.1 177/1 0436 641945 64-7-e n
+596145 24790 8 22. Kaehr E, Visvanathan R, Malmstrom TK, Morley JE (2015)
+8. Reim M (2013) From multicultural agents to culture aware robots. Frailty in nursing homes: the FRAIL-NH Scale. J Am Med Dir
+In: Kurosu M (ed) Human-computer interaction: human-centred Assoc 16(2):87–89. https:// doi. org/ 10. 1016/j. jamda. 2014. 12. 002
+design approaches, methods, tools, and environments. Springer 23. Gee FC, Browne W, Kawamura K (2005). Uncanny valley revisited.
+9. Reim M, Krummheuer AL, Rodil K (2018) Developing a new In: IEEE international workshop on robot and human interactive
+brand of culturally-aware personal robots based on local cultural communication. https:// doi. org/ 10. 1109/ ROMAN. 2005. 15137 72.
+practices in the Danish health care system. In: IEEE/RSJ inter- 24. Recchiuto CT, Sgorbissa A (2020) A feasibility study of culture-
+national conference on intelligent robots and systems. https://d oi. aware cloud services for conversational robots. IEEE Robot Auto-
+org/1 0.1 109/I ROS.2 018.8 59447 8 mat Lett 5(4)
+10. Sabanovic S, Bennett CC, Lee HR (2014) Towards culturally 25. Recchuto CT, Gava L, Grassi L, Grillo A, Lagomarsino M, Lanza
+robust robots: a critical social perspective on robotics and culture. D, Liu Z, Papadopoulos C, Papadopoulos I, Scalmato A, Sgor-
+In: Proceedings of the ACM/IEEE conference on human-robot bissa A (2020) Cloud services for culture aware conversation:
+interaction (HRI) workshop on culture-aware robotics (CARS). socially assistive robots and virtual assistants. In: 17th interna-
+11. Saadatian E, Samani H, Fernando N, Polydorou D, Pang N, tional conference on ubiquitous robots, https://d oi.o rg/1 0.1 109/
+Nakatsu R (2013) Towards the definition of cultural robotics. In: UR4913 5.2 020.9 14475 0
+2013 international conference on culture and computing. https:// 26. Recchiuto CT, Papadopoulos C, Hill T, Castro N, Bruno B, Papa-
+doi.o rg/1 0.1 109/C ultur eComp uting.2 013.4 9 dopoulos I, Sgorbissa A (2019) Designing an experimental and a
+12. Govere L, Govere EM (2016) How effective is cultural compe- reference robot to test and evaluate the impact of cultural compe-
+tence training of healthcare providers on improving patient sat- tence in socially assistive robotics. In: IEEE international confer-
+isfaction of minority groups? A systematic review of literature. ence on robot and human interactive communication, https://d oi.
+Worldviews Evid Based Nurs 13(6):402–410. https://d oi.o rg/1 0. org/1 0.1 109/R O-M AN464 59.2 019.8 95644 0
+1111/w vn.1 2176 27. Ware JE Jr, Sherbourne CD (1992) The MOS 36-item short-form
+13. Liu J, Davidson E, Bhopal R, White M, Johnson M, Netto G, health survey (SF-36). I. Conceptual framework and item selec-
+Deverill M, Sheikh A (2012) Adapting health promotion interven- tion. Med Care 30(6):473–483
+tions to meet the needs of ethnic minority groups: mixed-methods 28. Hays RD, DiMatteo MR (1987) A short-form measure of loneli-
+evidence synthesis. Health Technol Assess 16(44):1–469. https:// ness. J Pers Assess 51(1):69–81. https://d oi.o rg/1 0.1 207/s 1532
+doi.o rg/1 0.3 310/h ta164 40 7752jp a5101_6
+14. Horne M, Tierney S, Henderson S, Wearden A, Skelton DA 29. Papadopoulos I, Tilki M, Lees S (2004) Promoting cultural com-
+(2018) A systematic review of interventions to increase physi- petence in health care through a research based intervention in the
+cal activity among South Asian adults. Public Health 162:71–81. UK. Divers Health Soc Care 1(2):107–115
+https://d oi.o rg/1 0.1 016/j.p uhe.2 018.0 5.0 09 30. Fox-Wasylyshyn SM, El-Masri MM (2005) Handling missing data
+15. Broadbent E, Stafford R, MacDonald B (2009) Acceptance in self-report measures. Res Nurs Health 28(6):488–495. https://
+of healthcare robots for the older population: Review and doi.o rg/1 0.1 002/n ur.2 0100
+future directions. Int J Soc Robot. https://d oi.o rg/1 0.1 007/ 31. Friedman B, Heisel M, Delavan R (2005) Validity of the SF-36
+s12369-0 09-0 030-6 five-item Mental Health Index for major depression in function-
+16. Papadopoulos I, Koulouglioti C, Lazzarino R, Ali S (2020) ally impaired, community-dwelling elderly patients. J Am Geriatr
+Enablers and barriers to the implementation of socially assis- Soc 53(11):1978–1985. https://d oi.o rg/1 0.1 111/j.1 532-5 415.2 005.
+tive humanoid robots in health and social care: a systematic 00469.x (PMID: 16274382)
+review. BMJ Open 10(1):e033096. https://d oi.o rg/1 0.1 136/b mjop 32. Rivera-Riquelme M, Piqueras JA, Cuijpers P (2019) The Revised
+en-2 019-0 33096 Mental Health Inventory-5 (MHI-5) as an ultra-brief screening
+17. Bradwell HL, Edwards KJ, Winnington R, Thill S, Jones RB measure of bidimensional mental health in children and adoles-
+(2019) Companion robots for older people: importance of user- cents. Psychiatry Res 274:247–253. https://d oi.o rg/1 0.1 016/j.
+centred design demonstrated through observations and focus psychr es.2 019.0 2.0 457
+groups comparing preferences of older people and roboticists in 33. Courtin E, Knapp M (2017) Social isolation, loneliness and
+South West England. BMJ Open 9(9):e032468. https://d oi.o rg/1 0. health in old age: a scoping review. Health Soc Care Commun
+1136/b mjope n-2 019-0 32468 25(3):799–812. https://d oi.o rg/1 0.1 111/h sc.1 2311
+18. Battistuzzi L, Papadopoulos C, Papadopoulos I, Koulouglioti C, 34. Fakoya OA, McCorry NK, Donnelly M (2020) Loneliness and
+Sgorbissa A (2018) Embedding ethics in the design of culturally social isolation interventions for older adults: a scoping review of
+competent socially assistive robots. IEEE/RSJ Intell Robots Syst. reviews. BMC Public Health 20(1):129. https://d oi.o rg/1 0.1 186/
+https://d oi.o rg/1 0.1 109/I ROS.2 018.8 59436 1 s12889-0 20-8 251-6
+19. Battistuzzi L, Papadopoulos C, Hill T, Castro N, Bruno B, Sgor- 35. Wang J, Mann F, Lloyd-Evans B, Ma R, Johnson S (2018) Asso-
+bissa A (2020) Socially assistive robots, older adults and research ciations between loneliness and perceived social support and
+ethics: The case for case-based ethics training. Int J Soc Robot. outcomes of mental health problems: a systematic review. BMC
+https://d oi.o rg/1 0.1 007/s 12369-0 20-0 0652-x Psychiatry 18(1):156. https://d oi.o rg/1 0.1 186/s 12888-0 18-1 736-5
+1 3
+2 56 International Journal of Social Robotics (2022) 14:245–256
+Chris Papadopoulos is a Principal Lecturer In Public Health at the Linda Battistuzzi is a post-doctoral researcher at the University of
+University of Bedfordshire. He teaches a range of health post-graduate Genoa, Italy, where she works on ethics in robotics, health and social
+health courses in particular the MSc Public Health taught course for care, genetics and research. Her research interests focus predominantly
+which he leads the Public Health Research Methods and Public Health on various ethical aspects of socially assistive robotics and disaster
+Protection units. He is research active in a range of health-related areas robotics, and ethics training and support for roboticists and geneticists.
+within the social sciences particularly stigma, autism, mental health, She was the Internal Ethics Advisor of the H2020 EU-Japan project
+health technology and social robotics. He was the co-lead of the testing CARESSES, Culturally Aware-Robots and Environmental Sensor Sys-
+phase and lead of the evaluation phase during the CARESSES project. tems for Elderly Support Culturally Aware Robots and Environmental
+Sensor Systems for Elder Support. She holds a PhD in Bioethics from
+Nicholas Faulkes is a PhD student at the University of Greenwich, and the University of Bologna, Italy.
+Monitoring and Evaluation Officer for UK charity ‘School Of Hard
+Knocks’. He has a Bachelors degree in Psychology and a Masters Gurch Randhawa is Professor of Diversity in Public Health and Direc-
+degree in Health Psychology from the University of Bedfordshire. tor of the Institute for Health Research at the University of Bedford-
+Nicholas joined the CARESSES project as a voluntary research assis- shire. He is a Fellow of the UK Faculty of Public Health, and serves
+tant while undergoing his masters, joining as a full-time assistant upon as an Expert Adviser to the National Institute for Clinical Excellence
+its conclusion. His current research is on the evaluation of a sports- Centre for Guidelines. His research is focused on the development of
+based life skills intervention for youth populations at risk of exclusion. patient-centred care pathways, undertaking research and consultancy
+on a range of issues along the life-course – ranging from COVID-19 &
+Roberto Menicatti obtained his BSc in Mechanical Engineering from public engagement, consanguinity, maternal health, child health, dia-
+the University of Genoa, Italy in 2014 and his MSc in robotics Engi- betes, kidney disease, transplantation, mental health, tele-health, social
+neering from the University of Genoa and the École Centrale de Nantes prescription, cancer and end-of-life care amongst diverse communities.
+in 2016, as a double degree in the context of EMARO, the European
+Master in Advanced Robotics. From 2017 until January 2020, he has Nak‑Young Chong is a Professor of Information Science and the Chair
+been Research Assistant at the Department of Informatics, Bioengi- of the Intelligent Robotics Area at the Japan Advanced Institute of
+neering, Robotics, and System Engineering (DIBRIS) of the University Science and Technology, Ishikawa, Japan. He serves as Senior Edi-
+of Genoa, being involved in the projects CARESSES. His main inter- tor of the IEEE Robotics and Automation Letters, SAGE publishing’s
+ests are in the fields of natural language understanding and generation, International Journal of Advanced Robotic Systems, and Springer’s
+activity recognition and assistive robotics. Intelligent Service Robotics. His current research interests lie at the
+intersection of robotics and machine learning.
+Ali Abdul Khaliq is currently working as a postdoc researcher at the
+AASS Cognitive Robotic Systems Laboratory. After completing Bach- Hiroko Kamide received PhD. Degree in Human Science from Osaka
+elor’s degree in Computer Engineering from BUITEMS, Pakistan, he Univ., Japan, in 2008. Since 2009, she has been a Specially Appointed
+moved to Sweden to continue his studies and completed his master’s Assistant Professor with the Department of Systems Innovation, Gradu-
+degree in Robotics and Intelligent Systems from the University of Öre- ate School of Engineering Science, Osaka University, Osaka, Japan. In
+bro. After that, he continued, and obtained, his PhD degree in Com- 2015 she moved to Tohoku University in Japan as an Assistant Profes-
+puter Science from the same university. Ali’s research revolves around sor and since 2016 she has been a designated Associate Professor in
+robotics and autonomous systems. More specifically, he is interested Nagoya University in Japan. Her research interests include human’s
+in social robots, mobile robot olfaction, and bio-inspired approaches well-being and human-robot interaction.
+to robotics such as swarm intelligence and Stigmergic algorithms for
+mobile robots. Antonio Sgorbissa is the Coordinator of the H2020 project CARESSES
+and Associate Professor at Università degli Studi of Genova, where he
+Carmine Recchiuto is an Assistant Professor at the University of Gen- teaches Real-Time Operating Systems, Social Robotics and Ambient
+ova, where he teaches Experimental Robotics, ROS programming, Intelligence in EMARO+, the European Master in Advanced Robot-
+and Computer Science. He is currently the Technical Coordinator of ics. His research focuses on Autonomous Robotic Behaviour, includ-
+the DIONISO project, a multidisciplinary effort focusing on ICT for ing Knowledge representation, Culture-Awareness, Motion Plan-
+intervention in earthquakes, mainly working on analyzing and devel- ning, Wearable and Ubiquitous Robotics. He is the PI at University
+oping algorithms for human localization and mapping with wearable of Genova of the DIONISO project, focusing on wearable systems
+sensors. He has been the Coordinator of Software Integration in the and Unmanned Aerial Vehicles for Autonomous Monitoring and
+CARESSES project, aimed at endowing social robots for older adults Search&Rescue in Emergency Scenarios. He is the author of more
+with cultural competence. He is the author of more than 40 scientific than 150 articles.
+papers published in International Journals and conference proceedings.
+1 3

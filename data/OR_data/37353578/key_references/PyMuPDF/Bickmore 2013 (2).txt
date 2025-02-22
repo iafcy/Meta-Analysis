@@ -1,0 +1,866 @@
+Automated Interventions for Multiple Health Behaviors Using
+Conversational Agents
+Timothy W. Bickmore,
+College of Computer and Information Science, Northeastern University, Boston, MA, USA
+Daniel Schulman, and
+College of Computer and Information Science, Northeastern University, Boston, MA, USA
+Candace Sidner
+Worcester Polytechnic Institute, Department of Computer Science, Worcester, MA, USA
+Abstract
+Objective—An automated health counselor agent was designed to promote both physical activity
+and fruit and vegetable consumption through a series of simulated conversations with users on
+their home computers.
+Methods—The agent was evaluated in a 4-arm randomized trial of a two-month daily contact
+intervention comparing: a) physical activity; b) fruit and vegetable consumption; c) both
+interventions; and d) a non-intervention control. Physical activity was assessed using daily
+pedometer steps. Daily servings of fruit and vegetables was assessed using the NIH/NCI self-
+report Fruit and Vegetable Scan.
+Results—Participants in the physical activity intervention increased their walking on average
+compared to the control group, while those in the fruit and vegetable intervention and combined
+intervention decreased walking. Participants in the fruit and vegetable intervention group
+consumed significantly more servings per day compared to those in the control group, and those in
+the combined intervention reported consuming more compared to those in the control group.
+Conclusion—Automated health intervention software designed for efficient re-use is effective at
+changing health behavior.
+Practice Implications—Automated health behavior change interventions can be designed to
+facilitate translation and adaptation across multiple behaviors.
+© 2013 Elsevier Ireland Ltd. All rights reserved.
+Corresponding Author: Timothy Bickmore, Northeastern University College of Computer and Information Science, 360 Huntington
+Ave WVH202, Boston, MA, USA 02115, Phone: 617-373-5477, FAX: 617-812-2589, bickmore@ccs.neu.edu.
+Publisher's Disclaimer: This is a PDF file of an unedited manuscript that has been accepted for publication. As a service to our
+customers we are providing this early version of the manuscript. The manuscript will undergo copyediting, typesetting, and review of
+the resulting proof before it is published in its final citable form. Please note that during the production process errors may be
+discovered which could affect the content, and all legal disclaimers that apply to the journal pertain.
+I confirm all patient/personal identifiers have been removed or disguised so the patient/person(s) described are not identifiable and
+cannot be identified through the details of the story.
+Conflict of interest
+The authors have no conflicts of interest that could influence this work.
+NIH Public Access
+Author Manuscript
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+Published in final edited form as:
+Patient Educ Couns. 2013 August ; 92(2): 142–148. doi:10.1016/j.pec.2013.05.011.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Keywords
+relational agent; embodied conversational agent; behavioral informatics; dialogue system; health
+behavior change intervention; physical activity promotion; walking promotion; diet promotion;
+fruit and vegetable consumption promotion; ontology
+1 Introduction
+Behavioral health problems rarely occur in isolation. Managing chronic conditions such as
+diabetes, prevention of conditions such as cancers, and addressing overweight and obesity,
+all require constellations of behaviors to be modified in parallel. To date, most automated
+health behavior change interventions are designed to only address a single behavior. One
+barrier to implementation of multi-behavior change interventions is simply the increased
+scope and complexity of building the individual interventions at the same time. The
+complexity of design and test of such automated systems increases exponentially with the
+number of behaviors targeted, since users may have any combination of the conditions
+addressed.
+We have undertaken the development of a health behavior change counseling dialogue
+system that models the theory-driven therapeutic planning processes of a human health
+advisor during a counseling session. Importantly, the software is designed to be re-usable, so
+that new or derivative interventions can be implemented with minimal effort, thus
+facilitating the design of multi-behavior change interventions [1]. Re-use is facilitated by
+representing knowledge about health behavior change theory, constructs, and atomic
+intervention actions in a computational ontology. An ontology is a taxonomic description of
+the concepts in an application domain and the relationships among them. In addition to
+facilitating re-use, computational ontologies also provide a formalism that can facilitate
+clarification and description of the fundamental concepts in a domain through consensus of
+experts and can facilitate interchange of information among diverse systems by describing,
+at various levels of detail, the kinds of data entities that can be exchanged, independent of
+the particular names the entities are given in each system.
+We have tested this approach by implementing automated interventions for physical activity
+and fruit and vegetable consumption. Participation in moderate amounts of physical activity
+has important health benefits, including beneficial effects on risk factors for disease,
+disability, and mortality [2–6], yet a substantial proportion of the U.S. adult population
+remain underactive or sedentary [2]. Fruit and vegetable consumption plays a protective role
+in a large number of epithelial cancers [7,8], and is associated with reduced risk for heart
+disease, stroke, and hypertension [9–15], yet only 23% of American adults meet the (year
+2000) recommendation to consume five or more servings of fruit and vegetables per day
+[16,17].
+The interventions we implemented are eclectic, based on elements from the transtheoretical
+model, motivational interviewing, and social cognitive theory [1,18–21]. There are several
+approaches to targeting multiple behaviors in one intervention. The behaviors can be
+targeted in sequence, moving from one to the next once a completion criterion is reached
+(e.g., this could be a target stage of change, a specified time duration, or a specified number
+of user-system interactions, after which the system’s educational content is exhausted). The
+behaviors can also be targeted in parallel, with all or some behaviors addressed in every
+interaction, or addressed in alternating interactions over time. Our approach roughly follows
+the latter one: following a few introductory conversations, the agent alternates topics so that
+it focuses a conversation on physical activity counseling on one day, then focuses on diet
+Bickmore et al.
+Page 2
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+counseling the next, then repeats the sequence through the end of the intervention. However,
+even when one behavior is focused on for counseling (e.g., involving problem solving,
+homework assignment or education), a brief discussion of the other behavior was provided,
+involving review of progress and re-negotiation of short-term behavioral goals. Further,
+when users were in the contemplation stage of change the system spent additional sessions
+focusing on the target behavior, under the assumption that this was needed to help them get
+started on goal-setting program.
+1.1 Intervention Design
+The knowledge (“Artificial Intelligence”) in the system is encoded using two fundamentally
+different representations: declarative facts about the world and procedures the agent can
+follow during its dialog with users.
+Declarative facts are themselves represented in two fundamentally different ways:
+epistemological knowledge about the kinds of things in the world that the agent can reason
+about—represented in the ontology (using OWL [22])—and specific facts about the specific
+behavior change theories and techniques the agent can use, and about a particular user the
+agent is talking to (using RDF [23]). The ontology encodes dictionary-like knowledge, such
+as the fact that the “Actions” the agent can take can be either “Therapeutic Actions” or
+“Non-therapeutic Actions” (such as saying “Hello!” to the user), and that the Therapeutic
+Actions available to the agent include “Therapeutic Dialog Actions” (talk therapy) and
+“Homework Actions” (homework assignments the user is asked to do outside of the agent
+counseling sessions). Examples of specific facts would be that asking the user to “Try
+looking for information about exercise in newspapers and magazines.” is an example of a
+Homework Action for physical activity promotion, that this action is appropriate for users in
+the Contemplation stage of change, and that the specific user the agent is talking to right
+now is in Contemplation.
+Procedural knowledge is encoded in a hierarchical task decomposition language (CEA-2018
+[24]), that is based on a theory of the structure of dialog [25]. CEA2018 represents agent
+goals, and actions that the agent and the user can take during a given dialog, and various
+relationships that hold among these entities. For example, initial goals of the agent may be to
+hold a counseling dialog with a user with the intention of increasing a health behavior. This
+goal can be matched to a “recipe” that describes one way the agent can satisfy the goal, for
+example by initiating a dialog, greeting the user, conducting some “small talk”, conducting
+the core part of the behavior change counseling, saying farewell to the user, and terminating
+the conversation, in that order. Each of these steps can give rise to more refined goals that
+are matched to other recipes. For example, the core counseling dialog for a user in the
+Action stage of change may consist of reviewing their progress since the last conversation,
+conducting a problem solving dialog about specific barriers to change, and setting goals as a
+new homework assignment. Ultimately, the actions in the most refined recipes will consist
+of specific things the agent and user can say in the conversation.
+Note that much of the structure of a counseling conversation, and much of the declarative
+knowledge, required by a counseling agent can be described independent of a specific
+behavior. The above examples work for either physical activity or fruit and vegetable
+promotion.
+The declarative and procedural knowledge is interpreted and turned into an interactive
+conversation for a particular user by a dialog interpreter (DTask [26]). Together, the
+ontology and the procedural knowledge are a unique new set of AI methods for organizing
+how an agent can counsel a user for a series of health behavior change conversations. Figure
+1 shows an excerpt of a conversation generated using this approach.
+Bickmore et al.
+Page 3
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+During the development of our intervention we first designed and implemented the physical
+activity promotion part of the system, then extended it to also promote fruit and vegetable
+consumption. Through the use of the knowledge representations described above we were
+able to build the second system re-using 98% of the actions, 98% of the recipes, and 14% of
+the agent utterances, representing 22% re-use by source lines of code. The second system
+was built in 9% of the calendar time and 4% of the person hours required to develop the
+initial exercise promotion system [1].
+1.2 Evaluation Study
+In the rest of this paper, we describe the results of a randomized pilot study designed to
+provide preliminary evaluation of three behavioral interventions developed using the
+approach described above. We have used the ontology-based design approach to develop an
+animated conversational agent that plays the role of a health counselor that can promote both
+physical activity (ACT) and fruit and vegetable consumption (DIET) through a series of
+simulated conversations with users on their home computers (Figure 2). This approach and
+agent were evaluated in a 4-arm randomized trial of a two-month daily contact intervention
+comparing: a) ACT; b) DIET; c) ACT+DIET (both interventions); and d) CONTROL (a
+control group provided only with pedometers for tracking physical activity). The behavioral
+goal of the ACT system is to motivate sedentary subjects to perform the minimum
+recommended amount of physical activity: 30 minutes per day of moderate or greater
+activity [27,28]. The behavioral goal of the DIET system is to motivate subjects who are not
+regularly eating at least 4-1/2 cups of fruits and vegetables a day to reach this level [28]. The
+goal of the ACT+DIET system is to achieve both behavioral goals.
+The pilot study has the following hypotheses.
+•
+H1. Subjects receiving ACT will significantly increase their physical activity (PA)
+behavior, compared to non-intervention CONTROL subjects.
+•
+H2. Subjects receiving DIET will significantly increase their intake of fruits and
+vegetables compared to non-intervention CONTROL subjects.
+•
+H3. Subjects receiving ACT+DIET will significantly increase their PA behavior
+compared to non-intervention CONTROL subjects.
+•
+H4. Subjects receiving ACT+DIET will significantly increase their intake of fruits
+and vegetables compared to non-intervention CONTROL subjects.
+2 Methods
+Subjects in the intervention groups accessed the system remotely over the Internet from their
+home computers on a daily basis during the two-month intervention period. Demographics
+and baseline values for outcome measures were collected at the start of the intervention
+period (T0); outcome measures were assessed a second time, along with usability
+assessments and semi-structured interviews, at the end of the intervention period (T1). All
+participants were provided with pedometers and instructed to wear them daily and upload
+their steps to a server on a weekly basis.
+The study was approved by the Northeastern University IRB, and study participants were
+compensated a fixed amount.
+2.1 Measures
+Physical activity was assessed at T0 and T1 using the International Physical Activity
+Questionnaire (IPAQ), which has been validated in several prior studies[29,30]. Steps
+Bickmore et al.
+Page 4
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+walked was objectively assessed using Omron HJ-720ITC pedometers given to all study
+participants. While the pedometer assess walking specifically, the IPAQ assesses overall
+physical activity. Servings of fruit and vegetables were assessed at T0 and T1 using the NIH/
+NCI Fruit and Vegetable Scan (FVS) [31]. The FVS is a ten-item instrument that includes
+assessment of portion size.
+Participants were weighed at T0 and T1 using a calibrated scale.
+Satisfaction was assessed via three single scale measure items (Table 4).
+2.2 Recruitment & Eligibility
+Subjects were recruited from an online job posting site. Eligibility criteria for this study
+included: 1) age 18 or older; 2) have a home computer with Internet connection; 3) are able
+to walk unaided; 4) understand spoken and written English; and 5) are in Precontemplation
+or Contemplation Stages of Change with respect to both (a) the current DHHS/ACSM
+guidelines for PA (30 minutes a day of moderate-or-greater intensity PA on five or more
+days per week) [27,32]; and (b) current DHHS guidelines for daily consumption of fruits
+and vegetables (4-1/2 cups a day)[28]. Exclusionary criteria include: 1) have a medical
+condition that would make increasing PA level a health risk, assessed using the PA
+Readiness Questionnaire (PAR-Q)[33]; 2) are on a prescribed diet; and 3) have any other
+member of the household enrolled in the study.
+2.3 Procedure
+Following screening, consent, and baseline measurements in our laboratory, participants
+were provided with software to install on their home computer and given a brief tutorial on
+its use. Participants in the CONTROL group used their software only to upload their
+pedometer steps; participants in all other groups were also instructed how to interact with
+the conversational agent, and asked to conduct one conversation per day with the agent at
+home. All participants were provided with pedometers and instructed in their use. Following
+this, individuals participated in the study from home for the next two months. At the end of
+this time, participants returned to our laboratory to collect final outcome measures and
+engage in a semi-structured interview about their experience.
+3 Results
+One hundred and twenty-two (122) participants were enrolled into the study and randomized
+among the four study arms, of which 113 (93%) completed the final two-month T1
+assessment. Figure 3 shows the flow of participants in the study.
+Table 1 shows baseline demographics of study participants, contrasting those in each arm of
+the study. Overall, participants ranged in age from 21 to 69 years old (mean 33.0 +/− 12.6)
+were 61% female, predominately white (52%) and Asian (33%), single and had some
+college education. Body mass index (BMI) ranged from 18.8 to 46.4 (mean 27.8).
+3.1 Longitudinal Analysis of Daily Pedometer Steps
+Figure 4 shows pedometer steps by study participants, averaged per 15 day interval, by
+study group. We assume that any day in which less than 100 steps are recorded means that
+the participant did not wear the pedometer. We treat the step counts for this day as missing
+data. We fit a mixed-effect model including effect of study day (time), study condition, and
+an interaction. This model assumes a simple linear trend: the main effect of condition is the
+difference in intercepts between conditions, while the interaction is the difference in slopes.
+We assume here that the differences between groups in the first time period is a result of
+Bickmore et al.
+Page 5
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+differences in baseline walking behavior between the groups prior to the start of the study
+(e.g., the effects of poor randomization), and thus we focus our analysis on significant
+changes in step counts over the duration of the study. A series of likelihood-ratio tests
+against reduced models indicates that the interaction effect is significant, but neither main
+effect is significant. The full model is shown in Table 2. Results indicate that the ACT group
+increases their daily walking faster than CONTROL, but the DIET group is slower, and the
+ACT+DIET group is somewhere in the middle. Thus, there is some evidence that multiple
+interventions might interfere with each other.
+3.2 International Physical Activity Questionnaire (IPAQ)
+The IPAQ data is highly skewed, and is transformed (Yeo-Johnson transformation) prior to
+analysis. A one-way ANOVA was used with the transformed IPAQ scores as the dependent
+variable, and study condition as the independent variable. There are no significant
+differences among conditions, F(3,107)=1.07, p=0.367.
+3.3 Fruit & Vegetable Consumption (FVS)
+Figure 5 shows mean change in FVS scores (T1 – T0) by study condition.
+Model selection indicated that the simplest model is best, in which baseline FVS alone is
+used as a covariate in an ANCOVA, with final FVS as the dependent measure and study
+condition as the independent variable (Table 3). Results show a significant difference by
+condition, F(3,103)=4.52, p=0.005, with the DIET intervention doing the best. A Tukey
+post-hoc analysis indicates that the only significant pairwise difference, adjusting for
+multiple comparisons, is DIET vs. CONTROL, with ACT+DIET vs. CONTROL near
+significant.
+3.4 Weight
+Weight changed little for participants over the two months of the study, with no significant
+differences among groups, F(3,105)=1.09, p=0.374.
+3.5 Satisfaction
+Self-report satisfaction scores are shown in Table 4. There were no significant differences
+among the three intervention groups on these measures.
+3.6 Qualitative Results
+Semi-structured interviews were conducted with 20 participants from the ACT, DIET, and
+ACT+DIET groups. Participant responses to semi-structured interview questions were
+transcribed from the videotape and common themes were identified [34].
+When asked what they like best about the agent Karen (the conversational agent in Figure
+2), 7 people (35%) said that they like Karen because she was nice, personal, and was
+someone they could relate to, and four people (20%) said that they liked how Karen would
+show them their progress with the steps chart every time they had a conversation with her.
+Four people (20%) said that they like Karen because she would not discipline them if they
+did not meet a goal or log onto the system, while three people said that they liked being held
+accountable by Karen.
+When asked if the agent helped them to achieve their goals, 10 people (50%) agreed that the
+agent did help (e.g., “I think it moved me closer to eating better. I am more motivated and I
+am thinking more about trying to get 5 servings of fruits and veggies every day.”). Four
+people (20%) said they believed it was a combination of using the pedometer and talking to
+Bickmore et al.
+Page 6
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Karen that helped them reach their goals. When asked what about the agent helped them the
+most, 3 people said that the constant reminder by Karen was what helped them the most.
+4 Discussion and Conclusion
+Overall, the four study hypotheses received mixed support. The first hypothesis (H1), that
+subjects receiving ACT will significantly increase their PA, compared to non-intervention
+CONTROL subjects, received partial support. Based on analysis of pedometer steps,
+participants in the ACT group tended to increase their daily walking faster than CONTROL.
+However, there were no significant differences in physical activity based on self-report
+IPAQ scores.
+The second hypothesis (H2), that subjects receiving DIET will significantly increase their
+intake of fruits and vegetables compared to non-intervention CONTROL subjects, received
+strong support through significant increase in fruit and vegetable consumption (as measured
+by the FVS) for the DIET group compared to CONTROL. The hypothesis that subjects
+receiving ACT+DIET will significantly increase their PA behavior compared to non-
+intervention CONTROL subjects (H3), received no support, based on either analysis of
+pedometer steps or IPAQ scores. The final hypothesis (H4), that subjects receiving ACT
++DIET will significantly increase their intake of fruits and vegetables compared to non-
+intervention CONTROL subjects, received marginal support: differences between ACT
++DIET and CONTROL participants on FVS scores were in the hypothesized direction and
+trending towards significance.
+4.1 Discussion
+The evaluation study demonstrated that, while the individual health behavior change
+interventions performed as expected—with ACT resulting in superior walking behavior and
+DIET resulting in improved fruit and vegetable consumption, both relative to a non-
+intervention control group—the combined, multi-behavior change intervention did not result
+in significant improvements relative to controls. There are several possible reasons for this.
+One possible explanation is that our approach to intervening on multiple behaviors is to
+alternate which behavior was discussed on sequential logins, thus participants in the ACT
++DIET group received half the number of physical activity counseling sessions as those in
+ACT and half the number of diet counseling sessions as those in DIET. Another possibility
+is that the two interventions actually interfered with each other, either on a psychological
+level (e.g., through distraction) or an instrumental level (e.g., taking more time to shop for
+and prepare fruit and vegetable dishes may have decreased time available for physical
+activity). Another explanation is that the combined intervention simply had smaller effect
+sizes compared to the individual behavior interventions, requiring more participants to reach
+significance. The trends in Figure 4 may also imply that the PA intervention was simply
+most effective for sedentary individuals (those with the lowest baseline step counts).
+We have begun exploring solutions to address the problem of perceived repetitiveness
+mentioned by several participants [35]. In one study, we confirmed that simply increasing
+superficial linguistic and graphical variability during daily health behavior change
+counseling sessions with an automated coach agent leads to greater self-reported desire to
+continue using the system, as well as a significant increase in actual system usage. In a
+second study we demonstrated that having the coach agent tell personal “backstories” about
+its personal history (as if it were a person) led to significant increases in system usage
+compared to an identical agent that told the same stories as if they were about another user,
+demonstrating that users were more engaged by a more anthropomorphic agent.
+Bickmore et al.
+Page 7
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Limitations of our study include the generalizability of our findings, especially given the
+very small convenience sample used and the relatively short duration of the intervention. We
+also acknowledge that our CONTROL group does not represent a true non-intervention
+control, since providing individuals with pedometers alone has been shown to result in
+increased physical activity. However, this should make any significant physical activity
+results stronger. Finally, we cannot determine whether the differences between groups
+during the first 15 days of the study were due to baseline differences or initial reactions to
+the study conditions, since we did not measure true pre-intervention baseline behavior.
+4.2 Conclusion
+Together with our earlier pilot study [1], we have demonstrated that automated health
+interventions can be developed using software representations that promote reuse, that the
+representations do indeed lend themselves to reuse, and that this approach results in
+interventions that are effective at changing health behavior.
+4.3 Practice Implications
+Adapting a computerized behavioral intervention developed for a research study (or for a
+different application) for large-scale deployment by an institution or public health
+department typically requires significant modifications to the original system, and these
+modifications often represent an insurmountable barrier to dissemination [36]. The use of
+open source software, designed using public standards and computational ontologies, with
+re-use in mind, significantly lowers the cost and complexity of adapting these systems for
+practice.
+Acknowledgments
+Thanks to Ken Baclawski, Dolphy Fernandez, Jeffrey Migneault, Zoe Chang, Tom Brown and Jenna Zaffini for
+their help in developing the system, and John Connor Westfall for assisting with the pilot study.
+Role of Funding Source
+This work was supported by a grant from the NIH National Library of Medicine (R21LM008995). The sponsors
+had no involvement in the study design, collection, analysis and interpretation of data, in the writing of the report,
+or in the decision to submit the paper for publication.
+References
+1. Bickmore T, Schulman D, Sidner C. A Reusable Framework for Health Counseling Dialogue
+Systems based on a Behavioral Medicine Ontology. J Biomed Inform. 2011; 44:183–197. [PubMed:
+21220044]
+2. US Dept of Health and Human Services. Physical activity and health: a report of the Surgeon
+General. Atlanta, GA: U.S. Department of Health and Human Servies, Centers for Disease Control
+and Prevention, National Center for Chronic Disease Prevention and Health Promotion; 1996.
+3. Bouchard, C.; Stephens, T. Physical activity and health: international proceedings and consensus
+statement. Champaign, IL: Human Kinetics; 1994.
+4. Stewart A, Haskell W. Endurance exercise and health-related quality of life in 50–65 year old
+adults. Gerontologist. 1993; 33:782–789. [PubMed: 8314105]
+5. LaPorte R, Adams L, Savage D, Brenes G, Dearwater S, Cook T. The spectrum of physical activity,
+cardiovascular disease and health: an epidemiologic perspective. Am J Epidemiol. 1984; 120:507–
+571. [PubMed: 6383022]
+6. Young D, Haskell W, Jatulis D, et al. Associations between changes in physical activity and risk
+factors for coronary heart disease in a community-based sample of men and wormen: The Stanford
+Five-City Project. Am J Epidemiol. 1993; 138:205–216. [PubMed: 8356962]
+Bickmore et al.
+Page 8
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+7. US Dept of Health and Human Services. The Surgeon General's Report on Nutrition and Health.
+Washington, DC: 1998.
+8. McGinnis J, Foege W. Actual causes of death in the United States. J Amer Med Assoc. 1993;
+270:2207–2212.
+9. Knekt P, Reunanen A, Javinen R, et al. Antioxidant vitamin intake and coronary mortality in a
+longitudinal population study. Am J Epidemiol. 1994; 139:1180–1189. [PubMed: 8209876]
+10. Gillman M, Cupples L, Gagnon D, et al. Protective effect of fruits and vegetables on development
+of stroke in men. J Amer Med Assoc. 1995; 273:1113–1117.
+11. Gaziano J, Manson J, Branch L, et al. A prospective study of consumption of carotenoids in fruits
+and vegetables and decreased cardiovascular mortality in the elderly. Ann Epidemiol. 1995;
+5:255–260. [PubMed: 8520706]
+12. Key T, Thorogood M, Appleby P, et al. Dietary habits and mortality in 11,000 vegetarians and
+health conscious people: results of a 17 year follow up. BMJ. 1996; 313:775–779. [PubMed:
+8842068]
+13. Rimm E, Ascherio A, Giovannucci E, et al. Vegetable, fruit, and cereal fiber intake and risk of
+coronary heart disease among men. J Amer Med Assoc. 1996; 275:447–451.
+14. Ness A, Powles J. Fruit and vegetables and cardiovascular disease: a review. Int J Epidemiol.
+1997; 26:1–13. [PubMed: 9126498]
+15. Joshipura K, Ascherio A, Manson J, et al. Fruit and vegetable intake in relation to risk of ischemic
+stroke. J Amer Med Assoc. 1999; 282:1233–1239.
+16. Li R, Serdula M, Bland S, et al. Trends in fruit and vegetable consumption among adults in 16 US
+states: Behavioral Risk Factor Surveillance System, 1990–1996. Am J Public Health. 2000;
+90:777–781. [PubMed: 10800429]
+17. Krauss R, Eckel R, Howard B, et al. AHA Dietary Guidelines: revision 2000: A statement for
+healthcare professionals from the Nutrion Committee of the American Heart Association. Stroke.
+2000; 31:2751–2756. [PubMed: 11062305]
+18. Bickmore T, Gruber A, Picard R. Establishing the computer-patient working alliance in automated
+health behavior change interventions. Patient Educ Couns. 2005; 59:21–30. [PubMed: 16198215]
+19. Bandura A. Social cognitive theory: an agentic perspective. Annu Rev Psychol. 2001; 52:1–26.
+[PubMed: 11148297]
+20. Marcus B, Simkin L. The transtheoretical model: applications to exercise behavior. Med Sci Sports
+Exerc. 1994; 26:1400–1404. [PubMed: 7837962]
+21. Miller, W.; Rollnick, S. Motivational Interviewing: Preparing People for Change. second ed. New
+York: Guilford Press; 2002.
+22. OWL Web Ontology Language Overview. (Accessed at http://www.w3.org/TR/owl-features/.)
+23. Resource Description Framework (RDF): Concepts and Abstract Syntax. (Accessed at http://
+www.w3.org/TR/2004/REC-rdf-concepts-20040210/.)
+24. Task Model Description (CEA-2018) Consumer Electronics Association. (Accessed at http://
+www.w3.org/2005/Incubator/model-based-ui/wiki/ANSI/CEA-2018.)
+25. Grosz B, Sidner C. Attention, Intentions, and the Structure of Discourse. Computational
+Linguistics. 1986; 12:175–204.
+26. Bickmore, T.; Schulman, D.; Shaw, G. DTask & LiteBody: Open Source, Standards-based Tools
+for Building Web-deployed Embodied Conversational Agents. Proceedings of the Intelligent
+Virtual Agents Conference; Amsterdam, Netherlands. 2009.
+27. Pate RR, Pratt M, Blair SN, et al. Physical Activity and Public Health: A Recommendation From
+the Centers for Disease Control and Prevention and the American College of Sports Medicine. J
+Amer Med Assoc. 1995; 273:402–407.
+28. U.S. Department of Health and Human Services and U.S. Department of Agriculture. Dietary
+Guidelines for Americans 2005. Washington, DC: U.S. Government Printing Office; 2005.
+29. Craig C, Marshall A, Sjöström M, et al. International physical activity questionnaire: 12-country
+reliability and validity. Med Sci Sports Exerc. 2003; 35:1381–1395. [PubMed: 12900694]
+Bickmore et al.
+Page 9
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+30. Hagströmer M, Oja P, Sjöström M. The International Physical Activity Questionnaire (IPAQ): a
+study of concurrent and construct validity. Public Health Nutr. 2006; 9:755–762. [PubMed:
+16925881]
+31. Thompson, F.; Subar, A.; Radimer, K., et al. Performance of two new cognitively enhanced fruit
+and vegetable short assessment forms; Proceedings of the Fourth International Conference on
+Dietary Assessment Methods; 2000.
+32. Marcus BH, Selby VC, Niaura RS, Rossi JS. Self-efficacy and the stages of exercise behavior
+change. Res Q Exerc Sport. 1992; 63:60–66. [PubMed: 1574662]
+33. Chisolm D, Collis M, Kulak L, Davenport W, Gruber N. Physical activity readiness. B C Med J.
+1975; 17:375–378.
+34. Taylor, SJ.; Bogdan, R. Introduction to Qualitative Research Methods. John Wiley & Sons; 1998.
+35. Bickmore T, Schulman D, Yin L. Maintaining Engagement in Long-term Interventions with
+Relational Agents. International Journal of Applied Artificial Intelligence. 2010; 24:648–666.
+36. Vinson C, Bickmore T, Farrell D, et al. Adapting Research-tested Computerized Tailored
+Interventions for Implementation in Practice. Translational Behavioral Medicine: Practice, Policy,
+Research. 2011; 1:93–102.
+Bickmore et al.
+Page 10
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Figure 1.
+Sample Excerpt of User-Agent Counseling Dialog (‘A’ precedes agent utterances; ‘U’
+precedes user utterances).
+Bickmore et al.
+Page 11
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Figure 2.
+Conversational Agent User Interface
+Bickmore et al.
+Page 12
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Figure 3.
+Patient Flow in Study (Consort Diagram)
+Bickmore et al.
+Page 13
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Figure 4.
+Pedometer Steps by Study Group
+Bickmore et al.
+Page 14
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+Figure 5.
+Fruit & Vegetable Consumption by Study Condition
+Bickmore et al.
+Page 15
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+Bickmore et al.
+Page 16
+Table 1
+Baseline demographics and stage of change for study participants, reported as Mean (SD) for age, BMI, and SF-12, and as Count (% of Total) for all
+others. Reported p-values are tests of significant baseline differences across conditions, by one-way ANOVA (age, BMI, SF-12) or by chi-square test of
+independence (all others).
+All
+CONTROL
+ACT
+DIET
+ACT+DIET
+p
+Age
+33.0 (12.6)
+32.0 (14.5)
+33.5 (12.8)
+32.9 (11.1)
+32.4 (12.3)
+.813
+Gender
+.349
+  Male
+48 (39.3%)
+12 (38.7%)
+15 (48.3%)
+13 (43.3%)
+8 (26.6%)
+  Female
+74 (60.7%)
+19 (61.3%)
+16 (51.6%)
+17 (56.6%)
+22 (73.3%)
+Race
+.835
+  Am. Indian
+1 (0.8%)
+1 (3.2%)
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+  Asian
+40 (32.7%)
+10 (32.2%)
+7 (22.5%)
+12 (40.0%)
+11 (35.0%)
+  Black
+10 (8.0%)
+1 (3.2%)
+3 (9.6%)
+3 (10.0%)
+3 (10.0%)
+  White
+63 (51.6%)
+17 (54.8%)
+18 (58.0%)
+14 (46.6%)
+14 (46.6%)
+Education
+.769
+  High School
+2 (1.6%)
+1 (3.2%)
+1 (3.2%)
+0 (0.0%)
+0 (0.0%)
+  Tech/Voc.
+3 (2.4%)
+0 (0.0%)
+1 (3.2%)
+1 (3.3%)
+1 (3.3%)
+  Some College
+27 (22.1%)
+7 (22.5%)
+10 (32.2%)
+4 (13.3%)
+6 (20.0%)
+  College Grad.
+66 (54.0%)
+19 (61.2%)
+13 (42.9%)
+17 (56.6%)
+17 (56.6%)
+Comp. Experience
+.833
+  Rarely
+2 (1.6%)
+1 (3.2%)
+0 (0.0%)
+0 (0.0%)
+1 (3.3%)
+  Regular User
+88 (72.1%)
+23 (74.1%)
+21 (67.7%)
+22 (73.3%)
+22 (73.3%)
+  Expert
+32 (26.2%)
+7 (22.5%)
+10 (32.2%)
+8 (26.6%)
+7 (23.3%)
+BMI
+27.8 (6.2)
+27.8 (5.6)
+29.4 (6.3)
+26.6 (6.8)
+27.3 (6.1)
+.206
+SF-12
+  Physical Health
+51.3 (6.0)
+51.2 (6.4)
+50.5 (5.4)
+51.6 (5.9)
+51.9 (6.2)
+.236
+  Mental Health
+49.1 (9.3)
+50.5 (8.7)
+47.8 (9.0)
+49.9 (9.5)
+48.2 (10.3)
+.323
+Exercise Stage
+.147
+  Precontemp.
+7 (5.7%)
+0 (0.0%)
+5 (16.1%)
+1 (3.3%)
+1 (3.3%)
+  Contemplation
+25 (20.4%)
+5 (16.1%)
+7 (22.5%)
+5 (16.6%)
+8 (26.6%)
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+Bickmore et al.
+Page 17
+All
+CONTROL
+ACT
+DIET
+ACT+DIET
+p
+  Preparation
+89 (72.9%)
+25 (80.6%)
+19 (61.3%)
+24 (80.0%)
+21 (70.0%)
+  Action
+1 (0.8%)
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+  Maintenance
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+F&V Stage
+.181
+  Precontemp.
+15 (12.2%)
+3 (9.6%)
+8 (25.8%)
+3 (10.0%)
+1 (3.3%)
+  Contemplation
+7 (5.73%)
+1 (3.2%)
+1 (3.2%)
+3 (10.0%)
+2 (6.6%)
+  Preparation
+99 (81.1%)
+27 (87.0%)
+21 (67.7%)
+24 (80.0%)
+27 (90.0%)
+  Action
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+0 (0.0%)
+  Maintenance
+1 (0.8%)
+0 (0.0%)
+1 (3.2%)
+0 (0.0%)
+0 (0.0%)
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+Bickmore et al.
+Page 18
+Table 2
+Mixed-Effect Model of Pedometer Steps (Intercept is the control condition on day 0, and everything else is in
+terms of differences from intercept)
+Estimate
+Std. Error
+t value
+(Intercept)
+7398.207
+604.985
+12.229
+day
+8.537
+6.419
+1.330
+ACT
+−1175.186
+850.936
+−1.381
+DIET
+−715.795
+859.239
+−0.833
+ACT+DIET
+94.765
+856.220
+0.111
+day:ACT
+9.292
+9.126
+1.018
+day:DIET
+−16.063
+9.192
+−1.747
+day:ACT+DIET
+−7.588
+9.229
+−0.822
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+Bickmore et al.
+Page 19
+Table 3
+Model of Fruit and Vegetable Consumption (baseline scores are centered to the global mean: “Intercept” is the
+estimated marginal mean for the CONTROL group at T1, and the 3 “Condition” coefficients are offsets from
+intercept)
+Coefficients:
+Estimate
+Std. Error
+t value
+p
+(Intercept)
+9.0120
+0.6631
+13.591
+< 2e-16
+fvs.total.base.c
+0.6106
+0.1028
+5.941
+3.89e-08
+Condition ACT
+1.4186
+0.9215
+1.540
+0.126738
+Condition DIET
+3.4336
+0.9566
+3.589
+0.000509
+Condition ACT+DIET
+2.1657
+0.9381
+2.309
+0.022965
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+NIH-PA Author Manuscript
+Bickmore et al.
+Page 20
+Table 4
+Self-Report Satisfaction Results
+Measure
+Anchor 1
+Anchor 7
+Mean
+SD
+Satisfaction with Agent
+Not at all
+Very satisfied
+4.30
+1.84
+Ease of Use
+Difficult
+Easy
+4.8
+1.97
+Desire to Continue with Agent
+Not at all
+Very much
+3.75
+2.18
+Patient Educ Couns. Author manuscript; available in PMC 2014 August 01.
+

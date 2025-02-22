@@ -1,0 +1,862 @@
+User Perception of Wysa as a Mental Well-being Support Tool
+during the COVID-19 Pandemic
+Carlos Miguel Legaspi Jr.
+Tristan Raphael Pacana
+carlos_legaspi@dlsu.edu.ph
+tristan_pacana@dlsu.edu.ph
+De La Salle University
+Manila, Philippines
+Kyle Loja
+Christina Sing
+kyle_loja@dlsu.edu.ph
+christina_sing@dlsu.edu.ph
+De La Salle University
+Manila, Philippines
+Ethel Ong
+ethel.ong@dlsu.edu.ph
+De La Salle University
+Manila, Philippines
+ABSTRACT
+The COVID-19 pandemic has disrupted daily lives globally, causing
+social isolation that impacted the mental health and well-being
+of the population, particularly the students. With the shortage of
+accessible healthcare facilities and resources, the community is
+turning to technology-based mental healthcare interventions such
+as telemental health systems, online support groups, self-service
+web and mobile applications, and chatbots. In this study, we assessed
+the extent in which the daily interaction with the chatbot Wysa can
+influence the well-being of students during the COVID-19 pandemic.
+Students evaluated the usability and effectiveness of Wysa’s clinical
+interventions which include the talk therapy, gratitude journal, self-
+care practices and mindfulness exercise throughout the duration of
+the week-long experiment. They provided their perception on the
+quality of the chatbot’s response, affect and human-likeness, and
+shared attributes that would motivate self-disclosure and openness
+to communicate with the chatbot. Our findings can shed insights
+on the effectiveness of mental health apps as a coping mechanism
+in a time of social isolation and provide suggestions on how such
+technologies can be improved in order to maximize well-being
+benefits as well as user satisfaction.
+CCS CONCEPTS
+• Human-centered computing →Human computer interac-
+tion (HCI); User studies; Usability testing; Interaction paradigms;
+Natural language interfaces.
+KEYWORDS
+Conversational interfaces, Mental well-being, Social isolation
+ACM Reference Format:
+Carlos Miguel Legaspi Jr., Tristan Raphael Pacana, Kyle Loja, Christina
+Sing, and Ethel Ong. 2022. User Perception of Wysa as a Mental Well-being
+Support Tool during the COVID-19 Pandemic. In Asian HCI Symposium’22
+(Asian HCI Symposium’22), April 29-May 5, 2022, New Orleans, LA, USA.
+ACM, New York, NY, USA, 6 pages. https://doi.org/10.1145/3516492.3559064
+Permission to make digital or hard copies of all or part of this work for personal or
+classroom use is granted without fee provided that copies are not made or distributed
+for profit or commercial advantage and that copies bear this notice and the full citation
+on the first page. Copyrights for components of this work owned by others than ACM
+must be honored. Abstracting with credit is permitted. To copy otherwise, or republish,
+to post on servers or to redistribute to lists, requires prior specific permission and/or a
+fee. Request permissions from permissions@acm.org.
+Asian HCI Symposium’22, April 29-May 5, 2022, New Orleans, LA, USA
+© 2022 Association for Computing Machinery.
+ACM ISBN 978-1-4503-9250-1/22/04...$15.00
+https://doi.org/10.1145/3516492.3559064
+1
+INTRODUCTION
+The quarantine restrictions of the COVID-19 pandemic that dis-
+rupted physical interactions and caused social isolation have shown
+prevalent negative impact to the mental health and well-being of
+the general population [21]. Self-perceived deterioration in stress,
+depression and anxiety during the early months of the pandemic
+were reported in [27], with significantly higher rates of substance
+use, suicidal thoughts, and symptoms of depressive and anxiety
+disorders [18], and the prevalence of several psychological illnesses
+globally [29].
+Prevention through strengthening people’s resilience to psycho-
+logical ill-being is one mechanism to cope with the rising cases of
+mental health. The need for effective and accessible coping mech-
+anisms and healthcare support, coupled with the insufficient re-
+sources allocated for mental health services, led to recent interest
+in the use of conversational agents or chatbots [1]. Previous studies
+have demonstrated the use of chatbots to promote mental health
+and psychological well-being [4, 14, 15, 25]. Studies have also re-
+ported chatbots’ ability to reduce loneliness [6, 19], depression and
+anxiety [7, 11]; to provide social support [3, 26]; and to guide people
+to care for themselves and their well-being [13, 25].
+Among publicly available and free-to-use chatbots, Wysa [11]
+is relatively propitious given that the conversational agent utilizes
+Cognitive Behavioral Therapy (CBT). Studies on CBT as a psy-
+chotherapy revealed its beneficial effects on symptoms of several
+psychological disorders [10]. Wysa is more than just a chatbot; as a
+mental health app, it also includes facilities such as gratitude jour-
+naling, self-care practices, mindfulness exercises, and relaxation
+strategies.
+Students are among those who are adversely affected as they
+continue to adapt to the online learning mode that lacks collabora-
+tive peer learning while requiring much independence in self-paced
+learning. Senior High School (SHS) students experiencing academic
+distress valued Woebot’s lessons and stories as they faced chal-
+lenges in a new and more competitive learning environment [4].
+However, this study was conducted prior to the pandemic. While
+Wysa itself has shown to be effective in reducing perceived levels
+of depression [11], its ability to provide accessible support services
+to help students maintain positive mental well-being remains to be
+explored. Furthermore, while studies have reported the improve-
+ments in mood and symptoms of mental disorders from commer-
+cially available mental health and well-being chatbots, few studies
+include analysis on user’s feedback of experience in using a chatbot
+[6].
+52
+
+Asian HCI Symposium’22, April 29-May 5, 2022, New Orleans, LA, USA
+Legaspi et al.
+In this paper, we investigated SHS students’ perception on the
+quality of Wysa’s response, affect, and human-likeness as their
+mental well-being support partner over a one week period. They
+also shared attributes that motivated self-disclosure and openness
+to communicate with the chatbot. Our findings provide insights on
+the effectiveness of mental health apps as a coping mechanism in
+a time of social isolation, and provide suggestions on how these
+technologies can be improved in order to maximize well-being
+benefits and user satisfaction.
+2
+RELATED WORK
+Social isolation during the COVID-19 pandemic caused a nega-
+tive impact on people’s mental health and well-being [18]. People
+experiencing loneliness suffer from reductions in feelings of hap-
+piness and satisfaction while having a more pessimistic mindset
+[17]. Chatbots have been proposed as an alternate intervention to
+provide accessible and individualized support to people in need of
+someone to talk to [6]. Previous studies have investigated the abil-
+ity of chatbots to act as companions through adequate mimicry of
+human-to-human conversation. These artificially intelligent agents
+are capable of improving mood [30] and reducing feelings of loneli-
+ness [19, 20]. A chatbot’s ability to model real human interactions
+and its appropriate use of human-like verbal and non-verbal cues
+can help build affinity and rapport with its users, leading to better
+human-bot relationship [2, 23]. Furthermore, people value therapeu-
+tic conversational agents whom they perceived as good listeners,
+can keep secrets, and are non-judgemental [12, 31].
+App engagement and experience were analyzed from data pro-
+vided by geographically dispersed users who engaged in daily con-
+versations with Wysa [11]. Users reported the experience to be
+helpful and encouraging with improvements on symptoms of de-
+pression after using Wysa for two weeks. User reviews suggest
+four main support that they receive from the companion chatbot
+Replika [26]. Informational support is attained through Replika’s
+perceived abilities in listening to its users and providing helpful
+information and advice. Emotional support is afforded to users
+by allowing them to openly express their thoughts and feelings.
+Appraisal support is expressed by posing meaningful questions
+that prompt users to perform introspection, self-exploration, self-
+reflection, and self-evaluation. The most common type of social
+support from Replika is companionship which is indicated by its
+ability to resemble interpersonal behaviors and thus, mimic human
+communication and also aid in diminishing feelings of loneliness.
+Studies with SHS students as participants have also reported find-
+ings on the perceived effectiveness of conversational agents. SHS
+students who used Woebot [4] registered an average of 15.28% re-
+duction in their academic stress after two weeks. The conversation
+with the chatbot prompted reflection and changed students’ per-
+spectives, enabling them to point out distortions in their thoughts.
+Woebot also helped the students feel that someone is concerned for
+them by offering companionship and helpful advice. However, the
+limited input processing abilities of Woebot led to the generation
+of unnatural and pre-programmed responses that are at times in-
+appropriate and unrelated to the student’s input, which may come
+across as neglect for what they have to say.
+Another study among SHS students who used Abot [25] showed
+improvements in the participants’ sleep quality, electronic use, aca-
+demic performance, social support, and productivity which are
+factors influencing well-being. Users reported Abot delivering re-
+sponses that are very personal which gave impressions of convers-
+ing with a friend. It also provided tips and guidance to address user
+concerns while some challenges in Abot’s input understanding
+obstructed the generation of appropriate responses and smooth
+conversations.
+Because of the unstructured nature of the conversations that are
+built primarily for social interactions, evaluating chatbots remain a
+subjective exercise [5, 7, 8]. Criteria are based on user perception
+of usability which include effectiveness in task performance, appro-
+priateness of the generated response, and human-likeness of the
+interaction [5]. We adapt these criteria in our user evaluation of
+Wysa.
+3
+METHOD
+Overview of Wysa. Wysa is a free and publicly-accessible con-
+versational chatbot that can be installed in mobile devices. The
+Wysa icon showing a meditation image appears on initial load to
+remind users to deeply breathe or to meditate before a session.
+Users can then choose to talk to Wysa; seek help from a human
+therapist; learn self-care practices from a library of topics such as
+stress, sleep; review previous conversations with Wysa through the
+journal which also doubles as a gratitude journal; and issue an SOS
+to seek help on relaxation techniques.
+Wysa always begins a talk session by asking the user to rate their
+day on a smile to frown facial scale. This is followed by asking the
+user to describe their mood. During check-in, Wysa then asks the
+user to share events that happened, and on each turn, it may ask
+for further details. Before ending the conversation, Wysa provides
+options that help the user to plan for the next step, such as "plan
+out your day" and "reframe your mind". The provided options are
+randomly generated and may vary per session.
+Participants. Senior High students between 16-19 years old
+from a private school in Manila, Philippines were recruited through
+convenience sampling and email invitation, yielding 18 confirmed
+participants. Following University research ethics protocols, in-
+formed consents were administered via Google Forms to protect
+the students’ privacy while giving them the option to voluntarily
+participate and withdraw from the study at any given time. Stu-
+dents who are minors or below 18 years of age were also required
+to have their parent or guardian sign an assent form.
+Procedure. Of the 18 students who initially accepted the invi-
+tation, only 10 partook in the actual trial. They were instructed to
+individually engage in at least 10 minutes of daily conversations
+with Wysa for a period of one week. At the end of each daily conver-
+sation, the student has to accomplish the Daily Check-In Form for
+monitoring their participation and reason of use. Students are also
+asked to evaluate Wysa’s features and to share their experiences.
+A Wysa Evaluation Form was also administered at the end of
+the trial to collect students’ feedback and perception of the effec-
+tiveness and usability of the chatbot. The criteria for evaluation
+include the relevance and appropriateness of Wysa’s responses, its
+affect qualities, if it can mimic human attributes, and overall user
+53
+
+User Perception of Wysa as a Mental Well-being Support Tool during the COVID-19 Pandemic
+Asian HCI Symposium’22, April 29-May 5, 2022, New Orleans, LA, USA
+Table 1: Wysa Trial Period of Students
+Number of Days
+Number of Students
+Percentage
+1-2
+1
+5.5%
+3-4
+1
+5.5%
+5
+1
+5.5%
+6
+3
+16.7%
+7
+4
+22.2%
+satisfaction. Due to privacy guidelines of the Wysa Inc. group, no
+conversation logs were made available for analysis.
+Analysis. The impact of the trials on the students’ well-being
+were determined by comparing the results of the pre- and post-
+assessment forms that were administered before the start and at the
+end of the trial. The Well-being Assessment aims to assess levels of
+stress, loneliness and worry using items derived from the Perceived
+Stress Scale [24], UCLA Loneliness Scale [22], and Penn State Worry
+Questionnaire [16], respectively.
+4
+RESULTS
+Table 1 shows the progress of the students at the end of the week-
+long trial. Four students completed seven days of usage, three com-
+pleted six, one used Wysa for five days. The rest had less than four
+days of usage.
+4.1
+Well-Being Assessment
+Stress, loneliness, and worry can affect a person’s mental well-
+being. Stress is the human body’s normal response to tension or
+pressure that is affecting us physically and emotionally. Feelings of
+loneliness can surface due to students’ perceived social isolation
+from their peers; thus, they are in need of people they can talk to or
+groups they can belong with [9]. Worrying about future events, such
+as academic workload, household challenges, and health-related
+concerns, can cause anxiety. Table 2 shows the individual scores of
+students on their pre- and post-trial well-being assessment.
+The amount of stress has the highest reduction value of -8.3.
+This may be attributed to students’ perception of Wysa as someone
+they can talk and vent to due to the latter’s ability to provide advice
+on coping, relaxing, and looking at situations more positively and
+Table 2: Pre- and Post-Trial Well-being Assessment Scores
+ID
+Age &
+Days
+Stress
+Loneliness
+Worry
+Gender
+Change
+Change
+Change
+S1
+17 F
+7
+-7
+-3
+-5
+S2
+17 M
+4
+-5
+7
+-6
+S3
+18 M
+5
+-9
+-19
+-7
+S4
+18 M
+1
+-8
+-17
+-10
+S5
+17 F
+7
+-13
+-2
+-8
+S6
+17 F
+6
+-12
+-4
+-4
+S7
+17 M
+7
+-10
+-8
+-8
+S8
+18 M
+6
+-15
+-13
+-1
+S9
+19 M
+6
+-6
+-6
+-3
+S10
+18 M
+7
+2
+4
+-3
+Average score
+-8.3
+-6.1
+-5.3
+practically. Most of Wysa’s features can be beneficial in this aspect.
+On the other hand, to significantly reduce loneliness would require
+the student to develop some form of bond with Wysa as well as to
+view it as a friend. Reducing worry requires Wysa to convince the
+student not to dwell on troubling thoughts and that these negative
+potentials are not as likely as they may seem. This is mainly evident
+when the chatbot asks the students to reframe their thoughts.
+Among the participants, S10, a 7-day user, has noticeably little
+changes on mental well-being. Feedback from the student suggests
+that they had experienced burn out in using Wysa for participation
+purposes due to the repetitiveness of the conversation as shown in
+their comment on the Talk feature on Day 5:
+"It was a bit nice to talk given that my days were dull,
+but the conversation felt too repetitive at this point.
+Convos always seems to start with around 6 minutes of
+the same questions."
+4.2
+Daily Check-in
+Among the several features, techniques, and facilities available in
+Wysa, the talk, journaling, self-care, relaxation techniques, refram-
+ing thoughts, and SOS were included in the Daily Check-In Form.
+Here, we present our results on the talk, journaling, and relax-
+ation features as these require interaction between Wysa and the
+students.
+Talk. Students, such as S10 on Day 2, reported that Wysa "stim-
+ulated self-reflection on what I wanted in my life in the near and far
+future". They also commended Wysa’s ability to let them focus on
+the positive aspects in their lives, as shared by S6 on Day 5: "It was
+hard to stay positive, but Wysa made it seem it’s as simple as stop
+thinking negatively."
+However, there were issues with the responses generated by
+Wysa that affected the quality of the conversation. On Day 4, stu-
+dents started reporting the repetitiveness of the chatbot’s responses:
+"Feels like its getting repetitive" (S8), and "No new discussion, just
+everyday routine" (S7). Its lack of fluidity can make the chatbot
+respond inappropriately or completely ignore the student’s input,
+as shared by S8 on Day 1:
+The app wasn’t listening at all. I was talking about my
+exam and it didn’t even acknowledge it. I felt worse
+after talking with Wysa.
+Others noticed Wysa’s limitations as an intelligent bot, stating
+that "It’s hard to talk to an AI, because sometimes it doesn’t quite
+understand my words." (S6). Perhaps due to its predefined responses,
+its novelty wears off after a few days of use when Wysa was de-
+scribed as "interesting but it could not replicate how a conversation
+with another person" (S9).
+Journaling. Journals are meant to allow students to review
+records of their past conversations with Wysa. S7 who used this
+consistently found it "interesting to see past messages/interactions".
+However, while "It is good to look back at accomplishments, there is
+nothing more than that." On the other hand, S6 appreciates the use
+of a journal in showing signs of efforts or improvement, stating on
+Day 3 that "It lets me look back to the journey I started. It’s only been
+a few days, but there’s a lot that I have done already in Wysa." S1
+used the journal facility to choose on "what (self-care) pack I should
+54
+
+Asian HCI Symposium’22, April 29-May 5, 2022, New Orleans, LA, USA
+Legaspi et al.
+Table 3: Frequency of Daily Use of Wysa’s Features
+Days
+Talk
+Journal
+Self-Care
+Relaxation
+Reframing
+1-2
+17
+6
+11
+8
+11
+3-4
+15
+7
+7
+10
+13
+5
+7
+3
+2
+5
+3
+6
+6
+2
+3
+2
+2
+7
+3
+2
+3
+1
+1
+do today that could help me", while S3 found the journal’s utility as
+a reflection tool since it "helped get out of what was in my head".
+Relaxation Techniques. Wysa may sometimes offer relaxation
+techniques, such as breathing and mindfulness exercises, in the
+midst of a conversation when it asks the user what they want to do
+next. Students found these techniques “made me calm down” and
+“helped me relax”. S6 further shared on Day 5 that:
+It’s one of my favorite features in Wysa, since I’m able
+to relax myself and recollect my thoughts. Breathing
+exercises helps me in that way.
+Table 3 shows the frequency of daily use of each of Wysa’s fea-
+tures, while Table 4 shows the average rating given by the students.
+None of the students reported using the SOS facility throughout
+the trial.
+4.3
+Chatbot Evaluation
+Table 5 shows the average evaluation scores given by the students
+to Wysa at the end of the trial. The values indicate that students
+perceived Wysa’s overall responses to be moderately relevant, ap-
+propriate, and meaningful with an average score of 3.86 out of 5.
+Positive feedback regarding the content of responses are due to the
+advice or insights that Wysa was able to provide, as shared by S10:
+"It has certainly helped me reflect more though, it does
+well in prompting me (and providing me frameworks) to
+think more about myself, my problems, and my wants
+and needs."
+The slightly lower scores of Wysa’s affect qualities is an indica-
+tion of its moderate level of friendliness and empathy. S8 admitted
+that the chatbot was able to act as an alternative to a real compan-
+ion giving them "someone to talk to during those 7 days”. This is in
+contrast to S10 who described the repetitive conversations as more
+practical and procedural rather than casual like a friend:
+"It’s friendly, definitely feels like an advice giver, but
+not so much of a companion as it is more of a practi-
+cal/professional relationship. This has to do with it being
+not very fluid with its interactions. While I believe this
+Table 4: Students’ Rating of Wysa’s Features
+Days
+Talk
+Journal
+Self-Care
+Relaxation
+Reframing
+1-2
+3.59
+4.00
+4.00
+4.63
+4.00
+3-4
+3.87
+4.00
+4.57
+4.20
+4.46
+5
+3.85
+4.00
+4.50
+3.80
+5.00
+6
+4.00
+4.00
+4.33
+4.50
+4.00
+7
+3.67
+4.00
+4.67
+5.00
+4.00
+Table 5: Evaluation Scores of Wysa
+Criteria
+< 4 days
+4 - 6 days
+7 days
+Average
+Content of Response
+4.00
+3.53
+4.25
+3.86
+Affect Qualities
+5.00
+2.99
+3.75
+3.50
+Human-Likeness
+3.66
+2.13
+3.17
+2.70
+Openness
+4.00
+4.20
+4.25
+4.20
+Helpfulness
+5.00
+3.40
+4.50
+4.00
+User Satisfaction
+4.00
+3.20
+4.00
+3.60
+offers good advice, it doesn’t feel very casual or human
+as the conversation is a bit repetitive."
+Among all criteria, human-likeness received the lowest average
+rating of 2.70 by a large margin. This is partially due to complaints
+regarding the talk feature’s repetitiveness and lack of fluidity which
+are more observable on later days. A rigid conversation flow not
+only causes difficulty in communicating with Wysa (S6) but can
+also make the user feel neglected (S8) when the chatbot does not
+acknowledge the user’s input. This made it difficult for S6 to utilize
+Wysa to cope with their stress and concerns stating that:
+"It’s not necessarily a great tool for me to cope with my
+mental health problems and stress. More often than not,
+whenever I talk to Wysa about my problems, it simply
+brushes it off as if it’s not a big deal and that I can easily
+solve it. Although I would understand why since Wysa
+is unable to assess the severity of the problem, it still
+affected my experience with Wysa nonetheless."
+Previous research shows that a chatbot’s ability to resemble real
+human interaction is correlated with the user’s willingness to de-
+velop a bond with it [15]. Despite the low scores on human-likeness,
+students gave a high average score of 4.2 to Wysa’s openness. As
+there is less risks of any judgement or negative reactions, S9 found
+it more comfortable to express themselves to a bot:
+"I think because I viewed wysa as a tool rather than a
+person I was able to be more open on things I say/input."
+This supports the findings reported in [12, 31] where a chatbot is
+valued for its good listening skill and its non-judgemental behavior.
+Wysa’s helpfulness also fared well with an average rating of 4.00.
+S9 expressed that it is “a good tool to use for venting and reflecting
+things that bring happiness”. Wysa’s advice and insights enabled S1
+to cope with their concerns:
+"There were times that I was stressed but Wysa helped
+me relax and think of the positive things that helped
+me cope and overcome my stress and worry."
+S5 shared the same sentiment on Wysa’s ability to guide them
+in learning how to deal with worry:
+"It was very relieving to converse and tell Wysa about
+my thoughts and worries for the past days and it provid-
+ing courses of action to address such worrisome thoughts."
+However, S6 prefers a chatbot that can tailor its therapy to their
+specific needs, stating that "their style of therapy is not quite some-
+thing I’m looking for".
+55
+
+User Perception of Wysa as a Mental Well-being Support Tool during the COVID-19 Pandemic
+Asian HCI Symposium’22, April 29-May 5, 2022, New Orleans, LA, USA
+5
+DISCUSSION
+The potential benefit that conversational agents or chatbots can
+bring to the healthcare sector has been a subject of interest in
+recent studies. This is heightened by the need to provide accessi-
+ble intervention and support services to enable the community to
+manage their own health and practice self-care especially when
+the available resources are limited. Reports on user experiences
+in utilizing chatbots as their therapy assistant and mental health
+companion have been gaining grounds with the rising number of
+mental health concerns globally. Here, we discussed our findings
+on students’ perception of Wysa as a support tool to manage their
+mental well-being. We also compare our findings with previous
+studies where senior high school students are the primary target
+audience. Lastly, we present design considerations to inform future
+work on the use of conversational interfaces to provide self-care
+services.
+5.1
+User Perception on Wysa
+Reduction in all of the students’ levels of stress, loneliness, and
+worry derived from their pre- and post-trial Well-being Assessment
+shows Wysa’s potential utility as a support tool in improving one’s
+mental well-being. Students reported the ease with which Wysa
+can help them in expressing their worry (S3), disrupting negative
+thoughts (S6), performing relaxation exercises (S6), and reflecting
+on positive things (S1). These are evidences that correlate with the
+study of [30] on chatbots’ ability in improving a person’s mood and
+emotional state while giving guidance to students on how to care
+for their well-being [13, 25]. Having someone to talk to and to vent
+negative emotions is also repeatedly cited by the students as one of
+the benefits offered by Wysa in reducing their feelings of loneliness.
+This correlates with the findings reported in the studies of [19, 20].
+Despite admitting that they perceive Wysa as an artificial being
+with low resemblance to the human therapist it is trying to mimic
+due to its often repetitive responses, the students still openly express
+their thoughts and feelings to Wysa. This parallels the reports
+from [12, 31] where therapy chatbots are valued for their perceived
+abilities in listening while remaining non-judgemental. However,
+as an intelligent agent, its natural language processing abilities
+also created challenges in the delivery of a fluid conversation flow
+that minimizes canned response to reduce feelings of neglect while
+motivating students to continuously talk with the chatbot. This led
+students to consider Wysa as nothing more than an advice giver
+with whom they can establish a professional relationship but not a
+personal one.
+5.2
+Conversational Agents for the Mental
+Well-Being of Students
+Two other studies that involve senior high school students were
+conducted by De Nieva et al. [4] and Sia et al. [25]. While the first
+study utilized another commercially available chatbot, Woebot, it
+should be kept in mind that it was conducted prior to the pandemic
+and focused on the students’ academic stress. The students also
+used Woebot for a period of two weeks, which is the minimum
+period before any signs of improvement in well-being will become
+evident [7]. The second study utilized a homegrown chatbot, Abot,
+that sought to empower students to maintain an optimal well-being
+through self-care and conscious monitoring of their lifestyle habits
+[25]. Similar to the current study, the students used Abot for a
+period of one week.
+All studies reported the beneficial effects of using the chatbots
+that led to a decrease in stress level [4] and an increase in the well-
+being [25] of the participants. Similar to the findings of Woebot,
+students appreciated the guidance offered by Wysa that help them
+reflect on their daily events, find things to be grateful for (gratitude
+journal), and learn new lessons to deal with their problems.
+Crucial to an effective man-machine interaction and increased
+user satisfaction is the chatbots’ ability to carry a natural conver-
+sation that mimics human-to-human communication. Problems
+in understanding user inputs that lead to inappropriate responses
+have been reported as the causes of user disatisfaction in using a
+chatbot [8]. Wysa’s and Woebot’s inability to fully grasp the user
+input in order to formulate an appropriate response are often times
+perceived as the chatbot ignoring what they have to say, causing
+users to feel neglected and unimportant.
+Users seeking support also appreciate chatbot behaviors that
+exhibit affect qualities and human-likeness. This is where Wysa has
+been found to be lacking. Users described conversing with Wysa as
+practical rather than casual, which is in contrast to Abot’s perceived
+ability to relate its responses to what the users have shared [25] and
+Woebot’s daily check-in feature as indicative of someone who is
+caring [4]. These should be addressed in Wysa in order to increase
+user satisfaction and motivate them to talk to the chatbot on a more
+personal level.
+5.3
+Design Considerations
+Similar to previous studies, our results have shown the potential
+help that chatbots can offer to those experiencing stress, loneliness
+and worry due to social isolation. Their ability to engage in natural
+language conversations, to give guidance, and even to entertain
+made chatbots a fit for therapy-based tasks. However, to be able to
+fully carry out their role as a therapist, counselor, peer, compan-
+ion, and guide, therapy bots such as Wysa must also be "versatile,
+eloquent, knowledgeable, and possess a certain cultural, social and
+emotional competence" [28].
+To be versatile, the chatbots should be able to personalize their
+responses to the individual needs of their users based on their
+specific situation. This requires the ability to understand the con-
+text of the user’s input, often times shared as a form of narrative
+and delivered in a series of dialogue turns based on the chatbot’s
+ability to prod and to elicit further details. To be eloquent, they
+must be able to formulate responses that are non-repetitive. Added
+features include the chatbots’ ability to detect the user’s emotion
+and respond accordingly; to be aware of social norms and culture
+which may affect the types of lessons and activities utilized in the
+conversation; and to engage in small talk to establish affinity with
+the users in order to motivate self-disclosure and build trust. With
+advanced AI technologies such as intent classification, story event
+understanding, commonsense reasoning, and emotion detection,
+some existing chatbots may already be exhibiting one or two of
+these qualities to a certain extent.
+56
+
+Asian HCI Symposium’22, April 29-May 5, 2022, New Orleans, LA, USA
+Legaspi et al.
+6
+CONCLUSION
+Chatbots are viable technology-based solutions that offer pre-emptive
+and accessible healthcare by raising awareness and promoting good
+practices to help maintain optimal well-being. A positive well-being
+can prevent feelings of stress, loneliness and worry arising due to
+social isolation from turning into a serious condition. In this paper,
+we described our investigation on the perceived utility of a com-
+mercially available chatbot, Wysa, as a mental well-being support
+tool for senior high school students. Students appreciate Wysa’s
+ability to let them relax and to focus on the positive aspects in their
+lives. Results from pre- and post-trial well-being assessment scores
+show a decrease of 8.3, 6.1 and 5.3 in the levels of stress, loneliness,
+and worry of the students, respectively.
+Experiments with a larger population group would be conducted
+in future work to generate more solid findings and insights on
+the perceived usability and effectiveness of Wysa. Additional data
+points, such as the number of messages exchanged with the chatbot,
+specific features that were used on each day, and scores from taking
+assessments found in the Wysa app would also be utilized to enrich
+the findings of our study on how the various facilities of Wysa are
+supportive of the differing needs of its users.
+REFERENCES
+[1] Alaa A. Abd-alrazaq, Mohannad Alajlani, Ali Abdallah Alalwan, Bridgette M.
+Bewick, Peter Gardner, and Mowafa Househ. 2019. An overview of the features
+of chatbots in mental health: A scoping review. International Journal of Medical
+Informatics 132, 103978 (2019). https://doi.org/10.1016/j.ijmedinf.2019.103978
+[2] Timothy W. Bickmore and Rosalind W. Picard. 2005. Establishing and maintain-
+ing long-term human-computer relationships. ACM Transactions on Computer-
+Human Interaction 12 (2005), 293–327. https://doi.org/10.1145/1067860.1067867
+[3] Mauro de Gennaro, Eva Krumhuber, and Gale Lucas. 2020. Effectiveness of
+an epathic chatbot in combating adverse effects of social exclusion on mood.
+Frontiers in Psychology 10, 3061 (2020). https://doi.org/10.3389/fpsyg.2019.03061
+[4] Johan Oswin De Nieva, Jose Andres Joaquin, Chaste Bernard Tan, Ruzel
+Khyvin Marc Te, and Ethel Ong. 2020. Investigating students’ use of a mental
+health chatbot to alleviate academic stress. In Proceedings of the 6th Interna-
+tional ACM In-Cooperation HCI and UX Conference. Association for Computing
+Machinery, New York, NY, USA, 1–10. https://doi.org/10.1145/3431656.3431657
+[5] Jan Deriu, Alvaro Rodrigo, Arantxa Otegi, Guillermo Echegoyen, Sophie Rosset,
+Eneko Agirre, and Mark Cieliebak. 2021. Survey on evaluation methods for
+dialogue systems. Artificial Intelligence Review (2021), 755–810.
+[6] Gilly Dosovitsky and Eduardo Bunge. 2021. Bonding with bot: User feedback
+on a chatbot for social isolation. Frontiers in Digital Health 3, 735053 (2021).
+https://doi.org/10.3389/fdgth.2021.735053
+[7] Kathleen Kara Fitzpatrick, Alison Darcy, and Molly Vierhile. 2017. Delivering
+Cognitive Behavior Therapy to young adults with symptoms of depression and
+anxiety using a fully automated conversational agent Woebot: A randomized
+controlled trial. JMIR Mental Health 4, 2 (2017), e19. https://doi.org/10.2196/
+mental.7785
+[8] Asbjørn Følstad and Petter Bae Brandtzaeg. 2020. Users’ experiences with chat-
+bots: Findings from a questionnaire study. Quality and User Experience 5, 3 (2020).
+https://doi.org/10.1007/s41233-020-00033-2
+[9] Louise Hawkley and John Cacioppo. 2010. Loneliness matters: A theoretical
+and empirical review of conseqeuences and mechanisms. Annals of Behavioral
+Medicine 40, 2 (2010). https://doi.org/10.1007/s12160-010-9210-8
+[10] Stefan Hofmann, Anu Asnaani, Alice Sawyer, and Angela Fang. 2012. The efficacy
+of Cognitive Behavioral Therapy: A review of meta-analyses. Cognitive Therapy
+and Research 36, 5 (2012), 427–440. https://doi.org/10.1007/s10608-012-9476-15
+[11] Becky Inkster, Shubhankar Sarda, and Vinod Subramanian. 2018. An empathy-
+driven, conversational artificial intelligence agent (Wysa) for digital mental
+well-being: Real-world data evaluation mixed-methods study. JMIR mHealth and
+uHealth 6, 11 (2018), e12106. https://doi.org/10.2196/mhealth.12106
+[12] Junhan Kim, Yoojung Kim, Byungjoon Kim, Sukyung Yun, Minjoon Kim, and
+Joongseek Lee. 2018. Can a machine tend to teenagers’ emotional needs?. In
+Extended Abstracts of the 2018 CHI Conference on Human Factors in Computing
+Systems (CHI EA ’18). Association for Computing Machinery, New York, NY, USA,
+1–6. https://doi.org/10.1145/3170427.3188548
+[13] Minha Lee, Sander Ackermans, Nena van As, Hanwen Chang, Enzo Lucas, and
+Wijnand IJsselsteijn. 2019. Caring for Vincent: A chatbot for self-compassion. In
+Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems
+(CHI ’19). Association for Computing Machinery, New York, NY, USA, 1–13.
+https://doi.org/10.1145/3290605.3300932
+[14] Yi-Chieh Lee, Naomi Yamashita, Yun Huang, and Wai Fu. 2020. I Hear You, I
+Feel You: Encouraging deep self-disclosure through a chatbot. In Proceedings
+of 2020 the CHI Conference on Human Factors in Computing Systems (CHI ’20).
+Association for Computing Machinery, New York, NY, USA, 1–12. https://doi.
+org/10.1145/3313831.3376175
+[15] Kate Loveys, Gregory Fricchione, Kavitha Kolappa, Mark Sagar, and Elizabeth
+Broadbent. 2019. Reducing patient loneliness With artificial agents: Design
+insights from evolutionary neuropsychiatry. Journal of Medical Internet Research
+21, 7 (2019), e13664. https://doi.org/10.2196/13664
+[16] TJ Meyer, ML Miller, RL Metzger, and TD Borkovec. 1990. Development and
+validation of the Penn State Worry Questionnaire. Behavior Research and Therapy
+28, 6 (1990), 487–495. https://doi.org/10.1016/0005-7967(90)90135-6
+[17] Raheel Mushtaq, Shelkh Sholb, Tabindah Shah, and Sahil Mushtaq. 2014. Rela-
+tionship between loneliness, psychiatric disorders and physical health? A review
+on the psychological aspects of loneliness. Journal of Clinical and Diagnostic
+Research 8, 9 (2014), WE01–WE4. https://doi.org/10.7860/JCDR/2014/10077.4828
+[18] Nirmita Panchal, Rabah Kamal, Cynthia Cox, and Rachel Garfield. 2021. The impli-
+cations of COVID-19 for mental health and substance use. Kaiser Family Foundation.
+Retrieved October 12, 2021 from https://www.kff.org/coronavirus-covid-19/issue-
+brief/the-implications-of-covid-19-for-mental-health-and-substance-use/
+[19] Lazlo Ring, Lin Shi, and Kathleen Totzke. 2014. Social support agents for older
+adults: Longitudinal affective computing in the home. Journal of Multimodal User
+Interfaces 9, 1 (2014), 79–88. https://doi.org/10.1007/s12193-014-0157-0.
+[20] Hayley Robinson, Bruce McDonald, Ngaire Kerse, and Elizabeth Broadbent. 2013.
+The psychosocial effects of a companion robot: A randomized controlled trial. J
+Am Med Dir Assoc 14, 9 (2013), 661–667. https://doi.org/10.1016/j.jamda.2013.02.
+007
+[21] Kristen Rogers. 2021. Mental health is one of the biggest pandemic issues we’ll face
+in 2021. CNN. Retrieved October 12, 2021 from https://edition.cnn.com/2021/01/
+04/health/mental-health-during-covid-19-2021-stress-wellness/index.html
+[22] DW Russel. 1996. UCLA Loneliness Scale (Version 3): Reliability, validity, and
+factor structure. Journal of Personality Assessment 66 (1996), 20–40.
+https:
+//doi.org/10.1207/s15327752jpa6601_2
+[23] Mark Sagar, Mike Seymour, and Annette Henderson. 2016. Creating connection
+with autonomous facial animation. Commun ACM 59, 12 (2016), 82–91. https:
+//doi.org/10.1145/2950041
+[24] Cohen Sheldon. 1988. Perceived stress in a probability sample of the United
+States. In The social psychology of health. Sage Publications, 31–67.
+[25] Dominic Ethan Sia, Marco Jalen Yu, Justin Leo Daliva, Jaycee Montenegro, , and
+Ethel Ong. 2021. Investigating the acceptability and perceived effectiveness of a
+chatbot in helping students assess their well-being. In Proceedings of the AsianCHI
+Symposium 2021. Association for Computing Machinery, New York, NY, USA,
+34–40. https://doi.org/10.1145/3429360.3468177
+[26] Vivian Ta, Caroline Griffith, Carolynn Boatfield, Xinyu Wang, Maria Civitello,
+Haley Bader, Esther DeCero, and Alexia Loggarakis. 2020. User experiences of
+social support from companion chatbots in everyday contexts: Thematic analysis.
+Journal of Medical Internet Research 22, 3 (2020), e16235. https://doi.org/10.2196/
+1623
+[27] Michael Tee, Cherica Tee, Joseph Anlacan, Katrina Aligam, Patrick Reyes, Vipat
+Kuruchittham, and Roger Ho. 2020. Psychological impact of COVID-19 pandemic
+in the Philippines. Journal of Affective Disorders 277 (2020), 379–391.
+https:
+//doi.org/10.1016/j.jad.2020.08.043
+[28] Leo Wanner, Elisabeth Andre, and Josep Blat. 2017. Design of a Knowledge-Based
+Agent as a Social Companion. Procedia Computer Science 121 (2017), 920–926.
+https://doi.org/10.1016/j.procs.2017.11.119
+[29] Jiaqi Xiong, Orly Lipsitz, Flora Nasri, Leanna Lui, Hartej Gill, Lee Phan, David
+Chen-Li, Michelle Iacobucci, Roger Ho, Amna Majeed, and Roger McIntyre. 2020.
+Impact of COVID-19 pandemic on mental health in the general population: A
+systematic review. Elsevier Public Health Emergency Collection 277 (2020), 55–64.
+https://doi.org/10.1016%2Fj.jad.2020.08.001
+[30] Ruby Yu, Elsie Hui, Jenny Lee, Dawn Poon, Ashley Ng, Kitty Sit, Kenny Ip, Fannie
+Yeung, Martin Wong, Takanori Shibata, and Jean Woo. 2015. Use of a therapeutic,
+socially assistive pet robot (PARO) in improving mood and stimulating social
+interaction and communication for people with dementia: study protocol for
+a randomized controlled trial. JMIR Research Protocols 4, 2 (2015), e45. https:
+//doi.org/10.2196/resprot.4189
+[31] Jennifer Zamora. 2017. I’m Sorry, Dave, I’m Afraid I Can’t Do That: Chatbot
+Perception and Expectations. In Proceedings of the 5th International Conference
+on Human Agent Interaction (HAI ’17). Association for Computing Machinery,
+New York, NY, USA, 253–260. https://doi.org/10.1145/3125739.3125766
+57
+

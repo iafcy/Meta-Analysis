@@ -1,0 +1,686 @@
+| TYPEOriginalResearch
+PUBLISHED04May2023
+DOI10.3389/fdgth.2023.1133987
+A chatbot for mental health
+support: exploring the impact
+EDITEDBY of Emohaa on reducing mental
+JenniferApolinário-Hagen,
+HeinrichHeineUniversityofDüsseldorf,
+distress in China
+Germany
+REVIEWEDBY
+IsabellaChoi,
+TheUniversityofSydney,Australia, Sahand Sabour1*†, Wen Zhang2†, Xiyao Xiao3, Yuwei Zhang3,
+YunfeiLong, Yinhe Zheng3, Jiaxin Wen1, Jialu Zhao4 and Minlie Huang1,3*
+UniversityofEssex,UnitedKingdom,
+IzidorMlakar, 1TheCoAIGroup,DCST,InstituteforArtificialIntelligence,StateKeyLabofIntelligentTechnologyand
+UniversityofMaribor,Slovenia Systems,BeijingNationalResearchCenterforInformationScienceandTechnology,TsinghuaUniversity,
+Beijing,China,2DepartmentofPsychology,BeijingNormalUniversity,Beijing,China,3Departmentof
+*CORRESPONDENCE
+ResearchandDevelopment,BeijingLingxinIntelligentTechnologyCo.,Ltd,Beijing,China,4Centerfor
+SahandSabour CounselingandPsychologicalDevelopmentGuidanceCenter,TsinghuaUniversity,Beijing,China
+sahandfer@gmail.com
+MinlieHuang
+aihuang@tsinghua.edu.cn Introduction:Thegrowingdemandformentalhealthsupporthashighlightedthe
+†Theseauthorscontributedequallytothiswork importance of conversational agents as human supporters worldwide and in
+andsharefirstauthorship. China. These agents could increase availability and reduce the relative costs of
+mental health support. The provided support can be divided into two main
+RECEIVED29December2022
+ACCEPTED17April2023 types: cognitive and emotional. Existing work on this topic mainly focuses on
+PUBLISHED04May2023 constructing agents that adopt Cognitive Behavioral Therapy (CBT) principles.
+CITATION Such agents operate based on pre-defined templates and exercises to provide
+SabourS,ZhangW,XiaoX,ZhangY,ZhengY, cognitive support. However, research on emotional support using such agents is
+WenJ,ZhaoJandHuangM(2023)Achatbot limited. In addition, most of the constructed agents operate in English,
+formentalhealthsupport:exploringtheimpact
+highlighting the importance of conducting such studies in China. To this end,
+ofEmohaaonreducingmentaldistressin
+we introduce Emohaa, a conversational agent that provides cognitive support
+China.
+Front.Digit.Health5:1133987. through CBT-Bot exercises and guided conversations. It also emotionally
+doi:10.3389/fdgth.2023.1133987 supports usersthrough ES-Bot, enabling them tovent theiremotional problems.
+COPYRIGHT In this study, we analyze the effectiveness of Emohaa in reducing symptoms of
+©2023Sabour,Zhang,Xiao,Zhang,Zheng, mental distress.
+Wen,ZhaoandHuang.Thisisanopen-access
+Methods and Results: Following the RCT design, the current study randomly
+articledistributedunderthetermsofthe
+CreativeCommonsAttributionLicense(CCBY). assigned participants into three groups: Emohaa (CBT-Bot), Emohaa (Full), and
+Theuse,distributionorreproductioninother control. With both Intention-To-Treat (N=247) and PerProtocol (N=134)
+forumsispermitted,providedtheoriginal
+analyses, the results demonstrated that compared to the control group,
+author(s)andthecopyrightowner(s)are
+creditedandthattheoriginalpublicationinthis participants who used two types of Emohaa experienced considerably more
+journaliscited,inaccordancewithaccepted significant improvements in symptoms of mental distress, including depression
+academicpractice.Nouse,distributionor (F[2,244]=6.26, p=0.002), negative affect (F[2,244]=6.09, p=0.003), and
+reproductionispermittedwhichdoesnot
+complywiththeseterms.
+insomnia(F[2,244]=3.69,p=0.026).
+Discussion: Based on the obtained results and participants’ satisfaction with the
+platform, we concluded that Emohaa is a practical and effective tool for
+reducingmental distress.
+KEYWORDS
+Chatbots, conversational agents, emotional support, mental health support, cognitive
+behavioraltherapy(CBT),deeplearning
+1. Introduction
+Concerns regarding mental health are prevalent in the modern world due to the
+increasing morbidity of mental diseases (1). During the COVID-19 pandemic, depression,
+anxiety, and other mental health issues have increased significantly (2). Specifically, a
+FrontiersinDigitalHealth 01 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+review by Lakhan et al. (2) highlighted a 20% and 35% rise in efficacy of such interventions in reducing users’ mental distress,
+depression and anxiety, respectively, for 113,285 individuals mainly depression and anxiety (14, 24–26). While most of the
+across 16 studies. Additionally, an international study with a existing research on this topic is in English (18, 27, 28), there have
+sample of 22,330 adults showed that about 17.4% of the been attempts to create Chinese chatbots for CBT (26, 29–31),
+participants met the criteria for a probable insomnia disorder demonstratingtheimportanceofemployingsuchsystemsinChina.
+(3). These mental health issues impact people’s daily lives, In addition, research on machine-based emotional support is
+leading to social dysfunction and risks of self-harm and suicide comparatively limited. Liu et al. (23) constructed a dataset of
+(4). Due to the rapidly increasing demands, mental health emotional support conversations based on Hill’s (22) helpingskills
+services worldwide face challenges regarding the lack of and demonstrated the feasibility of machine-based emotional
+professional training and stigmatization of mental illness. These support. Their work facilitated the research in this direction, and
+challenges can lead to low diagnosis accuracy and patient several approaches have been proposed to improve machines’
+treatment delays(2). emotional support ability (32–37). These approaches achieved
+Similarly, the prevalence of mental health diseases in China is promising results on aspect-based human evaluation (e.g., fluency
+increasing (5–7). According to the epidemiological survey of and coherence). However, their corresponding studies did not
+mental disorders in China (8), the lifetime prevalence rate of create prototype agents, nor did they conduct empirical studies of
+mental disorders in adults, excluding senile dementia, is 16.57%. their effectiveness in reducing users’ mental distress. In addition,
+Specifically, the prevalence of anxiety disorder was reported the all of the mentioned work was implemented in English,
+highest in China, with a 12-month prevalence rate of 4.98% (8). highlighting the lack of research and resources for Chinese
+While possessing one of the largest populations worldwide, the machine-basedemotionalsupport.
+number of licensed psychiatrists, though gradually increasing, is Tothebestofourknowledge,Pauwetal.(21)presentedthefirst
+extremelylimited,with arecentestimate suggestingthat Chinahad andonlystudyinvestigatingtheeffectsofdifferenttypesofmachine-
+only 36,610 psychiatrists (2.6 per 100,000 population) in 2018 based support, including emotional support. However, their
+(9, 10). Similar to the limited number of mental health services in proposedprototypesonlyproduceda set ofpre-defined statements
+China, the quality of such services is also inadequate (7, 8, 11). (e.g., “I am sorry to hear that”) rather than generating responses
+Additionally, recent research has also shown that stigmas related to based on the users’ messages. Therefore, with mental health being
+mental health support in China and concerns regarding burdening a rising issue in the Chinese community, existing high demands
+others also affect an individual’s willingness to seek support for available and affordable support in China, and the limited
+(12, 13). Due to these challenges, only a limited number of research in this area, we believe constructing and conducting a
+Chinese patients are receiving appropriate support and treatment. studyonaconversationalagentforsupportinChineseiscrucial.
+Hence, the invention of high-technology tools or treatments in This study investigates the efficacy of conversational agents for
+China is essential as it can provide effective, available, and providing cognitive and emotional support. Specifically, it aims to
+affordablesupportforimprovingindividuals’mentalhealth. studytheeffectivenessofagentsprovidingdifferenttypesofsupport
+Advancements in Artificial Intelligence (AI) and the field of in reducing mental distress and assess the acceptability and
+Natural Language Processing (NLP) have highlighted the practicality of such interventions for mental health support. We
+potential of machines to serve as anthropomorphic introduce Emohaa, a hybrid system involving a platform based on
+conversational agents (11). One of the essential applications of CBT principles and exercises for cognitive support and a
+such agents is health care, mainly for providing mental health conversational platform for emotional support regarding various
+support. Employing machines for such tasks increases availability topics.WerecruitparticipantsfrommainlandChinaandhypothesize
+while reducingthe costsof seeking support, asthese agents could that using Emohaa, which includes completing daily exercises and
+be widely accessible and affordable through mobile devices (14). emotionalventing,wouldimprovetheirsymptomsofmentaldistress,
+Previous work has shown that individuals are willing to self- specificallydepression,anxiety,negativeaffect,andinsomnia.
+disclose their emotional problems with machines (15–17), which
+is significant as users’ self-disclosure is essential for providing
+support. It demonstrates user rapport with these agents and
+highlights their potential as practical and beneficial supporters 2. Materials and methods
+(18), thusservingas astrong motivationforthis study.
+Extensiveresearchhasbeenconductedontheeffectsofmachine- 2.1. Emohaa
+basedsupport.AsproposedbyRimé(19),therearetwomaintypesof
+supporttoreducementaldistress:cognitiveandemotional.Cognitive Our proposed conversational agent consists of two platforms.
+supportenablesindividualstoreassesstheirsituationfromadifferent First, a template-based platform that contains conversations with
+perspective and realize a new way of thinking about their problem pre-defined options and exercises that assist participants in
+(20, 21). In contrast, emotional support includes providing improving their mental distress based on CBT principles (CBT-
+validation andunderstanding tocause reliefandimprove emotional Bot). Second, a generative dialogue platform that allows
+distress (20, 22, 23). Recent work has mainly focused on delivering conversationsregardingvariousemotionalissuesinanopen-ended
+cognitive support through conversational agents adopting Cognitive manner (i.e., without requiring the users to choose predefined
+Behavioral Therapy (CBT) principles and has demonstrated the conversationaloptions)andprovidesemotionalsupport (ES-Bot).
+FrontiersinDigitalHealth 02 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+2.1.1. Cognitive behavioral therapy chatbot On this platform, participants are initially given a set of
+(CBT-Bot) conversational choices on this platform and are accordingly
+CreatingaplatformbasedonCBTprinciplespostulatesadirect introduced to CBT and how to use this platform (Figure 1A).
+and reciprocal interaction between thoughts, feelings, and Accordingly, they are provided with two types of exercises:
+behaviors that helps illuminate understanding of one’s overall guided expressivewriting and automatic thinking. An example of
+emotional distress and situational responses while highlighting a guided writing exercise is shown in Figure 1B, where users are
+areas for intervention (38). As a tool for cognitive support, we asked to fill out parts of their diary about a given topic in several
+integrated two different practices: automatic thoughts training steps. Automatic thinking exercises (Figure 2) present the user
+and guided expressive writing. Individuals have automatic with a hypothetical scenario and require them to take the
+thoughts in response to a trigger, often outside of that one’s person’s perspective in that situation. Accordingly, they are asked
+conscious awareness. These thoughts could often be irrational a question regarding the correct approach to take in that
+and harmful when associated with mental distress (39). As one person’s situation and report their confidence in their answer.
+of the core elements of CBT (38, 40), automatic thoughts Lastly, theyare shown the correct answerabout howto approach
+training aims to identify and dismantle these thoughts (i.e., and gain a new perspective in such scenarios. To assess the
+replacenegative thoughts with rational perspectives), which could efficacy of the exercises, we require users to report their mood
+reduce mental distress and improve one’s mood (38, 41). In after completing an exercise and describe their emotions using a
+addition, previous studies have shown that writing about stressful set of pre-defined keywords. This platform is publicly available
+or emotional events improves physical and psychological health onWeChat,China’s mostpopular social mediaplatform.
+in non-clinical and clinical populations (42, 43). Therefore, we
+adopted over 20 guided expressive writing exercises that cover a 2.1.2. Emotional support chatbot (ES-Bot)
+variety of topics and instruct users throughout each step of the Severalstudieshaveshownthatemotionalsupportisbeneficial
+exercisevia interactive conversations. for reducing mental and emotional distress (34, 44, 45). In
+FIGURE1
+TheuserinterfaceofEmohaa’sCBT-Botplatform.(A)Template-basedconversationsand(B)guidedexpressivewriting.
+FrontiersinDigitalHealth 03 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+FIGURE2
+Anexampleofautomaticthinkingexercises.
+addition, allowing users to discuss their desired topics freely is given the conversation history. Accordingly, it generates
+crucial for creating anthropomorphic conversational agents. responses that are coherent with the user’s messages and
+Therefore, we aimed to construct an agent that could openly conform to the chosen strategy. Given the free-flow design of
+converse with users about their emotional problems and generate this platform, as opposed to users choosing pre-defined options
+responses based on their situation. To this end, we found Liu for the conversation, an additional model (48) was trained to
+et al.’s (23) dataset of emotional support conversations (ESConv) classify whether users’ messages demonstrated signs of suicidal
+suitable for this study. This dataset was constructed based on the thoughts to ensure users’ safety. As individuals with the risk of
+Helping Skills Theory (22), in which trained human supporters suicide require immediate professional help, the platform
+leverage appropriate support strategies (e.g., self-disclosure, recommends contact information of relevant authorities when
+affirmation, and suggestions) to provide adequate emotional corresponding signs are detected. Example conversations with
+support. As the original dataset was curated in English, the this platform are demonstrated in Figure 3. Similarly, this
+conversations were manually translated into Chinese by trained platform is alsopubliclyavailableonWeChat.
+professionals for the purpose of this study. Back-translation
+procedures (46) were followed to ensure the precision of the
+items. Specifically, we asked an English major who also had a 2.2. Measures
+psychology background to translate the English version into
+Chinese. Then another student translated back the Chinese 2.2.1. PHQ-9
+version into English. Then we invited three professionals to Participants’ depression was measured with the Patient Health
+compare, revise and decide onthefinal translation. Questionnaire (PHQ-9) (49), the most widely used measure in
+For building the ES-Bot platform, a large-scale Chinese psychological depression trials (14, 50). PHQ-9 is a 9-item self-
+dialogue model (47) was leveraged as the backbone to build a report questionnaire that measures the frequency and severity of
+strategy-controlled emotional support dialogue model. depressive symptoms over the last two weeks. Participants were
+Specifically, the model chooses an appropriate support strategy asked to score each item from 1 (not at all) to 4 (nearly every
+FrontiersinDigitalHealth 04 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+FIGURE3
+ExampleconversationswithEmohaa’sES-Botplatform.
+day). In this study, the internal reliability of the scale (Cronbach’s 2.2.4. ISI
+alpha)inthepre-testandthepost-testwere0.78and0.85. The 7-item Insomnia Severity Index (ISI; (53)) was used to
+measure participants’ perceptions of their insomnia. This
+questionnaire assesses the severity of sleep-onset and maintenance
+2.2.2. GAD-7
+difficulties, their interference with daily functioning, and the degree
+To measure participants’ anxiety, we adopted the Generalized
+of distress caused by sleep problems. Participants were asked to
+Anxiety Disorder (GAD-7) scale (51), a 7-item questionnaire
+score each item from 1 (none) to 4 (very severe). The Cronbach’s
+assessing the frequency and severity of symptoms, thoughts, and
+alphaofthescaleinthepre-testandthepost-testwereboth0.87.
+related behaviors to anxiety within the last two weeks. Like
+PHQ-9, participants were required to score each item from 1
+(not at all) to 4 (nearly every day). The Cronbach’s alpha of this
+2.3. Participants
+scale inthepre-testand thepost-testwereboth0.84.
+Prior to the study, we used G*Power 3.1 to calculate the
+2.2.3. PANAS required number of participants. We set the large effect size f to
+Participants’ affect was measured by Watson et al.’s (52) 20- be 0:40 while setting the power (1(cid:1)berror probability) and a
+item Positive and Negative Affect Schedule (PANAS). In this error probability to be 0:90 and 0:05, respectively. Thus, the
+questionnaire, half of the items represent positive affect (e.g., required number of participants was calculated as 102. An online
+active, enthusiastic, and proud), and the remaining half poster was made to recruit participants. We asked colleagues and
+corresponds to negative affect (e.g., upset, guilty, and irritable). friends to help release the recruitment information on their
+All items are scored on a 5-Likert scale, and higher scores social media platforms, such as WeChat and Weibo. Participants
+indicate higher levels of affect. The Cronbach’s alpha of the who were interested in the study could contact our team based
+positive affect dimension in the pre-test and the post-test were on the provided information in the advert. The following criteria
+0.88 and 0.82, and 0.85 and 0.82 for the negative affect were used to recruit participants through online posters:
+dimension atthetwo-timepoints. participants were required to be at least 18 years old, able to use
+FrontiersinDigitalHealth 05 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+FIGURE4
+Flowchartoftheparticipantrecruitmentprocess.
+a smartphone, not currently in therapy as it would interfere with hurting yourself in some way?”), and 38 participants were
+our study,and notsuffering from physical issuessuch as physical excluded because they did not complete the pre-test survey.
+illness or not taking medicine as they might influence their Overall, 72 participants in the Emohaa (CBT-Bot) and 70
+psychological state. participants in the Emohaa (Full) completed the pre-test
+A total of 412 participants registered for the intervention, questionnaires. 105 participants in the control group completed
+and 301 met all the above criteria. A research assistant, who pre-test questionnaires.
+was blinded to the purpose of the study, assigned a code based Theentireinterventionlastedforthreeconsecutiveweeks(i.e.,
+on the order that the participants contacted them. Accordingly, 21 days). Then, one day after the end of the intervention, all the
+the participants were randomly assigned to three groups: participants were asked to fill in the post-test (T2) questionnaire,
+Emohaa (CBT-Bot), Emohaa (Full), and the control group. which included the same items as T1. Additionally, one month
+Considering the relatively long waiting time and the potential after the end of the experiment, participants were invited to fill
+number loss in the control group, we randomly allocated 30 in a follow-up questionnaire (T3) intervention to track the
+more participants to the control group, adopting an lasting effect of the intervention. From the perspective of health
+approximate 3:3:4 allocation ratio for the 3 groups. The ethics and practical reasons, other forms of intervention could
+current study used a blank control group in which participants have been provided to the control group after the intervention.
+were asked to wait for a month before they would receive Hence, there were no valid data at T3 for the control group. The
+mindfulness intervention. aboverecruitment process is illustrated inFigure 4.
+After signing the consent form, participants were instructed Of the randomized participants, 54.2% (134/247) went on to
+to take the pre-test (T1) questionnaires, including PHQ-9, provide partial or complete data at T2. Independent t-tests
+GAD-7, PANAS, and ISI (Section 2.2), and their demographic analyses did not detect evidence of significant differences at T1
+information. Sixteen participants were excluded from the study between those who dropped out of the study versus those who
+and referred to relative authorities for professional help as they did not on age (t¼1:51; p¼0:132); gender (t¼0:37;
+were at risk of suicide according to their scores on an item p¼0:709); working tenure (t¼0:92; p¼0:357); PHQ-9
+from PHQ-9 (i.e., “how often have you been bothered by the (t¼0:95; p¼0:342); GAD-7 (t¼0:59; p¼0:558); PANAS of
+thoughts that you would be better off dead or thoughts of positive (t¼1:02; p¼0:145) and negative (t¼1:21; p¼0:227)
+FrontiersinDigitalHealth 06 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+affect scores; or on insomnia (t¼1:17; p¼0:244). Additionally, contacted and asked to repeat these conversations to ensure the
+we employed MCAR analyses (54) to test whether the data are experiment’s integrity.
+missing completely at random (MCAR), missing at random
+(MAR), or missing not at random (MNAR). The results showed
+that Chi-Square ¼ 42.98 (p,0:001), demonstrating the MCAR 2.5. Privacy and ethics statement
+pattern.
+Regarding the conversations with Emohaa, participants were
+instructed not to share any personal information (e.g., name,
+2.4. Data collection and privacy address, and date of birth) that could be used to identify them.
+The data collected during the experiment are anonymized, stored
+2.4.1. Experiment design securely, and will be available for research purposes through a
+As mentioned, the ES-Bot platform allows users to send their request to the corresponding author. The studies involving
+desired text messages and employs a generative model for human participants were reviewed and approved by Beijing
+producing its responses, as opposed to the template-based Normal University’s Institutional Review Board (IRB Number:
+conversations (i.e., providing users with limited conversational 202209150101). Written informed consent to participate in this
+options and producing pre-defined answers) in the CBT-Bot study wasprovidedbythe participants.
+platform. Due to the existing limitations of generative models,
+such as problems with response coherence and fluency, we
+believed a direct comparison between the effectiveness of the two 3. Results
+platforms was inappropriate. Therefore, we required participants
+in the Emohaa (Full) group to use both platforms and aimed to We used two strategies for analyzing our results. In the main
+study the complementary effect of the ES-Bot platform rather context, we followed the Intention-To-Treat analysis (ITT)
+thananalyzing its respectiveefficacy. principle (55) by including all the participants who initially
+Accordingly, a research assistant informed the participants of participated in the research. In the supplemental analyses, we
+our code of conduct and asked for consent through WeChat. used completer cases by excluding participants who dropped out
+Participants were assured that their participation was voluntary during theinterventionperiod.
+and anonymous. All participants were required to complete the
+mental distress questionnaires (Section 2.2) at T1 and T2.
+Excluding the control group, all participants were instructed to 3.1. User demographics
+use the CBT-Bot platform daily, which required completing at
+least one automatic thinking exercise and writing a guided Demographic information of our studied sample (n¼247) is
+expressive diary. However, participants were encouraged to providedinTable1.Overall,themajorityofparticipantswerefemale
+complete more exercises for better outcomes. In addition, (107/134, 79.85%). The average age of the studied sample was 30.90
+participants from the Emohaa (Full) group were tasked to yearsold(SD¼7:92).Participantshadworkedforanaverageof7.87
+converse with the ES-Bot platform at least once daily. Each years(SD¼8:45)priortotheexperiment.Alloftheparticipantswere
+conversation session was required to last for 5–10 conversational fromMainlandChina.Asthebaselineforparticipants’mentaldistress,
+turns. Participants were encouraged to continue chatting with on average, the samples showed moderate ranges of depression
+the platform if they felt engaged in the conversation. Although (Mean¼16:43, SD¼5:01), moderate anxiety (Mean¼16:23,
+there were no limitations on the conversational topics, SD¼4:37),andmoderateinsomnia(Mean¼16:45,SD¼5:38).In
+participants were encouraged to talk about two main types of regards to PANAS, participants, on average, demonstrated moderate
+emotional experiences and problems: Event-based (e.g., breaking levels of positive (Mean¼24:76, SD¼7:20) and negative affect
+up with a partner, problems with work/study, and nuisance (Mean¼22:34,SD¼6:35).
+complaints); Emotion-based (i.e., topics that cause anger, We employed ANOVA and chi-squared test to see whether
+sadness, anxiety). there were significant differences in baseline variables (age,
+gender, education, PHQ-9, GAD-7, PA, NA, Insomnia) among
+2.4.2. Quality control
+TABLE1 Userdemographicsofourstudiedsample(n¼247).
+Participants’ usage of the platform was manually checked
+every three days. Those who failed to conform to the Emohaa Emohaafull Control
+guidelines were notified and required to complete the relative CBT-Bot (n¼70) group
+(n¼72) (n¼105)
+tasks to ensure high adherence. In addition, conversations with
+Gender,n(%) Male 11(15.28%) 18(25.71%) 28(26.67%)
+the ES-Bot platform were analyzed to monitor the chatbot’s
+Female 61(84.72%) 52(74.29%) 77(73.33%)
+performance and the reliability of the conversations. For
+Age,Mean(SD) 31.07(7.45) 29.00(6.64) 32.05(7.92)
+instance, during the first check of this intervention, it was Work 7.74(7.48) 6.31(6.60) 9.01(9.95)
+found that 3/34 participants sent the same message multiple experience,
+Mean(SD)
+times to meet the requirements. These participants were
+FrontiersinDigitalHealth 07 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+thethreegroups.Theresultsshowedthatthethreegroupswerenot such difference had a relatively small effect size that is smaller
+different in terms of baseline demographics of age (F¼2:17, than 0.06 (58). Specifically, as Figure 5A shows, the intervention
+p¼0:117) and gender (x2¼3:56, p¼0:173). Additionally, the effects on depression stemmed from decreases in both Emohaa
+baseline variables of PHQ-9 (F¼2:45, p¼0:088), GAD-7 (CBT-Bot) (t¼(cid:1)2:25, p¼0:027) and Emohaa (Full) group
+(F¼0:93, p¼0:396), PA (F¼0:83, p¼0:438), NA (F¼2:82, (t¼(cid:1)2:09, p¼0:040) from pre-test to post-test, but there was
+p¼0:061), and Insomnia (F¼2:76, p¼0:065) showed no an increase of depression in the control group (t¼2:04,
+significant differences amongthe threegroups. p¼0:044) from pre-test to post-test. Moreover, we did not find
+significant differences between the two types of interventions
+(F[1,140]¼0:76,p¼0:386).
+3.2. Effects of Emohaa intervention Similarly, we conducted the same MANOVA analyses to test
+whether participants’ anxiety changed differently over the
+We used the last observation forward (LOCF) method to intervention period. The results revealed a main effect of time on
+conduct ITT analyses. Previous systematic reviews have shown anxiety, F[1,244]¼27:66, p,0:001, h2¼0:102, indicating
+that LOCF is one of the most commonly used and relatively participants’ anxiety decreased over time. As Table 2 shows, the
+conservative strategies in ITT analysis (56, 57). To investigate interaction effect of Group (cid:3) Time was not significant on
+whether the effects of interventions were different from each anxiety F[2,224]¼0:60, p¼0:556, h2¼0:006. No significant
+other and from that of the control group, we conducted a one- differences were found in the effects of the two types of
+way repeated measures MANOVA with time (two levels: pre-test
+interventions(F[1,140]¼0:38,p¼0:538).
+and post-test) and group type (three levels: Emohaa (CBT-Bot) Additionally,theresultsshowedthattherewasnomaineffectof
+vs. Emohaa (Full) vs. Control) as the independent variables and time on positive affect (F[1,244]¼2:39, p¼0:123, h2¼0:010)
+the five mental health indicators as the dependent variables. nor on negative affect (F¼2:88, p¼0:091, h2¼0:012), meaning
+First, as presented in Table 2, there were significant Group (cid:3) that participants’ positive affect increased and negative affect did
+Time interaction effects on depression, F[2,244]¼6:26, not change over time. We did not find a significant interaction
+p¼0:002, h2 ¼0:050, indicating a significant difference in effect of Group (cid:3) Time on positive affect (F[2,244]¼1:58,
+participants’ depression changes among the three groups, and p¼1:208, h2¼0:013). The interaction effect of Group (cid:3) Time
+TABLE2 Analysesresultsofvarianceinmentalhealthoutcomes.
+EmohaaCBT- Emohaafull Controlgroup
+Bot (n¼72) (n¼70) (n¼105)
+Variables Time Mean SD Mean SD Mean SD F p h2
+Depression 1 17.32 5.05 16.64 4.83 15.67 5.05 6.26 0.002 0.050
+2 16.15 5.58 15.15 5.91 16.65 5.39 - - -
+Anxiety 1 16.72 3.86 16.34 3.99 15.83 4.91 0.60 0.556 0.006
+2 14.69 4.75 14.12 4.67 14.45 4.08 - - -
+Positiveaffect 1 24.28 6.90 25.69 7.53 24.47 7.77 1.58 1.208 0.013
+2 24.30 6.65 23.68 6.52 24.21 8.05 - - -
+Negativeaffect 1 23.33 6.51 22.98 6.92 21.25 5.70 6.09 0.003 0.048
+2 21.07 6.55 20.81 6.67 22.89 7.73 - - -
+Insomnia 1 17.22 5.40 17.05 5.37 15.53 5.28 3.69 0.026 0.024
+2 15.29 5.63 16.31 5.89 15.97 5.92 - - -
+TheF-testteststheCondition(cid:3)Timeinteractioneffecttodetectasignificantdifferenceamongtheconditionsintherateofchangeacrosstime.
+FIGURE5
+Changesinthemeanmentaldistressscoresbygroupovertheinitialinterventionperiod(T1-T2).Errorbarsindicatea95%confidenceinterval.(A)PHQ-9,
+(B)PANAS,(C)ISI.
+FrontiersinDigitalHealth 08 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+was significant on negative affect (F[2,244]¼6:09, p¼0:003, To conclude, the intervention effects robustly existed in
+h2 ¼0:048). Specifically, as shown in Figure 5B, participants’ depression, NA, and insomnia. However, the intervention effects
+negative affect decreased significantly in both Emohaa (CBT-Bot) on anxiety were not significant using the ITT analysis strategy.
+(t¼(cid:1)2:20,p¼0:031)andEmohaa(Full)(t¼(cid:1)2:04,p¼0:045) The different results on Anxiety may be that the main effect of
+groups from pre-test to post-test, but their negative affect time on Anxiety is strong, which means that anxiety declined in
+significantly increased in the control group (t¼2:11, p¼0:037). all three groups, and with a stricter analysis strategy of ITT, the
+The post-hoc results showed that there were no significantly differences among the three groups become less salient. The
+different effects of PA (F[1,140]¼0:01, p¼0:943) and NA intervention effect did not exist on PA, regardless of which
+(F[1,140]¼0:01,p¼0:955)betweentypesofinterventions. analysis strategy we adopted.
+Finally,theMANOVAresultsdemonstratedamaineffectoftime Furthermore, We collected participants’ data on the mental
+on participants’ insomnia (F[1,244]¼4:49, p¼0:035, health indicators (Section 2.2) three weeks after the post-test.
+h2 ¼0:018), indicating that participants’ insomnia decreased Due to practical reasons that participants in the control group
+during the period of intervention. Besides, the results showed a received other forms of interventions after the post-test, we only
+significant interaction effect of Group (cid:3) Time on insomnia collected two intervention groups’ data. 16 participants in the
+(F[2,244]¼3:69, p¼0:026, h2¼0:024), but the differences had Emohaa (CBT-Bot) group and 27 in the Emohaa (Full) group
+a relatively small effect size that is slightly larger than the small returned thequestionnaires.
+effect size of.01 (58). Specifically, as Figure 5C reveals, the effects Tocomparetheeffectsbetweenthetwointerventiongroups,we
+stemmed from a significant insomnia decrease in the Emohaa conductedMANOVAwithtime(threelevels:pre-test,post-test,and
+(CBT-Bot) group (t¼(cid:1)2:28, p¼0:026), no significant change of three weeks after post-test) and group type (two levels: CBT-Bot
+insomnia in Emohaa (Full) group (t¼(cid:1)2:03, p¼0:055), and no Emohaavs.fullEmohaa)asthe independentvariablesandthe five
+difference in the control group between the pre-test and post-test mental health indicators as the dependent variables. We also
+(t¼0:88,p¼0:379).Wedidnotfindsignificantlydifferenteffects adopted ITT analysis in comparing the results of the two groups.
+ofthetwotypesofinterventions(F[1,140]¼0:02,p¼0:936). Results showed that there were no significant interaction effects of
+Time (cid:3) Group on depression (F[2,139]¼0:16, p¼0:853,
+3.2.1. Supplemental analyses h2 ¼0:002), anxiety (F[2,139]¼0:37, p¼0:693, h2¼0:003),
+Weadditionallyconductedacompleteranalysiswith134cases. positive affect (F[2,139]¼2:03, p¼0:133, h2¼0:014) or
+Specifically,the results of one-wayrepeatedmeasures MANOVAs negative affect (F[2,139]¼1:04, p¼0:354, h2¼0:007),
+showed that there were significant Time * Group interaction indicating that the changes of participants’ four mental health
+effect on depression (F[2,131]¼19:11, p,0:001, h2¼0:230). indicators did not vary from each other between the two groups.
+Participants’ depression decreased significantly in both Emohaa However, such interaction effect was significant on insomnia
+(CBT-Bot) (t¼(cid:1)4:19, p,0:001) and Emohaa (Full) (F[2,139]¼3:18, p¼0:043, h2¼0:022). The difference
+(t¼(cid:1)4:05, p,0:001) groups from pre-test to post-test, but stemmed from that participants’ insomnia symptoms returned to
+their depression increased in the control group (t¼2:54, the pre-test level in the Emohaa (CBT-Bot) group. Still,
+p¼0:013). participants’ insomnia in the Emohaa (Full) group continued
+Additionally, the results showed that there was a significant improvingaftertheintervention.
+interaction effect of Time * Group on anxiety (F[2,131]¼45:04,
+p,0:001, h2¼0:260). Participants’ anxiety decreased
+significantly in both Emohaa (CBT-Bot) (t¼(cid:1)5:69, p,0:001)
+and Emohaa (Full) (t¼(cid:1)4:53, p,0:001) groups from pre-test 3.3. Conversation analysis
+to post-test, but participants’ anxiety remained unchanged in the
+control group (t¼(cid:1)0:39, p¼0:397). Duringtheexperiment,participantshad7conversationsessions
+The results showed no interaction effect of Time * Group on with Emohaa on average (SD¼6:62, Max¼18, Min¼4). These
+PA (F[2,131]¼1:85, p¼0:162, h2¼0:031), but such effect sessions had a mean of 17 conversational turns (SD¼10:68,
+existed on NA (F[2,131]¼12:11, p,0:001, h2¼0:160). Max¼87, Min¼5). N-gram analysis was used to investigate the
+Participants’ NA decreased significantly in both Emohaa (CBT- characteristics of participants’ conversations with Emohaa. The
+Bot) (t¼(cid:1)7:47, p,0:001) and Emohaa (Full) (t¼(cid:1)2:14, mostdiscussedkeywordswerefoundtobe感觉(feeling;33%),工
+p¼0:040) groups from pre-test to post-test, but remained 作 (work; 20%), 心情 (mood; 11%), 学习 (pressure; 10.5%), 朋友
+unchangedin thecontrol group(t¼0:26,p¼0:795). (friends; 9.2%), and 孩子 (children; 7.7%). Percentages indicate
+Finally, the results showed that there was a significant the proportion of conversations that included the keyword. The
+interaction effect of Time and Group on insomnia main problems that participants wanted to talk about were 工作
+(F[2,131]¼3:52, p¼0:031, h2¼0:005). The differences 环境 (Work environment), 工作压力 (Work pressure), 浪费时间
+stemmed from a significant decrease in insomnia for the Emohaa (Wasting Time), 集中注意力 (Keeping focus), 牺牲休息时
+(CBT-Bot) group (t¼(cid:1)3:84, p,0:001). Participants’ insomnia (Sacrificing leisure time), and 转移注意力 (Diverted attention). In
+in the Emohaa (Full) group slightly decreased (t¼(cid:1)2:01, general, participants were mainly interested in 正念冥想 (Mindful
+p¼0:053). Participants’ insomnia in the control group did not meditation), 早点休息 (Resting early), 身体健康 (Being healthy),
+change(t¼0:19,p¼0:869). and提供情绪价值(Providingemotionalvalue).
+FrontiersinDigitalHealth 09 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+3.4. Acceptability and feasibility the automatic thinking exercises were excessive while there were
+not enough options to describe their mood and emotions after
+After the end of the intervention, participants who had used completing the exercise. Moreover, it was suggested that the
+Emohaa during the experiment were instructed to complete an
+dialogueoptionsintheplatform’stemplatewereinadequate.
+additional survey to evaluate the agent’s performance. Most IssuesregardingtheperformanceoftheES-Botplatformwere
+participants (60/69, 86.9%) reported that they had never received also raised. Several participants reported that the conversations
+psychological counseling before the experiment, and only two were rigid, and the system needed user guidance to continue the
+hadtaken psychotropicmedication. conversation. In some instances, the generated responses were
+Initially,participantswereaskedtoratetheCBT-Botplatform’s reported as irrelevant or incoherent to the conversation.
+ease of use, provided content, and interface quality on a 10-point Participants also highlighted the platform’s occasional inability to
+Likert scale. Most participants reported moderate to high levels remember what had been said in the early stages of the
+of satisfaction (scores ranging from 7 to 10) with the platform’s conversation, initiate conversation topics, and understand various
+functionality (56/69, 81.16%) and the designed exercises (47/69, inputtypes (i.e., audio, video, andimage).
+68.12%). In addition, more than half of the participants (43/69, Inaddition,participantswerealsoaskedtoprovidesuggestions
+62.32%) were satisfied with the interface design. Overall, the onhowtoimproveEmohaa.Asconcernsregardinglackofcontent
+majority (49/69, 71%) reported that they would recommend this and options were mentioned, it was suggested that additional
+platform toothers. scenarios, stories, instructions, and options be included in the
+Similarly, participants who had used Emohaa’s ES-Bot CBT-Bot platform. The importance of regularly updating the
+platform were instructed to rate its performance. This platform platform and promptly fixing technical issues was also
+was considered by most of the participants as an appropriate highlighted. Regarding the ES-Bot platform, nearly half of the
+chatting partner (24/31, 77.42%) and channel for emotional participants (14/31, 45.1%) believed that improvements for
+venting (20/31, 64.5%), and more than half of the participants making the generated responses less rigid were necessary. It was
+(18/31, 58.1%) reported that chatting with this platform made also suggested that support for different input types be added to
+them feel heard. When asked about their expectations of the create a more interactive and engaging experience. Many also
+platform, the majority believed it to be a suitable companion for believed that recommending mental health-related content
+emotional companionship and support that can accurately during conversations and taking the initiative in conversations
+interpret their emotions and provide emotional counseling (21/ wouldbenefit thisplatform.
+31, 67.74%). In addition, more than half of the participants were
+satisfied with the interface (20/31, 64.5%) and reported that they
+4. Discussion
+would recommend it to others (19/31, 61.3%). Independent t-
+tests showed that there was no significant difference between
+4.1. Main findings
+participants’ satisfaction with the Emohaa CBT-Bot platform and
+ES-Botplatform(t¼1:16;p¼0:250).
+Lastly, participants were asked to provide feedback on their The obtained results demonstrated Emohaa’s efficacy as a
+experience with Emohaa. Table 3 summarizes the most common short-term intervention for depression, negative affect, and
+themes in the collected responses. The most frequently raised insomnia. Based on the survey results, users experienced reduced
+concerns were technical issues, unclear instructions, and limited levels of mental distress in the measured categories after using
+content and choices. The reported technical issues were mainly Emohaa. Compared to the control group, there was a significant
+regarding theuserinterface(e.g.,“Cannotclickthe nextpage”and decrease in depression among the participants who used
+“Accidentally closing the app removed all my progress”). Many Emohaa, as measured by the PHQ-9 questionnaire. Similarly, as
+participants were overwhelmed with the number of categories in measured by the PANAS and the ISI questionnaires, their
+the guided writingexercisesandfeltsometopics were illogicaland negative affect and insomnia were also considerably reduced.
+not applicable to real life. Participants also felt that the stories in Therefore, as shown by the experimental results, Emohaa can be
+seen asaneffective toolfor mentalhealth support.
+TABLE3 Summaryofparticipants’feedbackonEmohaa. Regarding thedifferenceinoutcomesbetweenthetwogroups
+that used Emohaa, no significant differences were found in the
+Platform Problems n short term. Both interventions effectively relieved individuals’
+CBT-Bot Content Repetitiveness 5 mental health symptoms. However, as provided by the
+Limitedexercisesandoptions 11
+supplemental analyses (Section 3.2.1), participants who used the
+Unclearinstructions 12
+ES-Bot platform showed comparatively fewer indicators of
+Design Impracticaltipsandrecommendations 6
+insomnia. This finding highlights a potential benefit of emotional
+Technical(i.e.,Bugs,glitches,andlags) 14
+Ambiguousexercisetrackingandtransition 5 venting inimprovingproblems regardingsleep inthelongterm.
+ES-Bot Functionality Lackofinitiativeinconversations 2 Based on the obtained feedback, most participants were
+Unabletounderstandimage/video/audioinputs 3 satisfied with this agent and considered recommending it to
+Generation Rigidconversations 10 others. In line with previous research (16, 17), the results of the
+Unrelatedandout-of-contextresponses 8
+conversation analysis indicated that participants were willing to
+FrontiersinDigitalHealth 10 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+self-disclose their emotional problems, as shown by their most participants raised issues regarding Emohaa’s limited content
+discussed keywords and topics. Moreover, most participants (i.e., exercises and options) and unclear instructions. Similar to
+considered Emohaa’s ES-Bot platform a chatting partner that can Liu et al. (26), a wider variety of psychological resources will be
+effectively listen to their problems and provide a channel for consulted in future work to expand the provided content in the
+them to vent their emotions. Notably, the majority felt that this CBT-Bot platform and revise the instructions to avoid user
+platform could understand their emotions, an essential feature of misinterpretations or confusion. Lastly, although our
+conversational agents for support and a crucial trait for requirements regarding the daily usage of this platform could be
+establishing a therapeutic connection (26). Therefore, our applicable in a trial, such constraints are not practical in real-life
+findings suggest that Emohaa can also be seen as an acceptable applications. Hence, future work could further improve user
+and feasible toolforsupport. engagement withinmachine-based interventions.
+In addition to highlighting Emohaa’s effectiveness in mental Regarding the ES-Bot platform, several reported instances
+health support, this study demonstrated the potential of suggested that Emohaa forgets the information in previous turns
+generative conversational agents and combining emotional and and that the generated responses are irrelevant to the context,
+cognitive support to reduce mental distress symptoms. Our which could impair user engagement and rapport. This is a well-
+findings suggest that allowing users to converse about their known issue in current language models (59), and the main
+desired topics with the agent freely has a complementary effect reason could be the limited number of words in the model’s
+when added to more common forms of machine-based support input (128 words for Emohaa). A feasible approach to address
+(i.e., template-based conversations and exercises for cognitive this issue is to add a module that could summarize the essential
+support through CBT). information of the previous turns in the conversation (60). In
+addition, previous work has demonstrated the benefits of adding
+persona (61–63) and commonsense knowledge (64, 65) for
+4.2. Limitations and future work improving user experience with generative conversational agents.
+Future work could explore these additions to study their efficacy
+This study had several limitations regarding its design and and corresponding improvements inmental healthsupport.
+methodology. The study duration was limited; thus, only two
+assessments of participants’ mental distress were made. Although
+4.3. Conclusions
+a follow-up screening for participants that had used Emohaa
+during the experiment was conducted, no data regarding the
+control group’s participants were gathered as they might have The present study introduced Emohaa, a Chinese
+received other interventions after the initial two-week screening. conversational agent for mental health support. Emohaa employs
+Furthermore, the number of remaining participants in the CBT principles to provide cognitive support through template-
+follow-up survey is inadequate to draw a conclusion that the based guided conversations for expressive writing and automatic
+conversational agent (ES-Bot) is better than the CBT-Bot. Future thinking exercises. In addition, it includes a platform for
+studies would benefit from collecting more data from the three providing emotional support in which users can discuss their
+groups in the follow-up surveys to support the complementary desired emotional problems. This study examined the
+effectsof generative dialogueplatformsforemotional support. effectiveness of Emohaa in reducing mental distress and
+It is believed thatthe numberof participants wassufficientto investigated its feasibility and acceptability as a tool for mental
+demonstrate the preliminary effects of employing conversational health support in China. Our findings demonstrated that
+agents for mental health support in theory. However, the sample participants experienced fewer symptoms of mental distress after
+size and the experiment duration are inadequate for generalizing using Emohaa for the duration of the study. Hence, we believe
+the obtained results of this study to the public. Future this agent could serve as a valuable tool for reducing users’
+experiments will include a larger sample size and longer study mental distress, namely depression, negative affect, and insomnia.
+duration to further ensure the generalizability of Emohaa’s In addition, we found that there might be a complementary
+effectiveness in reducing mental distress. In addition, our effect on long-term insomnia when implementing the generative
+adopted method of advertisement for this study could have dialogue platform for emotional support. This finding highlights
+introduced a bias in our recruitment process, in which the potential of generative conversational agents for the future of
+individuals who were in some way connected to our helping mental health support. In the future, we hope our work can
+colleagues and friends were more likely to participate in the inspire other studies to expand upon our research, leverage
+study. This could have also affected the male-to-female ratio generative models for providing support, and investigate their
+among the participants, leading to the over-representation of comparative efficacy.
+femaleparticipants inour sample.
+As mentioned, Emohaa’s several technical issues could
+substantially impact the users’ perceived level of empathy and Data availability statement
+support (14), so they should be resolved promptly. A
+management system for addressing similar issues on time should Therawdatasupportingtheconclusionsofthisarticlewillbe
+also be implemented in future work. Moreover, several made available bytheauthors, withoutundue reservation.
+FrontiersinDigitalHealth 11 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+Ethics statement Conflict of interest
+The studies involving human participants were reviewed and XX, YZha, YZhe, and MH were employed by Beijing Lingxin
+approved by The studies involving human participants were Intelligent Technology Co., Ltd.
+reviewed and approved by Beijing Normal University’s Theremainingauthorsdeclarethattheresearchwasconducted
+Institutional Review Board (IRB Number: 202209150101). The in the absence of any commercial or financial relationships that
+patients/participants provided their written informed consent to couldbeconstrued asapotential conflictof interest.
+participateinthisstudy.
+Author contributions
+Publisher’s note
+SS, XX, and YZha contributed to the study design and data
+collection. SS and WZ wrote the manuscript with comparatively All claims expressed in this article are solely those of the
+contributions from XX and YZha to several sections. SS and WZ authors and do not necessarily represent those of their affiliated
+performed data and statistical analysis, respectively. YZhe and organizations, or those of the publisher, the editors and the
+JW created and supervised the conversational agents used in this reviewers. Any product that may be evaluated in this article, or
+work. All authors contributed to the article and approved the claim that may be made by its manufacturer, is not guaranteed
+submittedversion. orendorsed bythe publisher.
+References
+1.[Dataset]WHO.Worldmentalhealthreport:transformingmentalhealthforall 16.HoA,HancockJ,MinerAS.Psychological,relational,andemotionaleffectsof
+(2022). self-disclosure after conversations with a chatbot. J Commun. (2018) 68:712–33.
+doi:10.1093/joc/jqy026
+2.LakhanR,AgrawalA,SharmaM.Prevalenceofdepression,anxiety,,stressduring
+COVID-19pandemic.JNeurosciRuralPract.(2020)11:519–25.doi:10.1055/s-0040- 17.[Dataset]LiangK-H,ShiW,OhY,ZhangJ,YuZ.Discoveringchatbot’sself-
+1716442 disclosure’simpactonusertrust,affinity,andrecommendationeffectiveness(2021).
+3.TaylorDJ,GardnerCE,BramowethAD,WilliamsJM,RoaneBM,GrieserEA, 18. Abd-Alrazaq AA, Alajlani M, Ali N, Denecke K, Bewick BM, Househ M.
+etal.Insomnia,mentalhealthincollegestudents:behavioralsleepmedicine.Behav Perceptionsandopinionsofpatientsaboutmentalhealthchatbots:scopingreview.
+SleepMed,(2011)9(2):107–116.doi:10.1080/15402002.2011.557992 JMedInternetRes.(2021)23:e17828.doi:10.2196/17828
+4. Hanna M, Strober LB. Anxiety, depression in multiple sclerosis (MS): 19.Rimé B. Emotionelicitsthesocial sharing of emotion: theoryand empirical
+antecedents, consequences,, differential impact on well-being and quality of life. review.EmotRev.(2009)1:60–85.doi:10.1177/1754073908097189
+MultSclerRelatDisord.(2020)44:102261.doi:10.1016/j.msard.2020.102261
+20. Rimé B, Finkenauer C, Luminet O, Zech E, Philippot P. Social sharing of
+5. Que J, Lu L, Shi L. Development and challenges of mental health in China. emotion: Newevidence and newquestions.Eur RevSoc Psychol. (1998) 9:145–89.
+GeneralPsychiatry.(2019)32:e100053.doi:10.1136/gpsych-2019-100053 doi:10.1080/14792779843000072
+6.JuY,ZhangY,WangX,LiW,NgRM,LiL.China’smentalhealthsupportin
+21.PauwLS,SauterDA,vanKleefGA,LucasGM,GratchJ,FischerAH.Theavatar
+response to COVID-19: progression, challenges and reflection. Global Health. willseeyounow:supportfromavirtualhumanprovidessocio-emotionalbenefits.
+(2020)16:1–9.doi:10.1186/s12992-020-00634-8
+ComputHumanBehav.(2022)136:107368.doi:10.1016/j.chb.2022.107368
+7.LiW,YangY,LiuZ-H,ZhaoY-J,ZhangQ,ZhangL,etal.Progressionofmental
+22.HillCE.Helpingskills:facilitating,exploration,insight,andaction.Washington:
+healthservicesduringtheCOVID-19outbreakinChina.IntJBiolSci.(2020)16:1732.
+AmericanPsychologicalAssociation(2009).
+doi:10.7150/ijbs.45120
+23.Liu S,Zheng C, Demasi O,SabourS, LiY,Yu Z,etal.Towards emotional
+8.HuangY,WangY,WangH,LiuZ,YuX,YanJ,etal.Prevalenceofmental
+support dialog systems. In: Proceedings of the 59th Annual Meeting of the
+disorders in China: a cross-sectional epidemiological study. Lancet Psychiatry.
+(2019) 6(3):211–24. doi: 10.1016/S2215-0366(18)30511-X. AssociationforComputationalLinguistics,the11thInternationalJointConferenceon
+Natural Language Processing (Volume 1: Long Papers). Online: Association for
+9.XiangY-T,NgCH,YuX,WangG.Rethinkingprogress,challengesofmental Computational Linguistics (2021). p. 3469–83. Available from: https://doi.org/10.
+healthcareinChina.WorldPsychiatry.(2018)17:231.doi:10.1002/wps.20500 18653/v1/2021.acl-long.269.
+10.FangM,Hu SX,HallBJ. Amentalhealth workforcecrisis inChina: apre- 24. Daley K, Hungerbuehler I, Cavanagh K, Claro HG, Swinton PA, Kapps M.
+existing treatment gap coping with the COVID-19 pandemic challenges. Asian Preliminary evaluation of the engagement and effectiveness of a mental health
+JPsychiatr.(2020)54:102265.doi:10.1016/j.ajp.2020.102265 chatbot.FrontDigitHealth.(2020)2:576361.doi:10.3389/fdgth.2020.576361
+11.ZhangX,LewisS,FirthJ,ChenX,BucciS.DigitalmentalhealthinChina:a
+25.InksterB,SardaS,SubramanianV.Anempathy-driven,conversationalartificial
+systematicreview.PsycholMed.(2021)51:2552–70.doi:10.1017/S0033291721003731 intelligence agent (wysa) for digital mental well-being: Real-world data evaluation
+mixed-methodsstudy.JMIRMhealthUhealth.(2018)6:e12106.doi:10.2196/12106
+12. Yu S, Kowitt SD, Fisher EB, Li G. Mental health in China: stigma, family
+obligations,, the potential of peer support. Community Ment Health J. (2018) 26.LiuH,PengH,SongX,XuC,ZhangM.Usingaichatbotstoprovideself-help
+54:757–64.doi:10.1007/s10597-017-0182-z depressioninterventionsforuniversitystudents:arandomizedtrialofeffectiveness.
+InternetInterv.(2022)27:100495.doi:10.1016/j.invent.2022.100495
+13.YinH,WardenaarKJ,XuG,TianH,SchoeversRA.Mentalhealthstigmaand
+27.HarrigianK,AguirreCA,DredzeM.Onthestateofsocialmediadataformental
+mental health knowledge in chinese population: a cross-sectional study. BMC
+Psychiatry.(2020)20:1–10.doi:10.1186/s12888-020-02705-x healthresearch(2020).Availablefrom:https://doi.org/10.48550/arXiv.2011.05233.
+28.ValizadehM,PardeN.TheAIdoctorisin:asurveyoftask-orienteddialogue
+14.FitzpatrickKK,DarcyA,VierhileM.Deliveringcognitivebehaviortherapyto systemsforhealthcareapplications.Proceedingsofthe60th AnnualMeeting ofthe
+young adults with symptoms of depression and anxiety using a fully automated
+AssociationforComputationalLinguistics(Volume1:LongPapers)Dublin,Ireland:
+conversational agent (woebot): a randomized controlled trial. JMIR Ment Health. MITPress(2022).p.6638–60.Availablefrom:https://doi.org/10.18653/v1/2022.acl-
+(2017)4:e19.doi:10.2196/mental.7785_
+long.458.
+15.GratchJ,KangS-H,WangN.Usingsocialagentstoexploretheoriesofrapport 29.ChenX,ZhangX,ZhuX,WangG.Efficacyofaninternet-basedinterventionfor
+andemotionalresonance.In:Socialemotionsinnatureandartifact.Oxford:Oxford subclinical depression (moodbox) in China: study protocol for a randomized
+UniversityPressOxford(2013).p.181,2568173. controlledtrial.FrontPsychiatry.(2021)11:585960.doi:10.3389/fpsyt.2020.585920
+FrontiersinDigitalHealth 12 frontiersin.org
+Sabouretal. 10.3389/fdgth.2023.1133987
+30.YeungA,WangF,FengF,ZhangJ,CooperA,HongL,etal.Outcomesofan 48. Liu Y, Ott M, Goyal N, Du J, Joshi M, Chen D, et al. Roberta: A robustly
+online computerized cognitive behavioral treatment program for treating chinese optimized BERT pretraining approach. CoRR (2019). Available from: https://arxiv.
+patientswithdepression:apilotstudy.AsianJPsychiatr.(2018)38:102–7.doi:10. org/abs/1907.11692.
+1016/j.ajp.2017.11.007
+49.KroenkeK,SpitzerRL.ThePHQ-9:anewdepressiondiagnosticandseverity
+31. Lin L-Y, Wang K, Kishimoto T, Rodriguez M, Qian M, Yang Y, et al. An measure.PsychiatrAnn.(2002)32:509–15.doi:10.3928/0048-5713-20020901-06
+internet-basedinterventionforindividualswithsocialanxietyanddifferentlevelsof
+Taijin Kyofusho in China. J Cross Cult Psychol. (2020) 51:387–402. doi: 10.1177/ 50.vonGlischinskiM,vonBrachelR,ThieleC,HirschfeldG.Notsadenoughfora
+depressiontrial?Asystematicreviewofdepressionmeasuresandcutpointsinclinical
+0022022120920720 trialregistrations.JAffectDisord.(2021)292:36–44.doi:10.1016/j.jad.2021.05.041
+32.PengW,HuY,XingL,XieY,SunY,LiY.Controlglobally,understandlocally:a
+51. Spitzer RL, Kroenke K, Williams JB, Löwe B. A brief measure for assessing
+global-to-local hierarchical graph network for emotional support conversation
+generalized anxiety disorder. Arch Intern Med. (2006) 166:1092. doi: 10.1001/
+[Preprint](2022).Availableat:https://doi.org/10.48550/arXiv.2204.12749.
+archinte.166.10.1092
+33.TuQ,LiY,CuiJ,WangB,WenJ-R,YanR.Misc:amixedstrategy-awaremodel
+52.WatsonD,ClarkLA,TellegenA.Developmentandvalidationofbriefmeasures
+integrating comet for emotional support conversation. In Proceedings of the 60th ofpositiveandnegativeaffect:thepanasscales.JPersSocPsychol.(1988)54:1063–70.
+Annual Meeting of the Association for Computational Linguistics (Volume 1: Long
+Papers).Dublin,Ireland(2022).p.308–19. doi:10.1037/0022-3514.54.6.1063
+53.MorinCM.Insomnia:psychologicalassessmentandmanagement.Washington:
+34. [Dataset] Zheng C, Sabour S, Wen J, Huang M. AugESC: large-scale data
+GuilfordPress(1993).
+augmentationforemotionalsupportconversationwithpre-trainedlanguagemodels
+(2022).Availablefrom:https://doi.org/10.48550/arXiv.2202.13047. 54. Little R, Rubin D. Statistical analysis with missing data. Wiley Series in
+ProbabilityandMathematicalStatistics.Wiley(2002).
+35.XuX,MengX,WangY.Poke:priorknowledgeenhancedemotionalsupport
+conversation with latent variable [Preprint] (2022). Available at:https://doi.org/10. 55.McCoyE.Understandingtheintention-to-treatprincipleinrandomizedcontrolled
+48550/arXiv.2210.12640 trials.WestJEmergMed.(2017)18:1075–8.doi:10.5811/westjem.2017.8.35985
+36.ChengY,LiuW,LiW,WangJ,ZhaoR,LiuB,etal.Improvingmulti-turn 56. Alshurafa M, Briel M, Akl EA, Haines T, Moayyedi P, Gentles SJ, et al.
+emotionalsupportdialoguegenerationwithlookaheadstrategyplanning[Preprint] Inconsistent definitions for intention-to-treat in relation to missing outcome data:
+(2022).Availableat:https://doi.org/10.48550/arXiv.2210.04242. systematic review of the methods literature. PLoS ONE. (2012) 7:e49163. doi: 10.
+1371/journal.pone.0049163
+37.[Dataset]ChengJ,SabourS,SunH,ChenZ,HuangM.Pal:Persona-augmented
+emotionalsupportconversationgeneration(2022).Availablefrom:https://doi.org/10. 57.HarrisonCN,SchaapN,VannucchiAM,KiladjianJ,JourdanE,SilverRT,etal.
+48550/arXiv.2212.09235. Fedratinib in patients with myelofibrosis previously treated with ruxolitinib: An
+updatedanalysisofthejakarta2studyusingstringentcriteriaforruxolitinibfailure.
+JA3 u8. tisB mec Dk eJ vS, DB ise oc rk d.A (2T 0. 1C 1o )g 1n 7i :t 8iv 1e –9b 3e .h Ia Sv Bio Nr :t 9h 7e 8r -a 1p 6y 0: 9b 1a 8s 5i 0cs 46a .nd beyond(2nd ed.). AmJHematol.(2020)95:594–603.doi:10.1002/ajh.25777
+58. Cohen J. Statistical power analysis for the behavioral sciences. L. Erlbaum
+39.HollonSD,KendallPC.Cognitiveself-statementsindepression:Developmentof
+anautomaticthoughtsquestionnaire.CognitTherRes.(1980)4:383–95.doi:10.1007/ Associates(1988).
+BF01178214 59.PelauC,DabijaD-C,EneI.Whatmakesanaidevicehuman-like?Theroleof
+40.LustmanPJ,GriffithLS,FreedlandKE,KisselSS,ClouseRE.Cognitivebehavior interaction quality, empathy and perceived psychological anthropomorphic
+characteristics in the acceptance of artificial intelligence in the service industry.
+therapyfordepressionintype2diabetesmellitus:arandomized,controlledtrial.Ann
+ComputHumanBehav.(2021)122:106855.doi:10.1016/j.chb.2021.106855
+InternMed.(1998)129:613.doi:10.7326/0003-4819-129-8-199810150-00005
+60. [Dataset]XuJ,SzlamA,WestonJ.Beyondgoldfishmemory:long-termopen-
+41.FukuiI,SakanoY.Therelationshipamongirrationalbeliefs,automaticthoughts
+domainconversation(2021).Availablefrom:https://doi.org/10.48550/ARXIV.2107.07567.
+anddepressive/anxiousmood.Humanwelfarestudies(2000).
+42.BaikieKA,WilhelmKA.Emotionalandphysicalhealthbenefitsofexpressive 61.ZhengY,ChenG,HuangM,LiuS,ZhuX.Personalizeddialoguegeneration
+writing.AdvPsychiatrTreat.(2005)11:338–46.doi:10.1192/apt.11.5.338
+withdiversifiedtraits[Preprint](2019).Availableat:https://doi.org/10.48550/arXiv.
+1901.09672.
+43. Pennebaker JW, Chung CK. Expressivewriting: connectionsto physical and
+mental health. In: The Oxford handbook of health psychology. Oxford University 62.WangW,CaiX,HuangCH,WangH,LuH,LiuX,etal.Emily:developingan
+Press (2011). p. 417–37. Available from: https://doi.org/10.1093/oxfordhb/ emotion-affectiveopen-domainchatbotwithknowledgegraph-basedpersona.CoRR
+9780195342819.013.0018. (2021).Availablefrom:https://arxiv.org/abs/2109.08875.
+44. Burleson BR. Emotional support skill. In: Handbook of communication and 63.WuCH,ZhengY,MaoX,HuangM.Transferablepersona-groundeddialogues
+socialinteractionskills(2003).p.551. via grounded minimal edits. In Proceedings of the 2021 Conference on Empirical
+Methods in Natural Language Processing Bangkok, Thailand: MIT Press (2021).
+45.HeaneyCA,IsraelBA.Socialnetworksandsocialsupport.Healthbehaviorand p.2368–82.
+healtheducation:theory,research,andpractice.Vol.4SanFrancisco:Jossey-BassA
+WileyImprint(2008).p.189–210. 64.[Dataset]LiQ,LiP,ChenZ,RenZ.Towardsempatheticdialoguegeneration
+overmulti-typeknowledge(2020).
+46.BrislinRW.Back-translationforcross-culturalresearch.JCrossCultPsychol.
+(1970)1:185–216.doi:10.1177/135910457000100301 65. Sabour S, Zheng C, Huang M. CEM: commonsense-aware empathetic
+response generation. In: Proceedings of the AAAI Conference on Artificial
+47.[Dataset]GuY,WenJ,SunH,SongY,KeP,ZhengC,etal.Eva2.0:investigating
+Intelligence. Vol. 36. Palo Alto California: AAAI Press (2022). p. 11229–37.
+open-domainchinesedialoguesystemswithlarge-scalepre-training(2022).Available
+Available from: https://doi.org/10.1609/aaai.v36i10.21373.
+from:https://doi.org/10.48550/arXiv.2203.09313.
+FrontiersinDigitalHealth 13 frontiersin.org

@@ -1,0 +1,626 @@
+EnvironmentalResearch140(2015)282–291
+ContentslistsavailableatScienceDirect
+Environmental Research
+journal homepage: www.elsevier.com/locate/envres
+Investigating the role of transportation models in epidemiologic stu-
+dies of traffic related air pollution and health effects
+Maryam Shekarrizfarda,1, Marie-France Valoisc,2, Mark S. Goldbergc,2, Dan Croused,
+Nancy Rosse,3, Marie-Elise Parentf,4, Shamsunnahar Yasminb,1, Marianne Hatzopouloug,n
+aDepartmentofCivilEngineeringandAppliedMechanics,McGillUniversity,817SherbrookeSt.W.,Room492,Montréal,Québec,CanadaH3A2K6
+bDepartmentofCivilEngineering&AppliedMechanics,McGillUniversity,Suite483,817SherbrookeSt.W.,Montréal,Québec,CanadaH3A2K6
+cDepartmentofMedicine,McGillUniversity,DivisionofClinicalEpidemiology,McGillUniversityHealthCentre,QC,CanadaH3A1A1
+dDepartmentofSociology,UniversityofNewBrunswick,Fredericton,NewBrunswick,Canada
+eDepartmentofGeography,McGillUniversity,805SherbrookeSt.W.,Montreal,Quebec,CanadaH3A2K6
+fINRS-InstitutArmand-Frappier,Institutnationaldelarecherchescientifique,Unitéd'épidémiologieetbiostatistique,531,Boul.desPrairies,Laval,Québec,
+CanadaH7V1B7
+gDepartmentofCivilEngineeringandAppliedMechanics,McGillUniversity,MacdonaldEngineeringBuilding,Room278b,817SherbrookeSt.W.,Montréal,
+Québec,CanadaH3A2K6
+a r t i c l e i n f o a b s t r a c t
+Articlehistory: Intwoearliercase–controlstudiesconductedinMontreal,nitrogendioxide(NO 2),amarkerfortraffic-
+Received19June2014 relatedairpollutionwasfoundtobeassociatedwiththeincidenceofpostmenopausalbreastcancerand
+Receivedinrevisedform prostatecancer.Thesestudiesreliedonalanduseregressionmodel(LUR)forNO thatiscommonlyused
+2
+1April2015 inepidemiologicstudiesforderivingestimatesoftraffic-relatedairpollution.Here,weinvestigatethe
+Accepted2April2015 use of a transportation model developed during the summer season to generate a measure of traffic
+emissionsasanalternativetotheLURmodel.Ourtrafficmodelprovidesestimatesofemissionsofni-
+Keywords: trogenoxides(NO)atthelevelofindividualroads,asdoestheLURmodel.Ourmainobjectivewasto
+Traffic-relatedemissions comparethedistribx
+utionofthespatialestimatesofNO computedfromourtransportationmodeltothe
+x
+Trip-levelNOxemissions
+distributionobtainedfromtheLURmodel.Asecondaryobjectivewastocompareestimatesofriskusing
+MOVES
+thesetwoexposureestimates.Weobservedthatthecorrelation(spearman)betweenourtwomeasures
+Airpollution
+ofexposure(NO andNO)rangedfromlessthan0.3tomorethan0.9acrossMontrealneighborhoods.
+Land-useregression 2 x
+Themostimportantfactoraffectingthe“agreement”betweenthetwomeasuresinaspecificareawas
+foundtobethelengthofroads.Areasaffectedbyahighleveloftraffic-relatedairpollutionhadafar
+betteragreementbetweenthetwoexposuremeasures.Acomparisonofoddsratios(ORs)obtainedfrom
+NO andNO usedintwocase–controlstudiesofbreastandprostatecancer,showedthatthedifferences
+2 x
+betweentheORsassociatedwithNO exposurevsNO exposuredifferedby5.2–8.8%.
+2 x
+&2015ElsevierInc.Allrightsreserved.
+1. Introduction chronic and acute exposures to traffic emissions and respiratory
+andcardiovasculareffects(Cesaronietal.,2012;Clarketal.,2012;
+Traffic-relatedairpollutionhasalargeimpactonpublichealth; Gan et al., 2011; Janssen et al., 2011; Carlsten et al., 2011; Brook
+in numerous studies associations have been found between et al., 2010; Jerrett et al., 2009; Marshall et al., 2008; Pope and
+Dockery 2006). In particular, two recent studies conducted in
+Montreal, Canada, have shownpositive associations between an-
+nCorrespondingauthor.Fax:þ15143987361. nual estimates of concentrations of nitrogen dioxide (NO 2), an
+E-mailaddresses:maryam.shekarrizfard@mail.mcgill.ca(M.Shekarrizfard), acceptedmarkeroftraffic-relatedairpollution,andtheincidence
+marie-france.valois@mcgill.ca(M.-F.Valois),
+of postmenopausal breast cancer (Crouse et al., 2010) and of
+mark.goldberg@mcgill.ca(M.S.Goldberg),dlcrouse@gmail.com(D.Crouse),
+nancy.ross@mcgill.ca(N.Ross),marie-elise.parent@iaf.inrs.ca(M.-E.Parent), prostatecancer(Parentetal.,2013).
+shamsunnahar.yasmin@mail.mcgill.ca(S.Yasmin), In urban areas, air pollution exhibits substantial seasonal and
+marianne.hatzopoulou@mcgill.ca(M.Hatzopoulou). spatial variability. Different methods have been used to quantify
+1Fax:þ15143987361. spatialvariability,includingusingdatafromfixed-sitemonitoring
+2Fax:þ15148431493.
+3Fax:þ15143983747. stations (Brauer and Brook, 1997), land-use regression (LUR)
+4Fax:þ14506865599. (Johnsonetal.,2010;Hoeketal.,2008;RyanandLeMasters,2007;
+http://dx.doi.org/10.1016/j.envres.2015.04.002
+0013-9351/&2015ElsevierInc.Allrightsreserved.
+M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291 283
+Gilbert et al., 2005), and dispersion models (Tartakovsky et al., ofadversepregnancyoutcomes(suchaspretermbirth)associated
+2013;HatzopoulouandMiller,2010;Beckxetal.,2009;Cooketal., with exposure to traffic-related air pollution was smaller when
+2008;Dhondtetal.,2012;Lefebvreetal.,2013).LURmodelshave exposures wereassigned based ontrafficdensityascomparedto
+beendevelopedformanymetropolitanareasandareoftenusedto LURordispersionmodeling.Molitoretal.(2007)emphasizedthe
+investigate associations between air pollution exposure and spe- importance of improving exposure assessment through the con-
+cific health effects (Crouse et al., 2009; Arain et al., 2007). How- siderationofadvancedtechniquesinlieuofspatialmodelssuchas
+ever,theirreliabilityinpredictingaccurateexposuresdependson LUR although no direct comparison between measures was con-
+thedensityoftheestablishedmonitoringnetwork,whichinturn, ducted.Theirstudywasmainlyfocusedontheroleofspatialau-
+largelyaffectsthecostsofdevelopingaLURmodel. tocorrelationintheestimationofhealtheffects.
+In this paper, we used a transportation model (Sider et al., Inthisstudy,ourfocusisoncomparingexposureestimatesand
+2013) with a detailed capability to model emissions from traffic. evaluating how they may change depending on the model. Our
+This transportation model simulates traffic flows and emissions measureofexposuretotraffic-generatedNO goesbeyondtraffic-
+x
+overanentiremetropolitanregion,andestimatestrafficemissions density (emissions are affected by traffic flows but also by fleet
+of nitrogenoxides (NO ) at the levelofindividualroads.We also characteristics,speed,androadconfiguration)andwehypothesize
+x
+make use of a LUR model for nitrogen dioxide (NO ) developed thatthismeasurewouldbemorerepresentativeoftraffic-related
+2
+previouslybyusforMontreal(Crouseetal.,2009).Finally,weuse airpollution.BecauseambientNO islargelyemittedbyvehicular
+2
+data from a case–control study of postmenopausal breast cancer trafficinurban areas, wehypothesizethatconcentrationsofNO
+2
+andanothercase–controlstudyofprostatecancerthatwerepre- would be associated with emissions of traffic-related NO . How-
+x
+viously used to estimate associations with annual traffic-related ever,becauseambientNO isalsoaffectedbyothersources(such
+2
+concentrations of NO estimated at the residences of all partici- asindustries),wewouldexpectthatamodeloftrafficNO emis-
+2 x
+pants(Crouseetal.,2010;Parentetal.,2013).Ourmainobjective sions will underestimate the impact of traffic on NO away from
+2
+was to compare the distribution of the spatial estimates of NO theroadways.Whiletrafficisnotalwayscapturedasapredictorin
+x
+computed from our transportation model to the distribution of land-use regression models of NO , the results of LUR maydiffer
+2
+NO obtained from a LUR model. A secondary objective was to from those obtained from transport emission models (Health Ef-
+2
+compareestimatesofriskusingthesetwoexposureestimates;in fects institute, 2010; Solomon et al., 2012). For example, Crouse
+doing so, we exploited two case–control studies of cancer con- etal.(2009)foundthatthepredictivepoweroftheirproposedLUR
+ductedpreviously.Infact,anadvantageofusingemissionmodels (as measured by the R-squared) was improved by 2–4% after
+to derive exposure relates to their “policy sensitivity”, one could addingtrafficdataasapredictor.
+potentially evaluate the effects of changes in land-use, transpor- Our specific objectives were: 1) to generate road-level emis-
+tation infrastructure, and travel demand on traffic emissions and sionsofNO inMontrealforsummerconditions;2)todetermine
+x
+re-investigatethesameassociationswithhealthoutcomes. the correlationbetweenemissions of NO with concentrations of
+x
+A number of studies have addressed the question of un- NO derived from a LUR model estimated from sampling in a
+2
+certainty in estimating the contribution of traffic to air pollution summer period; and 3) to explore the resultingestimates of risk
+whileothershaveevaluatedtheeffectsofdifferentindicesofex- usingthesetwoexposuremeasures.Weonlyconsiderthecaseof
+posuretotraffic-relatedairpollution (e.g.NO ,NO ,proximity to comparing“current”estimatesofexposureandnotofestimating
+2 x
+traffic, total traffic volume) on health outcomes (Wu et al., 2011; historical ones, although we note that Crouse et al. (2010) have
+Molitor et al., 2007; Ryan et al., 2007). As an example, Wu et al. foundthatthespatialdistributionsdonotvarydramaticallyovera
+(2011) compared different exposure methods: a LUR model, a 10–20year period. We emphasize that these comparisons in risk
+dispersion model (using the simple Gaussian CALINE4 software), are only meant for the purposes of showing a range of plausible
+andatraffic-densitymeasure.Theauthorsobservedthattherisk estimates between these two methods of estimating exposure to
+Model A ModelB
+Simulation-based model for NO road
+x Land-use regression model of NO
+emissions (Sider et al., 2013) 2
+concentrations (Crouse et al., 2009)
+Emissions Traffic
+modelling modelling NO map for the metropolitan area
+2
+NO map for the road and links
+x
+Allocating NO levels per polygon in
+Allocating NO levels per polygon in 2
+x the study area
+the study area
+Cross validation and exposure analysis
+Logistic analysis
+Fig.1. Studymethodologyincludingdescriptionofdatasources(transportmodelforNOxandLURforNO2,bothreflectingsummerconditions),comparingtheestimatesof
+NOxandNO2,andestimatingoddsratios(OR)forbreastandprostatecancerbasedonthetwomeasuresofexposure.
+284 M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291
+markersoftraffic-relatedairpollution;theriskestimatesshownin regionaswellasfivebridgeslinking theIslandofMontrealwith
+Crouseetal.(2010)andParentetal.(2013)derivedfromanannual therestof theregion.The comparisonbetweenactual counts vs.
+LUR model (Crouse et al., 2009) should be considered as the de- predicted counts provides an R2 value for the 6–7a.m. period of
+finitiveones. 0.78andaR2valueforthe7–8a.m.periodof0.65.
+Inaddition,wedevelopedavehicleallocationalgorithm(Sider
+etal.,2013)toassignaspecificvehicletoeachdrivingtripinthe
+2. Materialsandmethods 2008 OD survey (162,364 trips). Working at the household level,
+themainelementsinvolvedwithvehicleallocation arethenum-
+Fig.1presentsthestudymethodologyillustratingthatweex- ber of vehicles owned by a household, each vehicle's time of
+amined the spatial variability of NO concentrations generated availabilityandgeographiccoordinates,aswellasthevehicletype
+2
+fromaLURmodelforthesummerseasonwithNO emissionssi- distributioninthehousehold'sneighborhood(whichweobtained
+x
+mulatedalsoforsummerconditionsacrosstheIslandofMontreal. from the Quebec motor vehicle registry). The database that we
+We usedbothmodelstogeneratetraffic-related airpollution ex- obtained from the provincial registry contains information on
+posure measures and compared these two measures. Fig. 2 pre- vehicleageandtype.Therefore,everydrivingtripintheODsurvey
+sentstheIslandofMontrealwherethecomparativeanalysiswas was allocated a vehicle type and model year that remained con-
+undertaken. stantoveraday'sworthoftrips.
+Ouroutputincludestrafficflow,averagespeed,andvehiclemix
+2.1. Descriptionofdatasources oneveryroadsegment(intersectiontointersection)intheregion.
+Using this output, we estimated emissions of nitrogen oxides
+2.1.1. NO emissions (NO )atthelevelofeveryindividualvehiclebasedonitstype,age,
+x x
+We developed a traffic assignment model for the Montreal speed,andtypeofroaditiscirculatingon(e.g.highwayvs.arterial
+regionthatislinkedwithanemissionmodelcapableofsimulating road with intersections). Emissions were based on a multi-di-
+trafficemissionsoccurringontheroadnetworkatthelevelofeach mensional look-up table of emission factors in grams/vehicle.
+individualdriver(Sideretal.,2013).Thetrafficassignmentmodel kilometer that we generated using the Mobile Vehicle Emissions
+(developed in the PTV VISUM platform; PTV Vision, 2009) allo- Simulator (MOVES) platform developed by the United States En-
+catesvehicleflowsontheroadnetworkusingdatareflectingthe vironmental Protection Agency (USEPA) updated with Montreal-
+originsanddestinationsofindividual/householdtripsinanurban specific data. Individual emission factors that accounted for ve-
+area.Themodelincludesroadtypesrangingfromexpresswaysto hicle type, model year, speed, road type, and season (winterand
+local roads, with details regarding capacity, speed limits, inter- summer)weregenerated.Infact,ouremissionfactorswerebased
+section types, and turning restrictions. A dataset of daily travel onhourlytemperaturesandrelativehumidity.Wealsocalculated
+diariesfromthe2008Origin-Destination(OD)surveywasusedas startemissionsandthesewereafunctionofambientconditionsat
+input to this model. This survey is conducted every five years in thetimeofstartingthevehicle.Atotalof4080EFsweregenerated.
+Montreal by the Agence Metropolitaine de transport (AMT, 2008) Total emissions on every roadway segment result from sum-
+andcontainsinformationontravelbehaviorfor5%oftheMontreal ming the individual emissions of all vehicles on that segment.
+region's households (which can be scaled up tothe entire popu- Because of randomness in the vehicle path choices (traffic as-
+lation using sampling weights derived for each geographic sub- signment)andvehicletypeallocation,weranthemodelfivedif-
+area). Our traffic assignment model was validated against traffic ferent times and used averaged emissions for every link. The
+counts for the same year at 35 major intersections within the standard errors associated with the mean emissions are low
+Commercial
+Governmental and Institutional
+Open Area
+Parks and Recreational
+Residential
+Resource and Industrial
+Waterbody
+Fig.2. LandusemapfortheMontrealregionfeaturingtheIslandofMontreal.
+M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291 285
+(approximately 1%) indicating that even though allocations may fortheIsland,thereforerestrictingouranalysistothisgeographic
+varydrasticallyattheindividuallevel,segmentemissionsoverthe area.
+entireday(meanof24hourlyoutputs)remainrelativelystable.In WhileconcentrationsofNO wereavailablefromaraster-based
+2
+thispaper,wemakeuseoftheNO emissionsderivedforsummer map at a resolution of 5m(cid:2)5m, emissions of NO were only
+x x
+conditionsthatrepresenttypicalAugusttemperaturesandrelative derived on the road network. In order to compare the two mea-
+humidity. sures, the Island of Montrealwas subdivided into a mesh of grid
+cells each with dimensions 80m(cid:2)80m amounting to a total of
+2.1.2. NO concentrations approximately 75,000 grid cells. We allocated to each gridcell a
+2
+WemadeuseofestimatesofconcentrationsofNO ,amarkerof concentrationofNO (inparts perbillion,ppb) andaquantityof
+2 2
+traffic-relatedairpollution,fromaLURmodelthatwedeveloped NO (in grams). For this purpose, buffers with a radius of 100m
+x
+and described previously (Crouse et al., 2009). The model was were drawn using the center of every gridcell; the total NO
+x
+based on data collected during a series of dense sampling cam- emissionsgeneratedontheroadwayandfallingwithineachbuffer
+paigns in 2005 and 2006 to estimate integrated two-week NO were summed and allocated to adjacent gridcells. As such, grid-
+2
+concentrationsatindividualpointsinspacethroughouttheentire cells located in areas with high street density, would receive a
+island. Although we measured concentrations of NO over a largeramountofNO emissionswhilegridcellslocatedinregions
+2 x
+number of periods, in this paper, we are only making use of the withlowstreetdensitywouldreceivelittleornoemissions.
+August 2006 campaign. During this campaign, two-sided Ogawa In contrast, NO values per gridcell were estimated as the
+2
+passivesamplers(OgawaandCo.,USA)wereinstalledataheight average of the raster values. Different gridcell and buffer sizes
+of 2.5m near the sidewalk at 133 locations across Montreal. We were tested and evaluated in terms of how they balanced the
+thengeneratedasetofvariablesdescribingspecificlanduseand following three objectives: 1) minimizing the standard deviation
+roaddensitycharacteristicsmeasuredatdifferentradialdistances intheNO valuescontributingtotheaverageNO ineachgridcell
+2 2
+away from the samplers (100, 300, 500 and 700m). With these (we observedthat 80(cid:2)80m2 was the largestgridcell sizewhich
+variables,wedevelopedaLURmodeltopredictconcentrationsof achieved this objective), 2) maximizing the number of gridcells
+NO where measurements were not taken. The resulting model, with non-zeroNO (which ledus tocreate the 100m buffer that
+2 x
+using concentrations averaged over a two-week sampling period slightly increases the amount of NO in each gridcell while al-
+x
+in August, predicted 72% of the variability in NO . The variables lowingmanygridcellstohaveasmallNO valueratherthana0),
+2 x
+selectedforthismodelincludedareaofcommercialland-use,re- and3)avoidingalargegapintheNO andNO spatialresolutions
+2 x
+sidential land-use, industrial land-use, parks and open water as (if we had generated larger buffer sizes, the NO and NO would
+2 x
+well as population and building density, length of primary high- represent very different areas of influence). Fig. 3 presents the
+ways and major roads as well as their traffic conditions and dis- gridcells, buffers, and intersection with road network layer in a
+tancestoshoreline,toNationalPollutantReleaseInventoryFacility smallsectionofMontreal.
+(NPRI) and to primary highways. For each 5(cid:2)5m2 cell, we then WecomparedtheNO emissionloadwiththeconcentrationof
+x
+usedthelinearpredictorcoupledwiththelandusecharacteristics NO in each gridcell. In addition, we conducted a comparison of
+2
+of the cell to assign concentrations. The highest concentrations the NO emission load with the measured NO concentration at
+x 2
+wereobservedtooccuralonghighwaysandmajorurbanstreets. each of the 133 passive monitoring stations where ambient NO
+2
+was measured in the developmentof the LUR model as an addi-
+2.2. NO –NO comparison tionaldimensiontothevalidationofourNO estimates.
+2 x x
+WegeneratedscatterplotsofNO vs.NO andwetestedLOESS
+x 2
+Emissions of NO (summer conditions) derived from the smoothers with different spans varying from 1% to 75%. To com-
+x
+transportmodelandconcentrationsofNO obtainedfromtheLUR plement the scatter plots and further illustrate the relation be-
+2
+modelwerecomparedovertheentireIslandofMontreal(Fig.2). tweenNO andNO ,weplottedthemeanandmedianNO within
+2 x x
+TheconcentrationsofNO representintegrated2-weeksampling each NO decile. In addition, we segmented the population of
+2 2
+and the NO emissions represent a sum of 24-h emissions. Al- gridcells (and monitoring stations) according to proximity to
+x
+though emissions of NO on the road network were available for roadways(usingthetotallengthofroads)andexaminedthecor-
+x
+theentiremetropolitanregion,theLURmodelwasestimatedonly relationbetweenNO andNO withineachcategory.
+x 2
+Fig.3. Aschematicrepresentationofbuffergenerationandintersectionwithroadwaysegments.Redlinesrepresenttheroads.Thebuffersaredrawnaroundthecenterof
+everygridcell.AllroadsegmentsintersectingabuffercontributetotheNOxemissionsallocatedtothegridcell.(Forinterpretationofthereferencestocolorinthisfigure
+legend,thereaderisreferredtothewebversionofthisarticle.)
+286 M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291
+Finally, in ordertomap NO and NO values in awaythat al- 3. Resultsanddiscussion
+2 x
+lowedustovisualizeareaswithstrongeragreementbetweenthe
+twomeasures, wecategorized the 75,000 raw values of NO
+x
+and 3.1. NO 2–NO xcomparison
+NO intodeciles andassigned toeachgridcell the decile number
+2
+for NO
+2
+and for NO x. In this respect, scaled NO
+x
+and NO
+2
+values Table1describesthedistributionofconcentrationsofNO 2and
+ranged from 1 to 10, with 1 indicating the lowest decile. This NO x across the 75,000 gridcells; values of NO 2 and NO x ranged
+scalingallowedustocalculatescaledpollutantdifferencesasNO from0to46.88ppband0to21589.51grespectively.Fig.4apre-
+2
+minusNO x(rangingfrom (cid:3)9to þ9).Thesescaleddifferencesare sentssegment-levelNO xemissionsclearlyshowingthatthemost
+referredtoasthe‘indicatorofagreement’.Whenthedifferenceis emittingfacilitiesarethemajorhighwaysrunningacrossthecity
+‘small’ (between (cid:3)1 and þ1), NO and NO values agree while as well as main arterial roads. The red and green lines in Fig. 4a
+2 x
+representthesegmentswiththehighestandlowestemissionle-
+large negative differences indicate a much higher NO value and
+x vels, respectively. NO emissions were classified using ArcMap
+largepositivedifferencesindicateamuchhigherNO value.Using x
+2
+based on natural data groups which are located between two
+the scaled difference values for each of the 75,000 polygons, we
+consecutivelowpoints(valleys)inahistogram.Asaresultofthis
+generated an ‘agreement map’ highlighting the areas where the
+technique,thedifferencesbetweenclassesaremaximized.Fig.4b
+twomeasures agreeand areaswith high disparities. This type of
+presents the NO raster map generated using the August LUR
+scaling was only used to visually represent the data; it was not 2
+model for the same geographic area (Crouse et al., 2009). The
+used in subsequent statistical analyses. Finally, we computed the
+shades of gray refer to the NO concentrations with the highest
+meanandmedianNO ineachNO decileandobservedtheirre- 2
+x 2 concentrations represented in the lightest shade and occurring
+lationship. In a recent study, Han et al. (2011) observed that the
+aroundthehighwaysandinthedowntownarea.Thescaleofthe
+correlationbetweenNO andNO near-roadwayisdifferentinthe
+x 2 NO LUR map is inverted (highest concentrations in the lightest
+2
+daytimeandnight-timeperiodswithbettercorrelationduringthe
+shades) in ordertobetter visualize the overlaybetweenthe NO
+2
+dayindicatingthatintegratedmeasureswouldmaskthesenuan- map and NO emissions on roads presented in Fig. 4c. Qualita-
+x
+ces.Itisimportanttonotethatourtransportmodelprovideses- tively, we can observe that road segments highlighted in bright
+timates of hourly NO x emissions throughout the day therefore red and orange (which represent the highest emitting roads)
+accountingfortrafficpatternsanddiurnaltemperaturechanges.
+overlapwiththelightshadedareasontheNO map.
+2
+UsingtheNO andNO levelsforthe75,000gridcells,wecal-
+2 x
+2.3. Derivingexposuresandassociationswithbreastcancerand culated the Spearman correlation coefficient to be 0.28 (95% CI:
+prostatecancer 0.27–0.29). Fig. 5 presents the scatterplot of NO 2 vs. NO x and
+LOESS smoother with a 1% span illustrating a non-linear re-
+The estimated spatial emissions of NO and concentrations of lationship between the two measures. The correlation between
+x
+tN hO e2 bw ree are stli cn ak ne cd erto at nh der pe rs oid ste an teces cao nf c7 e9 r2 ca an sed –1 c7 o2 n2 trop lar st ti uci dp ia en s,ts rein
+-
+wsim asu ala lst oed esN tiO mx aa ten dd ;o thb ese Sr pv ee ad rmNO an2 ca ot rt rh ee lat1 i3 o3 nm coo en ffiit co ir ei nn tg ws ata st 0io .4n 5s
+spectively(Crouse et al., 2010;Parentet al., 2013). We first com- (95% CI: 0.31–0.58). Fig. 6 presents the scatterplot and LOESS
+smootherof15%alsoillustratinganon-linearrelationship.
+pared exposures for the study participants and regenerated the
+These same relationships between NO and NO across the
+comparativeteststhatweredescribedintheprevioussectionsto 2 x
+75,000 gridcells and at the 133stations can also be visualized in
+evaluatewhetherthesamerelationshipsholdforthetwosamples
+Figs.7and8wherethemeanandmedianNO valuesareplotted
+inthecase–controlstudies. x
+within each NO decile. We observed that the fastest increase in
+WethenestimatedORsforbothcancersusingestimatesofNO 2
+2 mean NO , occurs when NO concentrations are in the highest
+andNO byadoptingthesamemethodologyandcovariatesasthe x 2
+x deciles characterizing concentrations near roadways. Indeed, clo-
+original studies. For this purpose, an unconditional logistic re-
+ser to the roadways, NO emissions are highest since NO emis-
+gression model was used to estimate ORs and associated 95% CI. x x
+sionsareestimatedonlyontheroads.
+Eachexposuremeasurewasincludedasacontinuouslinearvari-
+Inordertoinvestigatetheeffectofproximitytoaroadwayon
+able (after verifying this assumption through the use of natural the relationship between NO and NO , polygons were classified
+cubicfunctionsoftheexposure–responsecurves).Differentsetsof 2 x
+according to the total lengths of roads (in meters) within their
+covariateswereincluded inthe twodifferentcancerstudies, and buffer. Spearman correlation coefficients were calculated in each
+these variables included the cancer-specific set of accepted and category.Fig.9showsthatthecorrelationbetweenNO andNO
+2 x
+suspected risk factors. All risk factors including descriptions of increases significantly with the increase in the density of roads
+cancer cases and controls are presented as supplementary mate- within a polygon. For polygons affected by close to 1400m of
+rial. Covariates were included in the analysis in both forms of roadways within their buffers, the correlation with NO is 0.85
+2
+linearandnaturalcubicsplinefunctions.WepresentedORsforan whileatroaddensitiesofabout400mperpolygon,thecorrelation
+increase across the interquartile range (IQR) of NO 2 and NO x: drops to less than 0.3. Fig. 10 illustrates that the same trend is
+2.71ppb and 481.37g, respectively. The IQR is defined based on observedwhencomparingNO withtheNO concentrationsatthe
+x 2
+theexposuresofsubjects(casesandcontrols). 133monitoringstations.
+Table1
+DescriptivestatisticsforNOxandNO2acrossgridcells.
+Variable Minimum Maximum Mean Median Variance Percentiles IQRa
+25 50 75
+NO2(ppb) 0.00 46.88 7.91 7.56 9.72 6.028 7.56 9.37 3.342
+NOx(g) 0.00 21589.51 788.84 174.34 4.2e6 28.57 174.35 527.03 498.46
+aIQR,interquartilerange.
+M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291 287
+Fig.4. VisualizingNOxandNO2levelsacrosstheMontrealregion.(a)Segmentemissionspresentedatfourdifferentlevelswithgreensegmentsasthelowestemittingand
+redsegmentswiththehighestemissions;(b)NO2Augustconcentrationsillustratedatfivedifferentlevelswithdarkshadesrepresentingthelowestconcentrationsandlight
+shadesthehighestconcentrations;and(c)overlayofthetwomapsinaandbtovisualizeagreementbetweenNO2andNOx.(Forinterpretationofthereferencestocolorin
+thisfigurelegend,thereaderisreferredtothewebversionofthisarticle.)
+Fig.5. PredictedNO2vs.simulatedNOxacrossthe75,000gridcellswithLOESS(1% Fig.6. ObservedNO2vs.simulatedNOxatthe133stationswithLOESS(15%span).
+span).
+negative difference indicates that the NO value is larger (this is
+x
+In order to spatially map NO and NO values and using the expectedtooccurinthevicinityofroadways).Trafficemissionsof
+2 x
+scaled difference values for each of the 75,000 polygons, we NO aretheprecursortoNO inurbanareas.ThereforeNO ishigh
+x 2 2
+generated an ‘agreement map’ highlighting the areas where the where NO emissions are high as well. Therefore closer to road-
+x
+twomeasuresagreeandareaswithhighdisparities(Fig.11).When ways, weexpect thatNO and NO values arecorrelated because
+2 x
+the difference is close to 0 (between (cid:3)1 and þ1), it indicates a thevariationinNO (duetoavariationintrafficvolumes,speeds,
+x
+good agreement between both measures. A large positive differ- and composition) will be followed by a similar variation in NO .
+2
+ence indicates that the NO scaled value is much higher (this is Far from the roadways, other sources of NO (albeit small) will
+2 2
+expected to occur in areas with little roadways) while a large become more important. In this situation, we expect that the
+Fig.7. MeanandmedianNOxemissionsvs.meanandmedianNO2concentrations
+ineachNO2decile(usingdatafromthe75,000gridcells).
+include atmospheric dispersion therefore tending towards over-
+estimatingthecontributionoftraffictoairpollutioninthevicinity
+of roads and underestimating air pollution away from roadways
+(where the contribution of other sources becomes more
+important).
+3.2. DifferencesinriskestimatesobtainedusingtheNO modeland
+x
+thesummerLUR:examplesfromtwocase–controlstudies
+Fig.8. MeanandmedianNOxemissionsvs.meanandmedianNO2concentrations
+ineachNO2decile(basedonNO2atthe133monitoringstations).
+Fig.12illustratesa‘heatmap’representingthehomelocations
+of the 792 breast cancer participants (cases and controls) over-
+1
+layingour‘agreementmap’.Weobservedthat34%ofthepartici-
+0.9 pants lived in areas with scaled differences between both mea-
+sures of (cid:3)1, 0, and þ1 (indicating ‘reasonable agreement’) and
+0.8 0.86%livedinareaswherethescaleddifferencesare (cid:3)8and (cid:3)9
+indicatingcloseproximitytoroadways.Fig.13showsthatfor50%
+0.7
+of the participants, the Spearman correlation between NO and
+x
+0.6 NO 2is0.5orhigher(upto0.9).ComparingthisfigurewithFig.9
+that presented the correlations for the entire domain based on
+0.5 road length; we found that the road length in the buffers where
+breast cancer subjects reside was higher. Similar results were
+0.4
+found for subjects from the prostate cancer study (data not
+0.3 shown).
+We estimated separate ORs using concentrations of NO and
+2
+0.2 emissions of NO as measures of exposure, both for the breast
+200 400 600 800 1000 1200 1400 1600 x
+cancer and prostate cancer case–control studies. In total, 792 in-
+Length (m)
+dividuals were included in the breast cancer study and 1772
+subjects were included in the prostate cancer analysis (including
+bothcasesandcontrols).Table2showsthattheoddsratiosesti-
+matedusingthetwoexposuremetricsdifferedbetween5.2%and
+8.8%, suggesting that wither method for estimated traffic-related
+transport/emission model will underestimate exposure. Fig. 11a
+pollutionwouldproducesimilarestimatesofrisk.
+illustrates the frequency distribution of scaled pollutant differ-
+We reiterate that the purpose of this analysis is not to show
+ences across the 75,000 polygons. We observed that for 38.9% of
+whetherthereisanassociationfortheselimitedexposuredata,as
+polygons, the agreement was between (cid:3)1 and þ1. Similarly
+wehavealreadypublishedontheseusingthelanduseregression
+Fig.11bprovidesamapof thescaleddifferenceforeachpolygon
+models(Crouseetal.,2010;Parentetal.,2013),butratherwhether
+across the Island of Montreal. It illustrates that the regions with
+the estimates of risk are similar between the two types of ex-
+highest agreement are close to the roadways and within the
+posuremeasures.
+central areas of the city (highly populated) while regions with
+positivescaleddifferencesarefarfromroadwaysandregionswith 4. Conclusions
+negative scaled differences are very close to some roadways
+wherebytheNO levelperpolygonwouldbeextremelyhigh.This Land use regression (LUR) techniques are generally used for
+x
+indicates apotentiallimitation of the NO model whichdoes not deriving exposurelevels in epidemiologic studies of air pollution
+x
+tneiciffeoc
+noitalerroC
+1
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+200 400 600 800 1000 1200 1400 1600 1800
+Length (m)
+Fig. 9. Spearman correlations between NOx and NO2 for different polygon sets
+classifiedusingtheroadlengthineachpolygon(usingthe75,000polygons).The
+correlationcoefficientsarehigherathigherroaddensity.
+tneiciffeoc
+noitalerroC
+288 M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291
+Fig.10. SpearmancorrelationsbetweenNOxandNO2fordifferentfixedstations
+classifiedusingtheroadlengthineachpolygoncontainingthestation(usingthe
+133stations).Thecorrelationcoefficientsarehigherathigherroaddensity.
+M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291 289
+Fig.11. (a)Frequencydistribution(cdf:cumulativedistributionfunctionandpdf:probabilitydensityfunction)andspatialdistribution(b)ofscaledpollutantdifferences(or
+‘indicatorofagreement’).Theredareasindicateagoodagreementbetweenbothmeasuresoccurringinthevicinityofroadways.ThegreenareasindicatethattheNO2scaled
+valueismuchhigher.AlargenegativedifferencebetweenthescaledvaluesofNO2minusNOxispresentedinyellow.(Forinterpretationofthereferencestocolorinthis
+figurelegend,thereaderisreferredtothewebversionofthisarticle.)
+and health effects. However, they often necessitate the deploy- concentrationsofNO andNO atparticipants'homelocationsto
+2 x
+ment of large air quality sampling campaigns with extensive compare risk estimates. Using LUR-modeled NO /NO concentra-
+2 x
+spatial and temporal coverage. In this paper, we compared a tions and NO derived from a simple Gaussian dispersion model,
+x
+measureofexposuretotraffic-relatedairpollutiongeneratedbya Wuetal.(2011)foundthatthedifferencesintheORsforpreterm
+transportationmodelwithNO concentrationsderivedfromLUR. birthbasedonLURoutputanddispersionmodeloutputvarybe-
+2
+We comparedthe measures of NO and NO acrossthe Montreal tween50%and77%(withthedispersionmodeloutputleadingto
+2 x
+Islandaswellasincludedacomparisonofhealthrisksassociated more attenuated ORs); an order of magnitude higher than the
+withtheseexposures. differenceweobservedinthisstudy.Andersenetal.(2011)useda
+Our results indicate reasonable agreement between the two Coxproportionalhazardmodelforobstructivepulmonarydisease
+models in terms of the spatial distribution of emissions and air in Denmark. In the fullyadjusted model for age, smoking status,
+quality. In addition, we observe that the two measures lead to duration,intensity,andenvironmentaltobaccosmoke,theauthors
+similar ORs for breast and prostate cancers. While this study observedanORof1.08(95%CI:1.02–1.14)witha35-yearaverage
+compares modeled concentrations of NO (ppb) to modeled exposuretomeasuredNO levelsand1.05(95%CI:1.01–1.10)with
+2 2
+emissionsofNO (grams)anumberofstudieshaveusedmodeled a35-yearaverageexposuretomeasuredNO levels.Inastudyby
+x x
+Fig.12. Distributionofsampleofbreastcancersubjectsbasedonhomelocation.
+290 M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291
+sampling locations. The differences in the ORs for breast and
+prostatecancersusingbothmeasuresaresmall.
+Informationonfundingsourcessupportingthework
+This study was funded by a collaborative grant from the Ca-
+nadianInstitutesofHealthResearchandtheNaturalSciencesand
+EngineeringResearchCouncilofCanada.
+Fundingsourcesforthecancerstudies
+The breast and prostate cancer studies were supported finan-
+ciallythroughgrantsfromtheCanadianCancerSociety,theCancer
+Research Society, the Fonds de Recherche du Québec—Santé
+Fig.13. Frequency of breast cancer subjects (represented as BC frequency) and (FRQS), FRQS-RRSE, and the Ministère du Développement écono-
+spearmancorrelationbetweenNOxandNO2forareaswithdifferentroadlengths. mique,del’Innovationetdel’ExportationduQuébec.Marie-Élise
+Thecontinuousbluelinepresentsthecorrelationcoefficient.Thisfigureshowsthat
+ParenthasheldcareerawardsfromtheFRQS.
+thecorrelationbetweenNOxandNO2andthefrequencyofBCsubjectsincrease
+withtheincreaseinthedensityofroadswithinapolygon.(Forinterpretationofthe
+referencestocolorinthisfigurelegend,thereaderisreferredtothewebversionof
+thisarticle.) AppendixA. Supplementarymaterial
+Supplementarydataassociatedwiththisarticlecanbefoundin
+Table2
+Oddsratiosforbreastandprostatecancerforpollutantsmodeledaslineareffects the online version at http://dx.doi.org/10.1016/j.envres.2015.04.
+forachangeequivalenttotheIQR,age-adjustedandfully-adjustedmodels. 002.
+Modelandexposuremeasure ForincreaseofIQRaforORand95%
+CI
+References
+OR 95%CIforOR
+AMT,AgenceMetropolitainedeTransport(AMT),2008.Lamobilitedespersonnes
+Breastcancer Ageadjustedb
+danslaregiondeMontreal:FaitsSaillants.EnqueteOrigine-Destination.
+AugustNO2 1.09 0.92,1.28 Andersen,Z.J.,Hvidberg,M.,Jensen,S.S.,Ketzel,M.,Loft,S.,Sorensen,M.,etal.,
+SummerNOx 1.04 0.99,1.10 2011.Chronicobstructivepulmonarydiseaseandlong-termexposuretotraffic-
+Percentdifferencein 5.5% relatedairpollution:acohortstudy.Am.J.Respir.Crit.CareMed.183,455–461.
+ORs Arain,M.A.,Blair,R.,Finkelstein,N.,Brook,J.R.,Sahsuvaroglu,T.,Beckerman,B.,
+Fullyadjusted etal.,2007.Theuseofwindfieldsinalanduseregressionmodeltopredictair
+AugustNO2 1.14 0.94,1.38 pollutionconcentrationsforhealthexposurestudies.Atmos.Environ.41(16),
+SummerNOx 1.04 0.98,1.10 3453–3464.
+Percentdifferencein 8.8% Beckx,C.,IntPanis,L.,Arentze,T.,Janssens,D.,Torfs,R.,Broekx,S.,etal.,2009.A
+ORs dynamicactivity-basedpopulationmodellingapproachtoevaluateexposureto
+Prostatecancer Ageadjustedb airpollution:methodsandapplicationtoadutchurbanarea.Environ.Impact
+AugustNO2 1.08 0.97,1.21 BrauA es rs ,e Mss .. ,R Be rov o. k2 ,9 J, .R17 .,9 1– 91 98 75 ..
+Ozonepersonalexposuresandhealtheffectsforse-
+SummerNOx 1.02 0.98,1.06
+lectedgroupsresidingintheFraservalley.Atmos.Environ.31(14),2113–2121.
+Percentdifferencein 5.5%
+Brook,R.D.,Rajagopalan,S.,PopeIII,C.A.,Brook,J.R.,Bhatnagar,A.,Diez-Roux,A.V.,
+ORs
+etal.,2010.Particulatematterairpollutionandcardiovasculardisease:an
+Fullyadjusted updatetothescientificstatementfromtheAmericanHeartAssociation.Cir-
+AugustNO2 0.97 0.85,1.10 culation121,2331–2378.
+SummerNOx 1.02 0.98,1.06 Carlsten,C.,Dybuncio,A.,Becker,A.,Chan-Yeung,M.,Brauer,M.,2011.Traffic-re-
+Percentdifferencein 5.2% latedairpollutionandincidentasthmainahigh-riskbirthcohort.Occup.
+ORs Environ.Med.68,291–295.
+Cesaroni,G.,Boogaard,H.,Jonkers,S.,etal.,2012.Healthbenefitsoftraffic-related
+aTheIQRforbreastcanceris2.706ppbfortheAugustNO2and481.376gfor airpollutionreductionindifferentsocioeconomicgroups:theeffectoflow-
+summer NOx. The IQR for prostate cancer is 2.76ppb for the August NO2 and emissionzoninginRome.Occup.Environ.Med.69,133–139.
+419.1 b6 Ag gefo ir ss mu om dm ele er dN aO sx a.
+lineareffect.
+Chen ad,F e. n, oC co al re c, iP n. o, mBi ana i, nW th.F e., U2 n0 i0 te7 d.T Si tm ate est ,re 1n 97d 3a –n 2d 00g 2e .og Cr aa np ch ei rc Ep pa it dt ee mrn is olo .f Bl iu on mg
+ark.
+Prev.16(12),2724–2729.
+Clark,C.,Crombie,R.,Head,J.,vanKamp,I.,vanKempen,E.,Stansfeld,S.A.,2012.
+Chenetal.(2007)ontherelationbetweenlungcancerandmea-
+Doestraffic-relatedairpollutionexplainassociationsofaircraftandroadtraffic
+noiseexposureonchildren'shealthandcognition?Asecondaryanalysisofthe
+suredNO vs.NO concentrations, the authors found that among
+x 2 UnitedKingdomsamplefromtheRANCHproject.Am.J.Epidemiol.176,
+trends of different air pollutants (including NO x, PM 10, VOC, SO 2, 327–337.
+Lead), the one with a pattern most similar to the trend in lung Cook,R.,Isakov,V.,Touma,J.S.,Benjey,W.,Thurman,J.,Kinnee,E.,etal.,2008.
+Resolvinglocal-scaleemissionsformodelingairqualitynearroadways.Air
+cancerincidencewasNO .
+x WasteManag.Assoc.58,451–461.
+Theanalysiswepresentedinthisstudyshedslightontheuse Crouse,D.L.,Goldberg,M.S.,Ross,N.A.,Chen,H.,Labrèche,F.,2010.Postmenopausal
+of twodifferentmeasuresofexposuretotraffic-relatedairpollu- breastcancerisassociatedwithexposuretotraffic-relatedairpollutionin
+tion. Our two measures are not perfectly correlated; while NO
+Montreal,Canada:acase–controlstudy.Environ.HealthPerspect.118(11),
+x 1578–1583.
+emissions from traffic are highly correlated with near-road NO 2 Crouse,D.L.,Goldberg,M.S.,Ross,N.A.,2009.Prediction-basedapproachtomod-
+levels,intheabsenceofadispersionmodel,wecouldbeoveror ellingtemporalandspatialvariabilityoftraffic-relatedairpollutioninMon-
+underestimating the exposure to NO emissions away from the
+treal,Canada.Atmos.Environ.43(32),5075–5084.
+x Dhondt,S.,Beckx,C.,Degraeuwe,B.,Lefebvre,W.,Kochan,B.,Bellemans,T.,etal.,
+roadways.Similarly,LURtechniquesareassociatedwithanumber
+2012.Healthimpactassessmentofairpollutionusingadynamicexposure
+ofuncertaintiesandhighlydependonthediversityanddensityof profile:implicationsforexposureandhealthimpactestimates.Environ.Impact
+M.Shekarrizfardetal./EnvironmentalResearch140(2015)282–291 291
+Assess.Rev.36,42–51. Marshall,J.D.,Nethery,E.,Brauer,M.,2008.Within-urbanvariabilityinambientair
+Gan,W.Q.,Koehoorn,M.,Davies,H.W.,Demers,P.A.,Tamburic,L.,Brauer,M.,2011. pollution:comparisonofestimationmethods.Atmos.Environ.42,1359–1369.
+Long-termexposuretotraffic-relatedairpollutionandtheriskofcoronary Molitor,J.,Jerrett,M.,Chang,C.-C.,Molitor,N.-T.,Gauderman,J.,Berhane,K.,etal.,
+heartdiseasehospitalizationandmortality.Environ.HealthPerspect.119, 2007.Assessinguncertaintyinspatialexposuremodelsforairpollutionhealth
+501–507. effectsassessment.Environ.HealthPerspect.,1147–1153.
+Gilbert,N.L.,Goldberg,M.S.,Beckerman,B.,Brook,J.R.,Jerrett,M.,2005.Assessing Parent,M.E.,Goldberg,M.S.,Crouse,D.L.,Ross,N.A.,Chen,H.,Valois,M.F.,Liautaud,
+spatialvariabilityofambientnitrogendioxideinMontreal,Canada,withaland- A.,2013.Traffic-relatedairpollutionandprostatecancerrisk:acase–control
+useregressionmodel.J.AirWasteManag.55,1059–1063. studyinMontreal,Canada.Occup.Environ.Med.70(7),511–518.
+Han,S.,Hai,B.,Yinchang,F.,Aixia,L.,Xiangjin,L.,Fang,Z.,etal.,2011.Analysisofthe Pope,C.A.,Dockery,D.W.,2006.Healtheffectsoffineparticulateairpollution:lines
+relationshipbetweenO3,NOandNO2inTianjin,China.AerosolAirQual.Res. thatconnect.J.AirWasteManag.Assoc.,709–742.
+11,128–139. PTVVision,2009.VISUM11.0Basics,PTVAG.PTVVision,Karlsruhe,Germany.
+Hatzopoulou,M.,Miller,E.J.,2010.Linkinganactivity-basedtraveldemandmodel Ryan,P.H.,LeMasters,G.K.,2007.Areviewofland-useregressionmodelsfor
+withtrafficemissionanddispersionmodels:transport’scontributiontoair characterizingintraurbanairpollutionexposure.Inhal.Toxicol.19(s1),
+pollutioninToronto.Transp.Res.D:Transp.Environ.15(6),315–325. 127–133.
+HealthEffectsInstitute,2010.Traffic-RelatedAirPollution:ACriticalReviewofthe Ryan,P.H.,LeMasters,G.K.,Biswas,P.,Levin,L.,Hu,S.,Lindsey,M.,etal.,2007b.A
+LiteratureonEmissions,Exposure,andHealthEffects.HealthEffectsInstitute, comparisonofproximityandlanduseregressiontrafficexposuremodelsand
+Boston,MA. wheezingininfants.Environ.HealthPerspect.115,278–284.
+Hoek,G.,Beelen,R.,DeHoogh,K.,Vienneau,D.,Gulliver,J.,Fischer,P.,etal.,2008.A Sider,T.,Alam,A.,Zukari,M.,Dugum,H.,Goldstein,N.,Eluru,N.,Hatzopoulou,M.,
+reviewofland-useregressionmodelstoassessspatialvariationofoutdoorair 2013.Land-useandsocio-economicsasdeterminantsoftrafficemissionsand
+pollution.Atmos.Environ.42,7561–7578. individualexposuretoairpollution.J.Transp.Geogr.33,230–239.
+Janssen,N.A.H.,Hoek,G.,Simic-Lawson,M.,Fischer,P.,vanBree,L.,tenBrink,H., Solomon,P.A.,Costantini,M.,Grahame,T.J.,Gerlofs-Nijland,M.E.,Cassee,F.R.,
+etal.,2011.Blackcarbonasanadditionalindicatoroftheadversehealtheffects Russell,A.G.,etal.,2012.Airpollutionandhealth:Bridgingthegapfrom
+ofairborneparticlescomparedwithPM10andPM2.5.Environ.HealthPerspect. sourcestohealthoutcomes:conferencesummary.AirQua.Atmos.Health5,
+119,1691–1699. 9–62.
+Jerrett,M.,Finkelstein,M.M.,Brook,J.R.,Arain,M.A.,Kanaroglou,P.,Stieb,D.M., Tartakovsky,D.,Broday,D.M.,Stern,E.,2013.EvaluationofAERMODandCALPUFF
+etal.,2009.Acohortstudyoftraffic-relatedairpollutionandmortalityin forpredictingambientconcentrationsoftotalsuspendedparticulatematter
+Toronto,Ontario,Canada.Environ.HealthPerspect.117,772–777. (TSP)emissionsfromaquarryincomplexterrain.Environ.Pollut.179,138–145.
+Johnson,M.,Isakov,V.,Touma,J.S.,Mukerjee,S.,Özkaynak,H.,2010.Evaluationof Wu,J.,Wilhelm,M.,Chung,J.,Ritz,B.,2011.Comparingexposureassessment
+land-useregressionmodelsusedtopredictairqualityconcentrationsinan methodsfortraffic-relatedairpollutioninanadversepregnancyoutcome
+urbanarea.Atmos.Environ.44,3660–3668. study.Environ.Res.111,685–692.
+Lefebvre,W.,Degrawe,B.,Beckx,C.,Vanhulsel,M.,Kochan,B.,Bellemans,T.,etal.,
+2013.Presentationandevaluationofanintegratedmodelchaintorespondto
+traffic-andhealth-relatedpolicyquestions.Environ.Model.Softw.40,160–170.

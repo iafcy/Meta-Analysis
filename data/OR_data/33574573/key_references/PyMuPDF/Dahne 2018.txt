@@ -1,0 +1,901 @@
+Pilot Randomized Trial of a Self-Help Behavioral Activation 
+Mobile Application for Utilization in Primary Care
+Jennifer Dahne, Ph.D.1,2, C. W. Lejuez, Ph.D.3, Vanessa A. Diaz, M.D., M.S.4, Marty S. Player, 
+M.D., M.S.4, Jacob Kustanowitz, M.S.5, Julia W. Felton, Ph.D.6, and Matthew J. Carpenter, 
+Ph.D.1,2
+1Department of Psychiatry and Behavioral Sciences, Medical University of South Carolina, 67 
+President Street, Charleston, SC 29425, United States
+2Hollings Cancer Center, Medical University of South Carolina, 171 Ashley Avenue, Charleston, 
+SC 29425, United States
+3Department of Psychology and the Cofrin Logan Center for Addiction Research and Treatment, 
+University of Kansas, 1450 Jayhawk Blvd., Room 250, Lawrence, KS 66045, United States
+4Department of Family Medicine, Medical University of South Carolina, 5 Charleston Center, Suite 
+263, Charleston SC 29425
+5MountainPass Technology, 2 Wisconsin Circle, Suite 700, Chevy Chase, MD 20815, United 
+States
+6Division of Public Health, Michigan State University, 200 East 1st St., Flint, MI 48502, United 
+States
+Abstract
+Mobile technologies can be leveraged to meet the need for evidence-based psychological 
+depression treatment via primary care. The purpose of the present study was to preliminarily 
+examine the feasibility and efficacy of a self-help Brief Behavioral Activation mobile application 
+(app; “Moodivate”) for depressive symptoms among adults treated via primary care. Participants 
+(N = 52) were recruited from primary care practices between January and December 2017 and 
+were randomized 2:2:1 to receive: 1) Moodivate, 2) an active control Cognitive Behavioral 
+Therapy-based mobile app (“MoodKit”), or 3) Treatment As Usual (TAU; no app). Participants 
+completed assessments of depressive symptoms weekly for eight weeks. App analytics data were 
+captured to examine Moodivate feasibility (analytics unavailable for control app). Moodivate 
+participants on average had 46.76 (SD = 30.10) app sessions throughout the trial duration, spent 
+3.50 (2.76) minutes using the app per session, and spent 120.76 (101.02) minutes using the app in 
+Correspondence concerning this article should be addressed to Jennifer Dahne, Department of Psychiatry and Behavioral Sciences, 
+Medical University of South Carolina, 67 President Street, Charleston, SC 29425, United States. dahne@musc.edu. Phone number: 
+(843) 876-2280. 
+Publisher's Disclaimer: This is a PDF file of an unedited manuscript that has been accepted for publication. As a service to our 
+customers we are providing this early version of the manuscript. The manuscript will undergo copyediting, typesetting, and review of 
+the resulting proof before it is published in its final citable form. Please note that during the production process errors may be 
+discovered which could affect the content, and all legal disclaimers that apply to the journal pertain.
+The authors report no other actual or potential conflicts of interest that may bias the present work.
+HHS Public Access
+Author manuscript
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Published in final edited form as:
+Behav Ther. 2019 July ; 50(4): 817–827. doi:10.1016/j.beth.2018.12.003.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+total throughout the trial. Nearly 70% of Moodivate participants continued to use the app one 
+month after trial enrollment and 50% at the end of the eight-week follow-up period. A generalized 
+estimating equation model examining change in depressive symptoms over time by treatment 
+condition indicated a significant interaction between time and treatment condition (χ2 = 42.21, df 
+= 14, p < .001). As compared to TAU, participants in both app conditions evidenced significant 
+decreases in depressive symptoms over time, and these treatment gains were sustained across the 
+trial period. These results preliminarily indicate feasibility of Moodivate as well as efficacy of both 
+Moodivate and MoodKit for the treatment of depression among adults recruited via primary care. 
+Future studies should focus on larger scale examinations of treatment efficacy and effectiveness 
+across primary care settings.
+Keywords
+depression; primary care; mobile health
+Introduction
+Fewer than one-third of United States adults who screen positive for depression receive 
+treatment (Olfson, Blanco, & Marcus, 2016). Most adults with depressive symptoms make at 
+least one annual medical visit to a primary care physician (PCP) (Olfson et al., 2016). As 
+such, primary care models for the delivery of evidence-based depression treatment may 
+improve treatment access for those with depressive symptoms. This is consistent with 
+recommendations from the United States Preventive Services Task Force (USPSTF), which 
+note that PCPs should screen, treat, and provide follow-up for all patients who endorse 
+depressive symptoms (Siu et al., 2016).
+Psychotherapy and/or antidepressant medications are both evidence-based treatments for 
+depression that can be delivered via primary care. Psychotherapy can be delivered by a 
+behavioral medicine specialist within the practice or via referral to an external mental health 
+treatment provider. Although primary care patients with depressive symptoms tend to prefer 
+psychotherapy for depression treatment (Dwight-Johnson, Sherbourne, Liao, & Wells, 2000; 
+van Schaik et al., 2004), they most often are prescribed antidepressant medications without 
+psychotherapy as an option (Rossom et al., 2016; Shim, Baltrus, Ye, & Rust, 2011; Stafford, 
+Ausiello, Misra, & Saglam, 2000). One key barrier to the delivery of psychotherapy via 
+primary care is limited access to mental health specialty care (Thomas, Ellis, Konrad, 
+Holzer, & Morrissey, 2009). Within one nationally representative survey, 66.8% of PCPs 
+reported that they were unable to get high-quality outpatient mental health services for their 
+patients (Cunningham, 2009).
+Mobile technologies, such as mobile applications (apps), could be leveraged to fill this 
+depression treatment gap (Steinhubl, Muse, & Topol, 2013). Smartphone ownership in the 
+U.S. has grown year over year and now 77% of adults own smartphones (Pew Research 
+Center, 2017), with high smartphone ownership rates across age groups (e.g., 92% of 
+Millenials, 85% of Gen Xers, and 67% of Baby Boomers own smartphones; Jiang, 2018). 
+Thus, treatment access barriers could be reduced if evidence-based psychotherapy could be 
+Dahne et al.
+Page 2
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+efficaciously delivered via smartphone. Apps delivered directly within primary care settings 
+could provide an immediately actionable, evidence-based treatment for patients in need of 
+services for depressive symptoms.
+To address the need for disseminable, evidence-based depression treatment resources via 
+primary care, our team developed a self-help mobile app treatment for depression called 
+“Moodivate” (Dahne et al., 2017). Moodivate development was informed by the Brief 
+Behavioral Activation (BA) Treatment for Depression originally developed by Lejuez and 
+colleagues (2011) as well as our team’s prior research developing a Brief BA mobile app 
+(“Behavioral Apptivation”) intended to be used in conjunction with traditional face-to-face 
+therapy (Dahne, Kustanowitz, & Lejuez, 2018). Brief BA is an evidence-based treatment 
+grounded in behavioral theories, which suggest that depression is caused by a lack of 
+reinforcement in the environment for positive, non-depressed behaviors. The goal of Brief 
+BA, and by extension Moodivate, is to help the user reengage in positive, non-depressed 
+activities by identifying, scheduling, and completing activities. The efficacy of Brief BA for 
+the treatment of depression has been established across more than 10 randomized clinical 
+trials with diverse populations (Collado, Long, MacPherson, & Lejuez, 2014; Daughters et 
+al., 2008; Gawrysiak, Nicholas, & Hopko, 2009; Gros et al., 2012; Hopko et al., 2011; 
+Hopko et al., 2013; Hopko, Lejuez, & Hopko, 2004; Hopko, Lejuez, LePage, Hopko, & 
+McNeil, 2003; Jakupcak, Wagner, Paulson, Varra, & McFall, 2010; MacPherson et al., 2010; 
+Reynolds, Macpherson, Tull, Baruch, & Lejuez, 2011). Effect size estimates for Brief BA 
+are in the medium to large range indicating meaningful clinical impact (Sturmey, 2009). 
+Because Moodivate is directly informed by an evidence-based treatment for depression, it 
+may be an improvement upon the majority of commercially available mental health 
+treatment apps which largely do not clearly reflect evidence-based practice (Bry, Chou, 
+Miguel, & Comer, 2018; Neary & Schueller, 2018).
+Although Moodivate is based on an evidence-based treatment for depression and was 
+developed for utilization in primary care, the efficacy of the app as a treatment for depressive 
+symptoms among primary care patients has not yet been examined. The aims of the present 
+study were two-fold: 1) to examine the feasibility and uptake of Moodivate among adults 
+with elevated depressive symptoms recruited from primary care and 2) to examine the 
+preliminary efficacy of Moodivate as compared to both an active control depression 
+treatment mobile app and to treatment as usual (TAU).
+Methods
+Participants
+Study participants were recruited between January, 2017 and December, 2017 from family 
+medicine/primary care clinics affiliated with the Medical University of South Carolina 
+(MUSC). Study participants were recruited in one of three ways: 1) by physician referral 
+(n=26), 2) by a research staff member who sat in the waiting room of the clinics and 
+discussed the study with patients (n=6), or 3) via flyers posted in participating clinics (n=6; 
+Note that data on recruitment source were missing for 4 participants). Those interested 
+completed a brief screening via phone to establish preliminary study eligibility. Potentially 
+eligible individuals were scheduled for an in-person baseline visit at which time final study 
+Dahne et al.
+Page 3
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+eligibility was confirmed. Study participants had to meet the following criteria: 1) between 
+the ages of 18 and 65, 2) currently own a smartphone, 3) report willingness to utilize a 
+mobile app for the treatment of depressed mood, 4) have a current, valid e-mail address that 
+is checked at least once per day, and 5) score of > 10 on the Patient Health Questionnaire-8 
+(PHQ-8; Kroenke et al., 2009). Because both apps utilized in this trial were only accessible 
+via iOS, participants who did not own an appropriate iPhone (iOS 8 or higher) were lent one 
+for the duration of the trial. Participants were excluded if, during the baseline screening, 
+they: 1) scored < 13 on the Beck Depression Inventory-II (BDI-II; Beck, Steer, & Brown, 
+1996) or 2) endorsed current suicidal ideation, defined as either a response of “I would like 
+to kill myself” or “I would kill myself if I had the chance” on the BDI-II, or an indication of 
+past month suicidal ideation on the Major Depressive Episode (MDE) module of the Mini 
+International Neuropsychiatric Interview for DSM-5 (Sheehan et al., 2015). For the first 
+three months of trial enrollment, meeting diagnostic criteria for a current MDE was an 
+exclusionary criterion. However, research suggests that those with elevated depressive 
+symptoms who do not meet criteria for a current MDE experience similar levels of 
+functional impairment as those with a current MDE, but are less likely to receive treatment 
+(Cuijpers, de Graaf, & van Dorsselaer, 2004; Judd, Schettler, & Akiskal, 2002). Thus, both 
+to broaden the generalizability of results and to improve the pace of recruitment, this 
+exclusion criterion was removed in March, 2017. See Figure 1 for CONSORT diagram.
+Procedures
+All study procedures were approved by the MUSC IRB. Upon consent, participants 
+completed self-report and interviewer-administered assessments and were subsequently 
+randomized 2:2:1 to receive either the Behavioral Activation mobile app (Moodivate), an 
+active control Cognitive Behavioral Therapy (CBT) mobile app (MoodKit), or Treatment as 
+Usual (i.e., no app). Because clinical data are limited on other available mobile apps that 
+purport to treat depressive symptoms (Chan, Torous, Hinton, & Yellowlees, 2015; Leigh & 
+Flatt, 2015; Neary & Schueller, 2018; Price et al., 2014), we opted to compare Moodivate 
+efficacy to an active control mobile app in addition to TAU to extend the literature on 
+efficacy data for other clinical apps. We selected MoodKit (Erhardt & Dorian, 2013) as the 
+active control app because, at the time of trial onset, it was one of the only available mobile 
+apps that clearly adhered to Cognitive Behavioral Therapy (CBT) principles. Similar to Brief 
+BA, CBT is an evidence-based psychotherapy for depression that may be administered via 
+primary care. Thus, an app-based adaptation of CBT would be a fitting active control for a 
+Brief BA-based app.
+Across all groups, providers managed depressive symptoms as they normally did, including 
+possible administration of adjunctive pharmacotherapy (see Table 1 for use of 
+pharmacotherapy by treatment condition). Randomization was stratified by participants’ 
+self-reported use of medication for a mental or emotional problem. In addition, to mimic 
+standard care practices for depression treatment via primary care, participants across all 
+groups were provided with a brief handout about stress management, derived from standard 
+patient education materials within the clinic.
+Dahne et al.
+Page 4
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Moodivate and MoodKit were provided to study participants at no cost (both currently cost 
+$4.99 on the iTunes App Store). If randomized to either mobile app condition, study staff 
+helped the participant download the app and provided a brief, scripted overview (~10 
+minutes) on how to use the app. Those provided with an app were instructed to use the app 
+regularly, at least once per day, for the duration of the study. Following the baseline visit, 
+participants were e-mailed assessment measures weekly for eight weeks. All measures were 
+completed via REDCap, a secure, web-based research data capture system (Harris et al., 
+2009). Participants were compensated up to $120 for completion of all assessments. 
+Participants who borrowed an iPhone as part of the trial were compensated an additional $50 
+for return of the iPhone in working, non-damaged order within two-weeks of their trial 
+completion date.
+Interventions
+Behavioral Activation Mobile App (Moodivate).—Details of the Moodivate app have 
+been published previously, including suggested instructions for integrating the app into 
+primary care practice (Dahne et al., 2017). Briefly, Moodivate is a self-help adaptation of 
+Brief BA (Lejuez et al., 2011). The main components of Moodivate include 
+psychoeducation, identification of life areas, values, and associated activities, daily 
+monitoring and activity planning, mood monitoring and social support to facilitate 
+completion of difficult activities. Users are reinforced for continued app utilization and 
+completion of activities via badges that can be earned within the app.
+Cognitive Behavioral Therapy (CBT) Mobile App (MoodKit).—MoodKit includes 
+various components of CBT including thought checking, mood tracking, journaling, and 
+activity scheduling. Via the thought checker feature, users identify maladaptive thoughts and 
+alternative, more rationale thoughts. Users track daily mood while using the app and can 
+view a graph of change in mood over time. The app’s journal function allows users to write 
+responses to a variety of templates. Via the activity scheduler, users can select from 200+ 
+suggested activities or create a new custom activity.
+The treatment components of Moodivate and MoodKit differ in several ways. First, although 
+Moodivate and MoodKit both incorporate activity scheduling, Moodivate appoaches activity 
+scheduling from a values-driven approach consistent with Brief BA. In contrast, MoodKit 
+prompts users to select from a suggested activities list or create a new activity, but new 
+activities are not generated consistent with values. Second, whereas MoodKit incorporates 
+the cognitive restructuring components of CBT, Moodivate does not include any cognitive 
+treatment components. Third, in general, Moodivate has a somewhat simpler design with 
+fewer treatment components incorporated into the app.
+Treatment As Usual.—Participants randomized to the treatment as usual condition 
+received only the patient education materials about stress management and did not receive a 
+mobile app.
+Dahne et al.
+Page 5
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Measures
+Primary outcomes for this trial include: 1) feasibility of Moodivate as indicated by app 
+utilization analytics (similar analytics data not available for MoodKit) and 2) change in 
+depressive symptoms over time as a function of treatment condition.
+Moodivate Analytics Data.—User analytics data for participants randomized to the 
+Moodivate condition were available via Yahoo’s Flurry Analytics system. Specific analytics 
+data captured included: 1) total number of app sessions across the trial duration, 2) average 
+time per app session, 3) total time spent using the app across the trial duration, 4) number of 
+times the participant added a new value within the app, 5) number of times the participant 
+created a value-driven activity within the app, 6) number of activities completed across the 
+trial duration, and 7) weekly retention, defined as the percentage of study participants who 
+utilized Moodivate at least once during each week after study enrollment.
+We did not have access to similar data for participants randomized to the MoodKit condition 
+because this app was not developed by our research team.
+Depressive Symptoms.—The PHQ-8 (Kroenke et al., 2009) was utilized as a study 
+screening measure to determine whether participants were experiencing at least minimal 
+symptoms of depression. At baseline, participants also completed the interviewer-
+administered Major Depressive Episode (MDE) module of the Mini International 
+Neuropsychiatric Interview for DSM-5 (Sheehan et al., 2015) to assess for current and 
+lifetime MDEs. A participant was given a lifetime MDE diagnosis if they met criteria for 
+either a current or past MDE. Across the study follow-up (including baseline), depressive 
+symptoms were assessed via the Beck Depression Inventory-II (BDI-II; Beck et al., 1996). 
+Scores on the BDI-II are interpreted as follows: 0–13 = minimal depression, 14–19 = mild 
+depression, 20–28 = moderate depression, 29–63 = severe depression.
+Statistical Analysis Plan
+Chi-square and ANOVA analyses were used to determine baseline differences in participant 
+demographics as a function of treatment condition. Descriptive statistics were utilized to 
+examine Moodivate feasibility and acceptability as indicated by app analytics data. ANOVA 
+was used to examine the association between Moodivate app usage and treatment response, 
+defined as a significant (i.e., 10-point) decrease on the BDI-II at any point during the study. 
+Subsequently, a generalized estimating equation (GEE) model assuming a normal 
+distribution, identity link function, and exchangeable correlation matrix was used to examine 
+the interaction between time and treatment condition on BDI-II depressive symptoms 
+adjusting for the main effects of baseline depressive symptoms, time, and treatment 
+condition. Because GEE accommodates within-subject correlations across repeated 
+measures and utilizes all available data, it provides less biased estimates than traditional 
+regression approaches in analyzing longitudinal data (Hardin & Hilbe, 2002).
+Dahne et al.
+Page 6
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Results
+Participant Characteristics
+As this was a pilot trial, we sought to keep sample size low (i.e., ~20 participants per app 
+group) while still providing rich feasibility and preliminary efficacy data to inform future 
+trials. In total, 52 participants were enrolled in the trial (n=24 Moodivate, n=19 MoodKit, 
+n=9 TAU). See Table 1 for participant demographics for the full sample as well as by 
+treatment group. There were no significant demographic differences as a function of 
+treatment condition. At baseline, participants on average reported experiencing depressive 
+symptoms in the moderate to severe depression range (BDI-II baseline M(SD) = 
+29.02(10.09); Moodivate = 28.08(7.83), MoodKit = 28.63(11.30), TAU = 32.33(13.03)). 
+Nearly all participants (94.3%) met diagnostic criteria for a lifetime MDE and 71.2% of 
+participants met criteria for a current MDE. Study retention was high, with 76.8% of 
+participants across treatment groups completing at least six of the eight follow-up 
+assessments. There were no significant differences in study retention between treatment 
+groups.
+Moodivate Utilization
+App Utilization.—Analytics data were available for 21 out of the 24 Moodivate 
+participants. Data for the remaining three participants were lost due to technical issues. All 
+participants used the app at least once during the trial, 71.4% of participants used the app at 
+least 28 times, and 42.9% of participants used the app more than 56 times (i.e., at least once 
+per day on average). Participants on average had 46.76(30.10) app sessions throughout the 
+eight-week trial duration, spent 3.50(2.76) minutes using the app per session, and spent 
+120.76(101.02) minutes using the app in total throughout the trial. Participants created on 
+average 6.10(3.22) unique values within the app, 14.71(10.22) activities across values, and 
+completed 52.24(89.31) activities (Table 2). Analytics outcomes did not significantly differ 
+as a function of whether study participants used their own iPhone or a study iPhone 
+throughout the trial.
+Retention.—Weekly retention data, defined as any app use within each week following 
+trial enrollment, were available for 18 of the 24 Moodivate participants (retention data for 
+the remaining 6 participants were lost due to system upgrades within the Flurry Analytics 
+platform). No procedures to increase app retention (e.g., contacting participants who were 
+not using the app to remind them to login) were instituted by the study team during the trial. 
+In general, retention was high across the study duration: 88.9% of participants utilized 
+Moodivate at least once during the first week following trial enrollment, 83.3% during the 
+second week, 66.7% during the third week, 66.7% during the fourth week, 66.7 percent 
+during the fifth week, 66.7% during the sixth week, 61.1% during the seventh week, and 
+50.0% during the eighth week.
+Association Between Moodivate Usage and Treatment Response.—There were 
+no significant associations between any of the Moodivate analytics metrics (i.e., total 
+number of Moodivate sessions, average time per session, total time spent using Moodivate, 
+add value event occurrences, add value-driven activity event occurrences, complete activity 
+Dahne et al.
+Page 7
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+event occurrences) and treatment response. However, there was a trend toward significance 
+for the association between total number of Moodivate sessions and significant BDI change 
+[F(1,19)=4.15, p=0.056], suggesting that those who utilized Moodivate more frequently 
+were less likely to have a significant BDI change during the course of the study.
+Change in Depressive Symptoms Over Time as Function of Treatment Condition
+The GEE model indicated a significant main effect of baseline depressive symptoms (χ2 = 
+19.29, df = 1, p<.001) as well as a significant interaction between time and treatment 
+condition (χ2 = 42.21, df = 14, p<.001). Post-hoc pairwise comparisons were utilized to 
+understand the nature of the significant time by treatment interaction. Adjusting for baseline, 
+depressive symptoms among participants in the Moodivate condition were significantly 
+lower as compared to the Week 1 assessment at Weeks 2, 4, 5, 6, 7, and 8. Depressive 
+symptoms among participants in the MoodKit condition were significantly lower as 
+compared to the Week 1 assessment at Weeks 4, 5, 6, 7, and 8. Depressive symptoms among 
+participants in the TAU condition did not differ significantly from the Week 1 assessment at 
+any other follow-up timepoint. On average, participants in the Moodivate condition had a 
+12.21(13.15) point decrease on the BDI-II from pre- to post-treatment, participants in the 
+MoodKit condition had a 13.36(11.51) point decrease, and participants in the TAU condition 
+had a 7.75(14.99) point decrease. In addition, 50.0% of participants in the Moodivate 
+condition, 52.6% of participants in the MoodKit condition, and 33.3% of participants in the 
+TAU condition evidenced less than minimal symptoms of depression on the BDI-II (i.e., 
+score ≤ 13) at some point during the study. Among those who completed the Week 8 
+assessment, 52.6% of Moodivate participants, 50.0% of MoodKit participants, and 25.0% of 
+TAU participants had less than minimal symptoms of depression at that time. Between-
+group mean differences were not significantly different on average across time points when 
+adjusting for baseline depressive symptoms (Moodivate vs. TAU mean difference (standard 
+error) = −3.94(2.94), p=0.18; Moodivate vs. MoodKit = 1.74(2.89), p=0.55; MoodKit vs 
+TAU = −5.69(3.15), p=0.07). Across time points, the only significant between-group 
+difference in depressive symptoms was observed at the Week 6 follow-up such that those in 
+the Moodivate and MoodKit conditions endorsed significantly lower symptoms of 
+depression than those in the TAU condition (Moodivate vs. TAU mean difference = 
+−7.51(3.14), p=0.02; MoodKit vs. TAU mean difference = −7.68(3.62), p=0.03)). Effect 
+sizes for pre- to post-treatment changes in depressive symptoms for Moodivate vs. TAU (d = 
+0.33) and MoodKit vs. TAU (d = 0.44) were small. See Figure 2 for a graph of depressive 
+symptoms by time as a function of treatment condition.
+Discussion
+These results preliminarily indicate feasibility of Moodivate as well as efficacy of both 
+Moodivate and MoodKit for the treatment of depressive symptoms among adults with 
+elevated depressive symptoms recruited via primary care. Across a number of indices, 
+Moodivate was highly feasible. These participants had roughly one app session per day and 
+completed one activity per day, suggesting moderate engagement. Retention was high across 
+the trial duration, with nearly 70% of Moodivate participants continuing to use the app one 
+month after trial enrollment, and 50% at the end of the trial. This is in contrast to prior trials 
+Dahne et al.
+Page 8
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+which have suggested that those who download apps for mood management tend to use 
+these tools as intended for no longer than two weeks (Arean et al., 2016; Rosa, Campbell, 
+Miele, Brunner, & Winstanley, 2015) and is also in contrast to utilization of most 
+commercially available apps which retain on average only 30% of users one week after 
+download (Sigg, Lagerspetz, Peltonen, Nurmi, & Tarkoma, 2016).
+Although app usage was strong, app usage metrics were not significantly associated with 
+treatment response, which may be due to a lack of power to detect significant associations in 
+light of the small sample within the Moodivate arm. There was a trend toward significance 
+for the association between total number of Moodivate sessions and treatment response such 
+that those who utilized Moodivate more frequently were less likely to have a significant BDI 
+change during the course of the study. This could either indicate that the number of 
+Moodivate sessions negatively impacts change in depression or could indicate that those 
+who were more symptomatic continued to utilize Moodivate with greater frequency 
+throughout the trial. In future studies, it will be important to incorporate a longer follow-up 
+time frame to determine if those who are more symptomatic and continue to utilize 
+Moodivate frequently have subsequent significant decreases in depressive symptoms.
+This pilot trial also suggests preliminary efficacy for both Moodivate and MoodKit for the 
+treatment of depressive symptoms among a racially and socioeconomically diverse sample 
+of adults recruited from primary care. As compared to TAU, participants in both app 
+conditions had significant decreases in depressive symptoms over time, and these treatment 
+gains were sustained across the trial period. The lack of efficacy data is a major problem 
+within the field of mobile health research (Neary & Schueller, 2018; Price et al., 2014) and 
+this study provides preliminary data speaking to the efficacy of these two mobile apps. To 
+our knowledge, no other clinical trial has examined the efficacy of mobile apps for the 
+treatment of depression with primary care patients. Future research should focus on the 
+improvement of these app-based treatments for depression for primary care patients and 
+ways to implement these treatments within primary care practices.
+Beyond the specific apps studied here, this trial also provides general guidance on the 
+development of mobile treatments for depression for primary care patients. First, although 
+we developed Moodivate for iOS only and MoodKit was similarly available only on iOS, 
+55.7% of study participants owned an Android smartphone. We opted to provide Android 
+owners with an iPhone to use for the duration of the trial, a practice which has been used in 
+prior studies (Ben-Zeev et al., 2015). However, this approach is likely not sustainable within 
+real-world clinical practice. To reach the majority of primary care patients with depressive 
+symptoms, future mobile-based treatments must be developed for both iOS and Android 
+platforms. Second, although Moodivate utilization rates are promising for a pilot feasibility 
+trial, they still could be increased, whether by the number of activities scheduled per day, or 
+through activities completed per day, either of which may further enhance treatment efficacy. 
+Modifications to Moodivate, such as providing users with a list of suggested activities or 
+directing them to continue to increase their activity level throughout the treatment duration 
+may be useful strategies to consider for future incorporation. Additional strategies such as 
+engaging the primary care provider in ongoing care via the app may be useful for promoting 
+engagement with mobile-based treatments more broadly (i.e., Moodivate, MoodKit, and 
+Dahne et al.
+Page 9
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+other treatments). At present, Moodivate is not directly integrated with routine primary care 
+practice, such as via integration with the electronic health record or by having a stand-alone 
+provider portal that PCPs could review to determine patient treatment response. This may be 
+an important future avenue for additional software development and may improve patient 
+treatment engagement. Third, any mobile app-based trial must consider the potential impact 
+of evolving technology on app functionality. For example, during the course of this trial, 
+Apple released iOS 11, which impacted calendar functionality for Moodivate participants 
+who upgraded their operating system. Our team released an app update to resolve the 
+calendar issue, which was then pushed out to all Moodivate participants enrolled in the trial 
+at that time. Similarly, at trial outset, we tested Moodivate on a variety of different iOS 
+versions and noted that app functionality was optimal on iOS 8 or later. Thus, a study 
+inclusion criterion was that participants needed to own an iPhone running iOS 8 or higher or 
+be willing to use a study iPhone for the duration of the trial. Future mHealth trials should 
+consider the impact of technology upgrades on intervention functionality and have systems 
+in place to continuously test the functionality of their intervention following new technology 
+releases (Mohr, Cheung, Schueller, Hendricks Brown, & Duan, 2013). Finally, in the present 
+trial, we selected MoodKit as our active control app given mounting data highlighting that: 
+1) the majority of mental health apps readily available on the consumer marketplace lack any 
+research support or evidence-based content and 2) mental health apps developed in academic 
+circles lack consumer marketplace penetration (Bry et al., 2018). MoodKit is a commercially 
+popular mental health treatment app (at the time of the writing of this manuscript, it was #68 
+within the iTunes App Store “Health and Wellness” category) that adheres to CBT 
+principles, yet there are no published trials examining clinical outcomes associated with 
+MoodKit use. To begin to fill this gap between commercially successful mental health apps 
+and treatment outcomes research, within this trial we sought to preliminarily examine 
+clinical outcomes associated with Moodivate and with MoodKit use. Similar trials in the 
+future may consider incorporating commercially popular mental health apps as control 
+treatment conditions in order to expand the literature on mental health outcomes associated 
+with use of these readily available apps.
+Results of this study should be interpreted with limitations in mind. This was a small pilot 
+study and results should be interpreted accordingly. Although we found a significant time by 
+treatment effect such that both app conditions outperformed TAU, we may have been 
+underpowered to detect significant effects between the two app conditions and it is possible 
+that within a larger scale trial either MoodKit or Moodivate would be more efficacious. 
+Small sample size may have also contributed to mostly non-significant between-group 
+differences in BDI-II symptoms across follow-up. Although use of psychiatric medications 
+was similar across the three treatment groups, we did not assess duration of medication use 
+(i.e., whether a study participant was stabilized on medication or recently started taking a 
+new medication). As such, we cannot disentangle whether treatment gains were a result of 
+Moodivate/MoodKit use or of possible new medication use. Participants did not complete 
+follow-up assessments beyond eight-weeks. Thus, it is unclear whether treatment gains 
+would be sustained outside of this timeframe. This issue of beyond treatment assessment is 
+particularly complicated within the area of app-based interventions. Unless app use is 
+restricted, study participants can continue to use the app and engage in treatment beyond the 
+Dahne et al.
+Page 10
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+initially prescribed period of time. Moodivate analytics data were missing for a small subset 
+of participants and we did not have access to similar analytics data from MoodKit. Thus, we 
+were unable to compare feasibility as indicated by analytics data between the two apps.
+Future larger scale efficacy and effectiveness trials within primary care will be needed for 
+both Moodivate and MoodKit before these interventions can be recommended for the 
+treatment of depressive symptoms via primary care. Early evidence from this trial offers 
+promise toward that goal. Furthermore, although one strength of mobile health interventions 
+is that they tend to be low cost and, thus, more disseminable and cost effective than 
+traditional in-person psychological interventions, not all primary care patients with 
+depressive symptoms will have improvements in depressive symptoms solely by using a 
+self-help app such as Moodivate or MoodKit. Future investigations of these mobile 
+treatments should consider adaptive treatment strategies in which the level of treatment can 
+be adjusted based on whether each individual patient is responding to the mHealth treatment 
+(Collins, Murphy, & Strecher, 2007; Murphy, 2005).
+Acknowledgments
+The authors would like to thank MountainPass Technology LLC, including Zachary Gavin, Jim Nichols, Bryan 
+Hobbs, Brian Cordyack, and Tamara Wiesen, for their contributions to the development of Moodivate. Funding for 
+this research was provided by the National Institute of Mental Health (R41 MH108219) and by the National 
+Institute on Drug Abuse (T32 DA007288, K23 DA045766). The funding sources had no role in study design, data 
+collection, data analysis, data interpretation, in writing this report, or in the decision to submit this article for 
+publication. The authors (JD, CWL, JK) are co-owners of Behavioral Activation Tech, LLC which owns the rights 
+to Moodivate.
+References
+Arean PA, Hallgren KA, Jordan JT, Gazzaley A, Atkins DC, Heagerty PJ, & Anguera JA (2016). The 
+Use and Effectiveness of Mobile Apps for Depression: Results From a Fully Remote Clinical Trial. 
+Journal of Medical Internet Research, 18(12), e330. doi:10.2196/jmir.6482 [PubMed: 27998876] 
+Beck AT, Steer RA, & Brown GK (1996). Beck Depression Inventory-II (BDI-II) San Antonio, TX: 
+Psychological Corporation.
+Ben-Zeev D, Schueller SM, Begale M, Duffecy J, Kane JM, & Mohr DC (2015). Strategies for 
+mHealth research: lessons from 3 mobile intervention studies. Administration and Policy in Mental 
+Health, 42(2), 157–167. doi:10.1007/s10488-014-0556-2 [PubMed: 24824311] 
+Bry LJ, Chou T, Miguel E, & Comer JS (2018). Consumer Smartphone Apps Marketed for Child and 
+Adolescent Anxiety: A Systematic Review and Content Analysis. Behavior Therapy, 49(2), 249–
+261. doi:10.1016/j.beth.2017.07.008 [PubMed: 29530263] 
+Chan S, Torous J, Hinton L, & Yellowlees P (2015). Towards a Framework for Evaluating Mobile 
+Mental Health Apps. Telemedicine Journal and e-Health, 21(12), 1038–1041. doi:10.1089/tmj.
+2015.0002 [PubMed: 26171663] 
+Collado A, Long KE, MacPherson L, & Lejuez CW (2014). The efficacy of a behavioral activation 
+intervention among depressed US Latinos with limited English language proficiency: study protocol 
+for a randomized controlled trial. Trials, 15(7), 231. doi:10.1186/1745-6215-15-231 [PubMed: 
+24938081] 
+Collins LM, Murphy SA, & Strecher V (2007). The multiphase optimization strategy (MOST) and the 
+sequential multiple assignment randomized trial (SMART): new methods for more potent eHealth 
+interventions. American Journal of Preventive Medicine, 32(5 Suppl), S112–118. doi:10.1016/
+j.amepre.2007.01.022 [PubMed: 17466815] 
+Cuijpers P, de Graaf R, & van Dorsselaer S (2004). Minor depression: risk profiles, functional 
+disability, health care use and risk of developing major depression. Journal of Affective Disorders, 
+79(1–3), 71–79. doi:10.1016/S0165-0327(02)00348-8 [PubMed: 15023482] 
+Dahne et al.
+Page 11
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Cunningham PJ (2009). Beyond parity: primary care physicians’ perspectives on access to mental 
+health care. Health Affairs, 28(3), w490–501. doi:10.1377/hlthaff.28.3.w490 [PubMed: 19366722] 
+Dahne J, Lejuez CW, Kustanowitz J, Felton JW, Diaz VA, Player MS, & Carpenter MJ (2017). 
+Moodivate: A self-help behavioral activation mobile app for utilization in primary care-
+Development and clinical considerations. International Journal of Psychiatry in Medicine, 52(2), 
+160–175. doi:10.1177/0091217417720899 [PubMed: 28792292] 
+Daughters SB, Braun AR, Sargeant MN, Reynolds EK, Hopko DR, Blanco C, & Lejuez C (2008). 
+Effectiveness of a brief behavioral treatment for inner-city illicit drug users with elevated 
+depressive symptoms: The Life Enhancement Treatment for Substance Use (LETS Act!). Journal 
+of Clinical Psychiatry, 69(1), 122–129. doi:10.4088/JCP.v69n0116 [PubMed: 18312046] 
+Dwight-Johnson M, Sherbourne CD, Liao D, & Wells KB (2000). Treatment preferences among 
+depressed primary care patients. Journal of General Internal Medicine, 15(8), 527–534. doi:
+10.1046/j.1525-1497.2000.08035.x [PubMed: 10940143] 
+Erhardt D, & Dorian E (2013). Going Mobile: A Case Vignette Illustrating the Integration of Mobile 
+Technology in Psychotherapy. Independent Practitioner, 33(1), 15–21.
+Gawrysiak M, Nicholas C, & Hopko DR (2009). Behavioral activation for moderately depressed 
+university students: Randomized controlled trial. Journal of Counseling Psychology, 56(3), 468–
+475. doi:10.1037/a0016383
+Gros DF, Price M, Strachan M, Yuen EK, Milanak ME, & Acierno R (2012). Behavioral activation and 
+therapeutic exposure: an investigation of relative symptom changes in PTSD and depression during 
+the course of integrated behavioral activation, situational exposure, and imaginal exposure 
+techniques. Behavior Modification, 36(4), 580–599. doi:10.1177/0145445512448097 [PubMed: 
+22679240] 
+Hardin JW, & Hilbe JM (2002). Generalized estimating equations: Chapman and Hall/CRC.
+Harris PA, Taylor R, Thielke R, Payne J, Gonzalez N, & Conde JG (2009). Research electronic data 
+capture (REDCap)--a metadata-driven methodology and workflow process for providing 
+translational research informatics support. Journal of Biomedical Informatics, 42(2), 377–381. doi:
+10.1016/j.jbi.2008.08.010 [PubMed: 18929686] 
+Hopko DR, Armento ME, Robertson SM, Ryba MM, Carvalho JP, Colman LK, … Lejuez CW (2011). 
+Brief behavioral activation and problem-solving therapy for depressed breast cancer patients: 
+randomized trial. Journal of Consulting and Clinical Psychology, 79(6), 834–849. doi:10.1037/
+a0025450 [PubMed: 21988544] 
+Hopko DR, Funderburk JS, Shorey RC, McIndoo CC, Ryba MM, File AA, … Vitulano M (2013). 
+Behavioral activation and problem-solving therapy for depressed breast cancer patients: 
+preliminary support for decreased suicidal ideation. Behavior Modification, 37(6), 747–767. doi:
+10.1177/0145445513501512 [PubMed: 23990646] 
+Hopko DR, Lejuez C, & Hopko SD (2004). Behavioral activation as an intervention for coexistent 
+depressive and anxiety symptoms. Clinical Case Studies, 3(1), 37–48. doi:
+10.1177/1534650103258969
+Hopko DR, Lejuez CW, LePage JP, Hopko SD, & McNeil DW (2003). A brief behavioral activation 
+treatment for depression. A randomized pilot trial within an inpatient psychiatric hospital. 
+Behavior Modification, 27(4), 458–469. doi:10.1177/0145445503255489 [PubMed: 12971122] 
+Jakupcak M, Wagner A, Paulson A, Varra A, & McFall M (2010). Behavioral activation as a primary 
+care-based treatment for PTSD and depression among returning veterans. Journal of Traumatic 
+Stress, 23(4), 491–495. doi:10.1002/jts.20543 [PubMed: 20623596] 
+Jiang J (2018). Millennials stand out for their technology use, but older generations also embrace 
+digital life. Fact Tank News in the Numbers Retrieved from http://www.pewresearch.org/fact-tank/
+2018/05/02/millennials-stand-out-for-their-technology-use-but-older-generations-also-embrace-
+digital-life/
+Judd LL, Schettler PJ, & Akiskal HS (2002). The prevalence, clinical relevance, and public health 
+significance of subthreshold depressions. Psychiatric Clinics of North America, 25(4), 685–698. 
+[PubMed: 12462855] 
+Dahne et al.
+Page 12
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Kroenke K, Strine TW, Spitzer RL, Williams JB, Berry JT, & Mokdad AH (2009). The PHQ-8 as a 
+measure of current depression in the general population. Journal of Affective Disorders, 114(1–3), 
+163–173. doi:10.1016/j.jad.2008.06.026 [PubMed: 18752852] 
+Leigh S, & Flatt S (2015). App-based psychological interventions: friend or foe? Evidence-Based 
+Mental Health, 18(4), 97–99. doi:10.1136/eb-2015-102203 [PubMed: 26459466] 
+Lejuez CW, Hopko DR, Acierno R, Daughters SB, & Pagoto SL (2011). Ten year revision of the brief 
+behavioral activation treatment for depression: revised treatment manual. Behavior Modification, 
+35(2), 111–161. doi:10.1177/0145445510390929 [PubMed: 21324944] 
+MacPherson L, Tull MT, Matusiewicz AK, Rodman S, Strong DR, Kahler CW, … Lejuez CW (2010). 
+Randomized controlled trial of behavioral activation smoking cessation treatment for smokers with 
+elevated depressive symptoms. Journal of Consulting and Clinical Psychology, 78(1), 55–61. doi:
+10.1037/a0017939 [PubMed: 20099950] 
+Mohr DC, Cheung K, Schueller SM, Hendricks Brown C, & Duan N (2013). Continuous evaluation of 
+evolving behavioral intervention technologies. American Journal of Preventive Medicine, 45(4), 
+517–523. doi:10.1016/j.amepre.2013.06.006 [PubMed: 24050429] 
+Murphy SA (2005). An experimental design for the development of adaptive treatment strategies. 
+Statistics in Medicine, 24(10), 1455–1481. doi:10.1002/sim.2022 [PubMed: 15586395] 
+Neary M, & Schueller SM (2018). State of the field of mental health apps. Cognitive and Behavioral 
+Practice, 25(4), 531–537. doi:10.1016/j.cbpra.2018.01.002
+Olfson M, Blanco C, & Marcus SC (2016). Treatment of Adult Depression in the United States. JAMA 
+internal medicine, 176(10), 1482–1491. doi:10.1001/jamainternmed.2016.5057 [PubMed: 
+27571438] 
+Pew Research Center. (2017). Mobile Fact Sheet. Pew Internet & American Life Project Retrieved 
+from http://www.pewinternet.org/fact-sheet/mobile/#
+Price M, Yuen EK, Goetter EM, Herbert JD, Forman EM, Acierno R, & Ruggiero KJ (2014). mHealth: 
+a mechanism to deliver more accessible, more effective mental health care. Clinical Psychology & 
+Psychotherapy, 21(5), 427–436. doi:10.1002/cpp.1855 [PubMed: 23918764] 
+Reynolds EK, Macpherson L, Tull MT, Baruch DE, & Lejuez CW (2011). Integration of the brief 
+behavioral activation treatment for depression (BATD) into a college orientation program: 
+depression and alcohol outcomes. Journal of Counseling Psychology, 58(4), 555–564. doi:
+10.1037/a0024634 [PubMed: 21787070] 
+Rosa C, Campbell AN, Miele GM, Brunner M, & Winstanley EL (2015). Using e-technologies in 
+clinical trials. Contemporary Clinical Trials, 45(Pt A), 41–54. doi:10.1016/j.cct.2015.07.007 
+[PubMed: 26176884] 
+Rossom RC, Solberg LI, Vazquez-Benitez G, Whitebird RR, Crain AL, Beck A, & Unutzer J (2016). 
+Predictors of Poor Response to Depression Treatment in Primary Care. Psychiatric Services, 
+67(12), 1362–1367. doi:10.1176/appi.ps.201400285 [PubMed: 27417890] 
+Sheehan D, Janavs J, Baker R, Sheehan K, Knapp E, & Sheehan M (2015). Mini international 
+neuropsychiatric interview–version 7.0.0 DSM-5
+Shim RS, Baltrus P, Ye J, & Rust G (2011). Prevalence, treatment, and control of depressive symptoms 
+in the United States: results from the National Health and Nutrition Examination Survey 
+(NHANES), 2005–2008. Journal of the American Board of Family Medicine, 24(1), 33–38. doi:
+10.3122/jabfm.2011.01.100121 [PubMed: 21209342] 
+Sigg S, Lagerspetz E, Peltonen E, Nurmi P, & Tarkoma S (2016). Sovereignty of the Apps: There’s 
+more to Relevance than Downloads. arXiv preprint arXiv:1611.10161
+Siu AL, Force USPST, Bibbins-Domingo K, Grossman DC, Baumann LC, Davidson KW, … Pignone 
+MP (2016). Screening for Depression in Adults: US Preventive Services Task Force 
+Recommendation Statement. JAMA, 315(4), 380–387. doi:10.1001/jama.2015.18392 [PubMed: 
+26813211] 
+Stafford RS, Ausiello JC, Misra B, & Saglam D (2000). National Patterns of Depression Treatment in 
+Primary Care. Primary Care Companion to the Journal of Clinical Psychiatry, 2(6), 211–216.
+Steinhubl SR, Muse ED, & Topol EJ (2013). Can mobile health technologies transform health care? 
+JAMA, 310(22), 2395–2396. doi:10.1001/jama.2013.281078 [PubMed: 24158428] 
+Dahne et al.
+Page 13
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Sturmey P (2009). Behavioral activation is an evidence-based treatment for depression. Behavior 
+Modification, 33(6), 818–829. doi:10.1177/0145445509350094 [PubMed: 19933444] 
+Thomas KC, Ellis AR, Konrad TR, Holzer CE, & Morrissey JP (2009). County-level estimates of 
+mental health professional shortage in the United States. Psychiatric Services, 60(10), 1323–1328. 
+doi:10.1176/ps.2009.60.10.1323 [PubMed: 19797371] 
+van Schaik DJ, Klijn AF, van Hout HP, van Marwijk HW, Beekman AT, de Haan M, & van Dyck R 
+(2004). Patients’ preferences in the treatment of depressive disorder in primary care. General 
+Hospital Psychiatry, 26(3), 184–189. doi:10.1016/j.genhosppsych.2003.12.001 [PubMed: 
+15121346] 
+Dahne et al.
+Page 14
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Highlights
+•
+Moodivate is a self-help Brief Behavioral Activation mobile app
+•
+Moodivate feasibility was examined and efficacy was compared to MoodKit 
+and TAU
+•
+70% of Moodivate participants had continued app use one month after trial 
+enrollment
+•
+Participants in both app conditions had significant decreases in depression
+•
+Results indicate feasibility of Moodivate and preliminary efficacy of both 
+apps
+Dahne et al.
+Page 15
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Figure 1. 
+CONSORT Flow Diagram
+Dahne et al.
+Page 16
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Figure 2. 
+BDI-II Depressive Symptoms by Treatment Condition
+Dahne et al.
+Page 17
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Dahne et al.
+Page 18
+Table 1
+Demographics for the Full Sample and by Treatment Group
+Full Sample
+(N=52)
+Moodivate
+(n=24)
+MoodKit
+(n=19)
+TAU
+(n=9)
+Age (M(SD))
+43.79 (13.27)
+44.67(13.95)
+43.00(13.63)
+43.11(11.88)
+Gender (% Female)
+84.6%
+83.3%
+78.9%
+84.6%
+Race
+ White
+40.4%
+41.7%
+36.8%
+44.4%
+ Black
+55.8%
+54.2%
+57.9%
+55.6%
+ Other
+3.8%
+4.2%
+5.3%
+0.0%
+Ethnicity (% Hispanic)
+3.8%
+0.0%
+10.5%
+0.0%
+Relationship Status
+ In Relationship
+36.5%
+33.3%
+36.8%
+44.4%
+ Single
+63.4%
+66.7%
+63.2%
+55.5%
+Education
+ ≤ High School diploma
+15.3%
+8.3%
+21.1%
+22.2%
+ ≥ High School diploma
+84.6%
+91.6%
+78.9%
+77.8%
+Annual Household Income
+ < $50k
+61.5%
+54.1%
+68.4%
+66.6%
+ ≥$50k
+28.8%
+37.5%
+21.1%
+22.2%
+Employment Status
+ Unemployed
+13.5%
+12.5%
+10.5%
+22.2%
+ Employed ≥ part time
+59.6%
+54.2%
+57.9%
+77.8%
+ Other
+27.0%
+33.3%
+31.7%
+0.0%
+Phone Ownership
+ iPhone
+44.2%
+50.0%
+42.1%
+33.3%
+ Android or Other Smartphone
+55.7%
+50.0%
+57.9%
+66.7%
+Current MDE (% Yes)
+71.2%
+70.8%
+73.7%
+66.7%
+Lifetime MDE (% Yes)
+94.3%
+95.8%
+89.5%
+100%
+Currently Taking Meds for Mental or Emotional Problems (% Yes)
+36.5%
+37.5%
+36.8%
+33.3%
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Dahne et al.
+Page 19
+Full Sample
+(N=52)
+Moodivate
+(n=24)
+MoodKit
+(n=19)
+TAU
+(n=9)
+Number of Follow-Up Assessments Completed (M(SD))
+6.25(2.74)
+6.21(2.90)
+5.79(2.90)
+7.33(1.66)
+Note: There were no baseline differences as a function of study group.
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Author Manuscript
+Dahne et al.
+Page 20
+Table 2
+Moodivate Analytics Over Eight Weeks of Study Duration
+Metric
+M(SD)
+Range
+Total Number of Sessions
+46.76(30.10)
+3.00 – 95.00
+Average Time per Session (min)
+3.50(2.76)
+1.27 – 11.18
+Total Time Spent Using Moodivate (min)
+120.76(101.02)
+31.00 – 421.00
+Add Value Event Occurrences
+6.10(3.22)
+1.00 – 11.00
+Add Value-Driven Activity Event Occurrences
+14.71(10.22)
+2.00 – 44.00
+Complete Activity Event Occurrences
+52.24(89.31)
+0.00 – 371.00
+Note: Add value event occurrences = number of values added, Add value-driven activity event occurrences = number of activities added across 
+values, Complete activity event occurrences = number of activities marked as completed.
+Behav Ther. Author manuscript; available in PMC 2020 July 01.
+

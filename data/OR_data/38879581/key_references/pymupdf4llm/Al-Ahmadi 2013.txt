@@ -1,0 +1,874 @@
+_Int. J. Environ. Res. Public Health_ **2013, 10, 5844-5862; doi:10.3390/ijerph10115844**
+
+
+**OPEN ACCESS**
+
+
+## International Journal of Environmental Research and Public Health
+**ISSN 1660-4601**
+www.mdpi.com/journal/ijerph
+_Article_
+
+# NO2 and Cancer Incidence in Saudi Arabia
+
+**Khalid Al-Ahmadi [1,]* and Ali Al-Zahrani [2]**
+
+1 King Abdulaziz City for Science and Technology, P.O. Box 6086, Riyadh 11442, Saudi Arabia
+2 King Faisal Specialist Hospital & Research Centre, P.O. Box 3354, Riyadh 11211, Saudi Arabia;
+E-Mail: alisaz@kfshrc.edu.sa
+
+*** Author to whom correspondence should be addressed; E-Mail: alahmadi@kacst.edu.sa;**
+Tel.: +966-1-481-4542; Fax: +966-1-481-3592.
+
+_Received: 19 August 2013; in revised form: 18 October 2013 / Accepted: 23 October 2013 /_
+_Published:_ _4 November 2013_
+
+**Abstract: Air pollution exposure has been shown to be associated with an increased risk of**
+specific cancers. This study investigated whether the number and incidence of the most
+common cancers in Saudi Arabia were associated with urban air pollution exposure,
+specifically NO2. Overall, high model goodness of fit (GOF) was observed in the Eastern,
+Riyadh and Makkah regions. The significant coefficients of determination (r[2]) were higher
+at the regional level (r[2] = 0.32–0.71), weaker at the governorate level (r[2] = 0.03–0.43), and
+declined slightly at the city level (r[2] = 0.17–0.33), suggesting that an increased aggregated
+spatial level increased the explained variability and the model GOF. However, the low
+GOF at the lowest spatial level suggests that additional variation remains unexplained.
+At different spatial levels, associations between NO2 concentration and the most common
+cancers were marginally improved in geographically weighted regression (GWR) analysis,
+which explained both global and local heterogeneity and variations in cancer incidence.
+High coefficients of determination were observed between NO2 concentration and lung and
+breast cancer incidences, followed by prostate, bladder, cervical and ovarian cancers,
+confirming results from other studies. These results could be improved using individual
+explanatory variables such as environmental, demographic, behavioral, socio-economic,
+and genetic risk factors.
+
+**Keywords: cancer; NO2; Saudi Arabia; ordinary least square; geographically weighted**
+regression; geographic information system
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5845**
+
+**1. Introduction**
+
+A thorough understanding of the consequences of air pollutants on public health is essential for the
+progress of functioning policies to decrease the negative impact of ambient air pollution [1]. Mounting
+evidence indicates that exposure to air pollution might be associated with an increased risk of adverse
+health effects. An association has been reported between exposure to pollutants, such as particulate
+matter (PM), nitrogen dioxide (NO2) and ozone (O3), and increases in hospital admissions for
+cardiovascular and respiratory disease and mortality in Europe and the United Sates [2].
+Several studies have found a relationship between the risk of developing cancer and exposure to air
+pollution [3–5], and many have concluded that long-term exposure to PM air pollution is positively
+associated with increased lung cancer mortality [6–8]. Nyberg _et al. [4] used nitrogen oxide_
+(NOx)/NO2 and SO2 as air pollution indicators from road traffic and heating and found that urban air
+pollution increased lung cancer risk. Based on the well-documented urban/rural difference in lung
+cancer incidence in Oslo, Nafstad et al. [5] found that the adjusted risk ratio for developing lung cancer
+was associated with NOx exposure between 1974 and 1978. Vineis et al. [9] assessed the relationship
+between air pollution (NO2, PM10, and SO2) and lung cancer in Europe. They found an association
+between lung cancer and NO2, while no obvious association was observed for other pollutants.
+In another recent study, an estimated 5%–7% of lung cancers in European non-smokers and
+ex-smokers could be attributed to exposure to high levels of air pollution, including NO2, or vicinity to
+heavy-traffic roads [10]. Evidence for an association between long-term exposure to air pollution
+and lung cancer is not limited to populations in Western countries. A study conducted by Katanoda
+_et al. [11] demonstrated that long-term exposure to air pollution (PM2.5, SO2 and NO2) was related to_
+the development of lung cancer and respiratory diseases in Japan. Raaschou-Nielsen et al. [12] found a
+relationship between NOx concentration and lung cancer risk and living within 50 m of a major road.
+Although most studies have focused on the association between air pollution and lung cancer, there
+is evidence that air pollution is associated with an increased risk for other cancers. Castano-Vinyals
+_et al. [13] reported small-to-moderate positive relationships between bladder cancer and a number of_
+air pollution indicators. A trend analysis conducted in Taiwan demonstrated a significant relationship
+between increases in air pollution and risk of death from bladder cancer [14]. Crouse _et al. [15]_
+examined whether postmenopausal breast cancer was related to urban air pollution using NO2 as an
+indicator of air pollution. They found an approximately 25% increased risk of postmenopausal breast
+cancer for every 5 ppb increase in exposure to the ambient NO2 concentration. Raaschou-Nielsen
+_et al. [16] investigated the association between traffic-related air pollution and risk for cancers other_
+than lung cancer; they modeled the NOx concentration and traffic at the residence level as air pollution
+indicators from traffic. NOx at the residence level was considerably related to brain and cervical
+cancer risk. Rosenlund _et al. [17] temporally analyzed all of the cancer cases that occurred in_
+Stockholm County between 1985 and 1996 and suggested that long-term exposure to traffic-generated
+air pollutants such as NO2 increases the risk of cancer. Based on a follow-up evaluation that was
+conducted in 1999 and 2000 using annual average air pollution exposure data from 1991 to 2000, Kan
+and Gu [18] found significant associations between air pollutants (TSP, SO2 and NOx) and mortality
+from lung cancer in China. Using time-varying Cox proportional hazards models, Yorifuji et al. [19]
+provided support for the prevailing evidence that long-term exposure to traffic-related NO2 air
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5846**
+
+pollution increases the risk of cardiopulmonary mortality as well as lung cancer mortality. In a
+Canadian study, Hystad _et al. [20] developed spatiotemporal models to investigate lung cancer_
+incidence in relation to long-term exposure to ambient air pollutants and found that lung cancer
+incidence increased most with NO2 and PM2.5 exposure.
+However, other studies have reported a moderate, low or no evidence of association between the
+risk of adverse health effects and air pollution. Beelen _et al. [21], for example, investigated the_
+association between lung cancer incidence and air pollution using exposure to black smoke, NO2,
+SO2 and PM as well as traffic intensity variables as air pollution indicators. The relative risks were
+slightly below unity for the overall air pollution concentrations, while they were slightly elevated for
+the traffic variables.
+Exposure to air pollution such as NO2 might be considered to be one environmental risk factor for
+cancer; however, cancer incidence rates are influenced by a combination of genetic, demographic,
+socio-economic and environmental risk factors [22–32]. Regrettably, there seems to be a lack of data
+on these covariates in Saudi Arabia, and thus these covariates could not be analyzed in the present study.
+Most of the abovementioned studies used either logistic regression or classical global regression
+techniques, such as ordinary least square (OLS) regression, which presuppose that the relationship
+between cancer and air pollution is spatially invariant, homogeneous and stationary, i.e., there are no
+local variations in the associations between the dependent and explanatory variables. The concept of
+stationarity is central in the analysis of spatial and temporal variations. A stationary process is a
+process that has similar properties at all locations in the area of interest. A stationary model has the
+same parameters at all locations, whereas a non-stationary model allows the parameters to vary
+locally [33]. Geographically weighted regression (GWR) is a local spatial statistical method used to
+examine spatial non-stationarity by allowing the associations between variables to vary from location
+to location [34]. GWR is a simple but powerful method for exploring non-stationary spatial
+relationships. It is a useful exploratory analytical tool that generates a set of location-specific
+parameter estimates that can be mapped and analyzed to provide information about spatial
+non-stationarity in the relationships between the predictors and the outcome variable [35]. The core
+principle underlying several local methods is the notion of spatial dependency: features close together
+in space tend to be more similar than features that are farther apart. This principle was termed the
+“First Law of Geography” by Tobler [36]. GWR is capable of extending the same principle to
+regression analysis [33].
+The applications of GWR have grown rapidly in various fields, including sociology, health and
+demography [35]. GWR studies in health fields include the analysis of health and disease [37–40],
+health care delivery [41], the spatially varying relationships between immature mosquitoes and human
+population density [42] and gastric cancer in Taiwanese ethnic communities [43]. Mandal et al. [44]
+used OLS and GWR to examine whether breast cancer in females and prostate cancer in males were
+correlated at the county level in the United States using age-adjusted county-level average annual
+incidence rates for Caucasians. GWR revealed a more pronounced association than did OLS, and the
+parameter estimates computed for each county in the GWR model helped to determine that over 76%
+of the counties had a significant positive association between breast and prostate cancer. A more
+relevant study to the present research was conducted by Gilbert and Chakraborty [45], who stated that
+the spatial association between the cumulative cancer risk from exposure to hazardous air pollutants
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5847**
+
+and explanatory variables such as race, ethnicity and socioeconomic status is not stationary throughout
+Florida’s census tracts. They found that conventional multivariate regression techniques such as OLS
+cannot reveal the local variations in these associations, whereas GWR allowed them to examine the
+spatial variation within the study area for each individual model coefficient.
+Cancer incidence and mortality demonstrate non-stationary processes with regional variation and
+spatial drift, as they occur at different rates in different places. However, few studies in the literature
+have reported the use of GWR to assess the relationship between cancer incidence and tropospheric
+NO2. The present study aimed to investigate whether the number and incidence of the most common
+cancers in Saudi Arabia were significantly associated with exposure to urban air pollution (using NO2
+as an indicator) using OLS and GWR in a Geographical Information System (GIS).
+
+**2. Materials and Methods**
+
+_2.1. Cancer Data_
+
+Incidences of cancer were obtained from the Saudi Arabian Cancer Registry (SCR) [46]. The cancer
+dataset included data on diagnosed incidences of cancer in Saudi nationals from January 1998 to
+December 2004. A total of 45,532 cancer patients were diagnosed during this period. Many cancer
+indices have been devised to express the occurrence of cancer and other diseases in each zone. Three
+of the most common indices for cancer research are the crude incidence rate (CIR), the age-specific
+incidence rate (AIR) and the age-standardized incidence rate (ASR) [47,48]. In this study, the CIR for
+a particular cancer site in the human body is the total number of cases registered as a proportion of the
+total population. All rates were expressed as per 100,000 population. The CIR per 100,000 can readily
+be calculated by dividing the total number of cases of a particular cancer type by the population and
+multiplying the result by 100,000. Although age is a well-known covariate for cancer incidence, in the
+present study, the CIR was considered as opposed to an ASR. This decision was made because
+population data by age group are only available at the regional level, not at the governorate and city
+levels, and thus, ASRs could not be computed for governorates and cities. Furthermore, to ensure the
+consistency of the cancer rates for comparison across the three spatial levels, the CIR was most
+appropriate measure.
+The spatial cancer incidence database in Saudi Arabia was designed and developed in the form of
+an ESRI File Geodatabase on three spatial levels: regional, governorates and cities. Saudi Arabia is
+divided into thirteen regions; each region is divided into governorates, and each governorate includes a
+number of cities. The cancer database we obtained had records for individual cancer cases. However,
+the location of each cancer case was not included. To develop a spatial cancer database, the individual
+cancer cases were aggregated into city, governorate, regional and national levels. Starting from the city
+level, all of the cancer cases located in the same city were grouped and aggregated to be represented by
+that city. Next, all of the cancer cases located in certain cities belonging to a specific governorate were
+grouped together and represented by that governorate. At the regional level, all of the cancer cases
+in certain governorates belonging to a specific region were grouped together and represented by
+that region.
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5848**
+
+_2.2. NO2 Data_
+
+NO2 is an omnipresent atmospheric pollutant due to the extensive prevalence of both natural and
+anthropogenic sources, and is a primarily man-made gas. NO2 is produced in the environment as the
+main emission nitrogen oxides (NOx). The NOx that yield NO2 are emitted naturally by biomass
+burning (e.g., forest fires), lightning, and microbial activity in the soil, while they are emitted due to
+anthropogenic activities by fossil fuel and biofuel combustion, power plants, heavy industry and
+vehicular traffic, making it a strong indicator of vehicle emissions. NO2 (and other NOx) is a
+forerunner of a number of harmful secondary air pollutants, including nitric acid and photo oxidants
+(including ozone) [1,49,50].
+
+**Figure 1. Distribution of mean tropospheric NO2 column density, 2003–2010.**
+
+The mean tropospheric NO2 column density data for cities in Saudi Arabia (Figure 1) were
+extracted from a global NO2 pollution map produced by the Satellite Group in the Max-PlanckInstitute for Chemistry in Mainz, Germany [51]. The image shows the global mean tropospheric NO2
+column density between 2003 and 2010 using Envisat observations as measured by the SCIAMACHY
+instrument on ESA’s Envisat, the world’s largest satellite for environmental monitoring.
+“SCIAMACHY is an imaging spectrometer whose primary mission objective is to perform global
+measurements of trace gases in the troposphere and in the stratosphere. The solar radiation
+transmitted, backscattered and reflected from the atmosphere is recorded at relatively high resolution
+(0.2 µm to 0.5 µm) over the range 240 nm to 1700 nm, and in selected regions between 2.0 µm and
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5849**
+
+2.4 µm. SCIAMACHY has three different viewing geometries: nadir, limb, and sun/moon occultations
+which yield total column values as well as distribution profiles in the stratosphere and (in some cases)
+the troposphere for trace gases and aerosols. The nadir and limb viewing strategy of SCIAMACHY
+yields total column values as well as profiles for trace gases and aerosols in the stratosphere.
+Additionally, this enables estimates of global trace gas and aerosol content and distribution in the
+lower stratosphere and troposphere. The measurements obtained from SCIAMACHY enable the
+investigation of a wide range of phenomena which influence atmospheric chemistry such as
+measurement in the troposphere: biomass burning, pollution, arctic haze, forest fires, dust storms,
+industrial plumes; and measurement in the stratosphere: ozone chemistry, volcanic events and solar
+proton events. The spatial resolution of SCIAMACHY depends on the wavelength region and also on
+the solar zenith angle. For most NO2 measurements, the area is 60 × 30 km[2]. Currently, the analysis is
+based on a rather limited set of both uncalibrated and calibrated data that have been released by ESA,
+and therefore has to be considered as preliminary” [50]. A description of the retrieval algorithm used
+and an application to long-term changes of tropospheric NO2 can be found in Richter et al. [52].
+Using the global mean tropospheric NO2 column density map, we first isolated the area of Saudi
+Arabia from the global map and then georeferenced the clipped map (Figure 1). The NO2 values were
+first extracted for Saudi cities using the Sample function with the nearest resampling algorithm, and
+then we aggregated the NO2 values at the governorate and regional levels using the Zonal Statistics
+function in ESRI ArcGIS. An issue associated with the aggregated NO2 is the method by which the
+geographic boundaries of regions and governorates are defined; this difficulty is known as the
+modifiable areal unit problem (MAUP) [53].
+
+_2.3. Spatial Statistical Analysis_
+
+GWR is a reasonably recent contribution to modeling spatially heterogeneous processes. Using
+GWR, parameters can be estimated anywhere in the study area given a dependent variable and a set of
+one or more independent variables measured at areas whose location is known [34,54–57]. In contrast
+to the global regression model OLS, GWR can estimate discrete coefficients for each observation, i.e.,
+geographic features. GWR extends the conventional OLS linear regression models that mask significant
+local variation. The key difference between global and local analyses is that global estimation uses one
+model for all observations, while GWR estimates a particular local model for each location in space.
+GWR is capable of generating parameter estimates for every regression point using observations in a
+given neighborhood. The parameter estimates are characteristically mapped to highlight spatial
+variation [58]. GWR is an extension from global regression to local regression, with the critical idea
+that for each regression point i, there is a bump of influence around i described by the weight function
+such that sampled observations near _i have more influence in the estimation of the parameters than_
+observations sampled further away [34]. The GWR model can be expressed as follows:
+
+�� � �����, ���� ��� ���, ������ � �� (1)
+�
+
+where the dependent variable y is regressed on a set of independent variables, each denoted by xk, and
+the parameters are allowed to vary over space. Here, (ui, vi) denotes the coordinates of the i-th point in
+space, and βk(ui, vi) is a realization of the continuous function βk(ui, vi) at point i; xi1, xi2, . . ., and xip
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5850**
+
+are the explanatory variables at point i; and εi are error terms [34,56]. For a given data set, the local
+parameters _βk(ui,_ _vi) are estimated using the weighted least square procedure. The weights_ _wij for_
+_j = 1,.., n at each location (ui, vi) are obtained as a continuous function of the distance between point i_
+and the other data points.
+Let:
+
+�����, ��� �����, ��� ⋯ �����, ���
+��� ⋮ ⋮ ⋱ ⋮ � (2)
+�����, ��� �����, ��� … �����, ���
+
+be the matrix of the local parameters. Each row is estimated by
+
+β[�]������[�]������[��] �[�]����� (3)
+
+where i = 1, . . ., p represents the row of the matrix, X is the matrix of explanatory variables, y is the
+dependent variable, and W(i) is an n by the n spatial weighting matrix of the form:
+
+�������������, ���, ⋯, ���� (4)
+
+In global regression models such as OLS, every point has the same weight, whereas in local
+regression models such as the GWR model, the spatial weight of these points decreases with the
+distance from the regression point. The weights are computed using a weighting scheme that is known
+as a kernel. Following the suggestions of Fotheringham et al. [34], in this study, the spatial adaptive
+kernel was applied rather than the fixed kernel because cities are not positioned regularly in the study
+area, _i.e., they are heterogeneous and clustered in some areas. The spatial context is a function of a_
+specified number of neighbors. Where the distribution of cities (in this study) is dense, the spatial
+context is smaller; where the distribution of cities is sparse, the spatial context is larger. A spatially
+adaptive kernel is usually formed by sorting the distances of the sample points from the desired
+regression point i and setting the bandwidth so that it includes only the first N observations, where the
+optimal value of _N is determined by the data. The weight can be computed by using the specified_
+kernel, setting the value of any observation whose distance is greater than the bandwidth to zero and
+excluding them from the local calibration [57]. Although a number of kernels are possible, the
+bi-square weighting function is usually used to create adaptive kernels [34] and can be implemented in
+ESRI ArcGIS [38]. Gilbert and Chakraborty [45] used the bi-square weighting function to produce
+adaptive kernels for the GWR model that examined the spatial association between cumulative cancer
+risk from exposure to hazardous air pollutants and explanatory variables such as race, ethnicity and
+socioeconomic status. Charlton and Fotheringham [57] stated that the bi-square weighting function is a
+near-Gaussian function with the useful property that the weight is zero at a finite distance and can be
+expressed as wij = [1 − (dij/b)[2]][2], where dij is the distance between a calibration point i and a sample
+data point j and b is the distance to the Nth nearest neighbor, also known as the bandwidth.
+In GWR, the regression model is adjusted based on the data that are geographically close to a
+specific location. In other words, GWR measures parameters within specified distances (named
+bandwidths) of each other and weights these parameters from an identified regression reference point
+using a spatial weight function. The optimal bandwidth distance or the optimal number of neighboring
+units in the GWR can be specified using either cross-validation or Akaike information criterion (AIC)
+tests. The AIC is considered the most fitting method for applying the adaptive kernel technique
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5851**
+
+because it considers both goodness-of-fit and degrees of freedom [34,58]. In the present study, the
+optimal bandwidth size was found by minimizing the AIC value, following previous examples of
+GWR application [58–62]. The bandwidth was found by minimizing the AIC value. The AIC criterion
+in GWR is computed as in Hurvich et al. [63]:
+
+�������
+AICc = 2n loge�� + n loge(2) + �� (5)
+
+���������[�]
+
+where n is the number of observations in the dataset, �� is the estimate of the standard deviation of the
+residuals, and tr(S) is the trace of the hat matrix. The AIC can be used to compare models of the same
+independent variable and compare the global OLS model with a local GWR model [57]. The OLS and
+GWR models were fitted and mapped using ESRI ArcGIS 10.1.
+
+**3. Results**
+
+Our analysis of the mean tropospheric NO2 data for cities in Saudi Arabia (Figure 1) indicates that
+the high vertical column distributions of NO2 were associated with major cities across Saudi Arabia,
+including Riyadh (central) and Jeddah (western coast), and cities in the Eastern Province, including
+Dammam, Khobar, Jubail, and Ras Tanura.
+A total of 45,532 cancer cases (22,930 males and 22,602 females) were diagnosed among Saudi
+Nationals between January 1998 and December 2004. In Saudi Arabia, the overall CIR between 1998
+and 2004 was 42.41 per 100,000 people in the population (42.61 among males and 42.22 among
+females) (Figure 2), which indicates that cancer incidence is low among Saudi nationals. In a
+comparison of the CIRs of overall cancers in the Gulf Cooperation Council (GCC) countries [25], the
+rate observed among Saudis was lower than that observed in Bahrain, Qatar, Kuwait and Oman
+(51–93 among males and 47–98 among females) between 1998 and 2001 and lower than the
+worldwide rate (188 per 100,000) in 2008 [23]. The overall ASR of cancer at all sites in Saudi Arabia
+during the period between 1998 and 2004 ranged between 70 and 80 per 100,000 people
+(74–80 among males and 68–80 among females). Therefore, Saudi Arabia exhibited a lower ASR than
+did other GCC countries, such as Qatar (male: 165.5; female: 172.4) and Bahrain (male: 157.7; female:
+144.6) between 1998 and 2001 [25]; the ASR of Saudi Arabia was also lower than the worldwide
+ASRs of 204 and 165 per 100,000 for males and females, respectively, in 2008 [23]. Liver cancer was
+the most common, accounting for 8.84% of all cancers in males, followed closely by non-Hodgkin’s
+lymphoma (NHL) with 8.80% and leukemia with 8.19%; colorectal cancer ranked 4th, followed by
+lung and prostate cancers. In females, breast cancer was the most common, accounting for 20.2% of all
+cancers in females, followed by thyroid cancer with 9.3%. Colorectal cancer ranked 3rd and was
+closely followed by NHL and leukemia. Riyadh region reported 13,063 cancer cases, accounting for
+28.69% of all cancer diagnoses between 1998 and 2004, followed by Makkah region, which reported
+10,479 cases, accounting for 23.01%, and Eastern province, which reported 7,698 cases, accounting
+for 16.91%. These three regions showed a significantly increasing trend in the overall number of
+cancer cases diagnosed between 1998 and 2004. Alahsa governorate (located in the Eastern region)
+reported the highest CIR, with 284.71 cases per 100,000 population. Ras Tanura governorate (Eastern
+region) was second, with a CIR of 113.82 cases per 100,000 population, and Shagra governorate
+ranked third, with a CIR of 110.96 cases per 100,000 population. Baha, Jeddah, Riyadh, Jazan,
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5852**
+
+Dammam and Al-Khobar were among the governorates with the highest rates of all cancers, with CIRs
+ranging from 53.98 to 69.15 per 100,000 population. Samtah city (Jazan region) reported the highest
+CIR, with 177.13 per 100,000 population, and Al Qatif city (Eastern region) was second, with a CIR of
+173.1 per 100,000 population. Al-Khobar, Shagra, Jazan, Alqunfidhah and Sarat Abidah were among
+the cities with the highest CIRs of all cancers, which ranged between 135.55 and 171.1 per 100,000
+population (Table 1, Figures 2 and 3).
+
+**Table 1. Number, percentage, crude incidence rate (CIR) and age-standardized incidence**
+rate (ASR) of all cancers, 1998–2004.
+
+**All Cases** **Males** **Females** **Avg.**
+**Region**
+
+**Number** **Percent** **CIR** **ASR** **Number** **Percent** **CIR** **ASR** **Number** **Percent** **CIR** **ASR** **NO2**
+
+Riyadh 13,063 28.69 54.88 47.34 6,512 28.4 53.60 46.09 6,551 28.98 56.22 45.37 3.34
+
+Eastern 7,698 16.9 46.42 41.41 3,867 16.86 45.54 43.31 3,830 16.95 47.35 38.53 6.28
+
+Makkah 10,479 23.01 44.51 33.10 5,228 22.8 44.35 31.78 5,251 23.23 44.67 32.00 3.23
+
+Madinah 2,855 6.27 38.57 28.63 1,442 6.29 39.40 28.98 1,413 6.25 37.76 27.72 1.39
+
+Qassim 1,992 4.37 37.45 26.30 1,030 4.49 38.86 27.15 962 4.26 36.06 24.94 3.18
+
+Baha 779 1.71 34.94 18.88 374 1.63 35.95 19.56 405 1.79 34.05 18.25 1.00
+
+Najran 760 1.67 34.19 24.79 419 1.83 37.93 28.56 341 1.51 30.49 20.98 0.90
+
+Hail 948 2.08 32.05 18.68 481 2.1 33.42 18.99 467 2.07 30.74 18.02 1.70
+
+Asir 2,957 6.49 31.09 20.40 1,522 6.64 32.89 20.76 1,435 6.35 29.38 19.53 1.24
+
+Tabuk 1,160 2.55 30.84 27.41 612 2.67 31.63 30.42 548 2.42 30.00 24.93 1.48
+
+Jouf 586 1.29 29.50 21.83 306 1.33 30.75 22.78 280 1.24 28.25 20.71 1.78
+
+Northern 430 0.94 27.55 21.16 210 0.92 26.91 21.63 220 0.97 28.19 21.05 0.93
+
+Jazan 1,613 3.54 25.03 16.77 805 3.51 25.60 16.51 808 3.57 24.49 16.65 2.13
+
+**Figure 2. Crude incidence rate (CIR) of all cancers by year.**
+
+The association between the mean tropospheric NO2 and the number and incidence rates of the most
+common cancers in Saudi Arabia at the region, governorate and city levels were examined using OLS
+and GWR. A significant association was found, but substantially smaller and less robust associations
+were also observed. It was found that the number of cancer cases has strong associations with CIR
+(r[2] = 0.80, 0.73 and 0.84 for all cases, males and females respectively) and ASR (r[2] = 0.76, 0.64 and
+0.80 for all cases, males and females respectively). This justifies the use of the number of cancer cases
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5853**
+
+in the analysis to detect association between cancer and NO2. Tables 2–4 show the associations
+between NO2 and the most common cancers at the region, governorate and city levels.
+
+**Figure 3. Crude incidence rates of all cancers for the regions, governorates and cities**
+(1998–2004) and mean tropospheric nitrogen dioxide (NO2) column density (2003–2010).
+
+**Table 2. Association between NO2 and the most common cancers at the regional level.**
+
+**Cancer** **OLS-NO** **OLS-CIR**
+All Cancers 0.13 0.43 *
+Liver 0.21 0.06
+Breast 0.50 * 0.71 *
+Colorectal 0.40 * 0.37 *
+NHL 0.38 * 0.17
+Leukemia 0.40 * 0.12
+Thyroid 0.41 * 0.11
+Lung 0.62 * 0.59 *
+Other Skin 0.32 * 0.00 °
+Hodgkin’s Disease 0.55 * 0.17 °
+Bladder 0.55 * 0.22 *°
+Cervical 0.46 * 0.41 *
+Ovarian 0.38 * 0.37 *
+Prostate 0.56 * 0.61 *
+
+**OLS: Ordinary Least Square; NO: Number; CIR: Crude Incidence Rate; * Statistically significant at p < 0.05;**
+° Violated spatial autocorrelation.
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5854**
+
+**Table 3. Association between NO2 and the most common cancers at the governorate level.**
+
+**Cancer** **OLS-NO** **OLS-CIR** **GWR-NO** **GWR-CIR**
+All Cancers 0.31 *° 0.06 * 0.33 ° 0.14
+Liver 0.26 ° 0.05 * 0.26 ° 0.10
+Brest 0.33 *° 0.09 *° 0.39 ° 0.39
+Colorectal 0.32 *° 0.06 * 0.34 ° 0.14
+NHL 0.30 *° 0.03 * 0.33 ° 0.06
+Leukemia 0.28 *° 0.04 * 0.28 ° 0.06 °
+Thyroid 0.27 ° 0.05 *° 0.27 ° 0.18
+Lung 0.32 * 0.02 ° 0.43 0.44 °
+Other Skin 0.28 *° 0.005 0.30 ° 0.03
+Hodgkin’s Disease 0.30 *° 0.03 ° 0.31 ° 0.17
+Bladder 0.31 * 0.007 ° 0.33 ° 0.08
+Cervical 0.33 * 0.05 * 0.42 ° 0.15
+Ovarian 0.33 * 0.02 0.39 ° 0.05
+Prostate 0.31 *° 0.05 ° 0.33 ° 0.31
+
+**OLS: Ordinary Least Square;** **GWR: Geographically Weighted Regression;** **NO: Number;** **CIR: Crude**
+Incidence Rate; * Statistically significant at p < 0.05 (OLS); ° Violated spatial autocorrelation.
+
+**Table 4. Association between NO2 and the most common cancers at the cities level.**
+
+**Cancer** **OLS-NO** **OLS-CIR** **GWR-NO** **GWR-CIR**
+All Cancers 0.17 ° 0.03 ° 0.23 0.17 °
+Liver 0.13 ° 0.0002 0.17 0.22 °
+Brest 0.20 *° 0.10 *° 0.29 0.11 °
+Colorectal 0.17 ° 0.05 *° 0.24 0.06 °
+NHL 0.16 ° 0.006 ° 0.24 0.14 °
+Leukemia 0.14 ° 0.006 ° 0.18 0.14 °
+Thyroid 0.14 ° 0.017 ° 0.17 0.08 °
+Lung 0.23 * 0.11 *° 0.33 0.13 °
+Other Skin 0.15 ° 0.0003 0.20 0.21 °
+Hodgkin’s Disease 0.17 0.005 ° 0.22 0.22
+Bladder 0.17 * 0.008° 0.25 0.19 °
+Cervical 0.18 *° 0.04 *° 0.30 0.05 °
+Ovarian 0.18 *° 0.007 ° 0.29 0.09 °
+Prostate 0.18 *° 0.10 *° 0.24 0.14 °
+
+**OLS: Ordinary Least Square;** **GWR: Geographically Weighted Regression;** **NO: Number;** **CIR: Crude**
+Incidence Rate; * Statistically significant at p < 0.05 (OLS); ° Violated spatial autocorrelation.
+
+At the regional level (Table 2), the OLS method indicated that the numbers of lung, prostate,
+Hodgkin’s disease, bladder and breast cancers (r[2] = 0.62, 0.56, 0.55, 0.55 and 0.50, respectively,
+_p < 0.05) were significantly positively associated with NO2. While using the CIR, the main significant_
+associations were positive associations between NO2 and breast, prostate and lung cancers (r[2] = 0.71,
+0.61 and 0.59, respectively, _p_ < 0.05). It was found that ASR at the regional level has a stronger
+association with NO2 (r[2] = 0.51, 0.49 and 0.52 for all cases, males and females respectively) than does
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5855**
+
+CIR (r[2] = 0.43, 0.37 and 0.47 for all cases, males and females respectively). This implies that if we
+have data for ASR at finer geographic levels, they might have stronger associations with NO2 as well.
+At the governorate level (Table 3), the overall values of the coefficient of determination r[2] were
+generally less than those found at the regional level. At the spatial governorate level, the OLS method
+indicated that the numbers of diagnosed breast, lung, bladder, cervical and ovarian cancers (r[2] = 0.33,
+0.32, 0.31, 0.33 and 0.33, p < 0.05) were the highest in terms of a significant association with NO2.
+However, the spatial autocorrelation of breast cancer violated the assumption of independence based
+on the clustered standardized residual error.
+The significant associations between NO2 and the CIRs of the most common cancers were low
+among the most common cancers, and the highest was found for colorectal and all cancers (r[2] = 0.06,
+_p < 0.05). Using the GWR method, the highest significant correlation was found between NO2 and the_
+number of diagnosed lung cancers (r[2] = 0.43). The CIR of lung cancer showed the highest correlation
+(r[2] = 0.44), but the spatial autocorrelation violated the assumption of independence based on the
+clustered standardized residual error. A significant correlation between NO2 and the CIR of the most
+common cancers was also found for breast and prostate cancers (r[2] = 0.39 and 0.31, respectively).
+At the cities level (Table 4), the overall values of the coefficient of determination r[2] were generally
+lower than those found at the regional and governorate levels. At this spatial level, OLS and GWR
+were applied for the number of diagnosed cancers and the CIR. Using OLS, the highest significant
+association with NO2 was found for the number of lung cancer diagnoses (r[2] = 0.23, p < 0.05), while
+for the CIR, there was no significant association (r[2] ≤ 0.0003, _p > 0.05). Using GWR, the highest_
+significant correlation was found between NO2 and the number of lung cancer diagnoses (r[2] = 0.33)
+followed by cervical, ovarian and breast cancers (r[2] = 0.30, 0.29 and 0.29, respectively). Regarding
+the CIR, the highest significant correlation was found for Hodgkin’s disease (r[2] = 0.22), whereas the
+other most common cancers were violated by the spatial autocorrelation of clustered standardized
+residual error. Overall, high coefficients of determination (r[2]) were observed in the Eastern, Riyadh
+and Makkah regions and in their governorates and cities.
+
+**4. Discussion**
+
+This study aimed to investigate whether the number of cases and incidence of the most common
+cancers in Saudi Arabia between 1998 and 2004 were significantly associated with exposure to NO2
+urban air pollution using the OLS and GWR models in GIS. This study is the first in Saudi Arabia and
+the region to use spatial and non-spatial cancer data, the spatial cofounding factor (i.e., distribution
+surface of NO2), and the methods applied.
+The high NO2 concentrations in the major cities across Saudi Arabia could be attributed to vehicle
+emissions and the chemical industries. Additionally, the Eastern region contains Saudi Arabia’s
+massive petroleum resources, as it is home to most of Saudi Arabia’s oil production. The province is
+also home of the City of Jubail, which hosts the Jubail Industrial City, a global hub for chemical
+industries and the largest industrial city in the Middle East. It also holds the Middle East’s largest and
+the world’s fourth largest petrochemical company. The Eastern region also encompasses Ras Tanura
+city, which is a major oil port and oil operations center for Saudi Aramco, the largest oil company in
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5856**
+
+the world. The NO2 concentrations in Riyadh and Jeddah, the two largest cities in Saudi Arabia, could
+be attributed to the large number of cars and urban activities.
+There were statistically significant associations between the concentration of NO2 air pollution and
+the most common cancers diagnosed between 1998 and 2004 in Saudi Arabia. This result can be
+explained by the fact that NO2 is much more concentrated in urban areas, where more cancer cases
+occur because of the size of the population. However, the coefficient of determination of these
+associations varied between the spatial levels of analysis (regions, governorates and cities), the
+methods used (OLS and GWR), the measurement of cancer data employed (diagnosed number or CIR)
+and the diagnosed cancer sites. Notably, the only results considered in this study were those significant
+at p < 0.05 and the standardized residual errors that were not spatially autocorrelated.
+Regarding the spatial level of analysis, the significant coefficients of determination (r[2]) were higher
+at the regional level (r[2] =0.32–0.71), weaker at the governorate level (r[2] =0.03–0.43) and declined
+slightly at the city level (r[2] = 0.17–0.33). The finding that the association was higher at the regional
+level may be attributable to the rural/urban variability in NO2, which is fairly visible in Figure 1.
+However, the low values of the coefficients of determination at the lowest spatial level (i.e., cities)
+suggest that additional variation remains unexplained. Thus, factors other than NO2 may be associated
+with the risk of cancer.
+Robinson [64] coined the terms “ecological fallacy” and “ecological correlation”, which refer to the
+inappropriate use of an aggregated statistic to make inferences about an individual. This study is
+considered an ecological correlation because the units of analysis in this study were people within
+cities, governorates and regions but not individual people: _i.e., ecological inferences about the_
+individual were drawn from aggregate data. This is a common concern in ecological studies in which
+exposure and response are quantified only for aggregates and not individuals [65].
+Regarding the methods used, only the OLS method was applied at the regional level because there
+are thirteen administrative regions in Saudi Arabia, and the minimum recommended number of
+features to apply GWR is 100. Using OLS, the significant coefficients of determination at the regional
+level were high (r[2] = 0.32–0.71). At the governorate and city levels, GWR indicated that the
+associations between the concentration of NO2 air pollution and the most common cancers were
+marginally improved (r[2] = 0.03–0.33 using OLS and r[2] = 0.03–0.43 using GWR for governorates;
+r[2] = 0.17–0.23 using OLS and r[2] = 0.17–0.33 using GWR for cities). Therefore, a non-stationary local
+model (i.e., GWR) gave a much better account than a global model (i.e., OLS) for spatial estimation
+and prediction. Although global models mask widespread local variation, local models increase
+prediction accuracy by offering the opportunity to explore and understand local variations and
+allowing the spatial drift of regression parameters to be identified, estimated and mapped.
+Regarding the employed measurement of cancer data, regardless of the spatial level of analysis or
+the method used, the significant coefficients of determination were r[2] = 0.17–0.62 using the number of
+diagnosed cancer cases, whereas they were r[2] = 0.05–0.71 using the CIRs. This finding suggests that a
+correlation exists between NO2 and cancer development. A high association between cancers and NO2
+exposure for both the number and incidence rate might imply that such a relationship is highly focused
+on urban areas with a high population and high NO2 concentration due to urban and industrial
+activities. This result is largely factual, particularly when one examines the areas with a high
+association between the two variables. Areas with high associations were clustered in the Eastern and
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5857**
+
+Riyadh regions. The industrial and petrochemical activities in Saudi Arabia are largely located in the
+Eastern Province, which is the largest producer of oil and related petrochemical activities worldwide as
+well as a high densely populated area. By contrast, the Riyadh region includes the capital city and is
+the most populated area in the country.
+In terms of tumor location, a high association was observed between the concentration of NO2 air
+pollution and the risk of developing lung and breast cancers, followed by prostate, bladder, cervical
+and ovarian cancers. This finding corroborates results from other studies. For example, associations
+have been reported between NO2 and lung cancer [4,6–8,11], breast cancer [14], bladder cancer [13]
+and cervical and brain cancers [16].
+However, this study is limited because the study cohorts were cancer incidence rates between 1998
+and 2004 versus the NO2 concentration between 2003 and 2010. Exposure must precede the outcome,
+and a decade may be required for cancer to develop. It would have been preferable to use NO2 data for
+previous decades; unfortunately, such data were not available. One could argue that the overall pattern
+and trend in the NO2 concentration may not have changed substantially. Outdoor NO2 air pollution can
+mainly be attributed to power plants, heavy industrial activities and vehicular traffic. Al-Jeelani [66]
+stated that there is a lack of data about air pollution generated by power plants in Saudi Arabia and that
+the most significant source of air pollutants such as NO2 is automobiles. The number of automobiles in
+most Saudi cities increases in tandem with population growth. Heavy industrial activities in Saudi
+Arabia were established a few decades ago and are concentrated in certain major regions: Eastern,
+Riyadh and Makkah. Therefore, it can be claimed that the overall pattern and trends related to NO2
+concentration may not have changed significantly between 1998 and 2004 compared with the period
+between 2003 and 2010. Moreover, exposure to air pollutants such as NO2 is one environmental risk
+factor for cancer. However, cancer incidence is explained by a combination of genetic, demographic,
+socio-economic, environmental, behavioral and cultural risk factors. In particular, the variations in
+cancer incidence are probably associated with many variables, including population aging and growth,
+tobacco smoking status (intensity and duration), occupational exposures, environmental exposures and
+factors, dietary habits (including unhealthy dietary habits), physical inactivity, the prevalence of
+obesity, genetic factors, the lack of screening programs and the accessibility of specialized cancer
+centers [22–32]. Regrettably, there appears to be a lack of data on these covariates in Saudi Arabia,
+and thus, they could not be analyzed in the present study.
+
+**5. Conclusions**
+
+This study is the first of its kind in Saudi Arabia because it relied on reliable cancer data acquired
+from the Saudi Cancer Registry, the spatial database of cancer incidence rates developed by the
+authors and the global NO2 map created using the Envisat observations, as measured by the
+SCIAMACHY instrument on ESA’s Envisat. Additionally, the statistical methodology employed in
+this study was a combination of global models, such as OLS, and local spatial statistical models, such
+as GWR, which captured and explained both the global and local heterogeneity and variations in the
+number of cancer cases and incidence rates. However, there is a lack of information on other
+contributing (cofounding) factors. Although an association was found between exposure to NO2 air
+pollution and the development of some cancers, these inferences may be inaccurate to a certain extent
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5858**
+
+because they are uncertainly supported by the aggregate data. If exposure to NO2 was found in
+individual-level data, the inferences would be more reliable and could be used strategically to create
+health policies, health planning services and preventive policies and to control emissions.
+Environmental, demographic, behavioral, socio-economic, genetic and other risk factors are of great
+importance in spatial epidemiological studies of cancer. Countries with noticeable industrial
+expansions and increased burden of cancer such as Saudi Arabia should establish a nationwide spatial
+database of risk factors at the individual level. Such data will be vital for spatial epidemiological
+studies and for studies related to more general health concerns.
+
+**Acknowledgments**
+
+The authors acknowledge with gratitude King Abdulaziz City for Science and Technology, the
+Saudi Cancer Registry and its board members and King Faisal Specialist Hospital & Research Centre.
+
+**Conflicts of Interest**
+
+The authors declare no conflict of interest.
+
+**References**
+
+1. WHO (World Health Organization), Regional Office for Europe Health. _Health Aspects of Air_
+_Pollution with Particulate Matter, Ozone and Nitrogen Dioxide; WHO Regional Office for Europe:_
+Bonn, Germany, 2003.
+2. Barillaro, G.; Diligenti, A.; Strambini, L.M.; Comini, E.; Faglia, G. NO2 adsorption effects on
+p[+]-n silicon junctions surrounded by a porous layer. Sensors Actuat. B Chem. **2008, 134, 922–927.**
+3. Beeson, W.L.; Abbey, D.E.; Knutsen, S.F. Long-term concentrations of ambient air pollutants and
+incident lung cancer in California adults: Results from the AHSMOG study. Adventist Health
+Study on Smog. Environ. Health Perspect. 1998, 106, 813–823.
+4. Nyberg, F.; Gustavsson, P.; Järup, L.; Bellander, T.; Berglind, N.; Jakobsson, R.; Pershagen, G.
+Urban air pollution and lung cancer in Stockholm. Epidemiology **2000, 11, 487–495.**
+5. Nafstad, P.; Haheim, L.L.; Oftedal, B.; Gram, F.; Holme, I.; Hjermann, I.; Leren, P. Lung cancer
+and air pollution: A 27 year follow up of 16 209 Norwegian men. Thorax **2003, 58, 1071–1076.**
+6. Dockery, D.W.; Pope, C.A.; Xu, X.; Spengler, J.D.; Ware, J.H.; Fay, M.E.; Ferris, B.G., Jr.;
+Speizer, F.E. An association between air pollution and mortality in six US cities. N. Engl. J. Med.
+**1993, 329, 1753–1759.**
+7. Pope, C.A.; Thun, M.J.; Namboodiri, M.M.; Dockery, D.W.; Evans, J.S.; Speizer, F.E.;
+Heath, C.W. Particulate air pollution as a predictor of mortality in a prospective study of US
+adults. Am. J. Respir. Crit. Care Med. 1995, 151, 669–674.
+8. Pope, C.A., III; Burnett, R.T.; Thun, M.J.; Calle, E.E.; Krewski, D.; Ito, K.; Thurston, G.D. Lung
+cancer, cardiopulmonary mortality, and long-term exposure to fine particulate air pollution. JAMA
+**2002, 287, 1132–1141.**
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5859**
+
+9. Vineis, P.; Hoek, G.; Krzyzanowski, M.; Vigna-Taglianti, F.; Veglia, F.; Airoldi, L.; Autrup, H.;
+Dunning, A.; Garte, S.; Hainaut, P.; et al. Air pollution and risk of lung cancer in a prospective
+study in Europe. Int. J. Cancer **2006, 119, 169–174.**
+10. Vineis, P.; Hoek, G.; Krzyzanowski, M.; Vigna-Taglianti, F.; Veglia, F.; Airoldi, L.; Overvad, K.;
+Raaschoi-Nielsen, O.; Clavel-Chapelon, F.; Linseisen, J.; _et al. Lung cancers attributable to_
+environmental tobacco smoke and air pollution in non-smokers in different European countries:
+A prospective study. Environ. Health **2007, 6, doi:10.1186/1476-069X-6-7.**
+11. Katanoda, K.; Sobue, T.; Satoh, H.; Tajima, K.; Suzuki, T; Nakatsuka, H.; Takezaki, T.;
+Nakayama, T.; Nitta, H.; Tanabe, K.; et al. An association between long-term exposure to ambient
+air pollution and mortality from lung cancer and respiratory diseases in Japan. J. Epidemiol. 2011,
+_21, 132–143._
+12. Raaschou-Nielsen, O.; Andersen, Z.J.; Hvidberg, M.; Jensen, S.S.; Ketzel, M.; Sørensen, M.;
+Loft, S.; Overvad, K.; Tjønneland, A. Lung cancer incidence and long-term exposure to air
+pollution from traffic. Environ. Health Perspect. 2011, 119, 860–865.
+13. Castaño-Vinyals, G.; Cantor, K.P.; Malats, N.; Tardon, A.; Garcia-Closas, R.; Serra, C.;
+Carrato, A.; Rothman, N.; Vermeulen, R.; Silverman, D.; et al. Air pollution and risk of urinary
+bladder cancer in a case-control study in Spain. Occup. Environ. Med. 2008, 65, 56–60.
+14. Liu, C.C.; Tsai, S.S.; Chiu, H.F.; Wu, T.N.; Chen, C.C.; Yang, C.Y. Ambient exposure to criteria
+air pollutants and risk of death from bladder cancer in Taiwan. Inhal. Toxicol. 2010, 21, 48–54.
+15. Crouse, D.L.; Goldberg, M.S.; Ross, N.A.; Chen, H.; Labreche, F. Postmenopausal breast cancer
+is associated with exposure to traffic-related air pollution in Montreal, Canada: A case-control
+study. Environ. Health Perspect. 2010, 118, 1578–1583.
+16. Raaschou-Nielsen, O.; Andersen, Z.J.; Hvidberg, M.; Jensen, S.S.; Ketzel, M.; Sørensen, M.;
+Hansen, J.; Loft, S.; Overvad, K.; Tjønneland, A. Air pollution from traffic and cancer incidence:
+A Danish cohort study. Environ. Health **2011, 10, 67.**
+17. Rosenlund, M.; Bellander, T.; Nordquist, T.; Alfredsson, L. Long-term exposure to air pollution
+and cancer. Epidemiology **2007, 18, S66.**
+18. Kan, H.; Gu, D. Association between Long-Term Exposure to Outdoor Air Pollution and
+Mortality in China: A Cohort Study. In Proceedings of the ISEE 22nd Annual Conference, Seoul,
+Korea, 28 August–1 September 2010.
+19. Yorifuji, T.; Kashima, S.; Tsuda, T.; Ishikawa-Takata, K.; Ohta, T.; Tsuruta, K.; Doi, H.
+Long-term exposure to traffic-related air pollution and the risk of death from hemorrhagic stroke
+and lung cancer in Shizuoka. Sci. Total Environ. 2013, 443, 397–402.
+20. Hystad, P.; Demers, P.A.; Johnson, K.C.; Carpiano, R.M.; Brauer, M. Long-term residential
+exposure to air pollution and lung cancer risk. Epidemiology **2013, 24, 762–772.**
+21. Beelen, R.; Hoek, G.; van den Brandt, P.A.; Goldbohm, R.A.; Fischer, P.; Schouten, L.J.;
+Armstrong, B.; Brunekreef, B. Long-term exposure to traffic-related air pollution and lung cancer
+risk. Epidemiology **2008, 19, 702–710.**
+22. American Cancer Society. _Global Cancer Facts & Figures, 2nd ed.; American Cancer Society:_
+Atlanta, GA, USA, 2011.
+23. Ferlay, J.; Shin, H.R.; Bray, F.; Forman, D.; Mathers, C.; Parkin, D.M. Estimates of worldwide
+burden of cancer in 2008: GLOBOCAN 2008. Int. J. Cancer **2010, 127, 2893–2917.**
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5860**
+
+24. Clapp, R.W.; Jacobs, M.M.; Loechler, E.L. Environmental and occupational causes of cancer:
+New evidence 2005–2007. Rev. Environ. Health **2008, 23, 1–37.**
+25. Al-Hamdan, N.; Ravichandran, K.; Al-Sayyad, J.; Al-Lawati, J.; Khazal, Z.; Al-Khateeb, F.;
+Abdulwahab, A.; Al-Asfour, A. Incidence of cancer in Gulf Cooperation Council countries,
+1998–2001. East. Mediterr. Health J. 2009, 15, 600–611.
+26. Kirkeleit, J.; Riise, T.; Bratveit, M.; Moen, B.E. Increased risk of acute myelogenous leukemia
+and multiple myeloma in a historical cohort of upstream petroleum workers exposed to crude oil.
+_Cancer Causes Control_ **2008, 19, 13–23.**
+27. Nyberg, F.; Gustavsson, P.; Järup, L.; Bellander, T.; Berglind, N.; Jakobsson, R.; Pershagen, G.
+Urban air pollution and lung cancer in Stockholm. Epidemiology **2000, 11, 487–495.**
+28. Memon, A.; Darif, M.; Al-Saleh, K.; Suresh, A. Epidemiology of reproductive and hormonal
+factors in thyroid cancer: Evidence from a case-control study in the Middle East. Int. J. Cancer
+**2002, 97, 82–89.**
+29. Sakoda, L.C.; Horn-Ross, P.L. Reproductive and menstrual history and papillary thyroid cancer
+risk: The San Francisco Bay Area thyroid cancer study. _Cancer Epidemiol. Biomark._ **2002,** _11,_
+51–57.
+30. Santamaría-Ulloa, C. The impact of pesticide exposure on breast cancer incidence. Evidence from
+Costa Rica. _Población y Salud en Mesoamerica_ **2009,** _7. Available online: http://ccp.ucr.ac.cr/_
+revista/volumenes/7/7-1/7-1-1/7-1-1-ing.pdf (accessed on 13 December 2012).
+31. Blot, W.J.; Fraumeni, J.F., Jr. Cancers of the Lung and Pleura. In _Cancer Epidemiology and_
+_Prevention, 2nd ed.; Schottenfeld, D., Fraumeni, J.F., Jr., Eds.; Oxford University Press: New_
+York, NY, USA, 1996; pp. 637–665.
+32. Twigg, L.; Moon, G.; Walker, S. _The Smoking Epidemic in England; Health Development_
+Agency: London, UK, 2004.
+33. Lloyd, C.D. Local Models for Spatial Analysis; CRC Press: Boca Raton, FL, USA, 2011.
+34. Fotheringham, A.S.; Brunsdon, C.; Charlton, M. _Geographically Weighted Regression: The_
+_Analysis of Spatially Varying Relationships; Wiley: Chichester, UK, 2002._
+35. Matthews, S.A.; Yang, T.C. Mapping the results of local statistics: Using geographically weighted
+regression. Demogr. Res. 2012, 26, 151–166.
+36. Tobler, W.R. A computer movie simulating urban growth in the Detroit region. _Econ. Geogr._
+**1970, 46, 234–240.**
+37. Goovaerts, P. Analysis and Detection of Health Disparities Using Geostatistics and a Space-Time
+Information System: The Case of Prostate Cancer Mortality in the United States, 1970–1994.
+In Proceedings of GIS Planet 2005, Estoril, Portugal, 30 May–2 June 2005.
+38. Nakaya, T.; Fotheringham, A.S.; Brunsdon, C.; Charlton, M. Geographically weighted Poisson
+regression for disease association mapping. Stat. Med. 2005, 24, 2695–2717.
+39. Yang, T.C.; Teng, H.W.; Haran, M. The impacts of social capital on infant mortality in the U.S.:
+A spatial investigation. Appl. Spat. Anal. **2009, 2, 211–227.**
+40. Chen, V.Y.J.; Wu, P.C.; Yang, T.C.; Su, H.J. Examining non-stationary effects of social
+determinants on cardiovascular mortality after cold surges in Taiwan. _Sci. Total Environ._ **2010,**
+_408, 2042–2049._
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5861**
+
+41. Shoff, C.; Yang, T.C.; Matthews, S.A. What has geography got to do with it? Using GWR to
+explore place-specific associations with prenatal care utilization. GeoJournal **2012, 77, 331–341.**
+42. Lin, C.H.; Wen, T.H. Using geographically weighted regression (GWR) to explore spatial varying
+relationships of immature mosquito and human densities with the incidence of dengue. _Int. J._
+_Environ. Res. Public Health_ **2011, 8, 2798–2815.**
+43. Tsai, P.J. The analysis of geographically weighted regression pertaining to gastric cancer and
+Taiwanese ethnic communities. _IPCBEE_ **2011,** _16. Available online: http://www.ipcbee.com/_
+vol16/1-E011.pdf (accessed on 6 September 2012).
+44. Mandal, R.; St-Hilaire, S.; Kie, J.G.; Derryberry, D. Spatial trends of breast and prostate cancers
+in the United States between 2000 and 2005. Int. J. Health Geogr. **2009,** _8, doi:10.1186/1476-_
+072X-8-53.
+45. Gilbert, A.; Chakraborty, J. Using geographically weighted regression for environmental justice
+analysis: Cumulative cancer risks from air toxics in Florida. Soc. Sci. Res. 2011, 40, 273–286.
+46. SCR (Saudi Cancer Registry). Available online: http://www.oncology.org.sa/portal/index.php?
+option=com_content&view=article&id=145&Itemid=130&lang=en (accessed on 25 October
+2013).
+47. Boyle, P.; Parkin, D.M. Statistical Methods for Registries. In Cancer Registration: Principles and
+_Methods; Jensen, O.M., Parkin, D.M., MacLennan, R., Muir, C.S., Skeet, R.G., Eds.; IARC:_
+Lyon, France, 1991; IARC Scientific Publication No. 95, pp. 126–158.
+48. Nandakumar, A.; Gupta, P.C.; Gangadharan, P.; Visweswara, R.N.; Parkin, D.M. Geographic
+pathology revisited: Development of an atlas of cancer in India. _Int. J. Cancer_ **2005,** _116,_
+740–754.
+49. ESA (European Space Agency). Global Air Pollution Map Produced by Envisat’s SCIAMACHY.
+Available online: http://www.esa.int/Our_Activities/Observing_the_Earth/Global_air_pollution
+_map_produced_by_Envisat_s_SCIAMACHY (accessed on 27 December 2012).
+50. Tropospheric NO2 from SCIAMACHY Measurements. Available online: http://www.iup.unibremen.de/doas/no2_tropos_from_scia.htm#Introduction (accessed on 29 December 2012).
+51. Beirle, S.; Wagner, T. TRACE GASES (NO2), Satellite Group, Max-Planck-Institute for
+
+Chemistry in Mainz, Germany. Available online: http://joseba.mpch-mainz.mpg.de/no2_nad.htm
+(accessed on 27 December 2012).
+52. Richter, A.; Burrows, J.P.; Nüss, H.; Granier, C.; Niemeier, U. Increase in tropospheric nitrogen
+dioxide over China observed from space. Nature **2005, 437, 129–132.**
+53. Openshaw, S. The Modifiable Areal Unit Problem; Geo Books: Norwich, UK, 1984.
+54. Brunsdon, C.; Fotheringham, A.S.; Charlton, M.E. Geographically weighted regression: A method
+for exploring spatial nonstationarity. Geogr. Anal. 1996, 28, 281–298.
+55. Fotheringham, A.S.; Charlton, M.; Brundson, C. The geography of parameter space: An investigation
+into spatial non-stationarity. Int. J. Geogr. Inf. Syst. 1996, 10, 605–627.
+56. Fotheringham, A.S.; Brunsdon, C.; Charlton, M.E. Two techniques for exploring non-stationarity
+in geographical data. Geogr. Syst. 1997, 4, 59–82.
+57. Charlton, M.; Fotheringham, A.S. _Geographically Weighted Regression; National Centre for_
+Geocomputation, National University of Ireland Maynooth: Maynooth, Ireland, 2009.
+
+
+-----
+
+_Int. J. Environ. Res. Public Health 2013, 10_ **5862**
+
+58. Mennis, J. Mapping the results of geographically weighted regression. _Cartogr. J._ **2006,** _43,_
+171–179.
+59. Longley, P.A.; Tobon, C. Spatial dependence and heterogeneity in patterns of hardship:
+An intra-urban analysis. Ann. Assoc. Am. Geogr. 2004, 94, 503–519.
+60. Ali, K.; Partridge, M.D.; Olfert, M.R. Can geographically weighted regressions improve regional
+analysis and policy making? Int. Reg. Sci. Rev. 2007, 30, 300–329.
+61. Cahill, M.; Mulligan, G. Using geographically weighted regression to explore local crime
+patterns. Soc. Sci. Comput. Rev. 2007, 25, 174–193.
+62. Graif, C.; Sampson, R.J. Spatial heterogeneity in the effects of immigration and diversity on
+neighborhood homicide rates. Homicide Stud. 2009, 13, 242–260.
+63. Hurvich, C.M.; Simonoff, J.S.; Tsai, C.L. Smoothing parameter selection in nonparametric
+regression using an improved Akaike information criterion. J. R. Stat. Soc. B **1998, 60, 271–293.**
+64. Robinson, W.S. Ecological correlations and the behavior of individuals. _Am. Sociol. Rev._ **1950,**
+_15, 351–357._
+65. Freedman, D.A. Ecological inference and the ecological fallacy. _Int. Encycl. Soc. Behav. Sci._
+**1999, 6, 4027–4030.**
+66. Al-Jeelani, H.A. Air quality assessment at Al-Taneem area in the Holy Makkah City, Saudi
+Arabia. Environ. Monit. Assess. 2009, 156, 211–222.
+
+© 2013 by the authors; licensee MDPI, Basel, Switzerland. This article is an open access article
+distributed under the terms and conditions of the Creative Commons Attribution license
+(http://creativecommons.org/licenses/by/3.0/).
+
+
+-----
+

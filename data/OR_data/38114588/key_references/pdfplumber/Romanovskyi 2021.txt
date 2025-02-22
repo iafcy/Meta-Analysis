@@ -1,0 +1,442 @@
+Elomia Chatbot: the Effectiveness of Artificial Intelligence in the
+Fight for Mental Health
+Oleksandr Romanovskyi, Nina Pidbutska and Anastasiia Knysh
+National technical university “Kharkiv polytechnic institute”, Kyrpychova str. 2, Kharkiv, 61002, Ukraine
+Abstract
+The article is presenting results of controlled study of effectiveness of Elomia chatbot in
+reducing tendency to depression, anxiety and negative emotional effects. Elomia was
+developed using artificial intelligence technologies. In the process of developing a chatbot
+following technologies were used: RoBERTa(NER) for identification names and locations;
+COSMIC for identification of human emotions; DIALOGPT for answers generation;
+DistilBERT (SQuAD) for pointing the most relevant information in the script; GECToR for
+spelling check. Elomia is able to identify the main psychological problems of the client and
+offer him the most suitable support option using first aid techniques and cognitive-behavioral
+psychotherapy. To check the effectiveness of the chatbot it was conducted a study that
+included three stages: 1) the formation of experimental and control samples; 2) baseline
+testing; 3) final testing. The study used psychological research methods: 1) Patient Health
+Questionnaire-9 (PHQ-9) to diagnose a tendency to depression; 2) General Anxiety Disorder-
+7 (GAD-7) to diagnose a tendency to generalized anxiety disorder; 3) Positive and Negative
+Affect Schedule (PANAS) to diagnose of prevailing (positive / negative) emotional affects.
+412 volunteers (202 women, 210 men, ages 19 to 23 years old) who identified their tendency
+to depression, anxiety and low mood were selected in students social networks groups of
+Kharkiv region as participants of research. It was found that regular usage of Elomia
+contributes to a significant reduction in the high tendency to depression (up to 28%), anxiety
+(up to 31%), and negative affects (up to 15%).
+Keywords1
+Chatbot, artificial intelligence, depression, anxiety, negative states correction, mental health.
+1. Introduction
+Depression and anxiety are the two most common disorders that seriously affect the quality of life
+of people of different age and social groups. The prevalence of anxiety and depression problems is
+evidenced by WHO data, as well as an increasing number of studies on this issue [1]. In recent years,
+scientists have revised the tools for diagnosing anxiety and depression [2, 3, 4], and ways to prevent
+and treat them [5, 6, 7], the influence of anxiety and depression on the quality of life of individual age
+and social groups [2, 8].
+The consequences of depressive and anxious conditions are particularly painful for people who are
+going through age-related crises and experience reassessment of their own values and changes in self-
+image.
+Depressive and anxiety disorders spectrum include: F31 Bipolar disorder, F32 Major depressive
+disorder, F33 Recurrent depressive disorder, F41.1 Generalized Anxiety Disorder, F41.2 Mixed
+anxiety-depressive disorder and other anxiety disorders. All of these diagnoses can only be made by a
+psychiatrist and can be treated using a combination of psychotherapy and medication. According to
+COLINS-2021: 5th International Conference on Computational Linguistics and Intelligent Systems, April 22–23, 2021, Kharkiv, Ukraine
+EMAIL: romanovskiy_a_khpi@ukr.net (O. Romanovskyi); podbutskaya_nina@ukr.net (N. Pidbutska); n_knysh@ukr.net (A. Knysh)
+ORCID: 0000-0002-0602-9395 (O. Romanovskyi); 0000-0001-5319-1996 (N. Pidbutska); 0000-0003-0211-2535 (A. Knysh)
+©️ 2021 Copyright for this paper by its authors.
+Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).
+CEUR Workshop Proceedings (CEUR-WS.org)
+the WHO, about 16% of all mental illnesses on the planet are caused by disorders of the anxiety-
+depressive spectrum.
+Moreover, hundreds of thousands of people around the world suffer from the so-called
+“precursors” of such disorders: increased levels of situational anxiety, low mood, anhedonia, feelings
+of loneliness, acute dissatisfaction with interpersonal relationships. People who suffer with these
+issues rarely seek help from psychotherapists, psychologists and counselors. They even tend to hide
+their emotional struggling from loved ones. Long-term attempts to cope with such experiences
+without outside help often have negative consequences for mental health, which results in the
+occurrence of disorders of the anxiety-depressive spectrum.
+People of the described group need additional support, which can be provided by “conversational”
+services based on artificial intelligence and psychology techniques.
+2. Elomia
+In recent years, more and more psychological services aimed at providing psychological assistance
+online have occurred (Betterhelp, Helppoint, Talkspace, Youtalk, etc.). These services can be divided
+into 2 groups:
+ “chatbots” which are based on active listening techniques
+ online psychologists.
+Each of these groups has its advantages and disadvantages. So, the work of "chatbots" often does
+not imply an individual approach to the needs of the client and allows you to simply talk. Online
+psychologists, by contrast, provide expert assistance, but their work is quite expensive, which is an
+obstacle to the continued use of such a service for large group of potential clients.
+Awareness of the shortcomings of the existing models of online psychological assistance led to the
+creation of Elomia chatbot, in which the developers tried to combine the advantages of psychological
+online services: cheapness, round-the-clock availability and an individual approach to solving client
+problems.
+Elomia was developed using artificial intelligence technologies. In the process of developing a
+chatbot following technologies were used:
+1. RoBERTa(NER) for identification names and locations;
+2. COSMIC for identification of human emotions;
+3. DIALOGPT for answers generation.
+4. DistilBERT (SQuAD) for pointing the most relevant information in the script;
+5. GECToR for spelling check.
+Nowadays, artificial intelligence is widely used in medicine: 1) in the diagnosis of cancer through
+the analysis of MRI and ultrasound images; 2) to predict the likelihood of Parkinson's disease; 3) to
+find the optimal way of surgical intervention; 4) to build a course of treatment. This is just a short list
+of the areas in which the use of artificial intelligence can save lives today.Elomia is able to identify
+the main psychological problems of the client and offer him the most suitable support option using
+first aid techniques and cognitive-behavioral psychotherapy.
+Elomia's arsenal includes:
+ exercises for calming;
+ exercises for falling asleep;
+ grounding technique;
+ exercises to reduce anxiety;
+ breathing exercises;
+ exercises to improve self-esteem.
+The algorithm determines the user's need for one or another help while communicating with the
+chatbot and suggests an exercise to ease his emotional state.
+The aim of the study was to test the effectiveness of Elomia chatbot in reducing the tendency to
+anxiety, depression and experiencing negative emotional states.
+3. Research design
+The study consisted of three stages:
+1. The formation of experimental and control samples;
+2. Baseline testing;
+3. Final testing.
+The study used psychological research methods: 1) Patient Health Questionnaire-9 (PHQ-9) to
+diagnose a tendency to depression; 2) General Anxiety Disorder-7 (GAD-7) to diagnose a tendency to
+generalized anxiety disorder; 3) Positive and Negative Affect Schedule (PANAS) to diagnose of
+prevailing (positive / negative) emotional affects.
+The PHQ-9 questionnaire reveals a tendency to depression at 5 levels: minimal depression (1-4
+points), mild depression (5-9 points), moderate depression (10-14 points), moderately severe
+depression (15-19 points), severe depression (20-27 points) [9].
+The GAD-7 questionnaire allows you to diagnose one of four levels of anxiety: minimal (0-4
+points), mild (5-9 points), moderate (10-14 points), severe (15-21 points) [10].
+The PANAS questionnaire allows to evaluate the tendency to positive and negative affects in the
+range from 10 to 50 points [11].
+For statistical processing of the results methods of descriptive statistics, chi-square, t-test for
+paired and unpaired samples were used.
+The research sample was formed in several steps. At the first step 412 volunteers (202 women, 210
+men, ages 19 to 23 years old) who identified their tendency to depression, anxiety and low mood were
+selected in students social networks groups of Kharkiv region. Another criterion for including
+respondents in the testing group was English proficiency at a B2 level (Upper Intermediate) and
+higher. After preliminary testing, 320 respondents (162 men and 158 women) who really showed a
+tendency to anxiety and depression according to testing were selected. At the second step, a group of
+82 respondents (39 women and 43 men) was randomly selected from 320 respondents. At the third
+step, the respondents were randomly divided into 2 groups: experimental (42 people) and control (40
+people). To check the distributions equality of respondents in groups by age and gender a chi square
+test was used (table 1).
+Table 1
+Results of age and gender distributions equality checking with chi square
+Amount %
+Chi-
+Experimental Control Experimental Control p
+square
+group group group group
+Age
+19 3 4 7.142 10
+20 12 12 28.571 30
+21 14 12 33.333 30 1.249 0.871
+22 12 12 28.571 30
+23 1 0 2.380 0
+Gender
+Male 22 21 52.380 52.5
+0.01 0.922
+Female 20 19 47.619 47.5
+Statistical analysis with usage of chi-square criterion confirmed the equality of the subjects
+distributions by age and gender (no significant differences in the distribution of data were found).
+Among selected participants there were: 13,41% with tendency to mild, 47,56% with tendency to
+moderate, 18,29% with tendency to moderate severe and 20,73% with tendency to severe depression;
+18,29% with tendency to moderate and 81,7% with tendency to severe anxiety.
+The obtained groups were once again checked for compliance with the selection criteria of
+respondents (table 2).
+Table 2
+Descriptive statistics of indicators of depression, anxiety and a tendency to negative affects at the
+first stage (baseline) of the study
+Std. Std. Error
+Group N Mean
+Deviation Mean
+Experimental group 42 14.952 5.516 0.851
+PHQ-9
+Control group 40 14.100 5.405 0.854
+Experimental group 42 17.833 2.978 0.459
+GAD-7
+Control group 40 17.675 3.237 0.511
+Positive Experimental group 42 26.619 7.190 1.109
+affect Control group 40 27.750 5.960 0.942
+Negative Experimental group 42 33.761 8.731 1.347
+affect Control group 40 33.725 5.746 0.908
+The data in the table clearly show that the average indicator of depression in the experimental and
+control group corresponds to the indicators of tendency to moderate (10-14 points) depression; the
+average anxiety score corresponds to a tendency to a severe (15-21 points) level of anxiety; the
+average indicator of tendency to negative affects corresponds to a moderate level (20-40 points); the
+average indicator of the tendency to positive affects corresponds to a moderate level (20-40 points).
+A comparison was also made of the average indicators of the respondents of the two groups using
+the T-test for independent samples on the level of tendency to anxiety, depression and emotional
+affects (table 3).
+Table 3
+T-test results for independent samples in the experimental and control group at the first stage
+(baseline) of the study
+Levene's Test
+for Equality of t-test for Equality of Means
+Variances
+95% Confidence
+Sig. Std.
+Mean Interval of the
+F Sig. t df (2- Error
+Diff. Difference
+tailed) Diff.
+Lower Upper
+PHQ-9 1.092 0.299 0.706 80 0.482 0.852 1.206 -1.549 3.254
+GAD-7 0.050 0.824 0.231 80 0.818 0.158 0.686 -1.207 1.524
+Positive
+0.144 0.705 -0.773 80 0.442 -1.130 1.462 -4.041 1.779
+affect
+Negative
+1.269 0.263 0.022 80 0.982 0.036 1.640 -3.228 3.302
+affect
+The obtained results of the T-test indicate the absence of significant differences in the level of the
+studied characteristics at the first stage of the study.
+After the completion of baseline testing, the respondents of the experimental group were given
+unlimited access to Elomia chatbot for 4 weeks. Respondents were instructed that they can use Elomia
+at any time of the day to the extent that they need. Thus, each participant in the study had the
+opportunity to control the amount of communication with Elomia, depending on their needs.
+Respondents in the control group were asked to use the Depression self-help guide developed by
+The National Health Service of the United Kingdom to correct negative emotional states [12]. This
+guide also contains a set of cognitive-behavioral techniques that help to deal with non-adaptive
+thoughts and to reduce anxiety and depression. Respondents were instructed that they can contact the
+guide at any time when they feel the need for it without restrictions.
+4. Research results
+As a result of a survey after 4 weeks of the study it was revealed that the respondents of the
+experimental group used chatbot with different frequencies and intensities (Figure 1).
+Never used
+2%
+Every day
+14%
+Once per
+4-5 times
+week
+per week
+22%
+17%
+2 times per
+week
+45%
+Figure 1: Frequency of Elomia usage in Experimental Group
+Retesting was performed in study groups 4 weeks after the baseline. To identify changes in the
+level of anxiety and depression in the study groups the T-test for paired samples was conducted
+separately in the experimental (table 4) and control (table 5) study groups.
+Table 4
+T-test for paired samples for experimental group data
+Paired Differences
+95% Confidence
+Std. Sig. (2-
+Std. Interval of the t df
+Mean Error tailed)
+Deviation Difference
+Mean
+Lower Upper
+s
+k PHQ-9 9.380 5.193 0.801 7.762 10.999 11.706 41 0.00
+e
+e
+w
+-4
+e
+ater
+GAD-7 13.476 4.203 0.648 12.166 14.786 20.776 41 0.00
+nl
+eli
+Positive
+as -7.023 5.993 0.924 -8.891 -5.155 -7.594 41 0.00
+B affect
+Negative
+16.880 8.396 1.295 14.264 19.497 13.030 41 0.00
+affect
+T-test showed significant differences in all study indicators. This means that users of Elomia after
+4 weeks of its usage noted a significant decrease in the symptom of anxiety, depression and negative
+affects. Moreover, there is an increase in positive affects, which manifests itself in a more calm,
+balanced state, high self-esteem, confidence in the future.
+The participants in the experimental group noted that after using Elomia, they became calmer,
+more self-confident. Many noted that they have become less likely to experience aggression towards
+others, fear, sense of hopelessness. More than 70% of the participants noted that they returned to
+using the chatbot in moments of increased anxiety, panic attack, self-doubt, loneliness.
+Table 5
+T-test for paired samples for control group data
+Paired Differences
+95% Confidence
+Std. Std. Sig. (2-
+Interval of the t df
+Mean Deviatio Error tailed)
+Difference
+n Mean
+Lower Upper
+r
+PHQ-9 -0.225 3.892 0.615 -1.469 1.019 -0.366 39 0.717
+e
+t
+a
+s
+l
+GAD-7 1.175 3.713 0.587 -0.012 2.362 2.001 39 0.052
+k
+e
+e
+w Positive
+4 0.325 6.638 1.049 -1.798 2.448 0.310 39 0.758
+- affect
+e
+n
+eli
+Negative
+s 0.775 2.536 0.401 -0.036 1.586 1.932 39 0.061
+Ba affect
+A similar comparison made in the control group did not detect significant statistical shifts, which
+indicates the inefficiency of introspection methods in dealing with signs of depression, anxiety and
+negative affects compared to using Elomia chatbot.
+PHQ-9
+16.00
+14.00
+12.00
+10.00
+8.00
+6.00
+4.00
+2.00
+0.00
+Baseline 4 weeks later
+Experimental group Control group
+Figure 2: Comparison of means in depression level in experimental and control group
+Comparison of the average indicators of depression tendency in the experimental and control
+groups allows us to evaluate the effect of the work of respondents with Elomia chatbot. So, after 4
+weeks of using the chatbot the average indicator of depression tendency moved from the “Moderate
+Depression” zone to the “Mild Depression” zone, while in the control group it remained at the same
+level.
+The main reason for such results is that Elomia does not immerse the client in dull and lonely
+thoughts. On the contrary, it creates the conditions for self-disclosure of the person, gives the
+opportunity to speak out. In addition, the techniques presented in the application allow a person with
+depressive tendencies to reduce stress levels and feel a positive attitude towards themselves.
+GAD-7
+20.00
+15.00
+10.00
+5.00
+0.00
+Baseline 4 weeks later
+Experimental group Control group
+Figure 3: Comparison of means in anxiety level in experimental and control group
+The average indicator of tendency to anxiety in the experimental group moved from a zone of
+severe to a zone of moderate anxiety. In the control group the anxiety rate remained as high as during
+the baseline testing.
+These results are associated with the systematic use of grounding techniques that AI offers to
+anxious clients. While in a state of anxiety, a person often becomes obsessed with unproductive
+experiences and thoughts that prevent him from finding contact with a calming reality. Grounding
+techniques allow a person to return to reality through simple, repetitive actions (drawing, creating
+shapes with simple objects). Elomia allows clients to use these techniques on their own in times of
+anxiety or fear.
+PANAS (Positive affect)
+40.00
+30.00
+20.00
+10.00
+0.00
+Baseline 4 weeks later
+Experimental group Control group
+Figure 4: Comparison of means in positive affect level in experimental and control group
+The tendency to positive affects in the experimental group increased, while in the control group
+there was a slight decrease in this indicator.
+PANAS (Negative affect)
+40.00
+35.00
+30.00
+25.00
+20.00
+15.00
+10.00
+5.00
+0.00
+Baseline 4 weeks later
+Experimental group Control group
+Figure 5: Comparison of means in negative affect level in experimental and control group
+The tendency to negative affects in the experimental group decreased, while in the control group
+remained unchanged.
+The participants in the experimental group, after using the chatbot, stopped experiencing fear,
+nervousness, shame and distress as the leading emotions. In addition, there was a decrease in
+emotions such as irritability, guilt and hostility. Respondents noted that a decrease in negative
+experiences led to better relationships with family and friends, which in turn created an additional
+circle of psychological support around them. Thus, the use of the chatbot contributed not only to the
+reduction of negative feelings directed by a person towards himself, but also the manifestation of
+negative emotions directed to others.
+15.00%
+10.00%
+5.00%
+0.00%
+Experimental
+PHQ-9 GAD-7 PANAS PANAS
+-5.00% Group
+(Positive (Negative
+-10.00% affect) affect)
+-15.00%
+Control Group
+-20.00%
+-25.00%
+-30.00%
+-35.00%
+-40.00%
+Figure 6: Comparison of changes in highest level of study indicators (%)
+During the final interview, the respondents who used the chatbot noted that during communication
+they became more self-confident, started to understand life problems differently, began to think about
+how they live, felt “the ground under their feet”.
+As the most significant change, participants noted the change in the outlook on the world around
+them as more positive, friendly and filled with resources. Having received support from the chatbot,
+the participants realized that it was not a shame to ask for help and it was absolutely normal, which
+took their thinking out of a dead corner.
+Respondents in the control group also noted the usefulness of the depression self-help guide. But
+they also pointed out that in the process of reading the manual they had questions and ideas that they
+had no one to discuss with, and attempts to introduce changes into their lives without outside support
+came up against resistance from relatives. The inability to bring changes to life reduced the
+motivation to re-visit the guide and increased the overall level of frustration and self-discontent.
+5. Conclusions
+Regular usage of Elomia contributes to a significant reduction in the high tendency to depression
+(up to 28%), anxiety (up to 31%), and negative affects (up to 15%). This reduction is achieved
+through the use of "conversational therapy" with elements of cognitive-behavioral techniques. At the
+same time usage of such techniques without a conversational elements does not lead to significant
+changes in the emotional state of clients within the indicated time frames.
+Elomia is a powerful tool for providing first aid to people suffering from anxiety and depression.
+Its systematic use can reduce the level of negative affects. It is important to note that it cannot act as a
+full-fledged substitute for psychotherapy or medical treatment for depression. Rather, it reduces the
+chances of the person using it to experience serious mental illness.
+6. References
+[1] Depression, 2020. URL: https://www.who.int/news-room/fact-sheets/detail/depression.
+Accessed on: February 22, 2021.
+[2] A. Biaggi, S. Conroy, S. Pawlby, and C. Pariante, "Identifying the women at risk of antenatal
+anxiety and depression: A systematic review", Journal of Affective Disorders, volume 191, 2015, pp.
+62–77. doi:10.1016/j.jad.2015.11.014.
+[3] D. Chisholm, K. Sweeny, P. Sheehan et al., "Scaling–up treatment of depression and anxiety: a
+global return on investment analysis", Lancet Psychiatry, volume 3, 2016, pp. 415–424.
+[4] K. Kroenke, F. Baye, and S. G. Lourens,"Comparative validity and responsiveness ofPHQ-
+ADS and other composite anxiety-depression measures", Journal of Affective Disorders, volume 246,
+2019, pp. 437–443. https://doi.org/10.1016/j.jad.2018.12.098.
+[5] V. Brenninkmeijer, S. E. Lagerveld, R. W. B. Blonket al., "Predicting the Effectiveness of
+Work-Focused CBT for Common Mental Disorders: The Influence of Baseline Self-Efficacy,
+Depression and Anxiety", Journal of Occupational Rehabilitation, volume 29, 2019, pp. 31–41.
+https://doi.org/10.1007/s10926-018-9760-3.
+[6] J. Firth, W. Marx, S. Dash et al., "The Effects of Dietary Improvement on Symptoms of
+Depression and Anxiety: A Meta-Analysis of Randomized Controlled Trials", Psychosomatic
+Medicine, volume 81(3), 2019, pp. 265–280. doi:10.1097/PSY.0000000000000673.
+[7] M. G. Craske, A. E. Meuret, T. Ritz et al.,"Positive affect treatment for depression and anxiety:
+A randomized clinical trial for a core feature of anhedonia", Journal of Consulting and Clinical
+Psychology, volume 87(5), 2019, pp. 457–471.
+[8] A. Werner-Seidler,Y. Perry, A. L. Calear, J. M. Newby, and H. Christensen, "School-based
+depression and anxiety prevention programs for young people: A systematic review and meta-
+analysis", Clinical Psychology Review, volume 51, 2016, pp. 30–47. doi:10.1016/j.cpr.2016.10.005.
+[9] N. V. Pogosova, T. V. Dovzhenko, A. G. Babin, A. A. Kursakov, and V. A. Vygodin, "Russian
+version of PHQ-2 and 9 questionnaires: sensitivity and specificity in detection of depression in
+outpatient general medical practice", Cardiovascular Therapy and Prevention, volume 13(3), 2014,
+pp. 18–24. https://doi.org/10.15829/1728-8800-2014-3-18-24.
+[10] R. L. Spitzer, K. Kroenke, J. B. Williams, and B. Löwe, "A Brief Measure for Assessing
+Generalized Anxiety Disorder: The GAD-7", Archives of Internal Medicine, volume 166(10), 2006,
+pp. 1092–1097.
+[11] Ye. N. Osin, "Izmerenie pozitivny`kh i negativny`kh e`moczij: razrabotka russkoyazy`chnogo
+analoga metodiki PANAS" [Measuring positive and negative emotions: developing a Russian-
+language analogue of the PANAS methodology], Psychology: journal of higher school of economy, 9,
+volume 4, 2012, p. 91–110.
+[12] Depression self-help guide: Work through a self-help guide for depression that uses cognitive
+behavioural therapy (CBT), 2020. URL:: https://www.nhsinform.scot/illnesses-and-
+conditions/mental-health/mental-health-self-help-guides/depression-self-help-guide. Accessed on:
+February 22, 2021.

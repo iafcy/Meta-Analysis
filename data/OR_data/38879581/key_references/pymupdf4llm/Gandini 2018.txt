@@ -1,0 +1,956 @@
+[Contents lists available at ScienceDirect](http://www.sciencedirect.com/science/journal/01604120)
+
+## Environment International
+
+[journal homepage: www.elsevier.com/locate/envint](https://www.elsevier.com/locate/envint)
+
+
+### Long term effect of air pollution on incident hospital admissions: Results from the Italian Longitudinal Study within LIFE MED HISS project
+
+#### M. Gandini[a][,][b][,][⁎], C. Scarinzi[b], S. Bande[c], G. Berti[b], P. Carnà[d], L. Ciancarella[e], G. Costa[a][,][d], M. Demaria[b], S. Ghigo[c], A. Piersanti[e], M. Rowinski[b], T. Spadea[d], M. Stroscia[f], E. Cadum[b], on behalf of the LIFE MEDHISS collaborative Group[1]
+
+a University of Torino, Department of Clinical and Biological Science, AOU San Luigi Gonzaga, Regione Gonzole 10, 10043 Orbassano, Turin, Italy
+b Environmental Epidemiological Unit, Regional Environmental Protection Agency, Piedmont Region, Via Pio VII 9, 10135 Turin, Italy
+c Air quality Unit, Regional Environmental Protection Agency, Piedmont, Via Pio VII 9, 10135 Turin, Italy
+d Regional Epidemiology Unit, ASL TO3, Piedmont Region, Via Sabaudia 164, 10095 Grugliasco, Italy
+e Laboratory of Atmospheric Pollution, ENEA-Bologna Research Center, Via Martiri di Monte Sole 4, 40129 Bologna, Italy
+f Hygiene and Public Health Unit, Turin Local Health Agency, Via della Consolata 10, 10122 Turin, Italy
+
+
+A R T I C L E I N F O
+
+Handlling Editor: Xavier Querol
+
+_Keywords:_
+Outdoor air pollution
+Nitrogen dioxide
+Particulate matter
+National Health Interview Survey
+Environmental epidemiology
+Hospital admissions
+Long-term exposure
+Coxph analysis
+
+
+A B S T R A C T
+
+_Background: The LIFE MED HISS project aims at setting up a surveillance system on the long term effects of air_
+pollution on health, using data from National Health Interview Surveys and other currently available sources of
+information in most European countries. Few studies assessed the long term effect of air pollution on hospital
+admissions in European cohorts.
+_Objective: The objective of this paper is to estimate the long term effect of fine particulate matter (PM2.5) and_
+nitrogen dioxide (NO2) on first-ever (incident) cause-specific hospitalizations in Italy.
+_Methods: We used data from the Italian Longitudinal Study (ILS), a cohort study based on the 1999–2000_
+National Health Interview Survey (NHIS), followed up for hospitalization (2001–2008) at individual level. The
+survey contains information on crucial potential confounders: occupational/educational/marital status, body
+mass index (BMI), smoking habit and physical activity.
+Annual mean exposure to PM2.5 and NO2 was assigned starting from simulated gridded data at spatial resolution of 4 × 4 km[2] firstly integrated with data from monitoring stations and then up-scaled at municipality
+level.
+Statistical analyses were conducted using Cox proportional hazard models with robust variance estimator.
+_Results: For each cause of hospitalization we estimated the hazard ratios (HRs) adjusted for confounders with_
+95% Confidence Interval (CI) related to a 10 μg/m[3] increase in pollutants. For PM2.5 and NO2, respectively, we
+found positive associations for circulatory system diseases [1.05(1.03–1.06); 1.05(1.03–1.07)], myocardial infarction [1.15(1.12–1.18); 1.15(1.12–1.18)], lung cancer [1.18(1.10–1.26); 1.20(1.12–1.28)], kidney cancer
+
+[1.24(1.11–1.29); 1.20(1.07–1.33)], all cancers (but lung) [1.06(1.04–1.08); 1.06(1.04–1.08)] and Low
+Respiratory Tract Infections (LRTI) [1.07 (1.04–1.11); 1.05 (1.02–1.08)].
+_Discussion: Our results add new evidence on the effects of air pollution on first-ever (incident) hospitalizations,_
+both in urban and rural areas. We demonstrated the feasibility of a low-cost monitoring system based on
+available data.
+
+
+⁎ Corresponding author at: Regional Epidemiology Unit, Piedmont Region, ASL TO3, Via Sabaudia 164, 10095 Grugliasco, TO, Italy.
+
+_[E-mail address: martina.gandini@unito.it (M. Gandini).](mailto:martina.gandini@unito.it)_
+
+1 Members of the LIFE MED HISS Collaborative Group: Italy: S. Bande, G. Berti, G. Briganti, E. Cadum, A. Cappelletti, P. Carnà, L. Ciancarella, G. Cremona, M.
+Clemente, G. Costa, M. Demaria, R. De Maria, E. Ferracin, M. Gandini, S. Ghigo, R. Gnavi, M. Grosa, M. Mircea, R. Onorati, A. Piersanti, G. Righini, M. Rowinski, C.
+Scarinzi, T. Spadea, G. Zanini; France: N. Baïz, S. Banerjee, JF. Bertholon, A. Fouad, C. Maesano, AM. Magnier, S. Launois, I. Annesi-Maesano, A. Moustafa, S. Sanyal;
+Slovenia: K. Bitenc, I. Erzen, T. Grča, A. Kukec, P. Otorepec, M. Rus, L. Zaletel-Krageli; Spain: D. Agis, G. Arévalo, J. M Baldasano, J. Barrera-Gómez, X. Basagaña, J.
+Benach, È. Martinez-Solanas.
+
+[https://doi.org/10.1016/j.envint.2018.10.020](https://doi.org/10.1016/j.envint.2018.10.020)
+Received 30 July 2018; Received in revised form 10 October 2018; Accepted 10 October 2018
+
+0160-4120/ © 2018 Elsevier Ltd. All rights reserved.
+
+
+-----
+
+**1. Introduction**
+
+The association between the exposure to major airborne pollutants
+and several long term adverse effects on mortality has been well
+documented (Hoek et al., 2013) but relatively few studies focused on
+the long term effects of particulate (PM10 and PM2.5) or NO2 on hospital admissions. Available studies have investigated the association
+between airborne pollution and some specific causes of hospitalizations: acute coronary events (Cesaroni et al., 2014), stroke (Andersen
+et al., 2012a; Kloog et al., 2012; Alimohammadi et al., 2016), asthma
+(Andersen et al., 2012a), respiratory illness or specifically Chronic
+Obstructive Pulmonary Disease (COPD) (Hruba et al., 2001; Andersen
+et al., 2011; Kloog et al., 2012; Atkinson et al., 2015), cerebrovascular
+diseases (Stafoggia et al., 2014; Kloog et al., 2012; Oudin et al., 2010),
+neurodegenerative diseases (Kioumourtzoglou et al., 2016) and diabetes (Kloog et al., 2012; Andersen et al., 2012b). These studies were
+mostly carried out in USA, where both the characteristics and susceptibility of the population exposed and the composition of air pollution mixture can be different from European context. Several cohorts
+are available in Europe, as the national English cohort (812,063 patients aged 40–89 years as reported by Atkinson et al., 2015), the
+Danish Diet, Cancer, and Health (DCH) cohort (57,053 people from
+Copenhagen or Aarhus aged 50–65 years, as reported by Andersen
+et al., 2012a) or the London cohort, which studied also combined effects of noise and air pollution (Halonen et al., 2015).
+Earlier studies on long term effect had limitations on the exposure
+assessment, due to the lack of air quality monitoring networks able to
+represent large areas or countries, which led to study only restricted
+areas. In recent years, the quality of the exposure assessment has been
+improved, using prediction models for exposure which combine land
+use regression with physical measurements or using atmospheric
+Chemical Transport Models (CTMs) and satellite data. With these new
+techniques it is possible to investigate both long and short term effects
+on adverse health effect on wide areas; an example is the study of Kloog
+et al. (2012) and (2015) which investigated the effects of pollutants on
+hospital admissions across New-England or Cesaroni et al. (2013) for
+mortality. However, even though a large amount of population is involved in these studies, they are usually based on available health data
+from registers or on ecological data, with a consequent approximation
+in the control for individual potential confounders, such as diet, socioeconomic variables, physical activity, etc. For some of the investigated
+diseases, the debate on the real role played by the air pollutants on
+hospital admissions incidence is still ongoing: for COPD, an acute event,
+as the primary outcome, it cannot be unambiguously distinguished the
+role of air pollution in exacerbating COPD (developed due to other
+causes) from its etiological contribution to the development of COPD
+(Schikowski et al., 2014). Papers mentioned that asthma hospitalization
+could be a bad marker of asthma onset and thus could underrate the
+real asthma burden, with only a fraction of asthma patients hospitalized
+(Andersen et al., 2012a). For diabetes, an accurate and large study
+concluded that the risk for diabetes was only weakly associated with
+increasing mean levels of traffic-related air pollution, with indication of
+interaction, while the risks were higher in nonsmokers and physically
+active people (Andersen et al., 2012c).
+The LIFE MED HISS project (LIFE MED HISS, 2013) is a pilot study
+aimed at estimating long-term effects of air pollution in four European
+Mediterranean countries (Italy, France, Slovenia and Spain), using already available or potentially available cohorts. These are based on the
+follow-up from the NHISs, a solution that offers wide information on
+almost all potential confounders needed. The aim of the project is to
+demonstrate the feasibility of this new approach and its possible application in other EU countries, since all perform regularly health interview and examination surveys (Hupkens et al., 1999). The approach
+is based on the linkage of individual survey's data, with mortality and
+hospitalization outcomes, where privacy regulations permit it, and with
+exposure data at the place of residence derived from national air
+
+
+pollution models. In countries where linkage was not possible because
+of privacy policy restrictions, the MED HISS project tested an ecological
+approach (Basagaña, 2015; de Keijzer et al., 2016). In both approaches,
+exposure to air pollution has been assigned using data coming from
+CTMs, where accuracy has been improved with monitoring station data
+by means of data fusion techniques (Gandini et al., 2016; Ghigo et al.,
+2017).
+In this paper we present the results of MED HISS approach in Italy,
+where no privacy policy restrictions have arisen and linkage between
+survey's data and hospitalization outcomes has been possible. We used
+the data of the ILS, a cohort based on the NHIS followed up for mortality and hospitalization, and we evaluated the long term effects on
+hospital admissions related to air pollution exposure in the sample
+living in all the Italian national territory, covering both urban and rural
+areas. We studied the association between air pollution concentrations
+at municipal level and the risk of first-ever (incident) hospital admission for several causes, controlling for main individual confounders,
+including lifestyle and socioeconomic information. The use of first-ever
+hospitalization allows to approximate a measure of incidence of pathology. All results are stratified by gender and level of urbanization.
+Thanks to the nature of the ILS, we were able to analyze a wide list of
+causes, adding knowledge where few studies were available (like e.g.
+atherosclerosis or myocardial infarction).
+
+**2. Materials and methods**
+
+_2.1. Health data_
+
+The ILS is a follow-up study based on the sample included in the
+1999–2000 NHIS, carried out by the National Institute of Statistics,
+linked to mortality and hospital records (Marinacci et al., 2013). The
+original NHIS sample consists of 140,011 individuals belonging to
+52,232 sampled families resident in 1449 municipalities in the whole
+national territory (Fig. 1). The NHIS contains, beside others, individual
+information on age, gender, occupational and educational status,
+marital status, residence, BMI, smoking habit and physical activity.
+Information on alcohol was not available in the survey, while information on diet was limited to particular conditions (e.g. macrobiotic
+diet) and therefore could not be used to assess lifestyles. Concerning
+residence, we had no information about home address due to privacy
+restrictions and we could only know the municipality of residence for
+each individual.
+Due to the nature of the LIFE MED HISS project, variables included
+in the model are harmonized, according to the standard developed
+within the European EUROTHINE project (EUROTHINE 2005), ensuring a high degree of comparability with other European surveys, also
+considering levels chosen for categorical variables.
+An individual record-linkage procedure was applied to the 128,818
+individuals with complete personal data and giving consensus to be
+followed-up (92% of the total sample). Follow up for hospital admissions in this paper covers the period 2001–2008. Analyses on association between air pollution and adverse health effects are conducted on
+74,989 individuals (belonging to 45,418 sampled families resident in
+1442 municipalities) aged > 35 years and alive at 2001: in this subcohort, 41,047 individuals experienced at least one hospital admission.
+We excluded non-accidental causes and repeated hospitalizations for
+the same subject (with the exceptions of myocardial infarction, angina
+pectoris and LRTI).
+For each cause, we considered only the main cause of hospitalization out of six available, and, for each subject, only the first hospital
+admission, excluding all subsequent hospitalization for the same cause.
+This criterion permits to have a good approximation to an incidence
+measure. An exception to this rule was done for diabetes and COPD,
+which were searched among all six codes. A second type of exception
+was done for myocardial infarction, angina pectoris and LRTI: for the
+first two causes a second event that occurred after 28 days or more
+
+
+-----
+
+**Fig. 1. PM2.5 data referred to year 2005 in all Italian municipalities and in the 1442 municipalities selected in the NHIS.**
+
+
+from the first episode was considered as a new event (Thygensen et al.,
+2012), whereas for LRTI the time elapsed from the first episode to
+consider it as a new event had to be 90 days or more.
+We selected the following main group of causes: disease of the circulatory system (ICD-9 code 390–459), heart diseases (ICD-9 code
+390–429), cerebrovascular diseases (ICD-9 code 430–438), diseases of
+the respiratory system (ICD-9 code 460–519), all neoplasm but lung
+cancer (ICD-9 code 140–239, with the exception of 162), mental, behavioural and neurodevelopmental disorders (ICD-9 code 290–319),
+diseases of the nervous system (ICD-9 code 320–359).
+Moreover, we investigated the following specific causes: lung cancer
+(ICD-9 code 162), bladder cancer (ICD-9 code 188), kidney cancer (ICD9 code 189), diabetes (ICD-9 code 250), Parkinson's disease (ICD-9 code
+332), Alzheimer's disease (ICD-9 code 331), myocardial infarction (ICD9 code 410), angina pectoris (ICD-9 code 413) atherosclerosis (ICD-9
+code 440), LRTI (ICD-9 code 466, 480–487), chronic obstructive pulmonary disease (COPD) (ICD-9 code 490–492, 494, 496), asthma (ICD9 code 493), and miscarriage (ICD-9 code 634).
+
+_2.2. Exposure to air pollution_
+
+The Italian exposure model takes into account data coming from the
+modeling system MINNI (National Integrated Modelling system for
+International Negotiation on atmospheric pollution), developed and
+validated by ENEA and the Italian Ministry of the Environment Land
+and Sea (Mircea et al., 2014; Mircea et al., 2016). MINNI includes an
+atmospheric chemical transport model (CTM) fed by emission data
+(national emission inventory of anthropogenic sources, biogenic VOCs,
+sea-salt, natural dust) and meteorological prognostic fields. MINNI
+outputs for PM2.5 and NO2 were provided for years 1999, 2003, 2005
+and 2007 at a spatial resolution representative of urban background
+pollution levels (4 × 4 km[2]) at hourly resolution (Mircea et al., 2014).
+The CTM model included in the MINNI modeling system is called FARM
+(Gariazzo et al., 2007; Silibello et al., 2008) and the version used in the
+study is the 3.1.12.
+In order to reduce model uncertainty, a data fusion technique is
+used to combine MINNI concentration fields and pollutant
+
+
+observations. Thus, it is possible to provide a more realistic representation of pollutant spatial distribution. Therefore, a Kriging with
+External Drift (KED, Van de Kassteele et al., 2009; Ignaccolo et al.,
+2013) procedure has been used to account for the observed data into
+MINNI fields. Specifically, the kriging is applied on the observed data
+and the external drift is constituted by the MINNI model output. Observations were interpreted as realizations of a Gaussian spatial process
+_Y(s) at spatial location s, in the domain S. Y(s) has the following_
+structure:
+
+_Y s( )_ _=_ _µ s( )_ _+_ _w s( )_ _+_ ( ),s
+
+where in the trend component μ(s) the MINNI model output is introduced, w(s) is a stationary Gaussian random process and ε(s) is the
+error term. Regarding observed data introduced in the dispersion model
+outputs, we retrieved data from other Italian regional environmental
+[agencies out of BRACE database (national system: http://www.brace.](http://www.brace.sinanet.apat.it/)
+[sinanet.apat.it/). Only background stations, whose spatial representa-](http://www.brace.sinanet.apat.it/)
+tiveness is consistent with the MINNI resolution, and only monitoring
+sites with > 80% of data have been considered and averaged to obtain
+annual observed values (Ghigo et al., 2017).
+PM2.5 and NO2 are the most impacting pollutants on the Italian
+territory, in terms of long-term effect on human health. Also SO2 and
+CO have historically been of high impact, but their airborne levels have
+been drastically reduced before year 2000, therefore their impact is
+very low in the time span analyzed in this study. Black carbon was
+included in official EU emission inventories in 2017, so no national
+emission data were available at the time of this study.
+Since the health data from the NHIS are aggregated at the municipal
+level, the exposure assessment has to rely on the same spatial scale.
+Therefore, following this data fusion approach, the Italian exposure
+assessment was carried out by up-scaling the gridded data at the municipality level (Ignaccolo et al., 2013). These annual exposure maps
+were obtained overlying gridded concentration data to municipality
+boundaries and then using a weighted average, where built-up area
+percentages were the weights. Built-up area information has been collected from Corine Land Cover data (CORINE, 2006) using land use
+classes belonging to Artificial Surfaces categories In this way for both
+
+
+-----
+
+-----
+
+pollutants a mean annual value has been calculated for all Italian municipalities (Fig. 1).
+
+_2.3. Statistical analyses_
+
+For each of the analyzed outcomes, the individual effect of longterm exposure to air pollution on hospitalization is modelled using the
+Cox proportional hazard model, with air pollution levels and age class
+as time-varying variables, while adjusting for other variables. Robust
+variance estimates are produced to take into account the two-stage
+sampling strategy used by ISTAT (Istituto Nazionale di Statistica) in the
+survey (sampling municipalities at the first stage and households within
+each municipality at the second stage, and enrolling all the individuals
+of the sampled families).
+We estimate hazard ratios (HRs) adjusted for gender, educational
+level (classified according to the international classification ISCED and
+grouped into the four classes: up to primary, corresponding to ISCED
+0–1, lower secondary, ISCED 2 and 3C, upper secondary, ISCED 3A and 3B
+and post secondary, ISCED 4–6), marital status (living with partner/not
+living with partner), occupational status (employed/not employed),
+smoking habit (current smoker, former smoker, never smoker), physical
+activity (4 different levels combining information on type and frequency of activity) and BMI. The individual characteristics are known
+only at the time of the interview. For each subject we define the residence based on type of municipality according to the population size:
+_metropolitan areas (municipalities with > 250,000 inhabitants), urban_
+_areas (between 20,000 and 250,000 inhabitants) and rural areas (mu-_
+nicipalities with < 20,000 inhabitants).
+The idea of LIFE MED HISS project is to obtain the maximum information from sources already available. Since we had four years of air
+pollution exposure (from 1999 to 2007), which were subsequent to the
+enrollment of the cohort, we did not find appropriate to use air pollution as time-dependent variable using only the most recent year of
+exposure, as done in other studies (Nafstad et al., 2004). Therefore, we
+divided the follow-up period in 4 risk sets and computed the annual
+exposure value of each risk set as the mean exposure of all the preceding years for which the data was available, as follows:
+
+# • [1999–2002 (exposure in 1999)]
+ • [2003–2004 (mean exposure of 1999 and 2003)]
+ • [2005–2006 (mean exposure of 1999, 2003 and 2005)]
+ • [2007–2008 (mean exposure of 1999, 2003, 2005 and 2007)]
+
+Sensitivity analyses have been done using only one year of exposure
+(2005).
+Due to the nature of data and consequently of the exposure assessment, which assigns one single value over the whole city, the results
+are presented also by municipality size population, according to the
+residence, for rural, urban and metropolitan areas.
+The proportional hazard assumption was tested for all the fixed
+predictors and stratified Cox models were applied for predictors that
+did not meet the assumption.
+For each outcome, we evaluated potential effect modification by
+adding into the model the proper interaction term of exposure by
+
+
+modifier. We used the likelihood ratio test to compare the models with
+and without interaction terms.
+Due to the heterogeneous spatial coverage of monitoring stations in
+Northern and Central Italy (dense spatial coverage) and Southern Italy
+(sparse spatial coverage), sensitivity analyses are also presented restricted to the first domain.
+All analyses were conducted using SAS, version 9.4 (SAS Institute
+Inc., 2013) and R, version 3.3.3 (R Core Team, 2017).
+
+**3. Results**
+
+Analyses on association between air pollution and hospital admissions are performed on 74,989 individuals aged > 35 years and alive
+at 2001.
+
+Table 1 shows the distribution of sample characteristics, overall and
+stratified by size of the municipality of residence. Due to space constraints, pollutants are described only in 2005, but distributions do not
+change substantially in the other years.
+Most individuals live in rural areas (60.6%), while only 8.4% of the
+population is resident in the twelve metropolitan cities with > 250,000
+inhabitants (Rome, Milan, Naples, Turin, Palermo, Genoa, Bologna,
+Florence, Bari, Catania, Venice and Verona). In our cohort, 70.2% is between 35 and 65 years, with 2.8% of people aged over 85; 46.8% is normal
+weight and 11.9% is obese, with 0.2% with severe obesity. Most families are
+composed by person living with a partner (83.3%). Concerning physical
+activity, 46.7% is totally inactive. Educational level is categorized according
+to ISCED, with the highest percentage (46.6%) belonging to ISCED 0–1 (low
+education level), mainly concentrated in rural areas. Variables included in
+the analyses are compiled for all individuals. Mean and standard deviation
+of PM2.5 and NO2 in 2005 are also shown in Table 1: the distribution of the
+pollutants looks invariant to each category of all the variables included in
+the analysis. If we consider only year 2005 for exposure, 76.3% and 79.1%
+of the individuals are exposed to concentration ranging between 10 and
+30 μg/m[3], for NO2 and PM2.5 respectively (Table 2).
+
+Table 3 shows HRs with 95% CI of cause-specific hospitalization
+for 10 μg/m[3] increase in PM2.5 and NO2. For PM2.5 and NO2,
+respectively, we found positive associations for circulatory system
+diseases [1.05(1.03–1.06); 1.05(1.03–1.07)], myocardial infarction
+
+[1.15(1.12–1.18); 1.15(1.12–1.18)], lung cancer [1.18(1.10–1.26);
+1.20(1.12–1.28)], kidney cancer [1.24(1.11–1.29); 1.20(1.07–1.33)],
+neoplasms (lung cancer excluded) [1.06(1.04–1.08); 1.06(1.04–1.08)]
+and LRTI [1.10 (1.04–1.15); 1.05 (1.01–1.10)]. Significant associations
+is also found with NO2, and hospital admissions for atherosclerosis
+
+[1.10(1.03–1.17)]. We found negative associations for hospital admissions related to COPD [0.90(0.86–0.94); 0.94(0.90–0.97) for PM2.5 and
+NO2 respectively].
+
+Table 4 shows results stratified, for rural areas, urban areas and
+_metropolitan areas. When main results are reported by municipalities'_
+population size, metropolitan areas do not show significant results for
+most of causes.
+Results stratified by gender are reported in Table 5. The risk of both
+lung, kidney and urinary cancer is higher in women than in men for
+both the air pollutants, on the contrary the effects of PM2.5 and NO2 are
+the same for neoplasm (lung cancer excluded) hospitalization.
+
+
+**Table 2**
+Descriptive statistics of the Italian Longitudinal Study (considering individuals older than 35 years). Distribution of PM2.5 and NO2 concentration referred to year
+2005 data.
+
+NO2 levels - year 2005 data N(%) PM2.5 levels – year 2005 data N(%)
+
+NO2 < 10 (μg/m[3]) 793 (1.1%) PM2.5 < 10 (μg/m[3]) 277 (0.4%)
+10 ≤NO2 < 20 (μg/m[3]) 33,080 (44.1%) 10 ≤PM2.5 < 20 (μg/m[3]) 29,917 (39.9%)
+20 ≤NO2 < 30 (μg/m[3]) 24,046 (32.1%) 20 ≤PM2.5 < 30 (μg/m[3]) 29,390 (39.2%)
+30 ≤NO2 < 40(μg/m[3]) 11,439 (15.3%) 30 ≤PM2.5 < 40 (μg/m[3]) 13,726 (18.3%)
+40 ≤NO2 < 50 (μg/m[3]) 3603 (4.8%) 40 ≤PM2.5 < 50 (μg/m[3]) 1174 (1.6%)
+NO2 ≥50 (μg/m[3]) 2028 (2.7%) PM2.5 ≥50 (μg/m[3]) 505 (0.7%)
+
+
+-----
+
+**Table 3**
+Association between exposure to pollutants (1999; 2003; 2005; 2007) and hospital admissions, using time dependent Cox model with robust variance
+estimator. Results expressed per HRs for 10 μg/m[3] increase. Model adjusted by age, gender, educational level, living with partner, occupational status,
+smoking habit, physical activity status, type of municipality (rural, urban, metropolitan areas) and BMI. Highlighted in bold statistically significant
+results (considering a 95% CI). In Italics we report the number of events.
+
+Cause of hospitalization Number of events PM2.5 NO2
+
+HR for 10 μg/m[3] increase HR for 10 μg/m[3] increase
+
+Diabetes _3748_ 0.97 (0.94–1.01) 0.98 (0.96–1.01)
+Circulatory system diseases _12,867_ **1.05 (1.03–1.06)** **1.05 (1.03–1.07)**
+Respiratory system diseases 4428 1.03 (1.00–1.07) 1.02 (0.98–1.05)
+Neoplasm (lung cancer excluded) _8138_ **1.06 (1.04–1.08)** **1.06 (1.04–1.08)**
+Behavioural disorders diseases _1104_ 0.98 (0.92–1.04) 0.99 (0.94–1.05)
+Nervous system diseases _2490_ **1.05 (1.01–1.09)** **1.05 (1.01–1.09)**
+Cardiac diseases _7972_ 1.02 (1.00–1.05) **1.03 (1.01–1.05)**
+Cerebrovascular diseases _3380_ 1.03 (0.99–1.07) 1.02 (0.99–1.06)
+Atherosclerosis diseases _546_ 1.07 (0.99–1.15) **1.10 (1.03–1.17)**
+LRTI _1540_ **1.10 (1.04–1.15)** **1.05 (1.00–1.10)**
+COPD _2762_ **0.90 (0.86–0.94)** **0.94 (0.90–0.97)**
+Asthma _138_ 1.09 (0.92–1.30) 1.06 (0.89–1.25)
+Lung cancer _526_ **1.18 (1.10–1.26)** **1.20 (1.12–1.28)**
+Urinary bladder cancer _501_ 1.08 (1.00–1.17) **1.09 (1.01–1.17)**
+Kidney cancer _196_ **1.24 (1.11–1.29)** **1.20 (1.07–1.33)**
+Parkinson _149_ 1.06 (0.91–1.23) 1.08 (0.94–1.24)
+Alzheimer _298_ 1.03 (0.91–1.17) 1.06 (0.96–1.17)
+Miscarriage _78_ 1.00 (0.80–1.23) 1.01 (0.84–1.22)
+Stroke _1505_ **1.15 (1.10–1.20)** **1.14 (1.10–1.19)**
+Angina pectoris _851_ 1.03 (0.96–1.10) 1.03 (0.97–1.10)
+
+
+Focusing on lung cancer (Table 6), HRs are higher and robust even
+among non-smokers and former smokers [1.17 (1.04–1.31) and 1.16
+(1.04–1.29) for PM2.5 and NO2 for non-smokers; 1.16 (0.99–1.35) and
+1.19 (1.03–1.38) for PM2.5 and NO2 for former smokers]. Risks are also
+higher among sedentary people or who practice light physical activity,
+with about 20% excess of risk in both categories and for both pollutants. Considering BMI as a categorical variable, also obese and overweight people show higher HRs.
+Since in the Southern part of Italy the spatial coverage of monitoring
+stations is lower, with potentially less accurate exposure assessment, a
+sensitivity analysis has been performed restricted to the northern and
+central regions of Italy. Considering overall results (reported in Table
+S1 of supplemental material), risks for hospital admissions for circulatory diseases are lower (respectively 1.03 (1.01–1.05) and 1.03
+(1.01–1.05) for PM2.5 and NO2), whereas risk estimates for asthma
+causes are higher [respectively 1.26 (1.06–1.50) and 1.27 (1.02–1.58)
+for PM2.5 and NO2].
+Sensitivity analyses have been performed also assigning to each
+subject only the year 2005 for exposure (Table S2 in supplemental
+material) in which spatial coverage of monitoring stations is robust also
+for PM2.5. HRs are similar to those estimated with time-dependent
+exposure assessment (1999–2007), only slightly attenuated for NO2 and
+amplified for PM2.5.
+
+**4. Discussion**
+
+In this study we investigated the long term effect of air pollution on
+a wide series of causes of hospitalization using the follow-up of the
+1999–2000 Italian Health Interview Survey.
+PM2.5 and NO2 were associated with an increased risk of hospitalization for cardiovascular diseases (in particular myocardial infarction), cancer (with a stronger effect for lung and kidney cancer), LRTI
+and nervous system diseases.
+The proposed low-cost approach, suitable for surveillance, is based
+on linking resources like air pollution prediction models, mortality and
+hospital admissions registries and National Health Interview Surveys,
+the latter being already available and mandatory in all European
+countries. This record linkage has permitted the investigation of the
+impact of air pollution on a European cohort in the Mediterranean area
+
+
+A peculiarity of this cohort is the availability of individual information,
+which naturally arises from the questionnaire. This allows controlling
+for individual potential confounders; besides, the NHIS contains a
+sample representative of the population spread in the whole national
+territory, covering both urban and rural areas. Thanks to the CTMs, the
+problem of having a limited number of PM2.5 monitors is overcome.
+MINNI system covers the whole national territory providing a measure
+of exposure for each municipality, including also rural and suburban
+populations which are far from monitoring stations.
+As expected, a clear effect was seen for lung cancer hospital admissions. The focus on lung cancer confirms literature findings, ensuring the robustness of the use of the NHISs for epidemiological purposes in environmental field (Raaschou-Nielsen et al., 2011). The use of
+information on individual behaviours allowed showing risks for some
+categories: non-smokers experience the known risks, subject that do not
+perform physical activity and/or overweight or obese experience the
+highest risks.
+However, the employment of land use regression models, as well as
+more detailed personal exposure assessment, which can include variables like distance from major roads (see for example Hystad et al.,
+2013), could be recommended to ensure more robust results in metropolitan areas, when more detailed information about home address
+is not limited by privacy regulation.
+Significant risks are also seen considering all neoplasms, even excluding the contribution of lung cancer. Results also suggest a relationship between air pollution exposure and kidney cancer, indicating
+the potential effect of air pollutants on tissues more exposed to chemicals, also for their de-toxifying function.
+Results obtained for circulatory diseases (both for PM2.5 and NO2)
+confirm the putative biological mechanisms linking long term exposure
+to air pollution and cardiovascular diseases, which involves direct effects of pollutants on the cardiovascular system, blood, and lung receptors, and/or indirect effects mediated through pulmonary oxidative
+stress and inflammatory responses (Kloog et al., 2012). Risks are statistically significant also stratified by gender and by level of municipality population size. Results are substantially confirmed (with the
+exception of asthma) when restricted to the Northern and Central part
+of Italy, where the spatial coverage of monitoring stations is higher and
+improves CTMs data.
+
+
+-----
+
+**Table 4**
+Association between exposure to pollutants (1999; 2003; 2005; 2007) and hospital admissions, using time dependent Cox model with robust variance estimator.
+Results expressed per HRs for 10 μg/m[3] increase. Model adjusted by age, gender, educational level, living with partner, occupational status, smoking habit, physical
+activity status and BMI. Results divided by metropolitan, urban and rural areas. For each cell, the number of events is reported (in italics). Statistically significant
+results are highlighted in bold.
+
+Cause of hospitalization PM2.5 NO2
+
+Rural Urban Metropolitan Rural areas Urban areas Metropolitan Rural areas Urban areas Metropolitan
+areas areas areas areas areas
+
+Number of Number of Number of HR for 10 μg/ HR for 10 μg/ HR for 10 μg/m[3] HR for 10 μg/ HR for 10 μg/ HR for 10 μg/m[3]
+events events events m[3] increase m[3] increase increase m[3] increase m[3] increase increase
+
+
+Diabetes _2278_ _1150_ _320_ **0.93** **0.94** 0.97 0.93 0.95 0.94
+**(0.88–0.99)** **(0.89–1.00)** (0.87–1.08) (0.88–0.98) (0.90–1.01) (0.84–1.06)
+Circulatory system diseases _7679_ _4008_ _1180_ 1.02 1.02 1.04 1.02 **1.04** 1.00
+(0.99–1.05) (0.99–1.05) (0.98–1.09) (0.99–1.05) **(1.01–1.07)** (0.96–1.07)
+Respiratory system diseases _2668_ _1346_ _414_ 1.05 1.02 1.02 1.01 1.02 **1.07**
+(0.99–1.02) (0.97–1.08) (0.94–1.12) (0.96–1.05) (0.97–1.08) **(1.01–1.13)**
+Neoplasm (but lung) _4798_ _2535_ _805_ **1.07** 1.02 1.03 **1.06** 1.03 1.03
+**(1.03–1.11)** (0.98–1.06) (0.96–1.10) **(1.03–1.10)** (0.99–1.07) (0.97–1.10)
+Behavioural disorders _637_ _352_ _115_ **0.85** 1.02 0.91 **0.86** 1.05 **0.81**
+**(0.76–0.95)** (0.91–1.13) (0.77–1.09) **(0.78–0.95)** (0.95–1.16) **(0.67–0.97)**
+Nervous system diseases _1460_ _810_ _220_ 1.04 1.03 1.03 1.05 1.02 1.02
+(0.97–1.11) (0.96–1.10) (0.91–1.17) (0.99–1.12) (0.96–1.09) (0.89–1.17)
+Cardiac diseases _4750_ _2481_ _741_ 0.96 1.01 0.92 **0.96** 1.01 0.98
+(0.92–1.01) (0.96–1.07) (0.87–1.02) **(0.92–1.00)** (0.96–1.06) (0.88–1.09)
+Cerebrovascular diseases _2069_ _1019_ _292_ 1.03 0.98 0.94 0.99 0.98 1.01
+(0.96–1.10) (0.90–1.06) (0.78–1.13) (0.93–1.05) (0.91–1.06) (0.87–1.18)
+Atherosclerosis _310_ _172_ _64_ 1.04 0.97 1.05 1.08 1.04 1.02
+(0.91–1.20) (0.85–1.12) (0.84–1.29) (0.95–1.23) (0.91–1.18) (0.80–1.30)
+LRTI _956_ _458_ _126_ 1.08 **1.11** **1.21** 1.06 1.06 1.17
+(1.00–1.18) **(1.01–1.22)** **(1.06–1.38)** (0.98–1.15) (0.97–1.17) (0.99–1.39)
+COPD _1727_ _788_ _247_ **0.82** **0.89** 0.89 **0.82** **0.91** 0.95
+**(0.76–0.88)** **(0.82–0.97)** (0.79–1.00) **(0.77–0.87)** **(0.85–0.98)** (0.85–1.06)
+Asthma _79_ _48_ _11_ 1.07 1.09 1.08 0.93 1.13 1.17
+(0.79–1.47) (0.83–1.44) (0.59–1.96) (0.67–1.29) (0.83–1.53) (0.62–2.22)
+Lung cancer _293_ _171_ _62_ **1.18** **1.17** 1.00 **1.21** **1.22** 1.00
+**(1.02–1.35)** **(1.05–1.30)** (0.79–1.25) **(1.06–1.38)** **(1.08–1.38)** (0.80–1.25)
+Urinary bladder cancer _294_ _154_ _53_ 1.18 0.93 0.99 **1.20** 0.93 0.98
+(1.03–1.35) (0.79–1.11) (0.77–1.28) **(1.06–1.37)** (0.80–1.08) (0.73–1.33)
+Kidney cancer _121_ _55_ _20_ **1.43** 1.16 1.13 **1.40** 1.11 1.20
+**(1.18–1.72)** (0.92–1.48) (0.77–1.64) **(1.15–1.70)** (0.86–1.43) (0.82–1.76)
+Parkinson _79_ _55_ _15_ 0.96 1.06 0.67 0.91 1.13 0.69
+(0.70–1.34) (0.84–1.34) (0.35–1.28) (0.67–1.24) (0.89–1.43) (0.40–1.20)
+Alzheimer _169_ _96_ _33_ 0.99 0.95 0.86 1.01 0.93 0.97
+(0.79–1.24) (0.74–1.22) (0.53–1.41) (0.83–1.22) (0.74–1.16) (0.67–1.39)
+Miscarriage _45_ _25_ _8_ 1.11 1.03 1.19 1.04 1.10 5.39
+(0.64–1.93) (0.70–1.52) (0.45–3.15) (0.65–1.66) (0.79–1.53) (0.34–86.2)
+Stroke _848_ _523_ _134_ **1.16** **1.12** **1.19** **1.15** **1.16** 1.16
+**(1.06–1.25)** **(1.03–1.20)** **(1.04–1.35)** **(1.06–1.24)** **(1.08–1.26)** (0.99–1.36)
+Angina pectoris _496_ _284_ _71_ 1.01 1.04 0.97 1.02 1.04 0.99
+(0.89–1.13) (0.92–1.18) (0.78–1.21) (0.92–1.13) (0.93–1.17) (0.79–1.23)
+
+
+Results obtained for atherosclerosis (particularly for NO2) confirm
+recent findings of coronary artery calcification within six metropolitan
+areas in the USA (Kaufman et al., 2016) and the results of ESCAPE on a
+preclinical marker of atherosclerosis (intima-media thickness of the
+common carotid artery) (Perez et al., 2015). Increased concentrations
+of PM2.5 and traffic-related air pollution within metropolitan areas are
+associated with progression in coronary calcification, consistent with
+acceleration of atherosclerosis. Considering myocardial infarction, few
+studies are available in the literature until now, whereas many studies
+focus on short-term effect (Bhaskaran et al., 2009). Our study supports
+the evidence of an effect of long-term exposure to air pollution on
+myocardial infarction.
+It is known that the biological mechanisms linking long term exposure to air pollution and respiratory diseases include reduced lung
+function, pulmonary inflammation and oxidative stress.
+Nevertheless, in our study no results are obtained for the whole
+group of respiratory diseases. If we investigate more specific causes of
+hospitalization, we see a clear effect of air pollution on LRTI and a
+suggestion on relationship with asthma, with all the known limitations
+
+
+to this type of hospital admissions. Risks for COPD are still an open
+issue with controversial results (Atkinson et al., 2015), while a causal
+role of air pollution in the induction of COPD would be biologically
+plausible (Schikowski et al., 2014). Following Schikowski, in spite of
+_plausible models of biological mechanisms, direct epidemiological evidence_
+_of the long-term effects of air pollution on COPD prevalence and incidence_
+_remains suggestive but not conclusive. In LIFE MED HISS, a protective_
+effect has been seen but this can also be due to competitive risks: since
+COPD, lung cancer and ischaemic diseases share a common risk factor
+(smoking) and in addition the hospitalization for COPD should not
+happen (it is considered inappropriate because this disease should be
+managed at home) it is likely that people who smoke and whose conditions are exacerbated by air pollution have been hospitalized for lung
+cancer or myocardial infarction rather than for COPD.
+In contrast to what previously published (Kloog et al., 2012), we
+have not seen significant risk for diabetes and this could be an effect of
+the protective effect of Mediterranean diet which is spread among all
+the Italian population and could have mitigated the metabolic effect of
+chemicals. Concerning risks for urban and rural areas, there is no clear
+
+
+-----
+
+**Table 5**
+between exposure to pollutants (1999; 2003; 2005; 2007) and hospital admissions, using time dependent Cox model with robust variance estimator, divided by
+gender. Results expressed per HRs for 10 μg/m[3] increase. Model adjusted by age, educational level, living with partner, occupational status, smoking habit, physical
+activity status, type of municipality (rural, urban, metropolitan areas) and BMI. Number of events are reported in italics. Statistically significant results are highlighted in bold
+Causes where number of events among men and women do not respect overall proportions are marked with an asterisk (*).
+
+Cause of hospitalization Number of events PM2.5 NO2
+
+Women Men Women Men Women Men
+
+HR for 10 μg/m[3] increase HR for 10 μg/m[3] increase HR for 10 μg/m[3] increase HR for 10 μg/m[3] increase
+
+Diabetes _1784_ _1964_ 0.97 (0.92–1.02) 0.98 (0.93–1.03) 0.98 (0.94–1.02) 0.99 (0.95–1.03)
+Circulatory system diseases _6100_ _6767_ **1.04 (1.01–1.06)** **1.06 (1.03–1.08)** **1.04 (1.02–1.06)** **1.06 (1.04–1.09)**
+Respiratory system diseases _1833_ _2595_ 1.03 (0.97–1.08) 1.04 (0.99–1.08) 0.99 (0.94–1.05) 1.03 (0.99–1.08)
+Neoplasm (but lung) _4326_ _3812_ **1.06 (1.03–1.09)** **1.06 (1.03–1.09)** **1.07 (1.04–1.10)** **1.06 (1.03–1.09)**
+Behavioural disorders _626_ _478_ 0.96 (0.89–1.05) 0.99 (0.90–1.09) 0.98 (0.92–1.05) 1.01 (0.94–1.09)
+Nervous system diseases _1507_ _983_ 1.06 (1.00–1.11) 1.04 (0.98–1.11) **1.05 (1.01–1.10)** 1.04 (0.99–1.10)
+Cardiac diseases _3508_ _4464_ 1.01 (0.97–1.05) **1.04 (1.00–1.08)** 1.02 (0.98–1.05) **1.05 (1.02–1.08)**
+Cerebrovascular diseases _1654_ _1726_ 1.04 (0.98–1.10) 1.02 (0.97–1.08) 1.03 (0.98–1.08) 1.02 (0.97–1.07)
+Atherosclerosis _190_ _356_ 1.08 (0.95–1.22) 1.06 (0.97–1.17) 1.08 (0.96–1.21) **1.11 (1.02–1.20)**
+LRTI _638_ _902_ **1.09 (1.00–1.18)** **1.10 (1.03–1.18)** 1.05 (0.98–1.13) 1.05 (0.99–1.12)
+COPD _960_ _1802_ 0.90 (0.83–0.96) **0.91(0.86–0.96)** **0.91 (0.86–0.97)** **0.95 (0.91–0.99)**
+Asthma _90_ _48_ 1.06 (0.85–1.31) 1.14 (0.84–1.55) 1.00 (0.81–1.24) 1.13 (0.85–1.51)
+Lung cancer _105*_ _421*_ **1.27 (1.11–1.46)** **1.15 (1.07–1.25)** **1.27 (1.11–1.46)** **1.18 (1.09–1.27)**
+Urinary bladder cancer _89*_ _412*_ **1.24 (1.07–1.44)** 1.04 (0.95–1.14) **1.24 (1.07–1.44)** 1.05 (0.97–1.13)
+Kidney cancer _62*_ _134*_ **1.32 (1.08–1.61)** **1.20 (1.05–1.38)** **1.26 (1.03–1.54)** **1.17 (1.03–1.33)**
+Parkinson _68_ _81_ 1.12 (0.91–1.38) 1.00 (0.80–1.25) 1.12 (0.93–1.36) 1.04 (0.86–1.27)
+Alzheimer _177*_ _121*_ 1.05 (0.89–1.24) 0.99 (0.83–1.18) 1.03 (0.90–1.18) 1.07 (0.93–1.24)
+Miscarriage _78_ 0.99 (0.80–1.23) 1.01 (0.84–1.22)
+Stroke _517_ _988_ 1.08 (0.99–1.18) **1.17 (1.11–1.24)** **1.13 (1.05–1.21)** **1.15 (1.09–1.21)**
+Angina pectoris _283_ _568_ 1.08 (0.96–1.21) 0.99 (0.91–1.09) 1.07 (0.97–1.18) 1.01 (0.94–1.09)
+
+
+**Table 6**
+Association between exposure to pollutants (1999; 2003; 2005; 2007) and
+hospital admissions for lung cancer, using time dependent Cox model with
+robust variance estimator. Results expressed per HRs for 10 μg/m[3] increase.
+Model adjusted by age, gender, educational level, living with partner, occupational status and type of municipality (rural, urban, metropolitan areas)
+smoking status, physical activity status, BMI when the variable is not used to
+show stratified results. Number of events are reported in italics. Statistically
+significant results are highlighted in bold
+
+Number PM2.5 NO2
+of events
+
+
+HR of hospital
+admissions for
+lung cancer for
+10 μg/m[3] increase
+
+
+HR of hospital
+admissions for lung
+cancer for 10 μg/m[3]
+
+increase
+
+
+Overall _526_ **1.18 (1.10–1.26)** **1.20 (1.12–1.28)**
+Rural areas _293_ **1.18 (1.02–1.35)** **1.21 (1.06–1.38)**
+Urban areas _171_ **1.17 (1.05–1.30)** **1.22 (1.08–1.38)**
+Metropolitan areas _62_ 1.00 (0.79–1.25) 1.00 (0.80–1.25)
+Current smoker _231_ **1.18 (1.07–1.32)** **1.23 (1.11–1.36)**
+Former smoker _188_ 1.16 (0.99–1.35) **1.19 (1.03–1.38)**
+Never smoker _107_ **1.17 (1.04–1.31)** **1.16 (1.04–1.29)**
+Physical activity
+Intense _13_ 0.81 (0.46–1.42) 0.81 (0.47–1.04)
+Regular _89_ 0.98 (0.79–1.22) 1.04 (0.86–1.25)
+Light _165_ **1.22 (1.09–1.37)** **1.26 (1.12–1.41)**
+No physical activity _259_ **1.23 (1.12–1.35)** **1.23 (1.12–1.34)**
+Underweight _8_ 0.90 (0.51–1.48) 1.08 (0.68–1.70)
+BMI < 18.5
+
+Normal weight _229_ 1.11 (0.99–1.25) 1.09 (0.98–1.21)
+18.5 ≤BMI < 25
+
+Overweight _234_ **1.20 (1.08–1.32)** **1.23 (1.11–1.35)**
+25 ≤BMI < 30
+
+Obese 30 ≤BMI _55_ **1.39 (1.15–1.67)** **1.54 (1.31–1.80)**
+
+evidence of higher risks in one of the two subgroups, but this seems to
+depend on the cause selected (Table 4). Information on alcohol and diet
+would have helped to clarify this topic, because of different behaviour
+among the two groups.
+
+
+Controversial results obtained for metropolitan areas can be a
+combination of exposure misclassification and of the small amount of
+individuals sampled in these study areas. Considering not significant
+HRs obtained for lung cancer in cities with > 250,000 inhabitants, the
+use of a single concentration value for metropolitan areas could be a
+source of potential exposure misclassification, given the large withincity range. However, this source of bias is due to the lack of more detailed information about home address or residential postcode, avoidable if privacy policies would have permitted access to information at
+least on zip codes. The lack of permission has forced the use of concentration values at municipality level.
+The lack of updated information for individual confounders and
+residential history is the major weakness of the use of Italian
+Longitudinal Study. Internal Italian mobility is about 1 million and a
+half every year, over a population of about 59 million of inhabitants
+(about 2.5%). In year 2009, 1,312,763 individuals changed their residence within Italian territory, whereas mobility outside Italian territory is 39,000 (ISTAT, 2016). Taking into account relatively low mobility rates of Italian people and providing that factors which influence
+mobility are not only related to environmental factors, an eventual nondifferential misclassification is more likely to reduce the effect towards
+the null, as epidemiological literature generally suggests.
+We used the exposure information as a proxy of past exposures.
+Having verified that in the Italian territory there were no differential
+temporal trends of the pollutants under investigation between metropolitan, urban and rural areas (Figs. 2 and 3), we trusted the use of
+the whole information available. The time-dependent approach aims at
+maximizing the information on exposure using available data. In this
+study the first year of the exposure available is contemporary to the
+time of the interview. Sensitivity analyses performed using only year
+2005 (first year with an adequate spatial coverage of monitoring stations both for PM2.5 and for NO2) seemed to show higher risks associated to particulate matter. This may suggest that the use of a timedependent approach, including years in the past, could lead to conservative results due to less accuracy in particulate exposure measure.
+The adopted methodology correctly reproduces concentration mean
+
+
+-----
+
+**Fig. 2. Boxplot of PM2.5 for the four year considered divided by metropolitan, urban and rural areas.**
+
+
+levels typical of urban background stations, consistent with the MINNI
+spatial resolution. The system (MINNI-KED) underestimates observed
+levels at traffic stations in urban areas that are phenomena occurring at
+scales that cannot be solved at the adopted spatial resolution. This is a
+common problem of state-of-art national CTMs (Aguilera et al., 2013;
+Kiesewetter et al., 2014), likely to be solved in the future with routine
+application of more detailed modeling of urban areas. Moreover, upscaling from gridded data to municipality level, needed to match the
+health data, preserves concentrations levels and main spatial patterns,
+but it amplifies the inability to capture spatial variations of small scale.
+
+**5. Conclusion**
+
+The MED-HISS project is a pilot study that tested the applicability of
+surveillance systems for European countries, thanks to relative cheapness in comparison to traditional cohort studies. Results obtained are
+consistent with the literature, as is the case for lung cancer, and
+
+
+demonstrated the feasibility of this approach, with the possibility to
+study a broad range of causes (IARC, 2013). The applied methodology
+provided consistent estimates useful to describe the exposure of large
+population for surveillance purposes.
+To carry on this kind of studies it is necessary that privacy policies
+permit to link each individual of the survey with his health history.
+European surveys are representative of population at some different
+level of urbanization. This permits to have a large amount of the cohort
+living in rural areas, which are less polluted, but usually also less studied.
+Regarding exposure to air pollution we have implemented a methodology taking into account data coming from CTMs and air quality
+monitoring network. Firstly, trough KED, observations were fused in
+pollutant concentration fields and secondly a weighted average procedure was used to up-scale assimilated concentration fields at municipality scale. The adopted methodology produced satisfactory results
+and consistent exposure estimates at municipality level.
+
+
+**Fig. 3. Boxplot of NO2 for the four year considered divided by metropolitan, urban and rural areas.**
+
+
+-----
+
+Due to the nature of the study, a wide list of causes has been analyzed, controlling for confounders at individual level. The availability
+of confounders depends on the survey. In this study we have identified a
+core set of variables which have a high degree of comparability with
+other European surveys. In the Italian Longitudinal Study, we have the
+strong limitation of having no information on alcohol consumption and
+on diet. However, subsequent surveys partially overcome this problem,
+but nowadays there is no follow-up with hospital admissions. Due to
+privacy restrictions we do not have more detailed information on residence than the municipality level, which could be a source of bias
+when studying metropolitan areas. Since only 8% of the cohort lives in
+metropolitan areas, this has a low impact on results from the Italian
+Longitudinal Study. A major source of misclassification is the lack of
+residential history before and after the interview, but the low rate of
+Italian mobility limits this problem.
+Results obtained confirm the relationship measured in other studies
+on air pollution and hospital admissions, and add new evidence for
+causes with few studies available (e.g. myocardial infarction). Evidence
+arises for circulatory system, also when considering more specific
+causes like cerebrovascular disease, atherosclerosis, myocardial infarction and angina. Results for lung cancer confirm what already
+published. New issues are added considering all neoplasms (having
+excluded lung cancer) and kidney cancer. A study using a wider followup and using a cohort derived from a more recent survey is ongoing.
+
+**Acknowledgements/grant support/competing financial interests**
+**declaration**
+
+This research was supported by the EU Life Programme (grant
+number LIFE12 ENV/IT/000834).
+The authors declare they have no actual or potential competing financial interests.
+The authors would like to thank the anonymous reviewers for their
+helpful and constructive comments that contributed to improving the
+final version of the paper. The authors wish to thank Nino Kuenzli from
+Swiss Tropical and Public Health Institute, Xavier Querol from Institute
+for Environmental. Assessment and Water Research IDAEA-CSIC
+(Spanish Research Council) and Claudia Galassi from Unit of Cancer
+Epidemiology “Città della salute e della scienza” Hospital (University of
+Turin) and Center for Cancer Prevention Piemonte for their assistance
+during the project and their valuable suggestions.
+
+**Appendix A. Supplementary data**
+
+[Supplementary data to this article can be found online at https://](https://doi.org/10.1016/j.envint.2018.10.020)
+[doi.org/10.1016/j.envint.2018.10.020.](https://doi.org/10.1016/j.envint.2018.10.020)
+
+**References**
+
+Aguilera, I., Basagana, X., Pay, M.T., Agis, D., Bouso, L., Foraster, M., Rivera, M.,
+Baldasano, J.M., Kunzli, N., 2013. Evaluation of the CALIOPE air quality forecasting
+system for epidemiological research: the example of NO2 in the province of Girona
+[(Spain). Atmos. Environ. 72, 134–141. https://doi.org/10.1016/j.atmosenv.2013.02.](https://doi.org/10.1016/j.atmosenv.2013.02.035)
+[035.](https://doi.org/10.1016/j.atmosenv.2013.02.035)
+Alimohammadi, H., Fakhri, S., Derakhshanfar, H., Hosseini-Zijoud, S.M., Safari, S.,
+Hatamabadi, H.R., 2016. The effects of air pollution on ischemic stroke admission
+[rate. Chonnam Med. J. 52 (1), 53–58. https://doi.org/10.4068/cmj.2016.52.1.53.](https://doi.org/10.4068/cmj.2016.52.1.53)
+[(Jan, Epub 2016 Jan 19).](https://doi.org/10.4068/cmj.2016.52.1.53)
+Andersen, Z.J., Hvidberg, M., Jensen, S.S., Ketzel, M., Loft, S., Sørensen, M., et al., 2011.
+Chronic obstructive pulmonary disease and long-term exposure to traffic-related air
+[pollution: a cohort study. Am. J. Respir. Crit. Care Med. 183, 455–461. https://doi.](https://doi.org/10.1164/rccm.201006-0937OC)
+[org/10.1164/rccm.201006-0937OC. (Epub 2010 Sep 24).](https://doi.org/10.1164/rccm.201006-0937OC)
+Andersen, Z.J., Bønnelykke, K., Hvidberg, M., Jensen, S.S., Ketzel, M., Loft, S., et al.,
+2012a. Long-term exposure to air pollution and asthma hospitalisations in older
+[adults: a cohort study. Thorax 67 (1), 6–11. https://doi.org/10.1136/thoraxjnl-2011-](https://doi.org/10.1136/thoraxjnl-2011-200711)
+[200711. (Jan, Epub 2011 Sep 2).](https://doi.org/10.1136/thoraxjnl-2011-200711)
+Andersen, Z.J., Kristiansen, L.C., Andersen, K.K., Olsen, T.S., Hvidberg, M., Jensen, S.S.,
+et al., 2012b. Stroke and long-term exposure to outdoor air pollution from nitrogen
+[dioxide: a cohort study. Stroke 43 (2), 320–325. https://doi.org/10.1161/](https://doi.org/10.1161/STROKEAHA.111.629246)
+[STROKEAHA.111.629246. (Feb, Epub 2011 Nov 3).](https://doi.org/10.1161/STROKEAHA.111.629246)
+Andersen Z J Hvidberg M Jensen S S Ketzel M Loft S Sørensen M et al 2012c
+
+
+Diabetes incidence and long-term exposure to air pollution. Diabetes Care 35, 92–98.
+[https://doi.org/10.2337/dc11-1155. (Epub 2011 Nov 10).](https://doi.org/10.2337/dc11-1155)
+Atkinson, R.W., Carey, I.M., Kent, A.J., van Staa, T.P., Anderson, H.R., Cook, D.G., 2015.
+Long-term exposure to outdoor air pollution and the incidence of chronic obstructive
+pulmonary disease in a national English cohort. Occup. Environ. Med. 72 (1), 42–48.
+[https://doi.org/10.1136/oemed-2014-102266. (Jan; Epub 2014 Aug 20).](https://doi.org/10.1136/oemed-2014-102266)
+[Basagaña, X., 2015. Long-term exposure to air pollution and mortality: a nationwide](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0040)
+[small area study in Spain (LIFE MED HISS project). In: ISEE Europe Young 2015,](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0040)
+[Early Career Researchers Conference on Environmental Epidemiology Utrecht, the](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0040)
+[Netherlands, 2–3 November 2015.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0040)
+Bhaskaran, K., Hajat, S., Haines, A., Herrett, E., Wilkinson, P., Smeeth, L., 2009. Effects of
+air pollution on the incidence of myocardial infarction. Heart 95, 1746–1759.
+[https://doi.org/10.1136/hrt.2009.175018.](https://doi.org/10.1136/hrt.2009.175018)
+Cesaroni, G., Badaloni, C., Gariazzo, C., Stafoggia, M., Sozzi, R., Davoli, M., Forastiere, F.,
+2013. Long-term exposure to urban air pollution and mortality in a cohort of more
+[than a million adults in Rome. Environ. Health Perspect. 121, 324–331. https://doi.](https://doi.org/10.1289/ehp.1205862)
+[org/10.1289/ehp.1205862.](https://doi.org/10.1289/ehp.1205862)
+Cesaroni, G., Forastiere, F., Stafoggia, M., Zorana, J., Badaloni, C., Beelen, R., et al., 2014.
+Long term exposure to ambient air pollution and incidence of acute coronary events:
+prospective cohort study and meta-analysis in 11 European cohorts from the ESCAPE
+[Project. BMJ 21 (348), f7412. https://doi.org/10.1136/bmj.f7412. (Jan).](https://doi.org/10.1136/bmj.f7412)
+[CORINE, 2006. Corine Land Cover (raster data. Available). http://www.eea.europa.eu/](http://www.eea.europa.eu/data-and-maps/data/corine-land-cover-2006-raster-2)
+[data-and-maps/data/corine-land-cover-2006-raster-2, Accessed date: 5 October](http://www.eea.europa.eu/data-and-maps/data/corine-land-cover-2006-raster-2)
+2018.
+de Keijzer, C., Agis, D., Ambrós, A., Arévalo, G., Baldasano, J.M., Bande, S., et al., 2016.
+The association of air pollution and greenness with mortality and life expectancy in
+[Spain: a small-area study. Environ. Int. https://doi.org/10.1016/j.envint.2016.11.](https://doi.org/10.1016/j.envint.2016.11.009)
+[009. (2016 Nov 18. pii: S0160-4120(16)30755-3).](https://doi.org/10.1016/j.envint.2016.11.009)
+EUROTHINE (TACKLING HEALTH INEQUALITIES IN EUROPE), 2005. EUROTHINE
+[homepage (Available). http://www.irdes.fr/english/international-collaborations-](http://www.irdes.fr/english/international-collaborations-and-european-projects/eurothine-tackling-health-inequalities-in-europe.html)
+[and-european-projects/eurothine-tackling-health-inequalities-in-europe.html,](http://www.irdes.fr/english/international-collaborations-and-european-projects/eurothine-tackling-health-inequalities-in-europe.html)
+Accessed date: 5 October 2018.
+Gandini, M., Ghigo, S., Bande, S., Berti, G., Cadum, E., Ciancarella, L., et al., 2016.
+Pollutant data mapping at municipality level within the European Project LIFE MED
+HISS – LIFE12 ENV/IT/000834. In: Abstracts of the 2016 Epidemiology (ISEE).
+Abstract P3-304. Research Triangle Park, NC:Environmental Health Perspectives,
+[https://doi.org/10.1289/ehp.isee2016.](https://doi.org/10.1289/ehp.isee2016)
+[Gariazzo, C., Silibello, C., Finardi, S., Radice, P., Piersanti, A., Calori, G., et al., 2007. A](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0080)
+[gas/aerosol air pollutants study over the urban area of Rome using a comprehensive](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0080)
+[chemical transport model. Atmos. Environ. 41, 7286–7303.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0080)
+Ghigo, S., Bande, S., Ciancarella, L., Mircea, M., Piersanti, A., Righini, G., et al., 2017.
+Mapping air pollutants at municipality level in Italy and Spain in support to health
+[impact evaluations. Air Qual. Atmos. Health. https://doi.org/10.1007/s11869-017-](https://doi.org/10.1007/s11869-017-0520-x)
+[0520-x.](https://doi.org/10.1007/s11869-017-0520-x)
+Halonen, J.I., Hansell, A.L., Gulliver, J., Morley, D., Blangiardo, M., Fecht, D., et al., 2015.
+Road traffic noise is associated with increased cardiovascular morbidity and mor[tality and all-cause mortality in London. Eur. Heart J. 36 (39), 2653–2661. https://](https://doi.org/10.1093/eurheartj/ehv216)
+[doi.org/10.1093/eurheartj/ehv216. (Oct 14; Epub 2015 Jun 23).](https://doi.org/10.1093/eurheartj/ehv216)
+Hoek, G., Krishnan, R.M., Beelen, R., Peters, A., Ostro, B., Brunekreef, B., Kaufman, J.D.,
+2013. Long-term air pollution exposure and cardio-respiratory mortality: a review.
+[Environ. Health 12 (1), 43. https://doi.org/10.1186/1476-069X-12-43. (May 28).](https://doi.org/10.1186/1476-069X-12-43)
+[Hruba, F., Fabianova, E., Koppova, K., Vandenberg, J.J., 2001. Childhood respiratory](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0100)
+[symptoms, hospital admissions, and long-term exposure to airborne particulate](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0100)
+[matter. J. Expo. Anal. Environ. Epidemiol. 11 (1), 33–40 (Jan-Feb).](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0100)
+[Hupkens, C.L.H., van den Berg, J., van der Zee, J., 1999. National health interview sur-](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0105)
+[veys in Europe: an overview. Health Policy 47 (1999), 145–168.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0105)
+Hystad, P., Demers, P.A., Johnson, K.C., Carpiano, R.M., Brauer, M., 2013. Long-term
+residential exposure to air pollution and lung cancer risk. Epidemiology 24 (5),
+[762–772. https://doi.org/10.1097/EDE.0b013e3182949ae7. (Sep).](https://doi.org/10.1097/EDE.0b013e3182949ae7)
+[IARC, 2013. Outdoor Air Pollution/IARC Working Group on the Evaluation of](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0115)
+[Carcinogenic Risks to Humans. (ISBN 978-92-832-0175-5).](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0115)
+Ignaccolo, R., Ghigo, S., Bande, S., 2013. Functional zoning for air quality. Environ. Ecol.
+[Stat. 20 (2013), 109. https://doi.org/10.1007/s10651-012-0210-7.](https://doi.org/10.1007/s10651-012-0210-7)
+ISTAT (Istituto Nazionale di Statistica), 2016. Trasferimenti di residenza ([in Italian].
+[Available). http://www.istat.it/it/archivio/33911, Accessed date: 5 October 2018.](http://www.istat.it/it/archivio/33911)
+Kaufman, J.D., Adar, S.D., Graham Barr, R., Budoff, M., Burke, G.L., Curl, C.L., et al.,
+2016. Association between air pollution and coronary artery calcification within six
+metropolitan areas in the USA (the Multi-Ethnic Study of Atherosclerosis and Air
+[Pollution): a longitudinal cohort study. Lancet 388 (10045), 696–704. https://doi.](https://doi.org/10.1016/S0140-6736(16)00378-0)
+[org/10.1016/S0140-6736(16)00378-0. (Aug 13, Epub 2016 May 24).](https://doi.org/10.1016/S0140-6736(16)00378-0)
+[Kiesewetter, G., Borken-Kleefeld, J., Schöpp, W., Heyes, C., Thunis, P., Bessagnet, B.,](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0135)
+[Terrenoire, E., Gsella, A., Amann, M., 2014. Modelling NO2 concentrations at the](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0135)
+[street level in the GAINS integrated assessment model: projections under current](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0135)
+[legislation. Atmos. Chem. Phys. 14 (813–829), 2014.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0135)
+[Kioumourtzoglou, M.A., Schwartz, J.D., Weisskopf, M.G., Melly, S.J., Wang, Y., Dominici,](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0140)
+[F., Zanobetti, A., 2016. Long-term PM2.5 exposure and neurological hospital ad-](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0140)
+[missions in the Northeastern United States. Environ. Health Perspect. 124 (1), 23–29](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0140)
+[Jan, Erratum in: Environ Health Perspect. 2016 Jan;124(1):28.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0140)
+Kloog, I., Coull, B.A., Zanobetti, A., Koutrakis, P., Schwartz, J.D., 2012. Acute and chronic
+effects of particles on hospital admissions in New-England. PLoS One 7 (4), e34664.
+[https://doi.org/10.1371/journal.pone.0034664.](https://doi.org/10.1371/journal.pone.0034664)
+[Kloog, I., Zanobetti, A., Nordio, F., Coull, B.A., Baccarelli, A.A., Schwartz, J., 2015. Effects](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0150)
+[of airborne fine particles (PM2.5) on deep vein thrombosis admissions in the](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0150)
+[northeastern United States. J. Thromb. Haemost. 13 (5), 768–774 (May).](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0150)
+LIFE MED HISS, 2013. Mediterranean Health Interview Survey Studies: long term exposure to air pollution and health surveillance. In: LIFE MED HISS Homepage,
+
+
+-----
+
+[(Available). http://www.medhiss.eu/, Accessed date: 5 October 2018.](http://www.medhiss.eu/)
+Marinacci, C., Grippo, F., Pappagallo, M., Sebastiani, G., Demaria, M., Vittori, P., Caranci,
+N., Costa, G., 2013. Social inequalities in total and cause-specific mortality of a
+sample of the Italian population, from 1999 to 2007. Eur. J. Pub. Health 23 (2013),
+[582–587. https://doi.org/10.1093/eurpub/cks184. (Epub 2013 Jan 8).](https://doi.org/10.1093/eurpub/cks184)
+Mircea, M., Ciancarella, L., Briganti, G., Calori, G., Cappelletti, A., Cionni, I., et al., 2014.
+Assessment of the AMS-MINNI system capabilities to predict air quality over Italy for
+[the calendar year 2005. Atmos. Environ. 84, 178–188. https://doi.org/10.1016/j.](https://doi.org/10.1016/j.atmosenv.2013.11.006)
+[atmosenv.2013.11.006.](https://doi.org/10.1016/j.atmosenv.2013.11.006)
+Mircea, M., Grigoras, G., D'Isidoro, M., Righini, G., Adani, M., Briganti, G., et al., 2016.
+Impact of grid resolution on aerosol predictions: a case study over Italy. Aerosol Air
+[Qual. Res. 16, 1253–1267. https://doi.org/10.4209/aaqr.2015.02.0058.](https://doi.org/10.4209/aaqr.2015.02.0058)
+Nafstad, P., Håheim, L.L., Wisløff, T., Gram, F., Oftedal, B., Holme, I., et al., 2004. Urban
+air pollution and mortality in a cohort of Norwegian men. Environ. Health Perspect.
+[112 (5), 610–615. https://doi.org/10.1289/ehp.6684. (Apr).](https://doi.org/10.1289/ehp.6684)
+Oudin, A., Strömberg, U., Jakobsson, K., Stroh, E., Lindgren, A.G., Norrving, B., et al.,
+2010. Hospital admissions for ischemic stroke: does long-term exposure to air pol[lution interact with major risk factors. Cerebrovasc. Dis. 31 (3), 284–293. https://doi.](https://doi.org/10.1159/000322600)
+[org/10.1159/000322600. (2011; Epub 2010 Dec 22).](https://doi.org/10.1159/000322600)
+Perez, L., Wolf, K., Hennig, F., Penell, J., Basagaña, X., Foraster, M., et al., 2015. Air
+pollution and atherosclerosis: a cross-sectional analysis of four European cohort
+[studies in the ESCAPE Study. Environ. Health Perspect. 123 (6). https://doi.org/10.](https://doi.org/10.1289/ehp.1307711)
+[1289/ehp.1307711. (June).](https://doi.org/10.1289/ehp.1307711)
+R Core Team, 2017. R: A Language and Environment for Statistical Computing. R
+[Foundation for Statistical Computing, Vienna, Austria (URL). https://www.R-](https://www.R-project.org/)
+[project.org/, Accessed date: 5 October 2018.](https://www.R-project.org/)
+
+
+Raaschou-Nielsen, O., Andersen, Z.J., Hvidberg, M., Jensen, S.S., Ketzel, M., Sørensen, M.,
+et al., 2011. Lung cancer incidence and long-term exposure to air pollution from
+[traffic. Environ. Health Perspect. 119 (6), 860–865. https://doi.org/10.1289/ehp.](https://doi.org/10.1289/ehp.1002353)
+[1002353. (Jun; Epub 2011 Jan 12).](https://doi.org/10.1289/ehp.1002353)
+[SAS Institute Inc., 2013. SAS 9.4. SAS Institute Inc., Cary, NC.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0200)
+Schikowski, T., Mills, I.C., Anderson, H.R., Cohen, A., Hansell, A., Kauffmann, F., et al.,
+2014. Ambient Air Pollution: A Cause of COPD? Ambient Air Pollution and COPD.
+[doi: 10.1183/eurrespirj2014. 43. pp. 250–263. https://doi.org/10.1183/09031936.](https://doi.org/10.1183/09031936.00100112)
+[00100112.](https://doi.org/10.1183/09031936.00100112)
+[Silibello, C., Calori, G., Brusasca, G., Giudici, A., Angelino, E., Fossati, G., et al., 2008.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0210)
+[Modelling of PM10 concentrations over Milano urban area using two aerosol mod-](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0210)
+[ules. Environ. Model. Softw. 23, 333–343.](http://refhub.elsevier.com/S0160-4120(18)31687-8/rf0210)
+Stafoggia, M., Cesaroni, G., Peters, A., Andersen, Z.J., Badaloni, C., Beelen, R., et al.,
+2014. Long-term exposure to ambient air pollution and incidence of cerebrovascular
+events: results from 11 European cohorts within the ESCAPE Project. Environ. Health
+[Perspect. 122 (9). https://doi.org/10.1289/ehp.1307301. (September).](https://doi.org/10.1289/ehp.1307301)
+Thygesen, K., Alpert, J.S., Jaffe, A.S., Simoons, M.L., Chaitman, B.R., White, H.D., the
+Writing Group on behalf of the Joint ESC/ACCF/AHA/WHF Task Force for the
+Universal Definition of Myocardial Infarction, 2012. Third universal definition of
+[myocardial infarction. J. Am. Coll. Cardiol. 60 (16). https://doi.org/10.1016/j.jacc.](https://doi.org/10.1016/j.jacc.2012.08.001)
+[2012.08.001. (2012mISSN 0735-1097).](https://doi.org/10.1016/j.jacc.2012.08.001)
+Van de Kassteele, J., Stein, A., Dekkers, A., Velders, G., 2009. External drift kriging of
+NOx concentrations with dispersion model output in a reduced air quality monitoring
+[network. Environ. Ecol. Stat. 16 (2009), 321. https://doi.org/10.1007/s10651-007-](https://doi.org/10.1007/s10651-007-0052-x)
+[0052-x.](https://doi.org/10.1007/s10651-007-0052-x)
+
+
+-----
+

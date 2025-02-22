@@ -1,0 +1,420 @@
+EuropeanJournalofCancer 169(2022)156e165
+Available onlineat www.sciencedirect.com
+ScienceDirect
+journal homepage: www.ejcancer.com
+Original Research
+Convolutional neural network assistance significantly
+improves dermatologists’ diagnosis of cutaneous tumours
+using clinical images
+Wei Ba a,1, Huan Wu b,1, Wei W. Chen c,1, Shu H. Wang d, Zi Y. Zhang e,
+Xuan J. Wei a, Wen J. Wang a, Lei Yang f, Dong M. Zhou c,
+Yi X. Zhuang g, Qin Zhong h, Zhi G. Song i,**, Cheng X. Li a,*
+aDepartmentofDermatology,ChinesePLAGeneralHospital,Beijing100853,China
+bResearchofMedicalBigDataCenter,ChinesePLAGeneralHospital,Beijing100853,China
+cDepartmentofDermatology,BeijingHospitalofTraditionalChineseMedicine,AffiliatedtotheCapitalMedicalUniversity,
+Beijing100010,China
+dInstituteforInterdisciplinaryInformationSciences,TsinghuaUniversity,Beijing100084,China
+eDepartmentofDermatology,AffiliatedHospitalofNorthChinaUniversityofScienceandTechnology,Tangshan063000,
+China
+fDepartmentofDermatology,RocketForceCharacteristicMedicalCenter,Beijing100088,China
+gDysionIntelligent,Beijing100038,China
+hTheMedicalSchoolofChinesePLAGeneralHospital,Beijing100853,China
+iDepartmentofPathology,ChinesePLAGeneralHospital,Beijing100853,China
+Received6February2022;receivedinrevisedform20March2022;accepted7April2022
+Availableonline12May2022
+KEYWORDS Abstract Background: Convolutional neural networks (CNNs) have demonstrated expert-
+Convolutionalneural levelperformanceincutaneoustumourclassificationusingclinicalimages,butmostprevious
+network; studies have focused on dermatologist-versus-CNN comparisons rather than their combina-
+Clinical image; tion. The objective of our study was to evaluatethe potential impact of CNN assistance on
+Cutaneoustumours; dermatologists forclinical image interpretation.
+Multi-reader multi- Methods: Amulti-classCNNwastrainedandvalidatedusingadatasetof25,773clinicalim-
+case(MRMC) study; agescomprising10categoriesofcutaneoustumours.TheCNN’sperformancewastestedon
+Fullycrossed anindependentdatasetof2107images.Atotalof400images(40percategory)wererandomly
+selectedfromthetestdataset.Afullycrossed,self-control,multi-readermulti-case(MRMC)
+study was conducted to compare the performance of 18 board-certified dermatologists
+* Correspondingauthor.
+** Correspondingauthor.
+E-mailaddress:songzhg301@139.com(Z.G.Song),chengxinderm@163.com(C.X.Li).
+1 WeiBa,HuanWuandWeiW.Chencontributeequallytothiswork.
+https://doi.org/10.1016/j.ejca.2022.04.015
+0959-8049/ª2022ElsevierLtd.Allrightsreserved.
+W.Baetal./EuropeanJournalofCancer 169(2022)156e165 157
+(experience: 13/18(cid:1) 10years; 5/18＞10years) in interpreting the 400 clinical images with or
+without CNNassistance.
+Results: The CNN achieved anoverall accuracyof 78.45% and kappa of 0.73 in the classifi-
+cation of 10 types of cutaneous tumours on 2107 images. CNN-assisted dermatologists
+achieved a higher accuracy (76.60% vs. 62.78%, P < 0.001) and kappa (0.74 vs. 0.59,
+P<0.001)thanunassisteddermatologistsininterpretingthe400clinicalimages.Dermatolo-
+gists with less experience benefited more from CNN assistance. At the binary classification
+level (malignant or benign), the sensitivity (89.56% vs. 83.21%, P < 0.001) and specificity
+(87.90%vs.80.92%,P<0.001)ofdermatologistswithCNNassistancewerealsosignificantly
+improved thanthosewithout.
+Conclusions: CNN assistance improved dermatologist accuracy in interpreting cutaneous tu-
+moursand couldfurther boostthe acceptance of this newtechnique.
+ª2022Elsevier Ltd. Allrights reserved.
+1. Introduction Furthermore, above studies were conducted firstly
+without and then with CNN support (sequential
+One of the deep learning algorithms, the convolutional design). Compared to cross-over design, reading sce-
+neural network (CNN), has been proven to have great narios (with or without CNN assistance) were not
+potential for classifying images and detecting objects in randomised in sequential design, which may lead to
+pictures [1e3]. Due to the advantage of self-regulated bias in performance measures [18,21].
+learning of CNN and large volumes of cutaneous Basedontheseconsiderations,wedevelopedamulti-
+image accumulation, there has been growing research class CNN to classify 10 types of skin tumours and
+interest in using CNN to identifying skin tumours conducted a fully crossed, self-control, multi-reader
+[4e7]. multi-case (MRMC) study to evaluate the performance
+Many studies have consistently demonstrated that of dermatologists in interpreting clinical images with or
+CNNs could achieve on par or even better perfor- without CNN assistance.
+mance than human dermatologists in clinical image
+classification [6,8e11]. It is notable that an accurate 2. Materials and methods
+CNN will not replace the breadth and contextual
+knowledge of dermatologist; rather, only through their 2.1. Dataset
+combination may the CNN benefits be achieved
+[12,13]. However, most previous studies have focused The study was approved by the institutional review
+on dermatologist-versus-CNN comparisons, only few board of the Chinese PLA General Hospital & Medical
+studies investigated the potential of dermatologist- School(Approvalno.95S2019-123-01).Dataonpatient
+CNN collaboration [13e17]. Han et al. evaluated the demographics and clinical images between 2009 and
+performance of dermatologists with CNN assistance in 2020werecollectedviaaretrospectivechartreview,and
+clinical image classification by modifying initial di- patient consent was waived by the institutional review
+agnoses after being informed of CNN predictions [14]. board.
+This process was different from making diagnosis ac- Basal cell carcinoma (BCC), squamous cell carci-
+cording to CNN prediction in a real assistance mo- noma (SCC) and melanoma (MM) are the most
+dality. Hekler et al. developed a fusion algorithm to common types of skin cancer in populations [22e24].
+simulate dermatologist with CNN assistance in iden- These malignant entities show increasing incidence
+tifying dermoscopic image [15]. Lee et al. conducted a rates worldwide [22,25,26]. And mimicking entities
+study to evaluate physicians with CNN assistance in regularly create diagnostic dilemmas in clinical prac-
+detecting acral lentiginous melanoma using dermo- tice settings. Clinical images with the following di-
+scopic images [17]. Maron et al. evaluated dermatolo- agnoses were included: BCC, SCC including
+gists with CNN assistance in classifying melanoma and keratoacanthoma, MM, Bowen disease (BD), actinic
+nevus using dermoscopic images [16]. However, Lee keratosis (AK), melanocytic nevus (MN), seborrhoeic
+and Maron studies only included melanocytic lesions. keratosis (SK), haemangioma including pyogenic
+Tschandl et al. conducted a seminal research on granuloma, cherry haemangioma, sinusoidal hae-
+humanecomputer collaboration in interpreting der- mangioma and angiokeratoma, dermatofibroma (DF)
+moscopic images [13]. But Tschandl study didn’t and wart. All of the diagnoses were based on patho-
+clearly define the washout period between two ses- logical examinations. The clinical images were taken
+sions, which may lead to memory bias [18e20]. by cameras (Canon EOS 550D, Nikon D610 and
+158 W.Baetal./EuropeanJournalofCancer 169(2022)156e165
+Canon EOS 70D) and smartphones (iPhone 6 s Plus, 7 2.2. Multi-class CNN development
+Plus, 11 Pro, 11 Pro Max and HUAWEI P30, P40,
+Mate 30Pro). We trained our CNN based on the EfficientNet-B3 ar-
+Fig. 1 shows the data flow of the study. The overall chitecture, which was pre-trained on the ImageNet
+data collection was split into training/validation and dataset. The model has 27 layers and 12 million pa-
+testing datasets. Of the 29,280 images, 25,773 images rameters,whichissuitableforreal-timecalculationwith
+were allocated for training and validation. In the high accuracy using mobile phones. A total of 25,773
+remaining 3507 images, 2107 eligible images (excluding clinical images were used to train the model. An 80/20
+1400unqualifiedimages)wereusedfortesting(Table1). training/validation split was conducted to perform
+The excluded images contained two components. (1) cross-validation. The data splitting was conducted ac-
+Blurry and distantimageswere deletedfrom the test set cording to the lesions to avoid images from the same
+but were still used for training. (2) In the test set, each lesion being used in both training and validation.
+image corresponds to one lesion (no overlap derived During training, each image was trimmed to
+from multiple viewpoints) to maintain the diversity of 720 (cid:3) 720 pixels to set the lesion at the centre of the
+the test set and to ensure that the test set reflected the image.Foreachimage,weuseda300(cid:3)300pixelsliding
+real performance of the CNN. window to sample ordered, same-sized patches as the
+For a number of the patients, multiple images were CNN input. In the test phase, the CNN produced 10
+from the same lesion, including images taken from outputs for a given patch. The image prediction was
+different distances and angles. These images were obtained by averaging all the patches’ probabilities.
+divided into training or test dataset according to the Colour constancy was performed on all images during
+specific lesion to prevent images from the same lesion training and validation using the Shades of Grey
+being used in both training and testing. method with Minkowski norm p Z 6 [27].
+Fig. 1. Data flowofthe CNN assistance study. Thecontents in theorange boxrepresent thedata sources ofthe training(validation),
+testingandevaluationstudy.
+W.Baetal./EuropeanJournalofCancer 169(2022)156e165 159
+Table1 Dermatologists interpreted all the clinical images in
+Clinicalimagesinthedataset. both modalities (with or without CNN assistance),
+Diagnosisof TrainingdatasetTestingdatasetTotal which was separated by a washout period of 2 months.
+dataset a(n) b(n) (n) In each modality, dermatologists were only offered one
+Patientdemographics clinical image for their diagnosis and no additional in-
+Uniqueindividuals(n) 8987 formation was supplied.
+Ageinyears,mean(cid:4)SD42.77(cid:4)21.68
+To reduce possible performance differences at the
+Basalcellcarcinoma 2053 125 2178
+beginningversus theendofinterpretingthetestset,400
+Squamouscellcarcinoma 1031 77 1108
+Melanoma 931 99 1030 clinical images were divided into blocks of 40 images
+Bowen 480 82 562 with each block containing a roughly similar distribu-
+Actinickeratosis 748 104 852 tion of tumour categories with a random order. Eigh-
+Nevus 6065 849 6914
+teen dermatologists were randomised into two groups,
+Seborrhoeickeratosis 7613 360 7973
+eitherofwhichbeganwith(mode1)orwithout(mode2)
+Haemangioma 2276 142 2418
+Dermatofibroma 2991 151 3142 CNN assistance first. In either mode, the order and
+Wart 1585 118 1703 images interpreted were identical; the difference was
+Total 25,773 2107 27,880 solely in modality (assisted or not assisted).
+a Inthetrainingdataset,multipleimagesfromthesamelesion(taken The dermatologists independently assessed 400 clin-
+at different distances and angles) and blurry images and far-away icalimagesona24”LEDmonitor(LenovoQ24i-1L)at
+imagescouldbeincluded.
+a self-controlled pace. When the dermatologists
+b Inthetestingdataset,eachimagecorrespondedtoonelesion(no
+reviewed the images, modalities (with or without CNN
+overlapexistingfrommultipleviewpoints)tomaintainthediversityof
+thetestset. assistance) switched every 40 image intervals. If the
+image had CNN assistance, the top 3 predictions of the
+Dataaugmentationinourstudyincludedrandomro- CNN appeared in the upper right corner of the corre-
+tationsandrandomflips(horizontalandvertical)[28].To sponding image. If the image was without CNN assis-
+address the images unbalanced in different tumours, we tance, only a clinical image was displayed. The
+trainedCNNwithweightedlossfunctionswhereweights participants gave the most likely diagnosis to the cor-
+weredeterminedusingtheinversefrequencyofclassesin responding image (Supplement Fig. 1).
+thetrainingdata.Specifically,theweightoftheclasswith
+thelargestimages(Nmax)was1.0,andtheimagenumber 2.6. Statistical analysis
+ofclasskwasNk.Then,theweightoftheimagefromclass
+kwasrepresentedasNmax/Nk.ThedevelopedCNNcan The predicted results of the multi-class CNN on 2107
+beaccessedatthefollowingURL(http://ai.skinreader.cn/ test images were shown with a confusion matrix. The
+)andhasanonlinepredictionfunction. performance of the CNN model was evaluated by ac-
+curacy and kappa coefficient. In the performance eval-
+2.3. Test set enrolment for evaluation
+uation of dermatologists with or without CNN
+assistance, the primary endpoint was the overall accu-
+To make a statistically adequate comparison for each racy of dermatologists with pathological diagnosis as
+category of cutaneous tumour, with or without CNN the gold standard. The sensitivity and specificity of bi-
+assistance, while keeping a feasible total number of nary classification was the secondary evaluation
+clinical images, a total of 400 images (40 images per endpoint, and kappa consistency analysis was used to
+category) were randomly selected from the test dataset. evaluate the consistency between dermatologist’s di-
+agnoses (with or without CNN assisted) and patholog-
+2.4. Dermatologists icalresults.Dermatologists’accuracyandkappawithor
+withoutassistancewerecomparedbyatwo-sidedpaired
+A total of 18 board-certified dermatologists from nine t test or Wilcoxon signed-rank test, as appropriate. On
+different hospitals participated as readers in this study. the binary classification level, the sensitivity and speci-
+Theiryearsofclinicalworkexperiencerangedfrom1to ficity between assisted and unassisted modes were also
+20years.Themajorityofthemwerenotexperts(experi- analysed using a two-sided paired t test. And P < 0.05
+ence: 13/18 (cid:1) 10 years; 5/18＞10 years). All dermatolo- was regarded as statistically significant. Statistical ana-
+gists voluntarily participated, understood and agreed lyses were performed in R (version 4.1) software.
+withthebasicprinciplesandobjectivesofthisstudy.
+3. Results
+2.5. Study design
+3.1. Performance of the multi-class CNN
+To evaluate dermatologists’ performance in both assis-
+tedandunassistedconditions,thestudywasdesignedas The performance ofthemulti-class CNNwasevaluated
+a fully crossed, self-control, MRMC study (Fig. 2). using 2107 test images. The CNN produced 10 outputs
+160 W.Baetal./EuropeanJournalofCancer 169(2022)156e165
+Fig.2.Studydesign.The18dermatologistsreviewedthesameclinicalimagesinthesamesequencebutwithdifferentmodalities:withor
+without CNN assistance after a washout period of 2 months. Eighteen dermatologists were randomised to one of the two assistance
+“orders.”Eachrectangleincluded40imagesinrandomorder.Thecolouroftherectangleindicatesthemodality.Ineithermode,theorder
+andimagesinterpretedwereidentical;thedifferencewassolelyinmodality(assistedornotassisted).
+for a given image. The top 1 prediction was used to with or without CNN assistance, 18 confusion matrices
+evaluatetheperformanceofthemodel.Theresultswere were accumulated under two different modalities
+presented with a confusion matrix (Fig. 3). The overall (Fig. 4a). The overall accuracy and kappa of derma-
+accuracy of the CNN on the top 1 diagnosis level was tologists were 62.78% and 0.59 without assistance,
+78.45%. The accuracies for BCC, SCC, MM, Bowen, while 76.60% and 0.74 with assistance. Compared with
+AK, DF, Nevi, Wart, SK and angioma were 78.40%, no assistance, CNN assistance improved the accuracy
+90.91%, 86.87%, 64.63%, 74.04%, 94.04%, 78.80%, of dermatologists by 13.82% (P < 0.001, 95% confi-
+54.24%,76.94%and82.39%,respectively.Inadditionto dence interval [CI]: 11.83%e15.80%) and kappa by
+accuracy, the kappa coefficient is an indicator for the 0.15 (P < 0.001, 95% CI: 0.131e0.176) (Fig. 4b), which
+consistencytestandcanbeusedtomeasuretheeffectof demonstrated that CNN improved the diagnostic per-
+a multi-class model, especially in the situation of formance of the dermatologists. The diagnostic
+imbalanced sample numbers. The kappa index of the improvement with CNN assistance depended on the
+CNNon2107testimageswas0.73,whichdemonstrates experience of the dermatologists. The majority of der-
+that the predictions of CNN are moderately consistent matologists were not experts (experience: 13/18 (cid:1) 10
+with the gold standard diagnoses. years; 5/18＞10 years). From Fig. 4c, we could
+conclude that dermatologists with less experience
+3.2. Performance of dermatologists with or without CNN benefited more from CNN assistance.
+assistance For each category of cutaneous tumour, except for
+wart, the accuracies of BCC, SCC, MM, Bowen, AK,
+A total of 400 images (40 images per category) were DF, Nevi, SK and angioma with CNN assistance were
+randomly selected from the test set to evaluate the significantly improved compared with those without
+performance of dermatologists with or without CNN CNN assistance. A summary of the results is shown in
+assistance. The participants gave the most likely diag- Fig.5a(BCC,SCC,MMandBowen)andSupplemental
+nosis to each image in each modality (Supplement Fig. 3 (AK, DF, Nevi, wart, SK and angioma). Fig. 5b
+Fig. 1). For each category, 720 predictions (40 images shows six representative examples indicating that the
+(cid:3) 18 dermatologists) were collected with or without performance of dermatologists significantly improved
+CNN assistance. The CNN’s detailed performance and with CNN assistance.
+each dermatologist’s results on the 400 images were According to the dermatologist’s diagnosis, BCC,
+shown with confusion matrixs (Supplement Fig. 2). To MM,SCCandBowenwereclustered asmalignant, and
+reflect the overall performance of 18 dermatologists AK, SK, MN, DF, haemangioma and wart were
+W.Baetal./EuropeanJournalofCancer 169(2022)156e165 161
+Fig.3.Performanceoftheconvolutionalneuralnetwork(CNN)intop1classificationon2107testimages.
+clustered as benign. On the binary classification level, ical images. Our results demonstrated that CNN assis-
+the average sensitivities of the dermatologists without tanceclearlyincreasedtheaccuracyofdermatologistsin
+andwithCNNassistancewere83.21%and89.56%.The identifying cutaneous tumours.
+sensitivity improved by 6.35% (P < 0.001, 95% CI: Our multi-class’ CNN was developed on 25,773
+4.61%e8.10%) with assistance compared with that clinicalimagesandachievedatop1accuracyof78.45%
+without assistance. The average specificities of the der- andkappaof0.73inclassifying10typesofskintumours
+matologists without and with CNN assistance were on 2107 images. Fujisawa et al. trained a CNN using
+80.92% and 87.90%. The specificity improved by 6.98% 4867 clinical images and tested its performance on 1142
+(P<0.001,95%CI:4.80%e9.20%)withassistancethan images including 14 diagnoses, which achieved an
+that without assistance (Fig. 6). overall accuracy of 76.5% [8]. Esteva et al. trained a
+CNN using a dataset of 129,450 clinical images con-
+4. Discussion sisting of 2032 different diseases and tested its perfor-
+manceon1942images,achievinganoverallaccuracyof
+Studies have demonstrated that CNNs could achieve 55% in classifying nine types of skin diseases [31]. Our
+comparable or better performance than board-certified CNNachievedacomparableorbetterperformancethan
+dermatologists in clinical image classification [6,29e31]. previous studies.
+However, CNN with full automation with no derma- However, a well-developed CNN with high accuracy
+tologistbackupisnottheobjective.Rather,itisthrough alonewasnotsufficient,asourobjectivewastoconduct
+their combination that the significant benefits of CNN furtherevaluationofCNN-dermatologistcollaboration.
+maybeachieved[4,12,13].Therefore,wedesignedafully The overall accuracy of dermatologists improved
+crossed MRMC study to investigate the potential of significantly with CNN assistance compared to that
+CNN assistance for dermatologists in interpreting clin- without CNN assistance. Furthermore, dermatologist
+162 W.Baetal./EuropeanJournalofCancer 169(2022)156e165
+Fig. 4. (a) The accumulated classification of 18 dermatologists without and with CNN assistance. (b) The average accuracy of derma-
+tologists with CNN assistance was higher than that of without assistance (76.60% vs. 62.78%, P < 0.001). The average kappa of the
+dermatologistswasimprovedwithassistancecomparedtothatwithoutassistance(0.74vs.0.59,P<0.001).Thecirclesrepresentthevalue
+ofeachdermatologistwithdifferentassistancemodalities,thesquaresindicatetheaverageinthatmodality,andtheverticallinesofthe
+boxrepresentquartiles.(C)DermatologistwithlessexperiencetendedtogetlargeraccuracyimprovementfromCNNassistance(Thered
+linerepresentingfittingcurve,shadedarearepresenting95%confidenceintervals).
+with less experience tended to get larger accuracy value of probability also has an impact on dermatolo-
+improvement from CNN assistance. Nevertheless, we gists. In assisted modality, the top 3 predictions of each
+noticed that, although the average accuracy of derma- image were presented to dermatologists. For example,
+tologists with CNN assistance significantly improved, it evenifanMMwaspredictedasabenignnevuswiththe
+was still lower than the accuracy of CNN alone highest probability at 0.528, while the probability of
+(Fig. 4b). This may due to dermatologists selectively MM was calculated as 0.231 and BCC was 0.079. Der-
+trusting the predictions of the CNN based on their matologistsunderstandtheimplicationsoffalsepositive
+clinicalexperience,theirconfidenceaboutthediagnosis, and false negative for patients; they may still perform a
+and the relative difference between the multi-class biopsy to avoid a false negative result, even though the
+probabilities. This assumption was also confirmed by a probability was 0.528 (nevus) vs. 0.231 (melanoma).
+previous study [13]. For each category of cutaneous tumours, except for
+TheCNNoutputwasnotonlypossiblediagnosesbut wart, the accuracy of the remaining nine tumours
+calculated probabilities for each diagnosis. The specific significantly improved with CNN assistance compared
+W.Baetal./EuropeanJournalofCancer 169(2022)156e165 163
+Fig. 5. (a) The accuracies of dermatologists in classifying BCC, SCC, MM and Bowen significantly improved with CNN assistance
+compared tothosewithoutassistance. (b) Representativeexamples showing thattheaccuracy ofdermatologists significantly improved
+after CNN assistance. The pathological diagnosis, top 3 output of CNN and number of dermatologists with correct diagnoses were
+describedasfollows.(1)Bowen;Top3prediction:Bowen(0.603),DF(0.362),SK(0.015);improvement:3/18/10/18.(2)BCC;Top-3
+prediction: BCC (0.414), MM (0.231), SK (0.211); improvement: 7/18 / 13/18. (3)MM; Top-3 prediction: MM(0.993), SCC (0.002),
+Haemangioma(0.002);improvement:10/18/15/18.(4)DF;Top-3prediction:DF(0.976),Nevus(0.007),BCC(0.005);improvement:
+12/18 / 17/18. (5) BCC; Top-3 prediction: BCC (0.679), SCC (0.253), SK (0.023); improvement: 9/18 / 14/18. (6) Bowen; Top-3
+prediction:Bowen(0.397),MM(0.325),SCC(0.121);Improvement:8/18/14/18.
+Fig.6.Atthebinaryclassificationlevel,thesensitivity(89.56%vs.83.21%,P<0.001)andspecificity(87.90%vs.80.92%,P<0.001)were
+significantlyimprovedwithCNNassistancecomparedwiththosewithoutassistance.
+164 W.Baetal./EuropeanJournalofCancer 169(2022)156e165
+to that without CNN assistance. This was mainly Data availability
+because morphological differences were obvious be-
+tween wart and the other nine tumours, leading to The data that support the findings of this study may be
+limitedeffectofCNNassistanceondermatologists.For available upon a reasonable request and an approval
+cases with similar visual appearances (examples in from the PLA general hospital.
+Fig. 5b), CNN assistance significantly improved the
+diagnostic accuracy. This may be that the data-driven Model availability
+CNN could learn a variety of clinical manifestations
+of the tumour and discover distinguishing features The multi-class CNN model is available from the
+automatically that might not be apparent to humans following website (http://ai.skinreader.cn/).
+[32e35]. We assume that these kinds of situations often
+occurwhendermatologistsdonothaveextensiveclinical
+Author contributions
+experience or work in haste, such as being overloaded
+with work or evaluating the last several patients of the
+Concept and design: Wei Ba, Huan Wu, Weiwen Chen,
+day in the clinical workflow. CNN, as an analogue to a
+ZhigangSongandChengxinLi,Searchandcollectionof
+second opinion from a fellow dermatologist, predicts a
+the data: all authors, Experiment conduction: Wei Ba,
+possible diagnosis, which may alert dermatologists to
+Huan Wu, Weiwen Chen and Chengxin Li, Analysis of
+reconsider the potential diagnosis and improve patient
+data and interpretation: all authors, Statistical analysis:
+care.
+Wei Ba, Huan Wu and Weiwen Chen Manuscript
+Therearealsoseverallimitationstoourstudy,mainly
+writing and review: Wei Ba, Huan Wu, Zhigang Song
+stemming from the assessment being performed as a
+and Chengxin Li.
+simulation rather than in actual clinical practice. The
+test set was enriched for cutaneous tumours, which is
+Conflict of interest statement
+not directly comparable to the mixed cases during the
+clinical workflow. In our study, each dermatologist was
+The authors declare that they have no known
+givenoneimagetomakethediagnosis.Inarealclinical
+competing financial interests or personal relationships
+setting, dermatologists could access additional clinical
+thatcouldhaveappearedtoinfluencetheworkreported
+data, such as the clinical history, size, location, tactility
+in this paper.
+or dermoscopic image, which might improve diagnostic
+performance. In addition, our training data are mainly
+Appendix A. Supplementary data
+from Asian patients. The clinical features of BCC in
+AsiansdifferfromthoseinCaucasians[36,37].Themost
+Supplementary data to this article can be found online
+common melanoma subtype in Asians is acral mela-
+at https://doi.org/10.1016/j.ejca.2022.04.015.
+noma, accounting for more than 50% of the total mel-
+anoma incidence, which is different from Caucasians
+[38e40].ItispossiblethattheCNNislikelytoperform References
+less effectively on external data. Furthermore, the im-
+ages in the training and test sets only include lesions [1] Rawat W, Wang Z. Deep convolutional neural networks for
+with a histopathology report, which may lead to a image classification: a comprehensive review. Neural Comput
+2017;29:2352e449.
+reduced CNN performance in completely banal skin
+[2] He J, Baxter SL, Xu J, Xu J, Zhou X, Zhang K. The practical
+lesions. Future studies could use images from more
+implementationofartificialintelligencetechnologiesinmedicine.
+diverse datasets, making the system universally useful, NatMed2019;25:30e6.
+and prospective studies are needed to further verify the [3] EstevaA,RobicquetA,RamsundarB,KuleshovV,DePristoM,
+feasibility of this auxiliary tool. ChouK,etal.Aguidetodeeplearninginhealthcare.NatMed
+2019;25:24e9.
+In summary, our study demonstrated that the combi-
+[4] HanSS,MoonIJ,LimW,SuhIS,LeeSY,NaJI,etal.Kerati-
+nationofCNNandhumandermatologistshasthepoten-
+nocytic skin cancer detection on the face using region-based
+tial to improve the diagnostic accuracy of cutaneous convolutionalneuralnetwork.JAMADermatol2020;156:29e37.
+tumours using clinical images. This research is a useful [5] Haenssle HA, Fink C, Schneiderbauer R, Toberer F, Buhl T,
+attempt to understand how CNN improves the perfor- BlumA,etal.Managainstmachine:diagnosticperformanceofa
+deep learning convolutional neural network for dermoscopic
+manceofdermatologists.Therefore,itcouldfurtherboost
+melanomarecognitionincomparisonto58dermatologists.Ann
+thedermatologists’acceptanceofthisnewtechnique. Oncol2018;29:1836e42.
+[6] HanSS,KimMS,LimW,ParkGH,ParkI,ChangSE.Classi-
+Funding ficationoftheclinicalimagesforbenignandmalignantcutaneous
+tumorsusingadeeplearningalgorithm.JInvestDermatol2018;
+138:1529e38.
+This research did not receive any specific grant from
+[7] YoungAT,XiongM,PfauJ,KeiserMJ,WeiML.Artificialin-
+funding agencies in the public, commercial or not-for-
+telligenceindermatology:aprimer.JInvestDermatol2020;140:
+profit sectors. 1504e12.
+W.Baetal./EuropeanJournalofCancer 169(2022)156e165 165
+[8] Fujisawa Y, Otomo Y, Ogata Y, Nakamura Y, Fujita R, [23] LomasA,Leonardi-BeeJ,Bath-HextallF.Asystematicreviewof
+IshitsukaY,etal.Deep-learning-based,computer-aidedclassifier worldwideincidenceofnonmelanomaskincancer.BrJDermatol
+developedwithasmalldatasetofclinicalimagessurpassesboard- 2012;166:1069e80.
+certifieddermatologistsinskintumourdiagnosis.BrJDermatol [24] Siegel RL, Miller KD, Fedewa SA, Ahnen DJ, Meester RGS,
+2019;180:373e81. BarziA,etal.Colorectalcancerstatistics.CACancerJClin2017;
+[9] Tschandl P, Codella N, Akay BN, Argenziano G, Braun RP, 67:177e93.2017.
+Cabo H, et al. Comparison of the accuracy of human readers [25] Rogers HW, Weinstock MA, Harris AR, Hinckley MR,
+versus machine-learning algorithms for pigmented skin lesion Feldman SR, Fleischer AB, et al. Incidence estimate of non-
+classification:anopen,web-based,international,diagnosticstudy. melanomaskincancerintheUnitedStates,2006.ArchDermatol
+LancetOncol2019;20:938e47. 2010;146:283e7.
+[10] BrinkerTJ,HeklerA,EnkAH,KlodeJ,HauschildA,BerkingC, [26] Bray F, Ferlay J, Soerjomataram I, Siegel RL, Torre LA,
+et al.A convolutionalneural networktrainedwith dermoscopic JemalA.Globalcancerstatistics2018:GLOBOCANestimatesof
+images performed on par with 145 dermatologists in a clinical incidenceandmortalityworldwidefor36cancersin185countries.
+melanoma image classification task. Eur J Cancer 2019;111: CACancerJClin2018;68:394e424.
+148e54. [27] Finlayson GD, Trezzi E. Shades of gray and colour constancy.
+[11] Liu Y, Jain A, Eng C, Way DH, Lee K, Bui P, et al. A deep Colorandimagingconference.2004.
+learning system for differential diagnosis of skin diseases. Nat [28] MadabhushiA, Lee G. Image analysisand machine learningin
+Med2020;26:900e8. digitalpathology:challengesandopportunities.MedImageAnal
+[12] TopolEJ.High-performancemedicine:theconvergenceofhuman 2016;33:170e5.
+andartificialintelligence.NatMed2019;25:44e56. [29] Arevalo J, Cruz-Roa A, AriasV, RomeroE, GonzalezFA. An
+[13] Tschandl P, Rinner C, Apalla Z, Argenziano G, Codella N, unsupervisedfeaturelearningframeworkforbasalcellcarcinoma
+HalpernA,etal.Human-computercollaborationforskincancer imageanalysis.ArtifIntellMed2015;64:131e45.
+recognition.NatMed2020;26:1229e34. [30] MasoodA,Al-JumailyAA.Computeraideddiagnosticsupport
+[14] HanSS,ParkI,EunChangS,LimW,KimMS,ParkGH,etal. systemforskincancer:areviewoftechniquesandalgorithms.Int
+Augmented intelligence dermatology: deep neural networks JBiomedImag2013;2013:323268.
+empower medical professionals in diagnosing skin cancer and [31] Esteva A, Kuprel B, Novoa RA, Ko J, Swetter SM, Blau HM,
+predicting treatment options for 134 skin disorders. J Invest et al. Dermatologist-level classification of skin cancer with deep
+Dermatol2020;140:1753e61. neuralnetworks.Nature2017;542:115e8.
+[15] HeklerA,UtikalJS,EnkAH,HauschildA,BrinkerTJ.Superior [32] Singh S, Okun A, Jackson A. Artificial intelligence: learning to
+skincancerclassificationbythecombinationofhumanandarti- playGofromscratch.Nature2017;550:336e7.
+ficialintelligence.EurJCancer2019;120:114e21. [33] MadaniA, OngJR, Tibrewal A,MofradMRK. Deep echocar-
+[16] Maron RC, Utikal JS, Hekler A, Hauschild A, Sattler E, diography: data-efficient supervised and semi-supervised deep
+SondermannW,etal.Artificialintelligenceanditseffectonder- learning towards automated diagnosis of cardiac disease. NPJ
+matologists’accuracyindermoscopicmelanomaimageclassifica- DigitMed2018;1:59.
+tion:web-basedsurveystudy.JMedInternetRes2020;22:e18091. [34] Silver D, Huang A, Maddison CJ, Guez A, Sifre L, van den
+[17] Lee S, Chu YS, Yoo SK, Choi S, Choe SJ, Koh SB, et al. Driessche G, et al. Mastering the game of Go with deep neural
+Augmented decision-making for acral lentiginous melanoma networksandtreesearch.Nature2016;529:484e9.
+detectionusingdeepconvolutionalneuralnetworks.JEurAcad [35] Nagendran M, Chen Y, Lovejoy CA, Gordon AC,
+DermatolVenereol2020;34:1842e50. Komorowski M, Harvey H, et al. Artificial intelligence versus
+[18] ClinicalPerformanceAssessment:ConsiderationsforComputer- clinicians: systematic review of design, reporting standards, and
+Assisted Detection Devices Applied to Radiology Images and claimsofdeeplearningstudies.BMJ2020;368:m689.
+Radiology Device Data in-Premarket Notification (510(k)) [36] McLooneP,McLooneP,ImanbayevK,NorvalM.Theincidence
+https://www.fda.gov/regulatory-information/search-fda-guidance- andbodysiteofskincancersinthepopulationgroupsofAstana.
+documents/clinical-performance-assessment-considerations- Kazakhstan.HealthSciRep.2018;1:e51.
+computer-assisted-detection-devices-applied-radiology. [37] KimGK,DelRossoJQ,BellewS.Skincancerinasians:part1:
+[19] Cesana BM, Antonelli P, Chiumello D. Statistical methods for nonmelanoma skin cancer. J Clin Aesthet Dermatol 2009;2:
+evidence-based medicine: the diagnostic test. Part I. Minerva 39e42.
+Anestesiol2008;74:431e7. [38] KorirA,YuWangE,SasieniP,OkerosiN,RonohV,Maxwell
+[20] Rudolfer SM. Statistical methods in diagnostic medicine. In: Parkin D. Cancerrisks in Nairobi(2000-2014)by ethnic group.
+Biometrics.vol.59.NewYork:Wiley;2002.p.203e4.2015. IntJCancer2017;140:788e97.
+[21] Obuchowski NA, Meziane M, Dachman AH, Lieber ML, [39] HogueL,HarveyVM.Basalcellcarcinoma,squamouscellcar-
+MazzonePJ.What’sthecontrolinstudiesmeasuringtheeffectof cinoma, and cutaneous melanoma in skin of color patients.
+computer-aideddetection(CAD)onobserverperformance?Acad DermatolClin2019;37:519e26.
+Radiol2010;17:761e7. [40] HigginsS,NazemiA,FeinsteinS,ChowM,WysongA.Clinical
+[22] LeiterU,KeimU,GarbeC.Epidemiologyofskincancer:update presentationsofmelanomainAfricanAmericans,Hispanics,and
+2019.AdvExpMedBiol2020;1268:123e39. Asians.DermatolSurg2019;45:791e801.

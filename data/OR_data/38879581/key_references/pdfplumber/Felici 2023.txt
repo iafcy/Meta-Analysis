@@ -1,0 +1,644 @@
+EnvironmentalResearch241(2024)117562
+Contents lists available at ScienceDirect
+Environmental Research
+journal homepage: www.elsevier.com/locate/envres
+The local environment and germline genetic variation predict cancer risk in
+☆
+the UK Biobank prospective cohort
+Alessio Felicia, Giulia Peduzzia, Francesca Giorgolob, Andrea Spinellib, Marco Calderisib,
+Anna Monrealec, Riccardo Farinellaa, Roberto Pellungrinid, Federico Canziane,
+Daniele Campaa,*
+aDepartment of Biology, University of Pisa, Pisa, Italy
+bKode Solutions s.r.l., Pisa, Italy
+cDepartment of Computer Science, University of Pisa, Pisa, Italy
+dClasse di Scienze, Scuola Normale Superiore, Pisa, Italy
+eGenomic Epidemiology Group, German Cancer Research Center (DKFZ), Heidelberg, Germany
+A R T I C L E I N F O A B S T R A C T
+Keywords: Background: There is a growing body of evidence on the effect of the local environment exposure on cancer
+Local environment susceptibility. Nonetheless, several of the associations remain controversial. Moreover, our understanding of the
+Distance to coast possible interaction between the local environment and the genetic variability is still very limited.
+Cancer
+Objective: The aim of this study was to clarify the role of the local environment and its possible interplay with
+UK Biobank
+genetics on common cancers development.
+Gene-environment interactions
+Methods: Using the UK Biobank (UKBB) prospective cohort, we selected 12 local environment exposures: nitrogen
+Mediation
+oxides, nitrogen dioxides, particulate matter (10 and 2.5 μm), noise pollution, urban traffic, living distance from
+the coast, percentage of greenspace, natural environment, water, and domestic garden within 1000 m from the
+residential coordinates of each participant. All these exposures were tested for association with 17 different types
+of cancer for a total of 53,270 cases and 302,645 controls. Additionally, a polygenic score (PGS) was computed
+for each cancer, to test possible gene-environment interactions. Finally, mediation analyses were carried out.
+Results: Thirty-six statistically significant associations considering multiple testing (p < 2.19 × 10(cid:0)4) were
+observed. Among the novel associations we observed that individuals living farther from the coast had a higher
+risk of developing prostate cancer (OR =1.13, CI95% =1.06–1.20, P =1.98 ×10(cid:0)4). This association was
+partially mediated by physical activity (indirect effect (IE) =-8.48 ×10(cid:0)7) and the time spent outdoor (IE =
+9.07
+×10(cid:0)6).
+All PGSs showed statistically significant associations. Finally, genome-environment interaction
+analysis showed that local environment and genetic variability affect cancer risk independently.
+Discussion: Living close to the coast and air pollution were associated with a decreased risk of prostate cancer and
+skin melanoma, respectively. These findings from the UKBB support the role of the local environment on cancer
+development, which is independent from genetics and may be mediated by several lifestyle factors.
+environment in which an individual lives) and its associated pollution
+1. Introduction and lifestyle with cancer susceptibility (Fazeli Dehkordi et al., 2022). To
+date, numerous studies aimed at clarifying these associations, most of
+Over the last years there has been a growing body of evidence linking which are related to the damaging effects of air pollution on different
+the local environment (i.e., all the exposures that characterize the built types of cancer (Pourvakhshoori et al., 2020). Nevertheless, the findings
+☆ The present research was funded with intramural funding of the University of Pisa and German Cancer Research Center (DKFZ). Data used for this research were
+gathered from the UK Biobank Resource under application No. 66591. Bona fide researchers can access the UK Biobank dataset by registering and applying at htt
+p://ukbiobank.ac.uk/register-apply/. All participants have provided their informed consent to participate. Studies based on UK Biobank were performed in
+accordance with the Declaration of Helsinki. Ethical approval and consent were granted by the North West-Haydock NRES multicentre ethics committee, REF:
+16NW/ 0274.
+* Corresponding author. Department of Biology, University of Pisa, Via Derna 1, 56126, Pisa, Italy.
+E-mail address: daniele.campa@unipi.it (D. Campa).
+https://doi.org/10.1016/j.envres.2023.117562
+Received 17 July 2023; Received in revised form 27 October 2023; Accepted 30 October 2023
+Availableonline8November2023
+0013-9351/©2023TheAuthors.PublishedbyElsevierInc.ThisisanopenaccessarticleundertheCCBY-NC-NDlicense(http://creativecommons.org/licenses/by-
+nc-nd/4.0/).
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+UKBB participants were obtained from UKBB (project ID 66591).
+Abbreviations
+2.2. Outcome ascertainment
+CI Confidence Interval
+CLL Chronic Lymphocytic Leukemia Starting from a population of 502,420 individuals, only participants
+DE Direct Effect with a European ethnicity were selected using UKBB field 21000 (i.e.,
+DLBCL Diffuse Large B-Cell Lymphoma white (code 1), British (code 1001), Irish (code 1002), and with any
+GxE Gene-Environment interactions other white background (code 1003)), resulting in 472,622 individuals.
+ICD-10 International Classification of Diseases, 10th revision Cancer cases were selected according to cancer registry data. Spe-
+ICD-11 International Classification of Diseases, 11th revision cifically, three different UKBB fields were used: type of cancer – ICD10
+IE Indirect Effect (40006), histology of cancer tumor (40011), and behavior of cancer
+LD Linkage Disequilibrium tumor (40012). To obtain better anatomically differentiated outcomes,
+Lden Day-evening-night noise Level the ICD codes taken from UKBB category 40006 were converted from
+NOx Nitrogen Oxides version 10 to version 11 using the ICD10/ICD11 mapping by WHO
+NO2 Nitrogen Dioxides (https://icd.who.int/browse11/l-m/en).
+OR Odds Ratio The ICD11 codes were then combined with UKBB histology codes to
+PDAC Pancreatic Ductal Adenocarcinoma obtain a unique code that determines the specific histological tumor
+PGS Polygenic Score subtype. Only primary malignant tumors and microinvasive tumors
+PM2.5 Particulate matter with diameter <2.5 μm were selected. Seventeen cancers (bladder cancer, breast cancer, chronic
+PM10 Particulate matter with diameter <10 μm lymphocytic leukemia (CLL), colorectal cancer, cancer of corpus uteri,
+SNP Single Nucleotide Polymorphism diffuse large B-cell lymphoma (DLBCL), glioma, kidney cancer, lung
+TE Total Effect cancer, melanoma, multiple myeloma, oesophageal cancer, ovarian
+UKBB UK Biobank cancer, pancreatic ductal adenocarcinoma (PDAC), prostate cancer,
+stomach cancer, and thyroid cancer) with more than 500 cases each
+were included in this study. Breast cancer was analyzed only in females
+because we considered that male breast cancer is a distinct disease
+reported for most of these environmental variables are controversial (Gucalp et al., 2019). Controls were selected among all those subjects
+(Fazeli Dehkordi et al., 2022; Zare Sakhvidi et al., 2022). who did not report a code that identifies a diagnosis of cancer within 3
+The effect of several environmental variables on cancer risk, such as different categories: cancer code, self-reported (20001), type of cancer –
+noise pollution or the effect of living close to the coast, has been poorly ICD10 (40006), and diagnoses – ICD10 (41270). A total of 302,645
+investigated, with most of the studies focusing only on few cancer types controls were included. The total number of cases and controls is re-
+(Claeson et al., 2012; Haraldsdottir et al., 2017; Korgavkar et al., 2014; ported in Table 1 alongside age and sex distribution.
+Reynolds et al., 2004, 2005). Similarly, studies analyzing the effect of
+urban or natural visible water bodies are almost entirely focused on 2.3. Environmental exposure measurements and outcomes of interest
+blood malignancies, especially in children (S´anchez et al., 2022).
+Throughout the last years, the development of large-scale projects In this study, 31 exposures that characterize the local environment
+such as UK Biobank (UKBB) has played a key role in the understanding were selected to be tested for their association with the risk of devel-
+of the possible effects that the environment exerts on human health. oping the 17 cancers described above. A correlation matrix using the
+Nevertheless, only a small number of studies are focused on cancer Pearson correlation with a threshold of r ≤0.8 identified 12 indepen-
+(Huang et al., 2021; Wang et al., 2022). dent variables that were analyzed. The list of all exposures and the
+Another challenge in studying local environment exposures is rep- correlation matrix is reported in Fig. 1. The variables considered were:
+resented by understanding the possible gene-environment interactions concentration in the air of nitrogen oxides (NOx), nitrogen dioxides
+for which our knowledge is currently very limited except for the effect of (NO2), particulate matter with a diameter of 10 μm (PM10) and 2.5 μm
+air pollution on lung cancer (Huang et al., 2021; Wang et al., 2022; Yu (PM2.5), traffic intensity (the average total number of vehicles on the
+et al., 2018). nearest major road per 24 h), noise pollution (measured as the day-
+Considering all these premises, we aimed at studying whether and to evening-night noise level indicator, Lden), each participant’s living
+which extent the different exposures that characterize the local envi- distance to the nearest major road (expressed as the inverse of distance,
+ronment affect the development of seventeen of the most frequent types 1/meters), living distance to the coast and percentage of greenspace,
+of cancer. Moreover, using polygenic scores, we also aimed at studying natural environment, water, and domestic garden in a 1000 m radius
+the presence of gene-environment interactions. All analyses were con- centered on the residential coordinates of each participant. Detailed
+ducted in the UKBB participants, for a total of 355,915 individuals. information on the measurement of each variable is given as supple-
+mentary methods. NOx showed a strong correlation with PM2.5 (r =
+2. Methods 0.85), while greenspace was correlated with natural environment (r =
+0.97) but were all maintained in the analysis to compare our results with
+2.1. The UK Biobank cohort previous studies since in the literature these variables are usually used
+individually.
+This case-control study used data from the UKBB prospective cohort.
+A detailed description of UKBB has already been provided (Sudlow et al., 2.4. Polygenic score (PGS) selection
+2015). In brief, more than 500,000 subjects, aged between 37 and 73
+years, have been recruited between 2006 and 2010 in the United All genetic data were downloaded from UKBB, using PLINK v2.0 with
+Kingdom. During the assessment procedures data from each participant the method “extract” (Chang et al., 2015) and processed with a
+were collected by touchscreen self-completed questionnaires, blood self-developed pipeline in Python v3.8.10. The code is reported as
+sampling, physical measurement, imaging, and genotyping. Before data supplementary methods. The UKBB participants were genotyped on
+collection, each participant provided informed written consent. The two different arrays, the Applied Biosystems UK BiLEVE Axiom Array by
+UKBB study has received the approval from the North-West Multi-centre Affymetrix (49,950 individuals), and the Applied Biosystems UK Bio-
+Research Ethics Committee (MREC). Environmental and genetic data of bank Axiom Array (438,427 individuals). The genotyping was followed
+2
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+Table 1 ∑n
+Study subjects and number of SNPs used in each PGS. PGS = Xij
+i
+Cancer Cases SNPs
+j=1
+used in
+Females Males Total Mean PGS a where n is the number of SNPs used to build the score and Xij is the
+age [SD]
+number of risk alleles (0, 1 or 2) for the participant i at the SNP j.
+Breast 16,199 NA 16,199 58.44 257 Based on the distribution of the PGS among the controls, each PGS
+(100%) (100%) [9.3]
+was then categorized in tertiles, therefore identifying low, intermediate,
+Prostate NA 12,838 12,838 66.34 106
+(100%) (100%) [6.3] and high genetic risk categories.
+Colorectal 2156 3177 5333 63.96 71
+(40.4%) (59.6%) (100%) [8.2]
+Melanoma 1675 1379 3054 60.9 21 2.5. Statistical analyses
+(44.9%) (45.1%) (100%) [10.4]
+Lung 1303 1352 2655 67.76 21 Odds ratios (OR) and 95% confidence intervals (95% CI) for the as-
+(49.1%) (50.9%) (100%) [6.8] sociations between each environmental exposure and each cancer and
+Corpus uteri 2068 NA 2068 62.03 17
+between each PGS with its relative cancer were estimated with multi-
+(100%) (100%) [7.8]
+Kidney 627 1073 1700 64.06 17 variable logistic regression models. Each model was adjusted for age
+(36.9%) (63,1%) (100%) [8.4] and, when necessary, sex. Every environmental variable was analyzed as
+Bladder 334 1182 1516 64.79 13 a continuous exposure and divided in quintiles. PGSs were analyzed as
+(22.1%) (77.9%) (100%) [9.0]
+tertiles and as a continuous variable. For environmental exposures and
+Ovary 1396 NA 1396 59.96 27
+PGS the reference group was quintile 1 (Q1) and tertile 1 (T1), respec-
+(100%) (100%) [10.6]
+DLBCL 449 552 1001 64.63 8 tively. Moreover, the association between each environmental exposure
+(44.8%) (55.2%) (100%) [8.9] and female-specific cancers (breast, ovarian and corpus uteri) and all
+Multiple 386 531 917 65.90 21 cancers taken together were also investigated. Participants with missing
+myeloma (42.1%) (57.9%) (100%) [8.1]
+data in at least one of the selected exposures were excluded from the
+CLL 318 532 850 64.65 31
+(37.4%) (62.6%) (100%) [7.8] analysis. A comparison between participants with full and missing data
+Pancreas 390 426 816 67.54 34 is provided as Supplementary Table S1.
+(47.8%) (52.2%) (100%) [6.9] Mediation analyses were performed to explain observed significant
+Oesophagous 128 681 809 66.95 14
+associations between environmental exposures and each cancer
+(15.8%) (84.2%) (100%) [7.0]
+outcome. These analyses were performed by fitting three regression
+Glioma 305 431 736 63.01 28
+(41.4%) (58.6%) (100%) [10.6] models, as proposed by Baron and Kenny (Baron and Kenny, 1986). Two
+Thyroid 532 185 717 56.83 9 logistic and one linear model were fitted when the mediator was a
+(74.2%) (25.8%) (100%) [11.5] continuous variable, while three logistic models were fitted when the
+Stomach 199 466 665 66.26 3
+mediator was a binary variable.
+(29.9%) (70.1%) (100%) [8.1]
+Total 28,465 24,805 53,270 63.76
+model1=Y ∼ A+Cs
+(53.4%) (46.6%) (100%)
+model2=Y ∼ A+M+Cs
+A total number of 302.645 controls (mean age =55.63 years) was used. Among
+these subjects, a total of 161.049 females (53.2%, mean age =55.8 years) and
+model3=M∼A+Cs
+141.596 males (46.8%, mean age =55.39 years) were included. Only men were
+used as controls for prostate cancer analyses and only women for breast, corpus Model 1 is the logistic model with the outcome (Y) regressed on the
+uteri and ovarian cancers.
+exposure (A) and the covariates (Cs); model 2 is the logistic model with
+a Number of single nucleotide polymorphisms (SNP) used to build the PGS for
+the outcome regressed on the exposure, the covariates, and the mediator
+each cancer type.
+(M); and model 3 is the linear or logistic model with the mediator
+regressed on the exposure and the covariates.
+by general quality controls, such as Principal Component Analysis
+When two mediators were used (i.e., multi-mediator models), an
+(PCA), missing rate, heterozygosity, sex mismatches, and relatedness
+additional regression model was included so that four regression models
+analysis. Finally, imputation of genetic data was carried out by
+were fitted.
+combining data from different reference panels, specifically the Haplo-
+type Reference Consortium (HRC) and the merged UK10K and 1000 model4=M2∼ M1+Cs
+Genomes Phase 3. A detailed description of each procedure has been
+In this fourth model, the second mediator (M2) is regressed on the
+previously reported (Bycroft et al., 2018).
+first mediator (M1) and the covariates. Each model was corrected with
+PGSs for each cancer outcome were selected from PGS catalog
+age and, when necessary, sex. A mediation effect was considered to be
+(Lambert et al., 2021). Due to the differential computation of each PGS,
+significant when the effects of the exposure on the mediator, the
+we selected all genetic scores for every cancer included in the study
+mediator on the outcome, and the exposure on the outcome were all
+b pa as raed m eo tn e rt sh (e e .d ge .,v Mel Aop Fm ≥0en .0t 1 m , re 2t h ≤o 0d . 1(e , . Pg . ≤, L 5D × cl 1u 0m (cid:0) 8p )i n ug s eo dr inp r tu hn ei n org i) g ia nn ad l significant under the statistical threshold of P <0.05. Significant results
+were further investigated with a second approach. Specifically, indirect
+studies to compute the score. For each selected PGS, linkage disequi-
+(IE), direct (DE) and total effects (TE), and proportion of mediation were
+librium (LD) pruning was performed via the LDlink’s SNPclip tool
+computed using the “mediation” package (v4.5.0) in Rstudio (Tingley
+(Machiela and Chanock, 2015) using the non-Finnish Europeans of the
+et al., 2014). For single mediator analyses, a nonparametric bootstrap
+1000 Genomes Project retaining only one SNP for markers in high LD (r2
+with 2000 iterations was used to estimate bias-corrected and accelerated
+> 0.8). Additionally, only SNPs with a minor frequency allele >0.05
+95% CIs (DiCiccio and Efron, 1996) and P-values. For multiple mediator
+were included in the scores. The number of SNPs used in each PGS is
+analyses, percentile 95% CIs were computed using the “multimed”
+given in Table 1.
+function, which is based on the implementation of the Imai and Yama-
+Each PGS was computed as the unweighted sum of the number of risk
+moto method (Imai and Yamamoto, 2013).
+alleles:
+Detailed information on the mediators used is provided as supple-
+mentary methods.
+3
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+Fig. 1. Heatmap for the correlation among the selected local environment exposures.
+The local environment exposures included in this study were first selected according to their correlation coefficient. The threshold used was r ≤0.8. Positive and
+negative correlation are identified with gradually stronger red and blue colorations, respectively. Even if their correlation was higher than the threshold, NOx and
+PM2.5 (r =0.85), and greenspace and natural environment (r =0.97) were retained to study their main effect taken individually, as done in the literature.
+In the gene-environment (GxE) interaction analysis NOx, NO2, PM10, number of test performed for each outcome (0.05/(19 (i.e., the 17 in-
+PM2.5, and Lden were categorized as low and high exposures groups. The dividual cancers, plus the pan-cancer and the female cancer categories)
+cut off points used were the median for NOx Huang et al. (2021); WHO x12)) and resulted in P =2.19 ×10(cid:0) 4. For PGS analysis the statistical
+2005 air quality guidelines for NO2, PM10, and PM2.5. For Lden, a 55 dB threshold was P = 0.05/17 = 2.9 × 10(cid:0) 3. For the GxE interaction a
+cut off was used according to the Environmental Noise Directive of the threshold of 2-sided P =0.05/(17 ×13) =2.26 ×10(cid:0) 4 was used.
+European Community. For all other variables quintiles were used.
+Multivariable logistic regression models corrected for age and sex 3. Results
+(when necessary) were fitted including the interaction term:
+3.1. Associations between environmental variables and cancer
+logit(P(Y=1))=β +β Age+β Sex+β E+β PGS+β ExPGS
+0 1 2 3 4 5
+One hundred and eighteen associations were observed considering a
+where E is the environmental exposure categorized as above and PGS is
+conventional P =0.05 threshold, while 36 were statistically significant
+the unweighted PGS divided in tertiles. All multivariable logistic also correcting for multiple testing (P <2.19 ×10(cid:0) 4). Among the latter,
+regression models were carried out using Rstudio, version 4.2.2.
+Regression results were also tested for significance under Bonferro-
+high concentration of NOx, NO2, PM10, and PM2.5 were associated with
+ni’s correction. The threshold was calculated dividing 0.05 by the increased lung cancer risk, with ORs ranging from 1.75 to 1.90, and p-
+4
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+values ranging from 4.42 × 10(cid:0) 17 to 2.15 × 10(cid:0) 22. The associations P = 2.30 × 10(cid:0) 8 for moderate physical activity; β = 0.0023, SE =
+were statistically significant when analyzing individuals belonging to 0.0004, P =1.70 ×10(cid:0) 7 for time spent outdoor). In the analysis of the
+the highest quintile vs the lowest quintile and analyzing the variables as indirect effects, we found significant but very small effects exerted by
+continuous (Table 2). both moderate physical activity (IE =(cid:0) 8.48 ×10(cid:0) 7, 95% CI =(cid:0) 1.82 ×
+When comparing the highest quintile with the lowest one, high 10(cid:0) 7 - (cid:0) 1.87 ×10(cid:0) 6, P =0.017) and time spent outdoor (IE =9.07 ×
+concentrations of NOx were associated with oesophageal cancer risk 10(cid:0) 6, 95% CI =6.92 ×10(cid:0) 6 - 1.16 ×10(cid:0) 5, P <2 ×10(cid:0) 16) on the as-
+(OR =1.54, 95% CI =1.23–1.94, P =1.75 ×10(cid:0) 4). Also, PM2.5 resulted sociation between the living distance to coast and prostate cancer. We
+strongly associated with oesophageal cancer risk in the continuous found no mediation effect for both oily and non-oily fish intake.
+analysis: OR =1.15, 95% CI =1.08–1.23, P =2.76 ×10(cid:0) 5 per 1 μg/m3 In multi-mediator models, the effect of the time spent outdoor on
+increase (Table 2). prostate cancer risk was significantly associated with increased levels of
+Additionally, high concentrations of NOx, NO2, PM10, and PM2.5 vitamin D (β =0.002, SE =0.0006, p =4.27 ×10(cid:0) 4) and increased
+were associated with a decreased risk of developing melanoma, specif- vigorous physical activity (β =0.002, SE =0.0006, p =3.92 ×10(cid:0) 4).
+ically NOx: OR =0.74, 95% CI =0.66–0.84, P =7.54 ×10(cid:0) 7; NO2: OR However, for both vitamin D levels and vigorous physical activity and
+=0.66, 95% CI =0.59–0.74, P =5.22 ×10(cid:0) 12; PM10: OR =0.76, 95% using the time spent outdoor as the main mediator, indirect effects were
+CI = 0.67–0.85, P = 2.00 × 10(cid:0) 6; PM2.5: OR = 0.71, 95% CI = not significant (95% CI includes 0). Mediation results with the Baron and
+0.63–0.80, P =3.46 ×10(cid:0) 8 (Table 2). Kenny method are reported in Fig. 3. TEs, DEs and IEs, and proportion of
+Living near major roads was associated with lower risk of developing mediation (with their respective 95% CIs and P-values) estimated for
+melanoma when comparing individuals in the highest quintile with in- each mediator with the “mediation” package are reported in Supple-
+dividuals in the lowest quintile: OR =0.80, 95% CI =0.72–0.89, P = mentary Table S3. For melanoma, we did not observe any mediation
+9.27 ×10(cid:0) 5, and analyzing the variable as continuous: OR =0.93, 95% effect.
+CI =0.90–0.97, P =8.39 ×10(cid:0) 5 per 1% increase (Table 2).
+When comparing the highest with the lowest quintile, high per- 3.3. Associations between PGSs and cancer
+centage of natural environment near residential coordinates showed a
+strong protective effect for lung cancer risk (OR = 0.58, 95% CI = All PGS showed statistically significant associations when analyzing
+0.51–0.66, P =2.59 ×10(cid:0) 16), while a high percentage of greenspace the tertiles (highest vs lowest, p <0.05). The largest effect was observed
+resulted in increased risk of melanoma (OR =1.27, 95% CI =1.12–1.43, for CLL (OR =4.82, 95% CI =3.82–6.07, P =1.93 ×10(cid:0) 40), the smallest
+P =1.32 ×10(cid:0) 4) (Table 2). The living distance to the coast was asso- for stomach cancer (OR =1.36, 95% CI =1.12–1.65, P =1.53 ×10(cid:0) 3).
+ciated with increased prostate cancer risk when comparing the highest The most significant association was observed for breast cancer (OR =
+vs lowest quintile (OR =1.13, 95% CI =1.06–1.21, P =1.98 ×10(cid:0) 4) 2.53, 95% CI =2.42–2.64, P <10(cid:0) 250). All PGS showed a statistically
+and considering the variable as continuous (OR = 1.02, 95% CI = significant association when analyzed as a continuous variable. The
+1.01–1.03, P =7.01 ×10(cid:0) 7 per 10 Km increase). results of the association for each PGSs are reported in Supplementary
+Moreover, when comparing the highest quintile with the lowest one, Table S4.
+we found a significant association between the living distance to coast
+and female-specific cancers risk (OR =1.10, 95% CI =1.05–1.15, P = 3.4. Gene – environment (GxE) interactions
+1.70 ×10(cid:0) 4). Finally, in the analysis that considered all cancer types
+together, we found a statistically significant association for both NO 2 In GxE analysis, no results below the Bonferroni threshold of p =
+(OR =1.26, 95% CI =1.12–1.41, P =9.95 ×10(cid:0) 5 per 100 μg/m3) and 2.26 × 10(cid:0) 4 were found. However, an interesting but non-significant
+PM10 (OR =2.91, 95% CI =1.72–4.94, P =7.30 ×10(cid:0) 5 per 100 μg/m3), result was found for colorectal cancer. Specifically, when compared
+and when comparing the highest quintile with the lowest one only for with individuals in the lowest exposure group (i.e., quintile Q1) and with
+PM10 (OR =1.06, 95% CI =1.03–1.10, P =1.95 ×10(cid:0) 4). A statistically the lowest genetic risk (i.e., PGS tertile T1), participants in the highest
+significant association was also observed between the living distance to exposure group for the distance to coast (i.e., quintile Q5) and with the
+the coast and all cancer risk in both continuous (OR =1.01, 95% CI = highest genetic risk (i.e., PGS tertile T3) displayed almost three times the
+1.00–1.02, P =3.62 ×10(cid:0) 11 per 10 Km increase) and quintile analysis risk of developing colorectal cancer (OR =2.63, CI 95% =1.45–4.78, P
+(OR =1.11, 95% CI =1.07–1.14, P =4.55 ×10(cid:0) 10). =1.55 ×10(cid:0) 3). The results of all GxE analysis are reported in Supple-
+The results that were significant after correction for multiple testing mentary Table S5.
+are shown in Table 2. All results are shown in Fig. 2 and in Supple-
+mentary Table S2. Significant results for female-specific cancer and all 4. Discussion
+cancer analyses are shown in Supplementary Fig. S1.
+In the last decade several studies suggested that local environment
+3.2. Mediation analysis may affect the risk of developing cancer through several pollutants
+(Fazeli Dehkordi et al., 2022). However, the associations reported are
+Mediation analysis was carried out to clarify the association between limited to a small number of cancers and the understanding of their
+the living distance from the coast and prostate cancer. Physical activity possible interaction with the genetic background is still incomplete. In
+(walking, moderate, or vigorous physical activity), oily and non-oily fish this study we analyzed 12 variables related to the local environment in
+intake, and time spent outdoor were selected as plausible mediators, as relation to the risk of developing 17 cancers. We have confirmed some
+described by White and colleagues (White et al., 2020). In the models previously reported associations and identified new ones.
+where each mediator is regressed on the exposure, the distance to coast We observed that living close to the coast is associated with a
+significantly predicted moderate physical activity (β = 0.0051, SE = decreased risk of developing prostate cancer (p = 7.01 × 10(cid:0) 7). To
+0.0023, P = 0.024) and the time spent outdoor (β = (cid:0) 0.0023, SE = clarify this association, we used mediation analysis considering lifestyle
+0.0002, P = 2.72 × 10(cid:0) 25). When analyzing the mediator effects, factors that could be different in coastal areas compared to more central
+moderate physical activity and the time spent outdoor displayed sig- ones. For example, the diet may differ, and physical activity and the time
+nificant but small effects on prostate cancer risk (β = (cid:0) 0.0029, SE = spent outdoor are reported to be higher in coastal areas (White et al.,
+0.0006, P = 6.04 × 10(cid:0) 7 and β =(cid:0) 0.067, SE = 0.0064, P =1.27 × 2020). We found significant but very small mediation effects for physical
+10(cid:0) 25, respectively). Finally, significant results were observed when activity (P = 0.017) and the time spent outdoor (P < 2 × 10(cid:0) 16).
+analyzing the effect of the living distance from the coast on prostate Considering the IE scales (IE = (cid:0) 8.48 × 10(cid:0) 7 for moderate physical
+cancer risk when adjusting for each mediator (β =0.0024, SE =0.0004, activity, and IE =9.07 ×10(cid:0) 6 for the time spent outdoor), these two
+5
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+Table 2
+Statistically significant results under the Bonferroni corrected p-value (p =2.19 ×10(cid:0)4).
+Local environment exposure Oesophagus P-value Lung P-value Melanoma P-value
+Nitrogen Oxides (NOx) NA 1.011 (1.01–1.01) 1.55 ×10(cid:0)21 0.993 (0.990–0.995) 7.83 ×10(cid:0)8
+Nitrogen Oxides (NOx) - Q2 NA NA
+Nitrogen Oxides (NOx) - Q3 NA NA
+Nitrogen Oxides (NOx) - Q4 NA 1.35 (1.18–1.54) 1.33 ×10(cid:0)5 0.80 (0.71–0.89) 8.78 ×10(cid:0)5
+Nitrogen Oxides (NOx) - Q5 1.54 (1.23–1.94) 1.75 ×10(cid:0)4 1.897 (1.67–2.16) 2.15 ×10(cid:0)22 0.74 (0.66–0.84) 7.54 ×10(cid:0)7
+Nitrogen dioxide (NO2) NA 1.023 (1.02–1.03) 4.30 ×10(cid:0)24 0.983 (0.979–0.987) 8.03 ×10(cid:0)14
+Nitrogen dioxide (NO2) - Q2 NA NA NA
+Nitrogen dioxide (NO2) - Q3 NA NA NA
+Nitrogen dioxide (NO2) - Q4 NA 1.468 (1.29–1.67) 1.37 ×10(cid:0)8 0.80 (0.72–0.89) 6.45 ×10(cid:0)5
+Nitrogen dioxide (NO2) - Q5 NA 1.8 (1.58–2.05) 7.63 ×10(cid:0)19 0.66 (0.59–0.74) 5.22 ×10(cid:0)12
+Particulate matter PM2.5 1.15 (1.08–1.23) 2.76 ×10(cid:0)5 1.22 (1.17–1.26) 8.84 ×10(cid:0)25 0.90 (0.86–0.93) 1.10 ×10(cid:0)8
+Particulate matter PM2.5 - Q2 NA NA NA
+Particulate matter PM2.5 - Q3 NA NA NA
+Particulate matter PM2.5 - Q4 NA 1.42 (1.24–1.63) 5.19 ×10(cid:0)7 NA
+Particulate matter PM2.5 - Q5 NA 1.85 (1.62–2.11) 1.53 ×10(cid:0)19 0.71 (0.63–0.80) 3.46 ×10(cid:0)8
+Particulate matter PM10 NA 1.10 (1.08–1.12) 3.40 ×10(cid:0)19 0.94 (0.92–0.96) 2.00 ×10(cid:0)10
+Particulate matter PM10 - Q2 NA NA NA
+Particulate matter PM10 - Q3 NA NA NA
+Particulate matter PM10 - Q4 NA 1.44 (1.26–1.65) 9.52 ×10(cid:0)8 NA
+Particulate matter PM10 - Q5 NA 1.75 (1.54–2.00) 4.42 ×10(cid:0)17 0.76 (0.67–0.85) 2.00 ×10(cid:0)6
+Natural environmenta NA 0.993 (0.991–0.994) 6.74 ×10(cid:0)18 1.04 (1.02–1.05)b 4.82 ×10(cid:0)8
+Natural environment - Q2 NA NA NA
+Natural environment - Q3 NA 0.77 (0.68–0.87) 2.82 ×10(cid:0)5 NA
+Natural environment - Q4 NA 0.68 (0.60–0.77) 2.21 ×10(cid:0)9 1.28 (1.13–1.44) 5.62 ×10(cid:0)5
+Natural environment - Q5 NA 0.58 (0.51–0.66) 2.59 ×10(cid:0)16 1.37 (1.21–1.54) 2.18 ×10(cid:0)7
+Greenspacea NA 0.992 (0.99–0.994) 7.70 ×10(cid:0)14 1.04 (1.02–1.05)b 9.69 ×10(cid:0)6
+Greenspace - Q2 NA NA
+Greenspace - Q3 NA NA
+Greenspace - Q4 NA 0.75 (0.65–0.85) 2.02 ×10(cid:0)5 NA
+Greenspace - Q5 NA 0.63 (0.55–0.73) 1.08 ×10(cid:0)10 1.27 (1.12–1.43) 1.32 ×10(cid:0)4
+Inverse distancec NA NA 0.93 (0.90–0.97) 8.39 ×10(cid:0)5
+Inverse distance - Q2 NA NA NA
+Inverse distance - Q3 NA NA 0.81 (0.73–0.91) 2.24 ×10(cid:0)4
+Inverse distance - Q4 NA NA 0.81 (0.73–0.91) 2.16 ×10(cid:0)4
+Inverse distance - Q5 NA NA 0.80 (0.72–0.89) 9.27 ×10(cid:0)5
+Distance to coastd NA NA NA
+Distance to coast - Q2 NA NA NA
+Distance to coast - Q3 NA NA 0.78 (0.69–0.88) 6.95 ×10(cid:0)5
+Distance to coast - Q4 NA NA NA
+Distance to coast - Q5 NA NA NA
+Local environment exposure Prostate P-value Female-specific P-value All cancer P-value
+Nitrogen Oxides (NOx) NA NA NA
+Nitrogen Oxides (NOx) - Q2 NA NA NA
+Nitrogen Oxides (NOx) - Q3 NA NA NA
+Nitrogen Oxides (NOx) - Q4 NA NA NA
+Nitrogen Oxides (NOx) - Q5 NA NA NA
+Nitrogen dioxide (NO2) NA NA 1.26 (1.12–1.41)f 9.95 ×10(cid:0)5
+Nitrogen dioxide (NO2) - Q2 NA NA NA
+Nitrogen dioxide (NO2) - Q3 NA NA NA
+Nitrogen dioxide (NO2) - Q4 NA NA NA
+Nitrogen dioxide (NO2) - Q5 NA NA NA
+Particulate matter PM2.5 NA NA 2.91 (1.74–4.94)f 7.30 ×10(cid:0)5
+Particulate matter PM2.5 - Q2 NA NA NA
+Particulate matter PM2.5 - Q3 NA NA NA
+Particulate matter PM2.5 - Q4 NA NA NA
+Particulate matter PM2.5 - Q5 NA NA 1.06 (1.03–1.10) 1.95 ×10(cid:0)4
+Particulate matter PM10 NA NA NA
+Particulate matter PM10 - Q2 NA NA NA
+Particulate matter PM10 - Q3 NA NA NA
+Particulate matter PM10 - Q4 NA NA NA
+Particulate matter PM10 - Q5 NA NA NA
+Natural environmenta NA NA NA
+Natural environment - Q2 NA NA NA
+Natural environment - Q3 NA NA NA
+Natural environment - Q4 NA NA NA
+Natural environment - Q5 NA NA NA
+Greenspacea NA NA NA
+(continued on next page)
+6
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+Table 2 (continued)
+Local environment exposure Prostate P-value Female-specific P-value All cancer P-value
+Greenspace - Q2 NA NA NA
+Greenspace - Q3 NA NA NA
+Greenspace - Q4 NA NA NA
+Greenspace - Q5 NA NA NA
+Inverse distancec NA NA NA
+Inverse distance - Q2 NA NA NA
+Inverse distance - Q3 NA NA NA
+Inverse distance - Q4 NA NA NA
+Inverse distance - Q5 NA NA NA
+Distance to coastd 1.02 (1.01–1.03)e 7.01 ×10(cid:0)7 NA 1.01 (1.00–1.02)e 3.62 ×10(cid:0)11
+Distance to coast - Q2 NA NA NA
+Distance to coast - Q3 1.14 (1.07–1.21) 1.03 ×10(cid:0)4 1.10 (1.05–1.16) 6.34 ×10(cid:0)5 1.08 (1.05–1.11) 2.48 ×10(cid:0)6
+Distance to coast - Q4 1.19 (1.11–1.27) 2.60 ×10(cid:0)7 NA 1.12 (1.08–1.15) 1.02 ×10(cid:0)11
+Distance to coast - Q5 1.13 (1.06–1.20) 1.98 ×10(cid:0)4 1.10 (1.05–1.5) 1.70 ×10(cid:0)4 1.11 (1.07–1.14) 4.55 ×10(cid:0)10
+NA is reported when the result is not significant under the Bonferroni corrected p-value threshold.
+a Natural environment and greenspace are referred to percentage levels of greenspace and natural environment in a 1000 m radius centered on the residential
+coordinates of each participant.
+b Continuous results for greenspace and natural environment are referred for a 10% increase.
+c Logarithm of the inverse distance (1/m) of each participant residential co-ordinates to the nearest major road.
+d Living distance to the coast.
+e Continuous results for distance to coast are reported for 10 Km increase.
+f Continuous results for NO2, PM10 and all cancer are reported for a 100 μg/m3 increase.
+effects could be both negligible in the association between the living et al., 2021, 2022). The authors report an increased risk for the disease
+distance to the coast and prostate cancer risk. Moreover, in for individuals with more exposure to PM2.5, in agreement with our
+multi-mediator models, we found that the indirect effect of the time results. Our study is the first to be carried out in a European population.
+spent outdoor on prostate cancer risk was not significant when vitamin NOx, NO2, PM10, and PM2.5 were also associated with increased lung
+D levels and physical activity were individually included in the models. cancer risk as strongly supported by previously published epidemio-
+Therefore, we think that the protective effect of living near the coast on logical evidence (Ciabattini et al., 2021).
+prostate cancer risk is mediated by a complex interplay of several life- Moreover, even if not significant under the Bonferroni-corrected P-
+style factors that reflect differences in lifestyle of individuals who live value threshold, we found significant associations between nitrogen air
+near the coast and individuals living far from it. This is the first evidence pollutants (NOx and NO2) and corpus uteri and ovarian cancer risk. In
+for an association between living near the coast and prostate cancer, addition, PM10 pollution resulted associated with an increased risk of
+although a lower incidence was also observed in a study carried out in corpus uteri cancer in both continuous and quintile analyses, while
+the United States using spatial patterns and autocorrelation (Mather PM2.5 pollution was associated with ovarian cancer only in the contin-
+et al., 2006). Besides prostate cancer, we also found an increased risk of uous analysis. Regarding the association between NOx, NO2 and corpus
+breast cancer associated with living far from the coast in both contin- uteri cancer risk, our results are discordant with literature findings
+uous and quintile analyses. The living distance to the coast was also (Raaschou-Nielsen et al., 2011), while an association between PM10 and
+associated with an increased risk of female-specific cancers. Regarding corpus uteri cancer risk has never been reported before. Regarding
+breast cancer, our result is in line with recent findings (Haraldsdottir ovarian cancer, our results are discordant with recent findings (Coleman
+et al., 2017), where a reduced risk for breast cancer was observed for et al., 2020).
+women who lived their puberty (i.e., up to the age of 20 years old or Additionally, we also observed that living close to greenspaces in-
+more) in coastal villages when compared with women who lived their creases the risk of melanoma and decreases the risk of lung cancer,
+puberty in the capital city of Reykjavik. However, in the present study, reflecting the fact that individuals living close to greenspaces are
+the significance level of our result (P =1.21 ×10(cid:0) 3) does not overcome exposed to more sunlight (Astell-Burt et al., 2014) and reduced air
+the Bonferroni threshold (P <2.19 ×10(cid:0) 4). pollution (J. G. Su et al., 2011). Our results are conflictual with recent
+Another novel finding is that high level of NOx, NO2, PM10, and findings (Cao et al., 2023).
+PM2.5 showed an inverse association with melanoma risk (P =7.54 × Finally, we found a significant association between NO2 and PM10
+10(cid:0) 7, P = 5.22 × 10(cid:0) 12, P = 2.00 × 10(cid:0) 6, and P = 3.46 × 10(cid:0) 8, and all risk of cancer. Nonetheless, our result is discordant from what is
+respectively) that could be explained by a reduced sun exposure that reported in literature. Indeed, different authors found that PM10 was not
+characterizes cities, where air pollution is higher. We also found that associated with the overall risk of cancer (Radespiel-Tro¨ger et al., 2018;
+living close to major roads was associated with lower melanoma risk, Shin et al., 2022). As for PM10, literature results about the association
+supporting the idea that the association with air pollution and mela- between all cancer risk and NO2 are inconclusive (Al-Ahmadi and
+noma risk is just a proxy of a lower sun exposure. We tested this hy- Al-Zahrani, 2013; S.-Y. Su et al., 2019).
+pothesis in mediation analysis, using the time spent outdoor as a proxy We observed strong effects of all PGSs on risk of the respective
+for sun exposure. We found no mediation effects. This null result may be cancers, with relatively large ORs for individuals with the highest count
+explained by the fact that the variable reporting the time spent outdoor of deleterious alleles compared to individuals with the least (average
+is computed in UKBB as the self-reported average hours spent outside, OR = 2.14) and very robust associations (p-values ranging from P =
+not considering neither the period of the day nor the direct sun exposure. 1.53 ×10(cid:0) 3 to P <10(cid:0) 250). These results are particularly interesting
+In our study, high levels of NOx were positively associated with since in the gene - (local) environment interaction analysis we show that
+oesophageal cancer risk in the quintile analysis (P =1.75 ×10(cid:0) 4), while the two are independent from each other and therefore could be com-
+PM2.5 was found to be associated in the continuous analysis (P =2.76 × bined in multifactorial risk scores to stratify high risk individuals as it
+10(cid:0) 5). The effect of NOx on oesophageal cancer risk has never been has been done for several cancer types (Galeotti et al., 2021; Lee et al.,
+reported, while the effect of PM2.5 was investigated by several studies 2022; Torres et al., 2019). Several studies have attempted to identify
+conducted in China and in the United States (Coleman et al., 2020; Li GxE interaction in cancer, however, with very few exceptions none has
+7
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+Fig. 2. Forest plots for the associations between every selected local environment exposure and each cancer type.
+been found yet (Choi et al., 2021; Huang et al., 2021; Kapoor et al., the environment that could happen in the lifetime of each participant.
+2020). We applied a novel approach using the SNPs grouped in a score Another possible limitation may be given by the ethnicity and the
+instead of analyzing the individual interactions with the environment. geographic position, since our study was limited to persons of European
+These results indicate that if an interaction between genetic variability ancestry living in the UK, and therefore our findings cannot be gener-
+and environmental exposure exists, it must be identified with other alized to other ethnicities and/or geographic location.
+approaches, such as genome-wide interactions studies (GWIS), that
+however need sample sizes much larger than UKBB (Burns et al., 2023; 5. Conclusions
+Gref et al., 2017).
+Our study has several strengths, such as the comprehensive analysis In conclusion, our results show that the local environment exerts an
+of the environmental exposure, the integration of genetic data in the effect on risk of many cancer types. We confirmed several known asso-
+form of PGSs, and the homogeneity of the measures across the cohort. ciations and identified for the first time the effect of living close to the
+We are aware of possible limitations. In UKBB there are missing data on coast on prostate cancer risk, which could be mediated by physical ac-
+the variations of the concentrations of air pollutants throughout the tivity and the time spent outdoor.
+years. With a longitudinal study it would have been possible to consider
+the effect of the duration of the exposures, and the possible changes in
+8
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+Fig. 2. (continued).
+CRediT author statement Conceptualization, Methodology, Validation, Resources, Writing –
+Original Draft, Writing – Review & Editing, Supervision, Project
+Alessio Felici: Conceptualization, Methodology, Formal analysis, administration, Funding acquisition.
+Investigation, Software, Validation, Data Curation, Writing – Original
+Draft, Writing – Review & Editing, Visualization. Giulia Peduzzi: Funding
+Methodology, Resources, Software, Validation, Formal analysis, Data
+Curation, Writing – Original Draft, Writing – Review & Editing, Visu- The present research was funded with intramural funding of the
+alization. Francesca Giorgolo: Software, Validation, Writing – Original University of Pisa and German Cancer Research Center (DKFZ). This
+Draft. Andrea Spinelli: Software, Validation, Writing – Original Draft. research did not receive any specific grant from funding agencies in the
+Marco Calderisi: Software, Resources, Writing – Original Draft, Su- public, commercial, or not-for-profit sectors.
+pervision, Project administration. Anna Monreale: Software, Writing – This research is supported by the Ministry of University and Research
+Original Draft. Riccardo Farinella: Validation, Writing – Original Draft, (MUR) as part of the PON 2014–2020 “Research and Innovation” re-
+Visualization. Roberto Pellungrini: Software, Validation, Writing – sources – Green/Innovation Action – DM MUR 1061/2022.
+Original Draft. Federico Canzian: Conceptualization, Validation, Re-
+sources, Writing – Original Draft, Writing – Review & Editing, Super-
+vision, Project administration, Funding acquisition. Daniele Campa:
+9
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+contribution.
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi.
+org/10.1016/j.envres.2023.117562.
+References
+Al-Ahmadi, K., Al-Zahrani, A., 2013. NO(2) and cancer incidence in Saudi Arabia. Int. J.
+Environ. Res. Publ. Health 10 (11), 5844–5862. https://doi.org/10.3390/
+ijerph10115844.
+Astell-Burt, T., Feng, X., Kolt, G.S., 2014. Neighbourhood green space and the odds of
+having skin cancer: multilevel evidence of survey data from 267072 Australians.
+J. Epidemiol. Community Health 68 (4), 370–374. https://doi.org/10.1136/JECH-
+2013-203043.
+Baron, R.M., Kenny, D.A., 1986. The moderator-mediator variable distinction in social
+psychological research. Conceptual, strategic, and statistical considerations. J. Pers.
+Soc. Psychol. 51 (6), 1173–1182. https://doi.org/10.1037/0022-3514.51.6.1173.
+Burns, A.C., Phillips, A.J.K., Rutter, M.K., Saxena, R., Cain, S.W., Lane, J.M., 2023.
+Genome-wide gene by environment study of time spent in daylight and chronotype
+identifies emerging genetic architecture underlying light sensitivity. Sleep 46 (3),
+1–10. https://doi.org/10.1093/SLEEP/ZSAC287.
+Bycroft, C., Freeman, C., Petkova, D., Band, G., Elliott, L.T., Sharp, K., Motyer, A.,
+Vukcevic, D., Delaneau, O., O’Connell, J., Cortes, A., Welsh, S., Young, A.,
+Effingham, M., McVean, G., Leslie, S., Allen, N., Donnelly, P., Marchini, J., 2018. The
+UK Biobank resource with deep phenotyping and genomic data. Nature 562 (7726),
+203–209. https://doi.org/10.1038/s41586-018-0579-z.
+Cao, Z., Xu, C., Li, S., Wang, Y., Yang, H., 2023. Residential greenspace and risk of
+cancer: a prospective cohort study from the UK Biobank. Sci. Total Environ. 871,
+162145 https://doi.org/10.1016/J.SCITOTENV.2023.162145.
+Chang, C.C., Chow, C.C., Tellier, L.C.A.M., Vattikuti, S., Purcell, S.M., Lee, J.J., 2015.
+Second-generation PLINK: rising to the challenge of larger and richer datasets.
+GigaScience 4 (1). https://doi.org/10.1186/S13742-015-0047-8.
+Choi, J., Jia, G., Wen, W., Shu, X.O., Zheng, W., 2021. Healthy lifestyles, genetic
+modifiers, and colorectal cancer risk: a prospective cohort study in the UK Biobank.
+Am. J. Clin. Nutr. 113 (4), 810–820. https://doi.org/10.1093/AJCN/NQAA404.
+Ciabattini, M., Rizzello, E., Lucaroni, F., Palombi, L., Boffetta, P., 2021. Systematic
+review and meta-analysis of recent high-quality studies on exposure to particulate
+Fig. 3. Mediation results for the living distance to coast and prostate cancer. matter and risk of lung cancer. Environ. Res. 196 https://doi.org/10.1016/j.
+Panel A and panel B report the mediation results (betas) for the living distance envres.2020.110440.
+to coast and prostate in cancer in single mediator (A) and multi-mediator (B) Claeson, M., Andersson, E.M., Wallin, M., Wastensson, G., Wennberg, A.-M., Paoli, J.,
+Gonzalez, H., 2012. Incidence of cutaneous melanoma in Western Sweden,
+analyses with the Baron and Kenny method. Only statistically significant results
+1970–2007. Melanoma Res. 22 (5), 392–398. https://doi.org/10.1097/
+(p <0.05) are reported. In panel A, sun exposure and physical activity resulted CMR.0b013e32835861d6.
+in a weak but significant mediation effect. In panel B, sun exposure effect Coleman, N.C., Burnett, R.T., Ezzati, M., Marshall, J.D., Robinson, A.L., Pope, C.A., 2020.
+resulted partially mediated by increased levels of vitamin D and an increase Fine particulate matter exposure and cancer incidence: analysis of SEER cancer
+physical activity. For the exposure-outcome path (i.e., distance to coast – registry data from 1992-2016. Environ. Health Perspect. 128 (10), 107004 https://
+doi.org/10.1289/EHP7246.
+prostate cancer), the value within the brackets represents the effect of the
+DiCiccio, T.J., Efron, B., 1996. Bootstrap confidence intervals. Stat. Sci. 11 (3) https://
+exposure when the mediator is present, while the value outside the brackets doi.org/10.1214/ss/1032280214.
+represents the total effect of the exposure when the mediator is not included. Fazeli Dehkordi, Z.S., Khatami, S.M., Ranjbar, E., 2022. The associations between urban
+*p <0.05, **p <0.01, ***p <0.001. form and major non-communicable diseases: a systematic review. J. Urban Health :
+Bull. N. Y. Acad. Med. 99 (5) https://doi.org/10.1007/S11524-022-00652-4.
+Galeotti, A.A., Gentiluomo, M., Rizzato, C., Obazee, O., Neoptolemos, J.P., Pasquali, C.,
+Ethics statement Nentwich, M., Cavestro, G.M., Pezzilli, R., Greenhalf, W., Holleczek, B.,
+Schroeder, C., Scho¨ttker, B., Ivanauskas, A., Ginocchi, L., Key, T.J., Hegyi, P.,
+Archibugi, L., Darvasi, E., et al., 2021. Polygenic and multifactorial scores for
+All participants provided written informed consent before their
+pancreatic ductal adenocarcinoma risk prediction. J. Med. Genet. 58 (6), 369–377.
+enrollment in the UK Biobank cohort. The UKBB study has received the https://doi.org/10.1136/JMEDGENET-2020-106961.
+approval from the North-West Multi-centre Research Ethics Committee Gref, A., Merid, S.K., Gruzieva, O., Ballereau, S., Becker, A., Bellander, T., Bergstro¨m, A.,
+(MREC). Boss´e, Y., Bottai, M., Chan-Yeung, M., Fuertes, E., Ierodiakonou, D., Jiang, R.,
+Joly, S., Jones, M., Kobor, M.S., Korek, M., Kozyrskyj, A.L., Kumar, A., et al., 2017.
+Genome-wide interaction analysis of air pollution exposure and childhood asthma
+Declaration of competing interest with functional follow-up. Am. J. Respir. Crit. Care Med. 195 (10), 1373–1383.
+https://doi.org/10.1164/RCCM.201605-1026OC/SUPPL_FILE/DISCLOSURES.PDF.
+Gucalp, A., Traina, T.A., Eisner, J.R., Parker, J.S., Selitsky, S.R., Park, B.H., Elias, A.D.,
+The authors declare that they have no known competing financial Baskin-Bey, E.S., Cardoso, F., 2019. Male breast cancer: a disease distinct from
+interests or personal relationships that could have appeared to influence female breast cancer. Breast Cancer Res. Treat. 173 (1), 37–48. https://doi.org/
+10.1007/s10549-018-4921-9.
+the work reported in this paper.
+Haraldsdottir, A., Steingrimsdottir, L., Valdimarsdottir, U.A., Aspelund, T.,
+Tryggvadottir, L., Harris, T.B., Launer, L.J., Mucci, L.A., Giovannucci, E.L.,
+Data availability Adami, H.O., Gudnason, V., Torfadottir, J.E., 2017. Early life residence, fish
+consumption, and risk of breast cancer. Cancer Epidemiol. Biomark. Prev. 26 (3),
+346–354. https://doi.org/10.1158/1055-9965.EPI-16-0473-T.
+The authors do not have permission to share data. Huang, Y., Zhu, M., Ji, M., Fan, J., Xie, J., Wei, X., Jiang, X., Xu, J., Chen, L., Yin, R.,
+Wang, Y., Dai, J., Jin, G., Xu, L., Hu, Z., Ma, H., Shen, H., 2021. Air pollution, genetic
+factors, and the risk of lung cancer: a prospective study in the UK Biobank. Am. J.
+Acknowledgements Respir. Crit. Care Med. 204 (7), 817–825. https://doi.org/10.1164/RCCM.202011-
+4063OC.
+Data used for this research were gathered from the UK Biobank Imai, K., Yamamoto, T., 2013. Identification and sensitivity analysis for multiple causal
+mechanisms: revisiting evidence from framing experiments. Polit. Anal. 21 (2),
+Resource (www.ukbiobank.ac.uk) under application No. 66591. The 141–171. https://doi.org/10.1093/pan/mps040.
+authors want to thank the UK Biobank participants for their
+10
+A. Felici et al. E n v i r o n m e n t a l R e s e a r c h 241(2024)117562
+Kapoor, P.M., Lindstro¨m, S., Behrens, S., Wang, X., Michailidou, K., Bolla, M.K., 1988-1997. Cancer Causes Control 16 (2), 139–150. https://doi.org/10.1007/
+Wang, Q., Dennis, J., Dunning, A.M., Pharoah, P.D.P., Schmidt, M.K., Kraft, P., S10552-004-2616-5/METRICS.
+García-Closas, M., Easton, D.F., Milne, R.L., Chang-Claude, J., 2020. Assessment of Reynolds, P., Hurley, S., Goldberg, D.E., Anton-Culver, H., Bernstein, L., Deapen, D.,
+interactions between 205 breast cancer susceptibility loci and 13 established risk Horn-Ross, P.L., Peel, D., Pinder, R., Ross, R.K., West, D., Wright, W.E., Ziogas, A.,
+factors in relation to breast cancer risk, in the Breast Cancer Association Consortium. 2004. Regional variations in breast cancer among California teachers. Epidemiology
+Int. J. Epidemiol. 49 (1), 216. https://doi.org/10.1093/IJE/DYZ193. 15 (6), 746–754. https://doi.org/10.1097/01.EDE.0000134863.45834.50.
+Korgavkar, K., Lee, K.C., Weinstock, M.A., 2014. Higher melanoma incidence in coastal S´anchez, C.O., García-P´erez, J., Go´mez-Barroso, D., Domínguez-Castillo, A.,
+versus inland counties in California. Melanoma Res. 24 (3), 280–285. https://doi. Romaguera, E.P., Can˜ete, A., Ortega-García, J.A., Ramis, R., 2022. Exploring blue
+org/10.1097/CMR.0000000000000067. spaces’ effects on childhood leukaemia incidence: a population-based case–control
+Lambert, S.A., Gil, L., Jupp, S., Ritchie, S.C., Xu, Y., Buniello, A., McMahon, A., study in Spain. Int. J. Environ. Res. Publ. Health 19 (9). https://doi.org/10.3390/
+Abraham, G., Chapman, M., Parkinson, H., Danesh, J., MacArthur, J.A.L., IJERPH19095232.
+Inouye, M., 2021. The Polygenic Score Catalog as an open database for Shin, M., Kim, O.-J., Yang, S., Choe, S.-A., Kim, S.-Y., 2022. Different mortality risks of
+reproducibility and systematic evaluation. Nat. Genet. 53 (4), 420–425. https://doi. long-term exposure to particulate matter across different cancer sites. Int. J. Environ.
+org/10.1038/s41588-021-00783-5. Res. Publ. Health 19 (6). https://doi.org/10.3390/ijerph19063180.
+Lee, A., Yang, X., Tyrer, J., Gentry-Maharaj, A., Ryan, A., Mavaddat, N., Cunningham, A. Su, J.G., Jerrett, M., de Nazelle, A., Wolch, J., 2011. Does exposure to air pollution in
+P., Carver, T., Archer, S., Leslie, G., Kalsi, J., Gaba, F., Manchanda, R., Gayther, S., urban parks have socioeconomic, racial or ethnic gradients? Environ. Res. 111 (3),
+Ramus, S.J., Walter, F.M., Tischkowitz, M., Jacobs, I., Menon, U., et al., 2022. 319–328. https://doi.org/10.1016/j.envres.2011.01.002.
+Original research: comprehensive epithelial tubo-ovarian cancer risk prediction Su, S.-Y., Liaw, Y.-P., Jhuang, J.-R., Hsu, S.-Y., Chiang, C.-J., Yang, Y.-W., Lee, W.-C.,
+model incorporating genetic and epidemiological risk factors. J. Med. Genet. 59 (7), 2019. Associations between ambient air pollution and cancer incidence in Taiwan:
+632. https://doi.org/10.1136/JMEDGENET-2021-107904. an ecological study of geographical variations. BMC Publ. Health 19 (1), 1496.
+Li, P., Guo, X., Jing, J., Hu, W., Wei, W.Q., Qi, X., Zhuang, G., 2022. The lag effect of https://doi.org/10.1186/s12889-019-7849-z.
+exposure to PM2.5 on esophageal cancer in urban-rural areas across China. Environ. Sudlow, C., Gallacher, J., Allen, N., Beral, V., Burton, P., Danesh, J., Downey, P.,
+Sci. Pollut. Control Ser. 29 (3), 4390–4400. https://doi.org/10.1007/S11356-021- Elliott, P., Green, J., Landray, M., Liu, B., Matthews, P., Ong, G., Pell, J., Silman, A.,
+15942-8/FIGURES/3. Young, A., Sprosen, T., Peakman, T., Collins, R., 2015. UK Biobank: an open access
+Li, P., Jing, J., Guo, W., Guo, X., Hu, W., Qi, X., Wei, W.Q., Zhuang, G., 2021. The resource for identifying the causes of a wide range of complex diseases of middle and
+associations of air pollution and socioeconomic factors with esophageal cancer in old age. PLoS Med. 12 (3) https://doi.org/10.1371/journal.pmed.1001779.
+China based on a spatiotemporal analysis. Environ. Res. 196, 110415 https://doi. Tingley, D., Yamamoto, T., Hirose, K., Keele, L., Imai, K., 2014. Mediation: R package for
+org/10.1016/J.ENVRES.2020.110415. causal mediation analysis. J. Stat. Software 59 (5). https://doi.org/10.18637/jss.
+Machiela, M.J., Chanock, S.J., 2015. LDlink: a web-based application for exploring v059.i05.
+population-specific haplotype structure and linking correlated alleles of possible Torres, D., Lorenzo Bermejo, J., Garcia Mesa, K., Gilbert, M., Bricen˜o, I., Pohl-Zeidler, S.,
+functional variants. Bioinformatics 31 (21), 3555–3557. https://doi.org/10.1093/ Gonza´lez Silos, R., Boekstegers, F., Plass, C., Hamann, U., 2019. Interaction between
+BIOINFORMATICS/BTV402. genetic ancestry and common breast cancer susceptibility variants in Colombian
+Mather, F.J., Chen, V.W., Morgan, L.H., Correa, C.N., Shaffer, J.G., Srivastav, S.K., women. Int. J. Cancer 144 (9), 2181–2191. https://doi.org/10.1002/IJC.32023.
+Rice, J.C., Blount, G., Swalm, C.M., Wu, X., Scribner, R.A., 2006. Hierarchical Wang, X., Qian, Z., Min), Zhang, Z., Cai, M., Chen, L., Wu, Y., Li, H., Liu, E., McMillin, S.
+modeling and other spatial analyses in prostate cancer incidence data. Am. J. Prev. E., Lin, H., 2022. Population attributable fraction of lung cancer due to genetic
+Med. 30 (2) https://doi.org/10.1016/j.amepre.2005.09.012. variants, modifiable risk factors, and their interactions: a nationwide prospective
+Pourvakhshoori, N., Khankeh, H.R., Stueck, M., Farrokhi, M., 2020. The association cohort study. Chemosphere 301. https://doi.org/10.1016/J.
+between air pollution and cancers: controversial evidence of a systematic review. CHEMOSPHERE.2022.134773.
+Environ. Sci. Pollut. Control Ser. 27 (31), 38491–38500. https://doi.org/10.1007/ White, M.P., Elliott, L.R., Gascon, M., Roberts, B., Fleming, L.E., 2020. Blue space, health
+S11356-020-10377-Z/TABLES/5. and well-being: a narrative overview and synthesis of potential benefits. Environ.
+Raaschou-Nielsen, O., Andersen, Z.J., Hvidberg, M., Jensen, S.S., Ketzel, M., Res. 191 https://doi.org/10.1016/J.ENVRES.2020.110169.
+Sørensen, M., Hansen, J., Loft, S., Overvad, K., Tjønneland, A., 2011. Air pollution Yu, P., Kusuma, J.D., Suarez, M.A.R., Shiao, S.Y.P.K., 2018. Lung cancer susceptibility
+from traffic and cancer incidence: a Danish cohort study. Environ. Health 10 (1), 67. from GSTM1 deletion and air pollution with smoking status: a meta-prediction of
+https://doi.org/10.1186/1476-069X-10-67. worldwide populations. Oncotarget 9 (57), 31120. https://doi.org/10.18632/
+Radespiel-Tro¨ger, M., Geiss, K., Twardella, D., Maier, W., Meyer, M., 2018. Cancer ONCOTARGET.25693.
+incidence in urban, rural, and densely populated districts close to core cities in Zare Sakhvidi, M.J., Yang, J., Mehrparvar, A.H., Dzhambov, A.M., Ebrahimi, A.A.,
+Bavaria, Germany. Int. Arch. Occup. Environ. Health 91 (2), 155–174. https://doi. Dadvand, P., Jacquemin, B., 2022. Exposure to greenspace and cancer incidence,
+org/10.1007/s00420-017-1266-3. prevalence, and mortality: a systematic review and meta-analyses. Sci. Total
+Reynolds, P., Hurley, S.E., Quach, A.T., Rosen, H., Von Behren, J., Hertz, A., Smith, D., Environ. 838, 156180 https://doi.org/10.1016/J.SCITOTENV.2022.156180.
+2005. Regional variations in breast cancer incidence among California women,
+11

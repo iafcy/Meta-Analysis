@@ -1,0 +1,605 @@
+_This is an open access arti­cle dis­trib­uted under the terms of a Creative Commons license (CC BY-NC-ND 4.0)._
+
+# Do Pregnancy Intentions Matter? A Research Note  Revisiting Relationships Among Pregnancy, Birth,  and Maternal Outcomes
+
+
+## Nicholas D. E. Mark and Sarah K. Cowan
+
+**ABSTRACT The pre­ven­tion of unplanned or unin­tended preg­nan­cies con­tin­ues to be a**
+cor­ner­stone of U.S. repro­duc­tive health pol­icy, but the evi­dence that such preg­nan­cies
+cause adverse mater­nal and child out­comes is lim­ited. In this research note, we exam­
+ine these rela­tion­ships using recent large-scale data and inverse pro­pen­sity weights
+esti­mated from gen­er­al­ized boosted mod­els. We find that preg­nancy tim­ing is related
+to mater­nal expe­ri­ence dur­ing preg­nancy, but not to infant out­comes at birth—both of
+which are con­sis­tent with prior research. In an addi­tion to the lit­er­a­ture, we show that
+preg­nancy tim­ing is rel­e­vant for a num­ber of mater­nal out­comes, such as the onset of
+depres­sion and inti­mate part­ner vio­lence, changes in smok­ing behav­ior, and receipt of
+med­i­cal care. These find­ings sug­gest that pol­icy intended to improve infant wel­fare by
+pre­vent­ing unin­tended preg­nan­cies has lit­tle empir­i­cal sup­port, but that pol­icy focused
+on increas­ing repro­duc­tive auton­omy and mater­nal well-being has the poten­tial to
+improve out­comes.
+
+
+**KEYWORDS Pregnancy inten­tion • Maternal health • Infant out­comes • Health pol­icy**
+
+## Introduction
+
+
+Preventing unin­tended or unplanned preg­nan­cies has long been a cor­ner­stone of U.S.
+repro­duc­tive health pol­icy, par­tially because infant and mater­nal out­comes are bet­ter
+after a planned ver­sus an unplanned preg­nancy (Brown and Eisenberg 1995; Gipson
+et al. 2008; Institute of Medicine 2011). These well-established asso­ci­a­tions helped
+jus­tify expanded con­tra­cep­tive insur­ance cov­er­age in the 2010 Affordable Care Act
+(Institute of Medicine 2011).
+Despite its impor­tant influ­ence in pol­icy mak­ing, preg­nancy inten­tion—its rela­
+tion­ship to out­comes, mea­sure­ment, and con­cep­tual value—has long been the sub­
+ject of debate (Aiken et al. 2016; Kost and Lindberg 2015; Kost and Zolna 2019;
+Luker 1999; Potter et al. 2019; Trussell et al. 1999). Unintended preg­nan­cies have
+been asso­ci­ated with neg­a­tive fam­ily and child out­comes, even after con­trol­ling for
+mater­nal char­ac­ter­is­tics within a mul­ti­ple regres­sion frame­work (Cheng et al. 2009;
+
+**[ELECTRONIC SUPPLEMENTARY MATERIAL The online ver­sion of this arti­cle (https:​­/​­/doi​­.org​­/10​­.1215​­/00703370​](https://doi.org/10.1215/00703370-9710311)**
+[-9710311) contains supplementary material](https://doi.org/10.1215/00703370-9710311)
+
+
+-----
+
+Joyce et al. 2000; Kost et al. 1998; Weller et al. 1987).[1] However, other stud­ies have
+found almost no causal rela­tion­ship between preg­nancy inten­tions and preg­nancy or
+infant out­comes at birth (Joyce et al. 2000; Kost and Lindberg 2015). We make two
+con­tri­bu­tions to this debate.
+First, we revisit the ques­tion of whether infants fare bet­ter when the preg­nancy
+was well-timed using a larger sam­ple and with more pre­cise mea­sures and meth­ods
+than prior work. We aim to deter­mine whether the asso­ci­a­tion between preg­nancy
+tim­ing (for preg­nan­cies taken to term) and adverse out­comes is due solely to mater­
+nal char­ac­ter­is­tics that are cor­re­lated with preg­nancy tim­ing or whether preg­nancy
+tim­ing inde­pen­dently exerts a causal effect on out­comes. It is worth not­ing here,
+although we con­sider it more in the fol­low­ing, that we use the tra­di­tional sur­vey ques­
+tion about whether the preg­nancy occurred when the woman wanted it to. Typically,
+this ques­tion has been used to mea­sure inten­tions. In light of sig­nif­i­cant cri­tiques of
+this operationalization, we instead use the lan­guage of tim­ing.
+Second, we expand the scope of out­comes to include a range of mater­nal preg­nancy
+and post­par­tum out­comes. Much prior work addressed only infant out­comes at birth,
+child out­comes, or mater­nal out­comes directly affect­ing the in utero envi­ron­ment, such
+as mater­nal alco­hol or tobacco con­sump­tion (Gipson et al. 2008). Research has found
+links between preg­nancy inten­tion and the expe­ri­ence of inti­mate part­ner vio­lence
+(IPV) (Jasinski 2001) and post­par­tum depres­sion (Abajobir et al. 2016; Abbasi et al.
+2013; Fellenzer and Cibula 2014; Mercier et al. 2013; but see Christensen et al. 2011),
+as well as symp­toms of anx­i­ety and stress later in life (Biggs et al. 2017; Herd et al.
+2016), suggesting that mater­nal out­comes may be related to preg­nancy inten­tions.
+
+## Data
+
+
+We ana­lyze data from the Pregnancy Risk Assessment Monitoring System (PRAMS), an
+annual sur­vey admin­is­tered by the Centers for Disease Control and Prevention and state
+health depart­ments of a strat­i­fied sam­ple of indi­vid­u­als who have recently given birth;
+respon­dents are contacted within 2–4 months of the live birth. Survey data are inte­grated
+with birth cer­tif­i­cate data, which are the source of many crit­i­cal infant out­comes at birth,
+such as birth weight and pre­term birth. We use Phase 7 data from 2012–2015, rep­re­sen­
+ta­tive of births in par­tici­pat­ing states and 83% of births in the United States.
+The PRAMS ques­tion­naire employs the tra­di­tional ques­tion to mea­sure preg­nancy
+inten­tion: “Thinking back to just before you got preg­nant with your new baby, how did
+you feel about becom­ing preg­nant?” Respondents choose one of five response options:
+“I wanted to be preg­nant later,” “I wanted to be preg­nant sooner,” “I wanted to be
+preg­nant then,” “I didn’t want to be preg­nant then or at any time in the future,” and “I
+wasn’t sure what I wanted.” If moth­ers reported that they wanted to be preg­nant later,
+the extent of mistiming was assessed with this fol­low-up ques­tion: “How much lon­ger
+did you want to wait to become preg­nant?” Response options were “less than 1 year,”
+
+1 People of all­ gen­ders give birth. In the United States, most extant data sets include char­ac­ter­iza­tion
+by gen­der but assume that it cor­re­sponds to sex assigned at birth, and thus it is unclear whether men (or
+other gen­ders) with a uterus pro­vided infor­ma­tion about births. For par­si­mony, we use female nouns and
+
+
+-----
+
+“1 year to less than 2 years,” “2 years to less than 3 years,” “3 years to 5 years,” and
+“more than 5 years.” We divide these responses into two groups: whether preg­nan­cies
+were ear­lier than wanted by less than two years and whether they were ear­lier than
+wanted by two years or more. In Phase 7, PRAMS had added a new response option—“I
+wasn’t sure what I wanted.” Comparisons between Phases 7 and 6 indi­cate that respon­
+dents who selected this option were drawn from all­ of the other options except “I wanted
+to be preg­nant then,” suggesting that this choice is dis­tinct from the other three choices
+(Maddow-Zimet and Kost 2020); there­fore, we include “unsure” as a fifth inten­tion
+­cat­e­gory. Our results are thus not strictly com­pa­ra­ble to ana­ly­ses employing a fourcat­e­gory ­mea­sure of preg­nancy inten­tions, but they may have greater con­cep­tual validity.
+We, like oth­ers, ques­tion the inter­pre­ta­tion of this ques­tion as cap­tur­ing “inten­tions”
+(Kost and Zolna 2019; Potter et al. 2019; Santelli et al. 2003). This con­cern is borne
+out of both con­cep­tual and mea­sure­ment issues. The con­se­quences are con­sid­er­able:
+unin­tended births can be con­strued as an inabil­ity or unwill­ing­ness to plan, a vio­la­
+tion of Amer­i­cans’ notion of a respon­si­ble adult (Shim 2010). Therefore, rather than
+using the tra­di­tional lan­guage of “intended” and “unin­tended,” we hew more closely to
+the data in describ­ing preg­nan­cies as “then/sooner,” “wanted <2 years later,” “wanted
+≥2 years later,” “never/unwanted,” and “unsure.” We also share con­cerns that par­ents
+revise preg­nancy tim­ing pref­er­ences over the course of the preg­nancy and in light of
+infant well-being, leav­ing a ret­ro­spec­tive self-report vul­ner­a­ble to mea­sure­ment error.
+While typ­i­cally reports shift from unin­tended to intended, some stud­ies have shown the
+reverse (Guzzo and Hayford 2014; Joyce et al. 2002; Rosenzweig and Wolpin 1993;
+Westoff and Ryder 1977). Revision is par­tic­u­larly likely when the infant expe­ri­ences
+adverse health events, which is discussed in more detail in the fol­low­ing.
+All depen­dent var­i­ables and sam­ple sizes are listed in Table 1.[2] Each out­come is
+binary (yes/no). Pregnancy out­comes include when the mother rec­og­nized her preg­
+nancy and whether she received pre­na­tal care within the first tri­mes­ter, gained the
+recommended weight dur­ing preg­nancy as defined by the Amer­i­can College of Obste­
+tricians and Gynecologists (2013), engaged in smok­ing or drink­ing dur­ing preg­nancy,
+or expe­ri­enced the onset of IPV dur­ing preg­nancy. Infant out­comes at birth include
+whether the birth was pre­term and whether the new­born was low (<2,500 g) or very
+low (<1,500 g) birth weight, was small for ges­ta­tional age, was admit­ted to the inten­
+sive care unit (ICU), or died before age 1. Maternal post­par­tum out­comes include
+moth­ers’ reports of ever breastfeeding or breastfeeding for at least three months,
+attend­ing a post­par­tum med­i­cal visit, and changes in depres­sion or smok­ing.
+PRAMS data are col­lected from birthing par­ents who recently had a live birth and
+exclude those whose preg­nan­cies ended in mis­car­riage, abor­tion, or still­birth. We
+can­not assess whether mater­nal well-being dur­ing and after these preg­nan­cies var­
+ied by preg­nancy tim­ing for those excluded pop­u­la­tions. Because access to abor­tion
+dif­fers by state of res­i­dence and eco­nomic and social priv­i­lege, selec­tion into unin­
+tended birth is non­ran­dom. Our data are con­di­tional on this selec­tion pro­cess. Our
+ana­ly­ses com­pare moth­ers who reported that their preg­nan­cies were well-timed with
+oth­er­wise sim­i­lar moth­ers who reported that their preg­nan­cies were mistimed, but we
+can­not say whether these same moth­ers would have taken their preg­nan­cies to term if
+abor­tion had been more read­ily avail­­able.
+
+
+-----
+
+**Table 1** Outcomes and sam­ples
+
+Outcome Sample _n_
+
+
+Pregnancy Outcomes
+Recognized preg­nancy within six weeks Universe in states where ques­tion was asked 26,071
+(AL, DE, LA, MD, ME, NJ, OK, TX)
+
+Prenatal care in first tri­mes­ter Universe 128,817
+Recommended weight gain Universe 106,951
+Quit smok­ing in first/sec­ond tri­mes­ter Reported any tobacco use three months 23,230
+before preg­nancy
+
+Quit smok­ing in third tri­mes­ter Reported any tobacco use three months 29,430
+before preg­nancy
+
+Reduced drink­ing by third tri­mes­ter Reported alco­hol con­sump­tion three months 35,166
+before preg­nancy
+
+IPV ini­ti­ated Reported no IPV before preg­nancy 126,474
+Infant Outcomes at Birth
+Preterm birth Universe 131,175
+Low birth weight Universe 131,138
+Very low birth weight Universe 131,138
+Small for ges­ta­tional age Universe 125,625
+Infant in inten­sive care unit Universe 129,895
+Infant mor­tal­ity Universe 128,161
+Maternal Postpartum Outcomes
+Postpartum visit Universe 130,378
+Depression ini­ti­ated Reported no depres­sion before preg­nancy 114,268
+Depression improved Reported depres­sion before preg­nancy 14,256
+Smoking wors­ened Reported smok­ing <41 cig­a­rettes/day three 114,350
+months before preg­nancy
+
+Smoking improved Reported any tobacco use three months 29,728
+before preg­nancy
+
+Ever breastfed Universe 128,004
+Breastfed for ≥3 months Gave birth ≥91 days before sur­vey 112,263
+
+_Notes: Data on preg­nancy, infant, and mater­nal out­comes are from Phase 7 of the National PRAMS. The_
+num­ber of obser­va­tions in the uni­verse of data varies because of var­i­a­tion in response rates by ques­tion.
+IPV = inti­mate part­ner vio­lence.
+
+
+The inde­pen­dent var­i­ables include a num­ber of the mother’s char­ac­ter­is­tics: age
+(≤19, 20–24, 25–29, ≥30), mar­i­tal sta­tus (mar­ried or other), race and eth­nic­ity (nonHis­panic White, His­panic, non-His­panic Black, non-His­panic other), edu­ca­tional
+attain­ment (less than high school, high school, some col­lege, col­lege or more), expe­
+ri­ence of depres­sion before preg­nancy, num­ber of stress events in the 12 months
+before the birth, and state of res­i­dence. Other var­i­ables are infant’s birth order (first,
+sec­ond, third or higher) and whether pre­na­tal care was paid for by Med­ic­aid.
+
+## Methods
+
+
+We use inverse pro­pen­sity weighting (IPW) to adjust the dis­tri­bu­tion of mater­nal
+char­ac­ter­is­tics so that preg­nancy tim­ing groups are sim­i­lar with respect to observed
+variables that are (1) related to the probability of assignment to a pregnancy timing
+
+
+-----
+
+cat­e­gory and (2) influ­ence the out­come of inter­est. The goal of IPW is to elim­i­nate
+dif­fer­ences in con­found­ers between groups, essen­tially approx­i­mat­ing com­par­i­son
+groups that are equiv­a­lent on all­ char­ac­ter­is­tics except for group assign­ment. Assum­
+ing that all­ con­found­ers are adjusted for, regressing preg­nancy tim­ing on the out­come
+of inter­est pro­vi­des unbi­ased esti­ma­tes of the mar­ginal causal effect of preg­nancy
+tim­ing (Austin and Stu­art 2015; Rosenbaum and Rubin 1983). Because we can­not
+account for all­ of the fac­tors that influ­ence preg­nancy tim­ing rel­a­tive to mater­nal
+pref­er­ences, includ­ing selec­tion into tak­ing preg­nan­cies to term, our results should
+not be interpreted as unbi­ased esti­ma­tes. Nevertheless, we can adjust for many of the
+major fac­tors that influ­ence preg­nancy tim­ing.
+We use gen­er­al­ized boosted mod­els to esti­mate mul­ti­no­mial pro­pen­sity weights
+(McCaffrey et al. 2013). The pre­dic­tors we use are mother’s age, mar­i­tal sta­tus, race
+and eth­nic­ity, edu­ca­tion, and state of res­i­dence, as well as birth order and whether
+Med­ic­aid paid for pre­na­tal care.[3] After the pro­pen­sity weights are esti­mated, they are
+mul­ti­plied by the sur­vey weights to per­mit cal­cu­la­tion of aver­age treat­ment effects
+that are rep­re­sen­ta­tive of the PRAMS pop­u­la­tion.
+Because our ana­ly­ses of a five-level mea­sure span 19 out­comes, the p val­ues of
+indi­vid­ual coef­fi­cients are dif­fi­cult to inter­pret; but because the categories and out­
+comes are not inde­pen­dent, stan­dard cor­rec­tions for mul­ti­ple com­par­i­sons, such
+as Bonferroni cor­rec­tions, are not appro­pri­ate (Perneger 1998). Thus, although we
+report the point esti­ma­tes and 95% con­fi­dence inter­vals, we urge cau­tion in interpret­
+ing spec­i­fic­ity or sta­tis­ti­cal sig­nif­i­cance of indi­vid­ual coef­fi­cients, and we focus our
+dis­cus­sion on broad pat­terns of results while not­ing where indi­vid­ual results dif­fer
+sub­stan­tively from those pat­terns.
+
+## Results
+
+
+As expected, moth­ers who wanted their preg­nan­cies then, sooner, or later but within
+two years were advan­taged com­pared with moth­ers in the three other groups (Table
+2): they had more years of edu­ca­tion, were more likely to be mar­ried, and were less
+likely to have had their pre­na­tal care paid by Med­ic­aid. Table 2 also shows that
+they were more likely to expe­ri­ence adverse preg­nancy, birth, and post­par­tum out­
+comes. Disentangling these cor­re­la­tions requires adjusting for dif­fer­ences in moth­ers’
+char­ac­ter­is­tics.
+
+Figure 1 shows the unad­justed and IPW asso­ci­a­tions between preg­nancy tim­ing and
+preg­nancy expe­ri­ence, giv­ing out­comes with 95% con­fi­dence inter­vals. After adjust­
+ment, women whose preg­nan­cies occurred less than two years before they wanted had
+sim­i­lar out­comes as their peers who wanted their preg­nan­cies then or sooner (the ref­
+er­ence group). Those whose preg­nan­cies came two or more years sooner than wanted
+were less likely than the ref­er­ence group to rec­og­nize their preg­nancy in the first six
+weeks, to receive pre­na­tal care in the first tri­mes­ter, and to have quit smok­ing by the
+first or sec­ond tri­mes­ter, but were no less likely to have quit by the third tri­mes­ter. They
+were mar­gin­ally less likely to have gained the recommended amount of weight dur­ing
+
+3 The online appen­dix includes a more detailed descrip­tion of the esti­ma­tion pro­ce­dures (Appendix Sec­
+ti 1) d i t b l t bl (A di S ti 4)
+
+
+-----
+
+**Table 2** Descriptive sta­tis­tics for the National PRAMS sam­ple, by preg­nancy inten­tion
+
+
+Wanted
+≥2
+Years
+Later
+
+
+Never
+Wanted/
+Unwanted Unsure
+
+
+Full
+Variable Sample
+
+
+Wanted
+Then
+or Wanted <2
+Sooner Years Later
+
+
+Independent Variables
+Age
+≤19 .06 .02 .05 .22 .06 .08
+20–24 .21 .14 .24 .43 .19 .26
+25–29 .29 .31 .34 .23 .26 .27
+≥30 .44 .52 .38 .12 .49 .39
+Married .61 .77 .60 .24 .41 .42
+Birth order
+First .40 .41 .39 .54 .21 .36
+Second .33 .36 .36 .25 .23 .28
+Third or higher .27 .23 .24 .21 .57 .37
+Race/eth­nic­ity
+Non-His­panic White .60 .67 .62 .44 .48 .54
+His­panic .17 .16 .17 .23 .18 .15
+Non-His­panic Black .13 .08 .12 .24 .26 .20
+Non-His­panic other .09 .10 .09 .08 .09 .10
+Prenatal care paid by Med­ic­aid .42 .30 .45 .67 .62 .58
+Education
+Less than high school .13 .10 .12 .24 .18 .17
+High school .24 .19 .24 .35 .32 .32
+Some col­lege .28 .25 .30 .31 .33 .31
+College or more .34 .45 .34 .10 .17 .20
+Total num­ber of stress events 1.86 1.45 2.02 2.57 2.79 2.39
+Dependent Variables
+Pregnancy out­comes
+Recognized preg­nancy within six
+weeks .72 .81 .68 .54 .54 .64
+Prenatal care in first tri­mes­ter .85 .90 .85 .74 .70 .78
+Recommended weight gain .31 .33 .31 .28 .28 .29
+Quit smok­ing in first/sec­ond
+
+tri­mes­ter .58 .65 .58 .57 .49 .52
+Quit smok­ing in third tri­mes­ter .54 .61 .54 .54 .41 .46
+Reduced drink­ing by third
+tri­mes­ter .98 .98 .98 .98 .97 .97
+IPV ini­ti­ated .01 .00 .01 .02 .01 .01
+Infant out­comes at birth
+
+Preterm birth .08 .08 .08 .09 .10 .09
+Low birth weight .07 .07 .07 .08 .09 .08
+Very low birth weight .01 .01 .01 .01 .01 .01
+Small for ges­ta­tional age .10 .09 .09 .12 .10 .11
+Infant in inten­sive care unit .12 .11 .11 .13 .13 .14
+Infant mor­tal­ity .01 .01 .00 .00 .00 .01
+Maternal post­par­tum out­comes
+
+Postpartum visit .90 .93 .91 .87 .85 .86
+Depression ini­ti­ated .10 .08 .10 .15 .16 .14
+Depression improved .72 .78 .73 .64 .63 .67
+Smoking wors­ened .02 .01 .02 .03 .04 .03
+Smoking improved .57 .62 .58 .55 .48 .54
+
+
+-----
+
+**Table 2** (continued)
+
+Full
+Variable Sample
+
+
+Wanted
+Then
+or Wanted <2
+Sooner Years Later
+
+
+Wanted
+≥2
+Years
+Later
+
+
+Never
+Wanted/
+Unwanted Unsure
+
+
+Ever breastfed .86 .89 .87 .81 .75 .79
+Breastfed for ≥3 months .57 .65 .57 .43 .44 .48
+Observations 144,017 78,856 14,896 17,712 9,805 22,748
+
+_Notes: Data are from Phase 7 of the National PRAMS. Column 1 sum­ma­rizes all­ of the data, and col­umns_
+2–6 pro­vide sum­mary sta­tis­tics by inten­tion sta­tus. IPV = inti­mate part­ner vio­lence.
+
+
+preg­nancy, but no less likely to have reduced their alco­hol con­sump­tion. Women who
+did not want to be preg­nant were less likely than the ref­er­ence group to rec­og­nize their
+preg­nancy in the first six weeks, to receive pre­na­tal care in the first tri­mes­ter, and to
+have quit smok­ing dur­ing their preg­nancy, but were no less likely to have gained the
+recommended amount of weight or reduced their alco­hol con­sump­tion. Women who
+were unsure about their preg­nancy tim­ing were less likely to have received pre­na­tal
+care in the first tri­mes­ter and to have quit smok­ing dur­ing their preg­nancy. Finally,
+women who wanted to be preg­nant two or more years later, did not want to be preg­
+nant, or were unsure how they felt were much more likely than the ref­er­ence group to
+expe­ri­ence the onset of inti­mate part­ner vio­lence dur­ing preg­nancy.
+Despite these dif­fer­ences in mater­nal expe­ri­ence dur­ing preg­nancy by preg­nancy
+tim­ing, infants’ health at birth was quite sim­i­lar after pro­pen­sity weighting (Figure 2).
+The sign and the mag­ni­tude of the coef­fi­cients var­ied across out­comes, and few were
+sig­nif­i­cantly dif­fer­ent from zero. Of note, how­ever, is the result that chil­dren who
+were born from unwanted preg­nan­cies were sub­stan­tially less likely to die in their
+first year than those born from wanted preg­nan­cies. Given the rar­ity of this out­come
+and the poten­tial for selec­tive reporting and revi­sion (Smith-Greenaway and Sennott
+2016), we are hes­i­tant to draw firm con­clu­sions, but the direc­tion, mag­ni­tude, and
+pre­ci­sion of the esti­mate suggest that unwanted births are at least as likely to result
+in infant mor­tal­ity than wanted births. In sum, preg­nancy tim­ing may have affected
+mater­nal expe­ri­ence dur­ing preg­nancy, but did not mea­sur­ably impact infant health
+_in utero._
+Results for mater­nal post­par­tum out­comes are shown in Figure 3. Women whose
+preg­nan­cies were unwanted or arrived more than two years ear­lier than wanted and
+those who were unsure how they felt about their preg­nancy fared unam­big­u­ously
+worse than women whose preg­nan­cies were bet­ter timed, even after weighting.
+Among women who were depressed prior to preg­nancy, those with unwanted births,
+those who were unsure how they felt about their preg­nancy, and those whose preg­
+nan­cies occurred more than two years before they wanted to be preg­nant were less
+likely than the ref­er­ence group to expe­ri­ence relief from their depres­sion. Women in
+these three categories who did not report depres­sion prior to preg­nancy were more
+likely to become depressed after giv­ing birth. They were less likely to report hav­ing
+reduced or quit smok­ing and were equally likely to report hav­ing increased smok­ing.
+Further, women whose preg­nan­cies were unwanted or who were unsure how they felt
+b h i l lik l d h k
+
+
+-----
+
+**Fig. 1 Unadjusted and inverse propensity-weighted estimates of associations between pregnancy inten­**
+tions and pregnancy outcomes, giving odds ratios relative to pregnancies that were wanted then or sooner.
+Scales on the x-axes vary. The recognition, prenatal care, and weight gain models include all respondents;
+the smoking models include respondents reporting tobacco use three months before pregnancy; the drink­
+ing model includes respondents reporting alcohol consumption three months before pregnancy; and the
+IPV model includes respondents reporting no IPV before pregnancy. Data are from Phase 7 of the National
+PRAMS. See the online Appendix Section 1 for details on estimation of the propensity-weighted model.
+Odds ratios and standard errors are given in Appendix Section 3, Table 1. IPV = intimate partner violence.
+
+
+-----
+
+**Fig. 2 Unadjusted and inverse propensity-weighted estimates of associations between pregnancy inten­**
+tions and infant outcomes at birth, giving odds ratios relative to pregnancies that were wanted then or
+sooner. Scales on the x-axes vary. Models include all respondents. Data are from Phase 7 of the National
+PRAMS. See the online Appendix Section 1 for details on estimation of the propensity-weighted model.
+Odds ratios and standard errors are given in Appendix Section 3, Table 2. ICU = intensive care unit.
+
+Women whose preg­nan­cies were ear­lier than they wanted were as likely as other
+moth­ers to have ever breastfed or to have breastfed for at least three months. Those
+whose preg­nan­cies were unwanted or who were unsure about their preg­nancy were
+less likely to have ever breastfed or to have breastfed for at least three months. These
+results com­ple­ment find­ings from Kost and Lindberg (2015), who found sim­i­lar rela­
+tion­ships only for preg­nan­cies that were unwanted. Our results reveal that mean­ing­ful
+rela­tion­ships with breastfeeding extend beyond preg­nan­cies that were unwanted to
+those about which the mother felt unsure.
+In sum, after account­ing for poten­tial con­found­ers, preg­nancy tim­ing was not
+asso­ci­ated with infant out­comes at birth, but women whose preg­nan­cies arrived
+sooner than they wanted had worse post­par­tum out­comes than those whose preg­nan­
+cies were on time or arrived later than they wanted. Women who had preg­nan­cies
+that were unwanted or were mark­edly ear­lier than wanted, and women who were
+unsure about their preg­nancy, suf­fered numer­ous del­e­te­ri­ous out­comes and behav­
+iors including IPV depression tobacco consumption lack of early prenatal care and
+
+
+-----
+
+**Fig. 3 Unadjusted and inverse propensity-weighted estimates of associations between pregnancy inten­**
+tions and postpartum outcomes, giving odds ratios relative to pregnancies that were wanted then or sooner.
+Scales on the _x-axes vary. The postpartum visit and ever breastfed models include all respondents; the_
+depression initiated model includes respondents reporting no depression prior to pregnancy; the depression
+improved model includes respondents reporting depression prior to pregnancy; the smoking worsened
+model includes respondents reporting smoking <41 cigarettes/day three months before pregnancy; the
+smoking improved model includes respondents reporting tobacco use three months before pregnancy; and
+the breastfed for ≥3 months model includes respondents interviewed at least 91 days after birth. Data are
+from Phase 7 of the National PRAMS. See the online Appendix Section 1 for details on estimation of the
+i i h d d l Odd i d d d i i A di S i 3 T bl 3
+
+
+-----
+
+## Discussion
+
+One jus­ti­fi­ca­tion for pub­lic pol­icy encour­ag­ing planned or intended preg­nan­cies,
+how­ever defined, is that intended preg­nan­cies are bet­ter for infants. Like pre­vi­ous
+research­ers, we find that this is unsup­ported by the data. By con­trast, our results
+high­light that preg­nancy tim­ing likely does mat­ter for mater­nal out­comes. We show
+that women who wanted to be preg­nant later, did not want to be preg­nant at all­, or
+were unsure about the best tim­ing for their preg­nancy were at higher risk of inti­mate
+part­ner vio­lence and post­par­tum depres­sion. Unwanted preg­nan­cies and preg­nan­cies
+about which the mother was unsure were also asso­ci­ated with lower rates of breast­
+feeding. These results are con­sis­tent with work show­ing that mistimed preg­nan­cies
+taken to term may have neg­a­tive impacts on older chil­dren in the fam­ily, in par­tic­
+u­lar through changes in home envi­ron­ments and par­ents’ cog­ni­tive and emo­tional
+resources (Barber et al. 1999; Barber and East 2009, 2011). Given that the preg­nancy
+tim­ing ques­tion was asked ret­ro­spec­tively, it is pos­si­ble that these rela­tion­ships are
+due to ex post revi­sion in light of adverse events. Such revi­sion is known to occur for
+infant out­comes (Smith-Greenaway and Sennott 2016), but more research is needed
+to under­stand their rela­tion­ships with mater­nal out­comes.
+To mit­i­gate any neg­a­tive effects of unwanted or mistimed preg­nan­cies on mater­
+nal out­comes, repro­duc­tive health pol­icy should be recentered around repro­duc­tive
+auton­omy and should include pol­i­cies such as uni­ver­sal access to no-cost con­tra­cep­
+tion and abor­tion, com­pre­hen­sive sex edu­ca­tion, and equity in repro­duc­tive health
+care, with par­tic­u­lar atten­tion to mater­nal risks. Women who express that a preg­nancy
+was “unwanted” or “mistimed” are tell­ing us that they would have pre­ferred not to
+have become preg­nant at that time. Effective pol­icy would work with, rather than
+attempt to change, these pref­er­ences. ■
+
+
+**Acknowledgments We thank Erica Hobby for her excel­lent research assis­tance, and Paula England,**
+Isaac Maddow-Zimet, and four anon­y­mous review­ers for help­ful com­ments. We also thank the PRAMS
+work­ing group. This pro­ject was supported by a seed grant from the Institute for Human Development
+and Social Change, New York University. Data are not pub­lic, but are avail­able on request from the
+Centers for Disease Control and Prevention. Replication code will be made pub­licly avail­able upon
+pub­li­ca­tion.
+
+## References
+
+
+Abajobir, A. A., Maravilla, J. C., Alati, R., & Najman, J. M. (2016). A sys­tem­atic review and metaanal­y­sis of the asso­ci­a­tion between unin­tended preg­nancy and peri­na­tal depres­sion. _Journal of_
+_Affective Disorders, 192, 56–63._
+Abbasi, S., Chuang, C. H., Dagher, R., Zhu, J., & Kjerulff, K. (2013). Unintended preg­nancy and post­par­
+tum depres­sion among first-time moth­ers. Journal of Women’s Health, 22, 412–416.
+Aiken, A. R., Borrero, S., Callegari, L. S., & Dehlendorf, C. (2016). Rethinking the preg­nancy plan­
+ning par­a­digm: Unintended con­cep­tions or unrep­re­sen­ta­tive con­cepts? _Perspectives on Sexual and_
+_[Reproductive Health, 48, 147–151. https:​/​/doi​.org​/10​.1363​/48e10316.](https://doi.org/10.1363/48e10316)_
+Amer­i­can College of Obstetricians and Gynecologists (ACOG). (2013). _Weight gain dur­ing preg­nancy_
+(Committee Opinion No. 548). Washington, DC: Amer­i­can College of Obstetricians and Gynecolo­
+gists, Committee on Obstetric Practice.
+
+
+-----
+
+Austin, P. C., & Stu­art, E. A. (2015). Moving towards best prac­tice when using inverse prob­a­bil­ity of
+treat­ment weighting (IPTW) using the pro­pen­sity score to esti­mate causal treat­ment effects in obser­
+va­tional stud­ies. Statistics in Medicine, 34, 3661–3679.
+Barber, J. S., Axinn, W. G., & Thornton, A. (1999). Unwanted child­bear­ing, health, and mother-child rela­
+tion­ships. Journal of Health and Social Behavior, 40, 231–257.
+Barber, J. S., & East, P. L. (2009). Home and par­ent­ing resources avail­­able to sib­lings depending on their
+birth inten­tion sta­tus. Child Development, 80, 921–939.
+Barber, J. S., & East, P. L. (2011). Children’s expe­ri­ences after the unin­tended birth of a sib­ling.
+_Demography, 48, 101–125._
+Biggs, M. A., Upadhyay, U. D., McCulloch, C. E., & Foster, D. G. (2017). Women’s men­tal health and
+well-being 5 years after receiv­ing or being denied an abor­tion: A pro­spec­tive, lon­gi­tu­di­nal cohort
+study. JAMA Psychiatry, 74, 169–178.
+Brown, S. S., & Eisenberg, L. (Eds.). (1995). The best inten­tions: Unintended preg­nancy and the well_being of chil­dren and fam­i­lies. Washington, DC: National Academies of Science Press._
+Cheng, D., Schwarz, E. B., Douglas, E., & Horon, I. (2009). Unintended preg­nancy and asso­ci­ated mater­
+nal pre­con­cep­tion, pre­na­tal and post­par­tum behav­iors. Contraception, 79, 194–198.
+Christensen, A. L., Stu­art, E. A., Perry, D. F., & Le, H.-N. (2011). Unintended preg­nancy and peri­na­
+tal depres­sion tra­jec­to­ries in low-income, high-risk His­panic immi­grants. _Prevention Science, 12,_
+289–299.
+Fellenzer, J. L., & Cibula, D. A. (2014). Intendedness of preg­nancy and other pre­dic­tive fac­tors for symp­
+toms of pre­na­tal depres­sion in a pop­u­la­tion-based study. _Maternal and Child Health Journal, 18,_
+2426–2436.
+Gipson, J. D., Koenig, M. A., & Hindin, M. J. (2008). The effects of unin­tended preg­nancy on infant, child,
+and paren­tal health: A review of the lit­er­a­ture. Studies in Family Planning, 39, 18–38.
+Guzzo, K. B., & Hayford, S. R. (2014). Revisiting ret­ro­spec­tive reporting of first-birth intendedness.
+
+_Maternal and Child Health Journal, 18, 2141–2147._
+Herd, P., Higgins, J., Sicinski, K., & Merkurieva, I. (2016). The impli­ca­tions of unin­tended preg­nan­cies for
+men­tal health in later life. Amer­i­can Journal of Public Health, 106, 421–429.
+Institute of Medicine. (2011). Clinical pre­ven­tive ser­vices for women: Closing the gaps. Washington, DC:
+National Academies of Science Press.
+Jasinski, J. L. (2001). Pregnancy and vio­lence against women: An anal­y­sis of lon­gi­tu­di­nal data. Journal of
+_Interpersonal Violence, 16, 712–733._
+Joyce, T., Kaestner, R., & Korenman, S. (2002). On the validity of ret­ro­spec­tive assess­ments of preg­nancy
+inten­tion. Demography, 39, 199–213.
+Joyce, T. J., Kaestner, R., & Korenman, S. (2000). The effect of preg­nancy inten­tion on child devel­op­ment.
+_Demography, 37, 83–94._
+Kost, K., Landry, D. J., & Darroch, J. E. (1998). The effects of preg­nancy plan­ning sta­tus on birth out­
+comes and infant care. Family Planning Perspectives, 30, 223–230.
+Kost, K., & Lindberg, L. (2015). Pregnancy inten­tions, mater­nal behav­iors, and infant health: Investigating
+rela­tion­ships with new mea­sures and pro­pen­sity score anal­y­sis. Demography, 52, 83–111.
+Kost, K., & Zolna, M. (2019). Challenging unin­tended preg­nancy as an indi­ca­tor of repro­duc­tive auton­
+omy: A response. Contraception, 100, 5–9.
+Luker, K. C. (1999). A reminder that human behav­ior fre­quently refuses to con­form to mod­els cre­ated by
+research­ers. Family Planning Perspectives, 31, 248–249.
+Maddow-Zimet, I., & Kost, K. (2020). Effect of changes in response options on reported preg­nancy inten­
+tions: A nat­u­ral exper­i­ment in the United States. Public Health Reports, 135, 354–363.
+McCaffrey, D. F., Griffin, B. A., Almirall, D., Slaughter, M. E., Ramchand, R., & Burgette, L. F. (2013).
+
+A tuto­rial on pro­pen­sity score esti­ma­tion for mul­ti­ple treat­ments using gen­er­al­ized boosted mod­els.
+_Statistics in Medicine, 32, 3388–3414._
+Mercier, R. J., Garrett, J., Thorp, J., & Siega-Riz, A. M. (2013). Pregnancy inten­tion and post­par­tum
+depres­sion: Secondary data anal­y­sis from a pro­spec­tive cohort. BJOG: An International Journal of
+_Obstetrics and Gynaecology, 120, 1116–1122._
+Perneger, T. V. (1998). What’s wrong with Bonferroni adjust­ments. _Brit­ish Medical Journal, 316,_
+1236–1238.
+
+
+-----
+
+Potter, J. E., Stevenson, A. J., Coleman-Minahan, K., Hopkins, K., White, K., Baum, S. E., & Grossman, D.
+(2019). Challenging unin­tended preg­nancy as an indi­ca­tor of repro­duc­tive auton­omy. Contraception,
+_100, 4–7._
+Rosenbaum, P. R., & Rubin, D. B. (1983). The cen­tral role of the pro­pen­sity score in obser­va­tional stud­ies
+for causal effects. Biometrika, 70, 41–55.
+Rosenzweig, M. R., & Wolpin, K. I. (1993). Maternal expec­ta­tions and ex post rationalizations: The use­ful­
+ness of sur­vey infor­ma­tion on the wantedness of chil­dren. Journal of Human Resources, 28, 205–229.
+Santelli, J., Rochat, R., Hatfield–Timajchy, K., Gilbert, B. C., Curtis, K., Cabral, R., . . . ​Schieve, L. (2003).
+
+The mea­sure­ment and mean­ing of unin­tended preg­nancy. Perspectives on Sexual and Reproductive
+_Health, 35, 94–101._
+Shim, J. K. (2010). Cultural health cap­i­tal: A the­o­ret­i­cal approach to under­stand­ing health care inter­ac­tions
+and the dynam­ics of unequal treat­ment. Journal of Health and Social Behavior, 51, 1–15.
+Smith-Greenaway, E., & Sennott, C. (2016). Death and desir­abil­ity: Retrospective reporting of unin­tended
+preg­nancy after a child’s death. Demography, 53, 805–834.
+Trussell, J., Vaughan, B., & Stanford, J. (1999). Are all­ con­tra­cep­tive fail­ures unin­tended preg­nan­cies? Evi­
+dence from the 1995 National Survey of Family Growth. Family Planning Perspectives, 31, 246–247.
+Weller, R. H., Eberstein, I. W., & Bailey, M. (1987). Pregnancy wantedness and mater­nal behav­ior dur­ing
+preg­nancy. Demography, 24, 407–412.
+Westoff, C. F., & Ryder, N. B. (1977). The pre­dic­tive validity of repro­duc­tive inten­tions. Demography,
+_14, 431–453._
+
+Nicholas D. E. Mark (cor­re­spond­ing author)
+[nm2648@nyu​­.edu](mailto:nm2648@nyu.edu)
+
+
+_[Mark • Department of Sociology, New York University, New York, NY, USA; https:​­/​­/orcid​­.org​­/0000​](https://orcid.org/0000-0002-7923-1826)_
+[­-0002​­-7923​­-1826](https://orcid.org/0000-0002-7923-1826)
+
+_[Cowan • Department of Sociology, New York University, New York, NY, USA; https:​­/​­/orcid​­.org​­/0000​](https://orcid.org/0000-0003-2838-079X)_
+[­-0003​­-2838​­-079X](https://orcid.org/0000-0003-2838-079X)
+
+
+-----
+

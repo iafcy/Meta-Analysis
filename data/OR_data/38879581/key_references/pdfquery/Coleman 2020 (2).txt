@@ -1,0 +1,1271 @@
+
+A Section 508–conformant HTML version of this article 
+is available at https://doi.org/10.1289/EHP7246. 
+Fine Particulate Matter Exposure and Cancer Incidence: Analysis of SEER Cancer 
+Registry Data from 1992–2016 
+Nathan C. Coleman,1 Richard T. Burnett,2 Majid Ezzati,3 Julian D. Marshall,4 Allen L. Robinson,5 and C. Arden Pope III1 
+1Department of Economics, Brigham Young University, Provo, Utah, USA 
+2Private Consultant, Ottawa, Ontario, Canada 
+3Medical Research Council–Public Health England Centre for Environment and Health, School of Public Health, Imperial College London, London, UK 
+4Department of Civil and Environmental Engineering, University of Washington, Seattle, Washington, USA 
+5Engineering and Public Policy, Carnegie Mellon University, Pittsburgh, Pennsylvania, USA 
+BACKGROUND: Previous research has identiﬁed an association between ﬁne particulate matter (PM2:5) air pollution and lung cancer. Most of the evi- 
+dence for this association, however, is based on research using lung cancer mortality, not incidence. Research that examines potential associations 
+between PM2:5 and incidence of non-lung cancers is limited. 
+OBJECTIVES: The primary purpose of this study was to evaluate the association between the incidence of cancer and exposure to PM2:5 using 
+>8:5 million cases of cancer incidences from U.S. registries. Secondary objectives include evaluating the sensitivity of the associations to model 
+selection, spatial control, and latency period as well as estimating the exposure–response relationship for several cancer types. 
+METHODS: Surveillance, Epidemiology, and End Results (SEER) program data were used to calculate incidence rates for various cancer types in 607 
+U.S. counties. County-level PM2:5 concentrations were estimated using integrated empirical geographic regression models. Flexible semi- 
+nonparametric regression models were used to estimate associations between PM2:5 and cancer incidence for selected cancers while controlling for 
+important county-level covariates. Primary time-independent models using average incidence rates from 1992–2016 and average PM2:5 from 1988– 
+2015 were estimated. In addition, time-varying models using annual incidence rates from 2002–2011 and lagged moving averages of annual estimates 
+for PM2:5 were also estimated. 
+RESULTS: The incidences of all cancer and lung cancer were consistently associated with PM2:5. The incident rate ratios (IRRs), per 10-lg=m3 
+increase in PM2:5, for all and lung cancer were 1.09 (95% CI: 1.03, 1.14) and 1.19 (95% CI: 1.09, 1.30), respectively. Less robust associations were 
+observed with oral, rectal, liver, skin, breast, and kidney cancers. 
+DISCUSSION: Exposure to PM2:5 air pollution contributes to lung cancer incidence and is potentially associated with non-lung cancer incidence. 
+https://doi.org/10.1289/EHP7246 
+Introduction 
+Toxicology research indicates that the carcinogenic compounds 
+contained in ﬁne particulate matter (PM2:5; particles <2:5 lm in 
+aerodynamic diameter) contribute to chronic systemic inﬂamma- 
+tion (Loomis et al. 2013), oxidative stress (Risom et al. 2005), 
+and DNA damage (Newby et al. 2015) in the lungs. Furthermore, 
+extensive epidemiological evidence indicates that PM2:5 is asso- 
+ciated with lung cancer mortality (Crouse et al. 2015; Yin et al. 
+2017; Lepeule et al. 2012; Turner et al. 2011; Pope et al. 2019). 
+For example, a recent meta-analysis estimated the hazard ratio 
+(HR) for the association between PM2:5 and lung cancer to be 
+1.14 [95% conﬁdence interval (CI): 1.08, 1.21] (Pope et al. 
+2020). Much of the epidemiological evidence to support this 
+association, however, is based on prospective cohort studies that 
+examined lung cancer mortality, not 
+lung cancer incidence. 
+Although several recent studies have used incidence data to esti- 
+mate the association between PM2:5 and lung cancer (IARC 
+2013; Bai et al. 2020; Zhang et al. 2020), further research is 
+Address correspondence to C. Arden Pope III, 142 FOB, Brigham Young 
+University, Provo, UT 84602 USA. Telephone: (801) 422-2157. Email: 
+cap3@byu.edu 
+Supplemental Material is available online (https://doi.org/10.1289/EHP7246). 
+M.E. received charitable grant support from the AstraZeneca Young Health 
+Programme and personal fees from Prudential, Scor, and Third Bridge, all 
+outside the submitted work. All other authors declare they have no actual or 
+potential competing ﬁnancial interests. 
+
+
+Note to readers with disabilities: EHP strives to ensure that all journal 
+content is accessible to all readers. However, some ﬁgures and Supplemental 
+Material published in EHP articles may not conform to 508 standards due to 
+the complexity of the information being presented. If you need assistance 
+accessing journal content, please contact ehponline@niehs.nih.gov. Our staﬀ 
+will work with you to assess and meet your accessibility needs within 3 
+working days. 
+needed to conﬁrm the association and examine the sensitivity of 
+the results to modeling choices and exposure windows. 
+In addition to lung cancer, several cohort studies have found lim- 
+ited evidence of an association between mortality and incidence of 
+various non-lung cancers and air pollution (Coleman et al. 2020; 
+Turner et al. 2017; Wong et al. 2016; Ancona et al. 2015; Raaschou- 
+Nielsen et al. 2011). However, these studies were inconsistent in their 
+ﬁndings and often limited by small sample size. Furthermore, the use 
+of mortality follow-up is insuﬃcient to address the eﬀect of air pollu- 
+tion on burden of disease for cancer because of the diﬃculty in 
+addressing the problem of latency, accurately analyzing cancers that 
+are highly survivable, and the possible confounding from mortality of 
+other causes. Further evidence using cancer incidence data instead of 
+mortality contributes to evaluating whether non-lung cancer sites are 
+associated with exposure to PM2:5. 
+The primary purpose of the present study was to evaluate the 
+association between the incidence of cancer and exposure to 
+PM2:5, using available cancer incidence data from U.S. cancer 
+registries. Secondary objectives included evaluating the sensitivity 
+of the associations to various lag structures and exposure windows, 
+exploring the sensitivity of results to modeling assumptions, and 
+evaluating potential nonlinearities in the exposure–response rela- 
+tionship for various types of cancers. 
+Methods 
+Cancer Incidence Data 
+
+The U.S. National Cancer 
+(NCI) Surveillance, 
+Epidemiology, and End Results (SEER) program contains all cancer 
+cases across cancer registries that cover approximately 34.6% of the 
+United States (NCI 2019b). The SEER program contains individual- 
+level cancer incidence from 1975–2016 collected from cancer regis- 
+tries located in California, Connecticut, Detroit, Georgia, Iowa, 
+Kentucky, Louisiana, New Jersey, New Mexico, Seattle (Puget 
+Sound), and Utah (NCI 2019b). A detailed description of the location 
+
+
+
+of registries is contained in Table S1. These data are publicly available 
+but require a signed SEER research data use agreement (NCI 2019a). 
+County-level incidence rates were calculated from the SEER 
+program’s cancer case data to estimate the association between 
+PM2:5 and cancer incidence. First, cancer cases were totaled for 
+every county-year and grouped by the International Statistical 
+Classiﬁcation of Diseases and Related Health Problems, Tenth 
+Revision (ICD-10; WHO 2016) codes as follows: oral and oro- 
+pharyngeal (deﬁned by ICD-10 Codes C00–C14), esophageal 
+(C15), stomach (C16), small intestine (C17), colon (C18), rectal 
+(C19–C21), liver and biliary tract (C22–C24), pancreatic (C25), 
+nose (C30–C31), laryngeal and trachea (C32–C33), lung and 
+bronchus (C34), bone (C40–C41), skin (C43–C44), connective 
+and soft tissue (C45–C49), breast (C50), cervical (C53), uterine 
+(C54–C55), ovarian (C56), prostate (C61), other male (C60, 
+C62–C63), kidney (C64–C65), bladder (C67), brain (C71), endo- 
+crine (C73–C75), and ill-deﬁned cancers (C76–C80). Next, 
+yearly cancer incidence rates per 100,000 for each county were 
+calculated by dividing by yearly population data (provided by the 
+SEER program via the U.S. Census) and multiplying by 100,000 
+for every cancer type (NCI 2019d). 
+For the primary analysis, the yearly cancer incidence rates were 
+averaged for each county from 1992–2016 to allow for harmoniz- 
+ing several key variables and for use in a time-independent model. 
+Average incidence rates from 2008–2016 were also calculated for 
+use in a latency sensitivity analysis. After removing counties that 
+were missing PM2:5 estimates or other covariates, 607 counties 
+remained. In addition to the time-independent analysis, cancer 
+incidence data was also used to generate annual-average incidence 
+rates at the county-year level in the 607 counties contained in the 
+SEER program data for a time-varying model. Due to covariate 
+limitations, only incidence data from 2002–2011 were available. 
+
+Regulatory monitoring data for PM2:5 was collected nationwide 
+starting in 1999. These regulatory data, within an integrated empir- 
+ical geographic regression modeling framework, were used to gen- 
+erate county-level annual-average PM2:5 concentrations for 1999– 
+2015. Hold-out cross-validation (CV) indicated good model per- 
+formance (10-fold CV-R2: 0.78, 0.90). More details describing this 
+approach is found elsewhere (Pope et al. 2019; Kim et al. 2020). 
+All annual estimates for PM2:5 are available at the Center for Air, 
+Climate, and Energy Solutions’ website (https://www.caces.us/). 
+In order to better account for the lagged eﬀect of PM2:5 on cancer 
+incidence, backcasted PM2:5 estimates for 1988–1998 were also cal- 
+culated. The estimated PM10 concentration in each county from 
+1988–1998 was multiplied by the county’s mean PM2:5 to PM10 ratio 
+from 1999–2003 to generate estimates of the PM2:5 concentration in 
+each county from 1988–1998 (Pope et al. 2019). The mean PM2:5 
+concentrations for 1999–2015 and 1988–2015 were highly correlated 
+(R ≥ 0:97). PM2:5 average exposure from 1999–2015 and from 
+1988–2015 were linked to average cancer incidence rates from 1992– 
+2016 by county for use in the primary time-independent model. For 
+the latency sensitivity analysis average PM2:5 exposures from 1988– 
+2007 were linked to cancer incidence rates from 2008–2016 to allow 
+for a lag period. Finally, for the time-varying model, 1-, 5-, 10-, and 
+15-y lagged moving averages of PM2:5 were estimated and linked to 
+annual incidence rates in each of the counties. 
+
+population in each 5-y age group from 0 through 85; educational 
+attainment (percentage to not graduate high school, percentage to 
+graduate high school, and percentage to have some college educa- 
+tion); median income (adjusted to 2017 U.S. dollars); median 
+home value and rent; percentage below 150% poverty; percentage 
+unemployed; percentage working class; and percentage of the pop- 
+ulation of the county living in rural regions of the county [NCI 
+2019c, 2019d]. The Behavioral Risk Factor Surveillance System 
+and the National Health and Nutrition Examination Survey were 
+used to obtain additional county-level information including per- 
+centage smoking (available from 1996–2012) (Dwyer-Lindgren 
+et al. 2014), percentage alcohol consumption (available from 
+2002–2012) (Dwyer-Lindgren et al. 2015), and percentage physi- 
+cally active and obese (available from 2001–2011) (Dwyer- 
+Lindgren et al. 2013). For the primary time-independent analysis, 
+covariate data were averaged over the available time and linked by 
+county to create a cross-sectional data set. For the latency analysis 
+that used 2008–2016 incidence rate data, only covariate data for 
+years before 2008 were averaged and linked. For the time-varying 
+model, covariate information from 2002–2011 were linked by 
+county-year. In addition, spatial indicator variables for urban vs. 
+rural (classiﬁed as urban if more than 50% of a county’s population 
+lived in an urbanized area of ≥50,000 people or an urban cluster of 
+between 2,500 and 50,000 people), state, and region (Paciﬁc, 
+West, Midwest, Northeast, or South) were constructed. 
+
+Flexible semi-nonparametric regression models were used to esti- 
+mate associations between PM2:5 and cancer incidence for selected 
+
+
+The SEER program provides additional county covariate informa- 
+tion collected from the U.S. Census and American Community 
+Survey, including the following: percentage male; percentage 
+white, black, Hispanic, and other race/ethnicity; percentage of the 
+Figure 1. Estimated (A) population-weighted mean (1988–2015) PM2:5 con- 
+centrations (lg=m3) and (B) average incidents rate of all cancer for counties 
+in the SEER database. Note: PM2:5, particles <2:5 lm in aerodynamic diam- 
+eter; SEER, Surveillance, Epidemiology, and End Results (SEER) program. 
+
+
+
+
+Ambient PM2.5 
+
+3.2 
+
+16 
+
+Cancer Incidence Rate 
+
+170 
+
+870+ 
+Table 1. Summary of the total number of cancer cases in counties covered by the SEER program from 1992–2016 and 2008–2016 as well as the mean and 
+standard deviation of incidence rates per 100,000 across counties. 
+
+All cancers 
+Digestive tract 
+Oral 
+Esophagus 
+Stomach 
+Small intestine 
+Colon 
+Rectum 
+Liver 
+Pancreas 
+Respiratory 
+Nose 
+Larynx and trachea 
+Lung 
+Bone/tissue 
+Bone 
+Skin 
+Soft tissue 
+Sex-specifica 
+Breast 
+Cervix 
+Uterine 
+Ovary 
+Prostate 
+Other male specific 
+Urinary tract 
+Kidney 
+Bladder 
+Other 
+Brain 
+Endocrine 
+Ill defined 
+ICD-10 code(s) 
+C00–C80 
+1992–2016 
+8,658,955 
+2008–2016 
+4,130,604 
+1992–2016 
+588:83 ± 119:07 
+2008–2016 
+636:60 ± 130:65 
+
+
+C00–C14 
+C15 
+C16 
+C17 
+C18 
+C19–C21 
+C22–C24 
+C25 
+C30–C31 
+C32–C33 
+C34 
+C40–C41 
+C43–C44 
+C45–C49 
+C50 
+C53 
+C54–C55 
+C56 
+C61 
+C60, C62–C63 
+C64–C65 
+C67 
+C71 
+C73–C75 
+C76–C80 
+214,295 
+77,996 
+150,349 
+42,103 
+599,263 
+282,683 
+185,012 
+208,078 
+15,186 
+67,281 
+1,043,065 
+484,403 
+680,627 
+80,524 
+1,473,349 
+74,991 
+237,965 
+126,294 
+1,151,454 
+63,570 
+254,706 
+346,681 
+127,898 
+253,243 
+417,939 
+105,500 
+36,654 
+67,087 
+22,324 
+249,664 
+129,418 
+102,183 
+106,060 
+7,302 
+29,083 
+469,176 
+256,882 
+372,095 
+39,761 
+705,738 
+31,013 
+120,334 
+53,269 
+490,964 
+29,972 
+136,978 
+162,991 
+63,270 
+156,581 
+186,305 
+15:34 ± 4:18 
+5:74 ± 2:04 
+8:27 ± 2:52 
+2:90 ± 1:10 
+43:68 ± 13:10 
+19:50 ± 5:26 
+10:05 ± 2:98 
+13:78 ± 3:72 
+0:97 ± 0:55 
+5:98 ± 2:53 
+85:95 ± 30:06 
+33:13 ± 8:67 
+39:23 ± 16:28 
+4:86 ± 1:42 
+84:50 ± 17:45 
+4:70 ± 1:60 
+7:60 ± 2:30 
+14:60 ± 4:60 
+74:63 ± 19:08 
+3:57 ± 1:29 
+18:51 ± 4:92 
+23:40 ± 7:51 
+8:15 ± 2:14 
+14:47 ± 4:07 
+27:79 ± 6:78 
+17:21 ± 5:49 
+6:26 ± 2:90 
+8:54 ± 3:35 
+3:45 ± 1:68 
+41:08 ± 12:59 
+19:91 ± 6:14 
+12:79 ± 4:68 
+15:75 ± 4:82 
+1:04 ± 0:87 
+6:15 ± 3:39 
+88:84 ± 33:16 
+39:38 ± 11:65 
+50:56 ± 23:17 
+5:25 ± 2:19 
+89:80 ± 20:38 
+4:20 ± 2:10 
+7:00 ± 3:00 
+16:50 ± 5:90 
+70:87 ± 19:22 
+3:84 ± 2:08 
+22:15 ± 6:59 
+24:92 ± 8:83 
+9:09 ± 3:14 
+19:67 ± 6:56 
+28:08 ± 8:38 
+Note: ICD-10, International Statistical Classification of Diseases and Related Health Problems, Tenth Revision; SEER, Surveillance, Epidemiology, and End Results (SEER) program. 
+aSex-specific cancer incidence rates are calculated using the entire population, not just one sex. 
+cancers while controlling for important county-level covariates 
+[generalized additive model procedure in SAS (version 9.4; SAS 
+Institute, Inc.)]. In the primary analysis, incident rate ratios (IRRs) 
+and 95% CIs (per 10-lg=m3 increase of PM2:5) were estimated by 
+regressing the natural logarithm of the average incidence rate for 
+selected cancer types in 607 counties from 1992–2016 on county- 
+level mean PM2:5 concentrations from 1988–2015. Speciﬁcally, 
+locally weighted smoothing (LOESS) models with three degrees 
+of freedom (df) were used to ﬂexibly control for possible con- 
+founders including percentage of the county in various age buck- 
+ets; percentage male; percentage white, black, Hispanic, and other; 
+percentage who did not graduate high school, graduated high 
+school, or obtained more education than high school; median 
+income, rent, and home value; percentage below 150% poverty; 
+percentage working class; percentage unemployed; percentage liv- 
+ing in a rural area; percentage smokers; percentage alcohol con- 
+sumption; percentage who are physically active; and percentage of 
+individuals in a county who are obese. Indicator variables for urban 
+vs. rural and state were also included in the model. 
+After estimating the IRRs and nominal p, two approaches 
+were used to adjust p to account for multiple testing. The ﬁrst 
+approach was the Holm’s method—which is a common modiﬁca- 
+tion of the Bonferroni approach because it adjusts for multiple 
+comparisons by controlling the family-wise error rate and provid- 
+ing a somewhat more powerful approach to multiple signiﬁcance 
+testing (Hochberg and Benjamini 1990). The nominal p for all 
+hypotheses tested are ordered from smallest to largest and given 
+a rank, based on their order (the smallest p is given a rank of 1). 
+The Holm-adjusted p are the nominal p multiplied by the total 
+number of tests minus the p rank plus one. The second approach, 
+the false discovery rate (FDR) method, controls for the false dis- 
+covery rate and is an alternative modiﬁcation of the Bonferroni 
+approach with more power than the Holm’s method (Benjamini 
+and Hochberg 1995). FDR p are obtained by multiplying the 
+nominal p by the total number of texts divided by rank order. 
+In addition to the primary analysis, time-varying linear regres- 
+sion models that accounted for changes in air pollution and cancer 
+incidence over time were estimated using county-year–level can- 
+cer incidence data from 2002–2011. IRRs (per 10-lg=m3 increase 
+of PM2:5) were estimated by regressing the natural logarithm of the 
+yearly incidence rate on mean PM2:5 concentrations for 1-, 5-, 10-, 
+and 15-y lagged moving averages (to explore alternative cancer la- 
+tency periods). To account for potential correlations within the 
+same counties over time, 95% CIs were based on robust covariance 
+estimators [Taylor series linearization, using SURVEYREG in 
+SAS (version 9.4; SAS Institute, Inc.)]. To ﬂexibly control for gen- 
+eral changes in cancer incidence over time, annual indicator varia- 
+bles for each year (2002–2011) were included. Annual values of all 
+other covariables (percentage of the county in various age buckets; 
+percentage male; percentage white, black, Hispanic, and other; per- 
+centage who did not graduate high school, graduated high school, 
+or obtained more education than high school; median income, rent, 
+and home value; percentage below 150% poverty; percentage 
+working class; percentage unemployed; percentage living in a rural 
+area; percentage smokers; percentage alcohol consumption; per- 
+centage who are physically active; and percentage of individuals in 
+a county who are obese) were also included. In addition, indicator 
+variables for urban/rural and state were included. 
+To determine whether the results were sensitive to modeling 
+choices, the following additional models using the primary model 
+
+
+
+
+10:16 ± 2:58 
+10:77 ± 2:69 
+11:35 ± 2:87 
+12:00 ± 3:06 
+1:31 ± 0:26 
+5:27 ± 0:90 
+6:66 ± 0:98 
+7:11 ± 0:93 
+7:28 ± 1:08 
+6:47 ± 2:27 
+5:99 ± 1:20 
+6:10 ± 1:00 
+6:49 ± 0:98 
+7:08 ± 0:95 
+7:43 ± 0:77 
+7:10 ± 0:88 
+6:35 ± 1:08 
+5:29 ± 1:20 
+4:21 ± 1:03 
+3:37 ± 0:88 
+2:70 ± 0:78 
+2:00 ± 0:68 
+1:77 ± 0:80 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+— 
+
+
+11:50 ± 2:60 
+10:00 ± 2:20 
+— 
+— 
+— 
+12:70 ± 3:10 
+1:22 ± 0:23 
+5:06 ± 0:84 
+6:56 ± 0:99 
+6:66 ± 0:92 
+6:74 ± 1:00 
+6:50 ± 2:17 
+6:07 ± 1:21 
+6:06 ± 0:92 
+5:95 ± 0:77 
+6:22 ± 0:79 
+6:75 ± 0:75 
+7:23 ± 0:77 
+6:97 ± 0:93 
+6:25 ± 1:16 
+5:12 ± 1:19 
+3:81 ± 0:96 
+2:81 ± 0:75 
+2:03 ± 0:63 
+1:98 ± 0:81 
+1:29 ± 0:23 
+5:22 ± 0:81 
+6:76 ± 0:91 
+7:13 ± 0:89 
+7:17 ± 1:02 
+6:47 ± 2:19 
+6:06 ± 1:13 
+6:27 ± 0:88 
+6:62 ± 0:73 
+6:96 ± 0:68 
+7:07 ± 0:66 
+6:85 ± 0:75 
+6:21 ± 0:86 
+5:35 ± 0:98 
+4:46 ± 0:98 
+3:56 ± 0:87 
+2:77 ± 0:76 
+1:99 ± 0:64 
+1:81 ± 0:74 
+Table 2. Summary of baseline county characteristics (mean ± SD for continuous variables and percentages for indicator variables) from 1992–2016, 1992– 
+2007 and 2002–2011. 
+Variable 
+PM2:5 exposure (y) 
+1988–2015 
+1999–2015 
+1988–2007 
+PM2:5 moving average (y) 
+1 
+5 
+10 
+15 
+Age buckets [y (%)] 
+0 
+1–4 
+5–9 
+10–14 
+15–19 
+20–24 
+25–29 
+30–34 
+35–39 
+40–44 
+45–49 
+50–54 
+55–59 
+60–64 
+65–69 
+70–74 
+75–79 
+80–84 
+85 
+Race (%) 
+White 
+Black 
+Hispanic 
+Other 
+Sex (%) 
+Male 
+Education (%) 
+No high school 
+Graduate of high school 
+More than high school 
+Income 
+Median income (2017 adjusted) 
+Median home value 
+Median rent 
+Below 150% poverty (%) 
+Unemployed (%) 
+Working class (%) 
+Health (%) 
+Smokers 
+Consume alcohol 
+Obese (BMI >29) 
+Physically active 
+Urban vs. rural (%) 
+Rural counties 
+Individuals in rural 
+Region (%) 
+Northeast 
+Midwest 
+South 
+Pacific West 
+Mountain West 
+State (%)a 
+California 
+Connecticut 
+Georgia 
+Iowa 
+Kentucky 
+Louisiana 
+Michigan 
+New Jersey 
+37,319 ± 10,992 
+107,347 ± 73,877 
+528 ± 171 
+28:21 ± 9:93 
+7:36 ± 2:51 
+68:89 ± 5:74 
+32,777 ± 9,669 
+86,868 ± 58,429 
+435 ± 145 
+27:74 ± 10:33 
+6:79 ± 2:60 
+69:82 ± 5:82 
+26:13 ± 4:75 
+44:98 ± 13:69 
+34:90 ± 4:62 
+71:45 ± 6:51 
+26:80 ± 4:65 
+44:06 ± 14:29 
+33:31 ± 4:49 
+71:15 ± 6:77 
+74:25 ± 20:91 
+12:99 ± 16:55 
+9:71 ± 14:10 
+3:04 ± 5:82 
+76:07 ± 20:47 
+12:76 ± 16:51 
+8:46 ± 13:43 
+2:71 ± 5:56 
+9.56 
+1.32 
+26.19 
+16.31 
+19.77 
+10.54 
+0.49 
+3.46 
+9.56 
+1.32 
+26.19 
+16.31 
+19.77 
+10.54 
+0.49 
+3.46 
+9.57 
+1.32 
+26.24 
+16.17 
+19.80 
+10.56 
+0.50 
+3.47 
+26:89 ± 10:37 
+34:03 ± 6:19 
+39:08 ± 12:80 
+23:59 ± 9:24 
+34:23 ± 6:30 
+42:17 ± 12:47 
+4.78 
+16.80 
+56.50 
+11.70 
+10.22 
+4.78 
+16.80 
+56.50 
+11.70 
+10.22 
+4.79 
+16.67 
+56.60 
+11.72 
+10.23 
+44.06 
+54:61 ± 31:99 
+44.06 
+54:61 ± 31:99 
+
+
+44.06 
+
+25:78 ± 5:13 
+44:83 ± 13:93 
+35:33 ± 5:25 
+71:60 ± 6:55 
+54:59 ± 31:99 
+75:92 ± 20:47 
+12:79 ± 16:55 
+8:57 ± 13:49 
+2:72 ± 5:60 
+21:03 ± 9:40 
+34:68 ± 7:03 
+44:29 ± 12:94 
+41,196 ± 13,111 
+124,913 ± 97,211 
+585 ± 220 
+27:66 ± 9:95 
+7:78 ± 3:34 
+68:97 ± 6:48 
+
+
+
+
+
+New Mexico 
+Utah 
+Washington 
+Note: —, not applicable; BMI, body mass index; PM2:5, particles <2:5 lm in aerodynamic diameter; SD, standard deviation; SEER, Surveillance, Epidemiology, and End Results 
+(SEER) program. 
+aSEER registries cover all cancer cases in each state excluding Michigan and Washington, which are limited to cases in the Detroit and Puget Sound area, respectively. See Table S1 
+for more detail. 
+5.44 
+4.78 
+2.14 
+5.45 
+4.79 
+2.15 
+5.44 
+4.78 
+2.14 
+1992–2007 counties 
+2002–2011 counties 
+1992–2016 counties 
+(time-independent) were estimated: a) a LOESS model that used 
+a cross-validated approach to select the number of degrees of 
+freedom; b) a natural smoothing spline model that used a cross- 
+validated approach to select the number of degrees of freedom; c) 
+a LOESS model with 3 df, but without state indicator variables; 
+d) Model 3, but with regional rather than state indicator variables; 
+e) Model 3, but with SEER registry rather than state indicator 
+variables; f) a linear regression assuming a Poisson distribution; 
+g) a linear regression with estimated standard errors using the 
+sandwich method (White 1980) [using the ROBUST option of 
+the Regress Command in STATA (release 16; StataCorp.)]; h) a 
+LOESS model with 3 df that measured PM2:5 exposure as the av- 
+erage exposure from 1999–2015 instead of 1988–2015; and i) a 
+LOESS model with 3 df that used the average county incident 
+Table 3. Incident rate ratios and 95% confidence interval [IRR (95% CI)] 
+estimates for the association between cancer incidence from 1992–2016 and 
+an increase of 10-lg=m3 PM2:5 exposure from 1988–2015. 
+
+LOESS (3 df) 
+[IRR (95% CI)] 
+
+0.57 (0.35, 0.93) 
+1.19 (0.97, 1.46) 
+1.19 (1.09, 1.30) 
+All cancer 
+Digestive tract 
+1.18 (1.03, 1.36) 
+Oral 
+1.08 (0.88, 1.32) 
+Esophagus 
+Stomach 
+0.96 (0.79, 1.16) 
+Small intestine 1.13 (0.87, 1.47) 
+1.05 (0.96, 1.15) 
+Colon 
+1.15 (1.01, 1.30) 
+Rectal 
+1.32 (1.11, 1.57) 
+Liver 
+0.98 (0.85, 1.12) 
+Pancreas 
+Respiratory 
+Nose 
+Larynx 
+Lung 
+Bone/tissue 
+Bone 
+Skin 
+Soft tissue 
+Sex-specific 
+Breast 
+Cervix 
+Uterine 
+Ovarian 
+Prostate 
+Other male 
+Urinary tract 
+Kidney 
+Bladder 
+Other 
+Brain 
+Endocrine 
+Ill defined 
+1.07 (1.00, 1.16) 
+1.16 (0.93, 1.45) 
+0.99 (0.85, 1.15) 
+0.98 (0.82, 1.17) 
+0.96 (0.87, 1.06) 
+1.12 (0.88, 1.43) 
+1.03 (0.91, 1.16) 
+1.22 (1.06, 1.41) 
+1.06 (0.86, 1.29) 
+1.10 (0.93, 1.29) 
+1.19 (0.98, 1.44) 
+1.04 (0.94, 1.17) 
+1.21 (1.06, 1.39) 
+1.05 (0.93, 1.19) 
+Unadjusted 
+p-value 
+<0:01 
+Holm’s method 
+p-value 
+0.04 
+FDR 
+p-value 
+0.02 
+0.03 
+0.48 
+0.68 
+0.35 
+0.29 
+0.03 
+<0:01 
+0.73 
+0.03 
+0.09 
+<0:01 
+0.67 
+<0:01 
+0.60 
+0.06 
+0.20 
+0.87 
+0.81 
+0.42 
+0.36 
+<0:01 
+0.77 
+0.27 
+0.07 
+0.77 
+0.42 
+1.00 
+1.00 
+1.00 
+1.00 
+0.60 
+0.04 
+1.00 
+0.60 
+1.00 
+<0:01 
+1.00 
+0.15 
+1.00 
+1.00 
+1.00 
+1.00 
+1.00 
+1.00 
+1.00 
+0.13 
+1.00 
+1.00 
+1.00 
+1.00 
+0.09 
+0.69 
+0.83 
+0.59 
+0.54 
+0.10 
+0.02 
+0.83 
+0.10 
+0.21 
+<0:01 
+0.83 
+0.04 
+0.82 
+0.17 
+0.43 
+0.87 
+0.84 
+0.64 
+0.59 
+0.04 
+0.83 
+0.54 
+0.18 
+0.83 
+Note: Adjusted for percentage of the county in various age buckets; percentage male; 
+percentage white, black, Hispanic, and other; percentage who did not graduate high 
+school, graduated high school, or obtained more education than high school; median 
+income, rent, and home value; percentage below 150% poverty; percentage working 
+class; percentage unemployed; percentage living in a rural area; percentage smokers; 
+percentage who consume alcohol; percentage who are physically active; and percentage 
+of individuals in a county who are obese using LOESS models with 3 df. A p of 1 indi- 
+cates a value >0:99. df, degrees of freedom; FDR, false discovery rate; LOESS, locally 
+weighted smoothing model. 
+rates from 2008–2016 instead of 1992–2016 and PM2:5 exposure 
+from 1988–2007 as well as county averages for all covariates 
+from 1992–2007. Finally, to determine whether the results of the 
+primary model were sensitive to the inclusion of speciﬁc covari- 
+ates, sensitivity analysis was performed by progressively adding 
+control variables into the primary model for selected cancer 
+types. 
+The shapes of the exposure–response curve for PM2:5 and 
+several cancer types were estimated using a LOESS model with 
+3 df. In addition, the exposure–response curves estimating the 
+association for percentage of a county who identify as smokers 
+and several cancer types were also created using a LOESS model 
+with 3 df. The eﬀect of an increase in the prevalence of smoking 
+in a county on cancer incidence was then compared with the 
+eﬀect of an increase of PM2:5 in a county on cancer incidence. 
+Results 
+Figure 1 illustrates the average PM2:5 concentration from 1988– 
+2015 and average cancer incidence from 1992–2016 for counties 
+contained in the SEER database. Additional information regard- 
+ing counties in the SEER registries (Table S1). The average 
+PM2:5 concentration across the counties contained in the SEER 
+program was 11:5 lg=m3 and the average incidence rate for all 
+cancer was 588.8/100,000. Table 1 contains the total number of 
+cases for each cancer site in the SEER program database for the 
+primary analysis (SEER program counties from 1992–2016) and 
+for a sensitivity analysis (SEER program counties from 2008– 
+2016). In addition, the average yearly incidence rate is provided 
+for both the primary analysis and the sensitivity analysis for all 
+cancer sites. Table 2 contains the mean and standard deviation 
+for county characteristics that were included in the time- 
+independent (SEER program counties from 1992–2016), latency 
+sensitivity analysis (SEER program counties 1992–2007), and for 
+the time-varying model (SEER program counties 2002–2011). 
+Table 3 contains IRRs and 95% CI estimates for the associa- 
+tion between a 10-lg=m3 increase of PM2:5 from 1988–2015 and 
+selected cancer sites. Statistically signiﬁcant positive associations 
+were found for oral, rectal, liver, lung, skin, and kidney cancers 
+as well as all cancer in aggregate. A borderline statistically signif- 
+icant eﬀect was also found for breast cancer. However, after mul- 
+tiple comparisons adjustments using the Holm’s method, only 
+lung [IRR = 1:19 (95% CI: 1.09, 1.30)], liver [IRR = 1:32 (95% 
+CI: 1.11, 1.57)], and all cancer [IRR = 1:09 (95% CI: 1.03, 1.14)] 
+remained signiﬁcant at a 0.05 level. Using the less conservative 
+FDR method, signiﬁcant adverse associations were also observed 
+with skin and kidney cancers. 
+Figure 2 compares the IRR estimates for the base model with 
+estimates from time-varying models using various lagged moving 
+average estimates (1-, 5-, 10-, and 15-y) of exposure for all cancers 
+that were nominally signiﬁcant at a 0.05 level in the primary analy- 
+sis (all, lung, oral, rectal, liver, skin, breast, and kidney cancers). 
+Numeric results for all cancer types are provided in Table S2. The 
+associations for all, lung, oral, rectal, skin, and breast cancers and 
+PM2:5 were similar for the primary time-independent model and 
+the time-varying model—especially the time-varying models that 
+
+
+
+Figure 2. Estimated incident rate ratios (95% CIs) associated with a 10-lg=m3 increase of PM2:5 and selected cancer type incidence from 2002–2011 using 
+time-varying models and compared with the base (time-independent) model. Numerical estimates are included in Table S2. Open circles represent that esti- 
+mates were not statistically signiﬁcant at a 0.05 level. Diamonds represent the base (time-independent) model. Models adjusted for percentage of the county in 
+various age buckets; percentage male; percentage white, black, Hispanic, and other; percentage who did not graduate high school, graduated high school, or 
+obtained more education than high school; median income, rent, and home value; percentage below 150% poverty; percentage working class; percentage unem- 
+ployed; percentage living in a rural area; percentage smokers; percentage alcohol consumption; percentage who are physically active; and percentage of indi- 
+viduals in a county who are obese as well as indicator variables for urban/rural, state, and year. The primary (time-independent) model used a LOESS model 
+with 3 df for all covariates. The linear models used linear yearly estimates for all covariates and 1-, 5-, 10-, and 15-y moving average estimates for PM2:5 expo- 
+sure. The LOESS model was a locally weighted smoothing model with 3 df for all covariates with a 15-y moving average lagged estimate for PM2:5 exposure. 
+Note: CI, conﬁdence interval; df, degrees of freedom; PM2:5, particles <2:5 lm in aerodynamic diameter; LOESS, locally weighted smoothing model. 
+used the relatively longer-lagged moving average exposure periods 
+(10 or 15 y). However, for liver and kidney cancers, associations 
+were substantially sensitive to these modeling choices. 
+Figure 3 contains a forest plot that illustrates the sensitivity 
+analysis performed on those cancer sites that were statistically 
+signiﬁcant based on the nominal p in the primary model. 
+Numerical results for all cancer sites are provided in Table S3. 
+The results were most statistically robust across modeling choices 
+for lung cancer. All, oral, and skin cancers were largely statisti- 
+cally signiﬁcant across modeling choices, whereas rectal, liver, 
+breast, and kidney cancers varied substantially across modeling 
+choices. Figure S1 illustrates the sensitivity analysis where cova- 
+riates were progressively added to the model for the selected can- 
+cer types. The estimated IRRs were sensitive to the inclusion of 
+the various levels of covariates. The adverse PM2:5–lung cancer 
+association was observed in all models and was most strongly 
+aﬀected by controlling for smoking. 
+Figure 4 illustrates the lung cancer exposure–response 
+curves for county smoking prevalence and county-level PM2:5 
+concentrations. The relationships between lung cancer and 
+smoking prevalence and the concentration of PM2:5 in a county 
+are near linear. County-level smoking prevalence was more 
+strongly associated with lung cancer incidence than PM2:5. 
+Figure S2 presents a panel of exposure–response curves for all, 
+oral, rectal, liver, skin, breast, and kidney cancers. Unlike lung 
+cancer, the relationship between various cancer types and PM2:5 
+are not clearly linear, and occasionally PM2:5 has a larger eﬀect 
+on cancer incidence than smoking. 
+
+
+
+Figure 3. Estimated incident rate ratios and 95% CIs associated with a 10-lg=m3 increase of PM2:5 from 1988–2015 and average selected cancer type inci- 
+dence in SEER counties from 1992–2016 across various models. Numerical estimates are included in Table S3. Open circles represent that estimates were not 
+statistically signiﬁcant at a 0.05 level. Diamonds represent the primary time-independent and time-varying models. Models are adjusted for percentage of the 
+county in various age buckets; percentage male; percentage white, black, Hispanic, and other; percentage who did not graduate high school, graduated high 
+school, or obtained more education than high school; median income, rent, and home value; percentage below 150% poverty; percentage working class; per- 
+centage unemployed; percentage living in a rural area; percentage smokers; percentage who consume alcohol; percentage who are physically active; and per- 
+centage of individuals in a county who are obese as well as indicator variables for urban/rural and state. All models use the average incidence rate from 1992– 
+2016 (primary time-independent model) unless indicated otherwise. The models include the following: the primary (time-independent) model, a LOESS model 
+with 3 df was used for all covariates; a time-varying mode LOESS model with 3 df for all covariates with an additional indicator variable for year that included 
+a 15-y moving average lagged estimate for PM2:5 to estimate exposure for individuals living in SEER counties from 2002–2011; a cross-validated LOESS 
+model for all covariates; a cross-validated spline model for all covariates; a LOESS model with 3 df for all covariates, with the state removed from the model; 
+a LOESS model with 3 df for all covariates, with the state removed from the model and replaced with a region control; a LOESS model with 3 df for all cova- 
+riates, with the state removed from the model and replaced with a SEER registry control; a linear regression model with only linear terms for the covariates, 
+assuming a Poisson distribution; a linear regression model with only linear terms for the covariates and with the sandwich method used to estimate standard 
+errors; a LOESS model with 3 df for all covariates, with mean PM2:5 exposure from 1999–2015; and a LOESS model with 3 df for all covariates, with mean 
+PM2:5 exposure from 1988–2007 on SEER counties from 2008–2016. Note: CI, conﬁdence interval; df, degrees of freedom; LOESS, locally weighted smooth- 
+ing model; PM2:5, particles <2:5 lm in aerodynamic diameter; SEER, Surveillance, Epidemiology, and End Results (SEER) program. 
+Discussion 
+A growing body of evidence indicates that lung cancer incidence is 
+associated with exposure to PM2:5 (IARC 2013; Bai et al. 2020; 
+Zhang et al. 2020). The present study supports this evidence, with a 
+statistically signiﬁcant IRR of 1.19 (95% CI: 1.09, 1.30), even after 
+conservatively adjusting for multiple comparisons (p = 0:01). 
+Furthermore, the lung cancer IRR is remarkably robust across mod- 
+eling choices, spatial controls, and various exposure windows. 
+Although the present study estimates an IRR that is somewhat 
+higher than the estimate in a recent meta-analysis that examined the 
+association between PM2:5 exposure and lung cancer incidence 
+[risk ratio = 1:07 (95% CI: 1.03, 1.12)] (Huang et al. 2017), the IRR 
+from the present study is comparable to the meta-analysis men- 
+tioned previously for the association between exposure to PM2:5 and 
+lung cancer incidence or mortality [HR = 1:14 (95% CI: 1.08, 1.21)] 
+(Pope et al. 2020). Finally, the exposure–response curve provides 
+evidence that although smoking is a much larger risk factor for lung 
+cancer incidence, PM2:5 also contributes to the risk of lung cancer. 
+The results for non-lung cancers are less conclusive. Although 
+statistically signiﬁcant associations were found for oral, rectal, 
+
+
+
+Figure 4. Estimated response relationship between lung cancer incidence and (A) smoking and (B) PM2:5. Smoking is estimated as the average percentage of 
+the county’s population that identiﬁed as smokers from 1996–2012. PM2:5 is measured as the population-weighted average concentration in a county from 
+1988–2015. A locally weighted smoothing (LOESS) model with 3 df to estimate nonlinearity is used. Note: df, degrees of freedom; PM2:5, particles <2:5 lm 
+in aerodynamic diameter. 
+liver, skin, and kidney cancers in the base model, none of these can- 
+cer associations were highly robust across sensitivity analysis. 
+Furthermore, no association was found for PM2:5 and liver and kid- 
+ney cancers when time-varying models were used. Previous studies 
+have found statistically signiﬁcant associations for PM2:5 and mor- 
+tality or incidence from oral and oropharyngeal (Chu et al. 2019), 
+colorectal (Coleman et al. 2020; Turner et al. 2017; Ancona et al. 
+2015), liver (Coleman et al. 2020; Ancona et al. 2015; Deng et 
+al. 2017; Pan et al. 2016; VoPham et al. 2018), skin (Datzmann et al. 
+2018) (used PM10 instead of PM2:5), breast (Coleman et al. 2020; 
+Ancona et al. 2015; Wong et al. 2016; Hu et al. 2013; White et al. 
+2019; DuPré et al. 2019), and kidney cancers (Turner et al. 2017; 
+Raaschou-Nielsen et al. 2017). Furthermore, 
+the association 
+between all cancer incidence and PM2:5 was statistically signiﬁcant 
+IRR = 1:09 (95% CI: 1.03, 1.14), even after adjusting for multiple 
+comparisons (p = 0:04), indicating that the eﬀect of exposure to 
+PM2:5 on cancer sites may not be limited to the lungs. 
+The present study has several strengths. First, the analysis is 
+based on well-documented cancer registry data that contains 
+>8:5 million cases of cancer. Second, this study was able to ﬂexi- 
+bly control for many relevant county-level risk factors, including 
+smoking, obesity, alcohol consumption, physical activity, income, 
+and education. Third, this study used incidence data instead of mor- 
+tality data, which avoids the risk of confounding from other causes 
+of death. Finally, the cancer incidence, covariate, and air pollution 
+exposure data are all publicly available. 
+This study has several limitations. First, this ecological study 
+was unable to control for individual-level risk factors or pollution 
+exposure; therefore, the association between cancer incidence and 
+PM2:5 exposure found in this study may not reﬂect the individual- 
+level association between PM2:5 and cancer incidence. However, 
+other studies that have used individual-level data and controlled 
+for a greater variety of risk factors have found comparable associa- 
+tions for cancer mortality and PM2:5. Further, this study was unable 
+to control for all potential risk factors of cancer incidence. Several 
+potential confounders include occupational exposures, dietary pat- 
+terns, diabetes status, or chronic hepatitis B and C virus infection 
+status. Furthermore, the present study found that progressively 
+adding covariates to the model had an impact on the association 
+between PM2:5 and cancer incidence, which suggests a possible 
+risk of residual confounding. Finally, the present study does not 
+estimate cancer incidence rates for various age, sex, and race/eth- 
+nicity categories. Future studies should examine these associations 
+to determine whether diﬀerences in exposure across various sub- 
+strata, especially race/ethnicity, lead to a substantial diﬀerence in 
+PM2:5–cancer incidence associations (Zou et al. 2014). 
+The present study is also limited in its ability to directly measure 
+PM2:5 exposures. County-level PM2:5 concentrations are generated 
+using population-weighted averages of U.S. Census block-level– 
+modeled estimates that cannot account for the full range of spatial 
+variability. Sensitivity analyses suggest that most cancer associa- 
+tions are not highly sensitive to regional, state, or SEER cancer 
+registry spatial control. It is unclear, however, how the estimates 
+would be aﬀected if the analysis could be conducted at the U.S. 
+Census tract or block level. In addition, the present study had a lim- 
+ited ability to identify the most relevant PM2:5 exposure window for 
+cancer incidence. The present study found that the associations 
+between PM2:5 and cancer incidence are not sensitive to changes in 
+the exposure windows from 1988–2015, 1999–2015, 1988–2007. 
+Especially for lung cancer, stronger associations were observed for 
+10- or 15-y lagged moving averages vs. 1- or 5-y lagged moving 
+averages—indicative of a relatively long latency period. This study 
+was unable to generate reliable exposure estimates before 1988. 
+Finally, the primary index of air pollution used in this analysis is 
+PM2:5, which does not account for spatial diﬀerences in the constitu- 
+ents or characteristics of PM2:5 or of various co-pollutants. 
+The present study supports the growing body of evidence that 
+increased PM2:5 exposure is associated with lung cancer inci- 
+dence. Furthermore, it provides moderate evidence that PM2:5 ex- 
+posure may be associated with the incidence of cancer at other 
+sites, such as oral and oropharyngeal, rectal, liver, skin, breast, 
+and kidney. Although PM2:5 is likely not a primary risk factor for 
+cancer incidence, the pervasive nature of air pollution exposure 
+makes further study essential to public health. 
+
+This publication was developed as part of the Center for 
+Air, Climate, and Energy Solutions, which was supported 
+under assistance agreement no. R835873 awarded by the U.S. 
+Environmental Protection Agency (EPA). It has not been 
+formally reviewed by the U.S. EPA. The views expressed in this 
+
+
+
+document are solely those of authors and do not necessarily 
+reﬂect those of the agency. The U.S. EPA does not endorse any 
+products or commercial services mentioned in this publication. 
+References 
+Ancona C, Badaloni C, Mataloni F, Bolignano A, Bucci S, Cesaroni G, et al. 2015. 
+Mortality and morbidity in a population exposed to multiple sources of air pol- 
+lution: a retrospective cohort study using air dispersion models. Environ Res 
+137:467–474, PMID: 25701728, https://doi.org/10.1016/j.envres.2014.10.036. 
+Bai L, Shin S, Burnett RT, Kwong JC, Hystad P, van Donkelaar A, et al. 2020. 
+Exposure to ambient air pollution and the incidence of lung cancer and breast 
+cancer in the Ontario Population Health and Environment Cohort. Int J Cancer 
+146(9):2450–2459, PMID: 31304979, https://doi.org/10.1002/ijc.32575. 
+Benjamini Y, Hochberg Y. 1995. Controlling the false discovery rate: a practical and 
+powerful approach to multiple testing. J R Stat Soc Series B Stat Methodol 
+57(1):289–300, https://doi.org/10.1111/j.2517-6161.1995.tb02031.x. 
+Chu Y-H, Kao S-W, Tantoh DM, Ko P-C, Lan S-J, Liaw Y-P. 2019. Association between 
+fine particulate matter and oral cancer among Taiwanese men. J Investig Med 
+67(1):34–38, PMID: 30301867, https://doi.org/10.1136/jim-2016-000263. 
+Coleman NC, Burnett RT, Higbee JD, Lefler JS, Merrill RM, Ezzati M, et al. 2020. 
+Cancer mortality risk, fine particulate air pollution, and smoking in a large rep- 
+resentative cohort of US adults. Cancer Causes Control 31(8):767–776, PMID: 
+32462559, https://doi.org/10.1007/s10552-020-01317-w. 
+Crouse DL, Peters PA, Hystad P, Brook JR, van Donkelaar A, Martin RV, et al. 
+2015. Ambient PM2.5, O3, and NO2 exposures and associations with mortality 
+over 16 years of follow-up in the Canadian Census Health and Environment 
+(CanCHEC). Environ Health Perspect 123(11):1180–1186, PMID: 
+Cohort 
+26528712, https://doi.org/10.1289/ehp.1409276. 
+Datzmann T, Markevych I, Trautmann F, Heinrich J, Schmitt J, Tesch F. 2018. Outdoor 
+air pollution, green space, and cancer incidence in Saxony: a semi-individual 
+cohort study. BMC Public Health 18(1):715, PMID: 29884153, https://doi.org/10.1186/ 
+s12889-018-5615-2. 
+Deng H, Eckel SP, Liu L, Lurmann FW, Cockburn MG, Gilliland FD. 2017. Particulate 
+matter air pollution and liver cancer survival. Int J Cancer 141(4):744–749, 
+PMID: 28589567, https://doi.org/10.1002/ijc.30779. 
+DuPré NC, Hart JE, Holmes MD, Poole EM, James P, Kraft P, et al. 2019. 
+Particulate matter and traffic-related exposures in relation to breast cancer 
+survival. Cancer Epidemiol Biomarkers Prev 28(4):751–759, PMID: 30647065, 
+https://doi.org/10.1158/1055-9965.EPI-18-0803. 
+Dwyer-Lindgren L, Flaxman AD, Ng M, Hansen GM, Murray CJL, Mokdad AH. 2015. 
+Drinking patterns in US counties from 2002 to 2012. Am J Public Health 
+105(6):1120–1127, PMID: 25905846, https://doi.org/10.2105/AJPH.2014.302313. 
+Dwyer-Lindgren L, Freedman G, Engell RE, Fleming TD, Lim SS, Murray CJI, et al. 
+2013. Prevalence of physical activity and obesity in US counties, 2001–2011: a 
+road map for action. Popul Health Metr 11(1):7, PMID: 23842197, https://doi.org/ 
+10.1186/1478-7954-11-7. 
+Dwyer-Lindgren L, Mokdad AH, Srebotnjak T, Flaxman AD, Hansen GM, Murray 
+CJI. 2014. Cigarette smoking prevalence in US counties: 1996–2012. Popul 
+Health Metr 12(1):5, PMID: 24661401, https://doi.org/10.1186/1478-7954-12-5. 
+Hochberg Y, Benjamini Y. 1990. More powerful procedures for multiple significance test- 
+ing. Stat Med 9(7):811–818, PMID: 2218183, https://doi.org/10.1002/sim.4780090710. 
+Hu H, Dailey AB, Kan H, Xu X. 2013. The effect of atmospheric particulate matter 
+on survival of breast cancer among US females. Breast Cancer Res Treat 
+139(1):217–226, PMID: 23592372, https://doi.org/10.1007/s10549-013-2527-9. 
+Huang F, Pan B, Wu J, Chen E, Chen L. 2017. Relationship between exposure to 
+PM2.5 and lung cancer incidence and mortality: a meta-analysis. Oncotarget 
+8(26):43322–43331, PMID: 28487493, https://doi.org/10.18632/oncotarget.17313. 
+IARC (International Agency for Research on Cancer). 2013. Outdoor air pollution. 
+IARC Monographs on the Evaluation of Carcinogenic Risks to Humans Vol 109. 
+https://monographs.iarc.fr/ENG/Monographs/vol109/mono109-F01.pdf [accessed 
+19 March 2019]. 
+Kim S-Y, Bechle M, Hankey S, Sheppard L, Szpiro AA, Marshall JD. 2020. 
+Concentrations of criteria pollutants in the contiguous U.S., 1979–2015: role of pre- 
+diction model parsimony in integrated empirical geographic regression. PLoS One 
+15(2):e0228535, PMID: 32069301, https://doi.org/10.1371/journal.pone.0228535. 
+Lepeule J, Laden F, Dockery D, Schwartz J. 2012. Chronic exposure to fine par- 
+ticles and mortality: an extended follow-up of the Harvard Six Cities study from 
+1974 to 2009. Environ Health Perspect 120(7):965–970, PMID: 22456598, 
+https://doi.org/10.1289/ehp.1104660. 
+Loomis D, Grosse Y, Lauby-Secretan B, El Ghissassi F, Bouvard V, Benbrahim-Tallaa 
+L, et al. 2013. The carcinogenicity of outdoor air pollution. Lancet Oncol 
+14(13):1262–1263, PMID: 25035875, https://doi.org/10.1016/S1470-2045(13)70487-X. 
+NCI (National Cancer Institute). 2019a. Surveillance, Epidemiology, and End Results 
+program. Sample SEER research data use agreement. NCI, DCCPS, Surveillance 
+Research Program, released December 2018. https://seer.cancer.gov/data/sample- 
+dua.html [accessed 1 October 2019]. 
+NCI. 2019b. Surveillance, Epidemiology, and End Results program. SEER incidence 
+data, 1975–2017. NCI, DCCPS, Surveillance Research Program, released April 
+2019, based on the November 2018 submission. https://seer.cancer.gov/data/ 
+[accessed 1 October 2019]. 
+NCI. 2019c. Surveillance, Epidemiology, and End Results program. Time-dependent 
+county attributes. https://seer.cancer.gov/seerstat/variables/countyattribs/ 
+time-dependent.html [accessed 1 October 2019]. 
+NCI. 2019d. Surveillance, Epidemiology, and End Results program. U.S. population 
+data—1969–2018. www.seer.cancer.gov/popdata [accessed 1 October 2019]. 
+Newby DE, Mannucci PM, Tell GS, Baccarelli AA, Brook RD, Donaldson K, et al. 2015. 
+Expert position paper on air pollution and cardiovascular disease. Eur Heart J 
+36(2):83–93, PMID: 25492627, https://doi.org/10.1093/eurheartj/ehu458. 
+Pan W-C, Wu C-D, Chen M-J, Huang Y-T, Chen C-J, Su H-J, et al. 2016. Fine parti- 
+cle pollution, alanine transaminase, and liver cancer: a Taiwanese prospective 
+cohort study (REVEAL-HBV). J Natl Cancer Inst 108(3):djv341, PMID: 26561636, 
+https://doi.org/10.1093/jnci/djv341. 
+Pope CA III, Coleman N, Pond ZA, Burnett RT. 2020. Fine particulate air pollution 
+and human mortality: 25+ years of cohort studies. Environ Res 183:108924, 
+PMID: 31831155, https://doi.org/10.1016/j.envres.2019.108924. 
+Pope CA III, Lefler JS, Ezzati M, Higbee JD, Marshall JD, Kim S-Y, et al. 2019. 
+Mortality risk and fine particulate air pollution in a large, representative cohort of 
+U.S. adults. Environ Health Perspect 127(7):77007, PMID: 31339350, https://doi.org/ 
+10.1289/EHP4438. 
+Raaschou-Nielsen O, Andersen ZJ, Hvidberg M, Jensen SS, Ketzel M, Sørensen M, 
+et al. 2011. Air pollution from traffic and cancer incidence: a Danish cohort study. 
+Environ Health 10(1):67, PMID: 21771295, https://doi.org/10.1186/1476-069X-10-67. 
+Raaschou-Nielsen O, Pedersen M, Stafoggia M, Weinmayr G, Andersen ZJ, 
+Galassi C, et al. 2017. Outdoor air pollution and risk for kidney parenchyma 
+cancer in 14 European cohorts. Int J Cancer 140(7):1528–1537, PMID: 28006861, 
+https://doi.org/10.1002/ijc.30587. 
+Risom L, Møller P, Loft S. 2005. Oxidative stress-induced DNA damage by particu- 
+late air pollution. Mutat Res 592(1–2):119–137, PMID: 16085126, https://doi.org/ 
+10.1016/j.mrfmmm.2005.06.012. 
+Turner MC, Krewski D, Diver WR, Pope CA III, Burnett RT, Jerrett M, et al. 2017. 
+Ambient air pollution and cancer mortality in the Cancer Prevention Study II. 
+Environ Health Perspect 125(8):087013, PMID: 28886601, https://doi.org/10.1289/ 
+EHP1249. 
+Turner MC, Krewski D, Pope CA III, Chen Y, Gapstur SM, Thun MJ. 2011. Long- 
+term ambient fine particulate matter air pollution and lung cancer in a large 
+cohort of never-smokers. Am J Respir Crit Care Med 184(12):1374–1381, PMID: 
+21980033, https://doi.org/10.1164/rccm.201106-1011OC. 
+VoPham T, Bertrand KA, Tamimi RM, Laden F, Hart JE. 2018. Ambient PM2.5 air pol- 
+lution exposure and hepatocellular carcinoma incidence in the United States. 
+Cancer Causes Control 29(6):563–572, PMID: 29696510, https://doi.org/10.1007/ 
+s10552-018-1036-x. 
+White AJ, Keller JP, Zhao S, Carroll R, Kaufman JD, Sandler DP. 2019. Air pollution, 
+clustering of particulate matter components, and breast cancer in the Sister 
+Study: a U.S.-wide cohort. Environ Health Perspect 127(10):107002, PMID: 
+31596602, https://doi.org/10.1289/EHP5131. 
+White H. 1980. A heteroskedasticity-consistent covariance matrix estimator and a 
+direct test for heteroskedasticity. Econometrica 817(4):817–838, https://doi.org/ 
+10.2307/1912934. 
+WHO (World Health Organization). 2016. International Statistical Classification of 
+Diseases and Related Health Problems, 10th Revision. http://apps.who.int/ 
+classifications/icd10/browse/2016/en [accessed 28 April 2020]. 
+Wong CM, Tsang H, Lai HK, Thomas GN, Lam KB, Chan KP, et al. 2016. Cancer mor- 
+tality risks from long-term exposure to ambient fine particle. Cancer Epidemiol 
+Biomarkers Prev 25(5):839–845, PMID: 27197138, https://doi.org/10.1158/1055- 
+9965.EPI-15-0626. 
+Yin P, Brauer M, Cohen A, Burnett RT, Liu J, Liu Y, et al. 2017. Long-term fine par- 
+ticulate matter exposure and nonaccidental and cause-specific mortality in a 
+large national cohort of Chinese men. Environ Health Perspect 25(11):117002, 
+PMID: 29116930, https://doi.org/10.1289/EHP1673. 
+Zhang Z, Zhu D, Cui B, Ding R, Shi X, He P. 2020. Association between particulate 
+matter air pollution and lung cancer. Thorax 75(1):85–87, PMID: 31727788, 
+https://doi.org/10.1136/thoraxjnl-2019-213722. 
+Zou B, Peng F, Wan N, Mamady K, Wilson GJ. 2014. Spatial cluster detection of air 
+pollution exposure inequities across the United States. PLoS One 9(3):e91917, 
+PMID: 24647354, https://doi.org/10.1371/journal.pone.0091917. 
+
+
+

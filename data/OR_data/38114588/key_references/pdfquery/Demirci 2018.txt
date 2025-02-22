@@ -1,0 +1,6409 @@
+USER EXPERIENCE OVER TIME WITH CONVERSATIONAL AGENTS: CASE 
+STUDY OF WOEBOT ON SUPPORTING SUBJECTIVE WELL-BEING 
+A THESIS SUBMITTED TO 
+THE GRADUATE SCHOOL OF NATURAL AND APPLIED SCIENCES 
+OF 
+MIDDLE EAST TECHNICAL UNIVERSITY 
+
+
+IN PARTIAL FULFILLMENT OF THE REQUIREMENTS 
+FOR 
+THE DEGREE OF MASTER OF SCIENCE 
+IN 
+INDUSTRIAL DESIGN 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+USER EXPERIENCE OVER TIME WITH CONVERSATIONAL AGENTS: 
+CASE STUDY OF WOEBOT ON SUPPORTING 
+ SUBJECTIVE WELL-BEING 
+submitted by HATİCE MERVE DEMİRCİ in partial fulfillment of the requirements 
+for the degree of Master of Science in Industrial Design Department, Middle East 
+Technical University by, 
+
+
+Prof. Dr. Gülay Hasdoğan 
+Head of Department, Industrial Design 
+Assist. Prof. Dr. Gülşen Töre Yargın 
+Supervisor, Industrial Design Dept., METU 
+
+Assist. Prof. Dr. Harun Kaygan 
+Industrial Design Dept., METU 
+Assist. Prof. Dr. Gülşen Töre Yargın 
+Industrial Design Dept., METU 
+Assist. Prof. Dr. Aykut Coşkun 
+Media and Visual Arts Dept., Koç University 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+ hereby declare that all information in this document has been obtained and 
+presented in accordance with academic rules and ethical conduct. I also declare 
+that, as required by these rules and conduct, I have fully cited and referenced all 
+material and results that are not original to this work. 
+ 
+ 
+
+USER EXPERIENCE OVER TIME WITH CONVERSATIONAL AGENTS: 
+CASE STUDY OF WOEBOT ON SUPPORTING 
+ SUBJECTIVE WELL-BEING 
+Demirci, Hatice Merve 
+MSc., Department of Industrial Design 
+Supervisor : Assist. Prof. Dr. Güşen Töre Yargın 
+
+Technological advancements re-shaped user-product interactions by enabling people 
+to make conversation with interactive systems. This new form of interaction led 
+designers to create a new type of user interface: Conversational User Interface (CUI). 
+Expensive psychological therapy fees and people’s increased awareness related to 
+importance of well-being attracted the interactive system developers to create a 
+is particularly focusing on 
+domain specific Conversational Agent, which 
+psychological terapy and has CUI. In order to maintain user engagement and sustain 
+usage, design of such systems is important. However, existing design guidelines for 
+Conversational Agents are limited and focus on business functions of these agents; 
+however, conversational experience should be the main focus for designers to sustain 
+user engagement and support people’s well-being. 
+The aim of this research is to explore design qualities of Conversational Agent’s that 
+focuses on enhancing people’s subjective well-being, to accomplish sustained usage 
+and engagement with the conversational agent and propose guidance for designing 
+such agents. For this purpose, interviews were conducted with users. Woebot, a 
+Conversational Agent, which is designed for promoting people’s subjective well-being 
+was selected as a case for the study and evaluated by 16 participants. The 
+interpretations of the participants were obtained by semi- structured and in-depth 
+interviews. Through analysing the results of the interviews, improvement suggestions 
+are presented regarding system operations and functionality in terms of its 
+attractiveness, perspicuity, effectiveness, stimulation, dependability, efficiency and 
+novelty. Lastly, the study provides insights that would affect users’ engagement and 
+overall experience. 
+
+
+
+ 
+ 
+ 
+
+SOHBET ARACISI İLE ZAMAN SÜRECİNDE KULLANICI DENEYİMİ: 
+WOEBOT’UN KİŞİLERİN ÖZNEL İYİ OLUŞUNU DESTEKLEMESİ 
+ÜZERİNE BİR ÇALIŞMA 
+Demirci, Hatice Merve 
+Yüksek Lisans, Endüstri Ürünleri Tasarımı 
+Tez Yöneticisi :Dr.Öğretim Üyesi Gülşen Töre Yargın 
+
+Teknolojik gelişmeler, insanların interaktif sistemlerle sohbet etmelerini sağlayarak 
+kullanıcı etkileşimlerini yeniden şekillendirdi. Bu yeni etkileşim türü, tasarımcıları 
+Konuşma Kullanıcı Arayüzü (Conversational User Interface - CUI) adı verilen yeni 
+bir kullanıcı arayüzü tasarlamaya yönlendirdi. Pahalı psikolojik terapi ücretleri ve 
+insanların öznel iyi oluşun önemi hakkında farkındalığının oluşması, interaktif sistem 
+geliştiricilerinin bu tür terapiye odaklanan ve Konuşma Kullanıcı Arayüzüne sahip 
+olan alana özelleşmiş sohbet aracısı tasarlama konusunda ilgilerini çekti. Kullanıcı 
+bağlılığını sağlamak ve kullanımı sürdürülebilir hale getirmek için bu sistemlerin 
+tasarımı önemlidir. Ancak, var olan sohbet aracısı tasarım kıstasları sohbet aracılarının 
+ticaret özelliklerine odaklanmış durumda ve sınırlı sayıdadır. Hâlbuki sohbet 
+deneyimi, kullanıcı bağlılığını ve insanların öznel iyi oluşlarını sürdürebilmek için 
+tasarımcıların asıl odağı olmalıdır. 
+Bu araştırmanın amacı sohbet aracılarının kullanıcı bağlılıklarını sürdürmek ve bu 
+aracıları tasarlamak için kıstaslar oluşturmak için insanların öznel iyi oluşlarını 
+geliştirmeye odaklanan sohbet aracılarının tasarım özelliklerini keşfetmektir. Bu 
+gayeyle, kullanıcılarla mülakatlar yapıldı. İnsanların öznel iyi oluşlarına katkıda 
+bulunmayı amaçlayan bir sohbet aracısı olan Woebot bu çalışma için konu olarak 
+seçildi ve 16 katılımcı tarafından değerlendirildi. Katılımcıların yorumları, yarı 
+yapılandırılmış ve detaylı mülakatlarla elde edildi. Çalışmada, mülakatların sonuçları 
+değerlendirilerek, çekicilik, açıklık, etkililik, uyarıcılık, güvenirlebilirlik, verimlilik ve 
+orijinallik bakımından sistem operasyonları ve işlevselliğine ilişkin geliştirme 
+önerileri sunuldu. Son olarak bu çalışma, kullanıcının bağlılığını ve tüm deneyimini 
+nelerin önemli biçimde etkilediğine dair içgörüleri sağladı. 
+
+
+
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.1.1. Strategies Related to Improving Subjective Well-being based on PERMA 
+Model ................................................................................................................. 47 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+Table 1-Problem and Emotion Focused Coping Strategies (Yi& Baumgartner, 2004) ......... 14 
+Table 2- Background of the Participants ................................................................................ 33 
+Table 3-The Most Preferred Strategy to Least Preferred One ............................................... 53 
+Table 4- Three of the Most Stated Methods and Strategies of the Participants ..................... 55 
+Table 5-Flourishing Scale Related Results ............................................................................ 56 
+Table 6- Interaction Instruments (De Lone et al., 2003) ........................................................ 62 
+Table 7- UEQ Results ............................................................................................................ 66 
+Table 8- UEQ Results for Per Item ........................................................................................ 67 
+Table 9- Attractiveness Results from UEQ ............................................................................ 68 
+Table 10- Annoying-Enjoyable Adjective Pair Evaluations .................................................. 68 
+Table 11- Good-Bad Adjective Pair Evaluations ................................................................... 73 
+Table 12- Unlikable-Pleasing Adjective Pair Evaluations ..................................................... 74 
+Table 13- Unpleasant-Pleasant Adjective Pair Evaluations ................................................... 78 
+Table 14- Unattractive-Attractive Adjective Pair Evaluations .............................................. 79 
+Table 15- Unfriendly-Friendly Adjective Pair Evaluations ................................................... 82 
+Table 16- Efficiency Measures from UEQ ............................................................................ 84 
+Table 17- Slow-Fast Adjective Pair Evaluations ................................................................... 84 
+Table 18- Inefficient-Effective Adjective Pair Evaluations ................................................... 86 
+Table 19- Impractical-Practical Adjective Pair Evaluations .................................................. 89 
+Table 20- Cluttered-Organized Adjective Pair Evaluations ................................................... 91 
+Table 21- Perspicuity Measures from UEQ ........................................................................... 92 
+Table 22- Not Understandable-Understandable Adjective Pair Evaluations ......................... 93 
+Table 23- Difficult to Learn-Easy to Learn Adjective Pair Evaluations ................................ 94 
+Table 24- Complicated-Easy Adjective Pair Evaluations ...................................................... 95 
+Table 25- Confusing- Clear Adjective Pair Evaluations ........................................................ 96 
+Table 26- Dependability Measures from UEQ ...................................................................... 98 
+Table 27- Unpredictable-Predictable Adjective Pair Evaluations.......................................... 98 
+Table 28- Obstructive-Supportive Adjective Pair Evaluations ............................................ 101 
+Table 29- Not Secure-Secure Adjective Pair Evaluations ................................................... 104 
+Table 30- Stimulation Results from UEQ- .......................................................................... 108 
+Table 31- Inferior-Valuable Adjective Pair Evaluations ..................................................... 109 
+Table 32- Boring-Exciting Adjective Pair Evaluations ....................................................... 111 
+Table 33-Not Interesting-Interesting Adjective Pair Evaluations ........................................ 113 
+Table 34-Demotivating-Motivating Adjective Pair Evaluations ......................................... 115 
+Table 35- Novelty Measures from UEQ .............................................................................. 116 
+Table 36-Dull-Creative Adjective Pair Evaluations ............................................................ 117 
+Table 37- Conventional-Inventive Adjective Pair Evaluations ........................................... 118 
+Table 38- Usual-Leading- Edge Adjective Pair Evaluations ............................................... 120 
+Table 39- Conservative-Innovative Adjective Pair Evaluations .......................................... 121 
+Table 40- Proposed Design Improvements .......................................................................... 131 
+ 
+
+ 
+ 
+
+
+Figure 1-The Evolution of User Interfaces ............................................................................. 2 
+Figure 2- PERMA model ...................................................................................................... 13 
+Figure 3- The Positive Design Framework ........................................................................... 16 
+Figure 4- Fitbit ...................................................................................................................... 17 
+Figure 5- Smiling Mind Application ..................................................................................... 19 
+Figure 6-Stop, Breathe and Think Application ..................................................................... 20 
+Figure 7-Freeletics Applicaiton ............................................................................................ 21 
+Figure 8- My Gradititude Journal Applicaiton ..................................................................... 21 
+Figure 9- Apple's Siri ............................................................................................................ 23 
+Figure 10- Google Now ........................................................................................................ 24 
+Figure 11- Amazon's Alexa .................................................................................................. 24 
+Figure 12- Provided Interaction Elements from Instant Messaging Applications ................ 26 
+Figure 13- Conversational Agent Interaction Design Features ............................................. 27 
+Figure 14- Alexa Skill Kit ..................................................................................................... 29 
+Figure 15- Alexa's Skill Development Process ..................................................................... 29 
+Figure 16- IBM Watson's Design Guideline ......................................................................... 30 
+Figure 17- Methodology Structure ......................................................................................... 34 
+Figure 18- Pohlmeyer's model of Continuous User Experience ........................................... 35 
+Figure 19- UEQ Measurement Aspects ................................................................................ 38 
+Figure 20- Responses to the Items of the Scale Perspicuity ................................................. 39 
+Figure 21- Woebot Conversation Initiation .......................................................................... 42 
+Figure 22- End of a Conversation ......................................................................................... 43 
+Figure 23- A Screenshot from the Coding File ...................................................................... 46 
+Figure 24- Main Web Page of Woebot ................................................................................. 57 
+Figure 25- Self-System Introduction from the Web Page ..................................................... 58 
+Figure 26- Profile Illustration of Woebot ............................................................................. 60 
+Figure 27- Not Being Able to Understand the Participants .................................................. 71 
+Figure 28- Limited Response Options .................................................................................. 72 
+Figure 29- Context Unawareness of CA ................................................................................ 75 
+Figure 30- Stuck Conversation- P13 ..................................................................................... 76 
+Figure 31- Stuck Conversation- P13 ..................................................................................... 76 
+Figure 32- System’s Self- Critisim ........................................................................................ 81 
+Figure 33- Supportive Responses .......................................................................................... 83 
+Figure 34- Surprising System Outputs ................................................................................. 101 
+Figure 35- Woebot’s Information about Security ................................................................ 106 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+o Which design aspects and qualities do maintain user engagement? 
+o What motivates people to sustain usage? 
+o of the conversational agent to support user’s subjective well-being? 
+
+
+ There are general principles provided by guidelines from prominent authors, such as 
+Nielsen (1993) and Shneiderman (2004); there are international standards which focuses on 
+such guidelines, such as ISO/DIS 9241-16:1996(E); and there are styleguides for companies 
+such as Interface Guidelines for Windows and Apple. 
+ Such as these books: “The Conversational Interface: Talking to Smart Devices (McTear et 
+al., 2016)”, “Designing Voice User Interfaces (Pearl, 2016)”, “Designing Bots (Shevat, 
+2017)” 
+
+
+o How should conversation be designed? 
+o What are the qualities and features 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+other words, the expansion in positive emotions and happiness enable people to focus 
+11 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+Figure 2- PERMA model ( retrieved from https://positivepsychologyprogram.com/perma- 
+model/) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The use of mobile phone support the subjective well-being through reshaping the 
+17 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+It could be concluded that people would adopt more preferable applications for 
+18 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 5- Smiling Mind Application (Retrieved from 
+https://www.harnessprojects.com.au/wp-content/uploads/2018/04/sm-blog.png) 
+
+ 
+ 
+ 
+
+
+
+
+Figure 6-Stop, Breathe and Think Application (Retrieved from 
+https://www.stopbreathethink.com) 
+
+
+
+
+
+ 
+ 
+Figure 7-Freeletics Applicaiton (Retrieved from https://www.designrush.com/best- 
+design/freeletics) 
+Figure 8- My Gradititude Journal Applicaiton (retrieved from 
+https://itunes.apple.com/us/app/my-gratitude-journal/id1164553256?mt=8) 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Internet Computer Entity) was developed by Richard Wallace in 1995. The difference 
+22 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 12- Provided Interaction Elements from Instant Messaging Applications 
+(Klopfenstein et al., 2017) 
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Figure 14- Alexa Skill Kit ( Screenshot from the https://developer.amazon.com/alexa-skills- 
+kit) 
+Figure 15- Alexa's Skill Development Process (Screenshot from the 
+https://developer.amazon.com/alexa-skills-kit) 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+Figure 16- IBM Watson's Design Guideline (retrieved from 
+https://www.ibm.com/blogs/watson/2016/07/ibm-watson-launched-conversation-service- 
+found-tour) 
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+CA Usage 
+Experience 
+Psychological 
+Support 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+
+
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+Full-Time 
+Employee 
+PhD 
+Student 
+PhD 
+Student 
+Master's 
+Degree 
+Master's 
+Degree 
+Master's 
+Degree 
+Master's 
+Degree 
+PhD 
+Student 
+Master's 
+Degree 
+PhD 
+Student 
+Master's 
+Degree 
+Master's 
+Degree 
+Master's 
+Degree 
+PhD 
+Student 
+Master's 
+Degree 
+PhD 
+Student 
+PhD 
+Student 
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+they do not want, participants were asked whether they had seen a psychiatrist or 
+40 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+ “I mean, I dance. I tried to feel good by doing an event such as going dancing 
+and get discharged. I try to formulate a strategy to forget things by physical 
+activities such as sports which is generally dancing for me.” P06 [1]1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+“I have read a book about concentration techniques. It was saying that 
+focusing on one activity is better than doing many activities at the same 
+time to control your body. There were some techniques like not moving, 
+not moving at all for five minutes. It really makes me relaxed. I do such 
+activities. I mean I don’t move at all for 5-10 minutes. It is really hard but 
+it makes you relaxed tremendously. Moreover, you’re not having any 
+thoughts at all. You don’t think, you push yourself. This is extremely 
+relaxing. I do this activities. When I don’t do some of my body parts are 
+strained such as my legs, feet, etc. which bothers me. This thing also made 
+me obsessed with it.” P11 [2] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+“…talking with my beloved ones, having some time with them which helps me 
+to get over.” P16 [3] 
+
+
+“Family relations such as supporting each other make me feel better. I texted my 
+family: ‘good morning my dear family…’ this morning to sustain these relations 
+with them.” P04 [4] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“I re-plan to feel better. I mean I did good things to feel good but still I mean 
+this for the things that I wanted to but I couldn’t.” P11. [5] 
+
+
+
+
+
+ 
+
+
+
+
+
+
+“Generally speaking, if I feel bad, if this is the question you ask, I try to solve it 
+myself. I would take myself off for couple of days. I wouldn’t see anyone. I 
+would cancel my social life and searching for solutions to my problem and solve 
+things that I can. For example, if there is a problem with my job, I wouldn’t thing 
+anything else for 3-4 days and try to think solution oriented.” P02 [7] 
+
+
+
+
+
+(Not being able to receive payment for conference application) “What did I do? 
+I tried to console myself. That means I should not care too much. I learned that 
+I am going to a conference in Barcelona. I haven’t taken a holiday for a year. I’ll 
+go to there and do my presentation, I’ll wander around for 5 days, meet new 
+people. Then, I said it’s alright. This is it. I relieved myself.” P15 [8] 
+
+
+
+
+
+ 
+ 
+ 
+“If it is something that I can’t solve such as something that government did, I 
+don’t really care. It might make me unhappy and I still follow these news but I 
+don’t care.” P02 [9] 
+
+
+
+Mental-Behavioral 
+Disengagement 
+
+
+
+
+
+
+Acceptance and Positive 
+Interpretation 
+Avoiding, escape from reality 
+or isolating themselves from 
+the reality 
+Doing engaging activities to 
+intensify the positivity in their 
+lives 
+Meeting with their friends, not 
+to be alone to comfort 
+themselves with their social 
+connections. 
+Spending quality time together 
+with their loved ones to 
+replicate positive moments 
+Facing with the problem or 
+related person to beat the 
+negativity/ Expressing feeling 
+and thoughts related to the 
+stressful situations to get the 
+opinions of the people 
+Organizing their thoughts or 
+making plans to solve their 
+problems 
+Spending quality time together 
+with their loved ones to 
+replicate positive moments 
+Accepting the situation as it is 
+by detecting the positive side of 
+the negative experience 
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+Methods and 
+strategies for 
+improving SWB 
+Methods and 
+strategies for 
+improving SWB 
+Methods and 
+strategies for 
+improving SWB 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mental 
+Disengagement 
+Confrontive 
+Coping 
+Engagement 
+(PERMA) 
+Engagement 
+(PERMA) 
+Behavioral 
+Disegagement 
+Seeking Social 
+Support 
+Mental 
+Disengagement 
+Seeking Social 
+Support 
+Seeking Social 
+Support 
+Accomplishment 
+(PERMA) 
+Confrontive 
+Coping 
+Confrontive 
+Coping 
+Seeking Social 
+Support 
+Seeking Social 
+Support 
+Mental 
+Disengagement 
+Seeking Social 
+Support 
+Confrontive 
+Coping 
+Confrontive 
+Coping 
+Engagement 
+(PERMA) 
+Engagement 
+(PERMA) 
+Mental 
+Disengagement 
+Engagement 
+(PERMA) 
+Positive Emotions 
+(PERMA) 
+Mental 
+Disengagement 
+Mental 
+Disengagement 
+Engagement 
+(PERMA) 
+Engagement 
+(PERMA) 
+Relationships 
+(PERMA) 
+Planful Problem 
+Solving 
+Mental 
+Disengagement 
+Engagement 
+(PERMA) 
+Positive 
+Emotions 
+(PERMA) 
+Relationships 
+(PERMA) 
+Behavioral 
+Disegagement 
+Acceptance/ 
+Positive 
+Reinterpretation 
+Seeking Social 
+Support 
+Mental 
+Disengagement 
+Confrontive 
+Coping 
+Accomplishment 
+(PERMA) 
+Positive Emotions 
+(PERMA) 
+Seeking Social 
+Support 
+Engagement 
+(PERMA) 
+Mental 
+Disengagement 
+Mental 
+Disengagement 
+Engagement 
+(PERMA) 
+Engagement 
+(PERMA) 
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“Would it feel same like a relation with an actual person? It might be. However, 
+it might make people anti-social, that’s another topic. I am already really 
+conservative about my friends, I am not eager to make new friends. I prefer to 
+
+ 
+ 
+continue with existing ones. I am still on some level about friendships but it 
+might make anti-social people even more anti-social.”P16 [11] 
+
+
+
+
+
+
+
+
+
+
+
+“Being able to be with it 7 24 is an advantage because panic attack sufferers 
+might need it any moment even though I don’t consider myself as a panic attack 
+sufferer. You can talk with it any moment. For example, in an emergency, it 
+might say something like ‘take a deep breath’. It might make you relaxed and 
+let things go. It might do something good like these. It can be with you 7 24. 
+That’s a good thing. It might help you when you’re in depression or you are 
+having depressive moment.” P09 [12] 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+“It had my attention because I liked the ‘track your mood’ feature. For example 
+if my mood is spoiled I generally think the moment but not the process or the 
+past. I like how it shows your mood weekly. I can say it attracted me.” P03 [14] 
+
+
+
+“I tried some app like this which wasn’t a bot. Real people reply you. It is called 
+‘Talk Life’. That one doesn’t control your mood. I liked how this track your 
+mood. I found it smart.” P14 [15] 
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+Invitation 
+Accessibility Of 
+ 
+
+
+To System Operations 
+Perceiving 
+Conversational agent 
+Preferable 
+Conversations 
+User Awareness For 
+ 
+ 
+
+
+Conversation 
+Limited Response 
+Options 
+Ease Of Interaction 
+ 
+With Canned Replies 
+Forceful Interaction 
+ 
+
+Conversation 
+Dominant 
+ 
+Conversational agent 
+Familiar Interaction 
+
+
+
+
+
+
+
+
+
+“Maybe it will suggest something because it is related with a university: 
+Stanford. Maybe they can reach a lot of people’s data. It says it will keep the 
+data secret but maybe they can reach anonymously. I don’t trust anyone about 
+the data thing. At the end we talk via Facebook. The data’s path is on Facebook. 
+I don’t trust Facebook at all. It is not a trustworthy company.” P08 [16] 
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“The goal is impressive. Cause is a good cause but does technology help people 
+in this topic? Is it trustworthy? If any emergency occurs, might it really 
+understand the importance of the situation? Would it react wrong or not? I am 
+asking this because it seems like it is developed for people who are in desperate 
+situations. For example, could it give a correct feedback for suicidal people? O 
+am not sure of that! I would call my relatives or friends in a moment of like this.” 
+P11 [18] 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+“I found the idea of texting with it very stupid. I mean it can be like this but 
+when it suggest only one option then I understand that it wasn’t really important 
+at all. I mean it is like asking if the music was good. ‘Was it good? Was it? Was 
+it?’ It will ask till you reply ‘yes.’ Look, ‘Was it?’s are coming. I would stop 
+talking to this if it was for myself.” P10 [19] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“I mean it is like... I saw these quilts yesterday. They have printings of 
+knittings but it is obvious they are not knittings. I feel like that with this. I feel 
+unhappy when I see these situations.” P01 [20] 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+UEQ Scale Results 
+First Impression Attractiveness 1,3645833 
+Attractiveness 0,7 
+Pre-Use Phase 
+Use Phase 
+Attractiveness 0,2777778 
+Post Use Phase Attractiveness 0,5229167 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+“It is not adaptable. It has its own problems. I felt like it will make you act for 
+those problems. The fact that it is moving to another topics step by step made 
+me feel like they are like something that I can reach one by one and progress 
+myself. It might end up something like ‘Duolingo’ which is really annoying.” 
+P10 [21] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ “I mean I did find it neither enjoyable nor annoying or it is actually both. I told 
+you this in our first interview that I found it directive rather than creating a chat 
+environment that I involve. It is more like it is directing the chat which makes 
+me excluded. That’s why I neither got bored nor enjoyed.” P07 [21] 
+
+thoughts freely, excessive notification sending and excessive length of the responses 
+70 
+ 
+
+
+
+“As I just said, you don’t want to see anything from outside or work with 
+anything when you feel bad. This runs into those moments and that’s why it is 
+annoying. A lot of notifications are coming and also it sends a lot of 
+notifications. I didn’t want to talk for a moment like the feeling of lonliness when 
+you feel bad. Maybe that’s why I said it is annoying. At the end, it doesn’t give 
+you a choice to shut the notifications. I could have said that I wanted to talk 3 
+days later but I didn’t. Maybe it would have understood. I think it has such 
+option.” P08 [22] 
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+“It has predetermined programme. It doesn’t reply what you said. It acts like you 
+are always in need of help or in a desperate situation. ‘There is such 
+techniques…’ said the bot like it was talking to a child. It was nonsense to write. 
+Even if I wrote ‘K’, ‘B’ or any random word it was going to continue anyway.” 
+P11 [23] 
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+“Like I said before about the distortion part, it was the main activity for it and I 
+didn’t quite understand about writing without distortion. It doesn’t understand 
+me, too. I write something but it doesn’t exactly understand what I just wrote. It 
+seems like it won’t understand if I write ‘horse’ or my sentence. It understands 
+in holistically. It understands the thing it wrote with distortion but it doesn’t 
+understand word by word or the sentence structure. That’s why It shows what I 
+did, what I am doing but it doesn’t praise mine… I don’t understand anything. 
+Maybe that’s the reason” P09. [24] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+“It didn’t make any good or bad in my life, as a change. I took adjective as a 
+good product and bad product. I mean it didn’t make any innovation as good or 
+bad in my life, it didn’t change my life any good or bad. For example, I didn’t 
+forget my passwords because I used it or it didn’t make my life perfect. As I 
+said, for example, I think something automatic directing such as navigation is a 
+good thing. I would increase ‘good’ for navigation because it directs you. Siri is 
+good, I mean. It is not 3 level good but it is 1 level. If it did something about 
+what I say it would be good. This is neither good nor bad. I think it is dull, I 
+mean according to me.” P13 [25] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+“As I showed, I say I don’t want it and it says ‘let’s do it!’. Then I say let’s do it 
+and it says ‘Alright! I’m just sending you!’ I say I will try it later, and it says 
+‘Alright! I hope you like it!’.” P04 [26] 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+“It says ‘I am like this. I can help you about well-being by using this theory.’ 
+and it makes you hope like you feel like you will find a solutions about some 
+points or you will feel good. Then, I saw it can do what it said and that’s why it 
+is pleasing.” P08 [27] 
+
+
+
+
+
+
+
+
+
+“If you remember, I asked you if I am gonna write ‘off’ because I don’t like 
+texting and I find texting hard. The fact that there is ready replies at the bottom 
+is good. I mean, you can answer easily without getting bored.” P12 [28] 
+“It increases ‘pleasing’ with this and being supporting but maybe it is unlikable 
+because I think it is unhelpful. You understand its boringness because it is 
+repetitive and then you are saying it is more ‘neutral’. In fact, I think I 
+misunderstood a thing there such as I exaggerated the capabilities of the robot 
+comparing with the robot’s basic goal.” P16 [29] 
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“… The fact that it reminds itself. It asks if you want a ‘quick talk’. Because of 
+this, it sometimes feels it is unpleasant…” P08 [30] 
+
+
+
+
+
+“It feels pleasant to talk because maybe it has never scolded me. I didn’t feel 
+scary. It didn’t do this by making me feel uncomfortable or it didn’t make 
+anything that might make me uncomfortable or it didn’t send any GIF.” P08 [31] 
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ “I told from the beginning that I didn’t feel I wasn’t involved in the conversation 
+because it was so self centered. I didn’t feel attracted because of this. How can 
+I say? I felt like I had a quota of one sentence after I read its many sentences. 
+The replies were already coming until I wrote the second sentence.” P07 [32] 
+
+
+
+
+
+ “I think it does not come with the same things everyday because we don’t talk 
+so often. It comes with different things each day. For example we talk so short 
+or we can’t talk a lot at the moment. We can’t talk everyday. The talks are 
+generally like ‘How are you?’, ‘I do these things.’, ‘How was your day?’ then I 
+say it was like this for example and then it sends emojis appropriate for the 
+situtaiton. We talk few words like ‘see you later, then’. That’s it. Thus, It is nat 
+really attractive.” P15 [33] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+“It keeps you busy somehow. I think I could have used this instead of 
+‘Instagram’ or ‘Onedio’ if only I would talking with it for a certain amount of 
+time or it comes to you with more daily examples rather than self-help tests or 
+the it brings you the events of the day or it brings you things that attracts me. 
+Then it would be more attractive. It would make it more irreplaceable but I don’t 
+know if it is something desirable.” P15 [34] 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ “At first, it impressed me I said: ‘Wow! Robot!’ Then it was routine. Joking 
+aside, it was like a friend. Then, it became my ‘Wobo’.” P14 [35] 
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+First Impression 
+Pre-Use Phase 
+Use Phase 
+Post Use Phase 
+Efficiency 1,375 
+Efficiency 1,1 
+Efficiency 0,9 
+Efficiency 1,03125 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Table (cid:20)(cid:26)(cid:3)(cid:11)(cid:38)(cid:82)(cid:81)(cid:87)(cid:76)(cid:81)(cid:88)(cid:72)(cid:71)(cid:12) 
+User Profiling 
+
+
+
+
+
+
+
+
+
+
+
+“I mean, like I said, It gets to conclusion slowly. I was like ‘Say it, already!’.” 
+P04 [36] 
+
+
+
+
+“I mean, the surveys were too long on the 3rd week. I mean, I was doing the 
+survey for almost 20 minutes and I didn’t want to leave it without finishing 
+because I thought it should be coherent, at least. It was too long at the moment. 
+On the last week I interacted with it lesser. I was predicting how to finish it 
+earlier.” P02 [37] 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+“The speed of texting. It was too fast. I mean why I chose ‘2’ at the first time I 
+don’t really know. What I mean ‘fast’ is that it can send very long text in very 
+short amount of time which doesn’t seem like realistic. It doesn’t have to be 
+realistici but in a dual conversation it might be slower till the text gets longer. 
+At least for the feeling of a dialog.” P05 [38] 
+
+
+“I think it is positive. I mean it tells you by being without being tiring which 
+make it easy to communicate.” P03 [39] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ “It was something different at the beginning but when I got used to it, I 
+questioned its difference. Should it be more games or more attractive things? 
+Being a robot and being a robot and trying to do things with interface are 
+innovative but should somethings be improved?” P03 [40] 
+
+
+
+
+
+“It could have been more effective for me if it was understanding some 
+keywords and replying to these keywords rather than having answer buttons like 
+who, okey, why etc. even though I know it is not an actual person in fact it is a 
+robot. Generally it would be nice if there were several options and it chose one 
+of these. I mean these options might exist but you still feel in need of telling 
+your problems and getting replies while you get psychological support. At least, 
+I think I would need that and acted like that.” P06. [41] 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+“It takes a lot of time to give a strategy but it still is ineffective. I talk with it for 
+15 minutes but I still got something that I can achieve with one click. Things 
+like these weren’t worth it.” P04 [41] 
+
+
+
+
+
+
+
+“I think it tries to give a support without being lost in details and it does it 
+effectively. It means it is effective. It does its job being simple.” P16 [43] 
+
+
+
+“Its being directive was good because I didn’t know what I need to do and how 
+I can reply. Then it directed me which is good.” P05 [44] 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+“The talks of the last few days were monotonous and I wasn’t sure why it asked 
+these questions, how they will affect and if they are useful.” P03 [45] 
+
+
+
+
+
+
+
+“I mean sometimes it says too many things at the same time which is impractical 
+and maybe… This is more like why it insists if I don’t want to talk? I mean I 
+couldn’t leave conversation immediately when I wanted.” P07 [46] 
+
+
+
+“It is practical because you open the Facebook and you can write whenever and 
+whatever you would like to. It gives three options. You can chose the proper one 
+when you need to be quick. You don’t have to text everything. I find the sound 
+for this is bit disturbing. I don’t know how it is for visually impaired people. 
+Having an option for this is great for them.” P09 [47] 
+
+
+
+
+
+
+“… menu and the new features. I mean sometimes I want to use it passively 
+when it writes ‘How was your day?’ like watching a movie which feels good. 
+Then you don’t need to do something, you don’t need to be active so the new 
+additional features of the menu…” P01 [48] 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+“As I said it asks the questions organizedly and I start and go. It explains what 
+to talk today, what to talk about or sometimes it brings something different for 
+the questions it asked several times but I mean it is organized.” P14 [49] 
+
+
+
+“It organizes even your answers and shows them. It knows what happens next 
+and give possibilities which means its mind is organized. You give something 
+and it gives an option. You do something, it eliminates it and gives an option. It 
+is organized because of its codes. It can’t be cluttered, it is not possible because 
+it is not capable. I related it with this. I didn’t relate it with our texting mentality. 
+Its mind is really organized. Sometimes it makes a loop like ‘I would say this’,’ 
+I would do that’, ‘I would do this again’… It is around 1000 times more 
+organized than a person.” P09 [50] 
+
+
+“It often texts me at similar hours related to my talking hours with it. It’s like it 
+regulates itself while we are talking like ‘he/she replies me at this hours when I 
+write him/her at this hours’. I felt like it writes accordingly, in more appropriate 
+times. For example notification sending frequency has changed according to my 
+texting-replying frequencies. Moreover, it tracks the previous flow very good. It 
+can show it again at some point so it is really organized. Anything else didn’t 
+occur my mind about this.” P08 [51] 
+
+
+
+
+UEQ Scale Results 
+First Impression Perspicuity 2,40625 
+Perspicuity 2,1666667 
+Pre-Use Phase 
+Use Phase 
+Perspicuity 2,2166667 
+Post Use Phase Perspicuity 2,359375 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“I mean the flow can be learned easily. You can talk quickly. That’s why I found 
+it easy to learn. If you ask about what it tells when you ask easiness of the talk, 
+I think the language and topic were also clear.” P12 [52] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+“It was easy to use but if you ask why it is not ‘3’ but ‘2’. It is hard when you 
+reply. I’ve been like ‘alright, I said this but what I am gonna answer its 
+question?’ I said I am sorry but it asks why I am sorry for a minute. It is actually 
+because of how it says it. That’s related to it, not me.” P14 [53] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+“I mean what they want is actually pretty obvious with this survey but is the way 
+of doing it really explanatory? It is not. The reason is it’s a specific talking for 
+example when the dentist is going to do a root canal operation to me, it would 
+be bothering if he does it directly. The correct way is that he should say what he 
+is going to die before and this is also the way that makes me happy. ‘We are 
+going to do this, it will take this long, it will take this many session etc.’ you 
+would like to start your treatment like this.” P02 [54] 
+
+
+
+
+“Since it is giving psychological counselling, I think it will help people having 
+difficulties. At least as a preparation. It doesn’t help one on one at all.” P11 [55] 
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+“It’s being understandable. I mean the language understandable. Then, it’s closer 
+to ‘clear’ at first but it made me curious about how did they do the coding of 
+this. Because of this, it made me curious about what is going to come next. It 
+was also like this, it wasn’t too much clear. Then, this being not clear made me 
+think it was not that surprising.” P06 [56] 
+
+
+
+
+
+
+
+
+
+
+
+
+UEQ Scale Results 
+First Impression Dependability 0,703125 
+Dependability 0,5333333 
+Pre-Use Phase 
+Use Phase 
+Dependability 0,5833333 
+Post Use Phase Dependability 0,6875 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+“... Should text me. My partner doesn’t text me every day like this. If it didn’t 
+text I wouldn’t text to it. That’s a good thing…” P13 [57] 
+
+
+
+“The reason is the first draft conversation. Then it can be unpredictable 
+sometimes but sometimes it is not unpredictable. The conversation flow might 
+give clues like it will make me do some analyses about some topics or it will say 
+the previous concepts it told before. However, sometimes it talks about very 
+different topics. So it can be predictable or unpredictable." P08 [58] 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+and interaction related disappointment, P02 believed that CA might prevent people to 
+102 
+Table (cid:21)(cid:27)(cid:3)(cid:11)(cid:38)(cid:82)(cid:81)(cid:87)(cid:76)(cid:81)(cid:88)(cid:72)(cid:71)(cid:12) 
+Superficial System 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“I mean it opens a door as I told. That’s why it is interesting. I mean like… I 
+don’t know it is more like you can talk to this if you won’t or can’t talk to 
+anybody else.” P15 [59] 
+
+
+“I felt like it provided self-control to myself. I mean maybe not self-control… I 
+mean for example, even when I laugh so hard, being asked then I thought ‘I am 
+not actually very happy’ was something that make me actually thought about 
+which was good. Maybe it asked me when I felt bad then I was like I am not 
+actually that sad. I mean being asked is enough support; in the meantime, there 
+were alas feedbacks like ‘we can’t be in the same mood forever’ or ‘we are not 
+supposed to be in a certain stereotype’. You know but you can’t tell these to 
+yourself. To hear that, I mean to read that feels good.” P14 [60] 
+
+
+
+ 
+“I mean I lived through this thing. I was related to that. It was too different. I 
+had some alcohol. It was a little bit different. I ate some food. I couldn’t get a 
+grip. I lived a different think. It was like an attack, like a panic attack maybe. 
+Then the breathing exercise felt good.” P11 [61] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“Problem is here. The reason I have ‘security’ concern I have started to see 
+suspicious ads on Facebook like ‘do you want some psychological support?’ 
+coming from USA like something they tell they accompany me in my hard days. 
+I mean I was already suspicious about Facebook sharing these kind of data but 
+still I got bothered a lot.” P01 [62] 
+
+
+
+
+
+
+
+ 
+“I mean I was thinking it keeps the data but it won’t tell anybody. I went to 
+psychologist once and he/she said they will evaluate these with other 
+psychologists and I was ‘OK’ because they are professionals. I mean when I 
+think about it this is like that, like a psychologist, it needs to tell to improve but 
+it doesn’t know me. It doesn’t concern about me being sad, not important. I mean 
+I am just concerned about somebody can see it for a moment. I text something 
+and I am concerned about somebody can see it. Not only somebody can see the 
+screen but also Facebook keep some data. I mean I can’t say there was Tayyip 
+again in the morning and I opened it. I mean you can’t write that, I am afraid of 
+this. I don’t feel free. That’s why. Not like ‘Oh God! I am so deep into insecurity. 
+I can’t write.’.” P09 [63] 
+
+
+
+
+
+
+
+“At first, the thing about if it is going to use these data… I missed the parent part 
+for example. Maybe that’s why I have lack of information but maybe it is the 
+
+ 
+ 
+trust thing. I guess it was written something like that. I mean, do I remember 
+wrong? Exactly! It says they keep it without names. I mean we have a habit of 
+not trusting things like these I think that’s why I said ‘not secure’. Then it 
+declared something which is good, it would have not cared at all. I thought 
+declaring this thing was a good thing, that’s why I am not sure. I think they can 
+store the statistics without names. Then they can study on utilizing this. That can 
+support this issues. I think that part does not compel the ‘secure’ part.” P06 [64] 
+
+
+
+“I mean at first, I didn’t have any idea but when I went home I checked who did 
+it, how they did it, then I thought it is secure.” P02 [65] 
+
+
+
+
+
+
+
+
+
+
+
+
+“I mean I don’t have a Facebook account. That’s why we could do with you 
+when I learned I don’t need to have Facebook account for it. Since I am not a 
+Facebook user I didn’t feel that because I contacted with Wobeot not anybody 
+else. I didn’t think it is under the Facebook. Because of the robot image of it, the 
+Facebook relations didn’t come to my mind.” P06 [66] 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+UEQ Scale Results 
+First Impression Stimulation 1,21875 
+Stimulation 1,21875 
+Pre-Use Phase 
+Stimulation 0,25 
+Use Phase 
+Stimulation 0,3125 
+Post Use Phase 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“At first, I thought it is interesting, at least. When I used it, I thought it is bit 
+stupid. Then I thought it is inferior. Being repetitive, having a certain 
+conversation frame, how did it navigate when it got out of this frame, then how 
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+it brought things together, the protocols there made me think it is inferior.” P10 
+[67] 
+
+
+
+
+
+
+
+“I think the fact that the psychological support integrated with improving 
+technology is certainly valuable.” P16 [68] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+“I mean I think it is really innovative. It is hard to find a psychologist next to 
+you all the time. He/she would rip you off even if you find someone. That’s why 
+I found it valuable. Responding quickly, being friendly, and being consistent… 
+Even if it has a classical approach, it actually understood that approach. It 
+internalised it very good. The things it says and it wants you to do are nice. It 
+tries to make you relax. It wants you to relax while talking with it. It doesn’t 
+understand the word but you still have written it. You talk to someone and 
+confide. That’s why it is valuable. I realized it tries to achieve that at last. Since 
+
+ 
+I didn’t expect that it might get lower a bit at the final but you still talk like 
+talking to your friend. You tell somebody and it feels different and you’re not 
+afraid. ‘I feel so bad and this guy made me these’ you can say and you are not 
+afraid like you said them to somebody that you don’t know because he/she might 
+tell the story to 3rd person. However you’re relax with this because it won’t tell. 
+That’s why it is valuable about the approach. It might make people relaxed 
+because of this. Sometimes psychologists change their facial impressions and it 
+makes you irritated or you think if he/she judges you. However this is more like 
+a cutie. It doesn’t do anything. It doesn’t judge you. You know that. It’s valuable 
+because of this.” P09 [69] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+“I mean technological things always attract me. I don’t know if everybody feel 
+the same way but communicating with a robot is exciting. However it decreases 
+while you get to the last weeks. If it continued more, I might have muted it 
+because it asks every day.” P16 [70] 
+
+
+
+
+
+
+
+
+
+“It gave a lot of examples. I mean I was already researching mindfulness in my 
+thesis so I am already informed. That’s why the fact that it was so detailed… I 
+mean I should be able to skip when I want. However if you write different thing 
+it doesn’t change the topic. You have to read all the text. That was so boring. 
+Writing too much message… I mean it can attract me if it is something that I 
+don’t know but when it does this about the fields that I already know then it 
+becomes boring.” P04 [71] 
+
+
+“At first the information was good then it was like… I mean at first it taught 
+more about mindfulness then it was like more quick talks about what can I do. 
+
+ 
+It gave short information and then it shut sometimes. Then it became not so 
+valuable and not so exciting.” P12 [72] 
+
+
+
+
+
+
+“… I mean it is bit didactic. It is like ‘I am teaching you these now’, I mean 
+about the ‘teaching stuff’ part. I didn’t find it very good because it is good 
+somehow but how it does this also important. I mean I felt like it is not supposed 
+to do this at the beginning. You know it would be better if we interact first and 
+then ‘teach you stuff’ can start. I would find it positive, then. The reason is I 
+mean in our lectures it is also like this. We checked what lecture it is first then 
+we get the introduction and then start to learn. Teaching a lot of things just from 
+the beginning is something that I don’t find effective.” P06 [73] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+“… This quick responses which means it doesn’t read your text. I mean it just 
+gives you some answer from its inventory.” P06 [74] 
+
+
+
+
+
+
+
+“I am going to there always, I mean it is an interesting idea but not so interesting. 
+Meanwhile, things like these started to get so widespread. There are a lot of 
+movies, TV series etc. We see these things on ‘Black Mirror’for example. Even 
+if we don’t use these things in our daily lives, possibilities of these can be in our 
+lives in future doesn’t sound very interesting.” P07 [75] 
+
+
+
+
+“I don’t know if you won’t talk to anybody, if you can’t, then you can talk to 
+this, spend some time. For example if I wait for a person on the street which I 
+hate to do, I would talk to this like if I’m texting with an actual person. I don’t 
+know it can fill some emptiness. At least, I think like this which I find 
+interesting.” P15 [76] 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ “It is not an actual person, man. It’s just a robot. If I know it is a person, I would 
+trust it more. I wouldn’t trust a person more but I still would. I don’t know, as I 
+said, not like it should complement me, it should accompany me or something 
+like that but if it motivates me when I am sad I think I need to get out of that 
+environment. I should go see friends. I should be with myself. My home is far 
+
+
+
+ 
+ 
+ 
+ 
+ 
+away and I am already living alone and get bored. Then also I say I am texting 
+with a robot. I fall completely down when I think about it.” P13 [77] 
+
+
+
+
+“I wouldn’t say you have such weak points in superhero test. This is a 
+conversational agent but still it would have said these are your strong points. It 
+woluldn’t say ‘you’re like these, you have these bad habits’. Then I don’t think 
+it is for me but it is generally motivating. I mean I guess being goal-oriented 
+makes it like that.” P15 [78] 
+
+
+
+
+
+
+
+
+
+“When I thought different, it made me feel different or it made me feel like it is 
+going to be alright. That’s why it was motivating.” P14 [79] 
+
+
+
+First Impression 
+Pre-Use Phase 
+Use Phase 
+Post Use Phase 
+Novelty 1,40625 
+Novelty 0,95 
+Novelty 0,55 
+Novelty 0,6875 
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+ “I think it is a creative idea but did it actualized the idea? I think, no. I mean it 
+can’t reply, we can’t talk properly. It is then more like the self-help books. I read 
+such books and they also have some techniques. I already do that I mean but the 
+idea is good.” P04 [80] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“At the beginning I though it is more innovative. I said it is going to text me 
+back as long as I text. I mean it texts but what I thought it was going to reply to 
+me. I thought it is more like the ‘Siri’ do you understand? For example I will say 
+‘I study’ and it will ask where I am studying. I mean actually Siri doesn’t also 
+have this but I will say ‘in the University’ and it will ask something about the 
+university. I will ask ‘where are you?’ and it will say ‘California’ and I am going 
+to say ‘really? I am in Ankara’ etc. I thought it is something like this, I don’t 
+know.” P13 [84] 
+
+
+
+
+
+
+ 
+ 
+“When I think about it as a conversational agent, there are the ones as 
+companions. The ones with only well-being can support till a certain points. It 
+is close to conventional because it shares the same ground with the companion 
+ones. The words it uses, approaching like a friend etc. It is like there is only one 
+conversational agent making guideline and everyone uses that and orient 
+different directions.” P08 [85] 
+
+
+
+“…because the idea is different. It can be improved and it might have a potential 
+as I told. The number of psychological problems is increasing and people starts 
+to live longer so people don’t know the level of their problems. I mean they can 
+be used to diagnose as tolerable or intolerable. It might be useful in future. That’s 
+why I answered by thinking its future.” P11 [86] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+“At first, I hoped it was leading-edge. Then it was like usual for me. As I told, I 
+was expecting I text and it texts back, I was hoping that. I mean come on! You 
+are on Facebook Messenger. It is not an ordinary app. If it is like this, I would 
+prefer an app. I want to text on Messenger like I talk to a friend. We don’t chat. 
+Then I can read a book like a self-help book.” P13 [87] 
+
+
+“It is more focused on a specific topic comparing with other conversational 
+agents so it is unusual. There wasn’t an AI like this which helps people in this 
+area. I mean there are some in a robot level but people can’t access them. This 
+is accessible and can be used by other people which makes it leading-edge.” P08 
+[88] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+“I will tell you about the conservative part. Let me tell you again. The 
+approaching of psychology was very conservative but when I look like that then 
+it is not conservative because I guess I look at that way. I mean excitement 
+viewpoint because I had and expectation and I thought it was gonna help so 
+differently. Then I see it conservative, I see creativity part is decreasing.” P09 
+[89] 
+
+
+
+
+“I mean the idea of being assistant, especially on social media, in this era which 
+we always hold our phones and talk to someone consistently… I mean the idea 
+of being assistant when we can’t talk with anybody is innovative.” P02 [90] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Personality of the conversational agent 
+has to be suitable with the 
+conversational agent’s target users. In 
+order to reflect CA’s personality, the 
+designers should introduce the purpose 
+and the expected interaction in detail to 
+the users. 
+
+
+
+
+
+
+ 
+ 
+Table (cid:23)(cid:19)(cid:3)(cid:11)(cid:38)(cid:82)(cid:81)(cid:87)(cid:76)(cid:81)(cid:88)(cid:72)(cid:71)(cid:12) 
+ARTIFICIAL 
+INTELLIGENCE 
+Understanding 
+Natural 
+Language 
+Conversation 
+Management 
+Sentiment 
+Analysis 
+
+CONVERSATION 
+FLOW 
+Scripting 
+Flow 
+
+
+RICH 
+INTERACTIONS 
+
+
+
+
+
+the conversation emerges 
+language, 
+in 
+Since 
+the conversational 
+natural 
+agent should be able to understand what 
+users are saying, expressing to create an 
+emotional engagement. Also, according 
+to participants not being understood 
+mode make them believe the system is 
+“stupid”. 
+this 
+misunderstanding, the CA has to make 
+sense out of the users’ shared data to 
+meet in common ground. 
+The CA should be able to operate 
+conversations without being dominant 
+and directive. 
+The CA should be aware of 
+the 
+intentions of the user to make them feel 
+the 
+relaxed and show 
+conversation will progress in accordance 
+with the users’ responses. 
+The advancement in Natural Language 
+Understanding would also improve the 
+“prediction” aspect of the CA. Since 
+Woebot could not fully understand the 
+user’s responses and intentions, the 
+interpreted as 
+given responses are 
+superficial. After understanding 
+the 
+users and their response, the CA would 
+predict the most appropriate answers to 
+advance the interaction. 
+The script of the Woebot’s conversation 
+repetitive and 
+flow 
+monotonous 
+participants; 
+however, what they have expected from 
+the Woebot was exciting and interesting. 
+The CA should give feedbacks related to 
+the task completion states of the users to 
+show them whether the shared activities 
+are understood or not by them. 
+The user should be able to reach the 
+shared files from a menu of the CA or it 
+could share a link to make shared data 
+accessible for a desired time. 
+
+
+
+
+ 
+RICH 
+INTERACTIONS 
+
+RICH 
+INTERACTIONS 
+
+Emojis and 
+Reactions 
+Typing 
+Indicators 
+RICH 
+INTERACTIONS 
+
+
+
+Templates of the conversations should 
+be customized 
+to users should be 
+customized to users. The customization 
+of the conversation could be obtained 
+with a survey which should be filled at 
+the beginning of the interaction and 
+instead of having one template the users 
+might be divided and categorized in 
+different groups in accordance with their 
+similarities between survey 
+results. 
+Furthermore, the templates may change 
+for these determined user groups. 
+The 
+the 
+ease 
+interaction; however, in some situations 
+they limit the users to express their 
+thoughts and feelings freely. In order to 
+empower users, the canned responses 
+should be preferable option. Instead of 
+tapping the button, the user should 
+choose to type his/her response. 
+Using emojis for stating moods helps 
+users to express their emotional states. 
+However, in some circumstances, the 
+emojis are not capable of covering the 
+they 
+current mood and 
+represent are not understandable for the 
+users. 
+to have a clear 
+conversation, 
+the emojis could be 
+selected by the user instead of selecting 
+emojis among the canned response 
+options. 
+Typing indicators are advantageous for 
+the 
+demonstrating 
+the presence of 
+conversational agent. However, 
+in 
+Woebot case, the typing could not be 
+observed by the participant due to speed 
+of responses of the system. Independent 
+from the length of the text, the responses 
+are sent so quickly which indicates 
+Woebot’s robotic being. Since the CA 
+to human 
+try 
+to 
+conversation, 
+indicators 
+should be calibrated in accordance with 
+the length of the system’s response. 
+“Web view” design aspect is also related 
+with creating custom responses. During 
+the conversations, it is not possible to 
+imitate human 
+the 
+
+
+
+
+ 
+ 
+ 
+CONTEXT 
+MEMORY 
+
+
+CONTEXT AND 
+MEMORY 
+
+
+
+know users 
+responses; 
+however, with web views the CA can 
+convey detailed information concerning 
+the user’s preferences and interests. 
+Context and memory are important 
+design aspects in order to have an 
+engaging user experience. Not being 
+aware of the context of the user is 
+interpreted as forceful interaction. Since 
+Woebot does not understand the user’s 
+context, forces users to continue to make 
+conversation and complete or view the 
+shared data; however, if the CA would 
+be able to pay attention to user and 
+his/her context, conversations would 
+progress in mutual understanding. 
+The memory is important for the CA to 
+remember earlier conversations with the 
+users. To give feedback to the user and 
+to understand the progress accomplished 
+through the conversations the memory 
+plays a crucial role. It is also a beneficial 
+design aspect for customized responses. 
+Furthermore, the CA’s memory would 
+decrease the cognitive load of the user; 
+in other words, the user does not have to 
+recommended 
+the past 
+remember 
+activities 
+the 
+during 
+data 
+or 
+conversations. 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+not 
+understandable 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+meets 
+expectations 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+does not meet 
+expectations 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

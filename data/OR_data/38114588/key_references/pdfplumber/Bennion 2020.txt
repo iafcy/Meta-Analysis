@@ -1,0 +1,797 @@
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+Original Paper
+Usability, Acceptability, and Effectiveness of Web-Based
+Conversational Agents to Facilitate Problem Solving in Older
+Adults: Controlled Study
+Matthew Russell Bennion1, BEng, MSc, PhD; Gillian E Hardy1, BA, MSc, PhD; Roger K Moore2, BA, MSc, PhD;
+Stephen Kellett1, BSc, MSc, DClinPsy; Abigail Millings1, BSc, PhD
+1Department of Psychology, The University of Sheffield, Sheffield, United Kingdom
+2Department of Computer Science, The University of Sheffield, Sheffield, United Kingdom
+Corresponding Author:
+Matthew Russell Bennion, BEng, MSc, PhD
+Department of Psychology
+The University of Sheffield
+Cathedral Court
+1 Vicar Lane
+Sheffield,
+United Kingdom
+Phone: 44 07703049595
+Email: m.bennion@sheffield.ac.uk
+Abstract
+Background: The usability and effectiveness of conversational agents (chatbots) that deliver psychological therapies is
+under-researched.
+Objective: This study aimed to compare the system usability, acceptability, and effectiveness in older adults of 2 Web-based
+conversational agents that differ in theoretical orientation and approach.
+Methods: In a randomized study, 112 older adults were allocated to 1 of the following 2 fully automated interventions: Manage
+Your Life Online (MYLO; ie, a chatbot that mimics a therapist using a method of levels approach) and ELIZA (a chatbot that
+mimics a therapist using a humanistic counseling approach). The primary outcome was problem distress and resolution, with
+secondary outcome measures of system usability and clinical outcome.
+Results: MYLO participants spent significantly longer interacting with the conversational agent. Posthoc tests indicated that
+MYLO participants had significantly lower problem distress at follow-up. There were no differences between MYLO and ELIZA
+in terms of problem resolution. MYLO was rated as significantly more helpful and likely to be used again. System usability of
+both the conversational agents was associated with helpfulness of the agents and the willingness of the participants to reuse.
+Adherence was high. A total of 12% (7/59) of the MYLO group did not carry out their conversation with the chatbot.
+Conclusions: Controlled studies of chatbots need to be conducted in clinical populations across different age groups. The
+potential integration of chatbots into psychological care in routine services is discussed.
+(J Med Internet Res 2020;22(5):e16794) doi: 10.2196/16794
+KEYWORDS
+transdiagnostic; method of levels; system usability; acceptability; effectiveness; mental health; conversational agents; older adults;
+chatbots; web-based;
+evidence-based psychological therapies [1,2]. Psychological
+Introduction
+electronic therapies (e-therapies) have been defined and
+categorized in multiple ways that refer to properties, such as
+Background
+the type of technology being used or the level of therapeutic
+The developers of psychological interventions have harnessed
+guidance involved [3]. E-therapies are typically grounded in
+the internet as a delivery medium to enable increased access to
+cognitive behavioral therapy (CBT), as the protocol-driven
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 1
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+format of CBT makes it a better fit for automation in comparison conversation between the client and therapist). Therefore, the
+with unstructured dynamic psychotherapies [4]. There is process of engaging with e-therapy is more personalized,
+growing evidence indicating that e-therapies are clinically dynamic, and bespoke, rather than simply following the
+equivalent to traditional face-to-face therapies in reducing the psychoeducational exercises and self-monitoring that comprise
+symptoms of both common mental health problems and somatic most e-therapies.
+disorders [5]. This evidence is based on the outcomes achieved
+In total, 2 conversational agents have subsequently been the
+with working-age adults. Therefore, this leaves older adults at
+focus of most research attention: ELIZA and Manage Your Life
+risk of both digital and research exclusion. For example,
+Online (MYLO), and these represent 2 differing theories and
+although older participants are rarely excluded from clinical
+associated approaches to the treatment of emotional distress.
+trials of e-therapies, they account for only 3% of participants
+The earliest attempt to develop a chatbot was by Joseph
+[6]. Feasibility and pilot study evidence indicate that older adults
+Weizenbaum in 1966. His program (ELIZA) was designed to
+are willing to use e-therapies [7] and do find the use of
+mimic Rogerian counseling, a form of person-centered
+e-therapies a satisfying experience [8-10]. When tested, the
+psychotherapy based on humanistic principles [24]. ELIZA
+evidence suggests that e-therapies can be clinically effective
+applies simple natural language processing rules to the user’s
+for older adults with symptoms of depression and anxiety
+typed inputs to respond and generate text responses in the form
+[11-14].
+of subsequent questions and responses appropriately. Despite
+An important consideration when designing e-therapies for older its technical simplicity and the relative transparency of its
+adults is the user experience of the technology. User experience therapeutic model, ELIZA can generate convincing dialogues,
+research typically consists of assessments of the acceptability, and there is anecdotal evidence of therapeutic effectiveness
+usability, and satisfaction of the technology being used. User [25]. Despite the initial interest, little progress has been made
+experience is defined as a “person’s perceptions and responses to evolve and evaluate ELIZA into a fully automatic approach
+resulting from the use and/or anticipated use of a product, system for treating mental health problems [4]. Another chatbotcalled
+or service” [15] and usability as “the extent to which a product MYLO has subsequently emerged. This is an attempt to
+can be used by specified users to achieve specific goals with implement a fully automated technique for treating mental health
+effectiveness, efficiency and satisfaction in a specified context problems based on the principles of method of levels (MOL)
+of use” [15]. therapy [26]. MOL is a transdiagnostic form of psychological
+therapy grounded in perceptual control theory [27]. MYLO uses
+However, measuring the acceptability of e-therapies has
+open questions to encourage users to reflect on their thoughts,
+typically been limited to only asking older adults to rate the
+feelings, and behaviors, in a way that helps users to become
+acceptability of the technology before, during, and/or after using
+more psychologically flexible, and thus, more adept at reducing
+a program. Researchers have also assessed the user experience
+distress [26]. MYLO simulates an MOL-style therapeutic
+of e-therapies through measuring treatment satisfaction, but
+conversation through an automated messaging interface.
+they have often used unvalidated questionnaires, thus bringing
+the results found into question [16]. There have been 2 previous trials with student populations
+comparing the outcomes achieved by MYLO and ELIZA from
+Therefore, despite partially considering aspects of acceptability,
+short single-session conversations. In a pilot trial (N=48) in a
+usability, and satisfaction, it is rare for e-therapy studies to use
+student population [28], MYLO was rated as more helpful and
+the full array of international standards and associated validated
+led to greater problem resolution, but there were no differences
+instruments of usability, but there are some examples of good
+between the conversational agents with regard to any clinical
+practice [17,18]. To maximize the reach and uptake of
+outcomes (ie, depression, anxiety, and stress). In another student
+e-therapies for the older adults, adaptation of the methods for
+study (N=213), participants were randomized in a trial to either
+assessing user experience and system usability developed in
+MYLO or ELIZA before completing poststudy and 2-week
+engineering and computer science appears fit-for-purpose [19].
+follow-up measures [29]. MYLO was again rated as significantly
+This is particularly important given the evidence that the older
+more helpful than ELIZA, but there were again similarly no
+adults experience difficulty using e-therapies when instructions
+differences between the conversational agents in terms of
+overload working memory, making it harder to effectively
+problem resolution and clinical outcomes.
+engage with the program [20]. Therefore, the older adults need
+to continually relearn how to use an e-therapy program, and To summarize, despite developments in the reliability of system
+on-going feelings of frustration would reduce the ratings of usability testing in computer science and engineering, these
+acceptability of the technology and risk disengagement [20]. approaches have not been consistently adopted in the context
+of the development and delivery of e-therapies. In addition,
+Thus far, attempts to fully automate psychological therapies
+where e-therapies have been developed as conversational agents,
+have been plagued with difficulties of low initial uptake and
+any outcome evidence has also been unfortunately limited to
+subsequent low adherence [21,22]. One method that has shown
+working-age adults’samples. Therefore, more research is needed
+potential benefit for potentially increasing adherence to
+to investigate the clinical potential of conversational agents in
+e-therapies is the use of conversational agents that deliver the
+the older adults.
+content of e-therapies [23]. In this approach, software programs
+interpret and reply to lines of everyday normal language, and a Objectives
+therapeutic interaction is, therefore, created (ie, a conversation
+This study sought to compare and contrast the system usability
+takes place between the client and chatbot, mirroring the
+of 2 chatbots(MYLO and ELIZA) in an older adult sample and
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 2
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+to evaluate outcomes using a randomized and controlled being able to read and hear clearly (with glasses or hearing aids
+outcome methodology. We hypothesized that MYLO would be if necessary), (3) having no medically or professionally
+more acceptable, helpful, and usable than ELIZA, based on diagnosed current mental health disorder, and (4) currently
+previous research [28,29], but there would be no difference in experiencing a problem causing emotional distress.
+terms of clinical outcome. A secondary aim was to examine the
+Measures
+relationship between the system usability and acceptability of
+the chatbots, particularly as Bird et al [29] specifically called The time points at which self-assessed measures were
+for greater knowledge concerning the usability of MYLO in administered are summarized in a Standard Protocol Items:
+different groups. Recommendations for Interventional Trials diagram (Multimedia
+Appendix 1) and Table 1.
+Methods
+Participants provided a brief qualitative description of their
+personal problems and stated how long those problems had
+Participants
+been occurring. Problem distress was measured on an 11-point
+Ethical approval was granted for the study (ref: 007599) by the Likert scale (from 0—not distressing at all to 10—highly
+University of Sheffield’s Department of Psychology Ethics distressing). Problem distress was measured at baseline,
+Committee. A study sample was recruited from the University postintervention, and 2-week follow-up. Problem solvability
+of the Third Age (U3A), and participation was not monetarily was measured on an 11-point Likert scale (from 0—cannot be
+incentivized. The U3A is a movement that aims to educationally resolved to 10—easily resolved) at baseline. To measure
+stimulate members who have retired from work [30]. The study problem resolution, participants rated on a Likert scale, at
+was advertised over the Web via U3A websites and offline via postintervention and 2-week follow-up, to what degree the
+recruitment posters placed within U3A meeting places. Inclusion problem had resolved (from 0—not resolved at all to
+criteria for the study were (1) being older than 50 years, (2) 10—completely resolved).
+Table 1. Summary and timeframe of measure administration.
+Measure Baseline Postintervention 2-week follow-up
+Problem distress Xa X X
+Depression, anxiety, and stress scales 21 X X X
+Problem solvability X —b —
+Problem resolution — X X
+Helpfulness — X X
+Use again — X X
+System usability scale — X —
+aThe measure was taken at this time point.
+bThe measure was not taken at this time point.
+on a 5-point scale [31]. An example item is “I found the system
+Time
+very cumbersome to use.” SUS has been found to have high
+The time difference in minutes between the first and last internal consistency in a number of large datasets [32,33], and
+timestamp of conversation logs was used to measure the duration it compares favorably with other usability measures [32]. An
+of using the conversational agent. SUS score above 68 represents an above-average usability [34].
+The SUS was only administered postintervention.
+Helpfulness
+Participants rated how helpful the conversational agent was on Depression, Anxiety, and Stress Scales 21
+an 11-point Likert scale (from 0—not helpful at all to The depression, anxiety, and stress scales 21 (DASS-21) is a
+10—extremely helpful) at postintervention and at 2-week 21-item scale measuring depression, anxiety, and stress over
+follow-up. the previous week on a 4-point scale [35]. Scores can range
+from 0 to 21 in each domain of the scale (depression, anxiety,
+Use Again
+stress) and are calculated by summing the scores of the
+Participants rated on an 11-point scale (from 0—most definitely
+representative 7 items. The DASS-21 has high internal
+not to 10—most definitely yes) the degree to which they would
+consistency (depression: 0.91, anxiety: 0.84, and stress:
+use the conversational agents again, but for a different problem,
+0.90[35]). Participants completed the DASS-21 at baseline,
+at postintervention and at 2-week follow-up.
+postintervention, and 2-week follow-up.
+The System Usability Scale
+The system usability scale (SUS) measures perceptions of
+system technology and consists of a set of 10 statements scored
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 3
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+Procedure levels of awareness [28]. MYLO opens the session with Please,
+tell me what’s on your mind. The participant progresses the
+To be involved, participants were required to either email or
+conversation by typing their problem into a text input box and
+phone the lead researcher (MB). The researcher inputted each
+then clicking 1 of the response rating buttons. MYLO was
+potential participant’s email address into a bespoke backend
+developed by Warren Mansell at the University of Manchester.
+study management system; the system would then send
+participants emails containing a Web link to view the Web-based Statistical Analysis
+information sheet and consent form. Upon consenting,
+The study uses sample size calculations from Bird et al’s study
+participants were sent a further email containing a set of
+[29], which was a continuation of the work carried out by
+instructions about each stage of the study, along with a Web
+Gaffney et al [28]. A Cohen dof 0.79 was found for the baseline
+link to allow them to begin interacting with the conversational
+and postintervention comparison of distress scores of those in
+agent (ie, participants were free to withdraw at this or any
+the MYLO group; a power analysis indicated that the minimum
+subsequent stage). Upon clicking the link, participants were
+group size required was 19 with adequate power (0.8). Bird et
+taken to a set of self-assessment baseline measures within a
+al [29] found little differentiation in improvement in distress
+Web-based questionnaire. After completion, the backend study
+between groups (d=0.31). On the basis of this, the 2 conditions
+management system randomly allocated, with equal probability,
+would, therefore, require a minimum sample size of 104. The
+participants to either MYLO or ELIZA and generated the
+study aimed to achieve the minimal power requirement, and a
+accompanying usernames, passwords, and program Web links
+target to recruit 120 participants was set, which would result in
+to enable participants to access their allocated program.
+60 participants per group.
+The backend study management system would then email these
+Data were analyzed using IBM SPSS for Microsoft Windows
+details to the participants along with Web links to a user-guide
+(version 24). The primary measure for the study was
+video and usage tips Web page. The participants were given 24
+problem-related distress. DASS-21, problem resolution, time,
+hours in which they had to click the link in the email and log
+use again, helpfulness, and system usability were secondary
+in to converse with their allocated conversational agent.
+outcome measures.
+Conversations were suggested to have a maximum duration of
+20 min. After participants ended their conversation, the software The study used a mixed 2 × 3 analysis of variance (ANOVA),
+presented a set of postintervention self-assessment measures with the group (ELIZA or MYLO) as a between-participant
+within a Web-based questionnaire. Two weeks after completion, factor and time (baseline, postintervention, and 2-week
+the backend study management system sent participants an follow-up) as a within-participant variable for the primary
+email with a link to a Web-based questionnaire that contained outcome variable problem-related distress and secondary
+the self-assessment follow-up measures. outcome measure DASS-21. Posthoc 2-tailed t tests were run
+to explore group differences using Bonferroni CI adjustment.
+Electronic Therapy Conversational Agents
+Secondary outcome measures problem resolution, helpfulness,
+To ensure that both systems were judged on the conversation and use again were compared at postintervention and 2-week
+they generated and not their respective user interfaces, the visual follow-up using ANOVA. Secondary outcome measures time
+layout and input method of ELIZA were altered to mirror that and system usability were compared at postintervention using
+of MYLO. independent t tests that applied Bonferroni CI adjustment. To
+investigate the extent to which system usability was a predictor
+ELIZA
+of problem resolution, helpfulness, and use again, a series of
+The implementation of ELIZA used in this study was based on
+Pearson correlation coefficients were computed to assess the
+a version by cyberpsych [36], which is accessible through the
+relationships between postintervention system usability, problem
+Web via a website hosted by the University of Sheffield.
+resolution, helpfulness, and use again. Simple linear regression
+Conversations with ELIZA mimicked Rogerian client-centered
+was then carried out to determine the effect of postintervention
+counseling and aimed to facilitate problem solving by applying
+system usability on postintervention helpfulness, use again, and
+the core conditions for change during Rogerian counseling [24]
+problem resolution scores.
+(ie, congruence, empathy, and unconditional positive regard).
+ELIZA opens the session with Hello, let’s talkand then adopts Results
+a consistent nondirective approach. The participants progress
+the conversation by typing their problems into a text input box Sample Characteristics
+and pressing the return key. ELIZA then responds with a
+Age of the participants ranged from 51 to 90 years, with a mean
+question intended to maintain the conversation.
+of 69.21 (SD 6.76) years, and the study sample comprised 73.2%
+Manage Your Life Online (82/112) females and 26.8% (30/112) males. A participant flow
+diagram is provided in Figure 1. In total, 112 participants
+MYLO was accessed through the Web via a website hosted by
+completed baseline measures, were randomized, and then used
+the University of Sheffield. MYLO is an automated
+the conversational agents, with 98 participants providing
+computer-based self-help program that mimics a therapeutic
+postconversation outcomes. Of the 59 participants allocated to
+conversation between a client and a therapist using MOL as the
+MYLO, 52 completed the session with a dropout rate of 12%
+change method. MYLO works by analyzing the participant’s
+(7/59). Of the 53 participants allocated to ELIZA, 50 completed
+text input for key terms/themes and responds with questions
+the session with a dropout rate 6% (3/53). Across both chatbots,
+aimed at encouraging conflict awareness and facilitating higher
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 4
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+92.2% (94/102) participants completed the intervention. Of completed the intervention had an average age of 68.4 (SD 6.49)
+those who completed the intervention, 94 (MYLO: n=47 and years; 73% (69/94) of them were female and 27% (25/94) were
+ELIZA: n=47) provided outcomes across all 3 time points (ie, male.
+baseline, postintervention, and 2-week follow-up). Those who
+Figure 1. Participant flow diagram. MYLO: Manage Your Life Online.
+Problem Distress and Resolution
+Time Spent Using the Conversational Agents
+The problem-related distress and problem resolution scores for
+The average amount of time spent engaged in conversation with
+MYLO and ELIZA are reported in Table 2. There was no
+MYLO was mean 24.17 min (SD 16.46), and the time spent in
+difference in reductions in problem-related distress over time
+conversation engaged with ELIZA was mean 15.17 min (SD
+between the 2 conversational agents (F =2.39; P=.13). There
+8.77). On average, MYLO was used for 9 min longer than 1,92
+was a significant main effect of time on distress regardless of
+ELIZA (t =3.309; P<.001).
+92 the conversational agent (F =55.85; P<.001). Problem distress
+2,84
+significantly reduced between baseline and follow-up (P<.001),
+but there was no significant postintervention to follow-up
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 5
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+reduction (P=.52). There was a significant interaction effect of baseline (t =0.428; P=.67) or postintervention
+92
+the type of conversational agent and time on problem distress (t =−1.593; P=.12). There were also no significant differences
+92
+(F =3.21; P=.04), although this was a weak effect
+2,84 between the 2 conversational agents regarding their abilities to
+(eta-squared=0.03). This interaction was further investigated enable problem resolution (F =2.32; P=.13). There was a
+1,92
+using ttests. The analysis showed that there was a significant
+significant effect of time on problem resolution (F =15.87;
+1,92
+difference between interventions at follow-up
+P<.001).
+(t =−2.013; P=.05), but no significant difference was found at
+92
+Table 2. Mean (SD) for measures at baseline, postintervention, and 2-week follow-up.
+Outcome measures Manage Your Life Online (n=47), mean (SD) ELIZA (n=47), mean (SD)
+Problem distress
+Baseline 6.17 (1.55) 6.02 (1.81)
+Postintervention 3.68 (2.14) 4.45 (2.51)
+2-week follow-up 3.21 (2.23) 4.23 (2.67)
+Problem solvability
+Baseline 4.09 (2.35) 3.55 (2.25)
+Problem resolution
+Postintervention 2.17 (2.62) 1.51 (2.74)
+2-week follow-up 3.77 (3.29) 3.04 (2.95)
+Depression, anxiety, and stress scales 21 total
+Baseline 27.06 (16.18) 28.51 (19.17)
+Postintervention 20.00 (14.59) 20.64 (15.04)
+2-week follow-up 16.13 (13.91) 17.19 (14.71)
+Helpfulness
+Postintervention 2.94 (2.89) 1.43 (1.86)
+2-week follow-up 3.23 (2.81) 1.91 (2.21)
+Use again
+Postintervention 4.21 (3.14) 2.45 (2.79)
+2-week follow-up 4.43 (3.48) 2.70 (3.04)
+System usability scale score
+Postintervention 63.56 (17.90) 56.97 (19.46)
+Clinical Outcome
+Helpfulness, Use Again, and System Usability
+There was no statistically significant difference in DASS-21
+There was a significant difference in helpfulness ratings over
+scores over time between the conversational agents (F =0.139;
+time between MYLO and ELIZA (F =8.801; P=.004). At 1,92
+1,92 P=.71). There was a significant main effect of time on total
+postintervention, MYLO (mean 2.94, SD 2.89) was rated as
+DASS-21 scores (F =33.538; P<.001). Total DASS-21
+significantly more helpful (t =3.016; P=.003) than ELIZA 1.830,168.368
+78.661 scores reduced significantly between baseline and
+(mean 1.43, SD 1.86). There was a significant main effect of
+postconversation (P<.001), between postconversation and
+time on system helpfulness ratings (F =4.627; P=.03). In
+1,92 follow-up (P=.02), and between baseline and follow-up
+terms of use again ratings, there was a significant difference
+(P<.001).
+between the conversational agents (F =8.772; P=.004), with
+1,92
+Usability and Acceptability of the Two Conversation
+MYLO users postintervention more likely to use the
+conversational agent again for a future problem (t =2.882; Agents
+92
+P=.005). There was no main effect of time regarding the use There were statistically significant, moderate positive
+again ratings (F =.816; P=.37). There were no significant correlations between MYLO system usability ratings and
+1,92
+differences in the postintervention system usability ratings postintervention ratings of helpfulness (r =0.546, P<.001) and
+45
+between MYLO and ELIZA (t =1.710; P=.09). It is worth interest in reusing MYLO (r =0.542, P<.001), and there was
+92 45
+noting that the system usability scores for both MYLO (mean a statistically significant weak positive correlation between
+63.56, SD 17.90) and ELIZA (mean 56.97, SD 19.46) were
+below the cut-off for an acceptable program (ie, <68).
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 6
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+MYLO system usability ratings and problem resolution There were statistically significant, moderate positive
+(r =0.420; P<.001; see Table 3for details). correlations between combined MYLO and ELIZA system
+45
+usability ratings and postintervention ratings of the helpfulness
+There was a statistically significant, weak positive correlation
+of MYLO/ELIZA (r =0.473; P<.001) and interest in reusing
+between the ELIZA system usability ratings and helpfulness 92
+MYLO/ELIZA (r =0.487; P<.001; see Table 5for details).
+(r =0.344; P<.001) and interest in reusing ELIZA (r =0.387; 92
+45 45
+P<.001) see Table 4 for details). Table 4 contains the
+helpfulness, use again, and SUS scores for MYLO and ELIZA.
+Table 3. Pearson Correlations for postintervention Manage Your Life Online ratings of system usability, problem resolution, helpfulness, and willingness
+to use Manage Your Life Online again.
+Variables System usability scale score Problem resolution Helpfulness Use again
+System usability scale score 1 0.42a 0.55a 0.54a
+Problem resolution 0.42a 1 0.78a 0.58a
+Helpfulness 0.55a 0.78a 1 0.79a
+Use again 0.54a 0.58a 0.79a 1
+aCorrelation is significant at the .01 level.
+Table 4. Pearson Correlations for postintervention ELIZA ratings of system usability, problem resolution, helpfulness, and willingness to use ELIZA
+again.
+Variables System usability scale score Problem resolution Helpfulness Use again
+System usability scale score 1 0.11 0.34a 0.39b
+Problem resolution 0.11 1 0.39b 0.26
+Helpfulness 0.34a 0.39b 1 0.72b
+Use again 0.39b 0.26 0.72b 1
+aCorrelation is significant at the .05 level.
+bCorrelation is significant at the .01 level.
+Table 5. Pearson Correlations for postintervention Manage Your Life Online and ELIZA ratings of system usability, problem resolution, helpfulness,
+and willingness to use Manage Your Life Online/ELIZA again.
+Variables System usability scale score Problem resolution Helpfulness Use again
+System usability scale score 1 0.27a 0.47a 0.49a
+Problem resolution 0.27a 1 0.61a 0.44a
+Helpfulness 0.47a 0.61a 1 0.78a
+Use again 0.49a 0.44a 0.78a 1
+aCorrelation is significant at the .01 level.
+Further tests of MYLO using simple linear regression usability score and use again (P<.001). The slope coefficient
+investigated the relationship between system usability score, for system usability was 0.095, so the resolution increased by
+helpfulness, use again, and problem resolution, with system 0.095 for each extra resolution point. The R2=0.294 indicated
+usability scores as the predictor variable. that 29.4% of the variation in use again was explained by the
+model containing only the system usability score. There was
+This revealed a significant relationship between the MYLO
+also a significant relationship between the MYLO usability
+system usability score and helpfulness (P<.001). The slope
+score and problem resolution (P=.003). The slope coefficient
+coefficient for system usability was 0.088, so the resolution
+for system usability was 0.095, so the resolution increased by
+increased by 0.088 for each extra resolution point. The R2=0.299
+0.095 for each extra resolution point. The R2=0.176 indicated
+indicated that 29.9% of the variation in helpfulness was
+that 17.6% of the variation in problem resolution was explained
+explained by the model containing only the system usability
+by the model containing only the system usability score.
+score a significant relationship between the MYLO system
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 7
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+Tests of ELIZA using simple linear regression investigated the intensity-low throughputapproach of traditional one-to-one and
+relationship between system usability score, helpfulness, use face-to-face psychological therapy delivery. The conversational
+again, and problem resolution, with system usability scores as agents were grounded in differing theories and approaches to
+the predictor variable. This revealed a significant relationship the resolution of psychological distress: MOL for MYLO [26]
+between the ELIZA system usability score and helpfulness and humanistic counseling for ELIZA [24]. However, the
+(P=.02). The slope coefficient for system usability was 0.033, conversational agents tended to enable problem resolution and
+so the resolution increased by 0.033 for each extra resolution reductions in problem-related distress, with MYLO showing
+point. The R2=0.118 indicated that 11.8% of the variation in significantly lower levels of problem-related distress at
+helpfulness was explained by the model containing only the follow-up. In terms of clinical outcomes, each chatbot enabled
+system usability score. There was also a significant relationship immediate reductions in DASS-21, with reductions being
+between the ELIZA system usability score and use again improved over the follow-up period.
+(P=.01). The slope coefficient for system usability was 0.055,
+Participants spent significantly more time using MYLO, but it
+so the resolution increased by 0.055 for each extra resolution
+is worth noting that the time spent using the program was brief
+point. The R2=0.150 indicated that 15.0% of the variation in in either arm (ie, an average of 20 min and this was a prompt
+use again was explained by the model containing only the in the instructions for using the program). Average time spent
+system usability score. using MYLO and ELIZA is just 10-min in working-age
+participants [29]. These results may indicate that adults aged
+Finally, tests of MYLO and ELIZA results using simple linear
+above 50 years are more willing to try and converse with a
+regression investigated the relationship between system usability
+program of this nature. The longer MYLO conversations may
+score, helpfulness, use again, and problem resolution, with
+be a consequence of the program’s more tailored and inquisitive
+system usability scores as the predictor variable. This revealed
+questioning algorithm. In contrast, ELIZA has benefited from
+a significant relationship between system usability score and
+only limited improvements to its algorithm since its original
+helpfulness (P<.001). The slope coefficient for system usability
+implementation in 1966. The helpfulness and use againratings
+was 0.063, so the resolution increased by 0.063 for each extra
+of ELIZA and MYLO were significantly different, with MYLO
+resolution point. The R2=0.224 indicated that 22.4% of the
+being experienced as differentially more helpful and also more
+variation in helpfulness was explained by the model containing
+likely to be used again by participants. As MYLO was
+only the system usability score. A simple linear regression was
+significantly more helpful, this may further explain why
+used again to investigate the relationship between system
+participants used MYLO for a significantly longer duration.
+usability score and use again, with system usability scores as
+These results mirror the evidence found in community
+the predictor variable. This revealed a significant relationship
+working-age samples [28,29]. It may be the case that if time
+between system usability score and use again (P<.001). The
+was allowed to be at the participant’s discretion, then ELIZA
+slope coefficient for system usability was 0.080, so the
+may have been rated just as helpful as MYLO.
+resolution increased by 0.080 for each extra resolution point.
+The R2=0.238 indicated that 23.8% of the variation in use again The second aim of this study was to investigate if system
+usability affected the acceptability of MYLO and ELIZA when
+was explained by the model containing only the system usability
+used by the older adults. Generally, correlations between MYLO
+score. There was also a significant relationship between usability
+system usability and problem resolution, helpfulness, and
+score and problem resolution (P=.01). The slope coefficient for
+interest in reusing the system were higher than those for ELIZA.
+system usability was 0.038, so the resolution increased by 0.038
+These findings indicate that chatbot system usability has an
+for each extra resolution point. The R2=0.072 indicated that
+impact on how users perceive and rate their experience of using
+7.2% of the variation in problem resolution was explained by
+a conversational agent. As Web-based delivery systems do not
+the model containing only the system usability score.
+have the benefit of a therapist to explain the rationale for certain
+interventions, it is essential that system usability ratings are
+Discussion
+systematically collected over the developmental iterations of
+the systems. This is so that when a chatbotgoes live, it is clear
+Principal Findings
+and easy to use. If a system is confusing or frustrating to use,
+The primary aim of this study was to compare the system
+then it is highly likely to be clinically ineffective; this arguably
+usability, helpfulness, and effectiveness of 2 conversational
+mirrors the evidence base concerning the therapeutic alliance
+agents (MYLO and ELIZA) with regard to problem solving
+in general psychotherapy [37].
+within a nonclinical older adult sample. This study was,
+therefore, a replication and extension of previous studies [28,29], The findings from this study appear consistent with accepted
+but this is the first study to compare these 2 conversational models of system usability (eg, International Organization for
+agents in an older adult sample. A secondary aim was to Standardization 2018 [38]). Although some previous studies
+examine the relationship between system usability and have also used the SUS as a measure of system usability in
+acceptability of 2 differing chatbots. This is an important e-therapies [39,40], it was a strength of this study to use this
+research because the ever-increasing demand for rapid access validated measure and is the first usage with an older adult
+to psychological interventions in public services means that population using a chatbot. It is worth noting that the theoretical
+alternative delivery methods need to be considered and tested. underpinning of the 2 conversational agents (MOL versus
+Such methods can replace or supplement the traditional high humanistic counseling) may have influenced the perceptions of
+helpfulness and, therefore, the willingness to reuse the system.
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 8
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+High rates of attrition are assumed to be a common problem developed and tested. The study would have benefited from a
+with unsupported Web-based interventions, but a meta-analysis longer follow-up period, and future studies should enable short-
+[41] has found that the percentage of completed sessions in and long-term follow-up. A possible innovation in future studies
+face-to-face CBT (83.9%) did not differ from the percentage of would be to adopt a patient preference trial methodology,
+completed sessions in internet-delivered CBT (80.8%). The whereby participants are offered the choice either MYLO or
+overall session completion found in this study was higher 92.2% ELIZA (ie, to suit their preference) and those participants that
+(94/102), but this was probably due to the intervention using a are ambivalent about the choice of chatbot can be randomized.
+single-session approach.
+Due to increasing referral pressure on mental health services,
+Limitations and Future Directions the flexibility of service delivery systems is important in
+reducing wait times for treatment, particularly in geographically
+The study is limited by the fact that it did not recruit enough
+remote regions. Approximately 5% to 15% of the older people
+participants, and therefore, results should be considered with
+also report chronic loneliness [42], and thus, chatbots appear
+due caution, due to being somewhat underpowered. It is possible
+to offer some potential in terms of offering conversational
+that the positive effects over time were due to either regression
+support to isolated older people. Talking with a conversational
+to the mean or natural recovery processes, rather than the impact
+agent may also be particularly useful for psychological disorders
+of the chatbots. It is worth noting that, based on the power
+involving high levels of shame and embarrassment. Indeed, the
+calculation, sufficient power was achieved for baseline to
+real utility of chatbots may be in supplementing traditional
+postintervention comparisons. Future studies comparing chatbots
+psychotherapies by reducing the number of sessions needed,
+in clinical samples would, therefore, benefit from randomly
+because the conversational agent can provide between-session
+allocating to a no treatment−passive control, to compare clinical
+support and the therapist can focus on challenging change work
+outcomes for conversational agents against any natural recovery
+during face-to-face treatment sessions. Similar models of
+rate. Participants were recruited from an organization whereby
+augmenting face-to-face therapy with electronic alternatives
+membership would imply that they were open-minded to new
+have been discussed by Broglia et al [43]. The manner in which
+experiences and willing to learn, and therefore, the results may
+conversational agents could be usefully integrated into care
+not generalize to other older adults in terms of willingness to
+pathways of routine psychological services needs to be explored.
+interact with a chatbot. It would also be useful to determine the
+average chatbotsession length, when the time of the session is Conclusions
+not recommended or limited or when there is a clinical problem
+In conclusion, this study sought to contribute to the evidence
+being discussed.
+base regarding the utility and effectiveness of chatbots for
+The prompt concerning conversations needing to last psychological problems. This was achieved by comparing and
+approximately 20 min may have impeded deeper engagement, testing 2 equivalent systems in terms of their acceptability,
+thus preventing problem resolution. In terms of future research, helpfulness, and effectiveness using a nonclinical older adult
+there are no published studies that investigate how the SUS sample. The results have proven to be both similar and different
+interacts with other dimensions of e-therapy, such as treatment from previous studies in working-age adults; MYLO is more
+credibility, and further studies should examine this in more helpful, but neither conversational agent differentially enabled
+depth. Future studies should also assess clinical populations problem resolution. Future controlled studies are clearly needed
+across the age ranges to evaluate if system usability and clinical to further evaluate the clinical and health economic utility of
+outcomes differ between diagnoses. If the primary outcome is conversational agents, but the context needs to be more clinical,
+problem solving, then a conversational agent that follows the outcomes need to be evaluated over longer periods, and system
+principles and stages of problem solving also needs to be usability needs careful consideration.
+Acknowledgments
+This work was supported by a Doctor of Philosophy studentship awarded by the University of Sheffield to the first author MB
+and an Economic and Social Research Council grant (number ES/L001365/1).
+Conflicts of Interest
+None declared.
+Multimedia Appendix 1
+Standard Protocol Items: Recommendations for Interventional Trials (SPRINT) diagram.
+[PNG File , 139 KB-Multimedia Appendix 1]
+References
+1. Richards D, Timulak L, Doherty G, Sharry J, Colla A, Joyce C, et al. Internet-delivered treatment: its potential as a
+low-intensity community intervention for adults with symptoms of depression: protocol for a randomized controlled trial.
+BMC Psychiatry 2014 May 21;14(1):147 [FREE Full text] [doi: 10.1186/1471-244X-14-147] [Medline: 24886179]
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 9
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+2. Kessler D, Lewis G, Kaur S, Wiles N, King M, Weich S, et al. Therapist-delivered internet psychotherapy for depression
+in primary care: a randomised controlled trial. The Lancet 2009 Aug 22;374(9690):628-634. [doi:
+10.1016/S0140-6736(09)61257-5] [Medline: 19700005]
+3. Bennion MR, Hardy GE, Moore RK, Kellett S, Millings A. e-Therapies in England for stress, anxiety or depression: how
+are apps developed? A survey of NHS e-therapy developers. BMJ Health Care Inform 2019 Jun;26(1):e100027 [FREE Full
+text] [doi: 10.1136/bmjhci-2019-100027] [Medline: 31171556]
+4. Helgadóttir FD, Menzies RG, Onslow M, Packman A, O'Brian S. Online CBT I: Bridging the Gap Between Eliza and
+Modern Online CBT Treatment Packages. Behav Chang 2009 Dec;26(4):245-253. [doi: 10.1375/bech.26.4.245]
+5. Carlbring P, Andersson G, Cuijpers P, Riper H, Hedman-Lagerlöf E. Internet-based vs face-to-face cognitive behavior
+therapy for psychiatric and somatic disorders: an updated systematic review and meta-analysis. Cogn Behav Ther 2018
+Jan;47(1):1-18. [doi: 10.1080/16506073.2017.1401115] [Medline: 29215315]
+6. Crabb R, Cavanagh K, Proudfoot J, Learmonth D, Rafie S, Weingardt K. Is computerized cognitive-behavioural therapy
+a treatment option for depression in late-life? A systematic review. Br J Clin Psychol 2012 Nov;51(4):459-464. [doi:
+10.1111/j.2044-8260.2012.02038.x] [Medline: 23078214]
+7. Elsegood K, Powell D. Computerised cognitive-behaviour therapy (cCBT) and older people: A pilot study to determine
+factors that influence willingness to engage with cCBT. Couns Psychother Res 2008 Sep;8(3):189-192. [doi:
+10.1080/14733140802163914]
+8. Botella C, Etchemendy E, Castilla D, Baños RM, García-Palacios A, Quero S, et al. An e-health system for the elderly
+(Butler Project): a pilot study on acceptance and satisfaction. Cyberpsychol Behav 2009 Jun;12(3):255-262. [doi:
+10.1089/cpb.2008.0325] [Medline: 19445633]
+9. Zou JB, Dear BF, Titov N, Lorian CN, Johnston L, Spence J, et al. Brief internet-delivered cognitive behavioral therapy
+for anxiety in older adults: a feasibility trial. J Anxiety Disord 2012 Aug;26(6):650-655. [doi: 10.1016/j.janxdis.2012.04.002]
+[Medline: 22659078]
+10. Dear BF, Zou J, Titov N, Lorian C, Johnston L, Spence J, et al. Internet-delivered cognitive behavioural therapy for
+depression: a feasibility open trial for older adults. Aust N Z J Psychiatry 2013 Mar;47(2):169-176. [doi:
+10.1177/0004867412466154] [Medline: 23152358]
+11. Spek V, Nyklícek I, Smits N, Cuijpers P, Riper H, Keyzer J, et al. Internet-based cognitive behavioural therapy for
+subthreshold depression in people over 50 years old: a randomized controlled clinical trial. Psychol Med 2007
+Dec;37(12):1797-1806. [doi: 10.1017/S0033291707000542] [Medline: 17466110]
+12. Titov N, Dear BF, Ali S, Zou JB, Lorian CN, Johnston L, et al. Clinical and cost-effectiveness of therapist-guided
+internet-delivered cognitive behavior therapy for older adults with symptoms of depression: a randomized controlled trial.
+Behav Ther 2015 Mar;46(2):193-205. [doi: 10.1016/j.beth.2014.09.008] [Medline: 25645168]
+13. Spek V, Cuijpers P, Nyklícek I, Smits N, Riper H, Keyzer J, et al. One-year follow-up results of a randomized controlled
+clinical trial on internet-based cognitive behavioural therapy for subthreshold depression in people over 50 years. Psychol
+Med 2008 May;38(5):635-639. [doi: 10.1017/S0033291707002590] [Medline: 18205965]
+14. Dear BF, Zou JB, Ali S, Lorian CN, Johnston L, Sheehan J, et al. Clinical and cost-effectiveness of therapist-guided
+internet-delivered cognitive behavior therapy for older adults with symptoms of anxiety: a randomized controlled trial.
+Behav Ther 2015 Mar;46(2):206-217. [doi: 10.1016/j.beth.2014.09.007] [Medline: 25645169]
+15. International Organization for Standardization. 2018. ISO 9241-11:2018(en) Ergonomics of Human-System Interaction-Part
+11: Usability: Definitions and Concepts URL: https://www.iso.org/obp/ui/fr/#iso:std:iso:9241:-11:ed-2:v1:en[accessed
+2018-04-13]
+16. Cavanagh K, Shapiro DA, van den Berg S, Swain S, Barkham M, Proudfoot J. The acceptability of computer-aided cognitive
+behavioural therapy: a pragmatic study. Cogn Behav Ther 2009;38(4):235-246. [doi: 10.1080/16506070802561256]
+[Medline: 19306147]
+17. Vis C, Kleiboer A, Prior R, Bønes E, Cavallo M, Clark SA, et al. Implementing and up-scaling evidence-based eMental
+health in Europe: The study protocol for the MasterMind project. Internet Interv 2015 Nov;2(4):399-409. [doi:
+10.1016/j.invent.2015.10.002]
+18. Kleiboer A, Smit J, Bosmans J, Ruwaard J, Andersson G, Topooco N, et al. European COMPARative Effectiveness research
+on blended Depression treatment versus treatment-as-usual (E-COMPARED): study protocol for a randomized controlled,
+non-inferiority trial in eight European countries. Trials 2016 Aug 3;17(1):387 [FREE Full text] [doi:
+10.1186/s13063-016-1511-1] [Medline: 27488181]
+19. Murray E, Hekler EB, Andersson G, Collins LM, Doherty A, Hollis C, et al. Evaluating digital health interventions: key
+questions and approaches. Am J Prev Med 2016 Nov;51(5):843-851 [FREE Full text] [doi: 10.1016/j.amepre.2016.06.008]
+[Medline: 27745684]
+20. Fisk AD, Czaja SJ, Rogers WA, Charness N, Sharit J. Designing for Older Adults: Principles and Creative Human Factors
+Approaches. Boca Raton, Florida, United States: CRC Press; 2009.
+21. Christensen H, Griffiths KM, Farrer L. Adherence in internet interventions for anxiety and depression. J Med Internet Res
+2009 Apr 24;11(2):e13 [FREE Full text] [doi: 10.2196/jmir.1194] [Medline: 19403466]
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 10
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+22. Cavanagh K. Turn on, tune in and (don’t) drop out: engagement, adherence, attrition, and alliance with internet-based
+interventions. In: Bennett-Levy J, Richards D, Farrand P, Christensen H, Griffiths K, Kavanagh D, et al, editors. Oxford
+Guide to Low Intensity CBT Interventions. London, UK: Oxford University Press; 2010:227.
+23. Vaidyam AN, Wisniewski H, Halamka JD, Kashavan MS, Torous JB. Chatbots and conversational agents in mental health:
+a review of the psychiatric landscape. Can J Psychiatry 2019 Jul;64(7):456-464 [FREE Full text] [doi:
+10.1177/0706743719828977] [Medline: 30897957]
+24. Rogers CR. A Way Of Being. Boston, Massachusetts, United States: Houghton Mifflin Harcourt; 1995.
+25. Turkle S. Life On The Screen: Identity In The Age Of The Internet. New York, New York, United States: Simon & Schuster;
+1997.
+26. Carey TA. The Method Of Levels: How To Do Psychotherapy Without Getting In The Way. Hayward, California: Living
+Control Systems Publishing; 2006.
+27. Powers WT. Behavior: The Control Of Perception. New Canaan, United States: Benchmark Publications; 1973.
+28. Gaffney H, Mansell W, Edwards R, Wright J. Manage Your Life Online (MYLO): a pilot trial of a conversational
+computer-based intervention for problem solving in a student sample. Behav Cogn Psychother 2014 Nov;42(6):731-746.
+[doi: 10.1017/S135246581300060X] [Medline: 23899405]
+29. Bird T, Mansell W, Wright J, Gaffney H, Tai S. Manage your life online: a web-based randomized controlled trial evaluating
+the effectiveness of a problem-solving intervention in a student sample. Behav Cogn Psychother 2018 Sep;46(5):570-582.
+[doi: 10.1017/S1352465817000820] [Medline: 29366432]
+30. U3A: University of the Third Age. About URL: https://u3a.org.uk/about[accessed 2018-10-26]
+31. Brooke J. SUS: A “Quick and Dirty” Usability Scale. Boca Raton, Florida, United States: CRC Press; 1996.
+32. Bangor A, Kortum PT, Miller JT. An empirical evaluation of the system usability scale. Int J Hum Comput Interact 2008
+Jul 30;24(6):574-594. [doi: 10.1080/10447310802205776]
+33. Sauro J, Dumas JS. Comparison of Three One-Question, Post-Task Usability Questionnaires. In: Proceedings of the SIGCHI
+Conference on Human Factors in Computing Systems. 2009 Presented at: CHI'09; April 4-9, 2009; Boston, MA, USA p.
+1599-1608. [doi: 10.1145/1518701.1518946]
+34. Brooke J. SUS: a retrospective. J Usability Stud 2013 Feb;8(2):29-40 [FREE Full text]
+35. Lovibond SH, Lovibond PF. Manual for the Depression Anxiety Stress Scales (Second edition). Sydney: Psychology
+Foundation of Australia; 1995.
+36. CyberPsych. 2008. Eliza, The Computer Therapist URL: https://www.cyberpsych.org/eliza/[accessed 2019-10-26]
+37. Flückiger C, Del Re AC, Wampold BE, Horvath AO. The alliance in adult psychotherapy: a meta-analytic synthesis.
+Psychotherapy (Chic) 2018 Dec;55(4):316-340. [doi: 10.1037/pst0000172] [Medline: 29792475]
+38. International Organization for Standardization. 2018. ISO 9241-11:2018(en), Ergonomics of human-system interaction —
+Part 11: Usability: Definitions and concepts URL: https://www.iso.org/obp/ui/fr/#iso:std:iso:9241:-11:ed-2:v1:en[accessed
+2018-04-10]
+39. Etzelmueller A, Radkovsky A, Hannig W, Berking M, Ebert DD. Patient's experience with blended video- and internet
+based cognitive behavioural therapy service in routine care. Internet Interv 2018 Jun;12:165-175 [FREE Full text] [doi:
+10.1016/j.invent.2018.01.003] [Medline: 30135780]
+40. de Wit J, Dozeman E, Ruwaard J, Alblas J, Riper H. Web-based support for daily functioning of people with mild intellectual
+disabilities or chronic psychiatric disorders: A feasibility study in routine practice. Internet Interv 2015 May;2(2):161-168.
+[doi: 10.1016/j.invent.2015.02.007]
+41. van Ballegooijen W, Cuijpers P, van Straten A, Karyotaki E, Andersson G, Smit JH, et al. Adherence to internet-based and
+face-to-face cognitive behavioural therapy for depression: a meta-analysis. PLoS One 2014;9(7):e100674 [FREE Full text]
+[doi: 10.1371/journal.pone.0100674] [Medline: 25029507]
+42. Pinquart M, Sorensen S. Influences on loneliness in older adults: a meta-analysis. Basic Appl Soc Psych 2001;23(4):245-266.
+[doi: 10.1207/s15324834basp2304_2]
+43. Broglia E, Millings A, Barkham M. Counseling with guided use of a mobile well-being app for students experiencing
+anxiety or depression: clinical outcomes of a feasibility trial embedded in a student counseling service. JMIR Mhealth
+Uhealth 2019 Aug 15;7(8):e14318 [FREE Full text] [doi: 10.2196/14318] [Medline: 31418424]
+Abbreviations
+ANOVA: analysis of variance
+CBT: cognitive behavioral therapy
+DASS-21: depression, anxiety, and stress scales 21
+e-therapies: electronic therapies
+MOL: method of levels
+MYLO: Manage Your Life Online
+SUS: system usability scale
+U3A: University of the Third Age
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 11
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JOURNAL OF MEDICAL INTERNET RESEARCH Bennion et al
+Edited by G Eysenbach; submitted 26.10.19; peer-reviewed by E Broglia, J Andrews, K Matsumoto; comments to author 16.11.19;
+revised version received 10.03.20; accepted 12.03.20; published 27.05.20
+Please cite as:
+Bennion MR, Hardy GE, Moore RK, Kellett S, Millings A
+Usability, Acceptability, and Effectiveness of Web-Based Conversational Agents to Facilitate Problem Solving in Older Adults:
+Controlled Study
+J Med Internet Res 2020;22(5):e16794
+URL: http://www.jmir.org/2020/5/e16794/
+doi: 10.2196/16794
+PMID: 32384055
+©Matthew Russell Bennion, Gillian E Hardy, Roger K Moore, Stephen Kellett, Abigail Millings. Originally published in the
+Journal of Medical Internet Research (http://www.jmir.org), 27.05.2020. This is an open-access article distributed under the terms
+of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted use,
+distribution, and reproduction in any medium, provided the original work, first published in the Journal of Medical Internet
+Research, is properly cited. The complete bibliographic information, a link to the original publication on http://www.jmir.org/,
+as well as this copyright and license information must be included.
+http://www.jmir.org/2020/5/e16794/ J Med Internet Res 2020 | vol. 22 | iss. 5 | e16794 | p. 12
+XSL FO (page number not for citation purposes)
+•
+RenderX

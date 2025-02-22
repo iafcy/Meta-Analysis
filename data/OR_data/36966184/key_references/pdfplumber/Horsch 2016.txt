@@ -1,0 +1,899 @@
+HealthTechnol.(2017)7:173–188
+DOI10.1007/s12553-016-0167-x
+ORIGINALPAPER
+Reminders make people adhere better to a self-help
+sleep intervention
+CorineHorsch1&SandorSpruit2&JaapLancee3&RogiervanEijk2&
+RobbertJanBeun2&MarkNeerincx1&Willem-PaulBrinkman1
+Received:14January2016/Accepted:7December2016/Publishedonline:23December2016
+#TheAuthor(s)2016.ThisarticleispublishedwithopenaccessatSpringerlink.com
+Abstract The experiment presented in this paper investi- tested opportunity and self-empowerment principles for re-
+gated the effects of different kinds of reminders on adher- minders to improve adherence, as well.
+ence to automated parts of a cognitive behavioural therapy
+for insomnia (CBT-I) delivered via a mobile device.
+Keywords Adherence .Reminders .Sleep .Self-help .
+Previous studies report that computerized health interven-
+Compliance .Insomnia
+tions can be effective. However, treatment adherence is
+still an issue. Reminders are a simple technique that could
+improve adherence. A minimal intervention prototype in
+the realm of sleep treatment was developed to test the 1Introduction
+effects of reminders on adherence. Two prominent ways
+to determine the reminder-time are: a) ask users when they Everyone forgets to do something now and then. The
+want to be reminded, and b) let an algorithm decide when consequences of forgetting to do something depend on
+to remind users. The prototype consisted of a sleep diary, what was forgotten. Some of these memory failures can
+a relaxation exercise and reminders. A within subject de- be fatal. Fogetting to buy milk is less problematic than
+sign was used in which the effect of reminders and two forgetting to take a sleeping baby out of a soon to be
+underlying principles were tested by 45 participants that hot car, or medical errors during surgery. The intention
+all received the following three different conditions (in to do something in the future is formed in prospective
+random order): a) event-based reminders b) time-based memory [1]. Everyone suffers from prospective memory
+reminders c) no reminders. Both types of reminders im- failures. In fact, Kliegel and Martin [2] state that 50–
+proved adherence compared to no reminders. No differ- 80% of everyday life forgetting is due to these prospec-
+ences were found between the two types of reminders. tive memory failures. Another study in the health do-
+Opportunity and self-empowerment could partly mediate main found that most of the preventable mistakes were
+adherence to filling out the sleep diary, but not to the prospective memory failures [3]. Not only medical pro-
+number of relaxation exercises conducted. Although the fessionals suffer from prospective memory failures, also
+study focussed on CBT-I, we expect that designers of patients suffer from it. For example, people forget to
+other computerized health interventions benefit from the take their pills. Forgetfulness, or prospective memory
+failure, is one of the main reasons [4–6].
+Several models attempt to explain how prospective
+* CorineHorsch
+memory works e.g., the preparatory attentional and
+c.h.g.horsch@tudelft.nl
+memory theory, the reflexive-associative theory, and
+the multi-process model [1]. The latter two theories in-
+1 DelftUniversityofTechnolgoy,Mekelweg4,2628CD, clude cues. The idea is that an intended action is asso-
+Delft,TheNetherlands
+ciated with a cue. When that cue occurs the intended
+2 UtrechtUniversity,Utrecht,TheNetherlands action is remembered automatically. Reminders provided
+3 UniversityofAmsterdam,Amsterdam,TheNetherlands for example by a smartphone can serve as these cues
+174 HealthTechnol.(2017)7:173–188
+and might play an important role in performing targeted endoscopy [26], for breast cancer screening [27], and sun-
+behaviour. screenuse[28].Anotherexample,regardinganappwithno-
+Remindershavebeenusedinvariousdomainsindifferent tifications,showedanincreasefrom12% to63% inlogging
+formsforalongtime.Rangingfromtyingastringaroundyour food intake on a mobile phone when reminders were given
+finger,self-writtennotes,toreminderssetonPDAs,watches, comparedtotheabsenceofreminders[29].Moreover,asys-
+andsmartphones.Foggdescribesthreetypesoftriggersinhis tematic review about reminders in cell phone interventions
+behavioural model [7]. He distinguishes sparks, facilitators, found a difference in20ofthe 25studies between the inter-
+and signals. A spark is a cue that enhances motivation. ventionandcontrolgroup[30].Thisindicatesthatreminders
+There are three core motivators that sparks can use: plea- improveadherenceandtheoutcomeofinterventions.
+sure-pain,hope-fear,andsocialacceptance-rejection.Afacil- Previousresearchsuggeststhatreminderscanbeeffective,
+itatorisacuethatmakesiteasiertoexhibitacertaintypeof to our knowledge, however, barely any empirical work has
+behaviour (enhances ability). A signal is a simple reminder been done regarding the underlying principles that explain
+used in cases where both motivation and ability are high. why these reminders work. This paper discusses and tests
+Another distinction in reminders can be made based on the two prominent reminder approaches: time-based reminders
+trigger method utilized. Various trigger methods are time- and reminders inspired by the interruptibility literature. The
+based, event-based, and location-based. An example of a time-basedremindersareself-setremindersinwhichtheuser
+time-based action is taking cookies out of the oven in canchoosethetime.Theotherremindersareautomaticevent-
+20 min, an example of an event-based action is bringing up based reminders, inspired by the Capability-Opportunity-
+anissueduringthenextmeeting,andalocation-basedaction MotivationBehaviour(COM-B)model[31].Herethesystem
+isthrowingaletterinamailboxwhenpassingby.Prospective detectsopportunemomentsandsendareminder.
+memoryalsomakesuseofthesetypeoftriggers,andresearch Adomainthatcanbenefitfromeffectiveremindersismo-
+hasshownthatpeopleperformbetteratevent-basedintentions bile insomnia treatment. People who suffer from insomnia
+than at time-based intentions [8]. Especially if target behav- have difficulties initiating or maintaining sleep [32]. Having
+iourhastobeperformedataspecifictime,peoplecouldben- insomnialeadstopersonalsuffering,likeareducedqualityof
+efitfromaremindersystem. life,andsocietalcosts,likereducedproductivity[33].Studies
+Furthermore, interruptibility has been studied extensively estimate that about 10% of the adults suffer from insomnia
+(e.g.[9–11]).Traditionally,taskcomplexity,taskduration,and [34]. Cognitive-Behaviour Therapy for Insomnia (CBT-I) is
+themomentofinterruptionhasbeenidentifiedasdetermining the treatment of choice for this disorder and fairly standard-
+factors for the appropriateness of an interruption [12]. izedinprotocols[35].CBT-Iconsistsofseveralexercisesthat
+Recently, mobile interruptibility studies shifted the focus to requiresbehaviourchanges,however,adherencetoCBT-Ire-
+the momentof interruption. Mobile studies have shown that mainsaproblem[22,36].Forinstance,adailysleepdiarythat
+smartphone notifications can have inappropriate timing [13, helps people to become aware of their sleep behaviour and
+14]. In mobile interruptibility studies context is often men- monitor progress is easily missed. Reminding people to do
+tionedasthedeterminingfactorfortheappropriatenessofan their exercises could be beneficial and provides opportunity
+interruption. Context, however, is a comprehensive concept totesttheeffectandunderlyingprinciplesofreminders.
+that is used differently in studies. For example, Ho and
+Intille [11] measure physical activity and appropriateness of
+interruptions, whereas Pielot and colleagues [15] use phone
+usagedatatoinferinterruptibility.Independentofthedefini- 2Reminderdesignandhypotheses
+tion of context that is used, all studies acknowledge the im-
+portanceofappropriatetiming. Earlierworkhasshownthatremindersprobablywork,butit
+Thereissubstantialevidencethatcomputerizedhealthin- mightdependonthedomain,thepatientdemographics,psy-
+terventionscanbeeffective[16–18].However,adherencere- chosocial and behavioural characteristics, etc. [37, 38]
+mains a challenge.Comparedtomoretraditionaltreatments, Therefore, the first step is investigating if reminders in an
+computerized interventions can be experienced as less bind- sleep intervention domain, delivered via a smartphone are
+ing,thereforeitiseasytodrop-out[19].Since,theefficacyof effective.So,hypothesis1is:
+treatmentispartlydeterminedbyadherence[20–23]itiscru-
+cialtooptimizeadherence[24].Oneofthereasonswhypeo- H1: Reminders increase adherence compared to no
+pledonotadheretohealthinterventionsisforgetfulness[22, reminders. When people are reminded to do something
+25].Remindersareasimpletechniquethatcouldhelpsolving they will do it more often, compared to situations in
+this particular problem of forgetfulness [25]. For example, whichtheyare not remindedto doit. Therewas nohy-
+earlier studies in the health domain have shown that mobile pothesis regarding an adherence difference between the
+text reminders increase show-up rates for gastrointestinal twotypesofreminder.
+HealthTechnol.(2017)7:173–188 175
+Figure1depictsthisandthefollowinghypothesesregard- theseself-setremindersshouldincreasethesenseofself-em-
+ingtheeffectofremindersandtheirunderlyingmechanisms. powerment,andthereforeincreasetreatmentadherence.
+2.1Self-setreminder H2: If self-set reminders are given, self-empowerment
+mediates adherence. When peoplereceive reminders at
+Having users set the reminder times themselves (instead timestheysetthemselves,theyfeelmoreempowered.In
+of automatically set reminders) might be an adequate which self-empowerment includes, perceived control,
+mechanism, because users know best when they have commitment and predictability. So, it was hypothesised
+time to perform an activity. Several psychological prin- thatself-setremindersincreaseperceivedself-empower-
+ciples support and explain why self-set reminders in- ment,andthatperceivedself-empowermentwasassoci-
+crease adherence. Firstly, the self-determination theory atedwiththeiradherence.Therefore,self-empowerment
+[39] states that supporting autonomy, competence, and could partlyexplain adherence,when self-setreminders
+relatedness increases people’s motivation and perfor- weregiven.
+mance. By giving users the control to set the reminder
+times, their autonomy is supported and thereby their
+motivation and performance increases. Secondly, the 2.2COM-Breminder
+consistency principle [40] states that humans want to
+be consistent in their attitudes, beliefs, perceptions, and Reminders can also be triggered automatically. The
+behaviours and they will change any of these when Capability-Opportunity-Motivation-Behaviour (COM-B)
+inconsistency is discovered. This suggests that, when model states that the possibility that people exhibit a behav-
+people set the reminder times themselves, they are more iour depends on the capability of a person, the opportunity,
+likely to follow-up on those reminders, because they and their motivation to exhibit that behaviour [31].
+want to be consistent. Thirdly, predictability could be Opportunity in thiscontext means the circumstances thatal-
+seen as a basic human motive. From an evolutionary lowsomeonetoexhibitthetargetedbehaviour.Forexample,
+viewpoint, higher predictability of (dangerous) events takingthestairs,insteadoftheelevator,isonlypossiblewhen
+gives a better chance of survival. Campbell and Tesser there are stairs (opportunity). Besides, it is easier to climb
+[41] construct the predictability motive from the human stairswhentheyarelocatedinfrontoftheentrance(opportune
+desire for certainty, the need for an understandable location),orwhencolleaguestakethe stairs(social opportu-
+world, and the need to be able to predict the environ- nity).Themodelsuggeststhatifpeoplearecapableandmo-
+ment. In line with this predictability motive, reminders tivated to exhibit the targeted behaviour, a reminder at an
+will be perceived more positive when arriving at pre- opportunemoment,improvesthechangeapersonwillexhibit
+dictable times, and adherence will benefit from this pos- this behaviour. This reminder design is in line with earlier
+itive attitude. workregardinginterruptibility.
+In conclusion, self-set reminders could help to improve
+adherencebecauseofthreeunderlyingprinciples.First,users H3:IfCOM-Bremindersaregiven,opportunitymedi-
+would probably feel more in control and therefore respond ates adherence. It was hypothesized that when people
+more positive to the reminders. Second, people might feel receive these automatic reminders, it was an opportune
+committedtotheirself-setreminders,whichwouldalsoelicit momenttoperformthetargetedbehaviour.Therefore,it
+more positive responses. Third, the reminders are more pre- was expected that opportuneness was associated with
+dictable when the users set the times themselves, and this people’sadherence,therebypartlyexplaininganincrease
+shouldalsoimprovetheresponsetoreminders.Insummary, inadherenceforCOM-Breminders.
+Fig.1 Thethreehypothesized
+relationshipbetweenthetypeof
+reminder,theexplainingconcepts
+andadherence
+176 HealthTechnol.(2017)7:173–188
+3Method receivedareminderforfillinginthediarythefirsttimethey
+turned on their phone in the morning. Reminders for the re-
+3.1Experimentaldesign laxationexercisesweregeneratedwhenpeople:a)wereatthe
+same physical place for more than one hour, since it was
+This field experiment had a within-subjects design with 45 regardedappropriatetotakeabreakwhensittingstillforsome
+participants who were exposed to three conditions during a time;b)endedaphonecall,andthuswerealreadydistracted
+total time of three weeks. In one condition participants re- from another (important) task; or c) used another app,1 and
+ceived no reminders to perform targeted behaviour, in the thus were already using their phone. Reminders were of
+other condition participants set the reminders themselves, course not generated when users already filled in their diary
+and the last condition consisted of automatic COM-B re- ordidtherelaxationexercise,orwereoccupiedwiththatac-
+minders. The order of the three conditions was counter- tivity.Moreover,thetimebetweentworeminderswasatleast
+balancedacrosstheparticipants.Thestudywasapprovedby 30min.
+Human Research Ethics Committee of Delft University of
+Technology.
+3.3Procedure
+3.2Theinterventionsystem
+Participantswererecruitedviasocialmedia,onlineadvertise-
+ments, the website www.ikgalekkerslapen.nl, and in
+Anappforpeoplesufferingfrominsomniawasdevelopedto
+university lectures. After giving online consent and
+test the two types of reminders. Since most people always
+completing the first questionnaire, participants were enabled
+carry their phones with them, smartphones were suitable for
+todownloadtheapp.TheSleepcareappranonAndroidOS
+reminders.Theappcontainedasleepdiary,arelaxationexer-
+versions from 2.3 and higher. Participants used their own
+cise,sleepoverviewgraphs,andreminders.Thetwodifferent
+smartphone with Internet connection for this experiment. A
+activities were chosen to measure adherence because they
+shortintroductiontextabouttheappwasshownthefirsttime
+havedifferentproperties.Forexample,itwasprobablyeasier
+participants opened the app (Fig. 2b). The participants were
+forpeopletospend1min,whichistheapproximatedtimefor
+instructed to fill out the sleep diary every day, and do the
+filling in the diary, than 7 min, which is the length of the
+relaxation exercise twice a day. However, they were free to
+relaxationexercise.
+usetheappinwhateverwaytheywanted.Aftereveryweek,
+Navigation in the app was done using the main menu participantsgotane-mailwithalinktothatweek’squestion-
+(Fig.2a),containingalltheelementsoftheapp.Intheintro-
+naireandtoinformthemaboutthechangeofcondition(with-
+ductionscreen(Fig.2b)ashortexplanationoftherelaxation
+in-subjects). Within two weeks after finishing the whole ex-
+exerciseandthesleepdiarywasgiven,aswellasinformation
+periment participants were contacted for a semi-structured
+about the reminders. Furthermore, the app contained a pro-
+telephoneinterview.
+gressivemusclerelaxationexercise(Fig.2c).Theinstructions
+Peoplewhogaveinformedconsent,butdidnotdownload
+were both visual on the screen in text and simultaneously
+theapp,receivedane-mailwiththequestionwhytheydidnot
+audible.Moreover,theappcontainedasleepdiaryconsisting
+proceed with the experiment or app. Also participants from
+offourscreenseachwithonequestiononit,respectively:(1)
+whomonlyafewdaysofdatawasreceived,gotasimilare-
+whattimedidyougotosleep?,(2)whattimedidyougetup?,
+mailtogaininsightinreasonsfornon-adherence.
+(3)indicatewhenyouwereawake,(4)whichscorewouldyou
+give your sleep? (Fig. 2d and e). Via a different menu-item
+3.4Measurements
+users could correct mistakes in their sleep diaries. An over-
+view ofusers’ tracked sleep was shown in a graphical over-
+PrimaryoutcomeandmediationmeasuresDuringtheex-
+view(Fig.2f).Thelastmenu-itemwassettings.Here,people
+periment,adherencewasmeasuredbylogginghowoftenthe
+couldchangethetimesoftheremindersintheself-setcondi-
+diarywasfilledout(0–7days),andhowoftentherelaxation
+tion.Participantschosethetimeforthreedailyreminders:one
+exercise was performed. These were the primary outcome
+reminder for filling out their sleep diary, and two others for
+measures.Themediationmeasureswerethelevelofperceived
+doingtherelaxationexercise.
+self-empowermentandthesuitabilityofthetimingofthere-
+For the automated reminders, we assumed that if people
+minders (opportunity). Both mediation measures were mea-
+download an app, they were able and motivated to use the
+sured using a questionnaire specially designedfor thisstudy
+app.Leavingonerequirementtoexhibitabehaviourtofulfil,
+consisting of 7-point Likert scale statements (Appendix 4).
+namelyopportunity.Theopportunitiestoexhibitthetargeted
+behaviour were automatically detected by the smartphone
+1Onlythetop-10appsintheNetherlandstriggeredareminder:Whatsapp,
+based onthesmartphoneusage.The sleep diary needs tobe
+Facebook,CandyCrush,Nu.nl,Twitter,NOS,Wordfeud,Minecraft,Wheres
+filled out as closely as possible to waking up. So, users MyWater,Ruzzle,Browser.
+HealthTechnol.(2017)7:173–188 177
+a.Mainmenu b.Introduc(cid:2)on screen c.Relaxa(cid:2)onexercise
+d. Sleepdiaryques(cid:2)on e. Diarygraphicalquestion f. Sleepdiaryoverview
+Fig.2 ScreenshotsoftheSleepcareapptranslatedfromDutch
+Bothconceptsweremeasuredinthetworeminderconditions thatbehaviour[31].Opportunitywasmeasuredasoneofthe
+toexamine if these conceptswere ableto explain adherence mediators and was expected to vary across the study.
+rates. Furthermore, motivation and ability were measured to Motivation and capability, on the other hand, were expected
+check the assumptions of the COM-B model. The COM-B tobeconstantduringtheexperiment,sotheywouldnotinflu-
+model states that the possibility that people exhibit a behav- enceadherence.Inordertocheckthisassumptionmotivation
+iour depends on the opportunity, the person’s motivation to wasmeasuredusingtheSituationalMotivationScale(SIMS)
+exhibitthatbehaviour,andthecapabilityofapersontoexhibit [42], consisting of Intrinsic Motivation (IM), Identified
+178 HealthTechnol.(2017)7:173–188
+Regulation (IR), External Regulation (ER), Amotivation whypeopleusedtheapp,whattheiropinionwasabouttheapp
+(AM). And ability was measured in three categories: ability andtheseparatepartsoftheapp,howpeopleusedtheapp,if
+to use a smartphone (AUS), ability to use the diary (AUD), they noticed any effect (on sleep or in other ways), if there
+andabilitytousetherelaxationexercise(AUR),using7-point wereanyirritations,andifpeoplehadideasforimprovements
+Likert scale statements (e.g. BI know how I can respond to oradditions(Seeappendix6fortheusedinterviewguide).
+notificationsonmysmartphone^)(Appendix2and5).
+3.5Participants
+Exploratory measures In order to perform more detailed,
+exploratory analyses that fall outside the main focus of the Intotaltherewere45participantswhousedtheappforthree
+paper,thefollowingmeasurementsweretaken.Firstly,anear- weeks(Fig.3),30femalesand15males.Theaverageagewas
+lierstudyshowedthatobjective(logged)andsubjective(self- 35 years (SD = 14). Their average ISI score was 13.5
+reported)adherencedeviatefromeachother[22].Therefore, (SD = 6.6), which is above the score of 10 (t = 2.60,
+participants’ own estimation about their adherence was ex- p<.05)thatisusedasacut-offforclinicallevelsofinsomnia
+plored.Thissubjectiveadherence(SA)wasmeasuredbythe [32]. The self-reported average of the ability to use a
+questions ‘How often did you fill in the sleep diary last smartphonewas5.7(SD=1.3)onascalefrom1to7,which
+week?’, and ‘How often did you do the relaxation exercise isanaverageratingonthepositivesideofthescale(t=6.26,
+lastweek?’(Appendix3).Becausebothobjectiveandsubjec- p<.01).
+tiveadherenceweremeasuredinthisstudythesetwoconcepts Althoughnostrongconclusionscanbedrawnfromarela-
+couldbecomparedtoeachotherandthereliabilityofpartic- tively arbitrary comparison with of the middle of the scale,
+ipants’ own estimation about their behaviour and adherence participants seem positive about their smartphone abilities.
+couldbederived. Intention touse the app was 6.5 (SD= 0.7)ona score from
+Behavioural intention (BI), locus of control (LoC), irrita- 1to7,whichalsoisanaverageratingonthepositivesideof
+tion(Irr)andappreciation,andeasinesstousetheappindaily the scale (t = 17.25 , p < .01). These scores suggested an
+life(ETI)weremeasuredtobeabletoexaminepossibleasso- adequate level of ability and motivation. As shown in
+ciationsbetweenthesevariablesandadherencerates.Thethe- Figs.3,143participantsfilledouttheonlineinformedconsent
+oryofplannedbehaviourstatesthatbehaviouralintentionpre- form and the pre-measurements and 87 participants
+dicts behaviour [43]. Therefore, behavioural intention (BI) downloadedtheapp.Fromallthose87participantsautomatic
+was measured using six questions (e.g. BI will follow the logfileswerereceivedwhichdescribetheirappusage(behav-
+instructions/advice from the app^). Locus of control (LoC) iourdata).However,noteveryonefilledintheweeklyonline
+was measured via a 18-item Dutch questionnaire [44]. A questionnaires.Sixteenparticipantsfilledinallthreequestion-
+higher internal locus of control has been found to influence naires, whereas 8 participants only filled in two question-
+diaryadherenceinanonlinelifestylediary[45].Irritationand naires. The data of these 24 participants was used for the
+appreciation were respectively measured with four 7-point analysesregardinghypothesestwoandthree.Twenty-onepar-
+Likertscalestatements,andassigningagradebetween1and ticipants filled in less than two questionnaires. Their logged
+10 for the different reminders and app components. behaviouraldata,togetherwiththedatafromthe24previous-
+Remindersthatirritatepeoplebecausetheyaredisruptive,or ly mentioned participants, was used for analysis regarding
+remindersthatarenotappreciatedmostlikelydecreaseadhere hypothesis one. Thirty-four participants only used the app
+[13,14,46]. for a few days, and 8 participants did not use the app at all.
+Similarly,ifanactivityishardtointegrateinpeople’sdaily Asaconsequencetheirdatawasnotusedfortheanalyses.
+life, the probability that people will perform the activity de-
+creases,sincepeople’sbehaviourareaffectedbytheprinciple 3.6Statisticalanalysesanddatapreparation
+of least effort[47]. Therefore, easinesstouse was measured
+with six 7-point Likert scale statements. Furthermore, the For data management and analyses, SPSS version 22 was
+Unified Theory of Acceptance and Use of Technology used. To test hypothesis 1 Friendman’s ANOVA tests were
+(UTAUT)measurestechnologyacceptanceandrelatesaccep- performed. Furthermore, posthoc Wilcoxon’s test were done
+tance to usage [48], thereby possibly explaining adherence. toinvestigatethedifferencesbetweentheseparateconditions.
+Moreover, to investigate the possible effect of this minimal Hypotheses2and3weretestedbyrepeatedmeasuresmedia-
+prototypeonsleeptheInsomniaSeverityIndex(ISI)wasused tionanalyses.Theanalysesweredoneinlinewiththemethod
+[49]. See the appendices for more details about these describedbyJuddetal.[50].Thefirststepinthismethodisto
+measures. test the overall treatment effects for the dependent variable
+At the end of the experiment participants were contacted (adherence),aswellasforthemediators(self-empowerment
+forasemi-structuredtelephoneinterviewtoexploretheirrea- andopportunity).Thismeanstestingforadifferenceinadher-
+sonsfor(none-)adherence.Thesubjectsofthequestionswere: encebetweenthethreeconditionsusingFriedman’sANOVAs
+HealthTechnol.(2017)7:173–188 179
+Fig.3 Flowdiagramofparticipantsintheexperiment.Qs=Questionnaires
+(thesameasusedtotesthypothesis1),andtestingforadif- Fortestinghypothesis1thebehaviouraldatacollectedvia
+ferenceinself-empowermentbetweenthetworemindercon- the app of 45 participants was used (Fig. 3). For testing hy-
+ditions using Wilcoxon’s test, and testing for a difference in potheses 2 and 3 the questionnaire data was needed. We
+opportunity between the two reminder conditions using hypothesised that participants just forgot to fill in a weekly
+Wilcoxon’s test. Although the original procedure suggests questionnaireunrelatedtotheweekandcondition,sothatthe
+not to proceed with mediation analysis if no differences are data was missing completely at random. Little’s MCAR test
+foundinthisfirststep,Zhaoetal.[51]claimthisistoostrict. confirmed this assumption (Chi-square < 0.001, df = 1692,
+Zhaoexplainsthatmediationcanoccurevenwhenthereisno p > 0.99). Therefore, hypotheses 2 and 3 were tested using
+totaleffectofindependentvariableonthedependentvariable, the data of the 16 complete datasets plus 8 datasets which
+sotheguidelinesofZhaoetal.[51]werefollowed.Thesec- missedoneweeklyquestionnaire(amountofmissingvalues:
+ondstepwasestimatingtheregressionequationgivenbyJudd 388/5064= 8%datapoints).Thismissing data was filledin
+etal. [50] (Box1)thatindicates mediatorand moderator ef- usingtheexpectationmaximizationmethod[52]usingallvar-
+fects. Four different regression equations were used with a iablesexceptthedemographics.
+bootstrappingsamplesof1000.Eachanalysistookasdepen-
+dentmeasureeitheradherencetothediaryorrelaxationexer-
+cises. Self-empowerment (SE) score or Opportunity (Opp) 3.6.1Exploratoryanalyses
+scorewereincludedasmediatorintheseanalyses.
+To explore a possible effect of the app on insomnia a t-test
+withtheISIscoresmeasuredbeforeandaftertheexperiment
+Box 1 Regression equation belonging to repeated measure mediation
+was performed.Furthermore, Cronbach’s alphaswere calcu-
+(Juddetal.,2001)
+latedfortheconceptsthatweremeasuredwithmultipleques-
+Y ¼ðδ −δ Þþ1ðδ −δ ÞX þ1ðδ þδ ÞX (1) tions,suchasopportunity(Opp),self-empowerment,andirri-
+Di 2 1 2 22 11 Si 2 22 11 Di tation (Irr). Items that affected Cronbach’s alphas negatively
+Y :Differenceindiary/relaxationadherencebetweenCOM-Band
+Di weredeletedresultinginCronbach’salphasrangingfrom.43
+Self-setcondition
+to.99(seeappendices).Theaveragescoresforeachconcept
+Y :Sumofselfempowerment/opportunityscoreinCOM-BandSelf-set
+Si condition were calculated with the remaining items. Next, Friedman’s
+Y :Differencebetweenselfempowerment/opportunityscoreinCOM-B and Wilcoxon’s tests were performed to test differences be-
+Di
+andSelf-setcondition tween conditions for repeated measures (Table 3). Besides,
+(cid:1) (cid:3)
+Mediationissuggestedifthe3rdcoeffecient 1ðδ þδ Þ issignificanct. correlationsbetweenadherenceandrepeatedlymeasuredvar-
+2(cid:1) 22 11 (cid:3)
+Moderationissuggestedifthe2ndcoeffecient 1ðδ −δ Þ issignificanct. iables were calculated using the procedure of Bland and
+2 22 11
+Altman[53].
+180 HealthTechnol.(2017)7:173–188
+The interviews were analysed in line with the method [50] procedure contains difference tests for the depen-
+of thematic analysis [54]. The first author (CH) familiar- dent variable and the mediators. The analyses done for
+ized herself with the data by conducting the interviews hypothesis 1 already showed a difference in adherence
+and transcribing the audio files. The data of all the par- (dependent variable) between the two conditions. The
+ticipants was then organized per question, and codes were differences for the mediators are shown in Table 3.
+added to the answers. Lastly, the codes were grouped Self-empowerment scores were on average higher in
+together in themes and a brief summary of the general the self-set condition than in the COM-B condition
+gist was written. (Table 3). The opportunity scores were on average
+higher in the self-set condition than in the COM-B con-
+dition for the relaxation exercise, for the diary this dif-
+4Results ference was not significant (Table 3). The second step
+of the repeated measures mediation analyses contains
+4.1Hypothesis1–theeffectofreminders the four regression equations (Box 2). In the mediation
+analysis on the number of diary entries for self-
+Theresultsconfirmedhypothesis1.Inthenoremindercondi- empowerment (SE) we found a significant positive me-
+tion a median of 4 (IQR = 6) filled in diaries per week was diation effect, whereby increase in self-empowerment
+was associated with increase in adherence. The second
+found,andamedianof0(IQR=6)performedrelaxationex-
+ercisesweredone.Intheself-setreminderconditioninmedian mediation analysis on diary adherence included oppor-
+of 6 (IQR = 2) was found for the diaries, and a median of 1 tunity (Opp) score as mediator. The analysis found also
+a significant mediation effect. Here an increase in op-
+(IQR=3)fortherelaxationexercise.IntheCOM-Bconditiona
+medianof7(IQR=3)filledindiarieswasfound,andamedian portunity score coincides with increase in number of
+of1(IQR=5)fortherelaxationexercises(Table1).Friedman’s diary entries filled out. Two similar mediation analyses
+ANOVA’s showed differences between the conditions for the were conducted on the adherence of the relaxation ex-
+numberofdiariesfilledin(χ2(2)=14.63,p=.001),andforthe ercise. No significant mediation effects were found.
+numberofrelaxationexercisesdone(χ2(2)=9.04,p=.011). The COM-B model assumes that participants are able
+Tofurtherinvestigatethedifferences,Wilcoxontestswereper- and motivated to perform the targeted behaviour. To test
+formed in which the p-values were tested against Bonferroni these assumptions the scores for ability and motivation
+correctedα-levelof.0167.Theseanalysesshowedadifference are reported. On a seven-point scale (values 1–7) gen-
+between the condition without reminders and the conditions eral ability (AUS) to use a smartphone was 5.7, ability
+with reminders, but no differences were found between the to fill in the diary was 6.6, and ability to do the relax-
+ation exercise was 5.5. These high values seem to con-
+tworeminderconditions(Table1).
+firm our assumption about participants’ capability. The
+identified regulation (IR) scores were the highest among
+4.2Hypothesis2andhypothesis3–mediation
+the motivation scores, which suggests that participants
+were mostly using the app, because they wanted to use
+Hypotheses two and three were confirmed by repeated
+the app. Furthermore, the average amotivation (AM)
+measures mediation analyses. The first step of Judd’s
+scores were low. These values again seem to confirm
+our assumption about participants’ motivation.
+Table 1 Wilcoxon tests with Bonferroni correction showing
+differences between noreminderand a reminder, but not between the
+twotypesofreminders Box2Regressionequationsbelongingtotherepeatedmediationanalyses
+Numberoffilledindiaries: Regressionfunctions
+NoReminder(Mdn=4)vs. T=95.5,p=.002,r=−.27 Diaryadherence Y Di= −2.39+0.14X Si+0.39*X Di
+Self-Set(Mdn=6) (diaryself-empowerment):
+NoReminder(Mdn=4)vs. T=67.0,p<.001,r=−.31 Diaryadherence Y Di= −3.17+0.32X Si+0.48**X Di
+COM-B(Mdn=7) (diaryopportunity):
+Self-Set(Mdn=6)vs. T=152.0,p=.78,r=−.02 Relaxationadherence Y Di=0.31−0.05X Si−0.24X Di
+COM-B(Mdn=7) (relaxation
+Numberrelaxationexercisesdone: self-empowerment):
+NoReminder(Mdn=0)vs. T=42.5,p=.001,r=−.28 Relaxationadherence(relaxation Y Di=2.22−0.35X Si−0.25X Di
+opportunity):
+Self-Set(Mdn=1)
+NoReminder(Mdn=0)vs. T=84.0,p=.011,r=−.22
+*p<.001,95%CI0.14–0.59,
+mediation
+COM-B(Mdn=1)
+Self-Set(Mdn=1)vs. T=192.5,p=.81,r=−.02 **p=0.45,95%CI0.03–0.95,
+COM-B(Mdn=1) mediation
+HealthTechnol.(2017)7:173–188 181
+4.3Exploratoryanalyses technology,c)inappropriatetiming,andd)otherreasons.The
+most prevalent problem was downloading the app. The app
+Table2showsthatfourvariableswereassociatedwithadher- wasprovidedviatheGooglePlaystoreasatestversion,mean-
+ence.Diaryadherencewascorrelatedtobehaviouralintention ing participants had to become part of a Google group, as a
+andabilitytousethediary(AUD).Relaxationadherencewas result,peoplehadtoperformextrasteps,whichcausedprob-
+correlated to the appreciation for the relaxation exercise and lems for people. Furthermore people experienced problems
+thegeneralabilitytouseasmartphone(AUS).Ascanbeseen with the technology, e.g. their Android version was too old,
+theUTAUTconceptswerenotfoundtobecorrelatedneither or their smartphone broke. Besides technology-related prob-
+to diary nor relaxation adherence. There was a significant lems,peoplementionedthatthetimingforusingtheappwas
+difference in sleep severity (ISI) before (M = 13.50, notconvenientbecausetheywere,forexample,rehousingor
+SD = 6.60) and after intervention (M = 11.28, SD = 6.03) on holiday. Other reasons for dropping out were that people
+t(23) = 2.74, p = .012, r = .50 . Althoughpeoplesuffer less foundanothersolutionfortheirsleepingproblem,theydidnot
+from insomnia after using the app, it was not a clinically noticeaneffect,ortheysimplyforgottouseit.
+meaningful difference, which is set on a 6-point reduction
+[55].
+4.5Interviews
+Table3showsthevariablesthatweremeasuredrepeatedly.
+Self-empowerment(SE)differedovertheconditionsforboth
+Theinterviewsindicatedthatmostpeoplewerepositiveabout
+the diary and the relaxation exercise. The opportunity score
+thesleepdiaryB[aboutthediary]Itjustworkedwell,itwas
+(Opp) only differed for the relaxation exercise, not for the
+crispandclear,Ididnothaveanyproblems.^(female,35yr).
+diary. In addition, there was a correlation between self-
+In contrast to the relaxation exercise, which induced more
+empowermentanddiaryadherence,andbetweenopportunity
+diverseopinions.Somepeoplehadapositiveattitudetowards
+anddiaryadherence.Thesecorrelationswerenotfoundforthe
+the relaxation exercise B I was surprised that such an easy
+relaxationexercise.
+relaxation exercise helped me that much. I just had to do it
+every day.^ (female, 39 yr), others thought the exercise was
+4.4Drop-outs boringBTherelaxationexercisewasso-so,especiallybecause
+everytimeitwastheexactsameexercise,soafterthreedaysI
+Thirty people responded to the question why they did not wasboredwithit.^(female,34yr),andotherspreferedtodo
+downloadtheapporuseditverylittle.Themainreasonswere their own relaxation exercises with whichtheywere already
+a)unsuccessfulindownloadingtheapp,b)problemswiththe familiar BI only did the relaxation exercise once or twice,
+Table2 Meansandstandarddeviationsofthemeasurements,andtheircorrelationswithbehaviouraladherence
+Measures(n=24) Mean(SD) Pearson’sCorrelations Mean(SD) Pearson’sCorrelations
+Diary Relax Diary Relax
+Pre-measures UTAUT-concepts(post)
+AUS 5.71(1.28) –.20 –.43* Utility 5.03(1.26) .37 .20
+Behaviouralintention 6.48(0.70) .62** .30 Effort 6.41(0.58) .39 .33
+LocusofControla 7.08(3.44) .10 .05 Socialinfluence 2.30(1.45) –.15 –.13
+InsomniaSeverity 13.50(6.60) .18 -.15 Facilitatingconditions 4.93(1.48) .21 .16
+Attitude 5.91(0.81) .09 .31
+Post-measures Self-efficacy 6.73(0.53) .25 –.21
+Appreciationdiaryb 8.09(1.77) .39 - Anxiety 1.95(1.12) .27 .19
+Appreciationrelaxb 5.74(2.36) - .53** Trust 5.43(1.19) .36 .16
+Appreciationappb 7.31(1.55) .35 .32 Behaviouralintention 5.87(0.81) .27 .10
+AUD 6.63(0.76) .59** -
+AUR 5.46(1.64) - –.04
+InsomniaSeverity 11.28(6.03) –.01 –.21
+AUSAbilitytoUseaSmartphone,AUDAbilitytoUsetheDiary,AURAbilitytoUsetheRelaxationexercise
+ascalerangesfrom0to18,higherscoresmeanhigherexternallocusofcontrol
+bgradegivenbytheparticipantfortheindicatedcomponentmeasuredonascalefrom1to10
+*p<.05,**p<.01
+182 HealthTechnol.(2017)7:173–188
+Table3 Meansandstandarddeviationsoftherepeatedmeasures,thedifferencebetweenconditionsforthesemeasures,andtheircorrelationsacross
+conditionswithbehaviouraladherence
+Diary Relaxation
+NR Self-Set COM-Bc r NR Self-Set COM-Bc r
+Measures
+SE 4.72(0.86) 3.84(0.78)** .50* 4.36(1.06) 3.07(0.89)** –.18
+Opp 5.46(1.17) 5.33(1.46) .45* 3.70(1.50) 2.98(1.59)* .11
+SA 6.21(1.76) 6.56(1.01) 6.26(1.59) .67** 6.65(5.31) 7.63(5.09) 6.44(4.14) .82*
+Sat 5.89(1.62) 6.22(1.32) 6.19(1.43) .57** 3.84(2.14) 4.18(1.99) 3.48(1.97)* .18
+ETI 5.65(1.24) 5.67(1.10) 5.94(1.08) .33* 3.79(1.81) 3.96(1.49) 3.45(1.59) .00
+Irra 5.31(1.01) 5.44(1.31) .62** 5.12(1.36) 4.23(1.79)* –.13
+IM 3.88(1.07) 4.39(1.28) 4.52(1.20)** .30* 3.46(1.01) 3.62(1.12) 3.57(1.20) .28*
+IR 5.19(1.17) 5.22(1.06) 5.36(0.99) .25 4.92(1.37) 5.07(1.27) 5.07(1.32) .19
+ER 3.19(1.31) 3.34(1.56) 3.53(1.18) .01 3.23(1.44) 3.19(1.39) 3.35(1.56) .14
+AM 1.91(1.32) 2.21(1.08) 2.12(1.39) .27 2.80(1.55) 2.59(1.26) 2.64(1.33) .09
+Measuredafterthecondition Measuredafterthewholeexperiment
+Self-Set COM-Bc NR Self-Set COM-Bc
+Appreciationb 5.78(2.80) 4.96(2.29) 4.74(3.04) 7.78(2.04) 4.22(2.67)**
+AMAmotivation,ERExternalRegulation,ETIEasytoinitiate,IMIntrinsicMotivation,IRIdentifiedRegulation,IrrIrritation,OppOpportunity,r
+Pearson’scorrelationbetweenmeasuredvariableandadherence,SASubjectiveAdherence,SatSatisfactionwithadherence,SESelf-Empowerment
+a thelowerthenumber,thehighertheirritation
+b appreciationoftheremindertypemeasuredfrom1to10afteracondition,andafterthewholeexperiment
+c *inthiscolumnmeansthereisasignificantdifferencebetweenconditions
+*p<.05,**p<.01
+becauseIalreadydobreathingandmeditationexercises.So, compared to the no reminder condition. Both reminders in-
+the relaxation exercise in the app didn’t have any added creasedadherencetherebysupportingthefirsthypothesis.The
+value.^ (male, 27 yr). About the reminders participants said resultsshowedthatitdidnot matterwhich kindofreminder
+thattheCOM-Breminderswereannoyingandthatthetiming participants received. Support for hypotheses two and three
+wasbadBWell,thereminderscamerandomly,andthenIex- was also obtained, as we found significant mediating effects
+perienced them as bothersome.^ (female, 54 yr). In general, of self-empowerment and opportunity on adherence for the
+theself-setreminderswereperceivedastimedbetterBIhave sleep diary in the regression analysis. However, no support
+theimpressionthattheself-setremindersworkedbestforme. forhypothesistwoandthreewerefoundregardingmediation
+Thosereminderscameattherightmoments.^(female,20yr), effectsofself-empowermentandopportunityonadherenceto
+although a few people thought differently BThe self-set re- the relaxation exercise. The results of the regression analyses
+minders were actually not much better than the automatic showedapartlymediation,thismeansthatfortheself-setre-
+ones. Both came often at inconvenient times.^(female, minders, the associated feeling of self-empowerment can ex-
+56 yr). In case people do not get any reminders, they just plain part of the diary adherence. For the COM-B reminder,
+forget to do an activity BIt was inconvenient when I did not oneexplainingfactorispeople’sperceptionthatthereminders
+get a reminder, because then I forget to do the activities.^ weregivenatopportunemoments.Besidesself-empowerment
+(female,34yr).Interestingwasthatsomepeoplewerewaiting andopportuneness,differentmechanismsarelikelyatplayto
+fortheremindertoarriveandperformtheactivity,eveninthe whypeopleadheretothereminders.
+NoReminderconditionBWhenIdidnotgetanyreminders,I The findings show that perceived self-empowerment was
+waskindofwaitingforthem^(female,56yr). higherintheself-setreminderconditionthanintheCOM-B
+reminder condition, as expected. Opportuneness of the re-
+mindersbetweenthetwoconditionsonlydifferedforthere-
+5Discussionandconclusion laxation exercise (in opposite direction to expectation), but
+wasnotfoundforthediaryentries.Thelackindifferencein
+Inthispaper,wetestedremindersinamobilesleepinterven- opportunenesshasprobablybeencausedbytheactualtiming
+tion. Onaverage,participantsfilledout the sleep diary more oftheremindersforthediary,whichdidnotdifferthatmuch
+oftenwithremindersthanwithoutreminders.Also,therelax- betweenthetwoconditions.IntheCOM-Bconditionadiary
+ationexercisewasperformedmorefrequentlywithreminders reminder was sent the first time someone turned on their
+HealthTechnol.(2017)7:173–188 183
+phonewhichismostlikelyshortlyaftertheywake-up,inthe Thereforenotallparticipantscouldbeincludedintheanaly-
+self-set condition people probably set the diary reminder a sis,andsomemissingdatawasestimated.Nonetheless,field
+shorttimeaftertheywake-upaswell.So,timingforthediary studiesarenecessarytoecologicallyvalidatemobileinterven-
+reminderinthetwoconditionsweremostlikelyverysimilar. tions,andirreplaceablewhenstudyingadherence.
+Exploratory analyses provided more insights in which To fully appreciate the findings, it is important to
+cases underlying principles, such as self-empowerment consider the study’s limitations. The main limitation of
+and opportuneness, play a role. From the interviews this study is the implementation of the COM-B re-
+we learned that participants had a negative attitude to- minders. A relative simple algorithm was implemented
+wards the relaxation exercise. This observation was sup- to detect opportune moments to perform the target be-
+ported by the relative low appreciation scores given to haviour. However, as mentioned before, this might have
+the relaxation exercise (5.7 on a scale from 1 to 10). resulted in diary reminders to occur at similar moments
+This suggests that a positive attitude towards the activ- in the two reminder conditions. Furthermore, the algo-
+ity might be a precondition for factors such as self- rithm did not anticipate on participants who use their
+empowerment and opportuneness to come into play. In phone minimally. For example, participants might not
+case of a negative attitude, which is the case for the have received COM-B reminders, if they did not use
+relaxation exercise, self-empowerment and opportunity WiFi. Future research might therefore explore ways to
+did not explain adherence. A negative attitude probably improve the algorithm. Another limitation is the extent
+deters people from exhibiting the targeted behaviour, of the intervention system. Applications that offer more
+irrespective of the level of perceived self-empowerment support, such as cognitive therapy or sleep restriction,
+or opportuneness of the moment. Therefore, another sort might elicit more positive usage attitude. Adherence to
+of trigger might be more suitable for the relaxation reminders might be higher in these applications. On the
+exercise. other hand, applications that offer little support to which
+Several mechanisms have been suggested for why people have negative attitudes might also benefit from
+people adhere to reminders. Fogg describes three types reminders. For example, adherence to mundane tasks
+of triggers in his behavioural model [7]. If we apply such as hour registration, might improve due to re-
+Fogg’s categorization of triggers, the reminders in this minders. Next to self-empowerment and opportuneness,
+experiment mostly resemble signals. We speculate how- other underlying principles, like obligation to employers,
+ever that the relaxation exercise would benefit more probably play a role in such processes.
+from sparks than from signals, since the appreciation Themaincontributionofthisstudycanbesummarizedby
+for the relaxation exercise was low. According to Fogg two new insights. First, the study shows that reminders do
+(2009) there are three core motivators that sparks can improve adherence to target behaviours such as keeping a
+use: pleasure-pain, hope-fear, and social acceptance-re- sleep diary and performing relaxation exercises. This is im-
+jection. For the relaxation exercise the reminder could portantasadherencehasbeenassociatedwithtreatmenteffect
+for example emphasize the relaxed state people experi- [22]. Second, self-empowerment and opportunity can partly
+ence (pleasure) while doing the relaxation exercise. explainwhypeoplefollowuponremindersandperformthe
+Future research could explore the effect of these differ- desiredactivity.
+ent types of reminders.
+When examining adherence, it is important to study the Compliancewithethicalstandards Allproceduresperformedinstud-
+participants who dropped-out.By studying the drop-outs in- ies involving human participants were in accordance with the ethical
+standardsoftheinstitutionaland/ornationalresearchcommitteeandwith
+sightcanbegainedabouttheunderlyingreasonsfornotdoing
+the1964Helsinkideclaration andits later amendmentsorcomparable
+something. Approximately half of the participants who
+ethicalstandards.
+downloaded the app onlyusedit for a few days oreven did
+notuseitatall.Wedidourbesttocontactthosepeopleand Informedconsent Informedconsentwasobtainedfromallindividual
+discovertheirreasons,whichweremainlytechnicalproblems, participantsincludedinthestudy.
+andinappropriatetimingtoparticipateinthestudy.Thepos-
+Funding This research is funded by Philips and Technology
+sible implications of these drop-outs for our results are un-
+FoundationSTW,NationaalInitiatiefHersenenenCognitieNIHCunder
+known. It might be the case that more persevere people, or
+thePartnershipprogramHealthyLifestyleSolutions.
+peoplethatalreadyheavilyusetheirphoneparticipatedlonger
+in the experiment. Apart from drop-outs, increasing experi- Conflictofinterest Corine Horsch declares that she has no conflict
+mentalcompliance(e.g.fillinginweeklyquestionnaires)also of interest.
+SandorSpruitdeclaresthathehasnoconflictofinterest.
+requiresattentiontoobtaintherequireddataset,especiallyin
+JaapLanceedeclaresthathehasnoconflictofinterest.
+experimentsinthefield.Inthisstudyapproximately50%of
+RogiervanEijkdeclaresthathehasnoconflictofinterest.
+theparticipantswhousedtheappfilledinthequestionnaires. RobbertJan.Beundeclaresthathehasnoconflictofinterest.
+184 HealthTechnol.(2017)7:173–188
+MarkNeerincxdeclaresthathehasnoconflictofinterest. If I have a question about the app, I will search for an
+Willem-PaulBrinkmandeclaresthathehasnoconflictofinterest.
+answer
+Locusofcontrol
+Appendix
+Locus of control (LoC) was measured via a 18-item Dutch
+Measurementoverview
+questionnaire[44].Ahigherinternallocusofcontrolhasbeen
+foundtoinfluencediaryadherenceinanonlinelifestylediary
+Pre-measures Week1,2,and3 Post-measures [45].Higherscoresindicateahigherexternallocusofcontrol
+[44].
+InsomniaSeverity Objectiveadherence InsomniaSeverity
+Index
+Weeklyquestionnaire
+GSMusageability Subjectiveadherence Abilitytoperform
+activity
+Behavioural Satisfactionwith Scoreforthereminders Adherence
+intention adherence
+LocusofControl Easytoinitiate Rankingofthe
+Diary
+reminders
+Howmanytimesdidyoufillinthediarylastweek?Ifyou
+ifreminder UTAUT:
+don’tknowitexactly,estimateittoyourbestability
+Score/grade Utility
+Whydidyounotfillinthediaryonsomedays?
+forreminder
+Opportunity Effort I am satisfied with how often I have completed the diary
+Control Socialinfluence lastweek.
+Predictability Facilitating How many reminders did you get the past week about
+conditions fillinginthediary?Ifyouarenotsure,trytoestimateit.
+Commitment Attitude Relaxation
+MotivationDiary Self-efficacy How many times did you do the relaxation exercise
+MotivationRelax Anxiety last week? If you don’t know it exactly, estimate it to
+Irritation Trust your best ability
+Remarks* Behaviouralintention Whydidyounotdotherelaxationexerciseonsomedays?
+I am satisfied with how often I have done the relaxation
+Allmeasureswereusedintheex-
+exerciselastweek.
+pectation maximisationalgorithm
+How many reminders did you get the past week
+tofillinmissingdata,exceptthe
+remarksdenotedby* about doing the relaxation exercise? If you are not sure,
+try to estimate it.
+Pre-treatmentquestionnaire General
+On a scale from 1 to 10, with 1 being the lowest and 10
+GSMability beingthehighestrating.Whatgradewouldyougivethiskind
+ofreminder?
+Iknowhowtousemysmartphone
+I know how I can respond to notifications on my Easytoinitiate
+smartphone
+OtherappsthatIuse,sendmereminderssometimes Easiness to use was measured with four 7-point Likert
+Iregularlysetremindersmyselfusingmysmartphone scale statements. If an activity is hard to integrate in
+people’s daily life, the probability that people will per-
+Behaviouralintention form the activity decreases, since people’s behaviour are
+affected by the principle of least effort [47].
+Thetheoryofplannedbehaviourstatesthatbehaviouralinten- Diary
+tionpredictsbehaviour[43].Therefore,behaviouralintention Itwashardtomaketimetofillinthediary
+(BI)wasmeasuredusingthesixquestionsbelow. Fillinginthediarywaskindofahabitforme
+Iplantousetheappfor3weeks Relaxation
+Iwillfollowtheinstructions/advicefromtheapp The relaxation exercises were easy to integrate into my
+Iplantocompletemysleepdiaryeveryday dailyroutines
+Iwilldefinitelylookattheoverviewofmysleepdata Ihadtoputinalotofefforttonotforgettodotherelaxation
+Iamplanningtodotherelaxationexercisetwiceaday exercise
+HealthTechnol.(2017)7:173–188 185
+Motivation Ifeltuncomfortableignoringtheremindersforthediary
+WhenIactedontheremindersforthediaryIfeltcontent
+For measuring motivation the Situational Motivation Scale IfeltguiltywhenIdidnotrespondtotheremindersforthe
+(SIMS)[42]wasused. diary
+Cronbach’salpha’s:Self-set:.527,COM-B:.797
+WeeklyReminderquestionnaire Commitment-Relaxation
+IhadthefeelingIdidnotstick.toanagreementifIignored
+Opportunity theremindersfortherelaxationexercises
+Iownedittomyselftofollowtheremindersoftherelaxa-
+Diary tionexercise.
+Theremindersforthediaryarrivedatinopportunetimes. I did not have any trouble ignoring the reminders for the
+Theremindersforthediaryweretimedwell. relaxationexercises.
+Ialwaysrespondedtotheremindersofthediary. Cronbach’salpha’s:Self-set:.629,COM-B:.616
+Cronbach’salpha’s:Self-set:.443,COM-B:.718
+Relaxation Irritation
+Theremindersfortherelaxationexerciseweresentatthe
+righttime. Irritation was measured with six 7-point Likert scale state-
+Ioftendismissedthereminderfortherelaxationexercise, ments. If people were irritated by the reminders the chance
+becauseitthetimewasinappropriate. theywilladheredecreases[46].
+Reminders for the relaxation exercises came at times that Diary
+didnotsuitme. Igottomanyremindersforthediary
+Cronbach’salpha’s:Self-set:.776,COM-B:.789 Iappreciatedtheremindersforthediary
+Iwasannoyedbytheremindersforthediary
+Self-Empowerment Cronbach’salpha’s:Self-set:.627,COM-B:.744
+Relaxation
+Control-Diary Ithinktheremindersfortherelaxationexercisesarenice
+IthinkthatIhadenoughinfluenceontheremindersforthe Igotmadwiththeremindersoftherelaxationexercises
+diary Igottomanyremindersfortherelaxationexercises
+Ihadenoughcontrolovertheremindersforthediary Cronbach’salpha’s:Self-set:.688,COM-B:.809
+Ihadnocontrolovertheremindersforthediary
+Cronbach’salpha’s:Self-set:.944,COM-B:.861 Finalquestionnaire–users’experiences
+Control-Relaxation
+I did not have enough control over the reminders for the Ability
+relaxationexercise
+Iwasincontrolregardingtheremindersfortherelaxation Ifounditeasytofillinthediary
+exercise Ithoughtitwasdifficulttoperformtherelaxationexercise
+Icouldnotinfluencetheremindersfortherelaxationexer- I totally understood the instructions of the relaxation
+ciseenough exercise
+Cronbach’salpha’s:Self-set:.867,COM-B:.923 Ididnotunderstandtheinstructionsofthesleepdiary
+Predictability-Diary
+Iwasnotabletopredicttheremindertimesforthediary Appreciation
+Remindersforthediarycameunexpectedly
+Theremindersforthediarycameatpredictabletimes Reminder preference: You have received three types of re-
+Cronbach’salpha’s:Self-set:.636,COM-B:.711 minders; no reminders; self-set reminders; automatic re-
+Predictability-Relaxation minders.Indicatewhichreminderyoupreferred.Startonthe
+Iregularlywonderedwhentheremindersfortherelaxation top with your favourite reminder and end with your least
+exerciseswouldcome favouritereminder.
+Theremindersfortherelaxationexercisescameatmoment Appreciationreminders:Onascalefrom1to10,inwhich
+thatIexpectedthemtocome 10 is the highest score, which scores would you give the
+Ithinktheremindersfortherelaxationexercisesarrivedat remindertypesbelow?
+predictablemoments
+Cronbach’salpha’s:Self-set:.987,COM-B:.824 & Noreminder
+Commitment-Diary & Self-setreminder
+186 HealthTechnol.(2017)7:173–188
+& Automaticreminder Iftherewasnoonearoundtohelpme,Ipreferrednottouse
+theapp
+Appreciationappcomponents:Onascalefrom1to10,in Cronbach’salpha:.871
+which 10 is the highest score, which scores would you give Anxiety
+thecomponentsbelow? Theappwassomewhatintimidatingtome
+ItscaredmetothinkthatIcouldloseinformationbypress-
+& Thesleepdiary ingthewrongbutton
+& Therelaxationexercise Ithinktheappcouldinvademyprivacy
+& Theappintotal Cronbach’salpha:.588
+Trust
+Itrustedtheinformationtheappgaveme
+Ifeltdistressedusingtheapp
+UTAUT Ihaveconfidenceintheappworkingwell
+Cronbach’salpha:.600
+The users’ experiences measure was based on the Unified BehaviouralIntention
+Theory of Acceptance and Use of Technology (UTAUT) I was determined to insert information into to app at the
+[48]. The Unified Theory of Acceptance and Use of righttime
+Technology (UTAUT) defines eight concepts that measure Iintendedtolookatthegraphsofmysleep
+technologyacceptanceandlinkthemtointentionandusage, Myintentionwastousetheappfor3weeks
+andtherebypossiblyexplainadherence.Inaddition,trusthas Cronbach’salpha:.678
+beenaddedtotheUTAUTmodelasapredictor,sincealackof
+trustcouldnegativelyinfluenceusage[56,57]. Interviewquestions
+Utility/Effect
+WiththeappIcouldtrackmysleeppatternverywell Whydidyouusetheapp?
+By using the app I could detect problems in my sleep Didyouhaveanyspecificgoals?
+pattern Whatdoyouthinkoftheapp?
+Usingtheappimprovedmydailyqualityoflife Howoftendidyouplanonfillinginthediary?Andwere
+Cronbach’salpha:.712 yousuccessfulwiththat?/Howwell/oftendidyoufillinthe
+Effort diary?/Everydayordidyousometimesnotfillitin?
+Itwaseasyformetofigureouthowtheappworked If you filled out the diary when and where you did you
+Theappwaseasytouseindailylife usuallydoit?
+Theappwascomplicated,thereforeitwashardformeto Weretherecertainreasons(obstacles/things/events),why
+understand itsometimesdidnotworkouttofillinthediary?
+Cronbach’salpha:.724 Ifso,whatwerethoseobstacles?
+SocialInfluence Howwelldidfillinginyourdiaryfitinyourdailylife?
+PeoplewhoareimportanttomethinkIshouldusetheapp Didthe differenttypesofremindersaffectwhetherornot
+Myfamilysupportedmeinusingtheapp youfilledoutthediary?
+MyfriendsthinkIshouldusetheapp Howoftendidyouplantodotherelaxationexercise?
+Cronbach’salpha:.799 Andwereyousuccessfulwiththat?/Howwell/oftendid
+FacilitatingConditions youdotherelaxationexercise?/Everydayordidyousome-
+TheappwasnotcompatiblewithotherproductsIuse timesnotdoit?
+Ihadtheknowledgenecessarytousetheapp Ifyoudidtherelaxationexercisewhenandwhereyoudid
+Someonewasavailableforassistancewithappdifficulties youusuallydoit?
+Cronbach’salpha:.549 Weretherecertainreasons(obstacles/things/events),why
+Attitude itsometimesdidnotworkouttodotherelaxationexercise?If
+Usingtheappwasagoodidea so,whatwerethoseobstacles?
+Ilikedusingtheapp Howwelldidtherelaxationexercisefitinyourdailylife?
+Ihatedusingtheapp Didthe differenttypesofremindersaffectwhetherornot
+Cronbach’salpha:.751 youdidtherelaxationexercise?
+Self-efficacy Didyoulookatyoursleepdata?Ifso,whendidyoulookat
+Icouldusetheappwithoutanyhelp it?Whatexactlydidyouwanttoknow/see?Didyoufindit?
+Using the app went well as long nothing unexpected Whatdoyouthinkaboutthewaythedataisdisplayed?
+happened Towhatextentwastheappbeneficialandeffective?
+HealthTechnol.(2017)7:173–188 187
+& Whateffecthadthediaryinyoursleep? 10. HudsonS,FogartyJ,AtkesonC,AvrahamiD,ForlizziJ,KieslerS
+& Whateffecthadtherelaxationexerciseonyoursleep? et al., editors. Predicting human interruptibility with sensors: a
+WizardofOzfeasibilitystudy.ProceedingsoftheSIGCHIconfer-
+& Whatkindofeffectdidtheapphaveonyourself?
+enceonHumanfactorsincomputingsystems,ACM;2003.
+& Didtheapphadaneffectonsomethingelseinyourlife? 11. HoJ,IntilleSS,editors.Usingcontext-awarecomputingtoreduce
+the perceived burden of interruptions from mobile devices.
+ProceedingsoftheSIGCHIconferenceonHumanfactorsincom-
+Werethereanyirritationsregardingtheapp?
+putingsystems;ACM;2005.
+Diditcauseirritationwhenyoureceivedreminder,ordid
+12. PejovicV,MusolesiM,MehrotraA,editors.InvestigatingTheRole
+you thought it was fine? What did you think about the re- ofTaskEngagementinMobileInterruptibility.Proceedingsofthe
+minders?Whatkindofreminderirritatedyouthemost? 17th International Conference on Human-Computer Interaction
+withMobileDevicesandServicesAdjunct;ACM;2015.
+Whatwouldyouliketoseeimprovedintheapp?Andwhat
+13. SmithJ,LavyginaA,MaJ,RussoA,DulayN,editors.Learningto
+else?
+recognisedisruptivesmartphonenotifications.Proceedingsofthe
+Whatpropertieswouldyouliketoaddtotheapp? 16thinternationalconferenceonHuman-computerinteractionwith
+Whatcanbeaddedtotheapp,soyouwouldadhere(even) mobiledevices&services;2014.2016–06-13:ACM.
+14. Fischer JE, GreenhalghC, Benford S, editors. Investigatingepi-
+longerorbetter?
+sodesofmobilephoneactivityasindicatorsofopportunemoments
+WouldyourecommendtheApptoothers?Why?/Whynot?
+to deliver notifications. Proceedings of the 13th International
+Whatdidyouthinkoftheexperimentitself,nottheapp,but ConferenceonHumanComputerInteractionwithMobileDevices
+everythingelse,suchasemails,surveys,downloading,etc.? andServices;2011:ACM.
+15. PielotM,DeOliveiraR,KwakH,OliverN,editors.Didn'tyousee
+ArethereotherthingsyouwanttosayabouttheappthatI
+mymessage?:predictingattentivenesstomobileinstantmessages.
+havenotcovered?
+Proceedingsofthe32ndannualACMconferenceonHumanfactors
+Doyouhaveanyothercommentsorquestions? incomputingsystems;2014.2016–06-15:ACM.
+16. AnderssonG.Thepromiseandpitfallsoftheinternetforcognitive
+behavioraltherapy.BMCMedicine.2010;8:82.doi:10.1186/1741-
+OpenAccessThisarticleisdistributedunderthetermsoftheCreative 7015-8-82.
+Commons Attribution 4.0 International License (http:// 17. KaltenthalerE,CavanaghK.Computerisedcognitivebehavioural
+creativecommons.org/licenses/by/4.0/), which permitsunrestricted use, therapy and its uses. Progress in Neurology and Psychiatry.
+distribution,andreproductioninanymedium,providedyougiveappro- 2010;14(3):22–9.
+priatecredittotheoriginalauthor(s)andthesource,providealinktothe 18. Wantland DJ,Portillo CJ, Holzemer WL, Slaughter R, McGhee
+CreativeCommonslicense,andindicateifchangesweremade. EM.Theeffectivenessofweb-basedvs.non-web-basedinterven-
+tions: a meta-analysis of behavioral change outcomes. J Med
+InternetRes.2004;6(4):e40.
+19. EysenbachG.Thelawofattrition.JMedInternetRes.2005;7(1):
+e11.
+References 20. WorldHealthOrganizationW.Adherencetolong-termtherapies:
+evidence for action. Geneva, Switzerland: World Health
+Organization 2003 Accessed 2015–30-Aug. Report No.:
+1. McDaniel MA, Einstein GO. Prospective memory:An overview
+9241545992.
+andsynthesisofanemergingfield.SagePublications;2007.
+21. Gould RA, ClumGAA. Meta-analysisofself-helptreatmentap-
+2. KliegelM,MartinM.Prospectivememoryresearch:whyisitrel- proaches.ClinPsycholRev.1993;13(2):169–86.
+evant?IntJPsychol.2003;38(4):193–4.
+22. HorschCHG,LanceeJ,BeunRJ,NeerincxMA,BrinkmanWP.
+3. RothschildJM,LandriganCP,CroninJW,KaushalR,LockleySW,
+Adherence to technology-mediated insomnia treatment: a meta-
+BurdickE,etal.Thecriticalcaresafetystudy:theincidenceand
+analysis,interviews withusers,and focusgroupswith usersand
+nature of adverse events and serious medical errorsin intensive
+experts. Journal of medical Internet research. 2015;17(9):e214.
+care*.CritCareMed.2005;33(8):1694–700.
+doi:10.2196/jmir.4115.
+4. Unni EJ, Farris KB. Unintentional non-adherence and belief in
+23. DonkinL,ChristensenH,NaismithSL,NealB,HickieIB,Glozier
+medicinesinolderadults.PatientEducCouns.2011;83(2):265–8.
+NA.Asystematicreviewoftheimpactofadherenceontheeffec-
+5. JonesRK,DarrochJE,HenshawSK.ContraceptiveuseamongUS tivenessofe-therapies.JMedInternetRes.2011;13(3):e52.
+women having abortions in 2000-2001. Perspect Sex Reprod 24. EdingerJD,MeansMK.Cognitive-behavioraltherapyforprimary
+Health.2002:294–303. insomnia. Clin Psychol Rev. 2005;25(5):539–58. doi:10.1016/j.
+6. SmithJD,OakleyD.Whydowomenmissoralcontraceptivepills? cpr.2005.04.003.
+An analysis of Women's self-described reasons for missed pills. 25. DonkinL,GlozierN.Motivatorsandmotivationstopersistwith
+JournalofMidwifery&Women’sHealth.2005;50(5):380–5.
+onlinepsychologicalinterventions:aqualitativestudyoftreatment
+7. Fogg BJ, editor. A behavior model for persuasive design. completers.JMedInternetRes.2012;14(3):e91.
+Persuasive 2009; 2009; Claremont, California, USA. 2013–07- 26. DengX,WangY,ZhuT,ZhangW,YinY,YeL.Shortmessage
+24:ACM. service(SMS)canenhancecomplianceandreducecancellationsin
+8. Dismukes RK.Prospective memory in workplace and everyday asedationgastrointestinalendoscopycenter:aprospectiverandom-
+situations.CurrDirPsycholSci.2012;21(4):215–20. izedcontrolledtrial.JMedSyst.2015;39(1):1–11.
+9. TurnerLD,AllenSM,WhitakerRM,editors.Interruptibilitypre- 27. VidalC,GarciaM,BenitoL,MilàN,BinefaG,MorenoV.Useof
+diction for ubiquitous systems: conventions and new directions text-message reminders to improve participation in a population-
+fromagrowingfield.Proceedingsofthe2015ACMInternational basedbreastcancerscreeningprogram.JMedSyst.2014;38(9):1–7.
+Joint Conference on Pervasive and Ubiquitous Computing, 28. ArmstrongAW,WatsonAJ,MakredesM,FrangosJE,KimballAB,
+ACM;2015. KvedarJC.Text-messagereminderstoimprovesunscreenuse:a
+188 HealthTechnol.(2017)7:173–188
+randomized, controlled trial using electronic monitoring. Arch 44. PCd H. Instrumenteel onderzoek. De ‘IE-18 locus of con-
+Dermatol.2009;145(11):1230–6. trol’- vragenlijst: betrouwbaarheid en validiteit van een
+29. BentleyF,TollmarK,editors.ThePowerofMobileNotificationsto gewijzigde versie. Nederlands tijdschrift voor de
+IncreaseWellbeingLoggingBehavior.ACMSIGCHIInternational psychologie. 1992;47:82–7.
+ConferenceonHumanFactorsinComputingSystems;2013. 45. Blanson Henkemans OA, van der Boog PJM, Lindenberg J,
+30. Krishna S, Boren SA, Balas EA. Healthcare via cell phones: a van der Mast CAPG, Neerincx MA, Zwetsloot-Schonk
+systematicreview.Telemedicineande-Health.2009;15(3):231–40. BJHM. An online lifestyle diary with a persuasive computer
+31. MichieS,vanStralenMM,WestR.Thebehaviourchangewheel:a assistant providing feedback on self-management. Technol
+new method for characterising and designing behaviour change Health Care. 2009;17(3):253–67.
+interventions.ImplementSci.2011;6(1):42. 46. Bickmore T, Mauer D, Crespo F, Brown T. Persuasion, task
+32. Morin CM, Barlow DH, Dement WC. Insomnia: psychological interruption and health regimen adherence. Persuasive
+assessmentandmanagement.NewYork:GuilfordPress;1993. Technology: Springer; 2007. p. 1–11.
+33. RosekindMR,GregoryKB.Insomniarisksandcosts:health,safe- 47. Zipf GK. Human behavior and the principle of least effort.
+ty,andqualityoflife.AmJManagCare.2010;16(8):617–26.
+Cambridge:Addison-WesleyPress;1949.
+34. OhayonMM.Epidemiologyofinsomnia:whatweknowandwhat 48. Venkatesh V, Morris MG, Davis GB, Davis FD. User accep-
+westillneedtolearn.SleepMedRev.2002;6(2):97–111.
+tance of information technology: toward a unified view. MIS
+35. EspieCA,MacMahonK,KellyH,BroomfieldNM,DouglasNJ, Q. 2003:425–78.
+Engleman HM, et al. Randomized clinical effectiveness trial of
+49. Bastien CH, Vallières A,Morin CM. Validationofthe insomnia
+nurse-administeredsmall-groupcognitivebehaviortherapyforper-
+severity index as an outcome measure for insomnia research.
+sistent insomnia in general practice. Sleep-New York Then SleepMed.2001;2(4):297–307.
+Westchester.2007;30(5):574.
+50. JuddCM,KennyDA,McClellandGH.Estimatingandtestingme-
+36. DimatteoMR,GiordaniPJ,LepperHS,CroghanTW.Patientad-
+diation and moderation in within-subject designs. Psychol
+herence and medical treatment outcomes: a meta-analysis. Med
+Methods.2001;6(2):115.
+Care.2002;40(9):794–811.
+51. Zhao X, Lynch JG, Chen Q. Reconsidering baron and Kenny:
+37. FenertySD,WestC,DavisSA,KaplanSG,FeldmanSR.Theeffect
+of reminder systems on patients’ adherence to treatment.Patient myths and truths about mediation analysis. J Consum Res.
+PreferAdherence.2012;6:127–35.
+2010;37(2):197–206.
+52. PigottTDA.Reviewofmethodsformissingdata.EducResEval.
+38. Krueger KP, Felkey BG, Berger BA. Improving adherence and
+2001;7(4):353–83.
+persistence:areviewandassessmentofinterventionsanddescrip-
+53. Bland JM, Altman DG. Calculating correlation coefficients with
+tionofstepstowardanationaladherenceinitiative.Journalofthe
+AmericanPharmacistsAssociation.2003;43(6):668–79.
+repeatedobservations:part2—correlationbetweensubjects.BMJ.
+1995;310(6980):633.
+39. RyanRM,DeciEL.Self-determinationtheoryandthefacilitation
+of intrinsic motivation, social development, and well-being. Am 54. BraunV,ClarkeV.Usingthematicanalysisinpsychology.QualRes
+Psychol.2000;55(1):68.
+Psychol.2006;3(2):77–101.doi:10.1191/1478088706qp063oa.
+40. Festinger L. A theory of cognitive dissonance. Evanston: Row, 55. Yang M, Morin CM, Schaefer K, Wallenstein GV.
+Peterson;1957. Interpreting score differences in the insomnia severity index:
+41. CampbellJD,TesserA.Motivationalinterpretationsofhindsight using health-related outcomes to define the minimally im-
+bias:anindividualdifferenceanalysis.JPers.1983;51(4):605–20. portant difference. Current Medical Research & Opinion.
+42. GuayF,VallerandRJ,BlanchardC.Ontheassessmentofsituation-
+2009;25(10):2487–94.
+alintrinsicandextrinsicmotivation:thesituationalmotivationscale 56. CheungC,LeeMK.TrustinInternetshopping:Aproposedmodel
+(SIMS).MotivEmot.2000;24(3):175–213. and measurement instrument. AMCIS 2000 Proceedings.
+43. AjzenI,MaddenTJ.Predictionofgoal-directedbehavior:attitudes, 2000;406.
+intentions, and perceivedbehavioralcontrol. J Exp Soc Psychol. 57. GefenD,KarahannaE,StraubDW.TrustandTAMinonlineshop-
+1986;22(5):453–74. ping:anintegratedmodel.MISQ.2003;27(1):51–90.

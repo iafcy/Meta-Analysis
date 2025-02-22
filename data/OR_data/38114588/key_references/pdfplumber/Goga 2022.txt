@@ -1,0 +1,853 @@
+healthcare
+Article
+An Efficient System for Eye Movement Desensitization
+and Reprocessing (EMDR) Therapy: A Pilot Study
+NicolaeGoga1,Costin-AntonBoiangiu2 ,AndreiVasilateanu1 ,Alexandru-FilipPopovici1,3,* ,
+Marius-ValentinDrăgoi1,RamonaPopovici1,3,IonatanOctavianGancea2,MihailCristianPîrlog4 ,
+RamonaCristinaPopa1andAntonHadăr5
+1 FacultyofEngineeringinForeignLanguages,UniversityPolitehnicaofBucharest,SplaiulIndependentei313,
+060032Bucharest,Romania;n.goga@rug.nl(N.G.);andrei.vasilateanu@upb.ro(A.V.);
+marius.valentin.dragoi@gmail.com(M.-V.D.);ramona.popovici@drd.unibuc.ro(R.P.);
+popa.ramona91@yahoo.com(R.C.P.)
+2 FacultyofAutomaticsandComputerScience,UniversityPolitehnicaofBucharest,SplaiulIndependentei313,
+060032Bucharest,Romania;costin.boiangiu@cs.pub.ro(C.-A.B.);ganceatoni@gmail.com(I.O.G.)
+3 FacultyofPsychologyandEducationalSciences,UniversityofBucharest,90PanduriStreet,
+050657Bucharest,Romania
+4 DepartmentofSociology,UniversityofMedicineandPharmacyofCraiova,PetruRares2,
+200349Craiova,Romania;mihai.pirlog@gmail.com
+5 FacultyofIndustrialEngineeringandRobotics,UniversityPolitehnicaofBucharest,
+SplaiulIndependentei313,060032Bucharest,Romania;anton.hadar@upb.ro
+* Correspondence:filip.popovici@unibuc.ro
+Abstract: Inthispaper,wedescribeanactuator-basedEMDR(eyemovementdesensitizationand
+(cid:1)(cid:2)(cid:3)(cid:1)(cid:4)(cid:5)(cid:6)(cid:7)(cid:8)(cid:1)
+(cid:1)(cid:2)(cid:3)(cid:4)(cid:5)(cid:6)(cid:7) reprocessing)virtualassistantsystemthatcanbeusedforthetreatmentofparticipantswithtraumatic
+memories. EMDR is a psychological therapy designed to treat emotional distress caused by a
+Citation:Goga,N.;Boiangiu,C.-A.;
+traumatic event from the past, most frequently in post-traumatic stress disorder treatment. We
+Vasilateanu,A.;Popovici,A.-F.;
+implemented a system based on video, tactile, and audio actuators which includes an artificial
+Dra˘goi,M.-V.;Popovici,R.;
+Gancea,I.O.;Pîrlog,M.C.;Popa,R.C.; intelligencechatbot,makingthesystemcapableofactingautonomously.Wetestedthesystemona
+Hada˘r,A.AnEfficientSystemforEye sampleof31participants.OurresultsshowedtheefficiencyoftheEMDRvirtualassistantsystem
+MovementDesensitizationand inreducinganxiety,distress,andnegativecognitionsandemotionsassociatedwiththetraumatic
+Reprocessing(EMDR)Therapy:A memory.Therearenosuchsystemsreportedintheexistingliterature.Throughthepresentresearch,
+PilotStudy.Healthcare2022,10,133. wefillthisgapbydescribingasystemthatcanbeusedbypatientswithtraumaticmemories.
+https://doi.org/10.3390/
+healthcare10010133 Keywords:EMDR;virtualassistant;cyber-physicalsystem
+AcademicEditor:DanieleGiansanti
+Received:16December2021
+Accepted:7January2022
+1. Introduction
+Published:10January2022
+Eyemovementdesensitizationandreprocessing(EMDR)isaneight-phasepsycholog-
+Publisher’sNote:MDPIstaysneutral icaltherapydesignedtotreatemotionaldistresscausedbytraumaticeventsfromthepast,
+withregardtojurisdictionalclaimsin mostfrequentlyinpost-traumaticstressdisorder(PTSD).PTSDisaseriousdisorderthat
+publishedmapsandinstitutionalaffil-
+canbedevelopedbypeopleafterexposuretoseverestressorsthatgenerateaseriesofsymp-
+iations.
+tomssuchasavoidanceofremindersoftheevent,hyperarousal,orvividflashbacks[1].
+Duringthetherapy,theclinicianusesdiversebilateralstimulisuchasalightthatchanges
+positions,thealternationofsoundsbetweenspeakers,orthevibrationofdevicesheldby
+thepatientintheirhands,inordertohelptheclientprocessadistressingexperience.
+Copyright: © 2022 by the authors.
+AlthoughstudieshaveshownthatEMDRisanefficientmethodofinterventionfor
+Licensee MDPI, Basel, Switzerland.
+differentmentalconditions,therearestillcontroversiesregardingtheworkingmechanism.
+This article is an open access article
+ThestudiessofaronEMDRefficiencyandtheroleofeyemovementhavecapturedvariable
+distributed under the terms and
+conditionsoftheCreativeCommons results[2],whichmakestheemergenceofmorerigorousresearchanimperative[3]. Inthis
+Attribution(CCBY)license(https:// context,thetoolsforself-administrationofEMDRtherapycanfacilitatetheunderstanding
+creativecommons.org/licenses/by/ oftheroleofeyemovementinEMDRtherapy.
+4.0/).
+Healthcare2022,10,133.https://doi.org/10.3390/healthcare10010133 https://www.mdpi.com/journal/healthcare
+Healthcare2022,10,133 2of18
+Astudyfrom2012[4]foundthatinterventionthroughEMDRhelpedtheparticipants
+incopingwithapsychoticdisorderandPTSD.Also,anotherstudyshowedthatEMDRhad
+betterresultsintreatingspecificsymptomsthanothertypesoftherapies[5]. Amorerecent
+meta-analysisshowedthatEMDRtreatmentisefficientinreducingPTSDsymptoms[6]
+andothermentalhealthproblemssuchasanxietyanddepression[7,8]. Therefore,EMDR
+therapyhasproventobeeffectiveintreatingtraumaandPTSD.Moreover,EMDRmay
+beeffectiveforanypsychologicaldisorderthatcanbelinkedwithtraumaoradverselife
+events[9].
+Inthelightofthisinformation,anactuator-basedvirtualassistanttrainedtoperform
+EMDR therapy could be a useful tool for psychologists in the process of treating their
+patients. It can also become a tool used by the general population for the treatment of
+minorpsychologicaldisorderslinkedwithtrauma.Theartificialintelligenceenginechatbot
+developed for the presented system was based on the eight essential phases of EMDR
+describedbyFrancineShapiro[10]:
+1. Thefirstphaseinvolvestheinvestigationoftheclient’spastinordertodesignthe
+treatmentplan. Thisincludestheevaluationofallclinicalaspects(symptoms,unhealthy
+behaviors,andcharacteristics)andtheselectionmadebythetherapistoftheissuesthat
+needtobeaddressed(eventsthataffecttheemotionallife,dysfunctiontriggers,andnew
+positivebehaviors/attitudes).
+2. Inthepreparationphase,thetherapistexplainsthebasictheoryofEMDRandthe
+interventionprocedureswiththeaimofsettingtheexpectationoftheoutcome,whichalso
+includesthepresentationofthepossibledisturbancesthatcouldappear. Theclientisalso
+empoweredwithsomeaffectregulationstrategies.
+3. Theevaluationphaseconsistsoftheapplicationoftwoevaluationinstruments,the
+SubjectiveUnitsofDistress(SUD)andValidityofCognition(VOC)scales,forassessingthe
+negativecognitionandtheemotionalresponseoftheclienttotheinvestigatedevent.
+4. The desensitization phase concerns the client’s emotional response, the evoked
+insights, andappropriateassociations. Inthisphase, theclientisbilaterallystimulated
+untiltheSUDlevelsignificantlydecreases.
+5. The installation phase aims at cognitive integration and restructuration. One
+essentialaspectofthisphaseistheinstallationandstrengtheningofamorefunctional,
+positivecognition.
+6.Thesixthphaseinvolvesananalysisofthepersistingbodysensationswhichimplies
+amentalbodyscaninordertoidentifyanyresidualdisturbance. Thus,theclientwillbe
+abletoprocessanyunprocessedinformation.
+7. Theseventhphaseincludesdiscussionsandpreparestheclientfortheclosureof
+thesession. Itspurposeistobringtheclienttoastateofequilibriumbetweenthesessions.
+8. Thelastphaseisthere-evaluationoftheprogressatthebeginningofeachsession.
+Interactionwiththeuserincludesbothaudioandwritingcommunication. Thus,the
+presentresearchdescribesanEMDRvirtualassistantsystembasedonvideo,tactile,and
+audioactuatorswhichincludesanartificialintelligencechatbotthatcanbeusedinthe
+autonomoustreatmentoftraumaticmemories.
+Withthisbackground,theaimofourpaperistodeliveranEMDRtoolfullycapable
+ofassistingauserinperformingefficienttherapyanddoingsowithouttheintervention
+of a trained clinician. We developed a pilot study for testing our system, in which 31
+participantswereincluded. WefoundthatourEMDRvirtualsystemisefficientandcanbe
+usedforthereductionofsymptomsassociatedwithPTSDandanxiety.
+2. RelatedWork
+SinceEMDRtherapyhasproventobeefficientinthetreatmentofPTSD,recommended
+bytheWorldHealthOrganizationin2013,ithasalsobeguntobeusedinthetreatmentof
+resistantdisorders,suchasPTSDwithcomorbidpsychosis[11],inwhichcaseitobtaineda
+reductionofparanoidthoughtsandallowedpatientstoreachremissioninthepsychotic
+disorder in a shorter period of time. For the treatment of borderline personality disor-
+Healthcare2022,10,133 3of18
+der[12],therehadtobeseveraladaptationsmadefromthestandardprocedure. Thesame
+wasdoneforpeoplesufferingfromanarcissisticpersonalitydisorder[13]orcomorbid
+bipolarIandIIdisorders[14].
+EMDR therapy has been associated with technology since its earliest description.
+Therewasalwaysaninterestinthedevelopmentofnewdevicestoassistwiththebilateral
+stimuliinvolvedinthetherapyprocess,whethertheseweredevicesdesignedtohelpin
+thevisualphaseoftreatment,suchasheadsetsandglasses,ordevicesdesignedtoassist
+inthetactiletherapy. Lately,withtheadvanceintechnologyandthemajordevelopment
+ofmobiledevices,thereisinterestindevelopingmobileapplicationsthatcanprovidethe
+requiredtreatmentwithaslittleinvolvementfromatrainedpsychotherapistaspossible.
+Theliteratureonthistopicis,however,scarce. Wepresentbelowabriefsummaryofthe
+existingstudiesandtheirmajorresults.
+In[15],AlulemaFloresetal. presentaprototypethatcanbeusedinEMDRtherapy. It
+isamodulardesigncontainingthreemodules,eachprovidingvisual,auditory,andtactile
+sequences,integratedwithanAndroidinterfacethatcontrolsthespeedofthesequences,
+the type of sound, and the intensity of vibration of the tactile module. The software is
+intendedfortheuseofthepsychotherapist,whocaneitheruseapredefinedroutineor
+createapersonalizedprogramforthepatientbycontrollingallthreemodules.Thestructure
+oftheprojectconsistsofanAndroiddevicethatcontrolsthesoundmoduleandtheIOIOfor
+AndroidDEV-10748motherboard[16]thatcontrolsboththevisualandthetactilemodule.
+Foreachperson,theapplicationrequiresselectingatherapytype: thevisualtherapylights
+theredLEDsontheglassesindifferentsequences,thetouchtherapysendspulsestoeach
+handatatime,andthesoundtherapyoptionplaysfrom10differentsoundsintheleft
+orrightear. Eachtypeoftherapyhasanautomaticandmanualmodeoffunctioning. In
+themanualmode, thepsychotherapistcanchoosethefrequencyofthesequence(from
+0to6s)andalsotheside(leftorright)thatthesequenceisdisplayed. Initsconclusion,the
+paper[15]statedthattheusageofthedescribedsystemhelpedtoreducetheprocessing
+timeofpatientcasesandthedurationofatherapysession,whichdecreasedto20–30min
+persession. Also,whenthesystemwasused,itwasobservedthatthelevelofphysical
+exhaustionwasreducedby90percentandmentalexhaustionby75percent. However,no
+artificialintelligencechatbotwasincludedinthissystemthatcouldallowittofunction
+fullyautonomously—theinterventionofthepsychotherapistwasstillneeded.
+ThesystemdescribedbyJefferyD.Eastmanin[17]isdesignedtohelppeoplethatare
+sufferingfromtrauma. Itisbasedonthedisplayofaseriesoflightsequencesthatallows
+theusertoself-directanEMDRsession. Theimplementationoftheproposedmethodof
+treatment is based on the exchange of data between the patient’s computer, where the
+usercompletesasurveyformaftereachtherapysession,andtheserverapplicationthat
+respondswithanotheradaptedsequenceoflightsorinsomecasesevenwithanaudio
+sequence. Theself-directedsessionstartswiththeuserloggingintotheclientapplication,
+whichrequestsauthenticationandaninitiallightsequencefromtheserver. Theserver
+returnsaresponsebasedontheuser’shistoryandpersonaldata. Eachtreatmentsequence
+isfollowedbyasurveyformcontaininga1to10scaleevaluationofthediscomfortlevel,
+which is taken into consideration for the next self-directed light session, and the light
+patterns are changed accordingly. As compared to the previous system, there are no
+tactile-basedactuatorsinthissystemthatcanmaketheEMDRmoreefficient.
+Theinventionpresentedin[18]byGazitetal.referstoasystemandaseriesofmethods
+designedforremoteEMDRtherapy. Thedescribedsystemincludesatherapistplatform,
+a client platform, and an EMDR server which includes multiple processors, memory, a
+storagesolution,andanoperatingsystem. Thetherapistplatformpresentsadashboard
+thatallowstheusertoaddclientinformationsuchaspersonaldata,preferencesforbilateral
+stimulation, and notes regarding past therapy sessions, and controls different bilateral
+stimulationparameters. Theseparametersmayrefertocolor,opacity,size,orbackground
+colorinthecaseofvideotherapy;volume,soundeffects,orthetypeofmusicforaudio
+therapy; and for the tactile part, vibration intensity. For a better interpretation of the
+Healthcare2022,10,133 4of18
+sessions’stheresultsofthesession,thetherapist’scomputerhasthefunctionofdisplaying
+thelevelofcorrespondencebetweentheclient’seyemovementandthemovementofthe
+visualelementonthescreen. Inthisrespect,animageprocessingalgorithmrunningonthe
+client’splatformcanbeusedtocorrelatethemovementofthevisualbilateralstimulation
+andtheclient’seyemovement. Moreover,basedonthisimplementation,theservermaybe
+configuredtoautomaticallymodifythebilateralstimulationdependingonthepatient’s
+levelofcorrespondence;forexample,ifthecorrespondenceisbetterthan95%,thespeed
+ofthelightdisplaymaybeincreased,whileifitislessthan90%,thespeedmaydecrease.
+Thissystemdoesnotincludeanintelligentchatbot.
+In[19],Burgioetal. presentasystemandamethodthatcanbeusedinEMDRtherapy.
+Thesystemisbasedonaheadset,e.g.,apairofglasses,withdarklensestoblockoutthe
+externallight,areceiverthatreceivessignalsfromanexternaldevice,amicroprocessor,
+anddatastorage. EMDRtherapyalsoimpliesauditorystimulationthatcanbeprovided
+byadeviceintegratedwiththeheadsetandtactilestimulationwhichcanbeproducedby
+aclothingarticlehavingincorporatedaseriesofvibratingunitsoverthetorso. Also,in
+someembodiments,thestimulatormayhaveatransceiverthatcancoordinatewiththe
+headset. Beforeeverytreatment,adiagnosisisperformedbymeasuringthereactivityof
+eachpatientusingatransducerassembly, withtheroleofdeterminingtheappropriate
+treatment schedule. An example of a treatment procedure may observe the following
+flow: first,thepatient’sneuromuscularstrengthismeasuredwiththetransducer,thena
+specifictreatmentscheduleisappliedwhichmayinvolvetactilestimulation,applyinga
+gentlemassageovertheneurallymphaticpoints; visualstimulation,providedthrough
+theheadsetbychangingtheeye’sfocusdirectionbydisplayingdifferentlightpatterns;or
+auditorystimulation. Duringthetreatment,theneuromuscularstrengthisremeasured.
+Then,dependingontheweaksignalsthatweredetermined,thepatientmayfolloweithera
+physicaltreatment,amentaltreatment,orachemicalone. Next,thevibratingunitsandthe
+headsetareactivatedbythestimulatorthroughaninfraredsignalandthetreatmentplan
+isapplied. Theprocessoftheneuromuscularstrengthcheckisrepeated,andanadapted
+treatmentisfollowedagain. Thisformoftreatmentthatinvolvesanautomaticsystemis
+slightlydifferentthanthestandardEMDR,buthasproventobecost-effective,enabling
+therapiststotreatmultiplepatientsatonce. Also,thesystemcantreatphysicalinjuries,
+lifeaccumulationstressdisorder(LASD),andimprovethepatient’soverallmentaland
+physicalstate.
+Ascomparedtoallthesestudies,thesystemweproposehasseveralimprovements,
+suchasthepresenceofanintelligentchatbotthatcanaccompanytheuserduringtheEMDR
+intervention,whichisdevelopedinrelationtothestandardizedprocedures. Moreover,
+thepresenceofaudio,video,andtactile-basedactuatorsmakestheEMDRsystemmore
+efficient[20,21]. Table1describesthesedifferencesinrelationtosimilarsystems.
+From a theoretical and practical point of view, this paper responds to some gaps
+reportedinpreviousliterature,havinganimportantcontribution[3]. Firstly,theproposed
+system is accompanied by an intelligent chatbot based on the protocol developed by
+F.Shapiro. Incontrast,theothersystemsarebasedonapartialprotocolordonotfollowit
+atallandcanonlybeusedinthepresenceofatherapist. Othersystemsworkremotely
+viaanEMDRplatformbutstillwiththehelpofaperson. Asfarasweknow,thereisno
+systemsimilartotheonepresentedinthispaperreportedintheliterature.
+Healthcare2022,10,133 5of18
+Table1.Comparisonwithsimilarsystemsintheliterature.
+DifferencesbetweenOurSystem
+Paper Advantages Disadvantages
+andRelatedWork
+Implementsonlythe Presenceofintelligentchatbot
+desensitizationphaseinthe whichimplementsthepreparation,
+EMDRprotocol. evaluation,andendingphasesin
+Usesvisual,tactile,and
+AlelumaFlores Usedonlyby theEMDRprotocol.
+auditorytherapy.
+etal.[15] psychotherapists/clinicians. Thesystemhasthepotentialtobe
+Canbecustomized.
+Thepresenceofatrainedclinician autonomous,thepresenceofa
+ismandatory,cannotbeused trainedcliniciannotbeing
+independently. mandatory.
+Presenceofintelligentchatbot
+Onlyvisualandauditorystimuli.
+whichimplementsthepreparation,
+Audioismostlyusedforplaying
+Visualstimulationcanbe evaluation,andendingphasesin
+JeffreyD. relaxationsounds,verylittle
+dynamicallyadjustedbasedon theEMDRprotocol.
+Eastman[17] informationisgivenabout
+feedbackfromtheuser. Audio,video,andtactile-based
+bilateralaudiostimulation.
+actuatorsthatmaketheEMDR
+Onlypatent,notvalidated.
+systemmoreefficient.
+Nointelligentchatbot.
+Thesystemisdesignedto
+intermediatetherelationbetween
+Selectionoftheintensity Theproposedsystemhasthe
+Gazitetal.[18] clientandclinicianandcanbe
+ofstimuli. potentialtobeautonomous.
+usedremotelybutrequiresthe
+interventionofatherapistfor
+settingtheparameters.
+Opaqueglassesthatblocklight Thesystemisdependentonthe Theproposedsystemincludesan
+fromreachingtheeyesandthus presenceofthetherapist intelligentchatbotoffering
+Burgioetal.[19] preventsimultaneousexposureto Differentfromthestandardized autonomy.
+othervisualstimuli. EMDRprocedure Designedinrelationto
+Useschemicalstimulation. Onlypatent,notvalidated. standardizedEMDRprocedures.
+Secondly,becausethereisaconstantneedtotestthepotentialeffectivenessofself-
+administered EMDR therapy [3], this study aimed to address this need in testing the
+feasibilityandefficiencyofavirtualassistantforEMDRinreducingnegativesymptoms
+associatedwithtraumaticmemories.
+3. MaterialsandMethods
+3.1. Materials
+Thesystemoffersamulti-actuatorimplementationoftheEMDRprotocol:
+• Videostimulususingarenderedballonagraphicaldisplay;
+• Audiostimulussimulatingamovingsoundsource;
+• Tactilestimulationusingvibrationmotorsplacedontheuserusingbracelets—stimuli
+aresynchronizedtomaximizetheeffectiveness;
+• AchatbotforcommunicatingwiththeuseraccordingtotheEMDRprotocol,allowing
+thesystemtofunctionautonomously,i.e.,intheabsenceofatherapist.
+InFigure1wehaveaviewofthegeneralarchitectureofthesystem. Wehavechosen
+acomponent-based,highlymodularapproachsothesystemcanbedeployedindifferent
+configurations. Theproposedsystemiscomposedofthefollowingmodules: video,audio,
+tactile, andchatbot, whichcanworkindependentlyortogether, dependingontheuser
+preferencesanddeploymentoptions.
+HHeaelatlhtchacraere2 022022,21, 01,01, 3x3 FOR PEER REVIEW 66o off1 819
+FFigiguurere1 1..T ThheeE EMMDDRRs ysystsetemm..
+TThheec hchaatbtboottm moodduulelei sist htheec ceenntrtarallc coommmmaannddm moodduuleleo offt hthees ysystsetemm,,w whhicichhc coooordrdininaatetess
+aanndds syynncchhrroonnizizeessa allllo oththeerrm moodduuleless,,a anndda alllolowwssu usseerrsst otoi ninteterraaccttw witihtht hthees syysstetemmb byyt etexxtt
+aanndda auuddiioo( (tthhrroouugghh tthhee aauuddiioo mmoodduullee)).. TThhee cchhaatbtboot tisis ththe ekkerenrnele olfo tfhteh esyssytestmem bebceacuasue saell
+apllrpocroescseisnsgin dgedceisciiosniosn asraer emmadaed eininsisdide eoof fiitt.. RReeggaarrddiinngg uusseerr iinntteerraaccttiioonn,, tthhee mmoodduullee isis
+pproroggrarmammmededto tdoe sdcersibceriebaec heasctehp sotfepth eotfr etahtem ternetaatmndenast kasnads earsiekss oaf qsueersietiso nosf, aqcuceosrtdioinngs,
+toactchoerdEiMngD tRo pthroet oEcMolD,tRo pevroatloucaotel, tthoe enveagluataitvee tchoeg nneitgioatnivaen dcotghneiteimono taionnda tlhree sepmoontsieonoafl
+threesupsoenrsteo oaf ttrhaeu umsaetri ctoe vae tnrat.uImnathtiec Feivgeunrte. IAn1 th(see eFiAguprpee nAd1i x(sAee) ,Awpeppenredsiexn Att)h, ewien tperrefasecnet
+otfhteh einEtMerfDaRces yosf tethme wEiMthDtRhe suyssetersma nwditahn tehxea muspelres sacennda raino .eTxhaimspchlea tswceinnadroiow. pTahiirss cthheat
+dwisicnudsosiwon pbaeirtsw teheen dtihsecuasrstiiofinci ableitnwteeellnig tehnec earcthifaictbiaolt inantedlluigseenrsc.e chatbot and users.
+FFrorommt htheei mimpplelemmeenntatattioionn ppooinintt ooffv vieieww,,w weeh haavveed deevveeloloppeeddt htheec chhaatbtboottk keerrnneelli nin
+PPyyththoonnu ussininggd dififfefererennttn naatuturraalll alanngguuaaggeep prroocceessssiningg aalglgoorritihthmmss,, ssuucchh aass pprreepprroocceessssiningg,,
+lelemmmmaatitzizaattioionna nadndv evcetocrtoizraiztiaotino,na,n danidn teilnlitgelelnigtepnat ttperanttemrna tcmhiantcghbinasge dbaosnedco soinn ecsoimsini-e
+lasrimityi.laCrihtyat. bCohtaintbteont tsinatreentosr gaarne izoerdgabnaiszeedd obnasthede sotnag tehoef stthaegpe rooft otchoel ,pwroitthocthoel, pwuirtpho tshee
+ofgivingcontextualfeedbacktotheuserbutalsoguidingher/himfromstagetostage.
+purpose of giving contextual feedback to the user but also guiding her/him from stage to
+The textual input from the user is preprocessed by removing stop words and lemmati-
+stage. The textual input from the user is preprocessed by removing stop words and
+zation. Lemmatizationistheprocessoffindingoutthedictionaryform,orlemma,ofa
+lemmatization. Lemmatization is the process of finding out the dictionary form, or lemma,
+word,dependingonthecontext. TheWordNetlemmatizerwasusedforthistask. Since
+of a word, depending on the context. The WordNet lemmatizer was used for this task.
+mostmachinelearningalgorithmsworkonnumericinput,thepreprocessedtextisthen
+Since most machine learning algorithms work on numeric input, the preprocessed text is
+vectorized,byusingatermfrequencyinversedocumentfrequencyvectorizerfromPython.
+then vectorized, by using a term frequency inverse document frequency vectorizer from
+Thevectorizedformiscomparedusinganintelligentpatternmatchbasedoncosine
+Python.
+similarity with the available patterns for a given intent. The highest match maps to a
+The vectorized form is compared using an intelligent pattern match based on cosine
+responseoutputtedtotheuser.
+similarity with the available patterns for a given intent. The highest match maps to a
+Thevideomoduleisusedinthedesensitizationphasetosimulatethetherapist’shand
+response outputted to the user.
+movementbycreatinganoutputwindowthatdisplaysaredballmovinghorizontallyfrom
+The video module is used in the desensitization phase to simulate the therapist’s hand
+onesideofthescreentotheother. Thefollowingparameterscanbemodified: window
+movement by creating an output window that displays a red ball moving horizontally
+width and height and ball speed. Figure 2 presents the parameters of the motion, and
+from one side of the screen to the other. The following parameters can be modified:
+FigureA2(seeAppendixA)displaysthemovementoftheballduringtheEMDRsession.
+window width and height and ball speed. Figure 2 presents the parameters of the motion,
+and Figure A2 (see Appendix A) displays the movement of the ball during the EMDR
+session.
+Healthcare2022,10,133 7of18
+Healthcare 2022, 10, x FOR PEER REVIEW 7 of 19
+FiFgiugruere2 .2E. EMMDDRRtr teraetamtmenetnut suesrerin itnetrefrafcaec.e.
+TThheea uauddioiom mododuuleleh hasast wtwoor ersepspononsisbibiliiltiiteise:s:fi frisrtsltyly,,t otor ernendderera uauddioiof ofrort htehec hcahtabtobtot
+inintetrearcatcitoionn,t, htheep prorocecdeduurered desecsrcirpiptitoionns,sa, nanddt htheeq quuesetsitoionns,s,a anndds esceoconnddlyl,yf, ofrort htheeb iblailtaetrearlal
+auauddioios tsitmimuulaltaitoionni nint htheed deseesnensistiitziaztaitoinonp phhasaes.e.T Thhisism moodduulelec acnanb ebed deaecatcitvivataetdedf ofroru usesresrs
+wwitihthh ehaerairnigngim impapiarimrmenetnst.s.
+FoFrorth teheu suesreirn tienrtaecrtaicotnio,nth, ethmeo mduoldeuclaen cuanse upsree -prereco-rredceodrdaeudd iaoucdliipos cbliyptsh beyra tphiestrsapbiustts
+cabnuta lcsaonu aslesoa tuesxet -ato t-esxpte-etoch-spfueneccthio fnuntocttiroann stofo rtrmantsefxotrimnp tuetxtto inapuudti otoo uatupduito. Tohuitspaultl.o Twhsis
+daelvloelwops erdsetvoeeloapsielrys adtod meaosrielyin taedradc timonorsec eninatreiorascatniodnp rsocvenidaersioms oarendp erpsroonvaildizeesd manodre
+dpyenrasmonicalbiezhedav ainodr, wdyitnhatmexict bgeehnaervaioterd, watitrhu tnetximt geebnyertahteedch aatt rbuont.time by the chatbot.
+TThehea uaduidoiob iblailtaetrearlaslt ismtimuluatliaotnioins aisc haicehvieedvebdy bcyh acnhgainngginthge thsoeu snodunbdal abnaclaenfrcoem frolemft lteoft
+ritgoh rtiganhdt atnhden thbeanc kb.ack.
+TThheet atcatcitlielem modoudulelei sisu suesdedi nint htehed edseesnesnistiitziaztaitoinonp phahsaeset otop rporvoivdideeb iblailtaetrearlalt atcatcitleile
+stsitmimuulaltaitoionn,,u usisninggv vibibrartaitoionnm moototorsrsa tattatachcheeddt otot htheew wrirsitsstso offt htheep pataiteinent,tt, otoc ocmompplelteetet htehe
+EEMMDDRRt rteraetamtmenentte xepxpereireinencec,e,e nenhhaanncecet htheev vidideoeoa nandda uauddioios tsitmimuulaltaitoionns,s,a nanddm makakeet hthee
+syssytsetmemu usasbalbeleb ybyu usesresrsw witihthh ehaerairnignga nadndv ivsiusaulailm impapiarimrmenetnst.s.
+The overall flow of the entire system is presented in Figure 3 and is based on the
+The overall flow of the entire system is presented in Figure 3 and is based on the
+EMDRprotocoldescribedintheIntroductionsection. Theprotocolisadaptedsothatthe
+EMDR protocol described in the Introduction section. The protocol is adapted so that the
+questionsandevaluationstypicallycarriedoutbythetherapistarenowimplementedby
+questions and evaluations typically carried out by the therapist are now implemented by
+thechatbotmodule(integratedwiththeaudiomodule),whilethedesensitizationphaseis
+the chatbot module (integrated with the audio module), while the desensitization phase
+implementedintheaudio,video,andtactilemodules. WeusedaUMLactivitydiagramto
+is implemented in the audio, video, and tactile modules. We used a UML activity diagram
+representtheactionsconductedbyeachmoduleinresponsetothepatientinput.
+to represent the actions conducted by each module in response to the patient input.
+Healthcare2022,10,133 8of18
+Healthcare 2022, 10, x FOR PEER REVIEW 8 of 19
+Figure 3. The overall flow of the system.
+Figure3.Theoverallflowofthesystem.
+All modules were implemented in Python, with the chatbot module acting as a
+All modules were implemented in Python, with the chatbot module acting as a
+coordinator and also being the entry point of the application. Different libraries were used
+coordinator and also being the entry point of the application. Different libraries were
+for the specific modules, such as PySimpleGui, time, sys, os for video module, gTTS text-
+usedforthespecificmodules,suchasPySimpleGui,time,sys,osforvideomodule,gTTS
+to-audio library, playsound library for the audio module, NLTK, sklearn, and WordNet
+text-to-audiolibrary,playsoundlibraryfortheaudiomodule,NLTK,sklearn,andWordNet
+for the chatbot kernel.
+forthechatbotkernel.
+In Figure 4, the tactile module implements tactile stimulation by using two vibration
+InFigure4,thetactilemoduleimplementstactilestimulationbyusingtwovibration
+motors pressed to the user’s wrists using bracelets. The motor used is the same as the one
+motors pressed to the user’s wrists using bracelets. The motor used is the same as the
+in [22], a small, lightweight flat vibration motor controlled by a Raspberry Pi board (or
+onein[22],asmall,lightweightflatvibrationmotorcontrolledbyaRaspberryPiboard
+similar).
+(orsimilar).
+ThesystemcanbeentirelydeployedonaRaspberryPi(orsimilar)board,withan
+attachedvideoandaudiooutput,andthevibrationmotorsattachedtotheRPIgeneral-
+purposeI/Opins. Iftheselectedconfigurationdoesnotincludethetactilemodule,then
+the system can also be deployed on a desktop/laptop computer. It is preferable to use
+headphones instead of speakers for bilateral audio stimulation. Figure 5 shows how
+somebodymayusetheEMDRsystem.
+Healthcare 2022, 10, x FOR PEER REVIEW 9 of 19
+Healthcare2022,10,133 9of18
+Healthcare 2022, 10, x FOR PEER REVIEW 9 of 19
+Figure 4. Raspberry Pi 4 with tactile module integrated and the vibration motor 1027 [22].
+The system can be entirely deployed on a Raspberry Pi (or similar) board, with an
+attached video and audio output, and the vibration motors attached to the RPI general-
+purpose I/O pins. If the selected configuration does not include the tactile module, then
+the system can also be deployed on a desktop/laptop computer. It is preferable to use
+headphones instead of speakers for bilateral audio stimulation. Figure 5 shows how
+Figure 4. Raspberry Pi 4 with tactile module integrated and the vibration motor 1027 [22].
+sFoigmuerebo4.dRya mspabyer uryseP ith4ew EitMhtDacRti lseymstoedmu.l eintegratedandthevibrationmotor1027[22].
+The system can be entirely deployed on a Raspberry Pi (or similar) board, with an
+attached video and audio output, and the vibration motors attached to the RPI general-
+purpose I/O pins. If the selected configuration does not include the tactile module, then
+the system can also be deployed on a desktop/laptop computer. It is preferable to use
+headphones instead of speakers for bilateral audio stimulation. Figure 5 shows how
+somebody may use the EMDR system.
+Figure 5. The participant is prepared for intervention. On the left side of the figure, we see how the
+Figure5.Theparticipantispreparedforintervention.Ontheleftsideofthefigure,weseehowthe
+user is fixing the actuators, while on the right side of the figure we see how the user is participating
+userisfixingtheactuators,whileontherightsideofthefigureweseehowtheuserisparticipating
+in an EMDR session.
+inanEMDRsession.
+In the current pilot study, we tested the feasibility of an actuator-based EMDR virtual
+Inthecurrentpilotstudy,wetestedthefeasibilityofanactuator-basedEMDRvirtual
+assistant system in replacing a trained clinician in the EMDR procedure and making the
+assistantsysteminreplacingatrainedcl inicianintheEMDRprocedureandmakin gthe
+system capable of acting autonomously. Thus, we wanted to see if there were
+systemcapableofactingautonomously.Thus,wewantedtoseeiftherewereimprovements
+Figure 5. The participant is prepared for intervention. On the left side of the figure, we see how the
+improvements regarding the cognitive and emotional response in relation to traumatic
+regardingthecognitiveandemotionalresponseinrelationtotraumaticmemoriesafterthe
+user is fixing the actuators, while on the right side of the figure we see how the user is participating
+memories after the participants used the virtual assistant.
+ipna arnti EciMpaDnRt sseussseiodnt. hevirtualassistant.
+33..22.. RReeccrruuiittmmeenntt
+In the current pilot study, we tested the feasibility of an actuator-based EMDR virtual
+assistAAan tttoo sttayalls tooeffm 33 11i npp araerrtptiiclcaiipcpiaannngtt ssa w wtreearriene eiindncc lcluulidndeiecddi aiinnn ittnhh eet hppeii llEootMt ssDttuuRdd ypy,,r 1o144c emmduaalrleeess aaannnddd m1177a kffeienmmgaa tlleheses, ,
+swwyiisttthhe maagg eecssa bbpeeattbwwleee eeonnf 1199a caatnninddg 33 33a (u(MMtoaanggeoe m== 2o26u6..s22l,y, SS. DDT =h= u44s..2,2 11)w).. GeG iivwveeannn ttthehdee nntaaott uursreee eoo ff itfth heeth ssettruuedd yyw aaennrded
+iggmiivvpeernno vtthheeme ffeaanccttt stt hhraeatgt tathhridissi nppgiill oottht sest tuucoddgyyn iiisst iaavnne iiannniittdiiaa lel msstteoeppti oiinnn aeexlx prpellosorpriionnnggs aean ni niinn rnneoolvavtaaitotiinvve et oaap ptprpalliuiccmaattiaiootinnc, ,
+mwweeem fofoollrloileowsw eadefdtte hret thhreee c poremacromtimceinmpdaeannttidso auntsiooefdnL tehooefn vLeitretoauln.a [l 2ea3ts ]siianslt.a ren[c2tr.3 u]i tiinng raencdrusietliencgti nagnpda rsteicliepcatinntgs,
+pwahroticeimpapnhtsa,s iwzehoth aetmapphialsoitzes atmhaptl eas ipzieloits bsaamsepdleo nsitzhee ips rbaagsmedat iocns otfhere cprruaigtmmeantitcsa nodf
+3rthe.2ce.r Rnueietccmreuseisntimtty aenfnotd r tehxea mneicneisnsgittyh feofre eaxsiabmiliintyinogf tthhee faepapsliibcialittiyo no.f Pthaert aicpippalinctastiwone.r ePavrotliucinptaenetrss
+wthearter evsopluonndteeedrst othaant orenslpinoenadnendo tuon acnem oennlitnaen adnangoruenecdetmoepnatr taincidp aatgereineda tsoin pgalertsiceispsiaoten ionf
+A total of 31 participants were included in the pilot study, 14 males and 17 females,
+ain tseirnvgelne tisoenssfioornr eodfu ciinntgersvterenstsioann dfoarn xrieedtyucaisnsgo csiatrteedssw ainthda apnoxtieenttyi alalsysotrcaiuatmeda tiwceitvhe nat
+with ages between 19 and 33 (Mage = 26.2, SD = 4.21). Given the nature of the study and
+pfrootmentthiaellpya tsrta.uInmoartidce ervteonats fsreosmsw thhee pthaesrt.t Ihne opradretric tiop aansstsesws ewreheetlhigeirb tlheein paarctciocripdaanntcse wweirthe
+given the fact that this pilot study is an initial step in exploring an innovative application,
+eSlhigaipbilreo ’isnr eaccocmormdaenncdea twioinths, Sthheaypwiroer’se irnetceormvimeweenddabtyiotwnso, pthsyeych woleorgei sitnst[e1r0v]i.eFwoerdin bcylu stwioon
+we followed the recommendation of Leon et al. [23] in recruiting and selecting
+pinsythcehostluodgiys,tps a[r1t0ic].i pFaonr tisnncleuesdieodn tion bthee1 8st–u4d0yy,e paarsrtoicfiapgaen,tasn ndeteodheadv teoa btel e1a8s–t4m0 eydeiaurms osfc aogrees,
+participants, who emphasize that a pilot sample size is based on the pragmatics of
+aonndt htoe Ihmavpea catt olefaEsvt emntesdSiucamle s-Rcoerveisse odn( tIhEeS -IRm)paancdt tohfe ESvteantet–s TSrcaailteA-RnexvieistyedIn (vIEeSn-tRor)y an(SdT AthIe).
+recruitment and the necessity for examining the feasibility of the application. Participants
+SPtaarttei–cTipraanitt sAwnxeireetye xIcnlvuednetdorfyro (mSTtAhIe).s tPuadrtyiciifptahnetys swcoerree dexvcelruydhedig hfroomn bthoteh smtuedays uifr eths,eiyf
+were volunteers that responded to an online announcement and agreed to participate in
+they were suicidal, taking psychotropic medication, or had a diagnosed psychological
+a single session of intervention for reducing stress and anxiety associated with a
+condition. After the initial assessment, four participants were excluded (Table 2). All
+potentially traumatic event from the past. In order to assess whether the participants were
+participantswereinformedaboutthestudyandsignedaconsentstatement. Thestudywas
+eligible in accordance with Shapiro’s recommendations, they were interviewed by two
+approvedbytheCommitteeofEthicsandAcademicandScientificDeontology,University
+psychologists [10]. For inclusion in the study, participants needed to be 18–40 years of age,
+ofMedicineandPharmacyofCraiova.
+and to have at least medium scores on the Impact of Events Scale-Revised (IES-R) and the
+State–Trait Anxiety Inventory (STAI). Participants were excluded from the study if they
+Healthcare2022,10,133 10of18
+Table2.Samplecharacteristics.
+Characteristics Category n %
+Age(years) Mean±standarddeviation 26.2±4.21
+Male 14 45.2
+Gender
+Female 17 54.8
+Highschooldiploma 4 12.9
+Collegedegree 10 32.3
+Education
+Master’sdegree 15 28.4
+Doctorate(Ph.D) 2 6.5
+Notreatmentinthelast6months 23 74.2
+Healthcondition
+Undertreatmentinthelast6months 8 25.8
+Lessthan6months 1 3.2
+Between6and12months 13 41.9
+Monthssincethe
+Between12and24months 6 19.4
+traumaticevent
+Between24and36months 7 22.6
+Morethan36months 4 12.9
+(18–40yearsofage;atleastmedium
+Criteriaforinclusion 31 88.5
+scoresonIES-RandSTAI)
+(Scoredveryhighonbothmeasures;
+Criteriaforexclusion suicidal;takingpsychotropicmedication; 4 11.6
+diagnosedpsychologicalcondition)
+3.3. Procedure
+Thedesignedinterventionconsistedoffourphasesofbilateralstimulation(visual,
+auditive,andactuator-based).Thefirstthreephasesweredesignedwiththeaimofreducing
+the intensity of emotions and beliefs associated with the traumatic event. The fourth
+phasewasintroducedtoinstallapositivebeliefaboutthatevent. Inadditiontovisual
+stimulation,audioandtactilestimulationwereusedsimultaneously,asauditory,andtactile
+stimuli have been shown to enhance the effect and increase the effectiveness of EMDR
+intervention[20,21].
+The procedure was applied as follows. The participants were informed about the
+EMDRtherapyandinstructedonhowtousetheapplication. Participantswereinvitedto
+thinkaboutatraumaticeventfromthepastthatcausedthemdiscomfort,wheretheyfailed
+toovercomeit. Afteraccessingthetraumaticmemory,theIES-RandSTAIinstruments
+were applied in the pre-test condition. After the discussion with a specialist, and after
+thecompletionoftheinstrumentsonthepre-testassessmentphase,theparticipantsself-
+administeredtheinterventionthroughtheapplication. Aftertheinitialassessment, we
+eliminatedfourparticipantsbecausetheirscoresontheIES-RandSTAIwereveryhigh,
+andtheyneededspecializedprofessionaltreatment. InTable3wecanseethedescription
+oftheappliedprotocolindetail.
+Thedetailedstepsoftheapplicationprotocolandtheirinteractiononmultiplelevels
+arevisuallyrepresentedinFigure6.
+Healthcare2022,10,133 11of18
+Table3.Applicationprotocoldescription.
+ThePhaseoftheIntervention Description
+ParticipantswereinformedaboutEMDRtherapyandhowbilateral
+sensorystimulationhelpsprocesstraumaticmemories.Itwasmentioned
+1.Introduction thattheycouldwithdrawatanytimeiftheywerenotcomfortablewith
+theprocedure.Atthesametime,theparticipantswentthroughan
+adjustmentsessionwithbilateralstimulations.
+Theapplicationrequesteddemographicinformation(genderandage)
+2.Demographicinfo
+andtheagreementforparticipation.
+Throughintelligentchatbotguiding,theparticipantwasledtoaccess
+overwhelmingemotionsthatsometimesinterferewiththeirusualactivity
+andprimaryeventsrecordedinmemoryassociatedwithoverwhelming
+3.Preparationforaccessingthetraumaticevent
+emotions.Theparticipantwasalsoguidedtovisualizethatevent
+mentallyasamoviescene.Oncetheoldestmemoryassociatedwiththose
+emotionswasidentified,theparticipantwasaskedtodescribeitbriefly.
+Theparticipantwasintelligentlyguidedtoidentifythebodilysensations
+associatedwiththatevent(tension,tremor,cold,heat,pressure,or
+4.Bodyscanning
+sounds).Theinformationobtainedwasnotedandrecordedbythe
+application.
+Identificationofnegativebeliefs(aboutoneself,others,theworld,orlife
+5.Identificationofnegativebeliefs
+ingeneral)causedbythetraumaticevent.
+Assessmentoftheintensityofnegativecognitions/beliefsandemotions
+6.Emotionsandcognitionsintensityassessment
+associatedwiththatevent(VOCandSUDscale)
+Applicationofbilateralstimulation(audio,video,andsensory)inseveral
+sessionsoffourminuteseachandassessmentoftheintensityof
+7.Treatmentphase
+cognitionsandemotionsaftereachsessionofbilateralstimulationdone
+throughtheguidanceofthechatbot.
+Identifyingandinstallingpositivecognitionthroughanewsessionof
+8.Positivecognitionidentificationandinstalling
+bilateralstimulation.
+Theintelligentchatbotremindstheparticipantthattheycanbenefitfrom
+9.Closure
+psychologicalsupport.
+Theparticipantcansharetheirimpressionsrelatedtotheexperienceof
+10.Feedback
+usingtheapplication.
+3.4. Instruments
+3.4.1. PrimaryOutcomeMeasures
+ImpactofEventScale-Revised(IES-R).TheIES-Risa22-itemself-reportquestionnaire
+usedtoassesssubjectivedistresscausedbyarecenttraumaticeventoraspecificone. The
+IES-Ritemsareratedona5-pointscalerangingfrom0(“notatall”)to4(“extremely”)
+and related to symptoms associated with PTSD. The IES-R scale can have a total raw
+score ranging from 0 to 88 and a raw score for three subscales: Intrusion, Avoidance,
+and Hyperarousal subscales. For our study, we calculated the total score in order to
+assesstheseverityofthesymptoms[24,25]. Thescalehasgoodpsychometricproperties
+beingvalidatedfortheRomanianpopulationandisoneofthemostusedinstrumentsfor
+assessingtraumaticevents[26–28]. Inthisstudy,Cronbach’salphavariedfrom0.87inthe
+pre-interventionphaseto0.72forthepost-interventioncondition.
+TheState–TraitAnxietyInventory(STAI)isa40-itemself-reportedinstrumentused
+tomeasuretraitandstateanxietyandwasdesignedbySpielbergeretal.[29]. Thescale
+consistsoftwoseparatesubscaleseachof20itemsthatmeasurethestatefactorandthetrait
+one. Inourstudy,weusedthefirstsubscalewhichmeasuresthestatefactorbecausethis
+scalecanbeusedtomeasurethelevelofanxietyregardingasituation,event,ortraumatic
+memoryfromthepast. Allitemsareratedona4-pointscalerangingfrom“AlmostNever”
+to“AlmostAlways”,withhigherscoresindicatinghigherlevelsofanxiety. Thescalewas
+HealtHhecaalrtehc2a0r2e 22,01202,, 1103,3 x FOR PEER REVIEW 12 of 1192 of18
+validaTtehde fdoertatihleedR sotempasn oifa tnhep oapppulliactaitoinon[ 3p0r]o.toIncoolu arndst uthdeyir, Cinrtoenrabcaticohn’s oanl pmhualtwipales l0e.v8e8lsin the
+praere-i nvtiseurvalelny trieopnrecsoenndteitdi oinn ,Faignudre0 .67.1 forthepost-interventioncondition.
+Figure 6. The representation of the applied application protocol.
+Figure6.Therepresentationoftheappliedapplicationprotocol.
+Healthcare2022,10,133 13of18
+3.4.2. SecondaryOutcomeMeasures
+Apartfromtheseprimaryoutcomemeasures,weusedotherscalesthatarepartofthe
+standardizedinterventionproceduresinEMDR[10].
+SubjectiveUnitsofDisturbance(SUD)scaleisasingle-itemmeasureandself-reporting
+scale used for measuring the level of subjective distress and intensity of the traumatic
+memorywithanswersrangingfrom0to10,where0referstoalackofdisturbancesand10
+totheworstpossible.
+TheValidityofCognition(VOC)scaleisasingle-itemmeasureandself-reportscale
+andshowsthelevelofbeliefinapositiveoranegativecognitiononascalerangingfrom
+1to7, whereascoreof1meansalackofbeliefinaparticularcognition, andascoreof
+7meansafullbeliefinit.
+4. Results
+4.1. PrimaryOutcomeMeasures
+TheresultsprovidedinTables4and5showthattherewasasignificantdifferencein
+scoresforthepre-testcondition(M=39.8,SD=14.07)andpost-test(M=13.7,SD=5.7)
+measuredwiththeIES-Rscale: t(30)=10.5,p<0.001,andalargeeffectsize(d=1.89).
+Table4.Pairedsamplet-test—primaryoutcomemeasures.
+95%CIForCohen’sD
+t df p Cohen’sd Lower Upper
+IES-RPre-,IES-RPost- 10.521 30 <0.001 1.890 1.292 2.476
+STAIPre-,STAIPost- 11.759 30 <0.001 2.112 1.469 2.744
+Table5.Descriptivestatisticsofscores(pre-andpost-intervention).
+N Mean SD SE
+IES-RPre- 31 39.806 14.077 2.528
+IES-RPost- 31 13.742 5.785 1.039
+STAIPre- 31 56.774 8.330 1.496
+STAIPost- 31 33.839 4.620 0.830
+Also,therewasasignificantdifferenceinscoresforthepre-testcondition(M=56.7,
+SD=8.3)andpost-test(M=33.8,SD=4.6)regardinganxietyscores: t(30)=11.7,p<0.001,
+andalargeeffectsize(d=2.11)ofinterventioninreducinganxietyassociatedwiththe
+traumaticevent. Inotherwords,theinterventionthroughthevirtualassistantsystemfor
+EMDRhadasignificanteffectandcontributedtoreducingthedistressassociatedwiththe
+traumaticevent,andreducedtheanxietyassociatedwithit.
+4.2. SecondaryOutcomeMeasures
+WeusedtheVOCandSUDscalesinordertoassesswhethertherewereimprovements
+in the EMDR procedure on the negative cognitions and emotions associated with the
+traumaticevent. The resultsindicate asignificantincreaseinVOC scores: t(30)= 14.4,
+p<0.001,whichreflectsapositiveincreaseofpositivecognitionregardingthetraumatic
+event (Table 6). Also, we notice that there was a significant pre- to post-intervention
+reduction in scores for SUD: t (30) = 75.9, p < 0.001 (Table 5). Table 7 also shows that
+the higher scores decreased significantly at the end of the intervention. These results
+indicatethattheself-administeredprotocolhasgoodpotentialandisefficientforreducing
+thenegativecognitionsandemotionsassociatedwiththetraumaticmemoryeveninthe
+absenceofthehumanfactor.
+Healthcare2022,10,133 14of18
+Table6.Pairedsamplest-test—secondaryoutcomemeasures(pre-andpost-assessment).
+t df p
+VOCPre-,VOCPost- 14.471 30 <0.001
+SUDPre-,SUDPost- 75.904 30 <0.001
+Table7.Pre-andpost-interventioncomparisonofsecondaryoutcomemeasure.
+N Mean SD SE
+VOCPre- 31 2.968 0.657 0.118
+VOCPost- 31 6.097 0.887 0.156
+SUDPre- 31 9.161 0.735 0.132
+SUDPost- 31 0.774 0.717 0.129
+5. Discussion
+ThegoalofthisstudywastodevelopanEMDRvirtualassistantcapableofguidinga
+userinperforminganefficienttherapywithminimalinterventionfromatrainedclinician.
+Giventhefactthatthestudyisapilotone,theprocesswassupervisedbytrainedclinicians
+whodidnotinterveneintheprocessbutwerepreparedtodosoifneeded.
+Theresultssuggesttheefficiencyofself-administeredEMDRthroughthedeveloped
+systempre-andpost-intervention. Ourstudyshowedastatisticallysignificantreduction
+ofsymptomsassociatedwithPTSDandanxiety. Also,theself-administrationoftreatment
+using bilateral actuator, visual, and tactile stimulation appears to produce a significant
+decreaseinsymptomsassociatedwithtraumaticmemories. Theinterventioncontributes
+bothtothereductionofnegativeaffectionsassociatedwithtraumaticeventsandhelpsin
+changingthesecognitionswithmorefunctionalones.
+ComparedtoothersystemsthatofferthepossibilityofEMDRinterventions,suchas
+theoneproposedbyAlelumaFloresetal.[15],ourvirtualsystemismoreautonomous,
+being developed following the EMDR protocol, and the presence of a clinician is not
+mandatory.Inaddition,themaindifferencefromothersystems[17–19]liesintheusefulness
+oftheintelligentchatbottogetherwiththemulti-actuatorimplementationthatcanhavean
+impactontheefficiencyoftheintervention.
+OurresultsareinlinewithinterventionsthatusedtraditionalEMDR[8,31]. Evenif
+theinterventioninvolvedonlyonesession,ourfindingsaresimilartothoseofprevious
+research,whichshowedthatevenafterasinglesessionofEMDR,symptomsdecreased
+significantly,effectsoftheinterventionbeingconstantafterfollow-up[32–37]. Moreover,
+thisdecreaseintermsofsymptomswasalsofoundinotherresearchwhereparticipants
+weretreatedremotelyandtheinterventionwasself-administered[3,38].
+Inexplainingourresults,asnotedbyKutzetal.[37],wemusttakeintoconsideration
+twomainvariables: theformer exposureofparticipantstotrauma andthepresenceof
+some risk factors that can influence the effect of the intervention [35]. In this respect,
+thosewhoareexposedtoasingletraumaticeventandwhohaveexperiencedmoderate
+symptomsassociatedwithPTSDoranxietyaremorepronetohavearapidresponsein
+terms of recovery, compared to those who have a history of risk factors or pre-existing
+vulnerabilitiessuchasmultipleexposurestosignificanttrauma[37].
+Also, it is important to note that in relation to the virtual assisted treatment, the
+participantswerecuriousabouthowtheinterventionwouldproceed,whilesomewere
+interestedinthepossibilityofworkingthroughtheirtraumaticmemorieswithoutexposing
+themselvestoanotherperson. Therefore,oursystemcouldbeveryusefulinthecontext
+generated by COVID-19, given that most of the activities are developed in the online
+environment,andtheincidenceofdepression,anxiety,insomnia,andPTSDhasincreased
+substantially [39]. Because of the impact that COVID-19 has on individuals and in the
+contextofincreasingdemandsforremoteintervention[40],thepossibilityofusingsucha
+systemcomplementsthelackofhumanresourcesandatthesametimemakespsychological
+interventionpossiblewhere,becauseoftherestrictionmeasures,face-to-faceinteraction
+Healthcare2022,10,133 15of18
+withaspecialistisnotpossible. Moreover,oursystemissuitableforcasesconfrontingmild
+psychologicaldistress, whichdonotrequirethepresenceofaspecialist. Thus, existing
+humanresourcescanconcentrateonthosecasesthatrequirespecialattention.
+Basedontheresultsfromthisstudy,wecanstatethathavingasystemwhichoffers
+anautonomousEMDRinterventionisaclearpossibility. Theadvantagesincludereduced
+costsandincreasedaccessibility. However,itraisesseveralquestionsaboutwhetherthe
+technologycanreplacethehumanpresenceentirely. Weareawareofthefactthatthereare
+somerisksassociatedwiththisintervention,suchasincreasedshort-termdistressforsome
+participants. Still,studieshaveshownthatsuchrisksareminorandarebasedonanecdotal
+evidence[3]. Wehaveimprovedoursystembytakingintoaccounttherecommendation
+for designing safe, affordable, and easy-to-use interventions for self-help that have the
+potentialtobeusedbymanypeople[41]. However, weconsiderthatanyintervention,
+whetherautonomousornot,mustbecarriedoutinthefirstphaseunderthesupervisionof
+atrainedclinicianandincompliancewiththeestablishedprotocoluntillarge-scaletesting.
+Participantsdidnotreportanyproblemsintheirinteractionswiththesystem. The
+usabilityofthesystemwasconsideredgoodandwheneverneeded, explanationswere
+giventotheparticipantsonhowtousethesystem. Overall,theexperienceoftheusersin
+thisrespect—usability—wasrankedasgood.
+However,theresultsofourpresentresearchmustbeinterpretedinthecontextofthe
+pilotstudythatwehavecarriedout,whichisbasedonalimitednumberofparticipants
+andconsequentlyhaslimitationsintermsofgeneralizability. Evenso,thisisafirststepin
+addressingtheneedthathasbeenreportedinpreviousstudiesregardingthedevelopment
+of self-administered EMDR therapy that is developed in accordance with established
+protocolsandunderscorestheneedformoreextensiveresearch. Weconsideritasanother
+stepinstudyingtheeffectivenessofremotelyadministeredinterventionsandastarting
+pointfordevelopingsomeclinicaltrialsusingtheproposedsystem.
+6. Conclusions
+In this paper, we described an EMDR virtual system based on video, tactile, and
+audio actuators used to treat anxiety, distress, and negative emotions associated with
+traumaticmemories. Basedontheresultsobtained,anautonomousEMDRinterventionis
+aclearpossibility.
+Our study evidences the efficacy of an EMDR intervention for those who cannot
+haveaccesstoimmediatepsychologicalsupport,thusenablingtheirautonomy. Moreover,
+theestablishedprotocolwastestedandpositivelyconfirmedinprovidingthenecessary
+guidanceforanefficientadministration. Asaresult, itcouldbeconsideredasatoolof
+self-supportforpeopleexperiencingmildsymptomsofPTSD.
+Moreover,oneofthekeyfindingsofthisstudyreferstotheefficiencyofsuchasystem
+thatoffersthepossibilityofself-administrationofanEMDRintervention,thuscontributing
+toalimitedbodyofresearchinthisfield[3]. Eveniftherearesomedevelopmentsand
+applicationsforEMDRtherapy,themajorityofthesystemsarenotautonomousandrequire
+thepermanentinterventionofaclinicianorareusedonlyasatoolintreatment[38,42].
+Comparedtoothersystems,theuniqueadvantagesofthepresentsystemareasfollows:
+• ThepresenceofanAI-drivenchatbot,followingtheeightessentialphasesofEMDR[10],
+whichcanbefurtherenhancedwithnewdialogueoptionsandevaluationstrategies;
+• The ability to customize the interaction based on the patient’s characteristics. For
+example,usingdifferentstimulationmethods(visual,audio,tactile)makestheEMDR
+procedureaccessibleforpeoplewithdisabilities(severevisualimpairmentoreven
+blindness,hearingloss);
+• ThepossibilityofapplyingEMDRtreatmentsinafullyunsupervisedmanner,using
+theaforementionedchatbot,i.e.,theassistanceofatrainedclinicianisnotrequired;
+Futureworkwillincludeaddingweb-basedfunctionalitytothesystemtomakeit
+possible to be used by the public. Adding intelligent dialog robots, such as Siri, can
+realize autonomous communication and at the same time can accompany the user in
+Healthcare2022,10,133 16of18
+accommodating the intervention. Moreover, the use of an automated system has the
+potentialtoenablefuturestudiescomparingEMDRwithalternativetreatmentsusingsham
+stimulation,whichcouldbevaluableinhelpingtoelucidatetheefficacyofthebilateral
+stimulationcomponentofEMDRatamoregenerallevel.
+AuthorContributions:Conceptualization,N.G.,C.-A.B.,A.V.,A.-F.P.,M.-V.D.,R.P.,I.O.G.,M.C.P.,
+R.C.P.andA.H.;methodology,N.G.,A.V.,A.-F.P.andR.P.;software,N.G.,C.-A.B.,A.V.,M.-V.D.,I.O.G.
+andR.C.P.;validation,N.G.,A.-F.P.andR.P.;formalanalysis,N.G.,A.-F.P.,andR.P.;investigation
+A.-F.P., M.-V.D., R.P. and I.O.G.; writing—original draft preparation, N.G., C.-A.B., A.V., A.-F.P.,
+M.-V.D.,I.O.G.,R.P.,M.C.P.andA.H.;writing—reviewandediting,N.G.,C.-A.B.,A.V.,A.-F.P.and
+R.P.Allauthorshavereadandagreedtothepublishedversionofthemanuscript.
+Funding:Thisresearchreceivednoexternalfunding.
+InstitutionalReviewBoardStatement:Thestudywasconductedaccordingtotheguidelinesofthe
+DeclarationofHelsinki,andapprovedbytheEthicsCommitteeofTheUniversityofMedicineand
+PharmacyofCraiova(149/07.12.2020).
+InformedConsentStatement:Informedconsentwasobtainedfromallsubjectsinvolvedinthestudy.
+DataAvailabilityStatement:Thedatapresentedinthisstudyareavailableuponrequestfromthe
+correspondingauthor.
+Acknowledgments: TheauthorswouldliketothankOanaStefănescuforhergreatsupportand
+,
+Healthcare 2022, 10, x FOR PEER REaVsIsEisWta ncewiththispaper. 17 of 19
+ConflictsofInterest:Theauthorsdeclarenoconflictofinterest.
+AApppepnednidxixA A
+Figure A1. Chat window used for communication between the chatbot module and users.
+FigureA1.Chatwindowusedforcommunicationbetweenthechatbotmoduleandusers.
+Figure A2. Movement of the ball during the EMDR session.
+References
+1. Shapiro, F. Eye Movement Desensitization and Reprocessing: Basic Principles, Protocols and Procedures, 2nd ed.; Guilford: New York,
+NY, USA, 2001; ISBN 978-1572306721.
+2. Sikes, C.; Sikes, V. EMDR: Why the controversy? Traumatology 2003, 9, 169–182. https://doi.org/10.1177/153476560300900304.
+3. Waterman, L.Z.; Cooper, M. Self-administered EMDR therapy: Potential solution for expanding the availability of
+psychotherapy for PTSD or unregulated recipe for disaster? BJPsych Open 2020, 6, e115. https://doi.org/10.1192/bjo.2020.92.
+4. Berg, D.P.V.D.; van der Gaag, M. Treating trauma in psychosis with EMDR: A pilot study. J. Behav. Ther. Exp. Psychiatry 2012,
+43, 664–671. https://doi.org/10.1016/j.jbtep.2011.09.011.
+5. Ironson, G.; Freund, B.; Strauss, J.; Williams, J. Comparison of two treatments for traumatic stress: A community-based study
+of EMDR and prolonged exposure. J. Clin. Psychol. 2001, 58, 113–128. https://doi.org/10.1002/jclp.1132.
+6. Cuijpers, P.; Van Veen, S.C.; Sijbrandij, M.; Yoder, W.; Cristea, I.A. Eye movement desensitization and reprocessing for mental
+health problems: A systematic review and meta-analysis. Cogn. Behav. Ther. 2020, 49, 165–180.
+https://doi.org/10.1080/16506073.2019.1703801.
+7. Horst, F.; Den Oudsten, B.; Zijlstra, W.; de Jongh, A.; Lobbestael, J.; De Vries, J. Cognitive Behavioral Therapy vs. Eye Movement
+Desensitization and Reprocessing for Treating Panic Disorder: A Randomized Controlled Trial. Front. Psychol. 2017, 8, 1409–
+1409. https://doi.org/10.3389/fpsyg.2017.01409.
+8. Gauhar, Y.W.M. The Efficacy of EMDR in the Treatment of Depression. J. EMDR Pr. Res. 2016, 10, 59–69.
+https://doi.org/10.1891/1933-3196.10.2.59.
+9. Logie, R. EMDR-more than just a therapy for PTSD? Psychologist 2014, 27, 512–517.
+Healthcare 2022, 10, x FOR PEER REVIEW 17 of 19
+Appendix A
+Healthcare2022,10,133 17of18
+Figure A1. Chat window used for communication between the chatbot module and users.
+Figure A2. Movement of the ball during the EMDR session.
+FigureA2.MovementoftheballduringtheEMDRsession.
+RReeffeerreenncceess
+11.. SShhaappiirroo,, FF.. EEyye eMMovoevmeemnetn DteDseensseintisziattizioanti oannd aRnedprRoceepsrsoicnegs:s Binags:ic PBraisniccipPlersi,n Pcirpolteosc,olPs raontdoc PorlsocaednudrePs,r o2cneddu erdes.;, G2unidlfoerdd:. ;NGewui lYfoorrdk,:
+NNeYw, UYSoArk, ,2N00Y1,;U ISSBAN,2 907081-;1I5S7B2N30967782-11.5 72306721.
+22.. SSiikkeess,, CC..;; SSiikkeess,, VV..E EMMDDRR::W Whhyyt thheec coonnttrroovveerrssyy??T Trraauummaatotolologgyy2 2000033,,9 9,,1 16699––118822..[ Chtrtopsss:R//edfo]i.org/10.1177/153476560300900304.
+33.. WWaatteerrmmaann,,L .LZ..Z;C.; oCopoeorp,eMr,. SMelf. -aSdemlf-inadismteirnedistEeMreDd REtMheDraRp yt:hPeortaepnyti: alPsootleuntitoianl fosroleuxtpioann difnogr thexepaavnadilianbgil ittyheo fpavsyacilhaobtihlietyra poyf
+fposryPcThoStDheorraupnyr feogru PlaTtSeDd roerc iupnerefogrudlaisteadst erer?ciBpeJP fsoyrc hdiOsapsetner2?0 B20JP,6sy,ceh1 1O5p.e[nC 2ro0s2s0R, e6f, ]e[1P1u5b. Mhttepds]://doi.org/10.1192/bjo.2020.92.
+44.. BBeerrgg,, DD..PP.V.V.D.D.;.;v vanand dererG Gaaaga,gM, M.T. rTeraetaintigntgr atruamumaian ipns pyscyhcohsoissiws iwthitEhM EDMRD:RA: pAi lpotilsottu sdtuy.dJy..B Je.h Baveh.aTvh. eTr.hEerx.p E.xPps.y Pchsiyacthryiat2r0y1 220,1423,,
+64634, –666741–.6[7C1r. ohststpRse:f/]/doi.org/10.1016/j.jbtep.2011.09.011.
+55.. IIrroonnssoonn,, GG..;; FFrreeuunndd,,B B.;.;S Strtraauussss,,J .J;.;W Wilillilaimams,sJ, .JC. Comompaprairsiosnono fotfw twootr etraetmatmenetnstfso rfotrr aturamuamtiactsictr setsrse:sAs: cAo mcommumnuitnyi-tbya-sbeadsesdtu sdtyudoyf
+EoMf EDMRDaRn danpdro ploronlgoendgeedxp eoxspuorseu.rJe..C Jl.i nC.liPns. yPcshyocl.ho2l0. 0210,0518, ,5181, 31–1132–81.2[8C. rhotstpsRs:e/f/]doi.org/10.1002/jclp.1132.
+66.. CCuuiijjppeerrss,, PP..;; VVaannV Veeeenn,,S S.C.C.;.;S Sijibjbrraannddiij,j,M M..;; YYooddeerr,,W W.;.;C Crirsisteteaa,,I .IA.A..E Eyyeem moovveemmeennttd deesseennssiittiizzaattiioonn aanndd rreepprroocceessssiinngg ffoorr mmeennttaall
+hheeaalltthh propbrloembles:mAs:s ystAem atsiycsrteevmieawtica ndrmeveiteaw-a nalaynsids .Comgne.taB-eahnaavl.yTsihse.r .20C2o0g,n4.9 ,16B5e–h1av8.0 .[CTrhoesrs. Ref2]0[P20u,b Me4d9,] 165–180.
+7. Hhtotprsst:,//Fd.;oDi.eonrgO/1u0d.1s0te8n0,/1B6.5;0Z6ij0ls7t3r.a2,0W19.;.1d7e03Jo8n0g1.h ,A.;Lobbestael,J.;DeVries,J.CognitiveBehavioralTherapyvs.EyeMovement
+7. DHeosresnt,s Fit.i;z Daetino nOuanddsteRne,p Br.o; cZeisjlssitnrag, fWor.;T dree aJotinngghP, Aan.;i cLoDbibsoesrdtaeerl:, JA.; DRae nVdroiems,i Jz.e CdoCgnointtivroel lBeedhaTvriiaolr.aFl rTohnetr.aPpsyy cvhso. lE.y2e0 1M7o,v8,em14e0n9t.
+[DCersoesnsRsietifz]a[tPiounb Manedd ]Reprocessing for Treating Panic Disorder: A Randomized Controlled Trial. Front. Psychol. 2017, 8, 1409–
+8. G14a0u9h. ahrt,tYp.sW://.Mdo.iT.ohreg/E1f0fi.3c3a8cy9/ofpfsEyMg.D20R17in.0t1h4e09T.r eatmentofDepression.J.EMDRPr.Res.2016,10,59–69.[CrossRef]
+98.. LGoaguihe,aRr,. EYM.WD.RM-m. oTreheth aEnffjuicsatcay thoefr apEyMfDorRP TiSnD ?thPes ycThoreloagtimste2n0t1 4o,f2 7,D5e1p2r–e5s1s7io.n. J. EMDR Pr. Res. 2016, 10, 59–69.
+10. Shhttappsi:r/o/d,oF.i.Eoyrge/M10o.v1e8m91en/1t9D33es-e3n1s9i6ti.z1a0t.i2o.n59a.n dReprocessing(EMDR)Therapy,ThirdEdition:BasicPrinciples,Protocols,andProcedures;
+9. TLhoegiGe,u Ril.f oErMdDPrRe-sms:oNree wthaYno rjuks,tN aY t,hUerSaAp,y2 f0o1r8 P;ITSSBDN? 9P7s8y1c4h6o2lo5g3i2st7 6206.14, 27, 512–517.
+11. DeBont,P.A.J.M.;Berg,D.V.D.;VanDerVleugel,B.M.;DeRoos,C.;DeJongh,A.;vanderGaag,M.;VanMinnen,A.M.Prolonged
+exposure and EMDR for PTSDv. a PTSD waiting-list condition: Effects on symptoms of psychosis, depression and social
+functioninginpatientswithchronicpsychoticdisorders.Psychol.Med.2016,46,2411–2421.[CrossRef]
+12. Mosquera,D.;Leeds,A.M.;Gonzalez,A.ApplicationofEMDRTherapyforBorderlinePersonalityDisorder.J.EMDRPr.Res.
+2014,8,74–89.[CrossRef]
+13. Mosquera,D.;Knipe,J.UnderstandingandTreatingNarcissismwithEMDRTherapy.J.EMDRPr.Res.2015,9,46–63.[CrossRef]
+14. Novo, P.; Landin-Romero, R.; Radua, J.; Vicens, V.; Fernandez, I.; Garcia, F.; Pomarol-Clotet, E.; McKenna, P.J.; Shapiro, F.;
+Amann,B.L. Eye movement desensitization and reprocessing therapy in subsyndromal bipolar patients with a history of
+traumaticevents:Arandomized,controlledpilot-study.PsychiatryRes.2014,219,122–128.[CrossRef][PubMed]
+15. Flores, D.O.A.; Pineda-Lopez, F.; Aucatoma, E.L.G.; Cordova, F.E.I. Automated system on android platform for use in the
+implementationpsychotherapeutictechnicalEMDR.InProceedingsofthe2014XIXSymposiumonImage,SignalProcessingand
+ArtificialVision,Armenia,Colombia,17–19September2014;pp.1–5.[CrossRef]
+16. Ben-Tsvi, Y. IOIO Documentation on GitHub. Available online: https://github.com/ytai/ioio/wiki. (accessed on
+15November2021).
+17. Eastman,J.D.SystemsandMethodsforSelfDirectedStressAssistance.U.S.Patent201201513119A1,14June2012.
+18. Gazit,N.;Gazit,L.;Bar,T.DesensitizationandReprocessingTherapy.U.S.Patent20200086077A1,19March2020.
+19. Burgio,P.A.;Spurrill,A.T.;Burgio,D.J.MethodandApparatusforProvidingAutomaticEyeFocusedTherapy. U.S.Patent
+20090156886A1,18June2009.
+20. Amano,T.;Toichi,M.TheRoleofAlternatingBilateralStimulationinEstablishingPositiveCognitioninEMDRTherapy: A
+Multi-ChannelNear-InfraredSpectroscopyStudy.PLoSONE2016,11,e0162735.[CrossRef]
+21. Rousseau,P.-F.;Boukezzi,S.;Garcia,R.;Chaminade,T.;Khalfa,S.CrackingtheEMDRcode:Recruitmentofsensory,memoryand
+emotionalnetworksduringbilateralalternatingauditorystimulation.Aust.N.Z.J.Psychiatry2020,54,818–831.[CrossRef]
+22. VibrationMotor1027.Availableonline:www.vibrationmotors.com/product-catalogue/coin-vibration-motors/coin-vibration-
+motor-bvm1027-x10-1b02u-b(accessedon5October2021).
+23. Leon,A.C.;Davis,L.L.;Kraemer,H.C.Theroleandinterpretationofpilotstudiesinclinicalresearch.J.Psychiatr.Res.2011,45,
+626–629.[CrossRef][PubMed]
+24. Weiss,D.S.;Marmar,C.R.TheImpactofEventScale-Revised.InAssessingPsychologicalTraumaandPTSD:APractitioner’sHandbook;
+Wilson,J.P.,Keane,T.M.,Eds.;GuilfordPress:NewYork,NY,USA,1997;pp.399–411.
+Healthcare2022,10,133 18of18
+25. Weiss, D.S.TheImpactofEventScale: Revised. InCross-CulturalAssessmentofPsychologicalTraumaandPTSD;Wilson, J.P.,
+Tang,C.S.,Eds.;SpringerInternationalandCulturalPsychologySeries;SpringerScience&BusinessMedia:Boston,MA,USA,
+2007;pp.219–238.
+26. Beck,J.G.;Grant,D.;Read,J.P.;Clapp,J.;Coffey,S.F.;Miller,L.M.;Palyo,S.A.TheImpactofEventScale-Revised:Psychometric
+propertiesinasampleofmotorvehicleaccidentsurvivors.J.AnxietyDisord.2008,22,187–198.[CrossRef][PubMed]
+27. Creamer, M.; Bell, R.; Failla, S.PsychometricpropertiesoftheImpactofEventScale—Revised. Behav. Res. Ther. 2003, 41,
+1489–1496.[CrossRef]
+28. Doroga,C.;Băban,A.Traumaticexposureandposttraumaticsymptomsfortraindriversinvolvedinrailwayincidents.Clujul
+Med.2013,86,144–149.
+29. Spielberger,C.D.;Gorsuch,R.L.;Lushene,R.;Vagg,P.R.;Jacobs,G.A.ManualfortheState-TraitAnxietyInventory;Consulting
+PsychologistsPress:PaloAlto,CA,USA,1983.
+30. Pitariu,H.;Peleasa,C.ManualfortheRomanianVersionofState-TraitAnxietyInventoryformY;Sinapsis:Cluj-Napoca,Romania,
+2007.
+31. Balbo,M.;Cavallo,F.;Fernandez,I.IntegratingEMDRinpsychotherapy.J.Psychother.Integr.2019,29,23–31.[CrossRef]
+32. Shapiro,F.Efficacyoftheeyemovementdesensitizationprocedureinthetreatmentoftraumaticmemories.J.Trauma.Stress1989,
+2,199–223.[CrossRef]
+33. Puffer, M.K.; Greenwald, R.; Elrod, D.E. A single session EMDR study with twenty traumatized children and adolescents.
+Traumatology1998,3,6.[CrossRef]
+34. Rogers, S.; Silver, S.M.; Goss, J.; Obenchain, J.; Willis, A.; Whitney, R.L. A Single Session, Group Study of Exposure and
+EyeMovementDesensitizationandReprocessinginTreatingPosttraumaticStressDisorderAmongVietnamWarVeterans:
+PreliminaryData.J.AnxietyDisord.1999,13,119–130.[CrossRef]
+35. Maxfield,L.;Melnyk,W.T.SingleSessionTreatmentofTestAnxietywithEyeMovementDesensitizationandReprocessing
+(EMDR).Int.J.StressManag.2000,7,87–101.[CrossRef]
+36. Servan-Schreiber,D.Eyemovementdesensitizationandreprocessing:Ispsychiatrymissingthepoint?Psychiatr.Times2000,17,
+36–40.
+37. Kutz,I.;Resnik,V.;Dekel,R.TheEffectofSingle-SessionModifiedEMDRonAcuteStressSyndromes.J.EMDRPr.Res.2008,2,
+190–200.[CrossRef]
+38. Tarquinio,C.;Brennstuhl,M.-J.;Rydberg,J.A.;Bassan,F.;Peter,L.;Tarquinio,C.L.;Auxéméry,Y.;Rotonda,C.;Tarquinio,P.
+EMDRinTelementalHealthCounselingforHealthcareWorkersCaringforCOVID-19Patients:APilotStudy.IssuesMent.Health
+Nurs.2021,42,3–14.[CrossRef]
+39. Pappa,S.;Ntella,V.;Giannakas,T.;Giannakoulis,V.G.;Papoutsi,E.;Katsaounou,P.Prevalenceofdepression,anxiety,and
+insomniaamonghealthcareworkersduringtheCOVID-19pandemic: Asystematicreviewandmeta-analysis. BrainBehav.
+Immun.2020,88,901–907.[CrossRef]
+40. McGrowder, D.A.; Miller, F.G.; Vaz, K.; Cross, M.A.; Anderson-Jackson, L.; Bryan, S.; Latore, L.; Thompson, R.; Lowe, D.;
+McFarlane,S.R.;etal.TheUtilizationandBenefitsofTelehealthServicesbyHealthCareProfessionalsManagingBreastCancer
+PatientsduringtheCOVID-19Pandemic.Health2021,9,1401.[CrossRef]
+41. Maxfield,L.Low-IntensityInterventionsandEMDRTherapy.J.EMDRPr.Res.2021,15,86–98.[CrossRef]
+42. Marotta-Walters,S.A.;Jain,K.;Dinardo,J.;Kaur,P.;Kaligounder,S.AReviewofMobileApplicationsforFacilitatingEMDR
+TreatmentofComplexTraumaandItsComorbidities.J.EMDRPr.Res.2018,12,2–15.[CrossRef]

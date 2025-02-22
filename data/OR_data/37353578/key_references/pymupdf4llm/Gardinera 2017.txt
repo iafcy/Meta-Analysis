@@ -1,0 +1,1316 @@
+## Author manuscript
+#### Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+Published in final edited form as:
+Patient Educ Couns. 2017 September ; 100(9): 1720–1729. doi:10.1016/j.pec.2017.04.015.
+
+## Engaging women with an embodied conversational agent to deliver mindfulness and lifestyle recommendations: A feasibility randomized control trial
+
+
+**Paula M. Gardiner[a,*], Kelly D. McCue[a], Lily M. Negash[a], Teresa Cheng[a], Laura F. White[a],**
+**Leanne Yinusa-Nyahkoon[a], Brian W. Jack[a], and Timothy W. Bickmore[b]**
+
+aDepartment of Family Medicine, Boston University School of Medicine/Boston Medical Center,
+Boston, USA
+
+
+bCollege of Computer and Information Science, Northeastern University, Boston, USA
+
+### Abstract
+
+
+**Objective—This randomized controlled trial evaluates the feasibility of using an Embodied**
+Conversational Agent (ECA) to teach lifestyle modifications to urban women.
+
+**Methods—Women were randomized to either 1) an ECA (content included: mindfulness, stress**
+management, physical activity, and healthy eating) or 2) patient education sheets mirroring same
+content plus a meditation CD/MP3 once a day for one month. General outcome measures
+included: number of stress management techniques used, physical activity levels, and eating
+patterns.
+
+
+**Results—Sixty-one women ages 18 to 50 were enrolled. On average, 51% identified as white,**
+26% as black, 23% as other races; and 20% as Hispanic. The major stress management techniques
+reported at baseline were: exercise (69%), listening to music (70%), and social support (66%).
+After one month, women randomized to the ECA significantly decreased alcohol consumption to
+reduce stress (p = 0.03) and increased daily fruit consumption by an average of 2 servings
+compared to the control (p = 0.04).
+
+**Conclusion—It is feasible to use an ECA to promote health behaviors on stress management and**
+healthy eating among diverse urban women.
+
+
+**Practice implications—Compared to patient information sheets, ECAs provide promise as a**
+way to teach healthy lifestyle behaviors to diverse urban women.
+
+*Corresponding author at: Department of Family Medicine, Boston University School of Medicine/Boston Medical Center, 1 Boston
+Medical Center Place, Dowling 5 South, Boston, MA 02118, USA. Paula.Gardiner@bmc.org (P.M. Gardiner).
+
+**Conflict of interest**
+The authors declare no conflict of interest.
+
+**Authors’ contributions**
+Contributions were as follow: PMG, BWJ, LYN and TWB contributed to conception of the study; KDM managed data collection;
+PMG, LMN, LFW, and TC conducted data analyses; TC and PMG drafted the manuscript; PMG, TC, KDM, LFW, TWB, and LYN
+revised the manuscript critically. All authors have read and approved the final version for submission.
+
+
+**Statements**
+The authors confirm all patient/personal identifiers have been removed or disguised so the patient/person(s) described are not
+identifiable and cannot be identified through the details of the story.
+
+
+-----
+
+**Keywords**
+
+Embodied conversational agent; Mindfulness; Mindfulness based stress reduction; Stress
+management; Healthy eating; Nutrition; Physical activity
+
+
+### 1. Introduction
+
+Clinicians often address multiple health behaviors simultaneously and supplement office
+visits with additional health education through written materials, such as patient information
+sheets or brochures [1, 2]. Although these sheets are considered standard of care, the content
+and readability may not necessarily benefit patients with cultural or economic differences or
+lower literacy [3]. Furthermore, many clinicians endorse lifestyle changes or assist in
+managing chronic stress related problems (e.g. obesity, alcohol, and tobacco abuse) which
+require patients to change several behaviors at a time [4].
+
+
+Today, technology-based interventions are becoming increasingly popular for delivering
+health-related behavioral changes [5–7]. To date, most automated health behavior change
+interventions are designed to only address a single behavior [8, 9]. Little is known about the
+practicality of using a technology-based intervention to deliver a multi-behavioral change
+intervention in racially diverse women [10, 11].
+
+Providing specifically tailored information on multiple health behaviors may prove useful
+for patients to improve their overall well-being. One technology, called the embodied
+conversational agent (ECA), shows particular promise for conveying behavioral change
+strategies to patients [9, 12]. This paper reports on a feasibility study that compares an ECA
+delivering content on mindfulness, stress management, healthy eating, and physical activity
+to patient education sheets with the same content.
+
+
+The ECA is an animated conversational character that simulates face-to-face interaction with
+a patient (Fig. 1) [12–16]. The system is comprised of a networked server with a
+conversational database responding to patient’s interactions and a patient education system.
+The ECA is an animated African American female character programmed to deliver
+culturally aware patient strategies and health information (e.g. recommending specific
+popular recipes or foods, mentioning prayer or spiritual traditions) to increase skills in selfmanagement. The language used is dynamically composed, based on each patient’s data
+(e.g. name, gender, history of past interactions and responses). The agent also answers
+questions and tests patient understanding of key health facts. Prior pilots have demonstrated
+acceptability of ECAs in both inpatient [17–19] and outpatient settings [20, 21]. Other
+studies have also yielded positive outcomes for ECAs to deliver health education on topics
+such as: exercise, eating fruits and vegetables, and preconception care [12, 16, 21–24].
+
+Based on our previous studies, we have shown it is feasible for young African American
+women ages 18 to 34 years to benefit from an ECA delivering health information on dietary
+supplements and stress management as part of a larger preconception patient education ECA
+system [16, 24]. We do not know, however, whether the ECA can be used to deliver lifestyle
+strategies (mindfulness, stress management, healthy eating, and physical activity) in an
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+urban outpatient setting with racially diverse women ages 18 to 50 years. This two-arm
+randomized control trial (RCT) newly introduces the ECA to female patients in person and
+compares the acceptability and satisfaction of the ECA to patient information sheets plus a
+meditation CD/MP3 among peri-menopausal women recruited from Boston. The outcomes
+being studied are feasibility and satisfaction with the ECA versus patient information sheets
+(control group).
+
+### 2. Methods
+
+
+**2.1. Design and implementation**
+
+**2.1.1. The Gabby System—The ECA system for this study was adapted from the Gabby**
+Preconception Health Care system’s dialogue scripts and media (Version 2); the detailed
+curriculum is in Table 1 [16]. The scripts included motivational interviewing dialogue,
+dialogue to simulate shared decision making interactions, and additional longitudinal
+interaction using techniques such as goal setting, problem solving, tips, and homework
+(Appendix A).
+
+
+The healthy eating promotion dialogue was based on previous ECA studies engaging women
+in preconception care [16, 24], the Five Fruit and Vegetables recommendation [25], the
+Harvard School of Public Health’s healthy eating plate [26], and the principles of the
+Diabetes Prevention Program [27]. Information on stress management was adapted from
+principles of Mindfulness Based Stress Reduction (MBSR) [16], a promising mind-body
+intervention [28–31]. The major techniques included were: being present in the moment,
+responding and not reacting to stress, awareness of breath meditations (two versions: short
+10 min; long 25 min), body scan, mindful eating, and mindful yoga. A recent systematic
+review identified 21 RCTs of MBSR: eleven of these studies showed improvement in mental
+health measures compared to waitlist or standard care controls, and improved pain scores
+and mental health status for patients with chronic pain [32]; other studies have also shown
+similar results [33–36]. Additional stress management exercises included progressive muscle
+relaxation and guided imagery. Finally, physical activity recommendations were based on
+governmental guidelines for physical activity [20, 21, 37, 38].
+
+The ECA system is accessed over the web in a standard browser through a username and
+secure password login. Each interaction with the system consisted of a personal greeting
+from Gabby, an ECA, followed by educational content and behavior change counseling
+related to stress management, healthy eating, and physical activity, any or all of which could
+be selected by the participant (Fig. 1). The system also contains an auto logout feature after
+a period of user inactivity.
+
+
+If participants were randomized to the intervention, the research assistant (RA) enrolled
+them into the ECA system, specifying baseline information (e.g. name, age), and then taught
+them how to use the system for 60 min. Participants were asked to log on once a day for 30
+days and to interact with Gabby for as long as they wished.
+
+**2.1.2. Patient information sheets and meditation CD/MP3—If participants were**
+randomized to the control, the RA reviewed patient information sheets in person for 60 min,
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+which mirrored the content from the Gabby system. These sheets were written at a fifth
+grade level to accommodate a spectrum of health literacy. We also prepared a CD/MP3 with
+the same meditations and exercises offered by the ECA. Control group meditations were
+recorded by a live meditation teacher in contrast to Gabby’s electronic voice. Women were
+encouraged to listen to the recordings once a day for 30 days and to read the sheets as many
+times as they wished.
+
+
+**2.2. Recruitment, enrollment and randomization**
+
+Participants were recruited from primary care outpatient clinics at Boston Medical Center
+(BMC). Recruitment flyers were placed in clinical exam rooms, and recruitment materials
+were available to clinicians to hand out as appropriate. We also posted in the weekly BMC
+online newsletter. Patients self-referred themselves to the study by calling the study phone
+number listed on flyers within clinics. We included participants who self-identified as
+women, were 18–50 years of age, had access to a telephone and computer with internet,
+were English-speaking, and were not pregnant, to enroll in the study. We excluded
+participants who refused to consent, were not able to complete the study due to health
+reasons, including mental health or substance abuse problems, or did not speak English.
+
+
+All participants completed enrollment with a trained RA, which took 30 min to complete.
+The RA explained the study, including the purpose, risks, and benefits, and asked each
+potential participant a question about each of those points to confirm that she was capable of
+providing informed consent. Participants gave verbal informed consent, since the enrollment
+process was completed. Data were collected by the RA for all participants at baseline and at
+one month follow-up. Participants were enrolled into the study on a rolling basis and as
+such, participant study durations were tracked individually based upon the date of baseline
+completion. After obtaining baseline information, participants were randomized to either the
+intervention or control using a computer-generated permuted block method. The RA was not
+blinded to group allocation.
+
+All participants received a reminder phone call/e-mail at 14 days after enrollment to assess
+for safety and address any questions. After one month from baseline, the RA conducted
+post-study interviews in person or by phone. Participants received a gift card for their
+participation in the study and reimbursement for transportation and were also entered into a
+raffle.
+
+
+**2.3. Outcome measures**
+
+**2.3.1. Primary outcomes—A primary goal of this study was to gather feasibility data on**
+ECA utilization among multiracial women ages 18 to 50 years within an outpatient setting in
+order to design a larger fully powered RCT. The primary outcomes were as follows: number
+of recruited participants in a 12-month period; proportion of participants who were racial
+minorities (non-white); number of participants who completed the study from baseline to
+follow-up; number of participants for whom outcome data can be collected; and participants’
+satisfaction with the intervention or control.
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**2.3.2. Demographic and secondary outcomes—The following information was**
+collected by the RA through an interview both at baseline and post-study: demographics
+(including age, race, ethnicity, education, work status, income, self-reported height and
+weight, BMI; clinical factors such as health conditions, medication use, smoking status,
+alcohol use, and pain levels); physical and mental health statuses by the Short Form Health
+Survey (SF-12) [39] and depression levels by the Patient Health Questionnaire (PHQ-9)
+
+[40]. We asked questions assessing eating patterns, physical activity routines, and stress
+management levels at baseline and post-intervention.
+
+Adapting questions from the National Health and Nutrition Examination Survey
+(NHANES), participants reported the total number of fruit and vegetable servings they
+consumed daily; the frequency of consuming regular soda/sugary drinks, caffeinated drinks,
+snack foods, calcium and dairy, whole grains, red meat, and fish per week; the frequency of
+eating breakfast per week; and intake of vitamins or minerals, folic acid, and herbal
+supplements [41]. We showed an image of a food label and asked participants if they read
+Nutrition Fact labels on grocery items regularly. We assessed their nutrition knowledge
+(Appendix B), and inquired about food access and assistance programs using the Household
+Food Insecurity Access Scale (HFIAS) [42].
+
+
+Based on the Stanford Patient Education Research Center’s Exercise Behaviors
+Questionnaire, we compiled the total amount of time, in minutes, participants reported
+engaging in physical activity during a typical week [43]. Specific activity routines included
+stretching, strengthening and aerobic activities (e.g. walking, running or jogging, aquatics,
+and other). We also collected information on participants’ self-efficacy to participate in
+physical activity with the Self-Efficacy for Exercise Scale (SEE) [44].
+
+For stress management, we asked participants to report self-perceived stress levels using the
+Perceived Stress Scale (PSS-4) [45]. For types of stress management, we asked: “in the past
+week, how many times did you do stress management or relaxation techniques?” Then we
+asked them to describe techniques they utilized to manage their stress on a weekly basis (see
+Section 3.2.2).
+
+
+For all three overarching topics, we asked participants to rate their confidence in their ability
+to eat healthy, to exercise at least an hour per week, or to manage stress. Higher scores
+indicated greater confidence to perform such activities.
+
+At the end of the study, participants were also asked to provide feedback on their assigned
+intervention. Questions included incorporation and relevance of suggestions on diet and
+nutrition; effects of the intervention on stress; exercise; benefits and difficulties of
+interacting with the intervention; and any other feedback they wished to share.
+
+
+Specifically for ECA users, we collected system utilization data including number of logins,
+duration of use (in min), and user satisfaction after one month. Following a semi-structured
+interview guide, we also asked open ended questions regarding participants’ impressions of
+an ECA delivering health information.
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**2.4. Data analysis**
+
+**2.4.1. Preliminary analysis—Effectiveness of randomization was assessed by comparing**
+sociodemographic factors between the intervention and control using Chi-square tests for
+dichotomous and categorical variables and two-sample t-tests for continuous variables.
+
+
+**2.4.2. Primary and secondary analyses—Descriptive statistics were used to analyze**
+primary outcome measures. This feasibility study lacked the statistical power to measure the
+difference in adherence to plan between intervention and control patients. An exploratory
+analysis using a Chi-square test was conducted to compare the adherence to plan (e.g.
+increase in stress management techniques used, increase in healthy eating, and increase in
+activity) between intervention and control patients. Two sample t-tests were used to compare
+satisfaction scores between the two groups. Normally distributed data were analyzed using
+two sample t-tests and data not normally distributed were analyzed using Wilcoxon Rank
+Sum tests. All analyses were conducted using SAS 9.3.
+
+Interview responses were documented on a data collection sheet and reviewed to identify
+similarities among responses. Responses reported by two or more participants were
+identified for further analysis and categorized into three overarching themes: perceived
+helpfulness, benefits, and challenges using the assigned intervention. The study was
+approved by the BMC Institutional Review Board.
+
+
+### 3. Results
+
+**3.1. Study consort diagram**
+
+
+We recruited 61 participants in a 12-month period; all 61 recruited women were screened
+eligible and enrolled into the study for one month. We collected outcome data from baseline
+to follow-up on 57 participants (Fig. 2).
+
+
+**3.2. Quantitative results**
+
+**3.2.1. Baseline demographic and clinical characteristics—The demographic and**
+clinical characteristics of the 61 women enrolled in this study are presented in Table 2. On
+average, participants were 35 years old; 51% identified as white, 26% as black, 2% as Asian/
+Pacific Islander, and 21% as other races; and 20% identified as Hispanic. Eighty-four
+percent of participants primarily spoke English at home, while 11% primarily spoke
+Spanish. Seventy-nine percent of women had completed at least some college, and 89% of
+them worked full-time or part-time. In regards to yearly household income, 44% reported
+making less than $49,000, and another 46% reported making more than $50,000. Ten
+percent of participants refused to disclose their income status.
+
+
+On average, women in the study had a BMI of 28 kg/m[3] and scored a 7 on the PHQ-9
+assessment; 30% reported having chronic health problems, and 67% regularly took
+prescribed medication. An average BMI score of 28 kg/m[3] is classified as being overweight,
+while a PHQ-9 score greater than 5 denotes mild depression [40]. Three percent of
+participants reported smoking, and 70% reported drinking alcohol at least once a month or
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+more. There were no significant differences in demographics or clinical characteristics
+between groups.
+
+**3.2.2. Stress management techniques—In Table 3, the most popular stress**
+management techniques at baseline among participants included: engaging in physical
+activity (69%), listening to music (70%),and spending time with friends (66%). At one
+month, there was no significant difference in the number of adaptive coping techniques
+between groups. The proportion of women who reported eating as a coping technique did
+decrease, although not significantly (55% to 29% for intervention, 50% to 38% for control).
+
+
+At baseline, 67% of participants reported drinking alcohol at least once a month or more to
+manage their stress. At 30 days, there was a significant decrease in the number of women
+who used alcohol for stress management in the intervention compared to the control group
+(35% to 14% for intervention, 30% to 31% for control; p = 0.03). The number of stress
+management techniques increased in both groups, though there was no significant difference
+(μ = 1 to 4 for intervention, μ=2 to 3 for control). There was no significant difference in the
+perceived stress scale in the intervention compared to the control group.
+
+At baseline, women in both groups were identified as being mildly depressed, with an
+average PHQ-9 score of 7. At follow-up, PHQ-9 and SF-12 scores did not differ
+significantly between the two groups (p = 0.36 and p = 0.28, respectively). However, it is
+worth noting that PHQ-9 scores decreased by two units in the ECA group compared to a one
+unit decrease in the control group.
+
+
+**3.2.3. Food and nutrition—Specific eating patterns are documented in Table 4. Analysis**
+revealed that ECA users significantly increased the average amount of fruit servings they ate
+compared to women using patient information sheets (μ = 2 to 4 for intervention, μ = 2 to 2
+for control; p = 0.04). The amount of vegetable servings increased for both groups, but not
+significantly. There were trends in the reduction of weekly caffeine and snack consumptions
+after 30 days for women in the ECA group compared to the control group, although
+statistically insignificant. Consumption of whole grains, red meat, and fish did not differ
+significantly between the two groups from baseline to follow-up. There was no significant
+difference in food knowledge, food insecurity, and breakfast consumption between groups (p
+= 0.15, p = 0.99, and p = 0.11, respectively).
+
+**3.2.4. Patient satisfaction of assigned intervention—At follow-up, participants**
+were asked to evaluate their satisfaction of their assigned intervention based on topics of
+healthy eating, physical activity, and stress management (Table 5). Women favored using
+Gabby to improve stress management and increase physical activity more than women using
+patient information sheets. Sixty-nine percent utilized suggestions from Gabby to improve
+healthy eating, 52% to increase physical activity, and 70% to manage stress: all of which
+were greater–but not statistically significant–relative frequencies than participants using
+patient information sheets (66%, 49% and 66%, respectively). There was no significant
+difference in self-confidence to manage stress, to engage in physical activity, and to eat
+healthy between groups. Although statistically insignificant, duration of exercise increased
+in both groups for stretching/ strengthening (p = 0.18) and aerobic exercise (p = 0.27).
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**3.2.5. ECA system utilization—For one month, ECA users spent a median total of 52**
+min (interquartile range [IQR] = 101.4, N = 31) interacting with Gabby and logged in 5
+times (IQR = 7, N = 31). The average time spent per individual session was 12.1 min (σ =
+6.1, min = 3.9, max = 25.8).
+
+
+**3.3. Qualitative results**
+
+Findings suggest that most participants perceived the health information they received to be
+helpful, and intervention participants identified specific benefits and challenges to using an
+ECA. Users from both groups generally highlighted that their assigned intervention was very
+informative, easy to use, and served as a good reminder to keep their health status in check
+through mindfulness, physical activity and healthy eating. Interestingly, a majority of ECA
+users commented that Gabby was most relevant in regards to stress management. For
+example, intervention participants reported: “It definitely gave me more tools for stress
+management”"She helped me relax”, and “She reminded me to take care of myself even
+when I’m in the midst of a crazy work life”. Additionally, the majority of those who
+interacted with Gabby described her as empowering and relatable. One participant stated,
+“She relates to my stress … you can tailor it to your specific interests and needs”. In
+contrast, control group participants generally found it difficult to use the patient information
+sheets due to reported lack of accountability and follow-up. For example, some control
+group participants commented: “No accountability, no checking to see if you made
+improvements” and “Sheets were easy to ignore”.
+
+
+For the intervention group only, participants highlighted specific benefits and challenges to
+using the ECA system. The majority of users perceived Gabby to be a fast, reliable, and
+credible source of information. Participants’ comments to support this finding included:
+“The right answer is always there no matter what … I don’t have to wait for a doctor” and “I
+did not think she shared incorrect or unsupportive info”. Challenges using the Gabby system
+included the sound and quality of her voice, time commitment to use the system, and
+program accessibility. Several participants described Gabby’s voice as “robotic”; one
+participant in particular commented that they “could not stand how slowly she talked”.
+Intervention participants also found it difficult “having the time and sitting in front of the
+computer to do it”, and highlighted her laptop and desktop accessibility limitations, stating
+“she was only on a computer, not a phone”.
+
+### 4. Discussion and conclusion
+
+
+**4.1. Discussion**
+
+In this study, we demonstrated that it is feasible to use ECA technology to deliver multiple
+healthy lifestyle recommendations on physical activity, healthy eating, mindfulness, and
+stress management techniques among diverse urban women. Among our study sample,
+interaction with an ECA was shown to be effective in decreasing alcohol consumption for
+stress and increasing daily fruit consumption. There was also a trend increase in the number
+of stress management techniques used.
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+Adherence to a healthy lifestyle includes stress management; however, fewer than 10% of
+adults in the United States follow this pattern, including women [46]. Gabby users reported
+utilizing more stress management techniques from baseline, and 70% of them responded that
+they used Gabby’s suggestions to improve their stress. In the qualitative data, both groups
+reported being more knowledgeable about managing their stress post-intervention. Similarly,
+one pilot study implemented a virtual coach to provide mindfulness training, and found that
+participants who had coach-based training performed the techniques more effectively and
+regularly than participants who had to teach themselves the same techniques using paper and
+audio materials [22]. There was no statistically significant difference in perceived stress
+among women in the Gabby group compared to the control group. However, our study was
+not adequately powered to detect such a difference; therefore, an adequately powered
+clinical trial is necessary to determine efficacy in stress reduction.
+
+Our results also show a significant decrease in alcohol use for stress management (63%) for
+women who interacted with Gabby compared to the control group. Research has found the
+use of technologies among non-dependent alcoholic drinkers to be promising [47, 48]. In
+several studies to reduce alcohol use among college students, participants who received
+tailored text messages were more likely to report a reduction in alcohol consumption and an
+increased awareness to manage drinking behaviors [49–51]. Furthermore, mindfulness
+training has been shown to help decrease stress levels and as a result, may partially decrease
+engagement in alcohol use [52–55]. In light of our findings and previous studies, we believe
+that aspects of Gabby, including personalization and face-to-face engagement [16], may
+promote healthy decision making on stress management among its users. More research is
+needed to prioritize which aspects of the system are important in supporting patients beyond
+the dissemination of information on stress management.
+
+
+Generally, healthy eating habits improved in both the intervention and control groups.
+Specifically, increased fruit consumption was statistically significant for Gabby users. Only
+13% of the adults in the United States consume the recommended daily amount of fruits (4
+to 5 servings) [56, 57]. Very few technologies have been developed to support healthy eating
+habits among disparate populations: one study found that a web-based nutrition program led
+to increased–but not statistically significant–fruit consumption compared to a traditional inperson nutrition education among low-income adults [58]; another study revealed that
+female ethnic minority college students ate more servings of fruit when they received
+motivational text messages [59]. With Gabby, we find that women were actually consuming
+an increased amount of fruit servings relative to those who were given patient information
+sheets–results consistent with these two studies mentioned above.
+
+Based on our qualitative feedback, we believe that users would have utilized the ECA
+system more had it been available on multiple technology platforms, such as mobile devices.
+With smartphone ownership increasing steadily [60], having the Gabby system installed on a
+frequently used device would provide more opportunities for patients to engage in learning
+and practicing meaningful health behaviors. Use of technology, such as having access to the
+Internet or owning cell phones with data, is common among underserved racially diverse
+populations [5]. The National Standards for Culturally and Linguistically Appropriate
+Services in Health and Health Care encourage healthcare organizations and providers to use
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+multimedia when communicating health information to culturally diverse patients [61].
+However, more information is needed on how technology can be used to create healthy
+behavior changes for such racially and culturally diverse patient populations.
+
+Limitations to this feasibility study include a small sample size, short duration of the
+intervention, specific inclusion criteria, and self-reported information. By including only
+women who had access to the internet, we may have biased the sample towards women who
+have favorable use of technology. The Gabby system was also developed in English,
+excluding participants who are not fluent in English. Lastly, participants could have
+inaccurately reported their health behaviors due to a lack of knowledge or feeling
+uncomfortable sharing information with a web-based system.
+
+
+**4.2. Conclusion**
+
+Feasibility data on the Gabby system are encouraging, and show that ECA technology can
+help improve education on lifestyle information on physical activity, healthy eating,
+mindfulness and stress management methods for diverse, urban women.
+
+
+**4.3. Practice implications**
+
+In medical settings, clinicians give patients after-visit summary plans that usually include
+patient information sheets. ECAs are an encouraging way to provide patient information in a
+customized interactive format. ECAs may help patients adhere to behavioral changes
+through improved decision making and experiential learning as opposed to passive reading.
+
+
+### Acknowledgments
+
+**Funding**
+
+
+This work was supported by the National Center for Complementary & Integrative Health (Grant Number
+K07AT005463, 2016). The content is solely the responsibility of the authors and does not necessarily represent the
+official views of the National Center for Complementary & Alternative Medicine or the National Institutes of
+Health.
+
+
+### Appendix A. Dialogue Script
+
+Gabby: Hi there! My name is Gabrielle, but you can call me Gabby. (pause 2 s)
+
+
+On the right hand side of the screen you will see some buttons, just let me know that you can
+see them by pressing on any one of the responses.
+
+**•** Hi Gabby!
+
+
+
+**•** Okay
+
+**•** Could you repeat that?
+
+
+Gabby: <USER’s NAME>, have I got that right?
+
+**•** Yes!
+
+
+
+**•** No
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+Gabby: Great. So, <USER’s NAME>, I’m here every day to go over topics for your health! I
+want our interactions to be like a conversation. I am here to support you as you learn new
+ways to care for your health.
+
+**•** Okay
+
+
+
+**•** Could you repeat that?
+
+
+Each time we meet I will offer you a menu of topics to choose from. By asking you
+questions and listening to your responses, I will be able to coach you better. Answer my
+questions by clicking the buttons I show on the right side of your screen. The only way for
+our chats to move forward will be by you pressing a button.
+
+**•** Sounds good
+
+**•** I can do that
+
+
+
+**•** Could you repeat that?
+
+
+Gabby: It is fun for me to share pictures and tips with you about stress, nutrition, and
+exercise.
+
+**•** Sounds fun!
+
+
+
+**•** Okay
+
+**•** Could you repeat that?
+
+
+Gabby: I am excited to take this journey to better health with you. Together we are team. I
+hope that you can check in with me daily. But that’s up to you! The more time we spend
+together the more I can support you in the changes you are making in reducing your stress
+and improving your health.
+
+**•** Great
+
+**•** Okay
+
+
+
+**•** Could you repeat that?
+
+### Appendix B. Nutrition Knowledge Quiz
+
+
+The following questions are about food knowledge:
+
+Please answer true or false.
+
+
+**34** Beans contain only a few useful nutrients, therefore their health benefit is not
+great. T F
+
+**35** A healthy meal should consist of half meat, a quarter vegetables, and a quarter
+side dishes. T F
+
+
+**36** Fat is always bad for your health; you should therefore avoid all fat. T F
+
+
+**37** Oily fish (salmon, mackerel) contain healthier fats than red meat. T F
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**38** How much folic acid should women of childbearing age take every day to help
+prevent birth defects?
+
+   - None
+
+
+
+- 200 micrograms (mcg)
+
+- 400 micrograms (mcg)
+
+- 1000 micrograms (mcg)
+
+
+**39** Good advice for eating healthy includes all of the following except?
+
+   - Cut back on foods with added sugars, salt and fat.
+
+
+
+- Eat fish 1–2 times a week
+
+- Save half your plate for fruits and vegetables.
+
+
+
+- Eat packaged foods
+
+- Snack on nuts like almonds
+
+
+**40** How many servings of fruits and veggies should you get each day?
+
+   - 1 servings
+
+   - 2 servings
+
+   - 5 servings
+
+
+
+- 10 servings
+
+- Another amount: ____ servings
+
+
+**41** What 1 vitamin or mineral is important for having strong bones?
+
+   - Calcium
+
+
+
+- Iron
+
+- Omega-3 Fatty Acids
+
+
+
+- Fiber
+
+- Vitamin B
+
+
+**42** What 1 vitamin or mineral is most important for having healthy blood?
+
+   - Calcium
+
+
+
+- Iron
+
+- Omega-3 Fatty Acids
+
+
+
+- Fiber
+
+
+
+   - Vitamin B
+
+**43** What are some good sources of omega-3 fatty acids?
+
+
+
+    - Fish
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+- Walnuts
+
+- Olive oil
+
+- Avocados
+
+
+
+- All of the above
+
+
+### References
+
+1. Buck ML. Providing patients with written medication information. Ann. Pharmacother. 1998;
+32:962–969. [PubMed: 9762384]
+2. Harvey I, O'Brien M. Addressing health disparities through patient education: the development of
+culturally-tailored health education materials at Puentes de Salud. J. Community Health Nurs. 2011;
+28:181–189. [PubMed: 22053763]
+3. Kutner, M., Greenburg, E., Jin, Y., Paulsen, C. National Center for Education Statistics. 2006. The
+Health Literacy of America's Adults: Results from the 2003 National Assessment of Adult Literacy.
+NCES 2006-483.
+4. Khusid MA, Vythilingam M. The emerging role of mindfulness meditation as effective selfmanagement strategy, part 1: clinical implications for depression, post-traumatic stress disorder, and
+anxiety. Mil. Med. 2016; 181:961–968. [PubMed: 27612338]
+5. Gibbons CM. Use of health information technology among racial and ethnic underserved
+communities. Perspect. Health Inf. Manag. 2011 Winter;8
+6. Matthews J, Win KT, Oinas-Kukkonen H, Freeman M. Persuasive technology in mobile applications
+promoting physical activity: a systematic review. J. Med. Syst. 2016; 40:72. [PubMed: 26748792]
+7. Harris J, Felix L, Miners A, Murray E, Michie S, Ferguson E, Free C, Lock K, Landon J, Edwards P.
+Adaptive e-learning to improve dietary behavior: a systematic review and cost-effectiveness
+[analysis. Health Technol. Assess. 2011; 15:1–8. doi:http://dx.doi.org/10.3310/hta15370.](http://refhub.elsevier.com/S0738-3991(17)30249-5/sbref0035)
+8. Monroe CM, Bassett DR Jr, Fitzhugh EC, Raynor HA, Thompson DL. Effect of adding online social
+support tools to an adult walking program: a pilot randomized controlled trial. Health Promot. Pract.
+2016
+9. King AC, Bickmore TW, Campero MI, Pruitt LA, Yin JL. Employing virtual advisors in preventive
+care for underserved communities: results from the COMPASS study. J. Health Commun. 2013;
+18:1449–1464. [PubMed: 23941610]
+10. Rosal MC, Heyden R, Mejilla R, Capelson R, Chalmers KA, Rizzo DePaoli M, Veerappa C,
+Wiecha JM. A virtual world versus face-to-face intervention format to promote diabetes selfmanagement among african american women: a pilot randomized clinical trial. JMIR Res. Protoc.
+[2014; 24:e54. doi: http://dx.doi.org/10.2196/resprot.3412.](http://dx.doi.org/10.2196/resprot.3412)
+11. Valle CG, Deal AM, Tate DF. Preventing weight gain in African American breast cancer survivors
+using smart scales and activity trackers: a randomized controlled pilot study. J. Cancer Surviv.
+2016:1–16. (Epub ahead of print).
+12. Bickmore TW, Schulman D, Sidner C. Automated interventions for multiple health behaviors using
+conversational agents. Patient Educ. Couns. 2013; 92:142–148. [PubMed: 23763983]
+13. Bickmore T, Gruber A, Picard R. Establishing the computer-patient working alliance in automated
+health behavior change interventions. Patient Educ. Couns. 2005; 59:21–30. [PubMed: 16198215]
+14. Bickmore T, Giorgino T. Health dialog systems for patients and consumers. J. Biomed. Inform.
+2006; 39:556–571. (Epub 2006 Jan. 20). [PubMed: 16464643]
+15. Bickmore TW, Puskar K, Schlenk EA, Pfeifer LM, Sereika SM. Maintaining reality: relational
+agents for antipsychotic medication adherence. Interact. Comput. 2010; 22:276–288.
+16. Gardiner P, Hempstead MB, Ring L, Bickmore T, Yinusa-Nyahkoon L, Tran H, Paasche-Orlow M,
+Damus K, Jack B. Reaching women through health information technology: the Gabby
+preconception care system. Am. J. Health Promot. 2013; 27:eS11–20. [PubMed: 23286652]
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+17. Bickmore TW, Pfeifer LM, Byron D, Forsythe S, Henault LE, Jack BW, Silliman R, PaascheOrlow MK. Usability of conversational agents by patients with inadequate health literacy:
+evidence from two clinical trials. J. Health Commun. 2010; 15:197–210. [PubMed: 20845204]
+18. Ehrenfeld J, Sandberg W, Warren L, Kwo J, Bickmore T. Use of a computer agent to explain
+anesthesia concepts to patients. Annual Meeting of the American Society of Anesthesiologists.
+2010; 3
+19. Bickmore, TW., Pfeifer, LM., Jack, BW. Proceedings of the SIGCHI Conference on Human
+Factors in Computing Systems 2009. ACM; 2017. Taking the time to care: empowering low health
+literacy hospital patients with virtual nurse agents; p. 1265-1274.
+20. Ellis T, Latham N, DeAngelis T, Thomas CA, Saint-Hilaire M, Bickmore TW. Feasibility of a
+virtual exercise coach to promote walking in community-dwelling persons with Parkinson Disease.
+Am. J. Phys. Med. Rehabil. 2013; 92:472–485. quiz 482-5. [PubMed: 23552335]
+21. Bickmore TW, Silliman RA, Nelson K, Cheng DM, Winter M, Henault L, Paasche-Orlow MK. A
+randomized controlled trial of an automated exercise coach for older adults. J. Am. Geriatr. Soc.
+2013; 61:1676–1683. [PubMed: 24001030]
+22. Hudlicka E. Virtual training and coaching of health behavior: example from mindfulness
+meditation training. Patient Educ. Couns. 2013; 92:160–166. [PubMed: 23809167]
+23. Morie JF, Antonisse J, Bouchard S, Chance E. Virtual worlds as a healing modality for returning
+soldiers and veterans. Stud. Health Technol. Inform. 2009; 144:273–276. [PubMed: 19592780]
+24. Jack B, Bickmore T, Hempstead M, Yinusa-Nyahkoon L, Sadikova E, Mitchell S, Gardiner P,
+Adigun F, Penti B, Schulman D, Damus K. Reducing preconception risks among African
+American women with conversational agent technology. J. Am. Board Fam. Med. 2015; 28:441–
+451. [PubMed: 26152434]
+25. Gardiner PM, Nelson L, Shellhaas CS, Dunlop AL, Long R, Andrist S, Jack BW. The clinical
+content of preconception care: nutrition and dietary supplements. Am. J. Obstet. Gynecol. 2008;
+199:S345–56. [PubMed: 19081429]
+26. World Health Organization. [Accessed Sept 10 2016] Promoting Fruit and Vegetable Consumption
+Around the World. Global Strategy on Diet. Physical Activity and Health. 2016. Retrieved from
+[http://www.who.int/dietphysicalactivity/fruit/en/](http://www.who.int/dietphysicalactivity/fruit/en/)
+27. Department of Nutrition. [Accessed Sept 10 2016] Harvard School of Public Health. Healthy
+[Eating Plate & Healthy Eating Pyramid. The Nutrition Source. 2016. Retrieved from https://](https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/)
+[www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/](https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/)
+28. National Institute of Diabetes and Digestive and Kidney Diseases. Diabetes Prevention Program.
+[Diabetes. Diabetes Prevention Program; 2008. Retrieved from https://www.niddk.nih.gov/about-](https://www.niddk.nih.gov/about-niddk/research-areas/diabetes/diabetes-prevention-program-dpp/Pages/default.aspx)
+[niddk/research-areas/diabetes/diabetes-prevention-program-dpp/Pages/default.aspx [Accessed Sept](https://www.niddk.nih.gov/about-niddk/research-areas/diabetes/diabetes-prevention-program-dpp/Pages/default.aspx)
+10 2016]
+29. Reiner K, Tibi L, Lipsitz JD. Do mindfulness-based interventions reduce pain intensity? A critical
+review of the literature. Pain Med. 2013; 14:230–242. [PubMed: 23240921]
+30. Cramer H, Haller H, Lauche R, Dobos G. Mindfulness-based stress reduction for low back pain: a
+systematic review. BMC Complement. Altern. Med. 2012; 12:162. [PubMed: 23009599]
+31. Niazi AK, Niazi SK. Mindfulness-based stress reduction: a non-pharmacological approach for
+chronic illnesses. N. Am. J. Med. Sci. 2011; 3:20–23. [PubMed: 22540058]
+32. Fjorback L, Arendt M, Ørnbøl E, Fink P, Walach H. Mindfulness-based stress reduction and
+mindfulness-based cognitive therapy – a systematic review of randomized controlled trials. Acta
+Psychiatr. Scand. 2011; 124:102–119. [PubMed: 21534932]
+33. Cavanagh K, Strauss C, Cicconi F, Griffiths N, Wyper A, Jones F. A randomized controlled trial of
+a brief online mindfulness-based intervention. Behav. Res. Ther. 2013; 51:573–578. [PubMed:
+23872699]
+34. Glück TM, Maercker A. A randomized controlled pilot study of a brief web-based mindfulness
+training. BMC Psychiatry. 2001; 1(11):175.
+35. Krusche A, Cyhlarova E, Williams JMG. Mindfulness online: an evaluation of the feasibility of a
+web-based mindfulness course for stress, anxiety and depression. BMJ Open. 2013; 3:e003498.
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+36. Morledge TJ, Allexandre D, Fox E, Fu AZ, Higashi MK, Kruzikas DT, Pham SV, Reese PR.
+Feasibility of an online mindfulness program for stress management—a randomized, controlled
+trial. Ann. Behav. Med. 2013; 46:137–148. [PubMed: 23632913]
+37. US Department of Health and Human Services. Physical Activity Guidelines for Americans. US
+Department of Health and Human Services; 2008.
+38. Centers for Disease Control and Prevention. [Accessed Sept 10 2016] How Much Physical Activity
+[Do Adults Need?. Physical Activity. 2015. Retrieved from http://www.cdc.gov/physicalactivity/](http://www.cdc.gov/physicalactivity/basics/adults/index.htm)
+[basics/adults/index.htm](http://www.cdc.gov/physicalactivity/basics/adults/index.htm)
+39. Ware JE Jr, Kosinski M, Keller SD. A 12-Item Short-Form Health Survey: construction of scales
+and preliminary tests of reliability and validity. Med. Care. 1996; 34:220–233. [PubMed: 8628042]
+40. Kroenke K, Spitzer RL. The PHQ-9: a new depression diagnostic and severity measure. Psychiatr.
+Ann. 2002; 32:509–515.
+41. National Center for Health Statistics (US). National Health and Nutrition Examination Survey, US
+Department of Health and Human Services, Centers for Disease Control and Prevention, National
+Center for Health Statistics. 2008.
+42. Coates, J., Swindale, A., Bilinsky, P. Food and Nutrition Technical Assistance Project. Academy
+for Educational Development; Washington, DC: 2007. Household Food Insecurity Access Scale
+(HFIAS) for Measurement of Food Access: Indicator Guide.
+43. Stanford Patient Education Research Center, Exercise Behaviors. [Accessed on Sept 10 2016]
+Research Instruments Developed, Adapted or Used by the Stanford Patient Education Research
+[Center. 2017. Retrieved from http://patienteducation.stanford.edu/research/exercise.pdf](http://patienteducation.stanford.edu/research/exercise.pdf)
+44. Resnick B, Jenkins LS. Testing the reliability and validity of the self-efficacy for exercise scale.
+Nurs. Res. 2000; 49:154–159. [PubMed: 10882320]
+45. Cohen S, Williamson G. Perceived stress in a probability sample of the United States. Soc.
+Psychol. Health. 1988; 3:1–67.
+46. King DE, Mainous AG III, Carnemolla M, Everett CJ. Adherence to healthy lifestyle habits in US
+adults, 1988–2006. Am. J. Med. 2009; 122:528–534. [PubMed: 19486715]
+47. Sankaranarayanan J, Sallach RE. Rural patients' access to mobile phones and willingness to receive
+mobile phone-based pharmacy and other health technology services: a pilot study. Telemed. J. E
+Health. 2014; 20:182–185. [PubMed: 24205837]
+48. Fowler LA, Holt SL, Joshi D. Mobile technology-based interventions for adult users of alcohol: a
+systematic review of the literature. Addict. Behav. 2016; 62:25–34. [PubMed: 27310031]
+49. Mason M, Ola B, Zaharakis N, Zhang J. Text messaging interventions for adolescent and young
+adult substance use: a meta-analysis. Prev. Sci. 2015; 16:181–188. [PubMed: 24930386]
+50. Witkiewitz K, Desai SA, Bowen S, Leigh BC, Kirouac M, Larimer ME. Development and
+evaluation of a mobile intervention for heavy drinking and smoking among college students.
+Psychol. Addict. Behav. 2014; 28:639–650. [PubMed: 25000269]
+51. Weitzel JA, Bernhardt JM, Usdan S, Mays D, Glanz K. Using wireless handheld computers and
+tailored text messaging to reduce negative consequences of drinking alcohol. J. Stud. Alcohol
+Drugs. 2007; 68:534–537. [PubMed: 17568957]
+52. Bodenlos JS, Noonan M, Wells SY. Mindfulness and alcohol problems in college students: the
+mediating effects of stress. J. Am. Coll. Health. 2013; 61:371–378. [PubMed: 23930751]
+53. Zgierska A, Rabago D, Chawla N, Kushner K, Koehler R, Marlatt A. Mindfulness meditation for
+substance use disorders: a systematic review. Subst. Abus. 2009; 30:266–294. [PubMed:
+19904664]
+54. Sinha R. The role of stress in addiction relapse. Curr. Psychiatry Rep. 2007; 9:388–395. [PubMed:
+17915078]
+55. Marcus MT, Fine PM, Moeller FG, Khan MM, Pitts K, Swank PR, Liehr P. Changes in stress levels
+following mindfulness based stress reduction in a therapeutic community. Addict. Disord. Their
+Treat. 2003; 2:63–68.
+56. American Heart Association, Suggested Servings from Each Food Group. [Accessed Feb 15 2017]
+[Healthy Living. 2015. Retrieved from http://www.heart.org/HEARTORG/HealthyLiving/](http://www.heart.org/HEARTORG/HealthyLiving/HealthyEating/HealthyDietGoals/Suggested-Servings-from-Each-Food-Group_UCM_318186_Article.jsp#.WKR36tIrKUl)
+[HealthyEating/HealthyDietGoals/Suggested-Servings-from-Each-Food-](http://www.heart.org/HEARTORG/HealthyLiving/HealthyEating/HealthyDietGoals/Suggested-Servings-from-Each-Food-Group_UCM_318186_Article.jsp#.WKR36tIrKUl)
+[Group_UCM_318186_Article.jsp#.WKR36tIrKUl](http://www.heart.org/HEARTORG/HealthyLiving/HealthyEating/HealthyDietGoals/Suggested-Servings-from-Each-Food-Group_UCM_318186_Article.jsp#.WKR36tIrKUl)
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+57. Centers for Disease Control and Prevention. [Accessed Feb 15 2017] Overview: BRFSS 2013.
+[Behavioral Risk Factor Surveillance System. 2013. Retrieved from http://www.cdc.gov/brfss/](http://www.cdc.gov/brfss/annual_data/2013/pdf/overview_2013.pdf)
+[annual_data/2013/pdf/overview_2013.pdf](http://www.cdc.gov/brfss/annual_data/2013/pdf/overview_2013.pdf)
+58. Neuenschwander LM, Abbott A, Mobley AR. Comparison of a web-based vs in-person nutrition
+education program for low-income adults. J. Acad. Nutr. Diet. 2013; 113:120–126. [PubMed:
+23092741]
+59. Rodgers RF, Pernal W, Matsumoto A, Shiyko M, Intille S, Franko DL. Capitalizing on mobile
+technology to support healthy eating in ethnic minority college students. J. Am. Coll. Health.
+2016; 64:125–132. [PubMed: 26630479]
+60. Poushter J. Smartphone Ownership and Internet Usage Continues to Climb in Emerging
+Economies. Pew Research Center: Global Attitudes & Trends. 2016
+61. Office of Minority Health. National Standards for Culturally and Linguistically Appropriate
+Services (CLAS) in Health and Health Care: A Blueprint for Advancing and Sustaining CLAS
+Policy and Patience. US Department of Health and Human Services; Washington (DC): 2013.
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**Fig. 1.**
+Gabby Embodied Conversational Agent (ECA) Interface.
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**Fig. 2.**
+Study consort diagram.
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**Table 1**
+
+
+Curriculum content of the ECA (Gabby) system.
+
+**Stress management** **Nutrition** **Physical activity**
+
+**Stress 101 content** **Healthy Eating content** **Activity content**
+
+
+
+**•** Many ways to reduce stress
+
+**•** What is mindfulness
+
+
+
+**•** Benefits of activity
+
+**•** Finding Time to be
+Active
+
+**•** The FITT Equation
+(frequency, intensity,
+time, type)
+
+
+
+**•** Introduction to being in the moment
+
+**•** How does stress affect my body
+
+
+
+**•** Fruits and vegetables
+
+**•** Healthy Eating Plate (protein,
+grains, fruits, vegetables, oil,
+water)
+
+
+
+**•** Being a fat detective
+
+**•** Portion sizes
+
+
+
+**•** Coping with stress
+
+**•** Difficult communications/social
+support
+
+
+
+**•** Baseline Daily
+Monitoring
+
+**•** Setting Goals about
+Physical Activity
+
+
+
+**•** Setting goals about stress management
+
+
+
+**•** Eating and stress
+
+**•** Caffeine
+
+
+
+**•** Healthy weight
+
+
+
+**•** Setting goals About nutrition
+
+**Mind Body Techniques** **Supplements Content**
+
+
+
+**•** Breathing meditation (short and long
+versions)
+
+**•** Body scan
+
+
+
+**•** Calcium
+
+**•** Iron
+
+
+
+**•** Multivitamins
+
+**•** Folic acid
+
+**•** Vitamin D
+
+
+
+**•** Introduction to mindful yoga
+
+**•** Progressive Muscle relaxation
+
+
+
+**•** Guided Imagery
+
+**•** Self-massage
+
+
+
+**•** Herbals supplements
+
+**•** Omega fatty acids
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**Table 2**
+
+Baseline Demographic and Clinical Characteristics of Participants.
+
+
+**Variable** **Total Baseline**
+**(N = 61)**
+**n (%)**
+
+
+**Gabby Baseline**
+**(N = 31)**
+**n (%)**
+
+
+**Control Baseline**
+**(N = 30)**
+**n (%)**
+
+
+**p-value[a]**
+
+
+Age (23–50) μ = 35 (σ = 8.4) μ = 33 (σ = 8.1) μ = 37 (σ = 8.4) 0.08
+
+Race 0.78
+
+White 31 (51) 15 (48) 16 (53)
+
+
+Black 16 (26) 8 (26) 8 (27)
+
+Asian/Pacific Islander 1 (2) 1 (3) 0 (0)
+
+
+Other 13 (21) 7 (23) 6 (20)
+
+Ethnicity 0.22
+
+
+Hispanic 12 (20) 8 (26) 13 (4)
+
+Non-Hispanic 49 (80) 23 (74) 87 (26)
+
+
+Language 0.79
+
+English 51 (84) 26 (84) 83 (25)
+
+
+Spanish 7 (11) 3 (10) 14 (4)
+
+Other 3 (5) 2 (7) 3 (1)
+
+
+Education 0.38
+
+High School/GED 13 (21) 8 (26) 17 (5)
+
+
+College 48 (79) 23 (74) 83 (25)
+
+Work 0.32
+
+
+Full/Part Time 54 (89) 28 (90) 86 (26)
+
+Unemployed 5 (8) 3 (10) 7 (2)
+
+Disabled 2 (3) 0 (0) 7 (2)
+
+
+Income 0.88
+
+Less than $10K 6 (10) 3 (10) 10 (3)
+
+$10K–$49K 21 (34) 12 (38) 30 (9)
+
+$50K–$99K 15 (25) 8 (26) 23 (7)
+
+$100K or more 13 (21) 5 (16) 27 (8)
+
+Refuse/Don’t Know 6 (10) 3 (10) 10 (3)
+
+
+BMI μ = 28 (σ = 6.6) μ = 27 (σ = 5.6) μ = 29 (σ = 7.5) 0.37
+
+Pain Score μ = 3 (σ = 3) μ = 3 (σ = 3.4) μ= 3 (σ = 2.6) 0.97
+
+PHQ-9 Score μ = 7 (σ = 4.6) μ = 7 (σ = 4.7) μ = 7 (σ = 4.6) 0.82
+
+SF-12
+
+
+PCS Score μ = 56 (σ = 10.2) μ = 56 (σ = 10.8) μ = 56 (σ = 9.6) 0.95
+
+MCS Score μ = 59 (σ = 10.7) μ = 61 (σ = 11.6) μ = 59 (σ = 9.8) 0.46
+
+Health Conditions that Cause Pain 0.71
+
+Yes 27 (44) 13 (42) 14 (47)
+
+
+Chronic Health Problems 0.52
+
+Yes 18 (30) 8 (26) 10 (33)
+
+
+Take Prescribed Medications 0.93
+
+Yes 41 (67) 21 (68) 20 (67)
+
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**Variable** **Total Baseline**
+**(N = 61)**
+**n (%)**
+
+
+**Gabby Baseline**
+**(N = 31)**
+**n (%)**
+
+
+**Control Baseline**
+**(N = 30)**
+**n (%)**
+
+
+**p-value[a]**
+
+
+Smoking 0.98
+
+Yes 2 (3) 1 (3) 1 (3)
+
+
+Alcohol Use 0.30
+
+Yes 43 (70) 20 (65) 23 (77)
+
+
+aContinuous variables were analyzed using two-sample t-tests and categorical/dichotomous variables were analyzed using Chi-square tests of
+independence.
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+
+**Table 5**
+
+Satisfaction and Confidence in using Gabby versus Patient Information Sheets on Healthy Eating, Physical
+Activity and Stress Management.
+
+
+**Variable** **Gabby**
+**(N = 27)**
+**n (%)**
+
+How satisfied were you in using the resource for improving ….?
+
+
+**Patient Information Sheets**
+**(N = 29)**
+**n (%)**
+
+
+**p-value[a]**
+
+
+(1: Not Satisfied – 7: Very Satisfied)
+
+Healthy Eating μ = 5 (σ = 1.7) μ = 5 (σ = 1.4) 0.92
+
+Physical Activity μ = 6 (σ = 1.8) μ = 5 (σ = 1.5) 0.62
+
+Stress Management μ = 6 (σ = 1.8) μ = 5 (σ = 1.6) 0.07
+
+
+Did you use any of the suggestions from the resource to improve ….?
+
+Healthy Eating 18 (69) 19 (66) 0.93
+
+Physical Activity 14 (52) 14 (49) 0.88
+
+Stress Management 19 (70) 19 (66) 0.89
+
+
+Do you think that you will use some of the resource’s suggestions in the future to improve ….?
+
+(1: Definitely No – 7: Definitely Yes)
+
+
+Healthy Eating μ = 6 (σ = 2) μ = 6 (σ = 1.2) 0.53
+
+Physical Activity μ = 5 (σ = 2.1) μ = 5 (σ = 1.7) 0.94
+
+Stress Management μ = 6 (σ = 1.9) μ = 5 (σ = 2) 0.29
+
+How confident do you feel that you can continue the changes you made based on the resource’s recommendations for ….?
+
+
+(1: Not Confident – 7: Very Confident)
+
+Healthy Eating μ = 6 (σ = 1.3) μ = 6 (σ = 1.4) 0.10
+
+Physical Activity μ = 6 (σ = 1.7) μ = 6 (σ = 1.4) 0.22
+
+Stress Management μ = 6 (σ = 1.7) μ = 6 (σ = 1.5) 0.25
+
+
+aContinuous variables analyzed using two-sample t-tests. Categorical variables analyzed using Chi-square tests.
+
+Patient Educ Couns. Author manuscript; available in PMC 2018 September 01.
+
+
+-----
+

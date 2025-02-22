@@ -1,0 +1,435 @@
+BRIEFRESEARCHREPORT
+published:30November2020
+doi:10.3389/fdgth.2020.576361
+Preliminary Evaluation of the
+Engagement and Effectiveness of a
+Mental Health Chatbot
+KateDaley1*,InesHungerbuehler1,KateCavanagh2,HeloísaGarciaClaro3,4,
+PaulAlanSwinton5andMichaelKapps1
+1Vitalk,TNHHealth,SãoPaulo,Brazil,2SchoolofPsychology,UniversityofSussex,Brighton,UnitedKingdom,3Department
+ofPreventiveMedicine,MedicalSchool,UniversityofSãoPaulo,SãoPaulo,Brazil,4SchoolofNursing,Universityof
+Campinas,Campinas,Brazil,5SchoolofHealthSciences,RobertGordonUniversity,Aberdeen,UnitedKingdom
+Background: Mental health difficulties are highly prevalent, yet access to support is
+limitedbybarriersofstigma,cost,andavailability.Theseissuesareevenmoreprevalent
+in low- and middle-income countries, and digital technology is one potential way to
+overcome these barriers. Digital mental health interventions are effective but often
+struggle with low engagement rates, particularly in the absence of human support.
+Chatbotscouldofferascalablesolution,simulatinghumansupportatalowercost.
+Editedby:
+PhuongN.Pham, Objective: To complete a preliminary evaluation of engagement and effectiveness of
+HarvardMedicalSchool,
+Vitalk,amentalhealthchatbot,atreducinganxiety,depressionandstress.
+UnitedStates
+Reviewedby: Methods: Realworlddatawasanalyzedfrom3,629Vitalkuserswhohadcompletedthe
+NiamhLennox-Chhugani, firstphaseofaVitalkprogram(“lessanxiety,”“lessstress”or“bettermood”).Programs
+TaoHealthResearch,UnitedKingdom
+weredeliveredthroughwrittenconversationwithachatbot.Engagementwascalculated
+AikateriniBourazeri,
+UniversityofEssex,UnitedKingdom fromthenumberofresponsessenttothechatbotdividedbydaysintheprogram.
+MichaelMcTear,
+Results: Users sent an average of 8.17 responses per day. For all three programs,
+UlsterUniversity,UnitedKingdom
+target outcome scores reduced between baseline and follow up with large effect sizes
+*Correspondence:
+KateDaley for anxiety (Cohen’s d 0.85), depression (Cohen’s d 0.91) and stress (Cohen’s
+drkatedaley@gmail.com = − = −
+d 0.81). Increased engagement resulted in improved post-intervention values for
+= −
+anxietyanddepression.
+Specialtysection:
+Thisarticlewassubmittedto
+Conclusion: This study highlights a chatbot’s potential to reduce mental health
+HealthTechnologyInnovation,
+asectionofthejournal symptoms in the general population within Brazil. While findings show promise, further
+FrontiersinDigitalHealth researchisrequired.
+Received:25June2020
+Accepted:10November2020 Keywords:digitalhealth,chatbot,conversationalagent(s),mentalhealth,depression,anxiety,stress,low-and
+Published:30November2020 middle-income
+Citation:
+DaleyK,HungerbuehlerI, INTRODUCTION
+CavanaghK,ClaroHG,SwintonPA
+andKappsM(2020)Preliminary
+Mental health disorders are highly prevalent, yet numbers accessing treatment are low (1, 2).
+EvaluationoftheEngagementand
+Reasonscitedforthisdiscrepancyincludestructuralbarrierssuchasalackofavailability,highcost
+EffectivenessofaMentalHealth
+andattitudinalbarrierssuchasperceivedstigma(3,4).Advancesindigitaltechnologyalongwith
+Chatbot.
+Front.Digit.Health2:576361. increases in internet access and smartphone ownership could offer an opportunity to overcome
+doi:10.3389/fdgth.2020.576361 someofthesebarriers,bringingrelativeanonymityandscalabilityatalowercost(5,6).
+FrontiersinDigitalHealth|www.frontiersin.org 1 November2020|Volume2|Article576361
+Daleyetal. ChatbotEngagementandEffectiveness
+There is growing empirical support for use of digital hosted within an instant messenger platform, accessible from
+technologyinmentalhealth,wherewebplatformsorsmartphone any internet-enabled device. The chatbot is built on ruby and
+applications are used to deliver evidence-based interventions. JavaScriptandwascreatedbytheIT,productdevelopmentand
+These digital interventions are effective,feasible and acceptable UXteamatTNHHealth.
+to users (7–9), although are associated with low engagement TheoverallaimofVitalkistoimprovewell-beingbyreducing
+and poor adherence (10, 11). Adherence rates and outcomes stress, anxiety and depression using a preventative approach to
+appearmorefavorablewhenactivehumansupportorguidance mental health. It consists of three core programs, addressing
+is integrated into the digital tool (12, 13), but this limits themes of anxiety, low mood, and stress. Programs are 90 days
+scalability. The development of conversational agents, or induration,dividedintothree30-dayphases.Duringeachphase,
+chatbots could offer an interesting solution (14, 15). Chatbots the user is engaged in four to five conversations per week,
+take a conversational approach, simulating human interaction each lasting 5min. Outcome measurement and feedback on
+∼
+through written text. This ability to mimic human support scoresisbuiltintotheprogram,withuserscompletingsymptom
+couldpotentiallyimproveengagementwhileenablingscalability questionnairesatbaselineandtheendofeachphase.
+through automation. This could be particularly interesting in The conversations are based on insights and strategies
+low- and middle- income settings where there are large mental taken from Cognitive Behavioral Therapy (CBT) and Positive
+healthtreatmentgapsandscarceresourcesavailable(6). Psychology (18, 19), which include (but are not limited to)
+Within mental health, chatbots have been used to deliver psychoeducation, cognitive restructuring, behavioral activation,
+psychoeducation,selfcarestrategiesandskillstrainingandshow gratitude, and practical exercises such as breathing, relaxation
+high satisfaction rates (14, 15). The use of chatbots appears and meditation. The goal of the conversations is to help the
+feasibleandacceptabletousers(15,16),butthereislesscertainty userreflectonexperiencesandlearntechniqueswhichcanhelp
+oneffectiveness.Theknowledgebaseishowevergrowingrapidly, them manage stress, mood and anxiety. A mood tracking tool
+with recent studies finding that engaging with a conversational helps to aid reflection, “emojis” and GIFs to mimic a natural
+agent over relatively short periods can reduce perceived stress humaninteractionandgamificationtoincreaseengagement.The
+(11) and improve symptoms of depression (5) and anxiety (5, chatbot avatar is named Viki and was developed through focus
+17). These studies are all RCTs or pilot RCT’s and challenges groupsandpilotingwithusers.TheconversationsusedbyViki
+surroundinguserengagementmeansthatrealworlduptakemay are written by a team of Clinical Psychologists and healthcare
+differ (10). Additionally, the studies were all completed in high professionals and shaped by a user experience (UX) team who
+incomecountries,withsmallsamplesizes(n<75)andrecruited work on the style and design of the chatbot. This involves
+fromstudentpopulations. adaptingincludingthewordslanguageusedtomakethelanguage
+Toourknowledgetherehavebeennostudiestoevaluatethe moreaccessibletotheuser.
+useofmentalhealthchatbotswithinLatinAmerica.Thisstudy Thechatbotinitiatesconversations,andtheusercanreplyby
+seekstoexploreifamentalhealthchatbothasthepotentialtobe picking a predefined answer option (Figure1). The predefined
+effectivewithinBrazil. options customize the conversation to suit user needs and
+preferences. In some cases, the user can also enter free
+AIM text, for example between conversations or if they want to
+interrupt the flow. Natural language understanding (NLU)
+To evaluate real world engagement and effectiveness of Vitalk, triggers conversational modules based on keywords identified
+anewlydevelopedmentalhealthchatbot.Thehypothesisisthat fromthetextenteredbytheuser,whichthenloopsbacktothe
+useofthechatbotwillleadtoareductioninsymptomsofstress, pre-programmed conversations. As an example of free text, if
+anxietyanddepressionovera1monthperiod. theusertypes“goodmorning”thegreetingsmoduleistriggered
+and the chatbot will respond to the greeting, ask how the user
+METHODS is feeling and offer a suitable activity. In a situation where the
+usertypeswordsdirectlyorindirectlylinkedtosuicidalitysuch
+Participants as “life isn’t worth living,” the risk module is triggered and the
+Vitalk was installed voluntarily by members of the general chatbotdeliverscrisisinformation.Thisiscontinuouslyrefined
+population who had found it on the hosting platform, through and adapted to ensure the language and emotional expression
+marketing campaigns, word of mouth, or a personal search. matchesthatoftheuser.
+Vitalksoughttoofferconversationsaboutmentalhealthandself Vitalk does not aim to replace a healthcare professional or
+helpstrategiestoimprovewell-being.UsershadinstalledVitalk to offer treatment. Users are made aware of this in the terms
+betweenJuneandNovember2019andcompleted1monthofa and conditions they consent to, and they are advised to seek
+Vitalkprogram(N 3,629).AlluserswerePortuguesespeakers additional support if they show a high risk of depression or
+=
+locatedinBrazilandover18yearsofage,withinternetaccess. anxiety during the assessment. Where the system identifies a
+risk issue, the user is sent details of support services, including
+Description of Chatbot
+the national suicide line, and where appropriate, a follow
+Vitalkisanautomatedchatbotdeliveringmentalhealthcontent up conversation with a healthcare professional from Vitalk
+inaninnovativeconversationalformat.Itisafree-to-useservice, isinitiated.
+FrontiersinDigitalHealth|www.frontiersin.org 2 November2020|Volume2|Article576361
+Daleyetal. ChatbotEngagementandEffectiveness
+Depression, Anxiety and Stress Scale
+(DASS-21) - Stress Subscale
+The DASS-21 is a 21 item self-report questionnaire consisting
+of three scales to measure depression, anxiety, and stress. Only
+the stress subscale was used, this consists of seven items, and
+the user is asked how much each statement applies to them in
+the past week (e.g., I found it difficult to relax). Scores range
+from 0 (did not apply) to 3 (applied very much or most of the
+time).Totalscoresaredoubledanddividedintofivecategories:
+normal(0–14),mild(15–18),moderate(19–25),severe(26–33)
+andextremelysevere(34 )levelsofstress(24,25).
++
+AllscaleshavebeentranslatedintoBrazilianPortugueseand
+arevalidatedforusewithinthispopulation.
+PROCEDURES
+After installing Vitalk, users complete a sign-up process that
+includes consenting to their anonymized data being used for
+research purposes. The user is then engaged in a conversation
+with the chatbot, who welcomes them to Vitalk and together
+they complete the baseline outcome measures. User responses
+are recorded and scored by the chatbot, and the user receives
+customizedfeedbackbasedontheirscores.Theuserthenchooses
+which of the three programs to complete, or they can ask the
+chatbottorecommendonebasedontheirscores.
+After a program has been selected, the core content is
+scheduled for delivery to the user over the course of 30 days.
+When new content is delivered, the user is alerted to a new
+message,andtheychoosewhethertoengageintheconversation.
+The responses of the user shape the conversation. Original
+FIGURE1|ScreenshotofVitalkcheck-up. content is delivered on the next scheduled day, regardless of
+previousengagement.Theusercandiscontinuetheprogramor
+closetheiraccountatanytime.
+At the end of phase one (day 30), the outcome measure
+MEASURES correspondingtotheactiveprogramisrepeated(GAD-7forthe
+anxietyprogram,PHQ-9forlowmood,DASS-21forstress).At
+Generalized Anxiety Disorder (GAD-7) thispoint,theusercancontinuewiththeprogramtheyareinor
+The GAD-7 is a 7-item self-report scale used to assess anxiety swaptoanotherprogramiftheirgoalhasshifted.Afullcheck-
+symptoms over the past 2 weeks (e.g., how often have you been upconsistingofallthreemeasuresisrepeatedattheendofthe
+botheredbyfeelingafraidsomethingawfulmighthappen).Scores program(day90).
+rangefrom0(notatall)to3(nearlyeveryday)withatotalof21. Forthisstudy,weexploredresultsfromthefirstphaseofeach
+Thetotalscoresaredividedintofourcategories:none(0–4),mild programtoascertainearlyengagementandexploreinitialeffects.
+(5–9),moderate(10–14)andsevere(15 )symptoms(20,21).
++
+Data Collection and Privacy
+The study involved real-world data obtained from an
+The Patient Health Questionnaire (PHQ-9) anonymous, non-clinical population. The users agreed to
+ThePHQ-9isa9itemself-reportscalethatevaluatessymptoms the terms of service and privacy policy when they signed up,
+of depression over the past 2 weeks (e.g., how often have which includes giving consent for their anonymized data to
+you been bothered by feeling down, depressed, or hopeless). be used for research purposes. Access to the chatbot requires a
+Item response options use a Likert scale ranging from 0 loginandispasswordprotected,anddatagatheredbyVitalkis
+(not at all) to 3 (nearly every day). Total scores are divided stored on a secure server. Data were extracted from the server,
+into five categories: none (0–4), mild (5–9), moderate (10– anonymized and provided to the authors for data analysis.
+14), moderately severe (15–19) and severe (20 ) symptoms Demographic data was collected by the hosting platform who
++
+(22,23). providedthistoTNHHealthinanaggregatedformat.
+FrontiersinDigitalHealth|www.frontiersin.org 3 November2020|Volume2|Article576361
+Daleyetal. ChatbotEngagementandEffectiveness
+Statistical Analysis
+TABLE1|Classificationofanxietysymptomspre-andpost-intervention(%of
+Three sets of univariate analyses were conducted with data participantsineachclassificationusingGAD-7).
+collected from the GAD-7, PHQ-9 and DASS-21 stress scales.
+None Mild Moderate Severe
+Engagement with Vitalk was quantified as a rate measure by
+dividing the number of messages sent by the number of days Pre 58(3.5%) 484(29.4%) 570(34.6%) 536(32.5%)
+in the program. Descriptive statistics were used to describe Post 382(23.2%) 764(46.4%) 311(18.9%) 191(11.6%)
+centrality and distribution of pre-post scale values, severity of
+symptomsandengagement.Todescribethemagnitudeofchange
+across the intervention, average based change was quantified TABLE2|Classificationofdepressionsymptomspre-andpost-intervention(%of
+with Cohen’s d and standard reference values (0.2: “small,” 0.5: participantsineachclassificationusingPHQ-9).
+“medium,” and 0.8: “large” used to qualitatively describe the
+≥ None Mild Moderate ModeratelySevere Severe
+effect)(26).
+Pre 43(3.5%) 230(18.5%) 249(20.0%) 297(23.9%) 424(34.1%)
+d (M post M pre)/S diff Post 210(16.9%) 480(38.6%) 250(20.1%) 156(12.6%) 147(11.8%)
+= −
+WhereM isthemeanandS isthestandarddeviationofthe
+diff
+change in scale values across the intervention. For the PHQ- TABLE3|Classificationofstresssymptomspre-andpost-intervention(%of
+9 and GAD-7 scales, reliable change and clinical caseness was participantsineachclassificationusingDASS-21stressscale).
+assessed.Foreachscale,theReliableChangeIndexwascalculated
+Normal Mild Moderate Severe ExtremelySevere
+bymultiplyingthestandarderrorofthedifferenceby1.96(27).
+Pre 113(15.3%) 72(9.8%) 138(18.7%) 242(32.8%) 173(23.4%)
+SE diff S pre√2√1 r Post 349(47.3%) 101(13.7%) 122(16.5%) 112(15.2%) 54(7.3%)
+= −
+S is the standard deviation of pre-intervention values and
+pre
+r is the reliability obtained in validation studies of each scale
+(28). To be considered reliable, change in scale values across equalto52.2and4.7%,respectively.Intermsofclinicalcaseness,
+the intervention had to exceed 5.9 for the PHQ-9 and 3.7 for 655(49.0%)userswhowereabovetheclinicalcut-offatbaseline
+theGAD-7. moved to below clinical cut-off at follow up [GAD-7 8), 557
+≥
+Clinicalcasenesswasexaminedbycalculatingthenumberof (41.6%)ofwhomalsoshowedreliableimprovement].
+peoplewhowereabovetheclinicalcutoffatbaselineandmoved
+BetterMoodProgram
+belowthiscutoffatfollow-up.Thenumberofthesepeoplethat
+experiencedareliablechangewasalsoquantified.Acut-offscore In total 1,243 users (34.3%) completed the first phase of the
+of 10wasusedforthePHQ-9,and 8fortheGAD-7. depressionprogram.
+≥ Modelingofpostscalevalueswer≥ ecompletedwithprescale The average depression score (PHQ-9) reduced from a
+valuesandengagementincludedaspredictorvariables.Because moderately severe level (mean 15.9, SD 6.5) to a moderate
+=
+the scales used can exhibit floor and ceiling effects with many level(mean10.4,SD 6.5)(Table2).Thisreductionwas 5.5
+= −
+observations at the upper value, tobit regression models were 6.0 [t (1,242) 31.9, p < 0.001) with Cohen’s d 0.91
+± = − = −
+usedtodealwiththetruncatednatureofthedataandlimitbiased indicatingalargeeffect.Thepercentageofreliableimprovement
+estimates that can be obtained with Ordinary Least Squares andreliabledeclinewasequalto45.1and2.3%,respectively.In
+Regression (29). All statistical analyses were conducted in R terms of clinical caseness 449 (46.3%) of users who were above
+version3.5.3(30). theclinicalcut-offatbaselinemovedtobelowclinicalcut-offat
+follow up (PHQ-9 total score 10), of whom 370 (38.1%) also
+≥
+showedreliableimprovement.
+RESULTS
+LessStressProgram
+In total, 3,629 users were included in this study. They were
+In total, 738 users (20.34%) completed the first phase of the
+located across Brazil; the majority were female (76%) and aged
+stressprogram.
+18–24years(52%)(536/1,648,32.5%).
+Within this period, the average stress score (DASS-21 stress
+Symptom Change scale) was reduced from severe levels (mean 25.8, SD 9.1) to
+LessAnxietyProgram mildlevels(mean17.5,SD 9.3)(Table3).Thisreductionwas
+=
+In total, 1,648 (45.4%) users completed the first phase of the 8.3 10.3[t (737) 21.9,p<0.001]withCohen’sd 0.81
+− ± =− =−
+anxietyprogram. indicatingalargeeffect.Thepercentageofreliableimprovement
+The average anxiety score (GAD-7) reduced from moderate andreliabledeclinewasequalto60.3and9.2%,respectively.
+anxiety(Table1)(mean12.2,SD 4.7)tomildanxiety(mean
+8.1,SD 4.7).Thisreductionwas= 4.1 4.8[t 34.3, Engagement
+(1,647)
+= − ± =−
+p < 0.001) with Cohen’s d 0.85 indicating a large effect. In terms of engagement, the average number of responses sent
+= −
+Thepercentageofreliableimprovementandreliabledeclinewas by users to Vitalk per day (total responses divided by days in
+FrontiersinDigitalHealth|www.frontiersin.org 4 November2020|Volume2|Article576361
+Daleyetal. ChatbotEngagementandEffectiveness
+TABLE4|Tobitregressionmodelsquantifyingtheeffectofpre-interventionvalues engageindividualsexperiencingelevatedstressandmentalhealth
+andengagementwithVitalkaspredictorsofpost-interventionanxiety,depression symptoms. This finding fits with the idea that people recruited
+andstressvalues.
+throughmethodsthatimplymoreactivetreatment-seekingsuch
+Anxiety(0–21) Depression Stress(0–42) as a Google or Facebook search, present with high levels of
+GAD-7 (0–27) DASS-21 anxietyanddepressionthanthroughmorepassivemethods(36).
+PHQ-9 Interestingly,thoserecruitedbyonlineadvertisementshavebeen
+found to have similar levels of depression and anxiety as those
+BaseModel:Nointeraction Standardized Standardized Standardized
+coefficients coefficients coefficients recruitedfromclinicalsettings,suggestingthechatbotcouldbe
+(β) (β) (β) a helpful way to widen access and identify those most at risk,
+facilitatingaccesstoappropriateprofessionalsupport(36).
+Intercept 8.1*** 10.4*** 17.2***
+Reliableimprovementswerefoundinallthreeprogramswith
+Pre 2.2*** 3.8*** 3.4***
+symptoms of anxiety, depression and stress reducing between
+Engagement 0.33** 0.46** 0.11
+− − baselineandfollowupwithlargeeffectsizes.Thesefindingsarein
+FullModel:Withinteraction
+linewithotherchatbotstudies(5,17,37)butwithamuchlarger
+Intercept 8.1*** 10.4*** 17.2*** samplesizeandsuggestsapplicabilitywithinBrazil.Interestingly,
+Pre 2.2*** 3.7*** 3.4*** large numbers of users showed clinically significant, reliable
+Engagement −0.33** −0.45** 0.13 change,movingfromaclinicaltonon-clinicalrangeforanxiety
+Interaction(Pre:Engagement) 0.07 0.26 0.19 anddepressionasmeasuredbythePHQ-9andGAD-7.Whilst
+− − −
+this requires follow-up and further investigation, these initial
+Preandengagementvariableswerestandardizedbysubtractingmeananddividingby
+thestandarddeviation.***p<0.001,**p<0.01. resultsareextremelypromising.Itisunclearwhythereissucha
+magnitudeofchange,butonehypothesisisthatparticipantshad
+independentlysoughtoutamentalhealthtoolandsowerelikely
+tohavehighmotivationandareadinesstochange.
+program) within the first phase of the program was 8.17 (SD,
+3.67),witharangeofbetween0.29and40.25responses.
+Tobit regression models were used to assess the effects of
+LIMITATIONS
+engagement on intervention effectiveness after controlling for
+pre-interventionvalues(Table4).Increasedengagementresulted
+This study presents preliminary data obtained over a brief
+inimprovedpost-interventionvaluesforanxietyanddepression
+engagement period without a control group. While an early
+(p<0.01)butnotstress(p 0.716).Nointeractioneffectwas
+= response is found to be a strong predictor of the treatment
+identified between engagement and pre-intervention values for
+outcome (38), there is a need to complete a more rigorous
+anyoftheoutcomesmeasured(p 0.08).
+≥ studywithacontrolgroupandlongerfollowupbeforedrawing
+any firm conclusions. It is hoped that the evidence presented
+DISCUSSION in this paper will direct further clinical research and help
+in the planning of new technological interventions within
+Initial results indicate that the use of a mental health chatbot thispopulation.
+withinthispopulationcanengageusersandsignificantlyreduce Within this study, we had limited information on the users
+symptoms of anxiety, depression and levels of stress. Higher of Vitalk due to the method of data collection within the host
+engagement with the chatbot, as measured by the number of platform.Thelackofindividual-leveldemographicslimitedthe
+responsessentbytheuserwasalsofoundtopredictloweranxiety analysis. In future work it would be important to obtain more
+anddepressivesymptomsatfollowup.Toourknowledgethisis detailed information and a deeper understanding of users, for
+thefirststudytoexaminetheuseofamentalhealthchatbotin example, individual-level demographics and data on education
+LatinAmerica,andresultsappearpromising. levels and socio-economic status which may impact outcomes.
+Themajorityofthesamplewereadultfemalesunder24years It would also be interesting to explore if the users have had
+of age (52% 18–24 years, 76% female). This differed somewhat any psychological intervention in the past and if they are
+tothetypicaldemographicprofileofthehostplatform(29%25– doing so currently. This would offer insight into who Vitalk
+34 years, 54% female) (31) but it is not clear if this reflects the is reaching, and if for example it is being used as an adjunct
+chatbot appealing more to this demographic, differing mental or follow on from therapy or as the only intervention being
+healthprevalencerates(32),levelsofhelpseekingbehavior(33) accessed. This would offer interesting learning for the wider
+ormarketingbias. healthsystem.
+Baseline levels of anxiety and depression were significantly Duetothestudybeingretrospective,wedefinedengagement
+higherthanwouldbeexpectedinthegeneralpopulationinBrazil level as the average daily number of responses sent by the
+based on previous research using the same measures (34, 35). user, as this was the best measure based on the type of data
+This was not unexpected given users had actively sought out available.However,thisdidnotconsiderthatsomeconversations
+a mental health tool but does indicate that Vitalk is able to are longer than others and the user may not be active every
+successfullyreachitstargetaudienceandcouldbeausefulwayto day. Exploring alternative engagement metrics would be useful
+FrontiersinDigitalHealth|www.frontiersin.org 5 November2020|Volume2|Article576361
+Daleyetal. ChatbotEngagementandEffectiveness
+to enrich our understanding of how the chatbot is used and ETHICS STATEMENT
+wouldenablemorecomparisonwithintheliterature.Analyzing
+engagement for each conversation would also allow a more Ethical review and approval was not required for the study
+granular understanding of the impact of specific intervention on human participants in accordance with the local legislation
+techniquesonsymptomchange.Thiswouldallowustoexplore and institutional requirements. Written informed consent for
+which are the most impactful components, whether this be the participationwasnotrequiredforthisstudyinaccordancewith
+chatbot,moodtracking,specificcognitivebehavioraltechniques thenationallegislationandtheinstitutionalrequirements.
+oracombinationofallthree.
+AUTHOR CONTRIBUTIONS
+CONCLUSION
+KD and IH contributed substantially to the conception and
+As there is currently very little research on the use of chatbots design of the study, the acquisition of data, and writing of
+in mental healthcare, particularly within low- and middle- the paper. KC and HC provided critical review and significant
+incomecountries,theseearlyfindingsarepromising.Thestudy contributiontothemanuscript.PScompleteddataanalysis.MK
+highlightsthepotentialofusingsuchaninnovativetooltoengage contributedtoinitialstudydesign.Allauthorscontributedtothe
+usersandofferaneffectiveinterventiontoimprovementalhealth articleandapprovedthesubmittedversion.
+in Brazil’s general population. While findings show promise,
+more rigorous research is required before any firm conclusions FUNDING
+canbedrawn.
+TNHHealthprovidedfundingforthesubmissionofthisarticle.
+DATA AVAILABILITY STATEMENT
+ACKNOWLEDGMENTS
+The data analyzed in this study is subject to the following
+licenses/restrictions: Access upon request due to confidential Special thanks to Raphael Mota for supporting us in the data
+or commercially sensitive data sets. Data anonymized and for extraction and to Aimee da Silva Ferreira who created our
+researchpurposesonly.Requeststoaccessthesedatasetsshould graphics.ThanksalsototheteamatTNHHealth,whodeveloped
+bedirectedtoInesHungerbuehler,ines@tnh.health. thistechnology.
+REFERENCES
+psychologicalwell-beingofuniversitystudents:asystematicreviewandmeta-
+analysis.JMedIntRes.(2014)16:e130.doi:10.2196/jmir.3142
+1. PanAmericanHealthOrganization.TheBurdenofMentalDisordersinthe 10. Torous J, Nicholas J, Larsen ME, Firth J, Christensen H. Clinical review
+RegionoftheAmericas.Washington,DC:PAHO(2018). of user engagement with mental health smartphone apps: evidence,
+2. KohnR,AliAA,Puac-PolancoV,FigueroaC,López-SotoV,MorganK,etal. theory and improvements. Evid Based Ment Health. (2018) 21:116–9.
+MentalhealthintheAmericas:anoverviewofthetreatmentgap.RevPanam doi:10.1136/eb-2018-102891
+SaludPublica.(2018)42:e165.doi:10.26633/RPSP.2018.165 11. LyKH,LyA-M,AnderssonG.Afullyautomatedconversationalagentfor
+3. Andrade LH, Alonso J, Mneimneh Z, Wells JE, Al-Hamzawi A, promoting mental well-being: a pilot RCT using mixed methods. Internet
+Borges G, et al. Barriers to mental health treatment: results from the Interv.(2017)10:39–46.doi:10.1016/j.invent.2017.10.002
+WHO World Mental Health surveys. Psychol Med. (2014) 44:1303–17. 12. Johansson R, Andersson G. Internet-based psychological treatments
+doi:10.1017/S0033291713001943 for depression. Expert Rev Neurother. (2012) 12:861–9; quiz 870.
+4. FukudaCC,PensoMA,doAmparoDM,deAlmeidaBC,deAquinoMorais doi:10.1586/ern.12.63
+C.MentalhealthofyoungBrazilians:barrierstoprofessionalhelp-seeking. 13. BaumeisterH,ReichlerL,MunzingerM,LinJ.Theimpactofguidanceon
+EstudPsicol.(2016)33:355–65.doi:10.1590/1982-02752016000200017 Internet-basedmentalhealthinterventions—Asystematicreview.Internet
+5. FitzpatrickKK,DarcyA,VierhileM.Deliveringcognitivebehaviortherapy Interv.(2014)1:205–15.doi:10.1016/j.invent.2014.08.003
+to young adults with symptoms of depression and anxiety using a fully 14. Suganuma S, Sakamoto D, Shimoyama H. An embodied conversational
+automated conversational agent (Woebot): a randomized controlled trial. agentforunguidedinternet-basedcognitivebehaviortherapyinpreventative
+JMIRMentalHealth.(2017)4:e19.doi:10.2196/mental.7785 mentalhealth:feasibilityandacceptabilitypilottrial.JMIRMentalHealth.
+6. MenezesP,QuayleJ,GarciaClaroH,daSilvaS,BrandtLR,Diez-Canseco (2018)5:e10454.doi:10.2196/10454
+F, et al. Use of a mobile phone app to treat depression comorbid with 15. Vaidyam AN, Wisniewski H, Halamka JD, Kashavan MS, Torous
+hypertensionordiabetes:apilotstudyinBrazilandPeru.JMIRMentHealth. JB. Chatbots and conversational agents in mental health: a review
+(2019)6:e11698.doi:10.2196/11698 of the psychiatric landscape. Can J Psychiatry. (2019) 64:456–64.
+7. TorousJ,ChanSR,TanSY-M,BehrensJ,MathewI,ConradEJ,etal.Patient doi:10.1177/0706743719828977
+smartphoneownershipandinterestinmobileappstomonitorsymptomsof 16. GaffneyH,MansellW,TaiS.Conversationalagentsinthetreatmentofmental
+mentalhealthconditions:asurveyinfourgeographicallydistinctpsychiatric healthproblems:mixed-methodsystematicreview.JMIRMentHealth.(2019)
+clinics.JMIRMentalHealth.(2014)1:e5.doi:10.2196/mental.4004 6:e14166.doi:10.2196/14166
+8. Firth J, Torous J, Nicholas J, Carney R, Rosenbaum S, Sarris J. Can 17. FulmerR,JoerinA,GentileB,LakerinkL,RauwsM.Usingpsychological
+smartphone mental health interventions reduce symptoms of anxiety? A artificial intelligence (Tess) to relieve symptoms of depression and
+meta-analysisofrandomizedcontrolledtrials.JAffectDisord.(2017)218:15– anxiety: randomized controlled trial. JMIR Mental Health. (2018) 5:e64.
+22.doi:10.1016/j.jad.2017.04.046 doi:10.2196/mental.9782
+9. Davies EB, Bethan Davies E, Morriss R, Glazebrook C. Computer- 18. Seligman MEP. Building human strength: psychology’s forgotten mission.
+deliveredandweb-basedinterventionstoimprovedepression,anxiety,and APAMonitor.(1998)29.doi:10.1037/e529932010-003
+FrontiersinDigitalHealth|www.frontiersin.org 6 November2020|Volume2|Article576361
+Daleyetal. ChatbotEngagementandEffectiveness
+19. Beck JS. Cognitive Behavior Therapy, Second Edition: Basics and Beyond. paulo megacity mental health survey, Brazil. PLoS ONE. (2012) 7:e31879.
+NewYork,NY:GuilfordPress(2011).p.391. doi:10.1371/journal.pone.0031879
+20. Spitzer RL, Kroenke K, Williams JBW, Löwe B. A brief measure for 33. OliveiraMLCde,deOliveiraMLC,deRosalmeidaDantasC,deAzevedo
+assessing generalized anxiety disorder. Arch Int Med. (2006) 166:1092. RCS,BanzatoCEM.Demographicsandcomplaintsofuniversitystudentswho
+doi:10.1001/archinte.166.10.1092 soughthelpatacampusmentalhealthservicebetween1987and2004.São
+21. Moreno AL, DeSousa DA, Ana Maria Frota Lisbôa, Manfro GG, Salum PauloMedJ.(2008)126:58–62.doi:10.1590/S1516-31802008000100011
+GA, Koller SH, et al. Factor structure, reliability, and item parameters of 34. Munhoz TN, Santos IS, Matijasevich A. Major depressive episode among
+thebrazilian-portugueseversionoftheGAD-7questionnaire.TemasPsicol. Brazilian adults: a cross-sectional population-based study. J Affect Disord.
+(2016)24:367–76.doi:10.9788/TP2016.1-25 (2013)150:401–7.doi:10.1016/j.jad.2013.04.031
+22. Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief 35. SilvaMT,RoaMC,MartinsSS,daSilvaATC,GalvaoTF.Generalizedanxiety
+depression severity measure. J Gen Intern Med. (2001) 16:606–13. disorderandassociatedfactorsinadultsintheAmazon,Brazil:apopulation-
+doi:10.1046/j.1525-1497.2001.016009606.x based study. J Affect Disord. (2018) 236:180–6. doi: 10.1016/j.jad.2018.
+23. SantosIS,TavaresBF,MunhozTN,AlmeidaLSPde,SilvaNTBda,Tams 04.079
+BD,etal.[SensitivityandspecificityofthePatientHealthQuestionnaire-9 36. LindnerP,NyströmMBT,HassménP,AnderssonG,CarlbringP.Whoseeks
+(PHQ-9)amongadultsfromthegeneralpopulation].CadSaudePubl.(2013) ICBTfordepressionandhowdotheygetthere?Effectsofrecruitmentsource
+29:1533–43.doi:10.1590/S0102-311X2013001200006 onpatientdemographicsandclinicalcharacteristics.InternetInterv.(2015)
+24. Lovibond PF, Lovibond SH. The structure of negative emotional states: 2:221–5.doi:10.1016/j.invent.2015.04.002
+comparisonoftheDepressionAnxietyStressScales(DASS)withthebeck 37. Inkster B, Sarda S, Subramanian V. An empathy-driven, conversational
+depression and anxiety inventories. Behav Res Ther. (1995) 33:335–43. artificial Intelligence Agent (Wysa) for digital mental well-being: real-
+doi:10.1016/0005-7967(94)00075-U worlddataevaluationmixed-methodsstudy.JMIRMhealthUhealth.(2018)
+25. VignolaRCB,TucciAM.Adaptationandvalidationofthedepression,anxiety 6:e12106.doi:10.2196/12106
+and stress scale (DASS) to Brazilian Portuguese. J Affect Disord. (2014) 38. BeintnerI,GörlichD,BergerT,EbertDD,ZeilerM,HerreroCamaranoR,
+155:104–9.doi:10.1016/j.jad.2013.10.031 et al. Interrelations between participant and intervention characteristics,
+26. Cohen J. Statistical Power Analysis for the Behavioral Sciences. 2nd ed. process variables and outcomes in online interventions: a protocol
+Hillsdale,NJ:LawrenceEarlbaumAssociates(1988). for overarching analyses within and across seven clinical trials in
+27. EvansC,MargisonF,BarkhamM.Thecontributionofreliableandclinically ICare. Internet Interv. (2019) 16:86–97. doi: 10.1016/j.invent.2018.
+significant change methods to evidence-based mental health. Evid Based 05.001
+MentalHealth.(1998)1:70–2.doi:10.1136/ebmh.1.3.70
+28. JacobsonNS,TruaxP.Clinicalsignificance:astatisticalapproachtodefining ConflictofInterest:IH,KD,andMKareemployeesofTNHHealth.TNHHealth
+meaningfulchangeinpsychotherapyresearch.JConsultClinPsychol.(1991) createdthechatbotandpaidforthecostofsubmittingthepublication.
+59:12–9.doi:10.1037/0022-006X.59.1.12
+29. RobertsJ,LentonP,KeetharuthAD,BrazierJ.Qualityoflifeimpactofmental Theremainingauthorsdeclarethattheresearchwasconductedintheabsenceof
+healthconditionsinEngland:resultsfromtheadultpsychiatricmorbidity anycommercialorfinancialrelationshipsthatcouldbeconstruedasapotential
+surveys.HealthQualLifeOutcomes.(2014)12:6.doi:10.1186/1477-7525-12-6 conflictofinterest.
+30. R Core Team. R: A Language and Environment for Statistical Computing.
+Vienna:RFoundationforStatisticalComputing(2019).Availablefrom:http:// Copyright © 2020 Daley, Hungerbuehler, Cavanagh,Claro, Swinton and Kapps.
+www.R-project.org(accessedMarch9,2020). Thisisanopen-accessarticledistributedunderthetermsoftheCreativeCommons
+31. Cuponation. Facebook 2018/2019 Confira Levantamento Sobre Perfil e AttributionLicense(CCBY).Theuse,distributionorreproductioninotherforums
+QuantidadedeUsuarios.Availablefrom:www.cuponation.com.br/insights/ ispermitted,providedtheoriginalauthor(s)andthecopyrightowner(s)arecredited
+facebook-users(accessedFebruary26,2020). andthattheoriginalpublicationinthisjournaliscited,inaccordancewithaccepted
+32. Andrade LH, Wang Y-P, Andreoni S, Silveira CM, Alexandrino-Silva C, academicpractice.Nouse,distributionorreproductionispermittedwhichdoesnot
+Siu ER, et al. Mental disorders in megacities: findings from the são complywiththeseterms.
+FrontiersinDigitalHealth|www.frontiersin.org 7 November2020|Volume2|Article576361

@@ -1,0 +1,1457 @@
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+##### Original Paper
+
+# Guided Self-Help Works: Randomized Waitlist Controlled Trial of Pacifica, a Mobile App Integrating Cognitive Behavioral Therapy and Mindfulness for Stress, Anxiety, and Depression
+
+##### Christine Moberg[1], PhD; Andrea Niles[2], PhD; Dale Beermann[1], MS
+
+1Pacifica Labs, Inc, Minneapolis, MN, United States
+2University of California-San Francisco, San Francisco, CA, United States
+
+**Corresponding Author:**
+Christine Moberg, PhD
+Pacifica Labs, Inc
+150 S 5th Street
+Suite 825
+Minneapolis, MN, 55402
+United States
+Phone: 1 6083470325
+[Email: christine.moberg@gmail.com](mailto:christine.moberg@gmail.com)
+
+### Abstract
+
+**Background:** Despite substantial improvements in technology and the increased demand for technology-enabled behavioral
+health tools among consumers, little progress has been made in easing the burden of mental illness. This may be because of the
+inherent challenges of conducting traditional clinical trials in a rapidly evolving technology landscape.
+**Objective:** This study sought to validate the effectiveness of Pacifica, a popular commercially available app for the
+self-management of mild-to-moderate stress, anxiety, and depression.
+**Methods:** A total of 500 adults with mild-to-moderate anxiety or depression were recruited from in-app onboarding to participate
+in a randomized waitlist controlled trial of Pacifica. We conducted an all-virtual study, recruiting, screening, and randomizing
+participants through a Web-based participant portal. Study participants used the app for 1 month, with no level of use required,
+closely mimicking real-world app usage. Participants in the waitlist group were given access to the app after 1 month. Measurements
+included self-reported symptoms of stress, anxiety, depression, and self-efficacy. We performed an intent-to-treat analysis to
+examine the interactive effects of time and condition.
+**Results:** We found significant interactions between time and group. Participants in the active condition demonstrated significantly
+greater decreases in depression, anxiety, and stress and increases in self-efficacy. Although we did not find a relationship between
+overall engagement with the app and symptom improvement, participants who completed relatively more thought record exercises
+sustained improvements in their symptoms through the 2-month follow-up to a greater degree than those who completed fewer.
+In addition, we found that participants who reported concomitantly taking psychiatric medications during the trial benefitted less
+from the app, as measured by the symptoms of anxiety and stress.
+**Conclusions:** This study provides evidence that Pacifica, a popular commercially available self-help app, is effective in reducing
+self-reported symptoms of depression, anxiety, and stress, particularly among individuals who utilize thought records and are not
+taking psychiatric medication.
+**Trial Registration:** ClinicalTrials.gov NCT03333707; https://clinicaltrials.gov/ct2/show/NCT03333707 (Archived by WebCite
+at http://www.webcitation.org/78YE07ADB)
+
+**_(J Med Internet Res 2019;21(6):e12556)_** [doi: 10.2196/12556](http://dx.doi.org/10.2196/12556)
+
+**KEYWORDS**
+mHealth; anxiety; depression; stress; cognitive behavioral therapy; smartphone app
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+
+### Introduction
+
+##### Background
+
+In the United States, in a given year, over 19% of adults
+experience an anxiety disorder [1] and 6.7% experience a major
+depressive episode [2]. Decades of mental health care research
+have resulted in the development of effective
+nonpharmacological therapies for anxiety and depression, one
+of which is cognitive behavioral therapy (CBT) [3,4]. CBT is
+among the best-researched nonpharmacological treatments for
+depression and anxiety [5,6]. However, traditional CBT requires
+a well-trained practitioner and significant time commitment
+both inside and outside of the therapy room from the client;
+dissemination of this treatment has been somewhat limited
+despite its demonstrated efficacy [7].
+
+Untreated mental illness has well-documented negative effects
+on physical health, health care costs, productivity, and
+well-being [8-10], and mental health and substance use disorders
+are the leading causes of disease burden in the United States
+
+[11]. Unfortunately, only 43% of people with mental illness in
+the United States receive professional care because of difficulties
+with access to care, stigma, cost, or time involved in seeking
+treatment [2].
+
+Technology-enabled interventions hold great promise to ease
+some of the burden of mental illness due to their ability to scale
+and reduce barriers to entry such as cost and stigma. In fact,
+computerized or internet-based implementations of CBT have
+existed for years and many have been demonstrated to be
+effective for a number of mental health conditions [12-15].
+However, although these products exist, they have made little
+impact on reducing the overall disease burden and
+implementation has lagged behind development [16].
+
+Similar to the research-practice gap that exists for much of
+mental health treatment, digital tools that perform well in closely
+monitored, tightly controlled research settings do not always
+translate into widely utilized programs among consumers. This
+may be because of poor usability and design or concerns about
+privacy and data security [17,18]; in some cases, these apps are
+never made available to the public. More real-world studies that
+demonstrate the effectiveness of mobile-delivered treatment
+programs are needed.
+
+User retention and engagement are critical to the success of
+digital health interventions [17,19]. This is no different than in
+traditional or in-person psychotherapy, where treatment retention
+and engagement has long been a topic of study [20]. LeBeau et
+al [21] defined treatment engagement as homework compliance
+and found that greater compliance predicted better outcomes
+among patients receiving CBT for anxiety disorders. However,
+with digital tools, engagement has often been defined by the
+number of uses or logins. The relationship between logins or
+time spent using the app or digital tool is somewhat complex;
+it is not always the case that greater use correlates with greater
+symptom improvement. For example, 1 study found that
+increased usage of a website for depression treatment
+corresponded with less symptom improvement, and the authors
+suggest the explanation that individuals who derived benefit
+
+
+from the treatment discontinued their use early [22]. Kelders et
+al [23] examined digital treatment adherence and identified that
+engagement-related analyses should consider the types of actions
+taken by participants (eg, didactic lessons vs feedback vs skills
+practice) and the time at which the individual became
+nonadherent (ie, early vs late). Tying engagement to outcomes
+can also be complex. van Gemert-Pijnen et al [24] examined
+participants’ number of logins and use of various platform
+features and found a somewhat complex relationship between
+logins, feature use, and impact on depressive symptoms.
+
+There is also a rich literature on predictors of treatment response
+in CBT, both in-person and when administered via digital tools,
+though it is hard to draw any clear conclusions about for whom
+CBT does or does not work. Høifødt et al [25] found
+contributions from both some demographic and clinical factors
+in a Web-based CBT intervention for depression. Specifically,
+having had more depressive episodes, being married or
+cohabitating, and having higher life satisfaction predicted better
+response. Myrh et al [26] reviewed the literature on predictors
+of treatment response to in-person CBT and described that
+although several studies have found little-to-no strong predictors
+of response to treatment, others have found that higher
+socioeconomic status and being married predict better outcomes.
+Dryman et al [27] conducted a study of the Internet-based CBT
+(ICBT) mobile app, Joyable, to examine its efficacy for treating
+social anxiety and found that responders (vs nonresponders)
+had lower baseline symptoms and spent more days in the
+program. Responders also called their coaches more and
+completed more exposures. The groups did not differ on age or
+gender. MoodHacker is a CBT-based app for individuals with
+depression. In a randomized controlled trial (RCT) examining
+the efficacy of MoodHacker, Birney et al [28] found that
+depression symptom improvements were larger among study
+participants who had access to an employee assistance program
+(EAP), though the authors note that EAP access could actually
+represent more than just access to an in-person counselor (eg,
+non-EAP participants may have different motivations than those
+who encountered the study through EAPs). Given these mixed
+data, we were also interested in examining for whom the Pacifica
+app would be most effective.
+
+##### Objectives
+
+Though it is not the first all-virtual RCT of a mental health
+support app [29,30], this study was an effort to advance the
+literature on the real-world use of technology-enabled CBT.
+We sought to test the effectiveness of Pacifica [31], a popular
+(over 2.4 million registered users at the time of submission)
+commercially available app for the self-management of stress,
+anxiety, and depression, in a sample of individuals with
+mild-to-moderate anxiety and depression who were seeking
+digital tools to address their mental health. We predicted that
+access to the app would help improve their symptoms and
+increase self-efficacy. In addition, we hypothesized that greater
+app usage, that is, more engagement, would result in larger
+symptom improvements. In addition, given the ongoing debate
+about active ingredients in therapy [32] and the transtheoretical
+approach of the app, we aimed to examine whether symptom
+improvement was related to the specific tools that were utilized
+(eg, thought records, meditation, and social posts). Finally, we
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+
+evaluated whether demographic variables or baseline clinical
+features would affect the efficacy of our app-based intervention.
+
+### Methods
+
+##### Study Design
+
+This RCT compared an immediate intervention group (Pacifica)
+with a waitlist control group (WL). Both groups had access to
+treatment as usual at their discretion. The WL group was
+provided access to the intervention at the end of the 1-month
+waiting period. The immediate intervention group was
+re-assessed 2 months after their completion of the 1-month
+intervention period to examine the stability of symptom change.
+The study was registered with ClinicalTrials.gov
+(NCT03333707) and was approved by Salus IRB (Austin, TX).
+
+##### Recruitment, Screening, and Consent
+
+We recruited participants for 3 months, from November 2017
+through February 2018, via social media advertisements, a
+listing on ClinicalTrials.gov, and through an opt-in screen in
+the commercially available app itself. The vast majority of
+participants were recruited through the app itself. Pacifica does
+not advertise to acquire users, and most individuals find the app
+through app store searches, using terms such as anxiety or stress
+or via word of mouth.
+
+We designed and built a Participant Portal that provided
+individuals with a self-service platform for screening, consent,
+and randomization to the app. To reduce duplicate enrollments,
+potential participants provided their telephone number and
+entered a code that was sent to them via short messaging service
+(SMS) text messaging. A prescreen required participants to be
+over the age of 18 years, fluent in English, with regular access
+to a smartphone, and no previous experience with Pacifica. After
+this prescreen, participants were provided with an informed
+consent document in an embedded PDF. A 4-question
+knowledge check confirmed that they had read and understood
+the document. To consent, participants entered their email
+address and password. Following consent, participants were
+screened to confirm eligibility. The Participant Portal is Web
+(not app) based, and therefore, participants could access the
+portal through any device with a Web browser. Participants
+assigned to the waitlist condition would not have been able to
+download and use the app (outside of the study) unless they
+signed up with a different email address than whichever address
+they used for this prescreen.
+
+In addition to the criteria in the prescreen described above, the
+inclusion criterion was a score between 5 and 14 on the
+Generalized Anxiety Disorder 7-item (GAD-7) scale [33] or
+between 5 and 14 on the Patient Health Questionnaire 8-item
+(PHQ-8) scale [34]. Exclusion criteria were (1) score below 5
+on GAD-7 and PHQ-8 or above 14 on either, (2) positive
+response on screener for previous diagnosis of bipolar disorder,
+schizophrenia, other psychotic spectrum disorder, or organic
+brain disease, and (3) currently pregnant. Given the all-virtual
+nature of the study, these criteria were selected to match the
+intensity of the intervention to the severity of the users, allowing
+us to balance participant safety with external validity and value
+of the data.
+
+
+An initial group of 9279 individuals completed the prescreen,
+1524 completed informed consent, and 500 were randomized
+to groups. In addition, 7 individuals’ participation was
+discontinued for failing to download the app within 48 hours
+of screening and randomization. Of the 253 individuals who
+were assigned to the treatment group, 182 participants used
+Apple (iOS) devices and 61 used Android devices. Furthermore,
+3 participants accessed Pacifica with both iOS and Android
+devices. Participants were assessed using questionnaire
+measures, the details for which are below. See the CONSORT
+flow diagram (Figure 1) for reasons for exclusion and
+experimental compliance.
+
+##### Intervention
+
+Participants in the Pacifica group were given access to Pacifica
+Premium, versions 5.7 through 5.9.1. Updates to the app that
+occurred during the research study were bug fixes and
+performance improvements and would not have impacted the
+therapeutic approach or usability of the app. Descriptions of the
+_app below are as it was in the research study and may not be_
+_exactly the same as the currently available product. Pacifica is_
+a mobile app marketed as a guided self-help tool for the
+management of stress, anxiety, and depression. It is not
+described as a treatment for any particular diagnosis nor is it
+described as a substitute for professional treatment. At
+onboarding, users select up to 3 goals on which to work from
+a list of 8 options. The app prompts users once per day to rate
+their mood and, based on their mood rating, recommends
+activities to improve their mood via _Suggested Activities (ie,_
+ecological momentary intervention; see the studies by Schueller
+et al and Lovibond and Lovibond [35,36]). There are also 35
+days of _Guided Paths that are approximately 10-min audio_
+psychoeducational lessons with paired activities. Alternatively,
+users can use the app buffet style, using whichever tools they
+find helpful, whenever they choose. Participants in the study
+were not provided guidance or suggestions regarding the amount
+of level of app usage beyond any prompts in the app (described
+above).
+
+Descriptions and details on the different activities are given
+below:
+
+##### Mood
+
+Allows users to rate their mood on a scale from Great to Awful.
+Users may optionally label specific emotions or attach a
+journal-style note to their mood rating.
+
+##### Health
+
+Allows users to track health behaviors such as sleep, caffeine
+consumption, and exercise. Users can customize their health
+behaviors and goals for each health behavior (ie, how many
+hours of sleep or number of cups of coffee). They may
+optionally set up an alarm so that Pacifica sends them a
+notification to remind them to enter their health data.
+
+##### Meditation/Relax
+
+Offers over 40 audio activities, most of which are intended to
+promote mindfulness or relaxation. These include deep
+breathing, progressive muscle relaxation, and a variety of
+mindfulness activities.
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+**Figure 1.** Consolidated Standards of Reporting Trials diagram.
+
+
+##### Thoughts
+
+Offers 9 different activities to help users re-examine their
+thoughts, identify cognitive distortions, and reframe thoughts.
+The prompts are divided into 3 groups: basics, which help the
+user recognize the relationship between their thoughts and
+emotions, learn about cognitive distortions, and reframe negative
+thoughts; journal prompts, which allow for free writing; and
+_advanced tools. The advanced tools include one that creates a_
+pie chart to help users identify other factors beyond themselves
+that may contribute to events, a tool that asks a series of
+questions to help them evaluate evidence, and an activity that
+guides them to drill down and identify core beliefs. All of these
+tools are guided exercises and do not provide automatic analysis
+of the individual’s text inputs.
+
+
+##### Goals
+
+Allows the user to create a list of challenges to complete to meet
+their longer-term goals. A fairly generic list tool, it can be
+customized to address anxiety by enabling the user to build and
+address a hierarchy of feared or avoided situations. Users coping
+with depression can use the list to engage in behavioral
+activation to re-engage with life. The tool prompts the user to
+rate the perceived difficulty of the item before and after
+engagement to help them recognize that their initial estimation
+of the challenge may not be accurate. There are example items
+that may be chosen or users can type in their own goals.
+
+##### Guided Paths
+
+Offer 35 days of psychoeducational content to teach the user
+how to utilize the tools in the app and help maintain motivation
+and interest. The lessons also provide background information
+about CBT and mindfulness. Each 5- to 10-min audio lesson is
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+
+paired with an in-app activity. The audio content is presented
+either as a didactic session or a mock session between a client
+a therapist. The 35 days of content are divided into 4 paths: one
+which offers an introduction to each of the tools in the app, 2
+which are sequential and offer a deeper focus on CBT, and one
+which focuses on building mindfulness skills.
+
+##### Hope
+
+On the basis of the principles of distress coping, the hope board
+is a user’s personal repository of inspirational quotes and
+images. It also allows the user to save their completed challenges
+to help them feel a sense of accomplishment and savor their
+wins.
+
+##### Community
+
+A peer-support community that is not moderated by
+professionals, but is rather a place where users can post their
+thoughts, challenges, and questions and receive support from
+others using the app. The community is anonymous but utilizes
+a flagging system to remove disruptive or inappropriate posts
+or users. Users are provided the rules and guidelines of the
+community when they first access the community.
+
+##### Progress
+
+Allows the user to review their mood ratings and completed
+activities. The tool graphs their mood ratings against health
+behaviors and other in-app activities so that users can identify
+patterns and triggers. There is also a _skills tab that visually_
+displays the user’s completed activities, separated by type.
+
+##### Emergency Resources
+
+Includes listing of crisis lines and resources for users in
+emergency situations.
+
+##### Measurement
+
+ Questionnaire Measures
+
+Study participants were assessed at 3 time points: at baseline
+(pretreatment), 4 weeks later (ie, posttreatment; at the end of
+the intervention period), and 3 months after baseline/2 months
+postintervention (follow-up; only the Pacifica group completed
+the follow-up because the WL group was allowed to access the
+intervention after the 4-week assessment). At each assessment,
+participants were both emailed and notified via SMS that they
+had available assessments to complete. Assessments were
+completed via the secure Participant Portal described above (ie,
+not in the app itself).
+
+The Depression Anxiety and Stress Scales-21 (DASS-21) [37]
+is a widely used freely available self-report measure of stress,
+anxiety, and depression. A shortened version of the DASS-42,
+its 21 items are measured on a Likert scale and yield 3 subscale
+scores: stress, anxiety, and depression. The DASS-21 consists
+of statements such as “I couldn’t seem to experience any positive
+feeling at all” with 4 response options ranging from “Did not
+apply to me at all” to “Applied to me very much or most of the
+time.” For each subscale, summed scores range from 0 to 21,
+with higher scores indicating greater symptoms. Its internal
+consistency and concurrent validity have been shown to be in
+the acceptable-to-excellent range [38].
+
+
+The PHQ-8 [34] is an 8-item self-report measure of depression.
+It is identical to the popular PHQ-9 [39] measure but eliminates
+the question that queries suicidal ideation; it was selected given
+the all-virtual nature of the study. An example item from the
+PHQ-8 is “Little interest or pleasure in doing things,” with
+response options ranging from “Not at all” to “Nearly every
+day.” Scores on the PHQ-8 range from 0 to 24, and the measure
+has been shown to have good internal consistency and reliability
+
+[34]. Higher scores indicate greater symptoms.
+
+The GAD-7 [33] is a widely used, freely available, 7-item
+self-report measure to address severity of Generalized Anxiety
+Disorder. An example item is “Feeling nervous, anxious, or on
+edge,” with response options ranging from “Not at all” to
+“Nearly every day.” Summed scores on the GAD-7 range from
+0 to 21, with higher scores indicating greater symptoms. The
+GAD-7 has good reliability and validity [33].
+
+The General Self-Efficacy Scale [40] is a 10-item self-report
+measure that asks participants about their beliefs regarding their
+ability to cope with stressors or challenges in their life. Example
+items include “I can always manage to solve difficult problems
+if I try hard enough,” with response options ranging from “Not
+at all true” to “Exactly true.” Scores on the General Self-Efficacy
+Scale range from 10 to 40, with higher scores indicating greater
+self-efficacy. The measure has been shown to be reliable and
+valid [41].
+
+Overall, 2 composites were created from the 2 measures of
+depression (PHQ-8 and DASS-21 Depression Subscale) and
+the 2 measures of anxiety (GAD-7 and DASS-21 Anxiety
+Subscale) to generate more reliable and valid indices of
+symptoms. We standardized each measure at the pretreatment
+time point, then used the means and SDs calculated at
+pretreatment to standardize these measures at subsequent
+timepoints. After the scores were standardized, measures were
+averaged to create a single measure of each construct. These
+measures are referred to as depression composite and anxiety
+_composite in the results section and have a mean of zero and a_
+SD of one 1 pretreatment.
+
+##### Process Measures
+
+To better understand possible mediators of symptom
+improvement and app efficacy, we examined participants’
+number of logins and number of completed activities as
+measures of app engagement. It should be noted that for the
+purposes of this study, activities include thoughts, goals (either
+setting or completing), relax, and community (writing a post).
+The engagement analysis did not include mood or health ratings,
+_hope posts, or time spent reviewing content in the community_
+forums because of the complexity involved in data extraction,
+cleaning, and formatting for these activities.
+
+##### Moderator Measures
+
+To examine whether baseline patient characteristics predicted
+treatment response to Pacifica versus WL, we tested
+demographic and clinical characteristics. Demographic features
+included age (treated as a continuous variable), gender
+(0=female, 1=male), income (8 levels from <$20K to >$200K
+treated as a continuous variable), marital status (0=not married,
+1=married), education (0=did not complete 4-year college,
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+
+1=completed 4-year college), and race (0=other, 1=white).
+Clinical features included current (at screening) use of
+psychiatric medications (0=no, 1=yes), current (at screening)
+use of psychotherapy (0=no, 1=yes), use of other mental health
+apps (0=no, 1=yes), and whether they reported being diagnosed
+with depression (0=no, 1=yes) or anxiety (0=no, 1=yes).
+
+##### Statistical Analyses
+
+ Power Analysis
+
+On the basis of a two-week pilot study among college
+undergraduates, we anticipated an effect size of .3 (Cohen d).
+We targeted 90% power to detect an effect to a significance
+level of .05 in a 2-group 1-tailed t test, which revealed a sample
+of 191 participants per group. The previous study had about
+75% completion, so we targeted to randomize 250 participants
+per group. Though the use of pilot studies for estimating effect
+sizes is questionable (cf [42]), this pilot study was the most
+relevant data available on which to base our power analysis.
+The effect sizes found in this study are larger than those in the
+pilot study: between .4 and .54 for the key symptoms measures
+versus .3 in the pilot.
+
+We were not able to meet our target of 191 completers because
+of greater-than-anticipated attrition: 101 WL participants and
+79 active group participants completed the study. Given this
+number of completers, we were able to detect an effect size of
+.38 with 80% power given a significance level of .05 and a
+2-group, 2-tailed t test.
+
+##### Statistical Analysis
+
+Data were analyzed using multilevel modeling (MLM) in Stata
+15.0 [43]. MLM accounts for nesting of time points within
+subjects, which allows for examination of change within and
+between subjects across time (pretreatment, posttreatment, and
+follow-up) and by group (WL and Pacifica). MLM includes all
+participants with at least 1 measurement, and thus, it can be
+used to estimate intent-to-treat effects. Separate models were
+run for each of the 4 dependent variables (depression composite,
+anxiety composite, stress, and general self-efficacy). Statistical
+significance was defined as falling below a threshold of
+alpha=.05, as this is the standard threshold used in randomized
+clinical trials in psychology.
+
+To examine the main effects of the Pacifica intervention
+compared with WL, time was modeled at level 1, with 1 segment
+specified between the pre- and posttreatment time points, and
+a second segment between the post and follow-up time points.
+This approach models typical trends in treatment studies where
+the greatest effects occur by posttreatment and changes level-off
+over follow-up and has been used in a number of previous
+studies [44,45,46,47]. Group (WL vs Pacifica) was modeled at
+level 2. Models included the main effects of the 2 time segments,
+the main effect of group, and the interaction between group and
+time. We examined the interaction between group and time for
+statistical significance. All models included random effects of
+the intercept and time, which were determined to be significant
+based on likelihood ratio tests. Between-group differences were
+assessed using the _margins command in Stata by comparing_
+the slopes from pre- to posttreatment and by comparing the
+
+
+predicted means from the model at the posttreatment time point.
+Effect sizes are calculated based on the method described by
+Feingold [48] that produces estimates analogous to Cohen d for
+growth curve models in randomized clinical trials. As the WL
+group received the intervention after the posttreatment time
+point, we were unable to compare the groups at follow-up. Thus,
+for the follow-up time point, the slope of change from
+posttreatment to follow-up was tested only for the Pacifica
+group.
+
+To examine whether engagement with the app was related to
+treatment response, we tested whether overall engagement
+(number of app logins) and specific types of engagement
+(number of times using the goals, relaxation, community, and
+thoughts sections of the app), were associated with symptom
+change in the Pacifica group. Models included the main effect
+of engagement, the main effects of the 2 time segments, and
+the interactions between engagement and time. We examined
+the interactions between the engagement variables and each
+time segment for statistical significance. Thus, we examined
+whether engagement predicted change from pre- to posttreatment
+and from posttreatment to follow-up for each type of
+engagement and for each dependent variable.
+
+To examine moderators of response to Pacifica versus WL, we
+tested whether demographic features (age, gender, income,
+marital status, educational level, and race) and clinical features
+(use of psychiatric medications, engagement in psychotherapy,
+use of other mental health apps, and previously diagnosed
+anxiety and depression) were associated with symptom change
+from pre- to posttreatment in the Pacifica group compared with
+the WL group. Models included the main effects of the
+moderator, the main effect of time, the main effect of group, all
+2-way interactions, and the 3-way interaction. We examined
+the 3-way interaction between the moderator, group, and time
+for statistical significance. Significant 3-way interactions were
+followed up with tests of simple interaction effects of group by
+time at different levels of the moderator.
+
+### Results
+
+##### Pretreatment Group Differences
+
+Table 1 presents demographic data on the WL and Pacifica
+groups. Randomization was successful, and the 2 groups were
+very similar with regard to demographics; we found no
+significant differences between the groups (p s>.210). The
+sample was largely female (75%) and white (80%) and had at
+least some college education (91%).
+
+##### Study Attrition
+
+Of the 500 participants randomized, 204 completed both preand posttreatment assessments. This represents 47% of WL
+participants and 35% of Pacifica participants. The difference in
+attrition between the groups was significant: χ12 (n=500)=7.7;
+_P=.006. We examined the baseline symptom ratings for the_
+individuals who dropped out versus those who did not and found
+no differences (see Table 2). Further, no differences were found
+when these comparisons were stratified by group (P>.18).
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+**Table 1.** Descriptive data of sample.
+
+Characteristic Waitlist control group (n=247) Active (n=253) Chi-square (df ${3.1} _P value_
+
+Age (years), mean (SD)[a] 30.2 (10.8) 30.2 (10.9) —[b] .96
+
+**Gender, n (%)** **2.73 (4)** **.60**
+
+Male 56 (23) 54 (21) — —
+
+Female 84 (74) 190 (75) — —
+
+Transgender man 4 (2) 2 (1) — —
+
+Nonconforming 3 (1) 6 (2) — —
+
+**Race, n (%)** **3.73 (5)** **.59**
+
+Asian 11 (4) 10 (4) — —
+
+Black 20 (9) 28 (11) — —
+
+Hawaii/Pacific Islander 1 (0.5) 2 (1) — —
+
+Native American/Alaska Native 5 (2) 5 (2) — —
+
+White 208 (84) 202 (80) — —
+
+No reply 2 (1) 6 (2) — —
+
+**Education level, n (%)** **2.80 (5)** **.73**
+
+Some high school 1 (0.5) 4 (2) — —
+
+High School 21 (9) 16 (6) — —
+
+Some college 81 (33) 86 (34) — —
+
+Associates 19 (8) 17 (7) — —
+
+Bachelor’s 80 (32) 84 (33) — —
+
+Master’s or higher 44 (17) 46 (18) — —
+
+No reply 1 (0.5) 0 — —
+
+**Marital Status, n (%)** **1.50 (4)** **.83**
+
+Never married 161 (65) 161 (64) — —
+
+Married 63 (26) 67 (26) — —
+
+Separated 3 (1) 6 (2) — —
+
+Divorced 19 (8) 17 (7) — —
+
+Widowed 1 (0.5) 2 (1) — —
+
+**Income level in USD, n (%)** **9.62 (7)** **.21**
+
+Under 20K 101 (41) 97 (38) — —
+
+20-35k 50 (20) 39 (15) — —
+
+35-50k 38 (15) 38 (15) — —
+
+50-75k 25 (10) 46 (18) — —
+
+75-100k 17 (7) 20 (8) — —
+
+100-150k 9 (4) 9 (4) — —
+
+150-200k 3 (1) 3 (1) — —
+
+Over 200k 4 (2) 1 (0) — —
+
+**Using other apps for mental health** **0.09 (1)** **.77**
+
+Yes 52 (21) 56 (22) — —
+
+No 195 (79) 197 (78) — —
+
+**Currently in therapy** **0.47 (1)** **.49**
+
+Yes 57 (23) 52 (21) — —
+
+No 190 (77) 201 (79) — —
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+Characteristic Waitlist control group (n=247) Active (n=253) Chi-square (df ${3.1} _P value_
+
+**Currently taking psychiatric medication** **1.61 (2)** **.45**
+
+Yes 91 (37) 101 (40) — —
+
+No 155 (6) 151 (60) — —
+
+No response 1 (0) 1 (0) — —
+
+**Previous diagnosis of depression** **0.13 (1)** **.72**
+
+Yes 184 192 — —
+
+No 63 54 — —
+
+**Previous diagnosis of anxiety** **0.13 (1)** **.72**
+
+Yes 205 213 — —
+
+No 42 40 — —
+
+at498=0.05.
+
+bNot applicable.
+
+**Table 2.** Mean values on baseline outcomes for participants who dropped versus completed the posttreatment assessment.
+
+Measure Drop Complete _t (df)_ P value
+
+Depression composite −0.01 0.01 0.31 (498) .76
+
+Anxiety composite 0.04 −0.05 −1.16 (498) .25
+
+Depression Anxiety and Stress Scales-21 stress 8.77 8.55 −0.78 (498) .44
+
+General self-efficacy 26.97 26.75 −0.57 (498) .57
+
+
+##### Key Outcome: Symptom Change
+
+We first examined whether, compared with individuals in the
+WL group, individuals assigned to use Pacifica experienced
+greater improvement in anxiety, depression, stress, and
+self-efficacy. Our intent-to-treat analysis revealed significant
+group × time interactions for each of the outcome measures
+(depression composite, anxiety composite, DASS-21 stress, and
+self-efficacy) such that change in the Pacifica group was greater
+than change in the WL group. These results were unchanged
+when individual measures of depression and anxiety were
+examined separately. See Multimedia Appendix 1 for means
+and SEs of the individual depression and anxiety measures. In
+addition, to assess whether treatment dropout affected these
+results, we analyzed additional models that included the group
+× dropout interaction and main effects of group and dropout,
+and the results were unchanged. Table 3 provides parameter
+
+**Table 3.** Group × time interaction.
+
+
+estimates for the group × time interaction from pre to
+posttreatment, 95% CIs, significance levels, and effect sizes for
+each outcome measure.
+
+We additionally examined the simple effect of time within
+groups. Table 4 shows that the Pacifica group experienced
+significant change from pre to post for each variable (decreases
+for depression, anxiety, and stress and an increase for
+self-efficacy). Anxiety level in the WL group significantly
+decreased from pre to post. For the Pacifica group, from post
+to follow-up, there were no significant changes in any outcome.
+There were significant group differences at post for each
+measure (see Figure 2). The WL group was higher than the
+Pacifica group for depression symptoms (0.66; CI 0.37 to 0.94;
+_P<.001), anxiety symptoms (0.47; CI 0.17 to 0.77;_ _P=.002),_
+and DASS-21 stress (2.09; CI 1.09 to 3.08; P<.001), and lower
+on self-efficacy (−1.46; CI −2.62 to −0.30; P=.014).
+
+
+Measure Beta 95% CI _P value_ Effect size (d)
+
+Depression composite −0.59 −0.86 to -.03 <.001 0.54
+
+Anxiety composite −0.43 −0.71 to −0.15 .003 0.40
+
+Depression Anxiety and Stress Scales-21 stress −1.79 −2.74 to −0.84 <.001 0.46
+
+General self-efficacy 1.55 0.53 to 2.58 .003 0.34
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+**Table 4.** Score change on key measures across time by group.
+
+Measure Change across time 95% CI _P value_
+
+**Depression composite**
+
+**Pre versus post**
+
+Control −0.12 −0.30 to 0.06 .21
+
+Pacifica −0.71 −0.91 to 0.50 <.001
+
+**Post versus Follow-up**
+
+Pacifica 0.27 −0.10 to 0.64 .149
+
+**Anxiety composite**
+
+**Pre versus post**
+
+Control −0.23 −0.41 to −0.04 .018
+
+Pacifica −0.66 −0.87 to −0.45 <.001
+
+**Post versus Follow-up**
+
+Pacifica −0.03 -0.44 to 0.37 .87
+
+**Depression Anxiety and Stress Scales-21 stress**
+
+**Pre versus post**
+
+Control −0.43 −1.06 to 0.20 .18
+
+Pacifica −2.22 −2.93 to −1.51 <.001
+
+**Post versus Follow-up**
+
+Pacifica 0.22 −0.97 to 1.41 .72
+
+**General self-efficacy**
+
+**Pre versus post**
+
+Control 0.52 −0.16 to 1.2 .13
+
+Pacifica 2.10 1.30 to 2.84 <.001
+
+**Post versus Follow-up**
+
+Pacifica 0.25 −1.02 to 1.53 .697
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+**Figure 2.** Key outcome measures by group and time. DASS: Depression Anxiety Stress Scales.
+
+
+##### Clinically Significant Change
+
+Participants were classified as having achieved clinically
+significant change (CSC) on the PHQ-8 and GAD-7 as outlined
+by Jacobson and Truax [49]. The individual scales were used
+for the CSC analysis because test-retest reliability metrics were
+needed to calculate the reliable change index. Rates of CSC at
+post for PHQ-8 were as follows: Pacifica, 41.8% (n=33/79);
+WL, 16.8% (n=17/101); χ12 (N=180)=13.74; P<.001. Rates of
+CSC at post for GAD-7 were as follows: Pacifica, 39.2%
+(n=31/79); WL, 24.2% (n=24/99); χ12 (N=178)=4.63; P=.031.
+The rate of CSC at follow-up for the Pacifica group was 35.4%
+for the PHQ-8 and 48.9% for the GAD-7.
+
+##### Engagement Effects
+
+The median number of logins in the Pacifica group during the
+30-day intervention was 19, with a range of 1 to 286. We did
+not find any significant interactions for group by time by overall
+engagement with the app (defined by total number of logins)
+for depression composite (P>.21), anxiety composite (P>.34),
+stress (P>.11), or self-efficacy (P>.55).
+
+However, for tests examining unique activities in the app, we
+found that the use of thought record tools was significantly
+
+
+associated with symptom improvement for 2 of the outcome
+measures: anxiety composite and stress (see Figure 3).
+Specifically, for the anxiety composite, greater number of
+thought records completed during treatment was associated with
+greater anxiety reduction from posttreatment to follow-up (beta
+_=-.10; CI −0.19 to −0.02;_ _P=.019), although not from_
+pretreatment to posttreatment (P=.406) _. Number of thought_
+records completed was not significantly associated with baseline
+anxiety in the MLM (P=.834). For DASS-21 stress, a greater
+number of thought records completed during treatment was
+associated with less stress reduction from pre- to posttreatment
+(beta _= −.30; CI −.50 to −.11;_ _P<.01), but greater stress_
+reduction from posttreatment to follow-up (beta =-.47; CI −.87
+to −.08; P<.05). Number of thought records completed was not
+significantly associated with baseline stress in the MLM
+(P=.772). Descriptively, individuals who completed relatively
+more thought records showed a delayed positive effect in terms
+of anxiety and stress reduction. Use of the thought record tool
+was not significantly associated with change in depression
+(P>.13) or general self-efficacy (P>.48). The use of the goals,
+relax, and community tools was not associated with change in
+anxiety (P>.18), depression (P>.13), stress (P>.29), or general
+self-efficacy (P>.26).
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+**Figure 3.** Interaction between use of "Thoughts" tool and anxiety and stress outcomes. DASS: Depression Anxiety Stress Scales.
+
+
+##### Moderator Analysis
+
+ Demographics
+
+We examined the 3-way interaction between group, time, and
+demographic responses to examine whether any of these
+demographic traits moderated treatment response.
+
+Age, gender, income, marital status, educational level, and race
+did not significantly moderate the effect of group on symptom
+improvement. See Table 5 for details.
+
+##### Clinical Features
+
+We also conducted moderator analyses for each of the clinical
+characteristics listed in Table 1. We found only 1 characteristic
+that significantly interacted with group and time to predict
+outcome measures: presence/absence of concomitant psychiatric
+medications at baseline. As shown in Figure 4, the presence of
+psychiatric medications moderated the group effect such that
+
+**Table 5.** Group × time × moderator.
+
+
+the benefits of Pacifica compared with WL were significantly
+greater for people who were not taking psychiatric medications
+than for people who were taking medications. This moderation
+of the group × time interaction only reached significance for
+the anxiety composite and DASS-21 stress measures.
+
+For the anxiety composite, tests of simple effects showed that
+for participants not taking psychiatric medications, those
+assigned to Pacifica had a significantly greater reduction in
+anxiety than those assigned to WL (slope difference=−.68, CI
+−1.01 to −0.35; P<.001). However, for those taking psychiatric
+medications, no difference in symptom reduction emerged
+between Pacifica and WL (P=.771). A similar pattern emerged
+for stress. For participants not taking psychiatric medications,
+those assigned to Pacifica had a significantly greater reduction
+in stress than those assigned to WL (slope difference=−2.54;
+CI −3.70 to −1.39]; _P<.001). However, for those taking_
+medications, no difference in symptom reduction emerged
+between Pacifica and WL (P=.615).
+
+
+Variable Depression, beta (95% CI) Anxiety, beta (95% CI) DASS-21 stress, beta (95% CI) Self-efficacy, beta (95% CI)
+
+Age (years) −.01 (−0.03 to 0.02) −.01 (−0.03 to 0.02) .01 (−0.08 to 0.09) −.03 (−0.13 to 0.06)
+
+Gender −.16 (−0.81 to 0.49) −.08 (−0.73 to 0.57] −1.72 (−4.02 to 0.57) −.90 (−3.40 to 1.61)
+
+White −.22 (−0.93 to 0.48) −.40 (−1.11 to 0.30) .18 (−2.29 to 2.65) .50 (−2.20 to 3.20)
+
+College educated .15 (−0.36 to 0.65) .48 (−0.03 to 0.99) .60 (−1.20 to 2.39) 1.35 (−0.63 to 3.34)
+
+Married −.25 (−0.81 to 0.32) −.45 (−1.02 to 0.12) −1.85 (−3.85 to 0.15) 1.30 (−0.88 to 3.49)
+
+Income level .04 (−0.12 to 0.19) .09 (−0.07 to 0.25) .27 (−0.29 to 0.84) −.08 (−0.70 to 0.53)
+
+Using other apps .01 (−0.59 to 0.62) −.18 (−0.79 to 0.42) −.31 (−2.44 to 1.81) .67 (−1.68 to 3.02)
+
+Receiving psychotherapy .17 (−0.46 to 0.81) .44 (−0.20 to 1.08) .52 (−1.76 to 2.80) −1.81 (−4.39 to 0.78)
+
+Taking psychiatric medication .47 (−0.04 to 0.98) .61 (0.09 to 1.12)[a] 2.19 (0.39 to 3.99)[a] .18 (−1.84 to 2.20)
+
+Diagnosed with depression −.27 (−0.84 to 0.30) .13 (−0.44 to 0.70) .30 (−1.72 to 2.32) .80 (−1.40 to 3.00)
+
+Diagnosed with anxiety .21 (−0.51 to 0.93) −.02 (−0.75 to 0.72) .17 (−2.38 to 2.73) −1.18 (−4.00 to 1.64)
+
+aEffects are significant at P<.05.
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+**Figure 4.** Moderation of group by time effect by participant self-reported psychiatric medication use. DASS: Depression Anxiety Stress Scales.
+
+
+### Discussion
+
+This study is the first published RCT of Pacifica, a widely
+available, popular smartphone app–based intervention for
+self-help of mild-to-moderate stress, anxiety, and depression.
+The tools implemented in the intervention are based on the
+integration of CBT, mindfulness, and mood and health tracking.
+Results indicated that this intervention is effective compared
+with a waitlist control at 1 month in reducing self-reported
+symptoms of depression, anxiety, and stress and increasing
+feelings of self-efficacy. Between-group effect sizes were in
+the small-to-medium range. In addition, treatment gains were
+maintained for 2 months following the end of the 1-month
+intervention period, especially for anxiety symptoms. These
+results are particularly noteworthy given the very light touch
+nature of the study, short duration of the intervention period,
+and the real-world sample of individuals.
+
+App usage was self-guided, and participants were not instructed
+to use the app with any specific level of frequency, so rather
+than consider adherence, we explored whether amount of usage
+(ie, number of completed activities) was associated with
+symptom improvement. We did not find any association with
+overall usage, possibly because looking at the total number of
+app logins is a simplistic way of quantifying engagement.
+However, we did find that individuals who completed relatively
+more thought records demonstrated delayed improvement, which
+is noteworthy. Though there have been challenges in the
+literature to the importance of cognitive restructuring in CBT
+
+[50], this study suggests that, at least for technology-enabled
+CBT, thought records were helpful. Subjectively, completing
+thought records is a more time-intensive and cognitively
+demanding activity than health tracking or meditation and
+increased use of these activities may be a marker of greater
+commitment to treatment or improvement. We should note,
+though, that in this study thought records included both basic
+journaling prompts and more complex reframing activities.
+However, this study was unfortunately underpowered to examine
+the effects of different types of thought tools. The apparent
+delayed positive benefit of completing relatively more thought
+activities is consistent with the common perception that although
+examining and challenging negative thoughts is difficult in the
+short term, it can result in more long-lasting benefits. In addition,
+
+
+there are data suggesting that CBT is effective at preventing
+relapse to anxiety and depression [51,52], but further research
+is needed to more completely understand these effects,
+particularly in computerized CBT.
+
+Demographic characteristics among participants were not related
+to outcomes, which is consistent with the mixed findings across
+previous studies examining traditional (ie, not online delivered)
+CBT [53-55] as well as internet-based CBT [13,25,56-60]. This
+suggests that app-based CBT can have effects across diverse
+populations rather than being relevant only for a specific group.
+However, we found differential effects between participants
+who were and were not taking psychiatric medications at
+baseline. Though not significant for measures of depression or
+self-efficacy, for the anxiety composite and DASS-21 stress
+measures, the presence of medication at baseline diminished
+the difference between the groups, that is, both the WL and app
+groups improved. Inspection of the means reveals not that the
+presence of medications markedly reduced the effectiveness of
+the app, but rather that there was little added benefit of the app
+above and beyond the medication.
+
+Although this finding is inconsistent with some data that
+combined treatments perform better than therapy alone [61], it
+is consistent with literature that has found minimal benefit of
+combining medication with psychotherapy [62]. Certain
+medications such as benzodiazepines may interfere with
+behavioral therapy [63]. To be sure, though, a guided self-help
+tool such as Pacifica is not psychotherapy—nor does it purport
+to be. The personal relationship established with a practitioner
+may be what catalyzes treatment and nudges it above medication
+alone; blended models that incorporate both self-help solutions
+with human coaching have been found to be superior to self-help
+alone [64]. The drawback of these models is their ability to
+scale. Stepped care models that triage services and match the
+level of in-person support with client need are likely the way
+of the future [65]. Such models combine the rapport and human
+connection of a human therapist or coach with the ubiquity and
+outside-of-the-clinic support of a mobile app. The question of
+whether combining mobile interventions with pharmacotherapy
+is effective is particularly relevant given the fact that a majority
+of individuals receive their psychotropic medications from
+primary care providers [66] who typically only see them
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+
+intermittently; digital tools could potentially provide additional
+support between appointments.
+
+This project represents a step forward in that it is a real-world
+evaluation of a popular, commercially available
+technology-enabled intervention. However, there are several
+limitations that should be noted. First, the study was conducted
+among a convenience sample that was rather homogeneous in
+its demographic makeup. The participants were largely
+college-educated white females. Previous research has found
+that women are overrepresented in Web-based research studies
+
+[67]. Although this sample may represent the individuals who
+are most likely to utilize technology-enabled mental health
+interventions, this homogeneity may limit the degree to which
+the outcomes can be generalized. Owing to the fact that no
+demographic information is collected from users upon sign-up,
+we cannot assess how representative this sample is of all of the
+individuals who utilize Pacifica.
+
+Although the participant pool was homogeneous from a
+demographic perspective, the study was conducted in a sample
+that may have been heterogeneous with respect to diagnosis.
+We did not conduct diagnostic interviews and only have
+participants’ responses to symptom rating questionnaires. In
+the real world, many individuals seeking Web-based tools to
+manage their mental health are doing so outside of the context
+of the therapy clinic and may not have formal diagnoses. It is
+noteworthy that our sample had relatively low levels of anxiety
+and depression. This further highlights the fact that individuals
+who seek digital tools may be on the mild end of the spectrum
+and that these tools may need to be used in conjunction with
+
+##### Acknowledgments
+
+This study was funded by Pacifica Labs, Inc.
+
+##### Conflicts of Interest
+
+
+therapy to be effective for more severely affected individuals.
+Future research should examine whether these data can be
+replicated in a more diverse sample to consider whether efficacy
+varies based on demographics. It would also be important to
+verify the app’s efficacy among individuals who have been
+formally diagnosed versus those who self-selected and were
+simply screened using self-reported measures. Furthermore,
+analyses of engagement with the app were exploratory, and
+significant findings should be replicated in future studies.
+
+Another limitation relates to the finding regarding the
+moderation of the effects by the use of psychotropic
+medications. Although this finding is interesting, because we
+had minimal information about participants’use of medications
+(ie, no data on the types, dosage, or any change to medication
+across the course of the study), this should be examined further
+in future work.
+
+This study provides encouraging findings around the ability of
+popular, commercially available, guided self-help tools to
+empower individuals to manage their symptoms of stress,
+anxiety, and depression and increase their self-efficacy. This
+study also serves as a proof point for an all-virtual study. Given
+the limitations of existing health care systems and the obstacles
+to care that exist for individuals coping with mental health
+conditions, mobile apps and technology-enabled interventions
+can play an important role in expanding access and serving as
+an adjunct to in-person treatment. Future research should
+continue to clarify the best application of these tools and how
+they can be better integrated into existing workflows and care
+delivery systems.
+
+
+At the time of this study, CM was the Head of Psychology, owned options in Pacifica Labs, Inc, and was receiving a salary from
+the company. DB was the Cofounder and CEO of Pacifica Labs, Inc, owned a large share of the company’s stock, and received
+a salary from the company.
+
+##### Multimedia Appendix 1
+
+Predicted means and standard errors for individual depression (Patient Health Questionnaire, Depression Anxiety Stress
+Scales-Depression) and anxiety (Generalized Anxiety Disorder 7-item, Depression Anxiety Stress Scales-Anxiety) scales.
+
+[[PDF File (Adobe PDF File), 15KB-Multimedia Appendix 1]](https://jmir.org/api/download?alt_name=jmir_v21i6e12556_app1.pdf&filename=657fb3d849d0da4822b7b8efe92768c5.pdf)
+
+##### Multimedia Appendix 2
+
+CONSORT-EHEALTH checklist (V 1.6.1).
+
+[[PDF File (Adobe PDF File), 2MB-Multimedia Appendix 2]](https://jmir.org/api/download?alt_name=jmir_v21i5e12556_fig.pdf&filename=4c7fa987722eea0b77e97d236fe72608.pdf)
+
+##### References
+
+1. National Comorbidity Survey (NCS). 2017. URL: [https://www.hcp.med.harvard.edu/ncs/index.php [accessed 2019-05-20]](https://www.hcp.med.harvard.edu/ncs/index.php)
+
+[[WebCite Cache ID 78WbZE7mg]](http://www.webcitation.org/
+
+                      78WbZE7mg)
+2. Key Substance Use and Mental Health Indicators in the United States: Results from the 2016 National Survey on Drug Use
+and Health. Rockville, MD: Center for Behavioral Health Statistics and Quality, Substance Abuse and Mental Health
+Services Administration; 2017.
+3. Beck J. Cognitive Behavior Therapy, Second Edition. New York, NY: Guilford Press; 2011:9781609185046.
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+4. DeRubeis RJ, Hollon SD, Amsterdam JD, Shelton RC, Young PR, Salomon RM, et al. Cognitive therapy vs medications
+in the treatment of moderate to severe depression. Arch Gen Psychiatry 2005 Apr;62(4):409-416. [doi:
+[10.1001/archpsyc.62.4.409] [Medline: 15809408]](http://dx.doi.org/10.1001/archpsyc.62.4.409)
+5. Butler A, Chapman J, Forman E, Beck A. The empirical status of cognitive-behavioral therapy: a review of meta-analyses.
+[Clin Psychol Rev 2006 Jan;26(1):17-31. [doi: 10.1016/j.cpr.2005.07.003] [Medline: 16199119]](http://dx.doi.org/10.1016/j.cpr.2005.07.003)
+6. Hofmann S, Asnaani A, Vonk I, Sawyer A, Fang A. The efficacy of cognitive behavioral therapy: a review of meta-analyses.
+[Cognit Ther Res 2012 Oct 1;36(5):427-440 [FREE Full text] [doi: 10.1007/s10608-012-9476-1] [Medline: 23459093]](http://europepmc.org/abstract/MED/23459093)
+7. Bruns E, Kerns S, Pullmann M, Hensley S, Lutterman T, Hoagwood KE. Research, data, and evidence-based treatment
+[use in state behavioral health systems, 2001-2012. Psychiatr Serv 2016 Dec 1;67(5):496-503 [FREE Full text] [doi:](http://europepmc.org/abstract/MED/26695495)
+[10.1176/appi.ps.201500014] [Medline:](http://dx.doi.org/10.1176/appi.ps.201500014) [26695495]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=26695495&dopt=Abstract)
+8. Insel T. Assessing the economic costs of serious mental illness. Am J Psychiatry 2008 Jun;165(6):663-665. [doi:
+[10.1176/appi.ajp.2008.08030366] [Medline:](http://dx.doi.org/10.1176/appi.ajp.2008.08030366) [18519528]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=18519528&dopt=Abstract)
+9. Keyes CG, Grzywacz JG. Health as a complete state: the added value in work performance and healthcare costs. J Occup
+Environ Med 2005 May;47(5):523-532. [Medline: [15891532]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=15891532&dopt=Abstract)
+10. Rice D, Miller LS. Health economics and cost implications of anxiety and other mental disorders in the United States. Br
+J Psychiatry Suppl 1998(34):4-9. [Medline: [9829010]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=9829010&dopt=Abstract)
+11. Kaiser Family Foundation Analysis of Data from Institute for Health MetricsEvaluation. Peterson-Kaiser Health System
+[Tracker. 2015. Global Burden of Disease Study, 2015 URL: https://www.healthsystemtracker.org/chart-collection/](https://www.healthsystemtracker.org/chart-collection/current-costs-outcomes-related-mental-health-substance-abuse-disorders/)
+[current-costs-outcomes-related-mental-health-substance-abuse-disorders/ [accessed 2019-05-20] [WebCite Cache ID](https://www.healthsystemtracker.org/chart-collection/current-costs-outcomes-related-mental-health-substance-abuse-disorders/)
+[78WcPqAMz]](http://www.webcitation.org/
+
+                      78WcPqAMz)
+12. Espie C, Kyle S, Williams C, Ong J, Douglas N, Hames P, et al. A randomized, placebo-controlled trial of online cognitive
+behavioral therapy for chronic insomnia disorder delivered via an automated media-rich web application. Sleep 2012 Jun
+[1;35(6):769-781 [FREE Full text] [doi: 10.5665/sleep.1872] [Medline: 22654196]](http://europepmc.org/abstract/MED/22654196)
+13. Hedman E, Furmark T, Carlbring P, Ljótsson B, Rück C, Lindefors N, et al. A 5-Year follow-up of internet-based cognitive
+[behavior therapy for social anxiety disorder. J Med Internet Res 2011 Jun 15;13(2):e39 [FREE Full text] [doi:](http://www.jmir.org/2011/2/e39/)
+[10.2196/jmir.1776] [Medline: 21676694]](http://dx.doi.org/10.2196/jmir.1776)
+14. Kaltenthaler E, Parry G, Beverley C, Ferriter M. Computerised cognitive-behavioural therapy for depression: systematic
+[review. Br J Psychiatry 2008 Sep;193(3):181-184. [doi: 10.1192/bjp.bp.106.025981] [Medline: 18757972]](http://dx.doi.org/10.1192/bjp.bp.106.025981)
+15. Pretorius N, Arcelus J, Beecham J, Dawson H, Doherty F, Eisler I, et al. Cognitive-behavioural therapy for adolescents
+with bulimic symptomatology: the acceptability and effectiveness of internet-based delivery. Behav Res Ther 2009
+[Sep;47(9):729-736. [doi: 10.1016/j.brat.2009.05.006] [Medline: 19515360]](http://dx.doi.org/10.1016/j.brat.2009.05.006)
+16. Vis C, Mol M, Kleiboer A, Bührmann L, Finch T, Smit J, et al. Improving implementation of eMental health for mood
+disorders in routine practice: systematic review of barriers and facilitating factors. JMIR Ment Health 2018 Mar 16;5(1):e20
+
+[[FREE Full text] [doi: 10.2196/mental.9769] [Medline: 29549072]](http://mental.jmir.org/2018/1/e20/)
+17. Torous J, Nicholas J, Larsen M, Firth J, Christensen H. Clinical review of user engagement with mental health smartphone
+apps: evidence, theory and improvements. Evid Based Ment Health 2018 Aug;21(3):116-119. [doi: [10.1136/eb-2018-102891]](http://dx.doi.org/10.1136/eb-2018-102891)
+
+[[Medline: 29871870]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=29871870&dopt=Abstract)
+18. Stawarz K, Preist C, Tallon D, Wiles N, Coyle D. User experience of cognitive behavioral therapy apps for depression: an
+[analysis of app functionality and user reviews. J Med Internet Res 2018 Dec 6;20(6):e10120 [FREE Full text] [doi:](http://www.jmir.org/2018/6/e10120/)
+[10.2196/10120] [Medline: 29875087]](http://dx.doi.org/10.2196/10120)
+19. Alkhaldi G, Hamilton F, Lau R, Webster R, Michie S, Murray E. The effectiveness of prompts to promote engagement
+[with digital interventions: a systematic review. J Med Internet Res 2016 Jan 8;18(1):e6 [FREE Full text] [doi:](http://www.jmir.org/2016/1/e6/)
+[10.2196/jmir.4790] [Medline: 26747176]](http://dx.doi.org/10.2196/jmir.4790)
+20. Baekeland F, Lundwall L. Dropping out of treatment: a critical review. Psychol Bull 1975 Sep;82(5):738-783. [Medline:
+[1103201]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1103201&dopt=Abstract)
+21. Lebeau RT, Davies C, Culver N, Craske M. Homework compliance counts in cognitive-behavioral therapy. Cogn Behav
+[Ther 2013;42(3):171-179. [doi: 10.1080/16506073.2013.763286] [Medline: 23419077]](http://dx.doi.org/10.1080/16506073.2013.763286)
+22. Clarke G, Kelleher C, Hornbrook M, Debar L, Dickerson J, Gullion C. Randomized effectiveness trial of an Internet, pure
+self-help, cognitive behavioral intervention for depressive symptoms in young adults. Cogn Behav Ther 2009;38(4):222-234
+
+[[FREE Full text] [doi: 10.1080/16506070802675353] [Medline: 19440896]](http://europepmc.org/abstract/MED/19440896)
+23. Kelders SM, Bohlmeijer ET, van Gemert-Pijnen JW. Participants, usage, and use patterns of a web-based intervention for
+[the prevention of depression within a randomized controlled trial. J Med Internet Res 2013 Aug 20;15(8):e172 [FREE Full](http://www.jmir.org/2013/8/e172/)
+[text] [doi: 10.2196/jmir.2258] [Medline:](http://www.jmir.org/2013/8/e172/) [23963284]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=23963284&dopt=Abstract)
+24. van Gemert-Pijnen JE, Kelders SM, Bohlmeijer ET. Understanding the usage of content in a mental health intervention for
+[depression: an analysis of log data. J Med Internet Res 2014 Jan 31;16(1):e27 [FREE Full text] [doi: 10.2196/jmir.2991]](http://www.jmir.org/2014/1/e27/)
+
+[[Medline: 24486914]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=24486914&dopt=Abstract)
+25. Høifødt RS, Mittner M, Lillevoll K, Katla S, Kolstrup N, Eisemann M, et al. Predictors of response to web-based cognitive
+behavioral therapy with high-intensity face-to-face therapist guidance for depression: a Bayesian analysis. J Med Internet
+[Res 2015 Sep 2;17(9):e197 [FREE Full text] [doi: 10.2196/jmir.4351] [Medline: 26333818]](http://www.jmir.org/2015/9/e197/)
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+26. Myhr G, Talbot J, Annable L, Pinard G. Suitability for short-term cognitive-behavioral therapy. J Cogn Psychother 2007
+[Dec 1;21(4):334-345. [doi: 10.1891/088983907782638743]](http://dx.doi.org/10.1891/088983907782638743)
+27. Dryman M, McTeague L, Olino T, Heimberg R. Evaluation of an open-access CBT-based Internet program for social
+anxiety: patterns of use, retention, and outcomes. J Consult Clin Psychol 2017 Oct;85(10):988-999. [doi: [10.1037/ccp0000232]](http://dx.doi.org/10.1037/ccp0000232)
+
+[[Medline: 28650193]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=28650193&dopt=Abstract)
+28. Birney A, Gunn R, Russell J, Ary D. MoodHacker mobile web app with email for adults to self-manage mild-to-moderate
+[depression: randomized controlled trial. JMIR Mhealth Uhealth 2016 Jan 26;4(1):e8 [FREE Full text] [doi:](http://mhealth.jmir.org/2016/1/e8/)
+[10.2196/mhealth.4231] [Medline:](http://dx.doi.org/10.2196/mhealth.4231) [26813737]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=26813737&dopt=Abstract)
+29. Anguera J, Jordan J, Castaneda D, Gazzaley A, Areán PA. Conducting a fully mobile and randomised clinical trial for
+[depression: access, engagement and expense. BMJ Innov 2016 Jan;2(1):14-21 [FREE Full text] [doi:](http://europepmc.org/abstract/MED/27019745)
+[10.1136/bmjinnov-2015-000098] [Medline: 27019745]](http://dx.doi.org/10.1136/bmjinnov-2015-000098)
+30. Arean P, Hallgren K, Jordan J, Gazzaley A, Atkins D, Heagerty P, et al. The use and effectiveness of mobile apps for
+[depression: results from a fully remote clinical trial. J Med Internet Res 2016 Dec 20;18(12):e330 [FREE Full text] [doi:](http://www.jmir.org/2016/12/e330/)
+[10.2196/jmir.6482] [Medline: 27998876]](http://dx.doi.org/10.2196/jmir.6482)
+31. Pacifica L. Pacifica: Version 5.7 through 5.9.1. San Francisco, CA: Pacifica Labs, Inc; 2017.
+32. Wampold B. How important are the common factors in psychotherapy? An update. World Psychiatr 2015 Oct;14(3):270-277
+
+[[FREE Full text] [doi: 10.1002/wps.20238] [Medline: 26407772]](https://doi.org/10.1002/wps.20238)
+33. Spitzer R, Kroenke K, Williams J, Löwe B. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch
+[Intern Med 2006 May 22;166(10):1092-1097. [doi: 10.1001/archinte.166.10.1092] [Medline: 16717171]](http://dx.doi.org/10.1001/archinte.166.10.1092)
+34. Kroenke K, Strine T, Spitzer R, Williams J, Berry J, Mokdad A. The PHQ-8 as a measure of current depression in the
+[general population. J Affect Disord 2009 Apr;114(1-3):163-173. [doi: 10.1016/j.jad.2008.06.026] [Medline: 18752852]](http://dx.doi.org/10.1016/j.jad.2008.06.026)
+35. Heron KE, Smyth JM. Ecological momentary interventions: incorporating mobile technology into psychosocial and health
+[behaviour treatments. Br J Health Psychol 2010 Feb;15(Pt 1):1-39 [FREE Full text] [doi: 10.1348/135910709X466063]](http://europepmc.org/abstract/MED/19646331)
+
+[[Medline: 19646331]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=19646331&dopt=Abstract)
+36. Schueller S, Aguilera A, Mohr D. Ecological momentary interventions for depression and anxiety. Depress Anxiety 2017
+[Dec;34(6):540-545. [doi: 10.1002/da.22649] [Medline:](http://dx.doi.org/10.1002/da.22649) [28494123]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=28494123&dopt=Abstract)
+37. Lovibond SH, Lovibond PF. Manual for the Depression Anxiety Stress Scales. Second Edition. Sydney, Aus: Psychology
+Foundation; 1995:733414230.
+38. Antony M, Bieling PJ, Cox BJ, Enns MW, Swinson RP. Psychometric properties of the 42-item and 21-item versions of
+the Depression Anxiety Stress Scales in clinical groups and a community sample. Psychol Asses 1998 Jun;10(2):176-181.
+
+[[doi: 10.1037/1040-3590.10.2.176]](http://dx.doi.org/10.1037/1040-3590.10.2.176)
+39. Kroenke K, Spitzer R, Williams J. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med 2001
+[Sep;16(9):606-613 [FREE Full text] [doi: 10.1046/j.1525-1497.2001.016009606.x] [Medline: 11556941]](https://onlinelibrary.wiley.com/resolve/openurl?genre=article&sid=nlm:pubmed&issn=0884-8734&date=2001&volume=16&issue=9&spage=606)
+40. Schwarzer R, Jerusalem M. Generalized Self-Efficacy scale. In: Weinman J, Wright S, Johnston M, editors. Measures in
+Health Psychology: A User's Portfolio. Causal and Control Beliefs. Windsor, England: NFER-NELSON; 1995:35-37.
+41. Scholz U, Gutiérrez Doña B, Sud S, Schwarzer R. Is general self-efficacy a universal construct? Psychometric findings
+[from 25 countries. Eur J of Psych Assess 2002 Sep;18(3):242-251. [doi: 10.1027//1015-5759.18.3.242]](http://dx.doi.org/10.1027//1015-5759.18.3.242)
+42. Leon AC, Davis LL, Kraemer HC. The role and interpretation of pilot studies in clinical research. J Psychiatr Res 2011
+[May;45(5):626-629 [FREE Full text] [doi: 10.1016/j.jpsychires.2010.10.008] [Medline: 21035130]](http://europepmc.org/abstract/MED/21035130)
+43. StataCorp. Stata Statistical Software: Release 15. College Station, TX: StataCorp; 2017.
+44. Craske M, Niles A, Burklund L, Wolitzky-Taylor K, Vilardaga J, Arch J, et al. Randomized controlled trial of cognitive
+behavioral therapy and acceptance and commitment therapy for social phobia: outcomes and moderators. J Consult Clin
+[Psychol 2014 Dec;82(6):1034-1048 [FREE Full text] [doi: 10.1037/a0037212] [Medline: 24999670]](http://europepmc.org/abstract/MED/24999670)
+45. Niles A, Craske M, Lieberman M, Hur C. Affect labeling enhances exposure effectiveness for public speaking anxiety.
+[Behav Res Ther 2015 May;68:27-36. [doi: 10.1016/j.brat.2015.03.004] [Medline: 25795524]](http://dx.doi.org/10.1016/j.brat.2015.03.004)
+46. Roy-Byrne P, Craske MG, Sullivan G, Rose RD, Edlund MJ, Lang AJ, et al. Delivery of evidence-based treatment for
+multiple anxiety disorders in primary care: a randomized controlled trial. J Am Med Assoc 2010 May 19;303(19):1921-1928
+
+[[FREE Full text] [doi: 10.1001/jama.2010.608] [Medline: 20483968]](http://europepmc.org/abstract/MED/20483968)
+47. Wolitzky-Taylor K, Niles A, Ries R, Krull J, Rawson R, Roy-Byrne P, et al. Who needs more than standard care? Treatment
+moderators in a randomized clinical trial comparing addiction treatment alone to addiction treatment plus anxiety disorder
+treatment for comorbid anxiety and substance use disorders. Behav Res Ther 2018 Dec;107:1-9. [doi:
+[10.1016/j.brat.2018.05.005] [Medline:](http://dx.doi.org/10.1016/j.brat.2018.05.005) [29800622]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=29800622&dopt=Abstract)
+48. Feingold A. Effect sizes for growth-modeling analysis for controlled clinical trials in the same metric as for classical
+[analysis. Psychol Methods 2009 Mar;14(1):43-53 [FREE Full text] [doi: 10.1037/a0014699] [Medline:](http://europepmc.org/abstract/MED/19271847) [19271847]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=19271847&dopt=Abstract)
+49. Jacobson N, Truax P. Clinical significance: a statistical approach to defining meaningful change in psychotherapy research.
+[J Consult Clin Psychol 1991 Feb;59(1):12-19. [Medline: 2002127]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=2002127&dopt=Abstract)
+50. Longmore RJ, Worrell M. Do we need to challenge thoughts in cognitive behavior therapy? Clin Psychol Rev 2007
+[Mar;27(2):173-187. [doi: 10.1016/j.cpr.2006.08.001] [Medline: 17157970]](http://dx.doi.org/10.1016/j.cpr.2006.08.001)
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+51. DiMauro J, Domingues J, Fernandez G, Tolin DF. Long-term effectiveness of CBT for anxiety disorders in an adult
+[outpatient clinic sample: a follow-up study. Behav Res Ther 2013 Feb;51(2):82-86. [doi: 10.1016/j.brat.2012.10.003]](http://dx.doi.org/10.1016/j.brat.2012.10.003)
+
+[[Medline: 23262115]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=23262115&dopt=Abstract)
+52. Hollon S, DeRubeis R, Shelton R, Amsterdam J, Salomon R, O'Reardon J, et al. Prevention of relapse following cognitive
+therapy vs medications in moderate to severe depression. Arch Gen Psychiatry 2005 Apr;62(4):417-422. [doi:
+[10.1001/archpsyc.62.4.417] [Medline: 15809409]](http://dx.doi.org/10.1001/archpsyc.62.4.417)
+53. Button K, Turner N, Campbell J, Kessler D, Kuyken W, Lewis G, et al. Moderators of response to cognitive behavioural
+therapy as an adjunct to pharmacotherapy for treatment-resistant depression in primary care. J Affect Disord 2015 Mar
+[15;174:272-280. [doi: 10.1016/j.jad.2014.11.057] [Medline: 25527998]](http://dx.doi.org/10.1016/j.jad.2014.11.057)
+54. Fournier J, DeRubeis R, Shelton R, Hollon S, Amsterdam J, Gallop R. Prediction of response to medication and cognitive
+[therapy in the treatment of moderate to severe depression. J Consult Clin Psychol 2009 Aug;77(4):775-787 [FREE Full](http://europepmc.org/abstract/MED/19634969)
+[text] [doi: 10.1037/a0015401] [Medline: 19634969]](http://europepmc.org/abstract/MED/19634969)
+55. Wolitzky-Taylor KB, Arch JJ, Rosenfield D, Craske MG. Moderators and non-specific predictors of treatment outcome
+for anxiety disorders: a comparison of cognitive behavioral therapy to acceptance and commitment therapy. J Consult Clin
+[Psychol 2012 Oct;80(5):786-799. [doi: 10.1037/a0029418] [Medline: 22823858]](http://dx.doi.org/10.1037/a0029418)
+56. El Alaoui S, Ljótsson B, Hedman E, Kaldo V, Andersson E, Rück C, et al. Predictors of symptomatic change and adherence
+in internet-based cognitive behaviour therapy for social anxiety disorder in routine psychiatric care. PLoS One
+[2015;10(4):e0124258 [FREE Full text] [doi: 10.1371/journal.pone.0124258] [Medline: 25893687]](http://dx.plos.org/10.1371/journal.pone.0124258)
+57. Berger T, Hämmerli K, Gubser N, Andersson G, Caspar F. Internet-based treatment of depression: a randomized controlled
+trial comparing guided with unguided self-help. Cogn Behav Ther 2011 Dec;40(4):251-266. [doi:
+[10.1080/16506073.2011.616531] [Medline: 22060248]](http://dx.doi.org/10.1080/16506073.2011.616531)
+58. Ruwaard J, Schrieken B, Schrijver M, Broeksteeg J, Dekker J, Vermeulen H, et al. Standardized web-based cognitive
+behavioural therapy of mild to moderate depression: a randomized controlled trial with a long-term follow-up. Cogn Behav
+[Ther 2009 Dec;38(4):206-221. [doi: 10.1080/16506070802408086] [Medline: 19221919]](http://dx.doi.org/10.1080/16506070802408086)
+59. Spek V, Cuijpers P, Nyklícek I, Smits N, Riper H, Keyzer J, et al. One-year follow-up results of a randomized controlled
+clinical trial on internet-based cognitive behavioural therapy for subthreshold depression in people over 50 years. Psychol
+[Med 2008 May;38(5):635-639. [doi: 10.1017/S0033291707002590] [Medline: 18205965]](http://dx.doi.org/10.1017/S0033291707002590)
+60. Vernmark K, Lenndin J, Bjärehed J, Carlsson M, Karlsson J, Oberg J, et al. Internet administered guided self-help versus
+individualized e-mail therapy: a randomized trial of two versions of CBT for major depression. Behav Res Ther 2010
+[May;48(5):368-376. [doi: 10.1016/j.brat.2010.01.005] [Medline: 20152960]](http://dx.doi.org/10.1016/j.brat.2010.01.005)
+61. Cuijpers P, Sijbrandij M, Koole S, Andersson G, Beekman A, Reynolds C. Adding psychotherapy to antidepressant
+[medication in depression and anxiety disorders: a meta-analysis. World Psychiatry 2014 Feb;13(1):56-67 [FREE Full text]](https://doi.org/10.1002/wps.20089)
+
+[[doi: 10.1002/wps.20089] [Medline: 24497254]](http://dx.doi.org/10.1002/wps.20089)
+62. Otto M, Smits J, Reese H. Combined psychotherapy and pharmacotherapy for mood and anxiety disorders in adults: Review
+[and analysis. Clin Psych Sci Pract 2005;12:72-86. [doi: 10.1093/clipsy.bpi009]](http://dx.doi.org/10.1093/clipsy.bpi009)
+63. Otto MW, McHugh R, Kantak KM. Combined pharmacotherapy and cognitive-behavioral therapy for anxiety disorders:
+medication effects, glucocorticoids, and attenuated treatment outcomes. Clin Psychol (New York) 2010 Jun 1;17(2):91-103
+
+[[FREE Full text] [doi: 10.1111/j.1468-2850.2010.01198.x] [Medline: 26855480]](http://europepmc.org/abstract/MED/26855480)
+64. Baumeister H, Reichler L, Munzinger M, Lin J. The impact of guidance on Internet-based mental health interventions - a
+[systematic review. Internet Interv 2014 Oct;1(4):205-215. [doi: 10.1016/j.invent.2014.08.003]](http://dx.doi.org/10.1016/j.invent.2014.08.003)
+65. Scogin F, Hanson A, Welsh D. Self-administered treatment in stepped-care models of depression treatment. J Clin Psychol
+[2003 Mar;59(3):341-349. [doi: 10.1002/jclp.10133] [Medline: 12579549]](http://dx.doi.org/10.1002/jclp.10133)
+66. Olfson M, Blanco C, Wang S, Laje G, Correll C. National trends in the mental health care of children, adolescents, and
+[adults by office-based physicians. JAMA Psychiatry 2014 Jan;71(1):81-90. [doi: 10.1001/jamapsychiatry.2013.3074]](http://dx.doi.org/10.1001/jamapsychiatry.2013.3074)
+
+[[Medline: 24285382]](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=24285382&dopt=Abstract)
+67. Karyotaki E, Riper H, Twisk J, Hoogendoorn A, Kleiboer A, Mira A, et al. Efficacy of self-guided internet-based cognitive
+behavioral therapy in the treatment of depressive symptoms: a meta-analysis of individual participant data. JAMA Psychiatry
+[2017 Apr 1;74(4):351-359. [doi: 10.1001/jamapsychiatry.2017.0044] [Medline: 28241179]](http://dx.doi.org/10.1001/jamapsychiatry.2017.0044)
+
+##### Abbreviations
+
+**CBT:** cognitive behavioral therapy
+**CSC:** clinically significant change
+**DASS-21:** Depression Anxiety Stress Scales-21
+**EAP:** employee assistance program
+**GAD-7:** Generalized Anxiety Disorder 7-item
+**MLM:** multilevel modeling
+**PHQ-8:** Patient Health Questionnaire 8-item
+**RCT:** randomized controlled trial
+
+
+-----
+
+JOURNAL OF MEDICAL INTERNET RESEARCH Moberg et al
+
+**SMS:** short messaging service
+
+_Edited by G Eysenbach; submitted 19.10.18; peer-reviewed by S Schueller, N Karnik, E Lattie; comments to author 20.12.18; revised_
+_version received 11.04.19; accepted 28.04.19; published 08.06.19_
+
+_Please cite as:_
+_Moberg C, Niles A, Beermann D_
+_Guided Self-Help Works: Randomized Waitlist Controlled Trial of Pacifica, a Mobile App Integrating Cognitive Behavioral Therapy_
+_and Mindfulness for Stress, Anxiety, and Depression_
+_J Med Internet Res 2019;21(6):e12556_
+_[URL: https://www.jmir.org/2019/6/e12556/](https://www.jmir.org/2019/6/e12556/)_
+_[doi: 10.2196/12556](http://dx.doi.org/10.2196/12556)_
+_[PMID: 31199319](http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=31199319&dopt=Abstract)_
+
+©Christine Moberg, Andrea Niles, Dale Beermann. Originally published in the Journal of Medical Internet Research
+(http://www.jmir.org), 08.06.2019. This is an open-access article distributed under the terms of the Creative Commons Attribution
+License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any
+medium, provided the original work, first published in the Journal of Medical Internet Research, is properly cited. The complete
+bibliographic information, a link to the original publication on http://www.jmir.org/, as well as this copyright and license information
+must be included.
+
+
+-----
+

@@ -1,0 +1,1394 @@
+## Chapter 4
+# Assessing Virtual Reality Environments as Cognitive Stimulation Method for Patients with MCI
+
+Ioannis Tarnanas, Apostolos Tsolakis and Magda Tsolaki
+
+Abstract Advances in technology in the last decade have created a diverse field of
+applications for the care of persons with cognitive impairment. This chapter is an
+attempt to introduce a virtual reality computer-based intervention, which can used
+for cognitive stimulating and disease progression evaluation of a wide range of
+cognitive disorders ranging from mild cognitive impairment (MCI) to Alzheimer’s
+disease and various dementias. Virtual reality (VR) environments have already been
+successfully used in cognitive rehabilitation and show increased potential for use in
+neuropsychological evaluation allowing for greater ecological validity while being
+more engaging and user friendly. Nevertheless a holistic approach has been
+attempted, in order to view the research themes and applications that currently exist
+around the ‘‘intelligent systems’’ healthcare given to the cognitively impaired
+persons, and thus looking at research directions, systems, technological frameworks
+and perhaps trends.
+
+Keywords Computerized cognitive training � Computerized testing � Cognitive
+reserve � Dementia � Psychometrics
+
+I. Tarnanas (&) � M. Tsolaki
+School of Medicine, Aristotle University of Thessaloniki, 3rd Neurological Clinic,
+Papanikolaou Avenue 570 10 Exohi, Thessaloniki, Greece
+e-mail: i.tarnanas@alzheimer-hellas.gr
+
+M. Tsolaki
+e-mail: tsolakim1@gmail.com
+
+A. Tsolakis
+School of Electrical and Computer Engineering, Aristotle University of Thessaloniki,
+Egnatia Street 54124 Thessaloniki, Greece
+e-mail: aptsolak@gmail.com
+
+A. L. Brooks et al. (eds.), Technologies of Inclusive Well-Being, 39
+Studies in Computational Intelligence 536, DOI: 10.1007/978-3-642-45432-5_4,
+
+
+-----
+
+### 4.1 Introduction
+
+Virtual Reality (VR) and Augmented Reality (AR) are some of the most promising
+and at the same time challenging applications of computer graphics. Virtual
+Reality (VR) is stimulating the user’s senses in such a way that a computer
+generated world is experienced as real. In order to get a true illusion of reality, it is
+essential for the user to have influence on this virtual environment. All that has to
+be done in order to raise the illusion of being in or acting upon a virtual world or
+virtual environment, is providing a simulation of the interaction between human
+being and this environment. This simulation is—at least—partly attained by means
+of Virtual Reality interfaces connected to a computer. When considering VEs for
+context-sensitive rehabilitation, it is important to first evaluate the limitations and
+potential of the underlying VR technology.
+Over the past decades VR technology has been used in many different domains
+such as education [1], simulation for expert training [2] and therapy. Looking at
+medical uses in particular, Rizzo and Kim [3] and Rizzo et al. [4] discuss the
+advantages and disadvantages of VR systems in a therapeutic context. Even
+though both reviews have been conducted 6 and 7 years ago respectively, most of
+what the authors discuss still appears to be of relevance. In Rizzo and Kim’s
+overview the following aspects were among the key characteristics for VR systems
+and therefore should be taken into account when developing VEs for individualized rehabilitation. In this chapter we are going to present the benefits of using a
+particular type of virtual reality interface, named the virtual reality museum. The
+VR Museum was used as an intervention tool for patients with Amnestic-type Mild
+Cognitive Impairment (aMCI) in order to see if it can improve the task domains of
+navigation, spatial orientation and spatial memory. Those tasks were chosen for
+their relevance for patient with aMCI for whom it is essential to be spatially
+oriented in order to live independently [5].
+Firstly we are going to focus on MCI and the basic characteristics of aMCI
+patients. It is essential to define the exact cognitive profile of those patients in
+order to understand the difficulties that non-invasive methods of intervention may
+encounter. We are also going to describe related attempts to address those patients
+with virtual reality.
+On the second part we will describe the VR Museum, the clinical protocol, the
+research methodology and the final results.
+At the end of the chapter, we will sum up our findings with general conclusions
+and implications on the use of VR Museum as an intervention tool.
+
+### 4.1.1 Individuals with Mild Cognitive Impairment
+
+The concept of Mild Cognitive Impairment (MCI) was derived from milder cases
+of dementia and not Alzheimer’s disease (AD). MCI encompasses patients with
+and without memory impairment. Of those with memory loss, some have memory
+
+
+-----
+
+Fig. 4.1 The typical progressive course of Dementia [10]
+
+impairment as their only deficit [amnestic MCI single domain (aMCIs)], whereas
+others have impairments of memory loss plus changes in other cognitive domains
+
+[amnestic MCI multiple domain (aMCImd) [6]. Multiple-domain MCI is more
+common than pure amnestic type MCI and is characterized by slight impairment in
+more than one cognitive domain but of insufficient severity to constitute dementia
+
+[7]. Of those without any memory loss, some patients have deficits in one domain
+only, such as executive functions, apraxia or aphasia. Or they may have deficits in
+several domains, excluding memory [8]. These prodromal states may progress to
+non-AD dementias, such as vascular dementia, frontotemporal dementia, Lewy body
+dementia, primary progressive aphasia, or corticobasal degeneration [9] (Fig. 4.1).
+
+### 4.1.2 MCI Subtypes
+
+Recently research by Winblad et al. [9], revealed the heterogeneity in the clinical
+description of MCI leading to the classification of four subtypes. Based on the
+number: single or multiple and type: memory, non-memory or both, of impaired
+cognitive domains we have:
+
+1. Amnestic MCI—memory impairment only.
+2. Multi-domain MCI-Amnestic (memory plus one or more non-memory domain).
+
+
+-----
+
+**1.Complaint of cognitive deterioration from patient and/or**
+**informant**
+
+**2.Objective deficit on neurocognitive testing**
+
+**YES** **NO**
+
+**3. Persistent new disfunction in basic or instrumental** **Probable Normal**
+**ADL**
+
+**NO** **YES**
+
+**MCI** **Probable**
+
+**Dementia**
+
+**Memory Affectd** **Memory Non-Affected**
+
+**Amnestic MCI** **Non-Amnestic**
+
+**MCI**
+
+**Single** **Multi-**
+**Domain** **Domain** **Single Domain** **Multi-Domain**
+
+
+Fig. 4.2 MCI subtypes
+
+3. Multi-domain MCI-Non-Amnestic (more than one non-memory domain).
+4. Single Non-Memory MCI (one non-memory domain).
+
+Building on this classification Hanfelt et al. [11] posited cognitive, functional
+and neuropsychiatric traits that can distinguish individuals with MCI. This set the
+basis for improved diagnosis because it provided a common ‘‘language’’ among
+research centers for future research (Fig. 4.2).
+Recently, the criteria for the presence of MCI have been defined as [6, 12]:
+
+- Subjective memory complaints, preferably validated by a third person.
+
+- Memory impairment, non-characteristic for given age and education level.
+
+- Preserved general cognitive function.
+
+- Intact activities of daily living.
+
+- Absence of dementia.
+
+More importantly, impairment of Activities of Daily Living (ADL) has been
+observed in some MCI subtypes and therefore Instrumental ADL (IADL) questionnaires [13] or recent video assisted observation tools [14] have been used for
+their ability to act as a diagnostic marker for the MCI subtypes.
+
+
+-----
+
+In summary, in order to have a MCI subtype diagnosis a variety of medical and
+neuropsychological examinations is required. A thorough physical examination,
+blood sample studies, imaging (MRI, RiB-PET), genetic tests (APOE, TREM2) as
+well as biomarkers in CSF (beta-amyloid, tau and phospho-tau protein) [15].
+Occasionally, a condition, such as vitamin B12 deficiency or thyroid disease, can
+be identified as a cause for MCI [16]. However, one general conclusion to be
+drawn is that none of the above mentioned tools should be used alone, on the
+contrary the combination of different tools results in a more precise diagnosis.
+Lastly, the most recent research findings showed that the pathophysiologic findings
+in MCI may predict Alzheimer’s Disease (and perhaps other diseases) and
+therefore the sooner the diagnosis the more effective the intervention [17].
+
+### 4.1.3 Amnestic-Type Mild Cognitive Impairment
+
+Decline in episodic memory is one of the hallmark features of Alzheimer’s disease
+(AD) and is also a defining feature of amnestic Mild Cognitive Impairment
+(aMCI), which is posited as a potential prodrome of AD. While deficits in episodic
+memory are well documented in MCI, the nature of this impairment remains
+relatively under-researched, particularly for those domains with direct relevance
+and meaning for the patient’s daily life. Recently in order to fully explore the
+impact of disruption to the episodic memory system on everyday memory in MCI,
+clinicians examine participants’ episodic memory capacity using a battery of
+experimental tasks with real-world relevance [18]. They investigated episodic
+acquisition and delayed recall (story-memory), associative memory (face-name
+pairings), spatial memory (route learning and recall), and memory for everyday
+mundane events in 16 amnestic MCI and 18 control participants. Furthermore,
+they followed MCI participants longitudinally to gain preliminary evidence
+regarding the possible predictive efficacy of these real-world episodic memory
+tasks for subsequent conversion to AD.
+It has been reported for patients with aMCI and more frequently for patients
+with AD that they have difficulties with spatial orientation in everyday activities
+
+[19]. Patients often fail to find their way in unfamiliar environments when facing
+entirely new spatial settings during urban transportation, traveling or shopping. In
+mild to more severe stages of the disease, they may be disoriented even within
+their familiar neighborhood or inside their own flat. The standard way to study
+disorientation and spatial memory is with tests consisting of navigation inside a
+hospital [20], sometimes as orientation in a circular arena [21] and remembering
+object position [22]. To this day there are only two studies, to our knowledge,
+which addressed spatial orientation in MCI [23, 24]. The Mapstone et al. [23]
+study correlated motion flow perception with results in a table-top Money Road
+Map (MWM) test and the Hort et al. [24] study investigated allocentric and
+egocentric navigation in an analogue of the MWM.
+
+
+-----
+
+It is generally accepted that spatial navigation deficit is particularly pronounced
+in individuals with hippocampus-related memory impairment, such as aMCI and
+may signal preclinical AD [5, 24]. Laczo et al. [5] analyzed several types of errors
+made by the subjects’ during the task to investigate which of them contributed to
+their impairment. They used the Hidden Goal Task, a human analogue of the
+Morris Water Maze, to examine spatial navigation either dependent (egocentric) or
+independent of individual’s position (allocentric). Overall, the aMCI group performed poorer on spatial navigation than the non-aMCI group, especially in the
+latter trials when the aMCI group exhibited limited capacity to learn and the nonaMCI group exhibited a learning effect. Finally, the aMCI group performed almost
+identically as the AD group. Hort et al. [24] examined aMCI, AD and healthy
+controls using a four-subtests task that required them to locate an invisible goal
+inside a circular arena, analogues to the MWM test. Each subtest began with an
+overhead view of the arena showed on a computer monitor and then entered a real
+navigation inside of the actual space, an enclosed arena 2.9 m in diameter. They
+found that the AD group and amnestic MCI multiple-domain group were impaired
+in all subtests. The amnestic MCI single-domain group was impaired significantly
+in subtests focused on allocentric orientation and at the beginning of the real space
+egocentric subtest, suggesting impaired memory for allocentric and real space
+configurations. These results suggest that spatial navigation impairment occurs
+early in the development of AD and can be used for monitoring of the disease
+progression or for evaluation of presymptomiatic AD.
+
+### 4.2 Virtual Environments and aMCI
+
+Virtual Reality is a relatively new technology regarding its use for neuropsychological research. Publications to date provide evidence of some cases where a
+virtual environment creates the desired conditions and the necessary triggers for
+amnestic MCI patients to be classified and assessed. To be more precise, applications of virtual reality in neuroscience can provide experiments in a controlled
+environment where normal and impaired patient behavior, perception, control of
+movement, learning, memory and emotional aspects can be observed [25]. VR
+creates interactive, multimodal sensory stimuli that offer unique advantages over
+other approaches to neuroscientific research and applications. VR compatibility
+with imaging technologies such as functional MRI allows researchers to present
+multimodal stimuli with a high degree of ecological validity and control while
+recording changes in brain activity. Therapists, too, stand to gain from progress in
+VR technology, which provides a high degree of control over the therapeutic
+experience.
+Normally, a real-time interaction is required in order to observe and analyze
+human reactions of any kind, event or task. Otherwise, computer generated
+experimental tasks designed for specific variables and aspects of human response
+are required. During the last decade and a half, research towards that direction
+
+
+-----
+
+Fig. 4.3 The neural network involved in spatial navigation [32]
+
+provided information about the use of VR in Neuroscience [26–30]. For the
+purposes of this chapter we are going to analyze the way VR can be used for
+evaluating spatial perception and memory aspects in individuals with MCI.
+
+### 4.2.1 Spatial and Visual Memory
+
+Visual Memory is responsible for retaining visual shapes and colors whereas
+spatial memory is responsible for information about locations and movement. It
+could be described as cognitive imaging and cognitive mapping. This distinction is
+not always clear since part of visual memory involves spatial information and vice
+versa [31]. When it comes to MCI, impairment to both visual and spatial memory
+could indicate memory deficits [23] (Fig. 4.3).
+
+Navigation combines the two types of memory. Successful navigation requires
+a variety of thoughts and actions; planning, selection of an appropriate strategy and
+possible alterations, prospective memory and remembering previously visited
+locations. In particular, navigation is connected with the hippocampal function, a
+brain area already impaired in individuals with MCI [32]. Thus, deficits on
+navigational skills and spatial memory could be a solid cognitive indicator for
+MCI or early forms of Dementia.
+
+
+-----
+
+The discovery of place-specific firing in the hippocampus [33] and spatial
+navigation impairment after hippocampal lesion in the water maze [34] gave strong
+support to the theory of a cognitive map. This theory dissociates hippocampal
+navigation, based on a configuration of distal landmarks, from navigation to and
+from landmarks. This concept has evolved into the dissociation between allocentric
+navigation, using flexible representation of an ensemble of distal landmarks and
+independent of actual subject positions, and egocentric navigation, using distances
+and angles to or from individual landmarks. In humans, the allocentric mode of
+navigation was shown to be connected with the hippocampal function in analogues
+of the Morris water maze (MWM) [35, 36], in place navigation inside a virtual town
+
+[37], and in remembering the location of objects on a table [38].
+
+### 4.2.2 Virtual Reality, Spatial Memory and aMCI
+
+Immersive virtual reality environments can provide information and some times
+rehabilitate spatial working memory [39]. Ensuring that the desired conditions are
+ecologically valid, it is possible to use VR as a tool to evaluate spatial memory in
+individuals with MCI by tracking their behavior inside the virtual environment in
+real-time [40]. As described above spatial memory can be impaired in aMCI. In
+one study, aMCI participants encountered two virtual environments; the first, as
+the driver of a virtual car (active exploration) and the second, as the passenger of
+that car (passive exploration). Subjects were instructed to encode all elements of
+the environment as well as the associated spatiotemporal contexts. Following each
+immersion, we assessed the patient’s recall and recognition of central information
+(i.e., the elements of the environment), contextual information (i.e., temporal,
+egocentric and allocentric spatial information) and lastly, the quality of binding.
+The researchers found that the AD patients’ performances were inferior to that of
+the aMCI and increasingly so when compared to that of the healthy aged groups, in
+line with the progression of hippocampal atrophy reported in the literature [28].
+Spatial allocentric memory assessments were found to be particularly useful for
+distinguishing aMCI patients from healthy older adults. Active exploration yielded
+enhanced recall of central and allocentric spatial information, as well as binding in
+all groups. This led aMCI patients to achieve better performance scores on
+immediate temporal memory tasks. Finally, the patients’ daily memory complaints
+were more highly correlated with the performances on the virtual test than with
+their performances on the classical memory test.
+Taken together, these results highlight specific cognitive differences found
+between these three populations that may provide additional insight into the early
+diagnosis and rehabilitation of pathological aging. In particular, neuropsychological studies benefit when using virtual tests and a multi-component approach to
+assess episodic memory, and encourage active encoding of information in patients
+suffering from mild or severe age-related memory impairment. The beneficial
+effect of active encoding on episodic memory in aMCI and early to moderate AD
+
+
+-----
+
+is discussed in the context of relatively preserved frontal and motor brain functions
+implicated in self-referential effects and procedural abilities.
+In another study, a virtual navigation based reorientation task (VReoT) was
+used [41] and again healthy subjects were compared with aMCI subjects regarding
+their performance on the reorientation test. The performance of the aMCI was
+significantly worse than the controls suggesting that VReoT detects spatial
+memory deficits. A subsequent receiver-operating characteristics analysis showed
+a sensitivity of 80.4 % and a specificity of 94.3 %.
+
+### 4.3 The Virtual Reality Museum
+
+Virtual Reality (VR), Augmented Reality (AR) and Web3D technologies in conjunction with database technology may facilitate the preservation, dissemination
+and presentation of cultural artifacts in museum’s collections and also educate the
+public in an innovative and attractive way. Virtual Reality signifies a synthetic
+world, whereas Augmented Reality refers to computer generated 2D or 3D virtual
+worlds superimposed on the real world. Web3D is used to represent the application
+of XML (eXtended Markup Language) and VRML (Virtual Reality Markup
+Language) technologies to deliver interactive 3D virtual objects in 3D virtual
+museums. Precedents made use of 3D multimedia tools in order to record,
+reconstruct and visualize archaeological ruins using computer graphics and also
+provide interactive AR guides for the visualization of cultural heritage sites [42].
+These new emerging technologies are used not only because of their popularity,
+but also because they provide an enhanced experience to the virtual visitors.
+Additionally, these technologies offer an innovative, appealing and cost effective
+way of presenting cultural information. Virtual museum exhibitions can present
+the digitized information, either in a museum environment (e.g., in interactive
+kiosks), or through the World Wide Web.
+Our Virtual Museum system has been developed in XML and VRML and is
+described in detail [43, 44]. The system allows museum curators to build, manage,
+archive and present virtual exhibitions based on 3D models of artifacts. The innovation of our system is that it allows end-users to explore virtual exhibitions
+implemented using very simple everyday interfaces (e.g. joystick, mouse) (Fig. 4.4).
+The cultural artifacts are digitized by means of a custom built stereo photogrammetry system (Object Modeler), mainly for digitizing small and medium-size
+objects and a custom modeling framework (Interactive Model Refinement and
+Rendering tool) in order to refine the digitized artifact. The 3D models are
+accompanied by images, texts, metadata information, sounds and movies
+(Fig. 4.5). These virtual reconstructions (3D models and accompanying data sets)
+are represented as eXtensible Markup Language (XML) based data to allow
+interoperable exchange between the museum and external heritage systems.
+These virtual reconstructions are stored in a MySQL database system and
+managed through the use of a specially designed Content Management Application,
+
+
+-----
+
+Fig. 4.4 Users can ‘walk’ freely in the virtual museum and interact with the artifacts. Once they
+select an artifact they can choose to zoom in, rotate it at the X-, Y-, Z-axis and read details in tags
+on the artifact itself
+
+which also allows building and publishing virtual exhibitions on the Internet or in a
+museum kiosk system. The system is a complete tool that enables archiving of both
+content and context of museum objects. The described interactive techniques can
+transform the museum visitors ‘from passive viewers and readers into active actors
+and players’ [44].
+
+### 4.3.1 The Virtual Reality Museum Technical Components
+
+Two main components of the system are of interest for the evaluation: the Content
+Management Application (CMA) and Augmented Reality Interface (ARIF). CMA
+allows publishing of virtual museums to both Web and a specially designed
+application (ARIF) for switching between the Web and an AR system. The CMA
+application is implemented in Java, trademark of Oracle Corporation and it
+includes the database of the representations of cultural objects and their associated
+media objects, such as images, 3D models, texts, movies, sounds and relevant
+metadata. It enables user-friendly management of different types of data stored in
+the Virtual Museum database, through various managers, such as the Cultural
+Object Manager (deals with virtual representations of cultural artifacts), the
+Presentation Manager (manages virtual exhibitions with the help of templates)
+and the Template Manager (stores these visualization templates).
+
+
+-----
+
+Fig. 4.5 The interface is ergonomically made so that it can tolerate errors. All icons, fonts and
+interactive objects are large and understandable
+
+The ARIF component is a presentation or visualization framework that consists
+of three main sub-components:
+
+- The ARIF Exhibition Server. Data stored in the Database is visualized on user
+interfaces via the ARIF Exhibition Server.
+
+- The ARIF Presentation Domains with implemented web browser functionality,
+suited for web-based presentations.
+
+- The ARIF AR—Augmented reality functionality. This sub-component provides
+an AR based virtual museum exhibition experience on a touch screen in the
+museum environment using table-top AR learning experiences, e.g., AR quizzes
+and on-line museum exhibitions.
+
+### 4.3.2 The Virtual Reality Museum Cognitive Theory
+
+It is difficult to reconcile inconsistent findings pertaining to the effect of playing
+cognitive training games on cognition [45–47], because the methodological differences between these studies are substantial. More research is required to
+
+
+-----
+
+elucidate what aspects of brain training games facilitate transfer to untrained
+cognitive abilities. Hence, the aim of our virtual museum was to test whether
+playing some simple memory exercises inside an ecologically valid 3D environment does transfer to different measures of executive functions in amnestic-type
+mild cognitive impairment (aMCI) older adults. Executive functions are a cognitive system that controls and manages other cognitive processes. For example,
+Updating is the ability to respond in a flexible and adaptive manner in order to
+keep up with the changes in the environment, e.g. during the period of road repairs
+you need to change your permanent route and use the new route until the repairs
+are finished.
+According to the cognitive-enrichment hypothesis developed by Hertzog et al.
+
+[48], the trajectory of cognitive development across the life span is not fixed.
+Although the trajectory of cognitive development at normal seniors is largely
+determined by a lifetime of experiences and environmental influences, there is
+potential for discontinuity in the trajectory given a change in cognition-enriching
+behaviors. The cognitive-enrichment hypothesis is corroborated by ample evidence for plasticity, i.e., the potential for improvement of ability as a consequence
+of training [49] of everyday cognitive task-switching in the elderly population.
+There are some reports providing evidence of improvements in ‘‘Updating’’ as part
+of the bigger structure called ‘‘executive functions’’ [50–52]. There are also
+promising reports showcasing seniors ‘‘Shifting’’ ability improvement, as a mental
+process during which seniors redirect their focused attention from one channel of
+information to another as quickly as possible or change the course of their actions
+while maintaining accurate performance [53, 54]. Shifting can be initiated consciously or unconsciously by a stimulus in our surroundings or by habit. For
+example, while talking on the phone, we may have to switch to preventing a small
+grandchild from touching a sharp object. Many older people encounter shifting
+problems; they may find it difficult and frustrating to try to change their thinking,
+routines or actions. Those who do not train their shifting ability may have problems changing undesirable habits. Finally, Davidson et al. [55] and Karbach and
+Kray [56] reported improvement at ‘‘Inhibition’’, the ability to ignore irrelevant
+stimuli or suppress irrelevant reactions while performing a task. Inhibition includes
+the deliberate prevention of an act, behavior or response, when it is not desirable.
+At work, for example, we must sometimes ignore our co-workers’ conversations
+and focus our attention on our own tasks. Training this ability helps us concentrate
+on relevant activities while ignoring disturbing stimuli. It will enable you, for
+example, to write a letter while the television is on. In addition, domains such as
+selective attention [57] and inductive reasoning [58] can be improved in older
+adults.
+We now know that the virtue of a cognitive-training technique depends on the
+generalization or transfer of training to untrained tasks [59]. Different degrees of
+transfer have to be distinguished. The minimal degree of transfer that can occur is
+improvement within the same cognitive domain as subjected to training, assessed
+using different stimuli, and requiring a different response than the training task.
+This type of transfer is referred to as near transfer. Improvement of abilities in
+
+
+-----
+
+other cognitive domains than the cognitive domain subjected to training is referred
+to as far transfer.
+Virtual Reality Museum exploration and interaction activities are considered to
+provide an ideal context for cognitive enrichment [60, 61]. The unique characteristics of virtual museums presumed to facilitate transfer are their motivating
+nature, frequent presentation of feedback, precise reinforcement schedules, and
+stimulus variability, analogues to the basic characteristics of good video games,
+which are designed to enhance learning through effective learning principles
+supported by research in the Learning Sciences [62]. As a result of their entertainment value, virtual museums maintain the motivation to engage in practice for
+much longer than monotonous laboratory tasks or traditional training programs.
+Frequent feedback supports motivation and is also important for conditioning the
+desired level of performance. When the difficulty level of the task is continuously
+adapted to the performance, players will constantly be challenged at the limits of
+their ability. It is in particular the phase of skill-acquisition that calls for cognitive
+control (CC), whereas continued performance at a mastered level is associated
+with cognitive load automation and release of CC resources [63, 64]. Furthermore,
+small increments of difficulty level maximize the proportion of successful experiences with the task. The stimulus variability also plays an important role in
+training CC, because it helps to generalize learnt cognitive skills to multiple
+stimulus contexts.
+Transfer of virtual reality museum interventions to CC has, however, not been
+demonstrated consistently. Owen et al. [46], for instance, demonstrated that
+playing computerized cognitive training games like Nintendo’s[�] Dr. Kawashima’s
+Brain Training[TM] was not more beneficial for CC functions than answering general
+knowledge questions online. It is being assumed that because the sample of participants in Owen et al.’s study was very heterogeneous and included both young
+and old adults, it is possible that improvements of cognitive test performance were
+attenuated in young adults due to ceiling performance at pretest. This could have
+obscured possible transfer of training in the sub-sample of older adults. The notion
+that sample heterogeneity can confound the observed effect of virtual reality
+training substantially is corroborated by Feng et al. [65]. They found no effect of
+playing action virtual reality games on spatial attention in a sample of young
+adults. However, separate analysis of the effect in males and females revealed that
+females did actually benefit from playing. In addition, in the Owen et al. study the
+participant sample was heterogeneous with respect to training adherence, so participants who completed only two training sessions could have had a negative
+impact on aggregated training outcomes. Another aspect of Owen et al.’s study
+that makes the observed absence of transfer difficult to interpret is that transfer was
+assessed using a test battery comprising only four cognitive tests, three of which
+were measures of working memory capacity.
+Ackerman et al. [45] demonstrated that sample heterogeneity cannot account
+for Owen et al.’s [46] findings. They found that playing cognitive training games
+(Nintendo� WiiTM Big Brain AcademyTM) does not benefit cognitive abilities to a
+greater extent than reading assignments do, in a homogeneous sample of healthy
+
+
+-----
+
+seniors on a relatively fixed and extensive training schedule. Moreover, a broader
+assessment of cognitive abilities of interest was made than in Owen et al.’s study.
+Still, Ackerman et al. focused predominantly on reasoning ability and perceptual
+processing speed, while a large share of the cognitive games under study taxed
+working memory updating and the large variety of the tasks probably stimulated
+participants’ attention and task set shifting. Inclusion of transfer tasks, gauging
+working memory, updating and set shifting, in Ackerman et al.’s study could have
+led to different conclusions regarding transfer of playing cognitive training games.
+Conversely, there is also some evidence against Owen et al.’s [46] and
+Ackerman et al.’s [45] pessimistic conclusions regarding the beneficial effects of
+playing virtual reality educational games on CC functions. Namely, Peretz et al.
+
+[47] found a larger improvement of visuospatial working memory, visuospatial
+learning, and focused attention after playing Cognifit Personal Coach[�] cognitive
+training games than after playing conventional 3D videogames that were matched
+for intensity, in a sample of older adults. Even though there is some theoretical
+overlap in the cognitive functions assessed by Peretz et al. and Owen et al. and
+Ackerman et al., the specific cognitive tests used to assess transfer in these studies
+was different. It is conceivable that some cognitive tests are more sensitive to
+transfer effects than others, which might explain the discrepant results of these
+studies.
+Furthermore, playing 3D videogames not specifically designed for cognitive
+training can also improve CC functions in older adults. Basak et al. [66] demonstrated that playing a particular complex 3-D real-time strategy game (Rise of
+Nations) was associated with greater improvements of shifting, updating, and
+inductive reasoning than observed in the control condition. It must be noted that
+the control group in this study was a no-contact control group, so it is not certain to
+what extent the observed improvements in the videogame group are attributable to
+placebo-effects. Nevertheless, the improvements of CC in this study were larger
+than practice effects due to repeated exposure to the same cognitive test.
+It has been argued that failures to demonstrate far transfer of playing cognitive
+training games in the population of older adults may be due to a general agerelated decrease of the extent to which learning transfers to untrained abilities [45].
+This assertion is supported by Ball et al.’s [57] finding that cognitive strategy
+training programs for improving memory, processing speed and reasoning,
+respectively, were associated with improvements within the trained cognitive
+domain but not with far transfer to untrained cognitive abilities of older adults. In
+contrast, however, far transfer of practicing basic cognitive tests has been reported
+repeatedly in the cognitive aging literature [56, 67–69]. Brain training games like
+Nintendo’s[�] Dr. Kawashima’s Brain Training[TM] share many task components of
+basic cognitive laboratory tasks and videogames have several additional characteristics facilitating transfer [61]. Therefore, it is reasonable to expect that transfer
+of computerized cognitive training games in the population of older adults is
+replicable.
+
+
+-----
+
+### 4.3.3 The Virtual Reality Museum Cognitive Exercises
+
+In general three tasks have been identified and developed within the scope of this
+study. While the complete cognitive stimulation is expected to encompass several
+tasks from each cognitive domain (memory, attention, executive functions), this
+study is aiming to evaluate the task domains of navigation, spatial orientation and
+spatial memory. Tasks were chosen specifically for patient with aMCI for whom it
+is essential to be spatially oriented in order to live independently.
+Generalization of skills during cognitive stimulation towards daily-life settings
+has only received little support in the literature [70]. More specifically, taskfocused training appears to show no transfer to situations outside of the training
+situation and the effectiveness of strategy training requires further evidence. While
+the external validity of training applications seems to be of central importance to
+the patients’ success in their daily life, most traditional rehabilitation studies have
+not successfully demonstrated such transfer yet. Even though principles of contextsensitive rehabilitation have been mentioned in several literature reviews [71],
+context-sensitivity is often not associated with transfer to activities of daily life.
+This is because context-sensitive tasks are essentially based on the unique experiences that a patient has in his daily life. Hence, a transfer is often not necessary as
+training tasks are either identical to common daily chores or replicate them as
+closely as possible. Nonetheless, when traditional process-specific tasks are
+combined with individualized context, task generalization across similar daily
+activities seems to be of relevance.
+The Virtual Reality Museum is designed to speed up auditory processing,
+improve working memory, improve the accuracy and the speed with which the
+brain processes speech information and reengage the neuromodulatory systems
+that gate learning and memory. To reverse cognitive disuse and drive brain
+plasticity, the program strongly engages the brain with demanding exercises and
+an adaptive and reward-based daily training schedule, consistent with the recommendations of Tucker-Drob [72]. This procedure is based on practices of
+context-sensitive rehabilitation suggested by Ylvisaker [73]. Cognitive exercises
+provided by it are divided into three interrelated categories, that, in aggregate, span
+the cognitive functions of seniors:
+
+- Listen and Plan: Seniors follow instructions to locate and find items in an order.
+Instructions become more difficult (phonetically and syntactically) progressively
+(purpose: training on spatial navigation abilities and planning following complex instructions with continuous processed speech).
+
+- Storyteller: Seniors hear segments of museum items stories and are asked to
+answer a set of questions concerning the details of the respective segment
+(purpose: training on story comprehension and memory).
+
+- Exer-gaming: Seniors are asked to actually represent the ‘‘scene’’ depicted at the
+archeological artifacts or multimedia description, e.g. movement, dance,
+wedding (purpose: training on executive function and orientation/praxis).
+
+
+-----
+
+This type of intervention was used in the recent study by Smith et al. [69],
+which was the first double-blind large-scale clinical trial that demonstrated marked
+improvement not only in the trained task, but also in several generalized measures
+of memory and perception of cognitive performance in everyday life, relative to an
+active control group that received a frequency and intensity-matched cognitive
+stimulation program.
+The modularity of the cognitive tasks above also reflects the standards of
+current process-specific assessments [74]. The Virtual Reality Museum Listen and
+Plan exercise is a spatial navigation task that is implemented as close as possible to
+the actual Archeological Museum of Aiani, at Kozani, Greece from where we took
+the layout and archeological artifacts. Consequently, this virtual navigation task is
+also meaningful for clinical decision-making about real-world behavior as well.
+Transfer was assessed by comparing performance on a battery of cognitive tests
+before and after the intervention. Taking into account that some cognitive tests
+may be more sensitive to transfer effects than others, several measures of updating,
+shifting, and inhibition were included in the test battery. Although it is assumed
+that training interventions boost functional or even plastic changes to the brain,
+neuronal correlates of the training induced changes in intervention studies were
+only examined in the last decade [75]. Knowledge about the intervention related
+neuronal and functional changes is additionally useful in order to understand
+the efficiency of the training and transfer effects to other tasks [76]. Therefore, in
+the present study we used event-related brain potentials (ERPs) derived from the
+electroencephalogram (EEG) in order to study more closely the neuronal processes
+which are affected by the training intervention.
+
+### 4.4 Research Methodology
+
+ 4.4.1 Design
+
+Single-site randomized controlled double-blind trial.
+
+### 4.4.2 Participants
+
+One hundred and fourteen patients with MCI according to the revised Petersen
+criteria [77], aged between 65 and 88 years, were recruited to participate in the
+experimental study, which was conducted in Alzheimer Hellas day clinic Agios
+Ioannis at Thessaloniki, Greece between May 2011 and October 2012. The participants were randomly assigned to the training groups. We excluded subjects who
+met criteria for dementia (DSM-IV), AD (NINCDS-ADRDA), depressive episode
+(IDC-10), subjects with cerebrovascular disease (Hachinski scale score C4), and
+
+
+-----
+
+those with any other medical or psychiatric identifiable cause accounting for their
+complaints.
+The neuropsychological battery used for the pre- and post- testing included tests
+for the assessment of memory (Rey Auditory Verbal Learning Test—RAVLT),
+language and semantic memory (15-items short-form of the Boston Naming Test,
+category fluency), praxis and visuospatial skills (Rey complex figure copy),
+attention and executive function (Symbol Digit Modalities Test, Trail Making part
+A and B, Stroop interference Test [78] and letter fluency). A cognitive domain was
+judged as impaired when subjects scored 1.5 SD below values for age and education
+matched controls in at least one test. According to the results of the neuropsychological exploration, subjects were classified as pure amnestic MCI (a-MCI),
+patients fulfilling Petersen’s criteria for amnestic MCI, with memory being the only
+affected domain (see Table 4.1 for details).
+Participants also received an Auditory ERP-recording completed using a Nihon
+Kohden–Neuropack M1 MEB-9200 evoked potential/EMG measuring system.
+Event-related-potentials (ERPs) are used as a noninvasive clinical marker for brain
+function in human patients (Fig. 4.6). Auditory ERPs are voltage changes specified
+to a physical or mental occurrence that can be recorded by EEG [79]. Different
+ERPs were used in order to pinpoint the functional processes which would be
+improved by the cognitive process training and which may be affected by retesting.
+The principal ERP components elicited after task-relevant visual stimuli are among
+others the N1, the anterior N2, the P2, and the P3b. In Fig. 4.7, an example of an
+Auditory ERP signal can be seen. The signal can be divided into two parts, a prestimuli section consisting of a baseline with no clear potentials and a post-stimuli
+section consisting of various potentials. The first positive potential is called P1,
+followed by a negative potential N1, then P2, N2, and so forth. The latency of these
+potentials is measured from onset of stimuli to the peak of the potential. Sometimes
+the peaks are named using the latency, e.g. if N1 occur at a latency of 40 ms it is
+named N40 or if P3 occur at a latency of 300 ms it is named P300. The baseline
+amplitude is the difference between the peak of a potential and the mean of the
+pre-stimulus baseline. The baseline measurement used to discriminate between
+the MCI amnestic patients and the controls in our study is shown in Fig. 4.6 [80].
+
+### 4.4.3 Procedures
+
+Thirty-nine of the participants represented a virtual reality museum cognitive
+training group—experimental group (remaining N = 32; 12 men, mean age:
+70.5 years; range 65–82; seven drop-outs because of technical problems, illness,
+and tenancy changeover). The other participants formed an active control group
+(N = 39; 16 men, mean age: 69.7 years; range: 65–88; no drop-outs) and a noncontact control group (remaining N = 34; 13 men, mean age: 70.9 years; range:
+65–87; two dropouts because of illness). The virtual reality museum cognitive
+training group was exposed to a multilayered cognitive training over a period of
+
+
+-----
+
+-----
+
+Fig. 4.6 Illustration of a possible Auditory ERP signal. On the X-axis the time is shown with 0 at
+the stimuli. The Y-axis is the amplitude with 0 at the baseline. In the pre-stimuli window a
+baseline is visible from which a horizontal average can be calculated
+
+Fig. 4.7 Grand average baseline AERP waveforms for MCI amnestic patients at our study and
+comparison to baseline for controls
+
+5 month. At the same time, the active control group is a sample of the MCI
+amnestic population from the Agios Ioannis day clinic in Thessaloniki that
+received a learning-based memory training approach in which participants used
+computers to make cognitive exercises, viewed DVD-based educational programs
+on history, art and literature or participated at puzzle solving exercises. The active
+control group was required to have high face validity and match the experimental
+group for daily and total training time, interesting audiovisual content, and computer use. Thus the AC cognitive training program employed a learning-based
+memory training approach in which participants used computers to view DVDbased educational programs on history, art and literature.
+The participants in the virtual reality museum cognitive training and the active
+control group trained twice a week for 90 min across 5 months. The virtual reality
+
+
+-----
+
+museum cognitive training was conducted on a one-to-one basis while the active
+control trainings were conducted in small groups with not more than 12 participants
+by professional psychologists. Two extra sessions were offered at the end of the
+program for those participants who missed the regular sessions. The participants
+were not encouraged to train outside the training sessions.
+
+### 4.4.4 Data Recordings and Analysis
+
+4.4.4.1 Electrophysiological Recording
+
+The Electroencephalogram (EEG) was recorded from 32 active electrodes positioned according to the extended 10–20 system (the electrodes mounted directly on
+the scalp included the following positions: C3, C4, CP3, CP4, CPz, Cz, F3, F4, F7,
+F8, FC3, FC4, FCz, Fp1, Fp2, Fpz, Fz, O1, O2, Oz, P3, P4, P7, P8, PO3, PO4,
+POz, Pz, T7, and T8). Electrodes A1 and A2 were placed at the left and right
+earlobes. The horizontal and vertical EOG was measured by electrodes placed at
+the outer canthi (LO1, LO2) and above and below both eyes (SO1, SO2, IO1, IO2).
+Electrode impedance was kept below 10 kX. The amplifier band pass was
+0.01–140 Hz. EEG and EOG were sampled continuously with a rate of 2,048 Hz.
+Data was archived on a hard disk with triggers using post-session annotation.
+Offline, the EEG was downscaled to a sampling rate of 500 Hz by using the
+software Neuroworkbench (Nihon-Kohden, Japan). The epochs were 1,200 ms
+long ranging from 100 ms before and 1,000 ms after stimulus onset. All epochs
+with EEG amplitudes of more than ±120 lV or with drifts of more than 150 lV
+within 300 ms were discarded. For all participants and conditions at mean 48
+epochs (Min = 17; Max = 53; SD = 7.3) of the epochs remained for averaging
+after artefact rejection and correction. The epochs were averaged according to the
+stimulus conditions (target trials versus non-target trials) and referenced to linked
+earlobes (excluding the EOG electrodes). For stimulus locked averages only
+correct epochs were used, excluding trials with false alarms or misses. A digital
+low-pass filter was set at 17 Hz in order to reduce oversampling.
+
+4.4.4.2 Analysis
+
+Statistical analyses were performed by means of repeated measures ANOVAs with
+Greenhouse-Geisser corrected degrees of freedom. In case of significant main
+effects (if the factor included more than two levels) or interactions, additional
+ANOVAs were applied for post hoc testing of contrasts and simple effects. For
+response times (RTs; correct commission trials) the ANOVA included the within
+factor time (session one, session n) and the between factor group (virtual reality
+museum cognitive training group, active control group, no-contact control group).
+Separate ANOVAs were carried out for false alarms and for misses, because they
+
+
+-----
+
+are different types of errors either demanding a response or not. Both analysis
+included the factors time and group.
+The peak amplitude and latency of the N1 potential was measured at the two
+occipital electrodes O1 and O2 were the potential showed its maximum. The N2
+was quantified as the mean amplitude in the time interval between 240 and 300 ms
+at the electrodes FCz, Cz and CPz where maximum amplitude resulted. A reliable
+measurement of the peak was not possible due to the overlapping P2, and P3b
+potentials. The P2 potential was quantified in amplitude and latency as the local
+maximum at the electrodes FCz, Cz and CPz in the search interval between 200
+and 400 ms where it showed the highest peaks. The peak amplitude and latency of
+the P3b potential was measured as the local maximum at the electrodes Cz, CPz
+and Pz in the search interval between 400 and 700 ms where it showed the highest
+amplitudes.
+Six separate ANOVAs were carried out for the peak amplitudes and latencies of
+the N1, P2 and the P3b, respectively, including the between subject factor group
+and the within subject factors session (session one, session two), stimulus type
+(target, non-target) and electrodes (O1 and O2 for the N1; FCz, Cz, and CPz for
+the P2 potential; Cz, CPz, and Pz for the P3b potential, resp.). An additional
+ANOVA was carried out for the N2 mean amplitudes including the between
+subject factor group and the within subject factors session, stimulus type, and
+electrodes (FCz, Cz, and CPz).
+We also used sLORETA [81] in order to closer examine the underlying neuronal changes of the expected training effect of stimulus feature processing as
+reflected by the P2. We examined only the target condition because the training
+gains may especially help to improve target detection. The program sLORETA
+estimates the sources of activation on the basis of standardized current density at
+each of 6,239 voxels in the grey matter of the MNI-reference brain with a spatial
+resolution of 5 mm. The calculation is based upon a linear weighted sum of the
+scalp electric potentials with the assumption that neighboring voxels have a
+maximal similar electrical activity. The voxel-based sLORETA images were first
+computed for each individual averaged ERP in the target condition in the interval
+from 170 to 190 ms surrounding the P2 peak. Then, the differences of the sLORETA images between test sessions were statistically compared between groups
+using the sLORETA voxelwise randomization test (5,000 permutations) which is
+based on statistical nonparametric mapping (SnPM) and implemented in sLORETA. Two independent group tests were carried out for comparison of the three
+groups (cognitive training group versus no-contact control groups, and versus
+social control group). The tests were performed for an average of all time frames in
+the interval with the null hypothesis that (T1 group A–T2 group A) = (T1 group
+B–T2 group B). The tests were corrected for multiple comparisons [82].
+
+
+-----
+
+### 4.5 Results
+
+ 4.5.1 Neuropsychological Variables Outcome
+
+In the virtual reality museum and active control aMCI group, there were significant
+differences between the delayed-recall scores on the RAVLT at baseline and those
+at both the 5-month follow-up (1.6 ± 1.5 vs. 4.4 ± 1.5, p = 0.04; 1.6 ± 1.5 vs.
+4.6 ± 2.3, p = 0.04) (Table 4.2). The immediate recall scores on the Rey Osterrieth Complex Figure (11.9 ± 9.2 vs. 15.8 ± 9.4; p = 0.04), the Trail-Making B
+(193.9 ± 98.5 vs 104.1 ± 28.7; p = 0.04) and the MMSE (26.8 ± 3.6 vs.
+28.2 ± 2.5; p = 0.04) were significantly improved only at the 5-month follow-up
+in the virtual reality museum aMCI group. There was a tendency toward
+improvement of the digit span forward scores (6.2 ± 1.1 vs. 7.8 ± 1.3; p = 0.07)
+at the follow-up of the virtual reality museum aMCI group and a general traininginduced BNT scores improvement (10.6 ± 1.9 vs. 12.0 ± 2.0; p = 0.07) compared to the baseline scores in the virtual reality and the active control aMCI group
+(Table 4.2). The GDS score was also improved after cognitive training, but the
+difference did not reach statistical significance (10.3 ± 2.5 vs. 8.9 ± 1.7;
+p = 0.23). There were no significant differences between the baseline and followup scores in other outcome measures in the MCI wait-list control group.
+
+### 4.5.2 Electrophysiological Measures Outcome
+
+The P300 component latency and amplitude among the experimental groups (as
+detected on the Pz electrode) for the two conditions (target and no-target auditory
+stimuli) before and after training are summarized in Table 4.3. When the nontarget stimulus was presented, the P300 latency following training was significantly shorter in both memory training groups (Table 4.3). The P300 amplitude
+was significantly higher after training on both groups. However, when the target
+stimuli was presented, the P300 latency following training was significantly
+shorter in both research groups; the Virtual Reality Museum latencies were significantly longer than those of the Active Control; and the amplitude was
+significantly lower for the Active Control than for the Virtual Reality Museum.
+Our results are in line with previous training studies which also found evidence
+for improvements of specific cognitive functions after cognitive training in older
+participants (e.g. for working memory: [83], e.g., for dual task performance: [54]).
+Performance improvements of older participants were also found for cognitive
+training of visual conjunction search in other training studies [84, 85]. These
+studies found evidence that seniors has learning skills just as good as the young
+ones to efficiently use feature information and selectively attend to those objects in
+the search array that share common features with the target. Our findings however
+go further, because we used for a first time a 3D Virtual Museum environment and
+
+
+-----
+
+-----
+
+-----
+
+Fig. 4.8 Stimulus-locked event-related potentials at the occipital electrodes O1 and O2
+separately for target and non-target trials, for the first (T1) and the second test session (T2) as
+well as for the Virtual Museum cognitive training group, the Active Control group and the normal
+control group
+
+showed the neuronal correlates of the functional processes suggesting improvements via the VR training as follows:
+
+- In the Virtual Museum cognitive training occipotal N1 enhancement was evident post-training compared to pre-training for non-target stimuli. This suggests
+that the participants developed mechanisms for enhanced attention of arrays,
+which were not immediately recognized as targets, that is, the non-targets
+(Fig. 4.8).
+
+- The frontal N2 enhancement was also evident post-training compared to pretraining for non-target stimuli. However, as this effect failed to reach significance, it can only be speculated that also the subsequent processing or even
+inhibition of the non-target stimuli improved after cognitive training. Based on
+the enhanced attention in non-target trials in the Virtual Museum cognitive
+training group as was reflected in the N1 amplitude, one may expect also a
+decrease in the false alarm rate (Fig. 4.8).
+
+The N2 (see Fig. 4.8) showed a maximum at the electrodes FCz (1.2 lV) and
+Cz (1.4 lV) and was less negative at CPz (2.1 lV; main effect of f electrodes:
+
+
+-----
+
+Fig. 4.9 Changes in P300 amplitudes in the Museum Group (Pz average) compared to the other
+groups pre- (T1) and post- (T2) training
+
+F(2,204) = 30.7, P \ 0.001). The tree-way-interaction of the factors session x
+stimulus type x group reached also a significance (F(2,102) = 3.01; P \ 0.003).
+The increased amplitude of the P300 in target trials may suggest that feature
+based stimulus processing was significantly improved in our older participants
+after only the Virtual Reality Museum cognitive training (Fig. 4.9). Consequently,
+the improved discrimination of stimulus features in target-present trials should
+decrease the likelihood of missed targets and increase the likelihood of target
+detection. This effect on performance data was evident in our cognitive training
+group post-training compared to the pre-training session and also when compared
+to the control groups.
+The sLORETA analysis of the P300 amplitude differences between test sessions
+elucidates the neuronal basis of the training gain. Specifically, activation in the
+lingual and parahippocampalgyri was increased only in the cognitive training
+group and not in the two control groups. Most importantly, the increased P300
+amplitude together with the significant changes in brain activation show that the
+cognitive training caused a change in brain processes on a functional level in a
+near transfer task of visual search. Both regions are anatomically and functionally
+connected [86] and are discussed as being sensitive for global visual feature
+processing [87], as well as the global processing of spatial layout [88] and surface
+properties like color and texture of scenes and objects in visual arrays [86]. For our
+training group we found that the cognitive process training improved the textual
+and spatial processing of visual arrays in general. The use various kinds of visual
+material like pictures, objects, and text pages that were used in various tasks in the
+training sessions did improve one basic cognitive process of global processing of
+visual arrays. The present results also suggest the P300 potential of the ERP as a
+possible marker for the improvement of this cognitive process (Fig. 4.10).
+
+
+-----
+
+Fig. 4.10 Graphical representation of the sLORETA results comparing the differences of the
+target-P300. The blue colour indicates local maxima of lower activation in the first compared to
+the second test session for the cognitive training group in the right lingual and parahippocampal
+gyri, which may explain the amplitude difference of the P300 between sessions in the tested
+interval surrounding the P300 peak
+
+### 4.6 Discussion
+
+In the present study we were able to distinguish the functional processes which
+were sensitive to the training intervention from retest effects. The effect of test
+sessions on the topography of the P300 applies to all groups. We assume that the
+P300 may reflect memory-based stimulus processing. Thus, whereas attentional
+processing of target-absent trials (N1 results) and feature-based stimulus processing of target-present trials (P3 results) were only modulated by the cognitive
+training intervention, the improvement of stimulus categorization, which is based
+on memory representations (P300), was sensitive to retesting. In our study, the
+amplitude of the P300 component increased and latency shortened significantly
+following training in both experimental groups. This adds to the evidence that the
+P3b contains a component related to response selection or execution [89, 90]. The
+idea of a functional compromise associated with MCI is not new, and previous
+studies have reported a higher degree of functional impairment in MCI subjects
+when compared with matched healthy subjects [91–99].
+To a limited extent, the present findings support Basak et al.’s [66] finding that
+inhibition can be improved by playing videogames and Schmiedek [100]
+demonstration that functional impairment can be improved by practicing basic
+cognitive tasks. The results from the present study suggest that modest improvements of the functional ability, processing speed and memory can also be achieved
+by means of playing virtual reality cognitive training games. A similar partially
+positive result of 3D games for cognition-enriching everyday activities and processing speed was reported by Nouchi et al. [101].
+
+
+-----
+
+Not all 3D virtual reality environments however are created equal [60] and
+given an individual’s stage of cognitive development, one environment can be
+more beneficial for cognitive functions than the other. For example, the cognitive
+training games used in the Virtual Reality Museum were very similar to those used
+in an actual educational museum visit [57]. Preliminary evidence for far transfer of
+the cognitive training was found in the present study using the neural correlates.
+The different extent of transfer in our study may be explained by the additional
+focus of the aMCI group to use specific strategies to perform the training tasks.
+All our data support the a priori intuitive notion that highly cognitive-dependent
+skills are more likely to be affected as a consequence of the Virtual Reality Museum
+cognitive training, and that aMCI subjects show significant improvement in these
+functional domains. On the other hand, it is noteworthy that differences between
+groups were not restricted to the neuropsychological variables or the neural correlates, but also to behavioral areas as well, such as depression and motivation,
+although this change was not significant. As suggested by Green and Bavelier [61],
+motivation is a key condition for transfer to occur. The engaging nature of the
+virtual reality museum used in the present study could thus have facilitated transfer
+of training. It is clear that more research in this direction is required. Nevertheless, it
+can be concluded that our findings support the notion of plasticity in the neural
+system underlying virtual reality cognitive training and point to a relationship
+between the more ecological validity of Virtual Reality Museum and enhancement
+of specific cognitive skills.
+
+### 4.7 Conclusion
+
+The results from our study suggest that older adults do not need to be technologically savvy to benefit from virtual reality training. Almost none of the aMCI
+participants in the reviewed studies had prior experience with the technologies
+(i.e., video games, computers) used in the intervention study and yet they were still
+able to benefit from these novel approaches. Previous research has shown participants’ prior use of computers was not significantly associated with acquisition
+of computer skills during training sessions, suggesting older adults can benefit
+from novel technologies [102].
+Despite common misconceptions older adults do enjoy learning to use new
+technology, perceptions of the computerized training programs were positive for
+the older adults who completed computerized training [103]. In spite of many
+older adults reporting anxiety about using unfamiliar technology at the beginning
+of training, most reported high levels of satisfaction after training was completed.
+Some patients also stated they could use their new video game skills to connect
+more with their grandchildren, like we have seen many times in the literature
+
+[104]; whereas others were very willing to learn to use video games and believed
+they could be a positive form of mental exercise [105].
+
+
+-----
+
+In conclusion, the present study lends modest support to the notion that playing
+virtual reality cognitive training games improves untrained cognitive functions in
+aMCI. Since these functions facilitate adaptive behavior in various contexts,
+improved cognitive processing can be expected to help older adults to overcome
+cognitive challenges in their daily routines. Virtual Reality provides an entertaining
+and thus motivating tool for improving cognitive and executive functions. The
+Virtual Reality Museum doesn’t require physical well-being and mobility of
+the participant as much as physical exercise interventions; although these seem to
+be more effective in buffering decline of executive function [106]. Additionally, the
+virtual reality museum is not expensive to administer as compared to interventions
+supervised by a therapist. Virtual Reality cognitive rehabilitation, such as the
+process-specific RehaCom tasks used by Weiand [107] appear to be successful at
+keeping patients motivated for continuous training even after the supervised sessions at the clinic have finished. As such, the process-specific training seems to be a
+good choice for long-term self-guided exercises. The present study suggests that the
+Virtual Reality Museum should not be dismissed as a cognitive training tool.
+Even within the homogeneous sample of older adults that participated in the
+present study, some participants benefited more from playing the virtual reality
+museum than others. A variety of factors may be responsible for individual differences in sensitivity to cognitive training. For instance, recent findings from our
+lab indicate that inter-individual genetic variability modulates transfer of training
+to untrained tasks [108]. Therefore, caution concerning the interpolation of
+aggregate data to individuals is advised, and individual differences in cognitive
+training outcomes are an important topic to be addressed in future studies.
+Geusgens et al. [109] reviewed 41 studies specifically looking for transfer effects
+during cognitive rehabilitation. They only included studies that trained compensation strategies as opposed to cognitive skills training. Out of the 41 reviewed
+studies, 36 were able to demonstrate some form of transfer. However, only
+22 studies actually evaluated transfer to daily-life activities while the others looked
+at either simulated lab-based activities or activities that were very similar to the
+previously trained ones. Out of these 22 studies, 18 were able to show transfer of
+learned abilities, but only six included statistical evidence for their results. Furthermore, the sample sizes of most studies were very small or based on single-case
+designs. Consequently, no clear-cut conclusions for or against strategy training
+transfer to daily activities can be drawn.
+The artwork of the virtual reality museum we presented here was maybe not
+nearly as advanced and capturing as commercial off-the-shelf games, which could
+create even higher levels of realism. Modern game engines already provide the
+technology to develop environments that can be easily recognized by users and
+allow for high visual quality. Transparency and ‘‘realism’’ in a broader sense can
+relate to plausibility and place illusions which are described by Slater [110].
+Plausibility illusion refers to the fact that the user believes the virtual scenario is
+actually occurring. It is caused by events and the scenario relating directly to the
+user (e.g. virtual character talking to user). For example, a cognitive task that is
+embedded in a user-relevant scenario directly relates to the therapy goal of the
+
+
+-----
+
+patient and represents a desired outcome of the patient’s rehabilitation (e.g. virtual
+kitchen with cooking tasks relates to the scenario that the patient aims to engage in
+independently at home). This stands in contrast to the abstract nature of traditional
+neuropsychological tests which may have little in common with real-world scenarios (e.g. using abstract objects for mental rotation). Scenarios of high realism
+are believed to be of advantage when patients deny their cognitive deficits. The
+realism of a task can potentially lead patients to compare their performance with
+common standards and past experiences and make them realize that their cognitive
+abilities may not match their subjective perception. This is the basis for patients
+actively engaging in cognitive training and making progress throughout their
+cognitive rehabilitation. As the growing number of serious games suggests,
+engaging game-like training content appears to be a method of choice to prevent
+frustration and boredom of users.
+It is important to note that inconsistencies may be due to several factors not
+related to the actual training program itself, including different cognitive outcome
+measures and modifications of the training program. The electrophysiological data
+helped to elucidate the functional processes which were sensitive to the training
+intervention and, on the other hand, to retest effects due to task repetition. Additionally, the mediating neuronal basis of the training gain was identified, thus,
+underlining the efficiency of the training to induce functional changes in the brain.
+More specifically, the cognitive training especially improved the global feature
+processing of visual arrays which may explain the improvement in target detection
+within a given time window in the near transfer task of visual conjunction search.
+These results cannot be explained by test repetition or by the mere social interaction of the training intervention, suggesting that a multilayered formal cognitive
+training is sufficient to facilitate neuronal plasticity in older age.
+Our study bears several shortcomings which may give directions for further
+studies. First of all, the cognitive training was multidimensional and aimed mainly
+at enhancing basic and executive functions tested by a number of our tasks in order
+to improve daily life activities. As the training was domain unspecific, it is not
+possible to show divergent results in two or more tasks in the effects of the training
+procedure. Further studies which aim to evaluate broad cognitive trainings should
+bear in mind (1) to use more than one transfer task which assess the same cognitive
+function in order to show convergent effects of the training and/or, (2) to use
+transfer tasks assessing cognitive functions which were not intended to be
+improved by the training in order to show divergent effects. An additional shortcoming of the present study is the fact that the virtual museum interface system
+was outdated compared to the more intuitive solution provided recently by
+Microsoft Kinect[1] for full-body tracking [111]. The virtual reality museum group
+received basic PC-practice which may have made them more experienced with
+computer technology than the other groups. However, although modern interaction
+devices such as the Microsoft KINECT 3D sensor for natural gesture interaction is
+
+1 Microsoft Kinect—www.kinectforwindows.org/www.xbox.com/kinect.
+
+
+-----
+
+more senior-friendly [112], our study interaction with the PC was reduced to a
+minimum and the manual responses were collected with special response buttons
+and not with a computer keyboard or a mouse. Therefore, we do think that a more
+advanced interaction for the cognitive training group may elicit even more transfer
+effects. Further training studies should try to exclude any confounding effect of the
+training procedure on the evaluation of the training effects.
+Older adults are the now fastest growing segment of Internet users [113].
+According to a 2010 Pew Internet and American Life survey, 78 % of adults aged
+50–64 years and 42 % of adults older than 65 years of age use the Internet. This is
+a sharp increase from 2000 when only 50 % of adults 50–64 years and 15 % of
+adults older than 65 years of age used the Internet [114]. As ownership of personal
+computers continues to grow and older adults have access to the Internet [115],
+cognitive training programs need to take fuller advantage of these outlets to
+improve cognitive function and delay cognitive decline in later life.
+
+### References
+
+1. Virvou, M., Katsionis, G.: On the usability and likeability of virtual reality games for
+education: the case of VR-ENGAGE. Comput. Educ. 50, 154–178 (2008)
+2. Lewis, T.M., Aggarwal, R., Rajaretnam, N., Grantcharov, T.P., Darzi, A.: Training in
+surgical oncology: the role of virtual reality simulation. Surg. Oncol. 20, 134–139 (2011)
+3. Rizzo, A., Kim, G.J.: A SWOT analysis of the field of virtual reality rehabilitation and
+therapy. Presence 14(2), 119–146 (2005)
+4. Rizzo, A., Schultheis, M., Kerns, K.A., Mateer, C.: Analysis of assets for virtual reality
+applications in neuropsychology. Neuropsychol. Rehabil. 14(1/2), 207–239 (2004)
+5. Laczo, J., Vlcek, K., Vyhnalek, M., Vajnerova, O., Ort, M., Holmerova, I., Tolar, M., Andel,
+R., Bojar, M., Hort, J.: Spatial navigation testing discriminates two types of amnestic mild
+cognitive impairment. Behav. Brain Res. 202, 252–259 (2009)
+6. Petersen, R.C., Smith, G.E., Waring, S.C., Ivnik, R.J., Tangalos, E.G., Kokmen, E.: Mild
+cognitive impairment: clinical characterization and outcome. Arch. Neurol. 56(3), 303–308
+(1999)
+7. Gauthier, S., Reisberg, B., Zaudig, M., Petersen, R.C., Ritchie, K., Broich, K., Belleville, S.,
+et al.: Mild cognitive impairment. Lancet 367(9518), 1262–1270 (2006)
+8. Petersen, R.C.: Mild cognitive impairment as a diagnostic entity. J. Intern. Med. 256(3),
+183–194 (2004)
+9. Winblad, B., Palmer, K., Kivipelto, M., Jelic, V., Fratiglioni, L., Wahlund, L.-O., Nordberg,
+A., et al.: Mild cognitive impairment–beyond controversies, towards a consensus: report of
+the International Working Group on Mild Cognitive Impairment. J. Intern. Med. 256(3),
+240–246 (2004)
+10. Eschweiler, G.W., Leyhe, T., Klöppel, S., Hüll, M.: New developments in the diagnosis of
+dementia. Dtsch. Ärzteblatt Int. 107(39), 677–683 (2010)
+11. Hanfelt, J.J., Wuu, J., Sollinger, A.B., Greenaway, M.C., Lah, J.J., Levey, A.I., Goldstein,
+F.C.: An exploration of subgroups of mild cognitive impairment based on cognitive,
+neuropsychiatric and functional features: analysis of data from the National Alzheimer’s
+Coordinating Center. Am. J. Geriatr. Psychiatry: Official J. Am. Assoc. Geriatr. Psychiatry
+19(11), 940–950 (2011)
+
+
+-----
+
+12. Petersen, R.C., Roberts, R.O., Knopman, D.S., Boeve, B.F., Geda, Y.E., Ivnik, R.J., Smith,
+G.E., et al.: Mild cognitive impairment: ten years later. Arch. Neurol. 66(12), 1447–1455
+(2009)
+13. Gold, D.A.: An examination of instrumental activities of daily living assessment in older
+adults and mild cognitive impairment. J. Clin. Exp. Neuropsychol. 37–41 (2012)
+14. Perneczky, R., Pohl, C., Sorg, C., Hartmann, J., Komossa, K., Alexopoulos, P., Wagenpfeil,
+S., et al.: Complex activities of daily living in mild cognitive impairment: conceptual and
+diagnostic issues. Age Ageing 35(3), 240–245 (2006)
+15. Guerreiro, R., Wojtas, A., Bras, J., Carrasquillo, M., Rogaeva, E., Majounie, E., Cruchaga,
+C., et al. : TREM2 Variants in Alzheimer’s Disease. N. Engl. J. Med. (2012)
+(121114171407007)
+16. Patel, B.B., Holland, N.W.: Mild cognitive impairment: hope for stability, plan for
+progression. Clevel. Clin. J. Med. 79(12), 857–864 (2012)
+17. Albert, M.S., DeKosky, S.T., Dickson, D., Dubois, B., Feldman, H.H., Fox, N.C., Gamst,
+A., et al.: The diagnosis of mild cognitive impairment due to Alzheimer’s disease:
+recommendations from the National Institute on Aging-Alzheimer’s Association
+workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimer’s & Dement.
+J. Alzheimer’s Assoc. 7(3), 270–279 (2011)
+18. Wang, H.-M., Yang, C.-M., Kuo, W.-C., Huang, C.-C., Kuo, H.-C.: Use of a modified
+spatial-context memory test to detect amnestic mild cognitive impairment. PLoS ONE 8(2),
+e57030 (2013)
+19. Pai, M.C., Jacobs, W.J.: Int. J. Geriatr. Psychiatry 19, 250–255 (2004)
+20. Cherrier, M.M., Mendez, M., Perryman, K.: Neuropsychiatry Neuropsychol. Behav. Neurol.
+14, 159–168 (2001)
+21. Kalova, E., Vlcek, K., Jarolimova, E., Bures, J.: Behav. Brain Res. 159, 175–186 (2005)
+22. Kessels, R.P., Feijen, J., Postma, A.: Dement. Geriatr. Cogn. Disord. 20, 184–191 (2005)
+23. Mapstone, M., Steffenella, T.M., Duffy, C.J.: A visuospatial variant of mild cognitive
+impairment: getting lost between aging and AD. Neurology 60(5), 802–808 (2003)
+24. Hort, J., Laczó, M., Vyhnálek, M., Bojar, J., Bureš, J., Vlcˇek, K.: Spatial navigation deficit
+in amnestic mild cognitive impairment. Proc. Natl. Acad. Sci. 104(10), 4042–4047 (2007)
+25. Rey, B., Alcañiz, M.: Research in Neuroscience and Virtual Reality. InTech (2010)
+26. Cornwell, B.R., Johnson, L.L., Holroyd, T., Carver, F.W., Grillon, C.: Human hippocampal
+and parahippocampal theta during goal-directed spatial navigation predicts performance on
+a virtual Morris water maze. J. Neurosci.: Official J. Soc. Neurosci. 28(23), 5983–5990
+(2008)
+27. Harvey, C.D., Collman, F., Dombeck, D.A., Tank, D.W.: Intracellular dynamics of
+hippocampal place cells during virtual navigation. Nature 461(7266), 941–946 (2009)
+28. Plancher, G., Tirard, A., Gyselinck, V., Nicolas, S., Piolino, P.: Using virtual reality to
+characterize episodic memory profiles in amnestic mild cognitive impairment and
+Alzheimer’s disease: influence of active and passive encoding. Neuropsychologia 50(5),
+592–602 (2012)
+29. Slater, M., Antley, A., Davison, A., Swapp, D., Guger, C., Barker, C., Pistrang, N., et al.: A
+virtual reprise of the Stanley Milgram obedience experiments. PLoS ONE 1, e39 (2006)
+30. Waller, D., Richardson, A.R.: Correcting distance estimates by interacting with immersive
+virtual environments: effects of task and available sensory information. J. Exp. Psychol.
+Appl. 14(1), 61–72 (2008). doi:10.1037/1076-898X.14.1.61
+31. Klauer, K.C., Zhao, Z.: Double dissociations in visual and spatial short-term memory.
+J. Exp. Psychol. Gen. 133(3), 355–381 (2004)
+32. Lithfous, S., Dufour, A., Després, O.: Spatial navigation in normal aging and the prodromal
+stage of Alzheimer’s disease: insights from imaging and behavioral studies. Ageing Res.
+Rev. 12(1), 201–213 (2012)
+33. O’Keefe, J., Dostrovsky, J.: Brain Res. 34, 171–175 (1971)
+34. Morris, R.G., Garrud, P., Rawlins, J.N., O’Keefe, J.: Nature 297, 681–683 (1982)
+
+
+-----
+
+35. Astur, R.S., Taylor, L.B., Mamelak, A.N., Philpott, L., Sutherland, R.J.: Behav. Brain Res.
+132, 77–84 (2002)
+36. Feigenbaum, J.D., Morris, R.G.: Neuropsychology 18, 462–472 (2004)
+37. Maguire, E.A., Burgess, N., Donnett, J.G., Frackowiak, R.S., Frith, C.D., O’Keefe, J.:
+Science 280, 921–924 (1998)
+38. Abrahams, S., Pickering, A., Polkey, C.E., Morris, R.G.: Neuropsychologia 35, 11–24
+(1997)
+39. De Lillo, C., James, F.C.: Spatial working memory for clustered and linear configurations of
+sites in a virtual reality foraging task. Cogn. Process. 13(Suppl 1), S243–S246 (2012)
+40. Koenig, S., Crucian, S., Dalrymple-Alford, J., Dünser, A.: Assessing navigation in real and
+virtual environments: a validation study. Int. J. Disabil. Hum. Dev. 10(4), 325–330 (2010)
+41. Caffo, A., De Caro, M., Picucci, L., Notarnicola, A., Settanni, A., Livrea, P., Lancioni, G.,
+Bosco, A.: Reorientation deficits are associated with amnestic mild cognitive impairment.
+Am. J. Alzheimer’s Dis. Dement. 27(5), SAGE Aug 1 (2012)
+42. Liarokapis, F., Anderson, E.: Using augmented reality as a medium to assist teaching in
+higher education. To appear in Eurographics 2010, Education Program, Norrkfping,
+Sweden, 4–7 May 2010
+43. Tsolaki, M., Kounti, F., Agogiatou, C., Poptsi, E., Bakoglidou, E., Zafeiropoulou, M.,
+Soumbourou, A., et al.: Effectiveness of nonpharmacological approaches in patients with
+mild cognitive impairment. Neuro-degenerative Dis. 8(3), 138–145 (2011)
+44. Tsatali, M., Tarnanas, I., Malegiannaki, A., Tsolaki, M.: Does cognitive training with the
+use of a virtual museum improve neuropsychological performance in aMCI? In: 22nd
+Alzheimer Europe Conference in Vienna, Assistive Technologies P3, 121–134 (2012)
+45. Ackerman, P.L., Kanfer, R., Calderwood, C.: Use it or lose it? WII brain exercise practice
+and reading for domain knowledge. Psychol. Aging 25, 753–766 (2010)
+46. Owen, A.M., Hampshire, A., Grahn, J.A., Stenton, R., Dajani, S., Burns, A.S., Howard, R.J.,
+Ballard, C.G.: Putting brain training to the test. Nature 465, 775–778 (2010)
+47. Peretz, C., Korczyn, A.D., Shatil, E., Aharonson, V., Birnboim, S., Giladi, N.: Computerbased, personalized cognitive training versus classical computer games: a randomized
+double-blind prospective trial of cognitive stimulation. Neuroepidemiology 36, 91–99
+(2011)
+48. Hertzog, C., Kramer, A.F., Wilson, R.S., Lindenberger, U.: Enrichment effects on adult
+cognitive development: can the functional capacity of older adults be preserved and
+enhanced? Psychol. Sci. Public Interest 9, 1–65 (2009)
+49. Denney, N.W.: A model of cognitive-development across the life-span. Dev. Rev. 4,
+171–191 (1984)
+50. Baron, A., Mattila, W.R.: Response slowing of older adults: effects of time-limit
+contingencies on single- and dual-task performances. Psychol. Aging 4, 66–72 (1989)
+51. Buschkuehl, M., Jaeggi, S.M., Hutchison, S., Perrig-Chiello, P., Dapp, C., Muller, M., Breil,
+F., Hoppeler, H., Perrig, W.J.: Impact of working memory training on memory performance
+in old–old adults. Psychol. Aging 23, 743–753 (2008)
+52. Dahlin, E., Neely, A.S., Larsson, A., Backman, L., Nyberg, L.: Transfer of learning after
+updating training mediated by the striatum. Science 320, 1510–1512 (2008)
+53. Sammer, G., Reuter, I., Hullmann, K., Kaps, M., Vaitl, D.: Training of executive functions
+in Parkinson’s disease. J. Neurol. Sci. 248, 115–119 (2006)
+54. Bherer, L., Kramer, A.F., Peterson, M.S., Colcombe, S., Erickson, K., Becic, E.: Transfer
+effects in task-set cost and dual-task cost after dual-task training in older and younger adults:
+further evidence for cognitive plasticity in attentional control in late adulthood. Exp. Aging
+Res. 34, 188–219 (2008)
+55. Davidson, D.J., Zacks, R.T., Williams, C.C.: Stroop interference, practice, and aging.
+Neuropsychol. Dev. Cogn. B AgingNeuropsychol. Cogn. 10, 85–98 (2003)
+56. Karbach, J., Kray, J.: How useful is executive control training? Age differences in near and
+far transfer of task-switching training. Dev. Sci. 12, 978–990 (2009)
+
+
+-----
+
+57. Ball, K., Berch, D.B., Helmers, K.F., Jobe, J.B., Leveck, M.D., Marsiske, M., Morris, J.N.,
+Rebok, G.W., Smith, D.M., Tennstedt, S.L., Unverzagt, F.W., Willis, S.L.: Effects of
+cognitive training interventions with older adults: a randomized controlled trial. JAMA 288,
+2271–2281 (2002)
+58. Schmiedek, F., Lovden, M., Lindenberger, U.: Hundred days of cognitive training enhance
+broad cognitive abilities in adulthood: findings from the COGITO study. Front. Aging
+Neurosci. 2, 27 (2010)
+59. Klingberg, T.: Training and plasticity of working memory. Trends Cogn. Sci. 14, 317–324
+(2010)
+60. Achtman, R.L., Green, C.S., Bavelier, D.: Video games as a tool to train visual skills.
+Restor. Neurol. Neurosci. 26, 435–446 (2008)
+61. Green, C.S., Bavelier, D.: Exercising your brain: a review of human brain plasticity and
+training-induced learning. Psychol. Aging 23, 692–701 (2008)
+62. Gee, J.P.: What Video Games Have to Teach Us about Learning and Literacy. Palgrave
+Macmillan, New York, NY (2007)
+63. Shiffrin, R.M., Schneider, W.: Controlled and automatic human information processing: II.
+Perceptual learning, automatic attending and a general theory. Psychol. Rev. 84, 127–190
+(1977)
+64. Logan, G.D.: Automaticity, resources, and memory: theoretical controversies and practical
+implications. Hum. Factors 30, 583–598 (1988)
+65. Feng, J., Spence, I., Pratt, J.: Playing an action video game reduces gender differences in
+spatial cognition. Psychol. Sci. 18, 850–855 (2007)
+66. Basak, C., Boot, W.R., Voss, M.W., Kramer, A.F.: Can training in a real-time strategy video
+game attenuate cognitive decline in older adults? Psychol. Aging 23(4), 756–777 (2008)
+67. Mahncke, H.W., Connor, B.B., Appelman, J., Ahsanuddin, O.N., Hardy, J.L., Wood, R.A.,
+Joyce, N.M., Boniske, T., Atkins, S.M., Merzenich, M.M.: Memory enhancement in healthy
+older adults using a brain plasticity-based training program: a randomized, controlled study.
+Proc. Natl. Acad. Sci. U.S.A. 103, 12523–12528 (2006)
+68. Uchida, S., Kawashima, R.: Reading and solving arithmetic problems improves cognitive
+functions of normal aged people: a randomized controlled study. Age (Dordr.) 30, 21–29
+(2008)
+69. Smith, G.E., Housen, P., Yaffe, K., Ruff, R., Kennison, R.F., Mahncke, H.W., Zelinski,
+E.M.: A cognitive training program based on principles of brain plasticity: results from the
+improvement in Memory with Plasticity-based Adaptive Cognitive Training (IMPACT)
+study. J. Am. Geriatr. Soc. 57, 594–603 (2009)
+70. Cicerone, K.D., Dahlberg, C., Kalmar, K., Langenbahn, D.M., Malec, J.F., Bergquist, T.F.,
+Felicetti, T., Giacino, J.T., Harley, P.J., Harrington, D.E., Herzog, J., Kneipp, S., Laatsch,
+L., Morse, P.A.: Evidence-based cognitive rehabilitation: recommendations for clinical
+practice. Arch. Phys. Med. Rehabil. 81, 1596–1615 (2000)
+71. Cicerone, K.D., Dahlberg, C., Malec, J.F., Langenbahn, D.M., Felicetti, T., Kneipp, S.,
+Ellmo, W., Kalmar, K., Giacino, J.T., Harlez, P., Laatsch, L., Morse, P., Catanese, J.:
+Evidence-based cognitive rehabilitation: updated review of the literature from 1998 through
+2002. Arch. Phys. Med. Rehabil. 86, 1596–1615 (2005)
+72. Tucker-Drob, E.M.: Neurocognitive functions and everyday functions change together in
+old age. Neuropsychology 25, 368–377 (2011)
+73. Ylvisaker, M., Turkstra, L.S., Coelho, C.: Behavioral and social interventions for
+individuals with traumatic brain injury: a summary of the research with clinical
+implications. Semin. Speech Lang. 26(4), 256–257 (2005)
+74. Sohlberg, M.M., Mateer, C.A. (eds.): Cognitive rehabilitation: an integrative
+neuropsychological approach. Guilford Press, New York (2001)
+75. Mozolic, J.L., Hayasaka, S., Laurienti, P.J.: A cognitive training intervention increases
+resting cerebral blood flow in healthy older adults. Front. Hum. Neurosci. 4 (2010)
+76. Lustig, C., Shah, P., Seidler, R., Reuter-Lorenz, P.A.: Aging, training, and the brain: a
+review and future directions. Neuropsychol. Rev. 19(4), 504–522 (2009)
+
+
+-----
+
+77. Petersen, R.C., Parisi, J.E., Dickson, D.W., et al.: Neuropathologic features of amnestic mild
+cognitive impairment. Arch. Neurol. 63(5), 665–672 (2006)
+78. Stroop, J.R.: Studies of interference in serial verbal reactions. J. Exp. Psychol. 18, 643–662
+(1935)
+79. Papaliagkas, V., Kimiskidis, V., Tsolaki, M., Anogianakis, G.: Usefulness of event-related
+potentials in the assessment of mild cognitive impairment. BMC Neurosci. 9, 107 (2008)
+80. Kimiskidis, V., Papaliagkas, V.: Event-related potentials for the diagnosis of mild cognitive
+impairment and Alzheimer’s disease. Expert Opin. Med. Diagn. 6(1), 15–26 (2012)
+81. Pascual-Marqui, D.: Standardized low-resolution brain electromagnetic tomography
+(sLORETA): technical details. Methods Find. Exp. Clin. Pharmacol. D 24, 5–12 (2002)
+82. Holmes, A.P., Blair, R.C., Watson, J.D.G., Ford, I.: Nonparametric analysis of statistic
+images from functional mapping experiments. J. Cereb. Blood Flow Metab. 16(1), 7–22
+(1996)
+83. Li, S.C., Schmiedek, F., Huxhold, O., Röcke, C., Smith, J., Lindenberger, U.: Working
+memory plasticity in old age: practice gain, transfer, and maintenance. Psychol. Aging
+23(4), 731–742 (2008)
+84. Dennis, W., Scialfa, C.T., Ho, G.: Age differences in feature selection in triple conjunction
+search. J. Gerontol. B 59(4), P191–P198 (2004)
+85. Ho, G., Scialfa, C.T.: Age, skill transfer, and conjunction search. J. Gerontol. B 57(3),
+P277–P287 (2002)
+86. Cant, J.S., Goodale, M.A.: Attention to form or surface properties modulates different
+regions of human occipitotemporal cortex. Cereb. Cortex 17(3), 713–731 (2007)
+87. Mechelh, A., Humphreys, G.W., Mayall, K., Olson, A., Price, C.J.: Differential effects of
+word length and visual contrast in the fusiform and lingual gyri during reading. Proc. Royal
+Soc. B 267(1455), 1909–1913 (2000)
+88. Epstein., R.A.: Parahippocampal and retrosplenial contributions to human spatial
+navigation. Trends Cogn. Sci. 12(10), 88–396 (2008)
+89. Falkenstein, M., Hohnsbein, J., Hoormann, J.: Effects of choice complexity on different
+subcomponents of the late positive complex of the event-related potential.
+Electroencephalogr. Clin. Neurophysiol. 92(2), 148–160 (1994a)
+90. Falkenstein, M., Hohnsbein, J., Hoormann, J.: Time pressure effects on late components of
+the event-related potential (ERP). J. Psychophysiol. 8(1), 22–30 (1994b)
+91. Tam, C.W., Lam, L.C., Chiu, H.F., Lui, V.W.: Characteristic profiles of instrumental
+activities of daily living in Chinese older persons with mild cognitive impairment. Am.
+J. Alzheimers Dis. Dement. 22, 211–217 (2007)
+92. Pereira, F.S., Yassuda, M.S., Oliveira, A.M., Forlenza, O.V.: Executive dysfunction
+correlates with impaired functional status in older adults with varying degrees of cognitive
+impairment. Int. Psychogeriatr. 20, 1104–1115 (2008)
+93. Ahn, I.S., et al.: Impairment of instrumental activities of daily living in patients with mild
+cognitive impairment. Psychiatry Inv. 6, 180–184 (2009)
+94. Burton, C.L., Strauss, E., Bunce, D., Hunter, M.A., Hultsch, D.F.: Functional abilities in
+older adults with mild cognitive impairment. Gerontology 55, 570–581 (2009)
+95. Schmitter-Edgecombe, M., Woo, E., Greeley, D.R.: Characterizing multiple memory
+deficits and their relation to everyday functioning in individuals with mild cognitive
+impairment. Neuropsychology 23, 168–177 (2009)
+96. Aretouli, E., Brandt, J.: Everyday functioning in mild cognitive impairment and its
+relationship with executive cognition. Int. J. Geriatr. Psychiatry 25, 224–233 (2010)
+97. Bangen, K.J., et al.: Complex activities of daily living vary by mild cognitive impairment
+subtype. J. Int. Neuropsychol. Soc. 16, 630–639 (2010)
+98. Teng, E., Becker, B.W., Woo, E., Cummings, J.L., Lu, P.H.: Subtle deficits in instrumental
+activities of daily living in subtypes of mild cognitive impairment. Dement. Geriatr. Cogn.
+Disord. 30, 189–197 (2010)
+
+
+-----
+
+99. Teng, E., Becker, B.W., Woo, E., Knopman, D.S., Cummings, J.L., Lu, P.H.: Utility of the
+functional activities questionnaire for distinguishing mild cognitive impairment from very
+mild Alzheimer disease. Alzheimer Dis. Assoc. Disord. 24, 348–353 (2010)
+100. Schmiedek, F., Bauer, C., Lovden, M., Brose, A., Lindenberger, U.: Cognitive enrichment
+in old age: web-based training programs. GeroPsych 23(2), 59–67 (2010)
+101. Nouchi, R., Taki, Y., Takeuchi, H., Hashizume, H., Akitsuki, Y., Shigemune, Y., Sekiguchi,
+A., Kotozaki, Y., Tsukiura, T., Yomogida, Y., Kawashima, R.: Brain training game
+improves executive functions and processing speed in the elderly. PLoS ONE 7, e29676
+(2012)
+102. Saczynski, J.S., Rebok, G.W., Whitfield, K.E., Plude, D.J.: Effectiveness of CD-ROM
+memory training as a function of within-session autonomy. Int. J. Cogn. Technol. 9(1),
+25–33 (2004)
+103. Lee, B., Chen, Y., Hewitt, L.: Age differences in constraints encountered by seniors in their
+use of computers and the internet. Comput. Hum. Behav. 27(3), 1231–1237 (2011)
+104. Torres, A.: Cognitive effects of video games on older people. ICDVRAT 19, 191–198
+(2008)
+105. Belchior, P.D.C. Cognitive training with video games to improve driving skills and driving
+safety among older adults [dissertation]. ProQuest Information and Learning (2008)
+106. Colcombe, S., Kramer, A.F.: Fitness effects on the cognitive function of older adults: a
+meta-analytic study. Psychol. Sci. 14, 125–130 (2003)
+107. Weiand, C.: Neuropsychologische Behandlungsmethoden im Vergleich—Eine
+randomisierte klinische Studie [Comparing neuropsychological treatment methods—A
+randomized clinical trial]. PhD dissertation, University of Konstanz, Konstanz (2006)
+108. Colzato, L.S., Van Muijden, J., Band, G.P.H., Hommel, B.: Genetic modulation of training
+and transfer in older adults: BDNF Val66Met polymorphism is associated with wider useful
+field of view. Front. Psychol. 2, 199 (2011)
+109. Geusgens, C., Winkens, I., van Heugten, C., Jolles, J., van den Heuvel, W.: The occurence
+and measurement of transfer in cognitive rehabilitation: a critical review. J. Rehabil. Med.
+39(6), 425–439 (2007)
+110. Slater, M.: Place illusion and plausibility can lead to realistic behaviour in immersive virtual
+environments. Philos. Trans. R. Soc. B: Biol. Sci. 364, 3549–3557 (2009)
+111. Lange, B., Rizzo, A., Chang, C.-Y., Suma, E., Bolas, M.: Markerless Full Body Tracking:
+Depth-Sensing Technology within virtual environments. Paper presented at the Interservice/
+Industry Training, Simulation, and Education Conference (I/ITSEC), Orlando (2011)
+112. Nebelrath, R., Lu, C., Schulz, C.H., Frey, J., Alexandersson, J.: A gesture based system for
+context-sensitive interaction with smart homes. In: Wichert, R., Eberhardt, B. (eds.), 4.
+AALKongress, pp. 209–222 (2011)
+113. Hart, T.A., Chaparro, B.S., Halcomb, C.G.: Evaluating websites for older adults: adherence
+to ‘senior-friendly’ guidelines and end-user performance. Behav. Info. Technol. 27(3),
+191–199 (2008)
+114. Pew Internet and American Life Project: Changes in internet use by age, 2000–2010.
+Accessed 24 Jul 2011 (2010)
+115. Gamberini, L., Alcaniz, M., Barresi, G., Fabregat, M., Ibanez, F., et al.: Cognition,
+technology and games for the elderly: an introduction to ELDERGAMES project.
+PsychNology J 4(3), 285–308 (2006)
+
+
+-----
+

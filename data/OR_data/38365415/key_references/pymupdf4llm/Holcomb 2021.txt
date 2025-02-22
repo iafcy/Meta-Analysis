@@ -1,0 +1,1800 @@
+## Author manuscript
+#### Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+Published in final edited form as:
+Environ Sci Technol. 2021 September 07; 55(17): 11667–11679. doi:10.1021/acs.est.1c01538.
+
+## Impacts of an urban sanitation intervention on fecal indicators and the prevalence of human fecal contamination in Mozambique
+
+
+**David A. Holcomb[a,b], Jackie Knee[c,d], Drew Capone[a,c], Trent Sumner[c], Zaida Adriano[e],**
+**Rassul Nalá[f], Oliver Cumming[d], Joe Brown[a], Jill R. Stewart[a,*]**
+
+aDepartment of Environmental Sciences and Engineering, Gillings School of Global Public Health,
+University of North Carolina at Chapel Hill, Chapel Hill, North Carolina 27599, United States of
+America
+
+
+bDepartment of Epidemiology, Gillings School of Global Public Health, University of North
+Carolina at Chapel Hill, Chapel Hill, North Carolina 27599, United States of America
+
+cSchool of Civil and Environmental Engineering, Georgia Institute of Technology, Atlanta, Georgia
+30332, United States of America
+
+
+dDepartment of Disease Control, London School of Hygiene & Tropical Medicine, London WC1E
+7HT, United Kingdom
+
+eWe Consult, Maputo, Mozambique
+
+
+fInstituto Nacional de Saúde, Ministério da Saúde, Maputo, Mozambique
+
+### Abstract
+
+
+Fecal source tracking (FST) may be useful to assess pathways of fecal contamination in domestic
+environments and to estimate the impacts of water, sanitation, and hygiene (WASH) interventions
+in low-income settings. We measured two non-specific and two human-associated fecal indicators
+in water, soil, and surfaces before and after a shared latrine intervention from low-income
+households in Maputo, Mozambique participating in the Maputo Sanitation (MapSan) trial.
+Up to a quarter of households were impacted by human fecal contamination, but trends were
+unaffected by improvements to shared sanitation facilities. The intervention reduced E. coli gene
+concentrations in soil but did not impact culturable E. coli or the prevalence of human FST
+markers in a difference-in-differences analysis. Using a novel Bayesian hierarchical modeling
+approach to account for human marker diagnostic sensitivity and specificity, we revealed a
+high amount of uncertainty associated with human FST measurements and intervention effect
+estimates. The field of microbial source tracking would benefit from adding measures of
+diagnostic accuracy to better interpret findings, particularly when FST analyses convey insufficient
+information for robust inference. With improved measures, FST could help identify dominant
+
+*CORRESPONDING AUTHOR: jill.stewart@unc.edu; phone: (919) 966-7553.
+Supporting Information Available
+Site selection criteria; samples collected; qPCR assay details; calibration curves; detection limits; laboratory quality control;
+conditional probability; difference-in-differences estimates; validation studies; diagnostic accuracy; accuracy-adjusted intervention
+effect estimates; human fecal contamination prevalence estimates; prior distributions; model Stan code.
+
+
+-----
+
+pathways of human and animal fecal contamination in communities and guide implementation of
+effective interventions to safeguard health.
+
+### Graphical Abstract
+
+
+**Keywords**
+
+Diagnostic accuracy; water; sanitation; and hygiene; shared sanitation; microbial source tracking;
+fecal indicator; qPCR; Bayesian hierarchical model
+
+
+### Introduction
+
+Water, sanitation, and hygiene (WASH) interventions aim to improve health by preventing
+exposure to enteric pathogens, which are introduced to the environment in the feces of
+infected human and animal hosts.[1] Environmental pathways of pathogen exposure include
+contaminated environmental compartments like water, soil, and surfaces, as well as hands,
+flies, food, and fomites that have been in contact with contaminated environments.[2–4 ]
+
+Recent evaluations of a range of WASH interventions found inconsistent and largely
+negligible impacts on child diarrhea, growth, and enteric infection.[5–12] Notably, combined
+interventions did not provide greater protection than their constituent interventions alone,
+suggesting that key sources of pathogens and pathways of exposure are inadequately
+addressed by conventional WASH strategies.[6,7,9,13–15]
+
+
+Characterizing fecal contamination in potential exposure pathways may help explain why
+specific interventions do or do not improve health by identifying which pathways the
+intervention interrupts and which remain unaffected. Fecal contamination is typically
+assessed by measuring fecal indicator organisms, microbes abundant in feces used to infer
+the presence of fecal contamination and therefore the likely presence of enteric pathogens,
+which are challenging to measure directly due to their diversity and low environmental
+concentrations.[15,16] Indicator organisms can also be used for fecal source tracking (FST) by
+targeting microbes specific to the feces of a particular host. Animals are important sources
+of fecal contamination in both domestic and public environments but traditional efforts have
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+focused on preventing exposure to human feces; differentiating between human and various
+animal feces could inform more appropriate intervention approaches.[4,17–22]
+
+Fecal indicator approaches have increasingly been applied to domestic environments in
+low-income settings with high burdens of enteric disease.[3,15–18,23–26] Occurrence of nonspecific indicators like Escherichia coli is challenging to interpret in these settings due
+to elevated and highly variable ambient concentrations, possibly from naturalized sources,
+which are typically assessed in limited numbers of (cross-sectional) observations from each
+environmental compartment.[16,27–30] Other than ruminant FST markers, host-associated fecal
+indicators have demonstrated poor diagnostic accuracy in domestic settings.[17,31,32,26,16 ]
+
+The use of multiple FST markers has been proposed to help address the limited accuracy
+of individual indicators.[33,34] Several studies have calculated the conditional probability
+of contamination by a specific fecal source given the detection of one or more sourceassociated indicators in one sample.[31,34–36] Such analyses provide valuable intuition
+about the uncertainty associated with individual measurements, which can be particularly
+important in decision-making contexts like beach closures. To our knowledge, diagnostic
+performance has not been similarly accounted for when FST has been used to infer patterns
+and predictors of source-specific fecal contamination in domestic environments, likely
+overstating the confidence of such estimates.[4,17,18,26,37–39]
+
+
+In this study, we analyze two non-specific and two human-associated fecal indicators in
+water, soil, and surfaces from low-income households in Maputo, Mozambique before and
+after a shared sanitation intervention. We explore the conditional probability of human
+fecal contamination in individual samples under different prevalence and indicator detection
+scenarios and develop a Bayesian hierarchical modeling approach that accounts for the
+diagnostic accuracy of multiple markers to estimate the prevalence of source-specific fecal
+contamination. Finally, we implement these models using both human markers to estimate
+intervention effects on the prevalence of human fecal contamination in multiple exposure
+pathways.
+
+### Materials and Methods
+
+
+**Study setting and intervention**
+
+We characterized fecal contamination of households with children participating in the
+[Maputo Sanitation (MapSan) study (clinicaltrials.gov](http://clinicaltrials.gov) [NCT02362932), a prospective,](https://clinicaltrials.gov/ct2/show/NCT02362932)
+controlled before and after health impact trial of an urban, onsite sanitation intervention.[40 ]
+
+
+The intervention was delivered to compounds (self-defined clusters of households sharing
+outdoor space) in low-income neighborhoods of Maputo, Mozambique, areas with high
+burdens of enteric disease and predominantly onsite sanitation infrastructure.[41,42] Similar
+compounds that did not receive the intervention were recruited to serve as control sites.
+At baseline, both intervention and control compounds shared sanitation facilities in poor
+condition.[26] The existing shared latrines in intervention compounds were replaced with
+pour-flush latrines that discharged aqueous effluent to infiltration pits and had sturdy,
+private superstructures. Intervention latrines were constructed between 2015 – 2016 by the
+nongovernmental organization (NGO) Water and Sanitation for the Urban Poor (WSUP),
+which selected intervention sites according to engineering and demand criteria (Table S1).[40]
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+**Data collection**
+
+The intervention impact on fecal contamination was evaluated using a controlled before-andafter (CBA) study design.[5,43] Intervention compounds were enrolled immediately before the
+new latrine was opened for use, with concurrent enrollment of control compounds conducted
+at a similar frequency (Table S1). Follow-up visits to each compound were conducted
+approximately 12 months following baseline enrollment. We administered compound-,
+household-, and child-level surveys during both baseline and follow-up visits, as described
+elsewhere.[5,42] Concurrent with survey administration during May – August 2015, we
+opportunistically collected environmental samples at a subset of MapSan study compounds
+from the shared outdoor space and from each household with children participating in
+the health study (see Supporting Information [SI]). During the 12-month follow-up phase
+in June – September 2016, we revisited the original subset of compounds and collected
+environmental samples from additional study compounds not sampled at baseline, as time
+permitted.
+
+
+Detailed descriptions of environmental sample collection, processing, and analysis have
+been published previously.[26] Briefly, we assessed fecal indicators in five environmental
+compartments: compound source water, household stored water, latrine entrance soil,
+household entrance soil, and household food preparation surfaces (see SI). Source water
+and latrine soil were sampled once per compound on each visit, while stored water, food
+preparation surfaces, and household soil were collected from each household with children
+enrolled in the health impacts study. Samples were processed by membrane filtration,
+preceded by manual elution for soil and swab samples, and the sample filters were analyzed
+for microbial indicators of fecal contamination using both culture- and molecular-based
+detection.[25,26,44] We enumerated culturable E. coli (cEC) from filters on modified mTEC
+broth (Hi-Media, Mumbai, India) and immediately archived additional filters at −80°C for
+molecular analysis.[16,45] Archived filters were analyzed by three locally validated real-time
+polymerase chain reaction (qPCR) assays targeting fecal microbe genes. The EC23S857
+(EC23S) assay targets E. coli and served as an indicator of non-specific fecal contamination,
+while HF183/BacR287 (HF183) and Mnif both target microbes specific to human feces and
+served as indicators of human-source fecal contamination.[46–48] Limits of detection for each
+assay were previously determined using receiver operating characteristic (ROC) analysis to
+identify optimal quantification cycle (Cq) cutoff values (see SI).[26,49]
+
+DNA was isolated from soil and surface sample filters using the DNeasy PowerSoil Kit
+(Qiagen, Hilden, Germany) and from water sample filters with the DNA-EZ ST01 Kit
+(GeneRite, North Brunswick, NJ, USA), with a positive control (PC) and negative extraction
+control (NEC) included in each batch of up to 22 sample filters. PCs consisted of a clean
+filter spiked with 2 × 10[8] copies of each composite DNA standard (Table S4).[26] Filters were
+treated with 3 μg salmon testes DNA (MilliporeSigma, Burlington, MA, USA) immediately
+before extraction as a specimen processing control (SPC) to assess PCR inhibition.[50,51] We
+tested each extract with four qPCR assays using a CFX96 Touch thermocycler (Bio-Rad,
+Hercules, CA), three targeting fecal microbes and Sketa22 targeting the salmon DNA SPC,
+with 10% of each sample type analyzed in duplicate for all microbial targets.[52] Each
+reaction consisted of 12.5 μL TaqMan Environmental Master Mix 2.0, 2.5 μL 10x primers/
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+probe mix, 5 μL nuclease free water (NFW), and 5 μL DNA template, for 25 μL total
+reaction volume. After an initial 10-minute, 95°C incubation period, cycling conditions
+specified by the original developers were followed for each assay (Table S3). Samples with
+Sketa22 quantification cycle (Cq) values > 3 above the mean Cq of extraction controls (NEC
+and PC) were considered inhibited and diluted 1:5 for further analysis. Each plate included
+three no-template controls (NTCs) and five-point, ten-fold dilution series of three extracted
+PCs, corresponding to triplicate reactions with 10[5] – 10[1] or 10[6] – 10[2] target gene copies
+(gc). Target concentrations were estimated from calibration curves fit to the standard dilution
+series using multilevel Bayesian regression with varying slopes and intercepts by extraction
+batch and instrument run (see SI).[53] Fecal indicator concentrations were log10 transformed
+and expressed as log10 colony forming units (cfu) or gc per 100 mL water, 100 cm[2] surface,
+or 1 dry gram soil.
+
+
+**Estimating intervention effects**
+
+We used a difference-in-differences (DID) approach to estimate the effect of the intervention
+on fecal indicator occurrence. DID enables unbiased estimation of the treatment effect in the
+absence of randomization, including when different samples of each group are observed preand post-treatment, under the “parallel trend” assumption that all unmeasured time-varying
+covariates related to the outcome are constant across treatment groups and that unmeasured
+covariates varying between treatment groups are constant through time.[43,54,55] Although
+we estimated gene copy concentrations for all fecal indicators assessed by qPCR, we
+treated the human markers as binary, diagnostic tests of the presence or absence of human
+fecal contamination due to their relatively low baseline detection frequency (and limited
+availability of concentration data as a result).[26] By contrast, E. coli was detected in the large
+majority of baseline samples by both culture and qPCR approaches; treating such outcomes
+as presence/absence would discard a great deal of information conveyed by the E. coli
+concentration measurements, producing a binary outcome with very little variation. Direct
+DID estimates for the mean concentration of non-specific indicators and the prevalence of
+human-associated indicators were obtained using a bootstrap approach with 2000 samples.
+We calculated the mean concentration or prevalence in each of the four design strata (pretreatment intervention compounds, post-treatment intervention compounds, pre-treatment
+control compounds, and post-treatment controls) by sample type, from which the DID was
+calculated directly (see SI). Bootstrap 95% compatibility intervals (CI) were obtained as the
+2.5 and 97.5 percentile values of the bootstrap samples.[56]
+
+
+We also conducted regression analyses incorporating potential confounding variables to
+obtain conditional DID estimates. We used the product-term representation of the DID
+estimator, in which binary indicators of treatment group, study phase, and their product
+(interaction) were included as linear predictors. The coefficient on the product term provides
+the conditional DID estimate.[54,57] Separate models were fit for each combination of
+fecal indicator and sample type using Bayesian multilevel models with compound-varying
+intercepts. Censored linear regression was used to estimate the intervention impact on the
+log10 concentration of non-specific indicators and the effect of the intervention on humanassociated indicator prevalence was estimated using logistic regression and the prevalence
+odds ratio (POR) as the measure of effect.[58,59] Models were fit with the package brms in
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+**R version 4.0.2 using 1500 warmup and 1000 sampling iterations on four chains (see SI for**
+prior distributions).[58,60] Estimates of the intervention effect were summarized by the mean
+and central 95% CI of the resulting 4000 posterior draws.
+
+Adjusted models included variables for selected compound, household, meteorological, and
+sample characteristics. Compound population density, presence of domestic animals, and
+asset-based household wealth scores were derived from household and compound surveys
+administered during each study phase.[42,61] Previous day mean temperature and seven-day
+antecedent rainfall were drawn from daily summary records for a local weather station.
+For stored water samples, we considered whether the storage container was covered and if
+the mouth was wide enough to admit hands. The surface material was considered for food
+surface swabs, and for soil samples we accounted for sun exposure and visibly wet soil
+surfaces. Covariate data sources and processing have been described previously.[26,42]
+
+
+**Conditional probability analysis**
+
+Both HF183 and Mnif were previously found to frequently misdiagnose human feces in
+our study area.[26] An indicator’s diagnostic accuracy is described by its sensitivity (Se), the
+probability of detecting the indicator when contamination is present, and specificity (Sp),
+the probability of not detecting the indicator when contamination is absent. The probability
+that a positive sample is contaminated depends on the marker sensitivity and specificity and
+the prevalence of human fecal contamination. This marginal probability of contamination
+can be approximated as the frequency of indicator detection among all samples to explore
+indicator reliability in a specific study.[31] We assessed the probability that human feces were
+present in an environmental sample in which HF183 or Mnif was detected using Bayes’
+Theorem and the local sensitivity and specificity of the two markers (see SI).[34–36] We
+calculated the conditional probability of contamination for HF183 and Mnif separately and
+for each combination of the two indicators by sample type. The marginal probability of
+contamination was approximated as the detection frequency of HF183 among all samples of
+a given type.
+
+
+**Accounting for diagnostic accuracy**
+
+Fecal indicator measurements are used as proxies for unobserved fecal contamination
+to estimate its prevalence and associations of interest, such as the effects of mitigation
+practices. This approach is vulnerable to measurement error, illustrated by the limited
+diagnostic accuracy of many host-associated fecal indicators.[16] Bias due to inaccurate
+diagnostic tests can be mitigated by incorporating external information on the sensitivity
+and specificity of the test.[62] The expected detection frequency, p, of a test with sensitivity Se
+and specificity Sp is given by
+
+
+p = Se × π +( 1 −Sp)( 1 −π) (1)
+
+for an underlying condition with prevalence π.[62,63] We adapted the approach of Gelman and
+Carpenter to estimate the intervention effect on human fecal contamination prevalence from
+observations of human-associated fecal indicators by incorporating external information
+on indicator performance within a Bayesian hierarchical framework.[63] We included the
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+product-term representation of the DID estimator and other covariates as linear predictors
+of the prevalence log-odds. Assuming indicator detection in the ith of n samples, yi, was
+Bernoulli-distributed with probability pi, where pi was related to the prevalence as shown in
+Equation (1), the accuracy-adjusted prevalence model was
+
+
+yi ∼Bernoulli(pi)
+pi = Se × πi + (1 −Sp)(1 −πi)
+logit( πi) = β[0] + β[P]Pi + β[T]T i + β[DID]Pi × Ti + Xiγ
+
+where β[0] is the intercept; β[P], β[T], and β[DID] are the parameters corresponding to indicators
+for study phase (P), treatment group (T), and their product; and γ is a p × 1 vector of
+regression coefficients corresponding to the p additional covariates in the n × p matrix X.
+
+
+(2)
+
+(3)
+
+
+We fit three models that differed by definition of Se and Sp. In the simplest case (Model
+1), we assumed a perfectly accurate test with Se = Sp = 1, thus p = π. The second model
+(Model 2) incorporated observations from the local validation analysis by assuming
+
+y[Se] ∼binomial(n[Se], Se)
+y[Sp] ∼binomial(n[Sp], Sp)
+
+
+for y[Se] positive results in n[Se] human fecal samples and y[Sp] negative results in n[Sp ]
+
+non-human fecal samples. Because our validation sample set was small and performance
+estimates vary widely between studies, we fit a third model (Model 3) featuring a metaanalysis of indicator sensitivity and specificity (see SI). We assumed the log-odds of the
+sensitivity in the kth study, Se[k], were normally distributed with mean μ[Se] and SD σ[Se], such
+that
+
+
+y[k]Se ∼binomial( n[k]Se, Se[k])
+logit( Se[k]) ∼normal(μ[Se], σ[Se])
+
+
+(4)
+
+
+with an equivalent structure for the specificity. We assigned k = 1 to our local validation
+study, using Se[1] and Sp[1] as the values of Se and Sp in Equation (2).[26,63] This emphasized
+the local performance data while allowing information from other settings to influence
+the estimates through partial pooling, with the extent of pooling learned from the data
+(expressed through σ[Se] and σ[Sp]).[59]
+
+
+**Modeling latent human fecal contamination**
+
+Fecal contamination can be understood as a latent environmental condition for which fecal
+indicators serve as imperfect diagnostic tests.[64,65] Information from multiple fecal indicators
+may be utilized by modeling each as arising from the same underlying contamination
+to potentially improve inference. We extended the meta-analytic model (Model 3) to
+include observations of both HF183 and Mnif in the same samples (Model 4), with
+
+
+separate detection probabilities, piℎf and pimn, obtained from indicator-specific sensitivity
+
+and specificity estimates applied to the same underlying prevalence, πi. As in previous
+models, the DID estimator and other predictor variables were included in a linear model on
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+the log-odds of πi, assuming that intervention effects and other covariates acted directly on
+the latent prevalence.
+
+As environmental compartments from the same compound share sources of fecal exposure,
+we extended the previous model to simultaneously consider observations of latrine soil,
+household soil, and stored water in each compound (Model 5). Sample type-specific
+
+
+prevalence variables, πi[type], were modeled as linear deviations from a latent compound
+level prevalence πj on the log-odds scale:
+
+
+logit(πi[type]) = α[type] + Xi[type]γ[type] + logit(π[j]comp)
+
+logit( π[j]comp) = α[j]comp + βPP[j] + βTT [j] + βDIDP[j] × T[j] + X[j]compγcomp
+
+α[j]comp ∼normal(μcomp, σcomp)
+α[[type]] ∼normal(0, σ[type])
+
+for sample i of a given type (latrine soil, household soil, or stored water) in compound
+
+
+(5)
+
+
+j, where αcomp is a compound-varying intercept and α[type] is a varying intercept by
+
+[j]
+
+sample type. Compound-level predictors, including the DID estimator terms, were placed
+on the compound-prevalence log-odds.[63,66] Parameters for sample-level and meteorological
+
+predictors in Xi[type] were estimated separately for each sample type.
+
+
+We coded each model in the probabilistic programming language Stan and fit the models
+using the RStan interface with four chains of 1000 warmup and 1000 sampling iterations
+each, for a total of 4000 posterior samples (see SI for Stan code and discussion of prior
+distributions).[67,68] Models 1–3 were fit separately for HF183 and Mnif in each sample type
+(latrine entrance soil, household entrance soil, and stored water), Model 4 was fit separately
+to each sample type, and a single Model 5 fit was produced incorporating both indicators
+and all sample types. In addition to the DID POR given by the product-term parameter,
+we used the posterior predictive distribution to estimate the prevalence of human fecal
+contamination in each stratum and to directly calculate DID on the probability scale.[59,69 ]
+
+Models were adjusted for the same covariates as the DID regression models.
+
+
+**Ethical approval**
+
+This study was approved by the Institutional Review Board of the University of North
+Carolina at Chapel Hill (IRB # 15–0963) and the associated health study was approved by
+the Comité Nacional de Bioética para a Saúde (CNBS), Ministério da Saúde, Republic of
+Mozambique (333/CNBS/14), the Ethics Committee of the London School of Hygiene and
+Tropical Medicine (reference # 8345), and the Institutional Review Board of the Georgia
+Institute of Technology (protocol # H15160). Environmental samples were only collected
+from households with enrolled children for whom written, informed parental or guardian
+consent had been given.
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+### Results
+
+**Sample characteristics**
+
+
+We collected a total of 770 environmental samples from 507 unique locations at 139
+households in 71 compounds. Samples were collected both pre- and post-intervention at
+263 locations (52%), for a total of 526 paired samples and 244 unpaired samples (Table
+S2). Characteristics expected to confound the relationship between sanitation and fecal
+contamination were largely similar between treatment arms during each study phase (Table
+1). Cumulative precipitation was higher on average in intervention compounds at baseline
+and in control compounds at follow-up. Water storage containers were also more frequently
+covered in intervention (75%) than control households (57%) at baseline, though the
+majority of containers were covered in all strata. Soil surfaces were more often visibly wet
+in control households (51%) than intervention (33%) at follow-up, both of which were lower
+than at baseline (57% and 48%, respectively). Most food preparation surfaces were plastic,
+though more often so in control households during both study phases. A higher percentage
+of compounds from both treatment arms reported owning domestic animals at follow-up
+(80–88%) than baseline (47–68%), which may be related to differences in the questionnaire
+between survey phases. Median household wealth was 40–45 on a 100-point index, with
+higher variance among controls at follow-up. Median compound population density ranged
+from 5.5–8.1 residents/100 m[2].
+
+
+**Fecal indicator occurrence**
+
+At least one fecal indicator was detected in 94% of samples (720/770) and E. coli was
+detected in 718 samples: by culture in 81% (611/755) and by qPCR in 86% (655/763).
+Mean cEC concentrations were lower at follow-up for all sample types in both treatment
+arms, a pattern not observed for EC23S concentrations (Figure 1). Of the 763 samples tested
+for human-associated indicators, 28% (217) were positive for at least one human marker.
+Human-associated indicators were common in soils (23–65% prevalence, across treatment
+groups and study phases) but only HF183 was regularly detected in stored water (10–22%)
+and both indicators were rare on food surfaces (0–9%). qPCR calibration curves (Table S5),
+detection limits (Table S6), and the results of laboratory quality controls are presented in the
+SI.
+
+
+Bootstrap DID estimates suggest the intervention reduced EC23S concentrations on food
+preparation surfaces and HF183 prevalence in household soil but minimally impacted
+fecal indicator occurrence in other sample types (Table S7). Notably, HF183 prevalence
+in household soil was similar among intervention households in both study phases but
+increased among control compounds at follow-up. By contrast, model-based DID estimates,
+adjusted for potential confounding, were consistent with no intervention effect on food
+preparation surface EC23S concentration or household soil HF183 prevalence (Table S8).
+Adjusted models instead indicate the intervention reduced latrine soil concentrations of
+EC23S [mean difference: −1.2 (95% CI: −2.1, −0.30) log10 gc/dry g]. Although several
+sample characteristics were imbalanced between treatment arms and study phases (Table
+1), estimates from models that adjusted for these variables were largely similar to the
+unadjusted models, with adjusted estimates marginally closer to the null in most cases (Table
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+S8). EC23S concentrations in latrine soil were again the exception, with a substantially
+larger reduction obtained under the adjusted model than the unadjusted estimate of −0.84
+(95% CI: −1.6, −0.02) log10 gc/dry g. Due to low detection frequency, models were not fit
+for either human marker on food surfaces or for Mnif in stored water; source water samples
+were excluded from all analyses.[26]
+
+
+**Conditional probability of human fecal contamination**
+
+The probability that a sample is contaminated with human feces given the detection of
+a human indicator is a function of the indicator’s sensitivity and specificity (Table S9)
+and the prevalence of human contamination in the study environment. At 15% prevalence
+(approximately the detection frequency of HF183 in stored water), the probability of human
+contamination given a positive test was 26% for HF183 and 30% for Mnif. Only with
+prevalence above 30–35% was detecting either indicator more likely than not to correctly
+diagnose human fecal contamination. Combining test results from both indicators improved
+identification of human contamination, increasing the probability of contamination to 45%
+when both markers were positive and the prevalence was 15% (Figure 2). However, the two
+human markers frequently disagreed when assessed in the same sample, conflicting in 44%
+of household soil, 43% of latrine soil, and 15% of stored water samples. Furthermore, at
+44% prevalence (the highest detection frequency for HF183, observed in latrine soils), there
+remained a >20% chance that a sample positive for both indicators was not contaminated.
+Among lower-prevalence sample types the conditional probability never reached 50%.
+Unless the background prevalence in the study area was about 45% or greater, it is unlikely
+that the use of HF183 and Mnif reliably identified human contamination in individual
+samples, particularly given the frequent disagreement between the two markers.
+
+
+**Prevalence of human fecal contamination**
+
+Posterior predictions from each of the five accuracy-adjusted models were used to
+estimate stratum-specific prevalence of human fecal contamination. To compare treatment
+assignments and study phases, we predicted prevalence for compounds with no animals or
+antecedent precipitation and the sample mean population density (7 persons/100 m[2]), wealth
+score (46), and previous-day temperature (20.4 °C), in which soil surfaces were dry and
+shaded and water storage containers possessed wide, uncovered mouths. The prevalence
+estimates were notably imprecise; the 95% CI of the HF183 prevalence in post-treatment
+latrine soil ranged from 3% to 92% for Model 2 (Table 2). The 95% CI widths were similar
+for Model 1 and the bootstrap estimates but were substantially wider for the other four
+models, which accounted for FST marker sensitivity and specificity (see SI). The intervals
+narrowed somewhat when both indicators were considered (Model 4) and narrowed further
+when all sample types were incorporated (Model 5) but were still wider than the estimates
+that did not account for diagnostic accuracy.
+
+
+Although we did not formally assess the pairwise differences between prevalence estimates,
+the wide and largely overlapping posterior predictive CIs indicate a limited ability to
+distinguish between prevalence estimates between different strata or models. The DID
+estimates on the probability scale were strongly consistent with no effect for all model
+specifications, which further suggests that the available data were insufficient to assess
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+prevalence differences between strata. The corresponding prevalence odds ratio estimates
+obtained directly from the DID product term were likewise imprecise (Figure S1).
+Nonetheless, the model-based prevalence estimates were consistently more similar between
+study phase and treatment group than the corresponding bootstrap estimates. This trend
+was notable for Model 5, which assumed that time and treatment effects acted directly on
+the compound-wide prevalence of human contamination, thus affecting all three sample
+types equally. The compound-level prevalence estimates were quite similar, particularly
+between study phases for the same treatment group: 27% (95% CI: 9–52%) at baseline
+and 28% (9–53%) at follow-up for control compounds and 22% (6–50%) at baseline and
+22% (6–47%) at follow-up for intervention compounds. The corresponding estimates for
+household soil were nearly identical to the compound-level estimates, with somewhat higher
+estimates for latrine soil and lower for stored water. Although the physical interpretation of
+this compound-level construct is uncertain, these estimates suggest that about a quarter of
+compounds were measurably impacted by human fecal contamination, which was unaffected
+by improvements to shared sanitation facilities.
+
+
+### Discussion
+
+The provision of shared latrines reduced average soil concentrations of the molecular
+E. coli marker EC23S at latrine entrances by more than 1-log10 but did not have a
+comparable effect on culturable E. coli. EC23S latrine soil concentrations rose more in
+control compounds than they fell in intervention compounds, which under the parallel
+trends assumption is interpreted as a secular trend upwards that the intervention mitigated,
+for a much smaller absolute reduction than suggested by the DID estimate (Figure 1).[43 ]
+
+
+However, an opposite, downward trend was observed for all cEC concentrations. This
+discrepancy between two tests for the same organism complicates the interpretation of the
+relatively strong intervention effect estimated for EC23S. While the exact reasons for this
+discrepancy are yet to be determined, preliminary evidence from a related analysis suggests
+that the modified mTEC broth used for E. coli culture may have produced colonies of the
+same color and morphology for Klebsiella spp., which are commonly soil-derived and not
+specific to feces.[70] By contrast, the developers of EC23S reported 95% specificity to E.
+coli and cross reactions only with other Escherichia species, not Klebsiella.[46] Accordingly,
+EC23S potentially better reflected trends in fecal contamination, while cEC may have been
+confounded by soil microbes more susceptible to environmental conditions, such as the 2016
+drought in southern Mozambique.[71]
+
+A cluster-randomized trial in rural Bangladesh likewise found scant evidence of reductions
+in culturable E. coli concentrations from sanitation improvements.[72,73] Latrine provision
+also did not reduce the prevalence of pathogenic E. coli genes in soil, meaning neither
+culture- nor molecular-based measurements of soil E. coli were affected.[39] Other recent
+trials have not assessed intervention impacts on fecal contamination of soil, but several
+have evaluated contamination of drinking water, with some also testing child hands, food,
+or fomites.[15] As with the present study, all found no effect of sanitation-only interventions
+on any environmental compartment; combined water, sanitation, and hygiene interventions
+improved drinking water quality in two studies.[13,14]
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+Measures of human-associated FST markers demonstrated that about a quarter of
+compounds were impacted by human fecal contamination, with compound-level prevalence
+estimates not statistically different at baseline and follow-up. Similarly, two clusterrandomized trials, in India and Bangladesh, found no effect of rural sanitation interventions
+on the prevalence of human-associated indicators in stored drinking water.[37,39] Both studies
+also assessed human markers in mother and child hand rinse samples, which were not
+collected in this study. No effect was observed for either hand type in India or on mother
+hands in Bangladesh, although the human marker prevalence may have been reduced on
+child hands.[39]
+
+Accounting for the diagnostic accuracy of FST markers revealed far greater uncertainty
+about host-specific fecal contamination, both of individual samples and population averages,
+than indicated by the raw indicator measurements. The relatively poor sensitivity and
+specificity of both human markers in this setting severely limited their ability to identify
+specific samples contaminated with human feces, but even moderate improvements in
+accuracy could substantially increase FST marker utility. For example, a study in Singapore
+reported 75% sensitivity and 89% specificity for HF183,[74] corresponding to a 55% chance a
+positive sample is contaminated at 15% background prevalence and an 84% chance at 44%
+prevalence, compared with 26% and 60%, respectively, for detection of HF183 in our study.
+Correcting for indicator sensitivity and specificity to human-source contamination, coupled
+with the limited observations of each sample type, yielded imprecise prevalence estimates
+that were consistent with both near absence and almost omnipresence of contamination.
+While the reduced amplification efficiency of HF183 (82%) may have contributed to
+its low sensitivity, it produced similar accuracy-corrected estimates as Mnif, which was
+95% efficient (Table S5). This imprecision inhibited detecting intervention effects. The
+point estimates for the intervention effect were relatively close to the null but the full
+posterior distributions were consistent with both large reductions and substantial increases
+in prevalence attributable to the intervention. This analysis does not rule out the possibility
+that sanitation improvements reduced the prevalence of human fecal contamination. Rather,
+it strongly suggests that the tools used were inadequate, conveying too little information to
+address the research question with an acceptable degree of confidence.
+
+
+These limitations highlight the importance of conducting local validation studies for
+any new FST application.[75] Accounting for diagnostic accuracy is unlikely to improve
+the strength or precision of estimates, but may help mitigate overconfidence and
+overinterpretation by revealing limitations of the available measurements. This practice
+could also be extended to account for indicator sensitivity and specificity to strictly fecal
+targets, rather than environmental microbes with non-fecal origins, although we lacked
+the appropriate data to implement such an analysis for our two non-specific indicators,
+EC23S and cEC. As the diagnostic accuracy framework is currently limited to binary
+outcomes, analysis of such high-prevalence indicators would benefit from the development
+of analogous approaches for continuous outcomes. Given the intermingling in low-income
+settings of humans and animals, and their gut microbiomes, alternative FST targets such
+as mitochondrial DNA could prove more accurate.[76,77] Recent technological advances also
+present opportunities for new approaches that might bypass the limitations of the current
+FST paradigm, including portable, long-read sequencing platforms for metagenomic-based
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+source tracking and parallel PCR platforms that render simultaneous analysis of multiple
+FST markers and comprehensive direct pathogen detection increasingly feasible.[20,78–82 ]
+
+These technologies will also need to overcome the substantial variability, limited analytical
+sensitivity, and matrix interference characteristic of environmental microbial assessments.[16]
+
+
+The low signal typical of environmental measurements suggests that study designs—
+preferably longitudinal—that maximize observations on select pathways of greatest
+interest should be prioritized to support more robust inference, regardless of analytical
+approach.[83] A recent longitudinal analysis of E. coli concentrations in rural Bangladesh,
+collected at eight timepoints over 2.5 years from 720 households, demonstrates the
+advantages of maximizing the number of basic measurements across time. Although pooled
+estimates from certain sample types achieved statistical significance, the sheer quantity
+of information available convincingly demonstrated the lack of physically meaningful
+sanitation intervention impacts on ambient fecal contamination.[73]
+
+Many have speculated that sanitation’s apparent lack of effect may be due in part to animal
+fecal contamination.[12,22] Animal feces often contain pathogens capable of infecting humans
+and animal fecal biomass in domestic environments is estimated to far exceed that from
+humans. [22,84–86] Inadequate management of child feces and fecal sludge, contamination
+of food and water outside the home, and inadequate community-level drainage, solid
+waste, and sanitation services all present potential pathways of continued contamination
+despite household sanitation improvements.[24,87–92] Recognizing calls for “transformative”
+WASH to address these multifarious hazards, sustained progress may require high standards
+of housing and public services in addition to WASH improvements, necessitating multisectoral coordination and financing.[12,93–95] Even small treatment effects may translate to
+positive economic benefits.[12] Additionally, quality sanitation infrastructure can provide
+important benefits irrespective of preventing pathogen exposure, particularly in crowded
+urban settlements.[96,97] For example, previous research found users of MapSan intervention
+latrines and similar facilities in the same neighborhoods reported reduced disgust and
+embarrassment about unhygienic conditions and improved perceptions of security and
+privacy.[98] Based on the results of our study, we recommend future research to understand
+the etiology and ecology of fecal pathogens in domestic environments and beyond to help
+inform interventions needed to construct healthy environments and to protect children’s
+health.
+
+
+### Supplementary Material
+
+Refer to Web version on PubMed Central for supplementary material.
+
+
+### Acknowledgment
+
+This study was funded by the United States Agency for International Development under Translating Research
+into Action, Cooperative Agreement No. GHS-A-00-09-00015-00, and the National Institute of Environmental
+Health Sciences (T32ES007018). This work was supported, in whole or in part, by the Bill & Melinda Gates
+Foundation OPP1137224. Under the grant conditions of the Foundation, a Creative Commons Attribution 4.0
+Generic License has already been assigned to the Author Accepted Manuscript version that might arise from this
+[submission. Deidentified data are publicly available on OSF (https://osf.io/53gwy/). We gratefully acknowledge](https://osf.io/53gwy/)
+our implementing partner, Water and Sanitation for the Urban Poor; the field research team at WE Consult; the
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+laboratory staff at the Mozambique National Institute of Health; and Olimpio Zavale, Olivia Ginn, and Anna
+Stamatogiannakis for sampling support.
+
+
+### References
+
+(1). Julian TREnvironmental Transmission of Diarrheal Pathogens in Low and Middle Income
+Countries. Environ. Sci. Process. Impacts2016, 18 (8), 944–955. 10.1039/C6EM00222F.
+
+[PubMed: 27384220]
+(2). Wagner EG; Laniox JNExcreta Disposal for Rural Areas and Small Communities. Monogr. Ser.
+World Health Organ. 1958, 39, 1–182.
+(3). Sclar GD; Penakalapati G; Amato HK; Garn JV; Alexander K; Freeman MC; Boisson S; Medlicott
+KO; Clasen TAssessing the Impact of Sanitation on Indicators of Fecal Exposure along Principal
+Transmission Pathways: A Systematic Review. Int. J. Hyg. Environ. Health2016, 219 (8), 709–
+723. 10.1016/j.ijheh.2016.09.021. [PubMed: 27720133]
+(4). Fuhrmeister ER; Ercumen A; Pickering AJ; Jeanis KM; Ahmed M; Brown S; Arnold BF; Hubbard
+AE; Alam M; Sen D; Islam S; Kabir MH; Kwong LH; Islam M; Unicomb L; Rahman M;
+Boehm AB; Luby SP; Colford JM; Nelson KLPredictors of Enteric Pathogens in the Domestic
+Environment from Human and Animal Sources in Rural Bangladesh. Environ. Sci. Technol2019,
+53 (17), 10023–10033. 10.1021/acs.est.8b07192. [PubMed: 31356066]
+(5). Knee J; Sumner T; Adriano Z; Anderson C; Bush F; Capone D; Casmo V; Holcomb DA; Kolsky
+P; MacDougall A; Molotkova E; Braga JM; Russo C; Schmidt WP; Stewart J; Zambrana W;
+Zuin V; Nalá R; Cumming O; Brown JEffects of an Urban Sanitation Intervention on Childhood
+Enteric Infection and Diarrhea in Maputo, Mozambique: A Controlled before-and-after Trial.
+eLife2021, 10, e62278. 10.7554/eLife.62278. [PubMed: 33835026]
+(6). Null C; Stewart CP; Pickering AJ; Dentz HN; Arnold BF; Arnold CD; Benjamin-Chung J; Clasen
+T; Dewey KG; Fernald LCH; Hubbard AE; Kariger P; Lin A; Luby SP; Mertens A; Njenga
+SM; Nyambane G; Ram PK; Colford JMEffects of Water Quality, Sanitation, Handwashing, and
+Nutritional Interventions on Diarrhoea and Child Growth in Rural Kenya: A Cluster-Randomised
+Controlled Trial. Lancet Glob. Health2018, 6 (3), e316–e329. 10.1016/S2214-109X(18)30005-6.
+
+[PubMed: 29396219]
+(7). Luby SP; Rahman M; Arnold BF; Unicomb L; Ashraf S; Winch PJ; Stewart CP; Begum F;
+Hussain F; Benjamin-Chung J; Leontsini E; Naser AM; Parvez SM; Hubbard AE; Lin A; Nizame
+FA; Jannat K; Ercumen A; Ram PK; Das KK; Abedin J; Clasen TF; Dewey KG; Fernald LC;
+Null C; Ahmed T; Colford JMEffects of Water Quality, Sanitation, Handwashing, and Nutritional
+Interventions on Diarrhoea and Child Growth in Rural Bangladesh: A Cluster Randomised
+Controlled Trial. Lancet Glob. Health2018, 6 (3), e302–e315. 10.1016/S2214-109X(17)30490-4.
+
+[PubMed: 29396217]
+(8). Grembi JA; Lin A; Karim MA; Islam MO; Miah R; Arnold BF; McQuade ETR; Ali S; Rahman
+MZ; Hussain Z; Shoab AK; Famida SL; Hossen MS; Mutsuddi P; Rahman M; Unicomb
+L; Haque R; Taniuchi M; Liu J; Platts-Mills JA; Holmes SP; Stewart CP; Benjamin-Chung
+J; Colford JM; Houpt ER; Luby SPEffect of Water, Sanitation, Handwashing and Nutrition
+Interventions on Enteropathogens in Children 14 Months Old: A Cluster-Randomized Controlled
+Trial in Rural Bangladesh. J. Infect. Dis2020, jiaa549. 10.1093/infdis/jiaa549.
+(9). Humphrey JH; Mbuya MNN; Ntozini R; Moulton LH; Stoltzfus RJ; Tavengwa NV; Mutasa
+K; Majo F; Mutasa B; Mangwadu G; Chasokela CM; Chigumira A; Chasekwa B; Smith LE;
+Tielsch JM; Jones AD; Manges AR; Maluccio JA; Prendergast AJIndependent and Combined
+Effects of Improved Water, Sanitation, and Hygiene, and Improved Complementary Feeding,
+on Child Stunting and Anaemia in Rural Zimbabwe: A Cluster-Randomised Trial. Lancet Glob.
+Health2019, 7 (1), e132–e147. 10.1016/S2214-109X(18)30374-7. [PubMed: 30554749]
+(10). Pickering AJ; Crider Y; Sultana S; Swarthout J; Goddard FG; Anjerul Islam S; Sen S; Ayyagari
+R; Luby SPEffect of In-Line Drinking Water Chlorination at the Point of Collection on Child
+Diarrhoea in Urban Bangladesh: A Double-Blind, Cluster-Randomised Controlled Trial. Lancet
+Glob. Health2019, 7 (9), e1247–e1256. 10.1016/S2214-109X(19)30315-8. [PubMed: 31402005]
+(11). Reese H; Routray P; Torondel B; Sinharoy SS; Mishra S; Freeman MC; Chang HH; Clasen
+TAssessing Longer-Term Effectiveness of a Combined Household-Level Piped Water and
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+Sanitation Intervention on Child Diarrhoea, Acute Respiratory Infection, Soil-Transmitted
+Helminth Infection and Nutritional Status: A Matched Cohort Study in Rural Odisha,. Int. J.
+Epidemiol2019, 48 (6), 1757–1767. 10.1093/ije/dyz157. [PubMed: 31363748]
+(12). Whittington D; Radin M; Jeuland MEvidence-Based Policy Analysis? The Strange Case of the
+Randomized Controlled Trials of Community-Led Total Sanitation. Oxf. Rev. Econ. Policy2020,
+36 (1), 191–221. 10.1093/oxrep/grz029.
+(13). Ercumen A; Mertens A; Arnold BF; Benjamin-Chung J; Hubbard AE; Ahmed MA; Kabir MH;
+Rahman Khalil Md. M.; Kumar A; Rahman Md. S.; Parvez SM; Unicomb L; Rahman M; Ram
+PK; Clasen T; Luby SP; Colford JMEffects of Single and Combined Water, Sanitation and
+Handwashing Interventions on Fecal Contamination in the Domestic Environment: A ClusterRandomized Controlled Trial in Rural Bangladesh. Environ. Sci. Technol2018, 52 (21), 12078–
+12088. 10.1021/acs.est.8b05153. [PubMed: 30256102]
+(14). Pickering AJ; Swarthout J; Mureithi M; Mboya J; Arnold BF; Wolfe M; Dentz HN; Lin A;
+Arnold CD; Rao G; Stewart CP; Ram PK; Clasen T; Colford JM; Null CCan Individual and
+Integrated Water, Sanitation, and Handwashing Interventions Reduce Fecal Contamination in the
+Household Environment? Evidence from the WASH Benefits Cluster-Randomized Trial in Rural
+Kenya. bioRxiv2019. 10.1101/731992.
+(15). Goddard F; Ban R; Barr DB; Brown J; Cannon J; Colford JM; Eisenberg JNS; Ercumen A;
+Petach H; Freeman MC; Levy K; Luby SP; moe christine; Pickering AJ; Sarnat JA; Stewart JR;
+Thomas EA; Taniuchi M; Clasen TFMeasuring Environmental Exposure to Enteric Pathogens
+in Low-Income Settings: Review and Recommendations of an Interdisciplinary Working Group.
+Environ. Sci. Technol. 2020, acs.est.0c02421.10.1021/acs.est.0c02421.
+(16). Holcomb DA; Stewart JRMicrobial Indicators of Fecal Pollution: Recent Progress and
+Challenges in Assessing Water Quality. Curr. Environ. Health Rep2020, 7, 311–324. 10.1007/
+s40572-020-00278-1. [PubMed: 32542574]
+(17). Harris AR; Pickering AJ; Harris M; Doza S; Islam Md. S.; Unicomb L; Luby S; Davis J; Boehm
+ABRuminants Contribute Fecal Contamination to the Urban Household Environment in Dhaka,
+Bangladesh. Environ. Sci. Technol2016, 50 (9), 4642–4649. 10.1021/acs.est.5b06282. [PubMed:
+27045990]
+(18). Boehm AB; Wang D; Ercumen A; Shea M; Harris AR; Shanks OC; Kelty C; Ahmed A;
+Mahmud ZH; Arnold BF; Chase C; Kullmann C; Colford JM; Luby SP; Pickering AJOccurrence
+of Host-Associated Fecal Markers on Child Hands, Household Soil, and Drinking Water in
+Rural Bangladeshi Households. Environ. Sci. Technol. Lett2016, acs.estlett.6b00382.10.1021/
+acs.estlett.6b00382.
+(19). Ercumen A; Pickering AJ; Kwong LH; Arnold BF; Parvez SM; Alam M; Sen D; Islam S;
+Kullmann C; Chase C; Ahmed R; Unicomb L; Luby SP; Colford JMAnimal Feces Contribute
+to Domestic Fecal Contamination: Evidence from E. Coli Measured in Water, Hands, Food,
+Flies, and Soil in Bangladesh. Environ. Sci. Technol2017, 51 (15), 8725–8734. 10.1021/
+acs.est.7b01710. [PubMed: 28686435]
+(20). Baker KK; Senesac R; Sewell D; Sen Gupta A; Cumming O; Mumma JFecal Fingerprints
+of Enteric Pathogen Contamination in Public Environments of Kisumu, Kenya, Associated
+with Human Sanitation Conditions and Domestic Animals. Environ. Sci. Technol2018, 52 (18),
+10263–10274. 10.1021/acs.est.8b01528. [PubMed: 30106283]
+(21). Wardrop NA; Hill AG; Dzodzomenyo M; Aryeetey G; Wright JALivestock Ownership
+and Microbial Contamination of Drinking-Water: Evidence from Nationally Representative
+Household Surveys in Ghana, Nepal and Bangladesh. Int. J. Hyg. Environ. Health2018, 221
+(1), 33–40. 10.1016/j.ijheh.2017.09.014. [PubMed: 29031736]
+(22). Prendergast AJ; Gharpure R; Mor S; Viney M; Dube K; Lello J; Berger C; Siwila J; Joyeux
+M; Hodobo T; Hurt L; Brown T; Hoto P; Tavengwa N; Mutasa K; Craddock S; Chasekwa B;
+Robertson RC; Evans C; Chidhanguro D; Mutasa B; Majo F; Smith LE; Hirai M; Ntozini R;
+Humphrey JH; Berendes DPutting the “A” into WaSH: A Call for Integrated Management of
+Water, Animals, Sanitation, and Hygiene. Lancet Planet. Health2019, 3 (8), e336–e337. 10.1016/
+S2542-5196(19)30129-9. [PubMed: 31439312]
+(23). Navab-Daneshmand T; Friedrich MND; Gächter M; Montealegre MC; Mlambo LS; Nhiwatiwa
+T; Mosler H-J; Julian TREscherichia Coli Contamination across Multiple Environmental
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+Compartments (Soil, Hands, Drinking Water, and Handwashing Water) in Urban Harare:
+Correlations and Risk Factors. Am. J. Trop. Med. Hyg2018, 98 (3). 10.4269/ajtmh.17-0521.
+(24). Robb K; Null C; Armah G; Teunis P; Moe CL; Yakubu HAssessment of Fecal Exposure
+Pathways in Low-Income Urban Neighborhoods in Accra, Ghana: Rationale, Design, Methods,
+and Key Findings of the SaniPath Study. Am. J. Trop. Med. Hyg2017, 1–26. 10.4269/
+ajtmh.16-0508.
+(25). Pickering AJ; Julian TR; Marks SJ; Mattioli MC; Boehm AB; Schwab KJ; Davis JFecal
+Contamination and Diarrheal Pathogens on Surfaces and in Soils among Tanzanian Households
+with and without Improved Sanitation. Environ. Sci. Technol2012, 46 (11), 5736–5743. 10.1021/
+es300022c. [PubMed: 22545817]
+(26). Holcomb DA; Knee J; Sumner T; Adriano Z; de Bruijn E; Nalá R; Cumming O; Brown J; Stewart
+JRHuman Fecal Contamination of Water, Soil, and Surfaces in Households Sharing Poor-Quality
+Sanitation Facilities in Maputo, Mozambique. Int. J. Hyg. Environ. Health2020, 226, 113496.
+10.1016/j.ijheh.2020.113496. [PubMed: 32135507]
+(27). Ishii S; Sadowsky MJEscherichia Coli in the Environment: Implications for Water Quality and
+Human Health. Microbes Environ. 2008, 23 (2), 101–108. 10.1264/jsme2.23.101. [PubMed:
+21558695]
+(28). Byappanahalli MN; Nevers MB; Korajkic A; Staley ZR; Harwood VJEnterococci in the
+Environment. Microbiol. Mol. Biol. Rev2012, 76 (4), 685–706. 10.1128/MMBR.00023-12.
+
+[PubMed: 23204362]
+(29). Price HD; Adams EA; Nkwanda PD; Mkandawire TW; Quilliam RSDaily Changes in
+Household Water Access and Quality in Urban Slums Undermine Global Safe Water Monitoring
+Programmes. Int. J. Hyg. Environ. Health2021, 231, 113632. 10.1016/j.ijheh.2020.113632.
+
+[PubMed: 33202361]
+(30). Wyer MD; Kay D; Morgan H; Naylor S; Clark S; Watkins J; Davies CM; Francis C; Osborn H;
+Bennett SWithin-Day Variability in Microbial Concentrations at a UK Designated Bathing Water:
+Implications for Regulatory Monitoring and the Application of Predictive Modelling Based on
+Historical Compliance Data. Water Res. X2018. 10.1016/j.wroa.2018.10.003.
+(31). Jenkins MW; Tiwari S; Lorente M; Gichaba CM; Wuertz SIdentifying Human and Livestock
+Sources of Fecal Contamination in Kenya with Host-Specific Bacteroidales Assays. Water Res.
+2009, 43 (19), 4956–4966. 10.1016/j.watres.2009.07.028. [PubMed: 19692107]
+(32). Odagiri M; Schriewer A; Hanley K; Wuertz S; Misra PR; Panigrahi P; Jenkins MWValidation
+of Bacteroidales Quantitative PCR Assays Targeting Human and Animal Fecal Contamination
+in the Public and Domestic Domains in India. Sci. Total Environ2015, 502, 462–470. 10.1016/
+j.scitotenv.2014.09.040. [PubMed: 25285421]
+(33). Feng S; Ahmed W; McLellan SLEcological and Technical Mechanisms for Cross-Reaction
+of Human Fecal Indicators with Animal Hosts. Appl. Environ. Microbiol2019, 86 (5). 10.1128/
+AEM.02319-19.
+(34). Johnston C; Byappanahalli MN; Gibson JM; Ufnar J. a.; Whitman RL; Stewart JRProbabilistic
+Analysis Showing That a Combination of Bacteroides and Methanobrevibacter Source Tracking
+Markers Is Effective for Identifying Waters Contaminated by Human Fecal Pollution. Environ.
+Sci. Technol2013, 47 (23), 13621–13628. 10.1021/es403753k. [PubMed: 24182330]
+(35). Kildare BJ; Leutenegger CM; McSwain BS; Bambic DG; Rajal VB; Wuertz S16S RRNA
+Based Assays for Quantitative Detection of Universal, Human-, Cow-, and Dog-Specific
+Fecal Bacteroidales: A Bayesian Approach. Water Res. 2007, 41 (16), 3701–3715. 10.1016/
+j.watres.2007.06.037. [PubMed: 17644149]
+(36). Curtis K; Gonzalez RAIntegrating Bayesian Analysis and Cumulative Probability Generates
+High Confidence Using a Single Microbial Source Tracking Marker. Environ. Sci. Technol2019,
+acs.est.9b03843.10.1021/acs.est.9b03843.
+(37). Odagiri M; Schriewer A; Daniels ME; Wuertz S; Smith WA; Clasen T; Schmidt W; Jin Y;
+Torondel B; Misra PR; Panigrahi P; Jenkins MWHuman Fecal and Pathogen Exposure Pathways
+in Rural Indian Villages and the Effect of Increased Latrine Coverage. Water Res. 2016, 100,
+232–244. 10.1016/j.watres.2016.05.015. [PubMed: 27192358]
+(38). Schriewer A; Odagiri M; Wuertz S; Misra PR; Panigrahi P; Clasen T; Jenkins MWHuman and
+Animal Fecal Contamination of Community Water Sources, Stored Drinking Water and Hands
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+in Rural India Measured with Validated Microbial Source Tracking Assays. Am. J. Trop. Med.
+Hyg2015, 93 (3), 509–516. 10.4269/ajtmh.14-0824. [PubMed: 26149868]
+(39). Fuhrmeister ER; Ercumen A; Pickering AJ; Jeanis KM; Crider Y; Ahmed M; Brown S; Alam
+M; Sen D; Islam S; Kabir MH; Islam M; Rahman M; Kwong LH; Arnold BF; Luby SP;
+Colford JM; Nelson KLEffect of Sanitation Improvements on Pathogens and Microbial Source
+Tracking Markers in the Rural Bangladeshi Household Environment. Environ. Sci. Technol.
+2020, acs.est.9b04835.10.1021/acs.est.9b04835.
+(40). Brown J; Cumming O; Bartram J; Cairncross S; Ensink J; Holcomb D; Knee J; Kolsky
+P; Liang K; Liang S; Nala R; Norman G; Rheingans R; Stewart J; Zavale O; Zuin V;
+Schmidt W-PA Controlled, before-and-after Trial of an Urban Sanitation Intervention to Reduce
+Enteric Infections in Children: Research Protocol for the Maputo Sanitation (MapSan) Study,
+Mozambique. BMJ Open2015, 5 (6), e008215–e008215. 10.1136/bmjopen-2015-008215.
+(41). Devamani C; Norman G; Schmidt WA Simple Microbiological Tool to Evaluate the Effect
+of Environmental Health Interventions on Hand Contamination. Int. J. Environ. Res. Public.
+Health2014, 11 (11), 11846–11859. 10.3390/ijerph111111846. [PubMed: 25407420]
+(42). Knee J; Sumner T; Adriano Z; Berendes D; de Bruijn E; Schmidt W; Nalá R; Cumming O;
+
+Brown JRisk Factors for Childhood Enteric Infection in Urban Maputo, Mozambique: A CrossSectional Study. PLoS Negl. Trop. Dis2018, 12 (11), e0006956. 10.1371/journal.pntd.0006956.
+
+[PubMed: 30419034]
+(43). Schmidt WRandomised and Non-Randomised Studies to Estimate the Effect of Community
+Level Public Health Interventions: Definitions and Methodological Considerations. Emerg.
+Themes Epidemiol2017, 14 (1), 9. 10.1186/s12982-017-0063-5. [PubMed: 28912825]
+(44). Capone D; Adriano Z; Berendes D; Cumming O; Dreibelbis R; Holcomb DA; Knee J; Ross
+I; Brown JA Localized Sanitation Status Index as a Proxy for Fecal Contamination in Urban
+Maputo, Mozambique. PLOS ONE2019, 14 (10), e0224333. 10.1371/journal.pone.0224333.
+
+[PubMed: 31652287]
+(45). USEPA. Method 1603: Escherichia Coli (E.Coli) in Water by Membrane Filtration Using
+Modified Membrane-Thermotolerant Escherichia Coli Agar; 2009; p 13.
+(46). Chern EC; Siefring S; Paar J; Doolittle M; Haugland RAComparison of Quantitative PCR
+Assays for Escherichia Coli Targeting Ribosomal RNA and Single Copy Genes. Lett. Appl.
+Microbiol2011, 52 (3), 298–306. 10.1111/j.1472-765X.2010.03001.x. [PubMed: 21204885]
+(47). Green HC; Haugland RA; Varma M; Millen HT; Borchardt MA; Field KG; Walters WA;
+Knight R; Sivaganesan M; Kelty CA; Shanks OCImproved HF183 Quantitative Real-Time PCR
+Assay for Characterization of Human Fecal Pollution in Ambient Surface Water Samples. Appl.
+Environ. Microbiol2014, 80 (10), 3086–3094. 10.1128/AEM.04137-13. [PubMed: 24610857]
+(48). Johnston C; Ufnar J. a; Griffith JF; Gooch J. a; Stewart JRA Real-Time QPCR Assay for the
+Detection of the NifH Gene of Methanobrevibacter Smithii, a Potential Indicator of Sewage
+Pollution. J. Appl. Microbiol2010, 109 (6), 1946–1956. 10.1111/j.1365-2672.2010.04824.x.
+
+[PubMed: 21070516]
+(49). Nutz S; Döll K; Karlovsky PDetermination of the LOQ in Real-Time PCR by Receiver Operating
+Characteristic Curve Analysis: Application to QPCR Assays for Fusarium Verticillioides and
+F. Proliferatum. Anal. Bioanal. Chem2011, 401 (2), 717–726. 10.1007/s00216-011-5089-x.
+
+[PubMed: 21603916]
+(50). Haugland R. a; Siefring SC; Wymer LJ; Brenner KP; Dufour APComparison of Enterococcus
+Measurements in Freshwater at Two Recreational Beaches by Quantitative Polymerase Chain
+Reaction and Membrane Filter Culture Analysis. Water Res. 2005, 39 (4), 559–568. 10.1016/
+j.watres.2004.11.011. [PubMed: 15707628]
+(51). Haugland RA; Siefring S; Lavender J; Varma MInfluences of Sample Interference and
+Interference Controls on Quantification of Enterococci Fecal Indicator Bacteria in Surface
+Water Samples by the QPCR Method. Water Res. 2012, 46 (18), 5989–6001. 10.1016/
+j.watres.2012.08.017. [PubMed: 22981586]
+(52). Haugland R. a; Varma M; Sivaganesan M; Kelty C; Peed L; Shanks OCEvaluation of Genetic
+Markers from the 16S RRNA Gene V2 Region for Use in Quantitative Detection of Selected
+Bacteroidales Species and Human Fecal Waste by QPCR. Syst. Appl. Microbiol2010, 33 (6),
+348–357. 10.1016/j.syapm.2010.06.001. [PubMed: 20655680]
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+(53). Sivaganesan M; Haugland R. a.; Chern EC; Shanks OCImproved Strategies and Optimization
+of Calibration Models for Real-Time PCR Absolute Quantification. Water Res. 2010, 44 (16),
+4726–4735. 10.1016/j.watres.2010.07.066. [PubMed: 20701947]
+(54). Wing C; Simon K; Bello-Gomez RADesigning Difference in Difference Studies: Best Practices
+for Public Health Policy Research. Annu. Rev. Public Health2018, 39 (1), 453–469. 10.1146/
+annurev-publhealth-040617-013507. [PubMed: 29328877]
+(55). Abadie ASemiparametric Difference-in-Differences Estimators. Rev. Econ. Stud2005, 72 (1),
+1–19. 10.1111/0034-6527.00321.
+(56). Gelman A; Greenland SAre Confidence Intervals Better Termed “Uncertainty Intervals”?
+BMJ2019, l5381. 10.1136/bmj.l5381. [PubMed: 31506269]
+(57). Gelman A; Hill JData Analysis Using Regression and Multilevel/Hierarchical Models;
+Cambridge University Press, 2007. 10.2277/0521867061.
+(58). Bürkner P-CBrms : An R Package for Bayesian Multilevel Models Using Stan. J. Stat.
+Softw2017, 80 (1). 10.18637/jss.v080.i01.
+(59). McElreath RStatistical Rethinking: A Bayesian Course with Examples in R and Stan, 2nd ed.;
+CRC texts in statistical science; Taylor and Francis, CRC Press: Boca Raton, 2020.
+(60). R Core Team. R: A Language and Environment for Statistical Computing; R Foundation for
+Statistical Computing: Vienna, Austria, 2020.
+(61). Schreiner M; Nsthandoca H; Lory D; Dd D; Yy MMA Simple Poverty Scorecard for
+[Mozambique; Microfinance.com, 2013.](http://Microfinance.com)
+(62). Rogan WJ; Gladen BEstimating Prevalence from the Results of a Screening Test. Am. J.
+Epidemiol1978, 107 (1), 71–76. 10.1093/oxfordjournals.aje.a112510. [PubMed: 623091]
+(63). Gelman A; Carpenter BBayesian Analysis of Tests with Unknown Specificity and Sensitivity. J.
+R. Stat. Soc. Ser. C Appl. Stat2020, rssc.12435.10.1111/rssc.12435.
+(64). Sima LC; Ng R; Elimelech MModeling Risk Categories to Predict the Longitudinal Prevalence
+of Childhood Diarrhea in Indonesia. Am. J. Trop. Med. Hyg2013, 89 (5), 884–891. 10.4269/
+ajtmh.12-0540. [PubMed: 24019442]
+(65). Divelbiss DW; Boccelli DL; Succop PA; Oerther DBEnvironmental Health and Household
+Demographics Impacting Biosand Filter Maintenance and Diarrhea in Guatemala: An
+Application of Structural Equation Modeling. Environ. Sci. Technol2013, 47 (3), 1638–1645.
+10.1021/es303624a. [PubMed: 23153353]
+(66). Ghitza Y; Gelman ADeep Interactions with MRP: Election Turnout and Voting Patterns Among
+Small Electoral Subgroups. Am. J. Polit. Sci2013, 57 (3), 762–776. 10.1111/ajps.12004.
+(67). Carpenter B; Gelman A; Hoffman MD; Lee D; Goodrich B; Betancourt M; Brubaker M; Guo
+J; Li P; Riddell AStan: A Probabilistic Programming Language. J. Stat. Softw2017, 76 (1).
+10.18637/jss.v076.i01.
+(68). Stan Development Team. RStan: The R Interface to Stan; 2020.
+(69). Gelman A; Pardoe I2. Average Predictive Comparisons for Models with Nonlinearity,
+Interactions, and Variance Components. Sociol. Methodol2007, 37 (1), 23–51. 10.1111/
+j.1467-9531.2007.00181.x.
+(70). Dengo-Baloi L; Berendes D; Holcomb D; Knee J; Langa J; Magaia A; Nalá R; Brown JIncreased
+Antibiotic Resistance in the Community in Maputo, Mozambique: Preliminary Results of
+Microbial Analysis of a Pathogen Rich Environment, 2018.
+(71). Araneda-Cabrera RJ; Bermúdez M; Puertas JAssessment of the Performance of Drought
+Indices for Explaining Crop Yield Variability at the National Scale: Methodological
+Framework and Application to Mozambique. Agric. Water Manag2021, 246, 106692. 10.1016/
+j.agwat.2020.106692.
+(72). Ercumen A; Pickering AJ; Kwong LH; Mertens A; Arnold BF; Benjamin-Chung J; Hubbard
+AE; Alam M; Sen D; Islam S; Rahman Md. Z.; Kullmann C; Chase C; Ahmed R; Parvez SM;
+Unicomb L; Rahman M; Ram PK; Clasen T; Luby SP; Colford JMDo Sanitation Improvements
+Reduce Fecal Contamination of Water, Hands, Food, Soil, and Flies? Evidence from a ClusterRandomized Controlled Trial in Rural Bangladesh. Environ. Sci. Technol2018, 52 (21), 12089–
+12097. 10.1021/acs.est.8b02988. [PubMed: 30256095]
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+(73). Contreras JD; Islam M; Mertens A; Pickering AJ; Kwong LH; Arnold BF; Benjamin-Chung J;
+Hubbard AE; Alam M; Sen D; Islam S; Rahman M; Unicomb L; Luby SP; Colford JM; Ercumen
+ALongitudinal Effects of a Sanitation Intervention on Environmental Fecal Contamination in a
+Cluster-Randomized Controlled Trial in Rural Bangladesh. Environ. Sci. Technol2021. 10.1021/
+acs.est.1c01114.
+(74). Nshimyimana JP; Cruz MC; Thompson RJ; Wuertz SBacteroidales Markers for Microbial Source
+Tracking in Southeast Asia. Water Res. 2017, 118, 239–248. 10.1016/j.watres.2017.04.027.
+
+[PubMed: 28433694]
+(75). Stewart JR; Boehm AB; Dubinsky EA; Fong T-T; Goodwin KD; Griffith JF; Noble RT; Shanks
+OC; Vijayavel K; Weisberg SBRecommendations Following a Multi-Laboratory Comparison
+of Microbial Source Tracking Methods. Water Res. 2013, 47 (18), 6829–6838. 10.1016/
+j.watres.2013.04.063. [PubMed: 23891204]
+(76). Zhu K; Suttner B; Pickering A; Konstantinidis KT; Brown JA Novel Droplet Digital
+PCR Human MtDNA Assay for Fecal Source Tracking. Water Res. 2020, 116085. 10.1016/
+j.watres.2020.116085.
+(77). Pehrsson EC; Tsukayama P; Patel S; Mejía-Bautista M; Sosa-Soto G; Navarrete KM; Calderon
+M; Cabrera L; Hoyos-Arango W; Bertoli MT; Berg DE; Gilman RH; Dantas GInterconnected
+Microbiomes and Resistomes in Low-Income Human Habitats. Nature2016, 533 (7602), 212–
+216. 10.1038/nature17672. [PubMed: 27172044]
+(78). Bauza V; Madadi VO; Ocharo RM; Nguyen TH; Guest JSMicrobial Source Tracking Using
+16S RRNA Amplicon Sequencing Identifies Evidence of Widespread Contamination from Young
+Children’s Feces in an Urban Slum of Nairobi, Kenya. Environ. Sci. Technol2019, 53 (14),
+8271–8281. 10.1021/acs.est.8b06583. [PubMed: 31268313]
+(79). Hu YOO; Ndegwa N; Alneberg J; Johansson S; Logue JB; Huss M; Käller M; Lundeberg J;
+Fagerberg J; Andersson AFStationary and Portable Sequencing-Based Approaches for Tracing
+Wastewater Contamination in Urban Stormwater Systems. Sci. Rep2018, 8 (1), 1–13. 10.1038/
+s41598-018-29920-7. [PubMed: 29311619]
+(80). Acharya K; Khanal S; Pantha K; Amatya N; Davenport RJ; Werner DA Comparative Assessment
+of Conventional and Molecular Methods, Including MinION Nanopore Sequencing, for
+Surveying Water Quality. Sci. Rep2019, 9 (1), 15726. 10.1038/s41598-019-51997-x. [PubMed:
+31673047]
+(81). Capone D; Berendes D; Cumming O; Holcomb D; Knee J; Konstantinidis KT; Levy K; Nalá
+R; Risk BB; Stewart J; Brown JImpact of an Urban Sanitation Intervention on Enteric Pathogen
+Detection in Soils. Environ. Sci. Technol2021, 55 (14), 9989–10000. 10.1021/acs.est.1c02168.
+
+[PubMed: 34236178]
+(82). Li X; Harwood VJ; Nayak B; Staley C; Sadowsky MJ; Weidhaas JA Novel Microbial Source
+Tracking Microarray for Pathogen Detection and Fecal Source Identification in Environmental
+Systems. Environ. Sci. Technol2015, 49 (12), 7319–7329. 10.1021/acs.est.5b00980. [PubMed:
+25970344]
+(83). Ercumen A; Arnold BF; Naser A. Mohd.; Unicomb L; Colford JM; Luby SPPotential Sources
+of Bias in the Use of Escherichia Coli to Measure Waterborne Diarrhoea Risk in Low-Income
+Settings. Trop. Med. Int. Health2017, 22 (1), 2–11. 10.1111/tmi.12803. [PubMed: 27797430]
+(84). Delahoy MJ; Wodnik B; McAliley L; Penakalapati G; Swarthout J; Freeman MC; Levy
+KPathogens Transmitted in Animal Feces in Low- and Middle-Income Countries. Int. J. Hyg.
+Environ. Health2018. 10.1016/j.ijheh.2018.03.005.
+(85). Penakalapati G; Swarthout J; Delahoy MJ; McAliley L; Wodnik B; Levy K; Freeman
+MCExposure to Animal Feces and Human Health: A Systematic Review and Proposed
+Research Priorities. Environ. Sci. Technol2017, 51 (20), 11537–11552. 10.1021/acs.est.7b02811.
+
+[PubMed: 28926696]
+(86). Berendes DM; Yang PJ; Lai A; Hu D; Brown JEstimation of Global Recoverable Human and
+Animal Faecal Biomass. Nat. Sustain2018, 1 (11), 679–685. 10.1038/s41893-018-0167-0.
+(87). Berendes DM; Leon JS; Kirby AE; Clennon JA; Raj SJ; Yakubu H; Robb KA; Kartikeyan
+A; Hemavathy P; Gunasekaran A; Roy S; Ghale BC; Kumar JS; Mohan VR; Kang G; Moe
+CLAssociations between Open Drain Flooding and Pediatric Enteric Infections in the MAL-ED
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+Cohort in a Low-Income, Urban Neighborhood in Vellore, India. BMC Public Health2019, 19
+(1), 926. 10.1186/s12889-019-7268-1. [PubMed: 31291914]
+(88). Berendes D; Kirby A; Clennon JA; Raj S; Yakubu H; Leon J; Robb K; Kartikeyan A;
+Hemavathy P; Gunasekaran A; Ghale B; Kumar JS; Mohan VR; Kang G; Moe CThe Influence
+of Household- and Community-Level Sanitation and Fecal Sludge Management on Urban Fecal
+Contamination in Households and Drains and Enteric Infection in Children. Am. J. Trop. Med.
+Hyg2017, 96 (6). 10.4269/ajtmh.16-0170.
+(89). Harris M; Alzua ML; Osbert N; Pickering ACommunity-Level Sanitation Coverage More
+Strongly Associated with Child Growth and Household Drinking Water Quality than Access
+to a Private Toilet in Rural Mali. Environ. Sci. Technol2017, 51 (12), 7219–7227. 10.1021/
+acs.est.7b00178. [PubMed: 28514143]
+(90). Huda T, Md. N; Schmidt W-P; Pickering AJ; Unicomb L; Mahmud ZH; Luby SP; Biran AEffect
+of Neighborhood Sanitation Coverage on Fecal Contamination of the Household Environment in
+Rural Bangladesh. Am. J. Trop. Med. Hyg2019. 10.4269/ajtmh.16-0996.
+(91). Bauza V; Majorin F; Routray P; Sclar GD; Caruso BA; Clasen TChild Feces Management
+Practices and Fecal Contamination: A Cross-Sectional Study in Rural Odisha, India. Sci. Total
+Environ2019, 136169. 10.1016/j.scitotenv.2019.136169.
+(92). Waller A; Lakhanpaul M; Godfrey S; Parikh PMultiple and Complex Links between BabyWASH
+and Stunting: An Evidence Synthesis. J. Water Sanit. Hyg. Dev2020, washdev2020265.10.2166/
+washdev.2020.265.
+(93). Cumming O; Arnold BF; Ban R; Clasen T; Esteves Mills J; Freeman MC; Gordon B;
+Guiteras R; Howard G; Hunter PR; Johnston RB; Pickering AJ; Prendergast AJ; Prüss-Ustün
+A; Rosenboom JW; Spears D; Sundberg S; Wolf J; Null C; Luby SP; Humphrey JH; Colford
+JMThe Implications of Three Major New Trials for the Effect of Water, Sanitation and Hygiene
+on Childhood Diarrhea and Stunting: A Consensus Statement. BMC Med. 2019, 17 (1), 173.
+10.1186/s12916-019-1410-x. [PubMed: 31462230]
+(94). Pickering AJ; Null C; Winch PJ; Mangwadu G; Arnold BF; Prendergast AJ; Njenga SM; Rahman
+M; Ntozini R; Benjamin-Chung J; Stewart CP; Huda TMN; Moulton LH; Colford JM; Luby
+SP; Humphrey JHThe WASH Benefits and SHINE Trials: Interpretation of WASH Intervention
+Effects on Linear Growth and Diarrhoea. Lancet Glob. Health2019, 7 (8), e1139–e1146. 10.1016/
+S2214-109X(19)30268-2. [PubMed: 31303300]
+(95). Husseini M; Darboe MK; Moore SE; Nabwera HM; Prentice AMThresholds of Socio-Economic
+and Environmental Conditions Necessary to Escape from Childhood Malnutrition: A Natural
+Experiment in Rural Gambia. BMC Med2018, 16 (1), 199. 10.1186/s12916-018-1179-3.
+
+[PubMed: 30382849]
+(96). Tidwell J; Chipungu J; Ross I; Antwi-Agyei P; Alam M-U; Tumwebaze IK; Norman G;
+Cumming O; Simiyu SWhere Shared Sanitation Is the Only Immediate Option: A Research
+Agenda for Shared Sanitation in Densely Populated Low-Income Urban Settings. Am. J. Trop.
+Med. Hyg2020. 10.4269/ajtmh.20-0985.
+(97). Sclar GD; Penakalapati G; Caruso BA; Rehfuess EA; Garn JV; Alexander KT; Freeman MC;
+Boisson S; Medlicott K; Clasen TExploring the Relationship between Sanitation and Mental and
+Social Well-Being: A Systematic Review and Qualitative Synthesis. Soc. Sci. Med2018. 10.1016/
+j.socscimed.2018.09.016.
+(98). Shiras T; Cumming O; Brown J; Muneme B; Nala R; Dreibelbis RShared Latrines in Maputo,
+Mozambique: Exploring Emotional Well-Being and Psychosocial Stress. BMC Int. Health Hum.
+Rights2018, 18 (1), 30. 10.1186/s12914-018-0169-z. [PubMed: 30045729]
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+**Figure 1.**
+Bootstrap estimates of fecal indicator occurrence by study phase and treatment arm. Points
+indicate mean log10 concentration for E. coli indicators and prevalence of human-associated
+indicators, with bars presenting bootstrap 95% CIs.
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+**Figure 2.**
+Conditional probability of sample contamination with human feces given detection status
+of both HF183 and Mnif for all values of human contamination prevalence. Values of
+sensitivity and specificity were obtained using human and animal feces from the study area,
+and are 64% and 67%, respectively, for HF183 and 71% and 70% for Mnif. The dashed
+vertical lines indicate the HF183 detection frequency for each sample type to illustrate
+relevant human contamination probabilities. FP: food preparation surfaces; SW: stored
+water; HS: household entrance soil; LS: latrine entrance soil.
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+**Table 2.**
+
+
+Bootstrap and adjusted model-based estimates human marker sensitivity and specificity, prevalence of human
+fecal contamination stratified by treatment arm and study phase, and effect of the sanitation intervention on
+human fecal contamination prevalence in soil and water from MapSan study compounds
+
+**prevalence estimate (95% CI)[a]**
+
+
+**specificity**
+**(95% CI)** **N**
+
+
+**control** **intervention**
+
+**before** **after** **before** **after**
+
+
+**marker**
+
+
+**sensitivity**
+**(95% CI)**
+
+
+Latrine Soil
+
+0.33 (0.17,
+bootstrap HF183 1 1 116
+0.50)
+
+
+**prevalence**
+
+**DID[b] (95% CI)**
+
+−0.23 (−0.60,
+0.14)
+
+
+0.51 (0.35,
+Mnif 1 1 116
+0.69)
+
+
+0.43 (0.23,
+0.64)
+
+0.65 (0.45,
+0.84)
+
+
+0.32 (0.17,
+model 1[c] HF183 1 1 98 0.49)
+
+0.44 (0.27,
+Mnif 1 1 98
+0.63)
+
+
+0.32 (0.15,
+0.52)
+
+0.43 (0.24,
+0.65)
+
+
+−0.27 (−0.63,
+0.08)
+
+−0.04 (−0.22,
+0.13)
+
+
+0.60 (0.42,
+model 2[d] HF183 0.79)
+
+0.64 (0.47,
+Mnif
+0.82)
+
+
+0.66 (0.53, 0.38 (0.05,
+98
+0.80) 0.88)
+
+0.66 (0.51, 0.48 (0.09,
+98
+0.81) 0.90)
+
+
+0.38 (0.05,
+0.89)
+
+0.47 (0.07,
+0.90)
+
+
+−0.09 (−0.27,
+0.07)
+
+−0.01 (−0.19,
+0.18)
+
+
+0.65 (0.45,
+model 3[e] HF183 0.85)
+
+0.70 (0.56,
+Mnif
+0.83)
+
+
+0.68 (0.55, 0.34 (0.05,
+98
+0.82) 0.83)
+
+0.72 (0.58, 0.49 (0.14,
+98
+0.85) 0.84)
+
+
+0.57
+(0.39,
+0.75)
+
+0.50
+(0.32,
+0.68)
+
+0.42
+(0.24,
+0.60)
+
+0.37
+(0.20,
+0.55)
+
+0.40
+(0.05,
+0.90)
+
+0.44
+(0.07,
+0.90)
+
+0.37
+(0.05,
+0.85)
+
+0.43
+(0.11,
+0.83)
+
+
+0.34 (0.04,
+0.85)
+
+0.47 (0.13,
+0.84)
+
+
+0.43
+(0.26,
+0.61)
+
+0.36
+(0.19,
+0.54)
+
+0.37
+(0.20,
+0.57)
+
+0.27
+(0.13,
+0.45)
+
+0.39
+(0.03,
+0.92)
+
+0.39
+(0.05,
+0.92)
+
+0.36
+(0.04,
+0.88)
+
+0.35
+(0.07,
+0.82)
+
+
+−0.04 (−0.25,
+0.15)
+
+−0.01 (−0.19,
+0.18)
+
+
+−0.06 (−0.27,
+0.13)
+
+
+0.64 (0.47, 0.71 (0.57,
+model 4[f] HF183 0.82) 0.84) 0.39 (0.11, 0.37 0.37 (0.10, 0.29 −0.06 (−0.25,
+
+98 (0.10, (0.07,
+
+Mnif 0.71 (0.58, 0.71 (0.57, 0.73) 0.73) 0.74) 0.68) 0.11)
+0.84) 0.84)
+
+0.72 (0.57, 0.85 (0.78,
+model 5[g] HF183 0.87) 0.91) 0.34 (0.12, 0.35 0.29 (0.08, 0.28 −0.02 (−0.17,
+
+98 (0.13, (0.08,
+
+Mnif 0.71 (0.59, 0.78 (0.68, 0.65) 0.65) 0.63) 0.60) 0.14)
+0.83) 0.86)
+
+Household Soil
+
+
+0.17 (0.07,
+bootstrap HF183 1 1 176
+0.28)
+
+0.43 (0.30,
+Mnif 1 1 175
+0.57)
+
+
+0.36 (0.20,
+0.52)
+
+0.23 (0.09,
+0.37)
+
+
+−0.30 (−0.57,
+-0.01)
+
+0.20 (−0.07,
+0.46)
+
+
+0.26 (0.15,
+model 1 HF183 1 1 147
+0.41)
+
+0.37 (0.23,
+Mnif 1 1 146
+0.52)
+
+
+0.49
+(0.35,
+0.64)
+
+0.25
+(0.13,
+0.39)
+
+0.43
+(0.27,
+0.58)
+
+0.27
+(0.15,
+0.42)
+
+
+0.29 (0.15,
+0.46)
+
+0.27 (0.14,
+0.43)
+
+
+0.38
+(0.24,
+0.52)
+
+0.24
+(0.12,
+0.38)
+
+0.41
+(0.26,
+0.58)
+
+0.18
+(0.09,
+0.31)
+
+
+−0.04 (−0.21,
+0.12)
+
+0.01 (−0.13,
+0.14)
+
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+**prevalence estimate (95% CI)[a]**
+
+
+**specificity**
+**(95% CI)** **N**
+
+
+**control** **intervention**
+
+**before** **after** **before** **after**
+
+
+**marker**
+
+
+**sensitivity**
+**(95% CI)**
+
+
+**prevalence**
+
+**DID[b] (95% CI)**
+
+0.00 (−0.18,
+0.19)
+
+
+0.60 (0.38,
+model 2 HF183
+0.80)
+
+0.57 (0.34,
+Mnif
+0.80)
+
+
+0.72 (0.61, 0.28 (0.04,
+147
+0.83) 0.73)
+
+0.73 (0.63, 0.30 (0.03,
+146
+0.84) 0.78)
+
+
+0.27 (0.03,
+0.74)
+
+0.25 (0.02,
+0.77)
+
+
+0.66 (0.43,
+model 3 HF183
+0.85)
+
+0.68 (0.50,
+Mnif
+0.82)
+
+
+0.74 (0.63, 0.25 (0.04,
+147
+0.85) 0.63)
+
+0.76 (0.67, 0.26 (0.03,
+146
+0.86) 0.60)
+
+
+0.34
+(0.03,
+0.80)
+
+0.25
+(0.02,
+0.76)
+
+0.33
+(0.04,
+0.74)
+
+0.20
+(0.03,
+0.52)
+
+
+0.25 (0.03,
+0.69)
+
+0.20 (0.02,
+0.50)
+
+
+0.34
+(0.02,
+0.83)
+
+0.19
+(0.01,
+0.77)
+
+0.33
+(0.03,
+0.80)
+
+0.13
+(0.02,
+0.40)
+
+
+−0.01 (−0.18,
+0.14)
+
+0.00 (−0.18,
+0.20)
+
+
+−0.01 (−0.16,
+0.11)
+
+
+0.69 (0.47, 0.73 (0.63,
+model 4 HF183 0.87) 0.83) 0.20 (0.04, 0.23 0.15 (0.03, 0.16 −0.02 (−0.16,
+
+146 (0.03, (0.02,
+
+Mnif 0.68 (0.51, 0.75 (0.66, 0.44) 0.50) 0.37) 0.40) 0.11)
+0.82) 0.84)
+
+0.72 (0.57, 0.85 (0.78,
+model 5 HF183 0.87) 0.91) 0.26 (0.09, 0.27 0.22 (0.06, 0.22 −0.01 (−0.16,
+
+146 (0.10, (0.06,
+
+Mnif 0.71 (0.59, 0.78 (0.68, 0.49) 0.51) 0.47) 0.45) 0.12)
+0.83) 0.86)
+
+Stored Water
+
+
+0.12 (0.04,
+bootstrap HF183 1 1 193
+0.22)
+
+0.23 (0.11,
+model 1 HF183 1 1 170
+0.38)
+
+
+0.22 (0.10,
+0.35)
+
+0.28 (0.13,
+0.48)
+
+
+−0.01 (−0.21,
+0.19)
+
+0.00 (−0.14,
+0.14)
+
+
+0.60 (0.38,
+model 2 HF183
+0.81)
+
+0.67 (0.43,
+model 3 HF183
+0.85)
+
+
+0.85 (0.78, 0.15 (0.02,
+170
+0.91) 0.40)
+
+0.86 (0.79, 0.15 (0.02,
+170
+0.92) 0.38)
+
+
+0.17 (0.02,
+0.47)
+
+0.17 (0.02,
+0.45)
+
+
+0.00 (−0.13,
+0.14)
+
+0.00 (−0.13,
+0.15)
+
+
+0.72 (0.57,
+model 5 HF183
+0.87)
+
+
+0.85 (0.78, 0.19 (0.04,
+169
+0.91) 0.43)
+
+Latent Compound
+
+
+0.10
+(0.02,
+0.20)
+
+0.19
+(0.09,
+0.34)
+
+0.14
+(0.02,
+0.38)
+
+0.13
+(0.02,
+0.36)
+
+0.20
+(0.03,
+0.45)
+
+
+0.16 (0.03,
+0.40)
+
+
+0.19
+(0.09,
+0.30)
+
+0.24
+(0.11,
+0.42)
+
+0.16
+(0.01,
+0.47)
+
+0.16
+(0.02,
+0.44)
+
+0.16
+(0.02,
+0.38)
+
+
+−0.01 (−0.14,
+0.11)
+
+
+0.72 (0.57, 0.85 (0.78,
+model 5 HF183 0.87) 0.91) 0.27 (0.09, 0.28 0.22 (0.06, 0.22 −0.01 (−0.16,
+
+109 (0.09, (0.06,
+
+Mnif 0.71 (0.59, 0.78 (0.68, 0.52) 0.53) 0.50) 0.47) 0.13)
+0.83) 0.86)
+
+aall models (excluding bootstrap estimates) were adjusted for population density, presence of animals, wealth score, temperature, antecedent
+precipitation, and sun exposure and surface wetness for soil samples and storage container mouth width and cover status for water samples
+
+
+bdifference-in-differences
+
+cmodel 1: single sample type, single marker assuming perfect sensitivity and specificity
+
+
+dmodel 2: single sample type, single marker with sensitivity and specificity from local validation study
+
+emodel 3: single sample type, single marker with meta-analytic sensitivity and specificity
+
+
+fmodel 4: single sample type, two markers with meta-analytic sensitivity and specificity
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+
+gmodel 5: three sample types, two markers with meta-analytic sensitivity and specificity
+
+Environ Sci Technol. Author manuscript; available in PMC 2021 September 10.
+
+
+-----
+

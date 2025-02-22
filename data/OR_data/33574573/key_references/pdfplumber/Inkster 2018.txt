@@ -1,0 +1,877 @@
+JMIR MHEALTH AND UHEALTH Inkster et al
+Original Paper
+An Empathy-Driven, Conversational Artificial Intelligence Agent
+(Wysa) for Digital Mental Well-Being:Real-World Data Evaluation
+Mixed-Methods Study
+Becky Inkster1, DPhil; Shubhankar Sarda2, BSc (Physics); Vinod Subramanian3, MBA
+1School of Clinical Medicine, Department of Psychiatry, University of Cambridge, Cambridge, United Kingdom
+2Wysa, London, United Kingdom
+3Wysa, Bangalore, India
+Corresponding Author:
+Becky Inkster, DPhil
+School of Clinical Medicine
+Department of Psychiatry
+University of Cambridge
+Box 189
+Cambridge Biomedical Campus
+Cambridge, CB2 2QQ
+United Kingdom
+Phone: 44 773 847 8045
+Email: becky.inkster@gmail.com
+Abstract
+Background: A World Health Organization 2017 report stated that major depression affects almost 5% of the human population.
+Major depression is associated with impaired psychosocial functioning and reduced quality of life. Challenges such as shortage
+of mental health personnel, long waiting times, perceived stigma, and lower government spends pose barriers to the alleviation
+of mental health problems. Face-to-face psychotherapy alone provides only point-in-time support and cannot scale quickly enough
+to address this growing global public health challenge. Artificial intelligence (AI)-enabled, empathetic, and evidence-driven
+conversational mobile app technologies could play an active role in filling this gap by increasing adoption and enabling reach.
+Although such a technology can help manage these barriers, they should never replace time with a health care professional for
+more severe mental health problems. However, app technologies could act as a supplementary or intermediate support system.
+Mobile mental well-being apps need to uphold privacy and foster both short- and long-term positive outcomes.
+Objective: This study aimed to present a preliminary real-world data evaluation of the effectiveness and engagement levels of
+an AI-enabled, empathetic, text-based conversational mobile mental well-being app, Wysa, on users with self-reported symptoms
+of depression.
+Methods: In the study, a group of anonymous global users were observed who voluntarily installed the Wysa app, engaged in
+text-based messaging, and self-reported symptoms of depression using the Patient Health Questionnaire-9. On the basis of the
+extent of app usage on and between 2 consecutive screening time points, 2 distinct groups of users (high usersand low users)
+emerged. The study used mixed-methods approach to evaluate the impact and engagement levels among these users. The
+quantitative analysis measured the app impact by comparing the average improvement in symptoms of depression between high
+and low users. The qualitative analysis measured the app engagement and experience by analyzing in-app user feedback and
+evaluated the performance of a machine learning classifier to detect user objections during conversations.
+Results: The average mood improvement (ie, difference in pre- and post-self-reported depression scores) between the groups
+(ie, high vs low users; n=108 and n=21, respectively) revealed that the high users group had significantly higher average
+improvement (mean 5.84 [SD 6.66]) compared with the low users group (mean 3.52 [SD 6.15]); Mann-Whitney P=.03 and with
+a moderate effect size of 0.63. Moreover, 67.7% of user-provided feedback responses found the app experience helpful and
+encouraging.
+Conclusions: The real-world data evaluation findings on the effectiveness and engagement levels of Wysa app on users with
+self-reported symptoms of depression show promise. However, further work is required to validate these initial findings in much
+larger samples and across longer periods.
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 1
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+(JMIR Mhealth Uhealth 2018;6(11):e12106) doi: 10.2196/12106
+KEYWORDS
+mental health; conversational agents; artificial intelligence; chatbots; coping skills; resilience, psychological; depression; mHealth;
+emotions; empathy
+a specific group. Young adults who reported higher scores on
+Introduction
+the Patient Health Questionnaire-2 (PHQ-2) showed greater
+associations with perceived public stigma than personal stigma
+Background
+[13]. The WHO World Mental Health Surveys show that apart
+Major depression is a disabling disorder with symptoms such
+from perceived stigma, structural barriers such as finance and
+as feelings of sadness, worthlessness, and losing interest in
+lack of service availability were the most reported barriers to
+activities. Depression is the single largest contributor to global
+treatment among those with severe disorders [14].
+disability with an estimated 300 million or approximately 4.4%
+of the world’s population (2015) affected by it [1]. Severe Prior Work
+depression can lead to suicide, which was the second leading Face-to-face therapy and guided self-help techniques such as
+cause of death among people aged 15 to 29 years globally in cognitive behavioral therapy (CBT) and behavioral activation
+2015 [1]. Major depression has been found to impair quality of are known to be effective in treating depression [15,16].
+life [2] and psychosocial functioning [3,4], which is a person’s Face-to-face therapy only provides point-in-time support and
+ability to perform daily activities and to maintain interpersonal cannot scale quickly to address growing mental health
+relationships. challenges. Innovative delivery methods are required to
+supplement care. Studies have shown that certain user groups
+The economic burden of depression is rising. The cost of major
+are opening up to technology about their mental health problems.
+depression in the United States was estimated at US $210.5
+A recent study showed that participants reported more
+billion per year in 2010, an increase of 21.5% from 2005 [5].
+posttraumatic stress disorder symptoms when asked by a virtual
+For every dollar spent treating major depression in 2010, US
+human interviewer compared with a gold standard assessment
+$4.70 was spent on direct cost of related illnesses, and an
+[17]. Guided internet-based self-help interventions have been
+additional US $1.90 was spent on reduced workplace
+observed to have positive effects on patients with symptoms of
+productivity and costs associated with suicide linked to
+depression and to reduce risk of symptom deterioration [18-22].
+depression [5]. According to the Centre for Mental Health policy
+Mobile app–administered therapy either stand-alone or in
+paper (2010), the total cost of mental ill health in England was
+blended mode has been found to show positive effects on
+estimated at £105.2 billion a year from 2009 to 2010, an increase
+patients with depression across severity levels in randomized
+of 36% from 2002 to 2003 [6]. The Farmer-Stevenson review
+controlled trial (RCT) studies [23-28]. However, there are
+that was launched by the UK Parliament in 2017 on mental
+studies with mixed findings about the benefits of smartphone
+health in the workplace placed the cost to employers due to poor
+or online-administered interventions. A recent RCT study that
+mental health at £33 to £42 billion a year, with over half of it
+examined the effects of an online mindfulness meditation app
+coming from presenteeism [7]. According to the World Health
+compared with an active sham meditation control app found
+Organization (WHO) Mental Health Atlas 2017, government
+that mindfulness improved across university student participants
+spend globally on mental health in 2015 was less than 2% of
+in both groups, and there seemed no added benefit from offering
+the global median of government’s health expenditures overall,
+progressive and varied mindfulness tools [29].
+which has only exacerbated the situation [8].
+Text-based messaging (internet or smartphone) either with a
+Mood disorders can be treated by pharmacotherapy or
+human coach or with a machine (chatbots) has found increasing
+psychotherapy [9]; however, significant treatment barriers
+adoption in recent years. Artificial intelligence (AI) text-based
+remain, such as major shortage of mental health professionals,
+conversational agents have the ability to offer contextual and
+long waiting lists for treatment, and stigma. The WHO Mental
+always-available support. Studies using internet-based,
+Health Atlas 2017 reported that there is a global median of 9
+one-to-one text-based chat interventions for psychological
+mental health workers including approximately 1 psychiatrist
+support have shown feasibility and positive improvement in
+per 100,000 people [8]. In India, there are approximately 10
+mental health outcomes when compared with wait-list conditions
+mental health professionals for 100,000 people affected by
+[30]. Two recent studies measured the efficacy of a fully
+mental health problems [10]. According to the Impact
+automated mobile conversational agent in the delivery of mental
+Assessment report from the UK Department of Health (October
+well-being [31,32]. Our study aims to add to the research and
+2014), access to services for people with mental health problems
+evidence base on the effectiveness and engagement levels of
+is more restricted, and waiting times are longer than for other
+AI-enabled, text-based, conversational mobile mental well-being
+health care services [11]. A 2018 British Medical Association
+apps.
+research briefing stated that two-thirds of the National Health
+Service (NHS) mental health trusts in the United Kingdom had Wysa, a Smartphone-Based Empathetic Artificial
+year-long waiting periods before therapy started, and in some
+Intelligence Chatbot App for Mental Well-Being
+locations, waiting periods were close to 2 years [12]. Perceived
+Wysa, developed by Touchkin, is an AI-based emotionally
+public stigma, a known barrier, is the degree to which the
+intelligent mobile chatbot app aimed at building mental
+general public holds negative views and discriminates against
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 2
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+resilience and promoting mental well-being using a text-based
+Methods
+conversational interface. The Wysa app assists users to develop
+positive self-expression by using AI to create an external and
+Ethics
+responsive self-reflection environment. Engaging with the app
+The study involved a remotely screened, anonymous nonclinical
+is free and available 24×7, but accessing a human coach via the
+global population (ie, real-world in-the-wild data) and was,
+app is a paid service. We used an early in-the-market app version
+therefore, exempt from registration in a public trials registry.
+(see Multimedia Appendix 1) that included only the free
+The users downloaded the app after having agreed to the Wysa
+always-available chatbot service (not the paid coach service).
+app Terms of Service and Privacy Policy, which included
+The app responds to emotions that a user expresses over written
+consent to use anonymized data for research purposes. Minimal
+conversations and, in its conversation, uses evidence-based
+deidentified data required for the study were used. For details
+self-help practices such as CBT, dialectical behavior therapy,
+on app specific ethical practices, see Multimedia Appendix 2.
+motivational interviewing, positive behavior support, behavioral
+reinforcement, mindfulness, and guided microactions and tools Study Design
+to encourage users to build emotional resilience skills. The
+The Wysa app was downloaded from the Google Play Store
+Wysa scientific advisory board approves all content and tools.
+voluntarily by geographically dispersed users. The users were
+The conversation-based tools and techniques encourage users
+filtered for eligibility from a pool of anonymous Wysa app users
+to manage their anxiety, energy, focus, sleep, relaxation, loss,
+based on the inclusion criteria (see Figure 1). For the study, we
+worries, conflicts, and other situations.
+solely looked at user-provided data that were collected by the
+The app can be downloaded from the Google Play Store and app during active use. Given the anonymity and nonavailability
+from the Apple App Store. There is no user registration to sign of user profiles, qualitative and quantitative data were collected
+in and no personal identifiable information is asked at any time concurrently during the study period on and between July 11,
+during app use. Wysa was described as “friendly” and “easy to 2017, and Sept 5, 2017. These data consisted of user responses
+use” in a youth user study conducted by Wellcome Trust, United to the app’s inbuilt assessment questionnaire and responses to
+Kingdom, Neuroscience, Ethics, and Society Young People’s the app-designed text-based conversations and questions. No
+Advisory Group at the University of Oxford, and BBC additional research-framed questionnaires or user feedback
+Tomorrow's World [33]. The app was adapted and implemented questions were designed or issued for repeated interval data
+at Columbia University’s SAFE Lab as a tool to provide support collection.
+to at-risk communities in inner cities (Brooklyn and Chicago),
+On the basis of the extent of app usage on and between 2
+many of whom are gang-involved youth. Although, Wysa is
+consecutive PHQ-9 screenings, 2 comparison groups emerged
+not a medical device, when used as a health and well-being
+(“high users” and “low users”). The users in both groups
+support tool, it can support clinical services as seen from its use
+voluntarily reported 2 valid time point PHQ-9 scores: one at
+at the NHS North East London Foundation Trust [34].
+onboarding (first assessment, “Pre-PHQ-9”) and the other on
+Study Objective or after 2 weeks (second assessment, “Post-PHQ-9”). The 2
+screening time points were considered valid if during the study
+The primary study objective was to determine the effectiveness
+period only 2 surveys were responded to within a gap of 14 or
+of delivering positive psychology and mental well-being
+more days. The “high users” consisted of users who engaged
+techniques in a text-based conversational mode using the Wysa
+with the app on the 2 screening days as well as at least once
+app on users with self-reported symptoms of depression. Users
+between those days. The “low users” consisted of users who
+were presented with the validated Patient Health Questionnaire
+only engaged on the 2 screening days but never between those
+(PHQ-9) during their conversations and screened for selection
+days.
+based on their 2-item (PHQ-2) score. The average improvement
+in self-reported symptoms of depression (Pre-PHQ-9 minus The authors decided to implement a quasi-experimental (simple
+Post-PHQ-9) was compared between 2 comparison groups: (1) pre-post) mixed-methods approach given our study objective
+more engaged app users (“high users” group) and (2) less and the nature of the data being collected. For details on the
+engaged app users (“low users” group). mixed-methods design and approach, see Multimedia
+Appendices 2and 3.See the study recruitment flow diagram in
+Our secondary study objective was to understand users’in-app
+Multimedia Appendix 4.
+experiences during app use. A qualitative thematic analysis, as
+proposed by Braun and Clarke, 2006 [35,36], on in-app feedback
+responses was performed.
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 3
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+Figure 1. The study inclusion criteria. PHQ: Patient Health Questionnaire.
+going at the moment?” The user could respond either by
+Quantitative Measurement and Screening
+clicking preformatted options or by free-text.
+The inbuilt app-administered assessment questionnaire (PHQ-9)
+For a typical user app engagement, see Multimedia Appendix
+required users to recollect problems over the last 2 weeks;
+6. Microsoft Excel software was used for data wrangling and
+notably, this form of data collection is neither momentary nor
+analysis. Open-source python software on Jupyter Notebook
+real-time capture. For details about PHQ-9, see Multimedia
+was used for machine learning (ML) modeling.
+Appendix 2. The PHQ-2 score was generated from responses
+to the first 2 items of the PHQ-9 (ie, range: 0-6). The PHQ-2 is Quantitative Analysis Method
+intended for use as an initial screening of depression symptoms,
+whereas the PHQ-9 score is then used for monitoring depression Impact (Pre-Post) Analysis
+symptoms [37]. As the app engaged with anonymous users, To quantify the app impact, the average improvement
+there was no information available about clinical history and (pre-PHQ-9 minus post-PHQ-9) was compared between the 2
+diagnosis. Remote digital screening for depressive symptoms user groups. A Mann-Whitney Utest was carried out to test the
+in anonymous populations is very challenging in the absence hypothesis that high users would have greater average
+of face-to-face clinical interviews; therefore, we selected the improvement than low users. The effect size was measured
+most stringent threshold based on recommendations in the using the nonparametric common language effect size (CL),
+scientific literature [37], which required a PHQ-2 score of 6. calculated as [1-(U/n n)], where U was the Mann-Whitney U
+h* l
+and n and n are the numbers of high users and low users,
+Data Collection and Analysis h l
+respectively [38]. The CL gives the probability that a user picked
+The app takes the user through conversational pathways based
+at random from the high users group will have a higher average
+on a user’s interaction. This path varies for every user, based
+improvement than a user picked at random from the low users
+on their messages and context. At various points in a user’s
+group [38,39].
+conversational journey, a user is presented with app-designed
+open- and closed-ended questions that check the helpfulness of Context/Descriptive Analysis
+these sessions and seeks user feedback (in-app feedback; eg, at
+To maintain user anonymity, the app did not capture personal
+the end of every wellness session or at end of every mindfulness
+identifiable information or sociodemographic information
+or physical activity tool-based session). This voluntary feedback
+(except time zone). To capture useful context about users, an
+provided by the users was not scheduled repeatedly nor was it
+analysis of the qualitative responses to key app-based questions
+used to measure changes in behavior or emotions of an
+was performed, including days of active use, recent major event
+individual over time. Instead, the objective was to understand
+or changes, ability to cope with daily tasks, and completion of
+the users’experiences and engagement with the app. For the
+wellness tools.
+in-app feedback questions, see Multimedia Appendix 5. All
+transmissions to and from the app were encrypted using Qualitative Analysis Method
+recognized security standards and were securely stored in a
+Engagement Effectiveness
+private cloud server. All user-generated conversations and
+screening responses were checked for compromise (eg, An analysis of users’in-app feedback responses was performed
+malicious bots) and deidentified for app identifiers. At using thematic analysis [35,36] to measure engagement
+onboarding, the following user context information was effectiveness. Main themes and subthemes, derived from the
+collected: analysis, helped understand users’ app experience and
+engagement. Prevalence of a theme was measured based on
+1. Major event or recent changes: The response to the question,
+count of response instances and number of responding users.
+“What has been the major event or change in your life
+Further insights were identified by intersecting derived user
+recently?” was collected by the app in free-text before a
+context with the main themes. For details on thematic analysis
+Pre-PHQ-9 screening.
+approach, see Multimedia Appendix 2.
+2. Ability to cope with daily tasks: Immediately after the
+Pre-PHQ-9 screening, based on the score, users were asked Engagement Efficiency
+about their ability to cope with daily tasks. For high severity To measure the app’s engagement efficiency, an analysis of
+PHQ-9 scores, users were asked “Is it getting hard for you objections raised by users was performed. It is important for a
+to cope with your daily tasks?,” whereas for none to mild real-world conversational app to understand users’ written
+severity, they were asked “Are you happy with how life is messages with high accuracy, precision, and recall to provide
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 4
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+empathetic listening and to correctly interpret and respond to a expected that regression to the mean (whereby values that are
+user every single time. This is critical to provide seamless user initially measured as extreme are more likely to be moderate
+engagement and experience, which in turn leads to higher app on subsequent measurement) might play a role in this apparent
+usage and retention. All the conversation messages (instances) large improvement [40].
+the users had with the app were manually tagged for “objection”
+Therefore, a between-groups comparison of the average
+or “no objection.” Objections took 2 forms: refusals (ie, when
+improvement (Pre-PHQ-9 minus Post-PHQ-9) was performed
+the user objects to a bot’s understanding of what was said; for
+using a Mann-Whitney Utest (Table 2). We found that the high
+eg, “I don’t want to do this”) and complaints (ie, when the user
+users group showed significantly higher average improvement
+raises a complaint to a bot’s response; for eg, “That’s not what
+compared with the low users group (P=.03). The effect size was
+I said”). See Multimedia Appendix 7for examples on objections.
+found to be approximately 0.63. For the purposes of post hoc
+The proportion of objections raised by a user was measured for
+comparisons, other studies have found that a CL of 0.63 is
+prevalence. The tagged dataset was also used to evaluate the
+roughly equivalent to a Cohen dof 0.47 [39]. For quality control
+performance of an existing supervised ML classifier algorithm
+purposes, as discussed in the paper by Zimmerman [41], an
+deployed to automatically detect objections in real-world use.
+unpaired ttest with outliers removed was then conducted. This
+For details about this analysis, see Multimedia Appendix 2.
+also produced a significant result (P=.028).
+Results As a post hoc analysis, the PHQ-2 screening cutoff score was
+reduced so that additional Wysa users could be added to the
+Analysis Size sample. With a PHQ-2 cutoff score of 5, the high users group
+The mixed-methods analysis was performed on 129 users (high still showed higher average improvement compared with the
+users, n =108; low users, n=21) who had met the inclusion low users group, but the effect was less significant (P=.06).
+h l
+With a PHQ-2 cutoff score of 4, the same effect was observed
+criteria.
+but at an even lower significance (P=.09).
+Quantitative Analysis
+Context/Descriptive Analysis
+Impact (Pre-Post) Analysis
+In total, 83.3% (90/108) of high users actively used the app for
+The study first screened for users who self-reported a Pre-PHQ-2 more than 4 days on and between 2 consecutive PHQ-9
+score equal to 6. We initially checked that users’PHQ-9 scores screenings (see Multimedia Appendix 8). Given the natural
+had improved (ie, reduced going from pre- to post), on average, app-use environment, each user in both groups had different
+between time points. Both comparison groups showed a pre- and postscreening days that were spaced at least 2 weeks
+significant reduction in PHQ-9 score (within groups) as apart within the study period.
+measured by a Wilcoxon signed-rank test (Table 1). The authors
+Table 1. Within-group analysis.
+Users with self-reported PHQa-2=6 Number of users (N) Mean (scores) Median (scores) W-value (Pvalueb)
+High users
+Pre-PHQ-9 108 18.92 19.50 478.5 (P<.001)
+Post-PHQ-9 108 13.07 12.00 —
+Low users
+Pre-PHQ-9 21 19.86 21.00 32.5 (P=.01)
+Post-PHQ-9 21 16.33 17.00 —
+aPHQ: Patient Health Questionnaire.
+b95% significance.
+Table 2. Between-group analysis.
+Users with self-reported Number of users (N) Mean improvement (SD) Median improvement Mann-Whitney U(Pvaluec) Effect size (CLb)
+PHQ-2a=6
+High users (n ) 108 5.84 (6.66) 6.00 835.5 (P=.03) 0.632
+h
+Low users (n) 21 3.52 (6.15) 2.00 — —
+l
+aPHQ-2: Patient Health Questionnaire-2.
+bCL: common language effect size.
+c95% significance.
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 5
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+In addition, 80.6% (104/129) of users gave a postscreening Qualitative Analysis
+within 18 days of a prescreening (see Multimedia Appendix 9).
+Engagement Effectiveness
+The users came from diverse time zones (see Multimedia
+Appendix 10); 48.1% (62/129) of users came from America, In all, 73.6% (95/129) of users provided at least one response
+followed by 26.4% (34/129) from Europe and 18.6% (24/129) to the in-app feedback questions. Of those who responded, 86
+from Asia. A total of 89.9% (116/129) users reported a recent were from the high users group and 9 were from the low users
+major event or change in their life (see Multimedia Appendix group. A total of 282 feedback responses were received from
+11). A total of 26.7% (31/116) cited “relationship these 95 users. In total, 60.9% (172/282) responses were
+issues/changes” as a recent major event. Among relationship received for the in-app question “Have I been able to help you
+issue/change, “break-up” was the top cited issue (11 of the 31), feel better yet?” that was asked at the end of each user session.
+followed by “concerns and challenges with close family A total of 90.8% (256/282) semistructured responses were
+member” (8 of the 31). Other relationship issues or changes received by choosing app-provided preformatted options. The
+included issues with friends (3 of the 31), issues with other remaining 9.2% (26/282) responses were by way of free-text
+relations (3 of the 31), conflicts in marriage (3 of the 31), and and were provided by 17 of the 129 users.
+getting into a new relation (3 of the 31). A total of 12.9% users
+Thematic analysis was carried out on the 282 responses received
+(15/116) reported “mental well-being changes” as a recent event.
+from the users. Two main themes emerged, one “Favorable
+Moreover, 5 of the 15 acknowledged they had multiple
+Experience” with the subthemes Helpful and Encourage and
+well-being issues, and 4 of the 15 acknowledged going through
+the other “Less Favorable Experience” with the subthemes
+depression. In addition, 10.3% (12/116) mentioned “change of
+Unhelpful and Concerns. The thematic map with prevalence
+location” and 9.5% (11/116) mentioned facing a “personal loss
+can be seen in Figure 2.A total of 67.7% (191/282) responses
+or bereavement.” Furthermore, 90.7% (117/129) of users
+provided by 75 users found the app experience favorable. Of
+reported “hard to cope” or “slightly hard to cope” (see
+those favorable, 97.4% (186/191) responses found the
+Multimedia Appendix 12), signifying a high percentage of users
+conversation with the app and the tools helpful. A total of 32%
+giving themselves a negative self-rating on their current ability
+(91/282) responses provided by 53 users found the app
+to cope with daily tasks. A total of 59.7% (77/129) of users
+experience less favorable. Of those less favorable, 82% (75/91)
+assessed and completed at least 1 wellness tool provided by the
+responses found the conversation and tools either not helpful
+app (see Multimedia Appendix 13). Among those who
+or did not use the tools; 13 responses (14%, 13/91) pointed to
+completed, 72 were high users and 5 were low users. The
+the app as not understanding or repeating, and a small fraction
+remaining 40.3% (52/129) who did not complete a wellness
+of 3 responses (3%, 3/91) mentioned that the app was
+tool only conversed with the app and likely assessed a wellness
+self-focused and conversations seemed to bother the user.
+tool but not complete it. For details on most frequently reported
+major events or changes by 2 or more users, see Multimedia Only 17 of the 129 users provided free-text feedback responses
+Appendix 14. The authors recognize that there would be overlap that provided additional insight into users’in-app experience.
+among the defined major event categories, which was a The free-text responses were analyzed keeping in perspective
+challenge to address given the anonymity of the users. the user context as identified in the Context/Descriptive Analysis
+subsection within the Quantitative Analysis Results section.
+For a detailed analysis of the free-text in-app feedback
+responses, see Multimedia Appendix 15.
+Figure 2. Thematic map with prevalence.
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 6
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+Favorable experience was the dominant theme from the user Really” or “Not yet” in response to the feedback question “Have
+responses. Almost all of the favorable experiences were I been able to help you feel better yet?” that acknowledged that
+attributed to the helpfulness of the app in users actually feeling the app conversation and mindfulness or physical activity
+better after their conversation sessions and also after their use techniques did not help the user feel better. Some users chose
+of app-provided mindfulness and physical activity techniques. the preformatted option of “Understand me better” or “Too
+Users mostly chose the preformatted response option of “Yes, repetitive” in response to in-app feedback question “Anything
+Actually” in response to the feedback question “Have I been specific you’d like to improve?”
+able to help you feel better yet?” that acknowledged that the
+Of the 95 users who provided the 282 responses, those who
+app conversation and mindfulness or physical activity techniques
+reported hard to cope with daily tasks reported a higher
+were actually helping them feel better. If users found app-based
+proportion of favorable experience responses compared with
+conversations or mindfulness and physical activity techniques
+less favorable experience responses (Figure 3).
+not helpful or expressed any concern, it was classified as a less
+favorable experience. Among those who provided a less Among those who reported hard to cope, those who reported
+favorable experience, 2 users postponed use or did not use the relationship issues or changes as a major event expressed a
+techniques or tools during the study period. These were also significantly higher proportion of favorable experience responses
+considered as a less favorable experience given that the users compared with less favorable experience responses (Figure 4).
+were not motivated enough to try out the techniques or tools. Those who did not face coping challenges were mostly found
+Users mostly chose the preformatted response option of “Not, to be mixed about their experience with the app.
+Figure 3. Coping experience–based feedback response distribution.
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 7
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+Figure 4. Coping major event-app experience-based feedback response distribution.
+characters. The classifier model provided the following
+Engagement Efficiency
+performance:
+A total of 8075 anonymized conversational instances were
+• Accuracy: 99.2% of objections and no objections that was
+obtained from 129 users during the study period. A relatively
+detected was actually correct
+small proportion, 1.58% (128/8075) instances, of objections
+• Specificity: 99.7% of no objections that was detected was
+were observed in the conversation with the app.
+actually correct
+The existing supervised classification-based ML algorithm that • Precision: 74.7% of objections detected (classified) was
+was deployed to classify objections in real time was tested on actually correct
+these 6611 instances. The remaining 18.13% (1464/8075) • Recall: 62.1% of actual objections was detected (classified)
+instances were ignored by the algorithm as the messages correctly
+contained emoticons, texts in multiple lines, and special
+See Figure 5for the confusion matrix.
+Figure 5. Confusion matrix of the objection handling machine learning model.
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 8
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+model gave higher values for accuracy but lower for recall and
+Discussion
+precision, suggesting a need for further tuning of the model to
+reduce false positives and false negatives. A high performing
+Principal Findings
+ML model would become a necessity when conversation
+The study revealed that the high users group had a significantly
+volumes increase to ensure high user engagement and retention.
+higher average improvement score in self-reported symptoms
+Continuous measurement of the objection rate can help provide
+of depression compared with the low users group at a stringent
+an internal benchmark for chatbot apps to improve upon their
+PHQ-2 cutoff.
+engagement efficiency.
+We found a significant reduction in PHQ-9 scores in high users
+Comparison With Prior Work
+and low users groups. We attribute the latter to the regression
+Our study results were compared with other RCT studies [31,32]
+to the mean, suspecting that regression to the mean also plays
+using an automated text-based conversational agent intervention
+a role in the high users group. Although the comparison group
+to study impact on participants’ mental well-being. One
+of “low users” does not fully constitute a control group, it
+feasibility study (“first study”) compared reduction in symptoms
+provided an attempt to account for regression to the mean, as
+of depression from 2-week use of a CBT-oriented instant
+the reduction in PHQ-9 score seen in the high users group was
+messenger-based conversational agent against an information
+significantly greater than that of the low users group. Users in
+control group in a nonclinical college population (n=70) [31].
+both groups used the app during the full study period; therefore,
+The other pilot study (“second study”) compared increased
+they had comparable expectations that possibly reduced some
+levels of psychological well-being from 2-week use of a positive
+biases.
+psychology-oriented smartphone-based conversational agent
+A less significant effect was observed when the stringent cutoff against a wait-list control group in a nonclinical population
+PHQ-2 score was reduced. One explanation is that the app is (n=28) [32]. Both the studies reported between-group effect
+most effective for people who show more severe symptoms of sizes based on the parametric Cohen d. The first study used
+depression. As this is an in-the-wild study with no face-to-face PHQ-9 reporting a medium effect size of d=0.44 (from
+screening, it is likely that lowering the PHQ-2 threshold score intent-to-treat analysis). The second study used the Flourishing
+increased the number of people in the sample who were not Scale, Perceived Stress Scale, and Satisfaction with Life Scale
+mentally unwell and thus introduced additional unaccounted-for and reported an effect size range of d=0.01 to 0.91 (from
+variability. Future work should deploy repeated measure intent-to-treat analysis). The equivalent Cohen d of 0.47 (for
+questionnaires such as Resilience Scale RS-14 [42], which may CL of 0.63) from our study was comparable with that reported
+be more sensitive to changes in resilience in the general from the first study.
+population.
+Both studies processed qualitative data gathered from responses
+Relationship issues, mental well-being issues, location change, to open-ended questions at postmeasurement using thematic
+loss or bereavement, and career change formed the top major analysis (Braun and Clarke, 2006). Although the approach taken
+events or changes reported by users. Breakups and challenges differed from our study, there were similarities in observed
+with family members were the most common relationship issues. experiences. The proportion of favorable responses (58 of 89
+A recent study [43] has found that good mental health is not participants; 65%) to less favorable responses (31 of 89
+only the absence of symptoms but also what the user rates about participants; 35%) in the first study was similar to our study
+his or her current ability to cope. Individuals who rated their (68%:32%), suggesting users in both the studies reported a
+current mental health as good had 30% lower probability of similar experience with a chatbot app. This observation will
+having a mental health problem at follow-up. Given the high need validation in future studies. Users in our study and the first
+proportion of negative self-rating on ability to cope in this study, study highlighted the helpfulness of the conversation and the
+the average improvement in self-reported symptoms of encouragement received, along with the feedback that chatbot
+depression among high app users in a relatively short time period provided an element of fun. Among the less favorable
+appears promising. experiences, users (our study and first study) pointed to the
+repetitiveness of the conversation and a need for the app to
+A high percentage of our study users (74%) provided in-app
+understand the user better.
+feedback. Most preferred to respond by clicking preformatted
+options presented by the app rather than free-text. A higher We also compared between-group effect sizes from 2 other
+proportion of feedback found the app helpful and encouraging. RCTs that compared a Web-based human therapy intervention
+There was an almost equal proportion of users who found the for depression with a waiting list [44,45]. We observed that our
+mindfulness and physical activity tools and techniques both study effect size fell within the range of effect sizes reported
+helpful and not helpful, suggesting mixed experiences. Some (0.18-0.81) in those studies and closer to the larger effect size
+suggested improvements included wanting the app to understand at follow-up. Our study effect size was also compared with the
+them better and wanting to avoid repetitions. Users who effect sizes reported in a 2018 meta-analysis [22] of RCT studies
+expressed hard to cope with daily tasks and who reported facing published before September 2016. The effect size from the 32
+relationship issues in the recent past found the app helpful and studies on major depressive disorders was found to range
+gave a higher favorable experience feedback. between 0.51 and 0.81 (Hedges g). Our study effect size was
+close to this effect range.
+User objections (refusals or complaints) formed a relatively
+small proportion (1.58%). The existing objection detection ML
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 9
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+There are no known published metrics to compare how the Limitations of the Study
+“Objection Rate” fares among chatbot users with self-reported
+A study of this nature has a number of limitations. A lack of a
+symptoms of depression. The observed objection rate of 1.58%
+randomized controlled environment would lead to nonhandling
+when compared with the overall objection rate of 0.83% when
+of biases. No prior health information exists about the users,
+all app users during the study period were considered (including
+particularly their past or ongoing clinical history, diagnosis or
+excluded users); it is seen that the objection rate of users with
+treatment, or presence of comorbidities that could impact the
+self-reported symptoms of major depression (PHQ-2=6) was
+effect. Both PHQ-2 and PHQ-9 have good acceptability for
+higher. This might indicate that users with high self-reported
+screening but do not confirm clinical diagnosis of depression
+symptoms tend to object more during their conversation with
+(ie, participants with high PHQ-9 scores need not necessarily
+a well-being app. Extensive research is needed in this area,
+have depression and vice versa). This study design is a form of
+especially given the ethical issues that may arise.
+quasi-experimental design and is slightly lower in design quality
+Value of the Study compared with interrupted time-series designs (multiple pretest
+and posttest observations spaced at equal intervals of time).
+The study design allows for scalability to conduct large
+Statistical limitations include small and unbalanced comparison
+longitudinal studies and, therefore, a relatively easier and early
+group sizes and not being able to account for variables such as
+assessment of a chatbot’s real-world effectiveness and
+age, gender, or socioeconomic status. A lack of detailed
+engagement. The in-app based feedback approach allowed for
+feedback responses on users’ app experience limits the data
+real-time insights into the users’experience using a personalized
+available to gain insights using a qualitative analysis.
+intervention, without the danger of losing vital feedback and
+insights due to delays in collection. The study outlines a way Bias may also exist in the form of increased exposure to certain
+to use existing conversational inputs to gather additional context features in the app for the high users group, which may partly
+about the user when no personally identifiable information or contribute to influencing users in unknown ways. There is a
+demographic information is collected. This is an approach that need to insulate the app’s design (such as color themes, font
+will aid in personalizing the user experience when conversing types, text alignments, icons, and emoticons) from contributing
+with a chatbot app. There exists tremendous value and potential to the effects observed. The study sample size was too small to
+for the app to enable Ecological Momentary Assessment (EMA) examine how people reacted to the app design elements and
+or Experience Sampling Method (ESM). Our study team how that impacts their symptoms of depression. The authors
+supports the adoption of EMA or ESM as a research method intend to further delineate these issues in future research with
+for future studies where the objectives involve a more intensive, larger samples.
+repeated, and momentary capture to assess changes in behavior,
+Handling of these limitations would be a subject for future
+emotions, and mood of users. In future longitudinal studies, it
+studies including the conduct of more elaborate comparison
+will also add value to report on important app engagement
+studies.
+measures such as user retention to complement the study
+findings. In a real-world context as conversations scale, the Conclusions
+study recommends a need to evaluate and build high-performing
+Our study identified a significantly higher average improvement
+ML models, including evaluation of unsupervised learning
+in symptoms of major depression and a higher proportion of
+approaches, to detect objections in real-time while ensuring
+positive in-app experiences among high Wysa users compared
+better control and interpretability of the model results. This
+with low Wysa users. These findings are encouraging and will
+allows for early handling of user objections to help make the
+help in designing future studies with larger samples and more
+chatbot more empathetic, enhance user engagement and
+longitudinal data points.
+retention, and strive for high ethical standards.
+Acknowledgments
+The authors would like to thank Wysa for providing access to their mobile app and the anonymized data during the study period
+for research purposes. Wysa funded the publication fees for the paper.
+Authors' Contributions
+BI and VS designed and performed research, analyzed data, and wrote the manuscript; SS and VS performed data wrangling.
+The manuscript was reviewed by all the authors.
+Conflicts of Interest
+BI is a scientific advisor to Wysa with no fiduciary associations. VS is an independent research consultant at Wysa and draws a
+consulting fee. SS is a technical lead and a paid employee at Wysa.
+Multimedia Appendix 1
+Wysa app study version.
+[PNG File, 313KB-Multimedia Appendix 1]
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 10
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+Multimedia Appendix 2
+Supplementary methods.
+[PDF File (Adobe PDF File), 36KB-Multimedia Appendix 2]
+Multimedia Appendix 3
+Mixed methods approach followed for the study.
+[PNG File, 16KB-Multimedia Appendix 3]
+Multimedia Appendix 4
+Study recruitment chart. "Enrollment" depicts inclusion of users who provided only 2 valid PHQ-9 assessment (pre and post over
+14 days apart). “Allocation” splits users into 2 comparison groups based on their app usage on and between the two screening
+time-points. “Analysis” includes users who scored a total of “6” in the first 2 items of their PHQ-9.
+[PNG File, 39KB-Multimedia Appendix 4]
+Multimedia Appendix 5
+In-app feedback question and responses.
+[PDF File (Adobe PDF File), 34KB-Multimedia Appendix 5]
+Multimedia Appendix 6
+A typical user engagement with the Wysa app. Time period 1 denotes the start of app use by a user. Time period n denotes the
+end of the study period.
+[PNG File, 50KB-Multimedia Appendix 6]
+Multimedia Appendix 7
+Sample objection quotes from users.
+[PDF File (Adobe PDF File), 24KB-Multimedia Appendix 7]
+Multimedia Appendix 8
+Distribution of users based on Total Active Days on and between screening days.
+[PNG File, 11KB-Multimedia Appendix 8]
+Multimedia Appendix 9
+Distribution of Wysa app users based on number of days between the screening days.
+[PNG File, 10KB-Multimedia Appendix 9]
+Multimedia Appendix 10
+Region and time-zones of all included users.
+[PNG File, 36KB-Multimedia Appendix 10]
+Multimedia Appendix 11
+Distribution of self-reported major events and changes of all included users.
+[PNG File, 17KB-Multimedia Appendix 11]
+Multimedia Appendix 12
+Distribution of self-reported ability to cope among all included users.
+[PNG File, 15KB-Multimedia Appendix 12]
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 11
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+Multimedia Appendix 13
+Distribution of users who completed wellness tools.
+[PNG File, 8KB-Multimedia Appendix 13]
+Multimedia Appendix 14
+Major events or changes reported by users.
+[PDF File (Adobe PDF File), 27KB-Multimedia Appendix 14]
+Multimedia Appendix 15
+Analysis of free-text in-app feedback responses from study users.
+[PDF File (Adobe PDF File), 38KB-Multimedia Appendix 15]
+References
+1. World Health Organization. Geneva: World Health Organization; 2017. Depression and Other Common Mental Disorders:
+Global Health Estimates URL: http://www.who.int/mental_health/management/depression/
+prevalence_global_health_estimates/en/[WebCite Cache ID 71tDp00UM]
+2. Ishak WW, Balayan K, Bresee C, Greenberg JM, Fakhry H, Christensen S, et al. A descriptive analysis of quality of life
+using patient-reported measures in major depressive disorder in a naturalistic outpatient setting. Qual Life Res 2013
+Apr;22(3):585-596. [doi: 10.1007/s11136-012-0187-6] [Medline: 22544416]
+3. Fried EI, Nesse RM. The impact of individual depressive symptoms on impairment of psychosocial functioning. PLoS One
+2014;9(2):e90311 [FREE Full text] [doi: 10.1371/journal.pone.0090311] [Medline: 24587318]
+4. Pulcu E, Elliott R. Neural origins of psychosocial functioning impairments in major depression. Lancet Psychiatry 2015
+Sep;2(9):835-843. [doi: 10.1016/S2215-0366(15)00237-0] [Medline: 26360902]
+5. Greenberg PE, Fournier A, Sisitsky T, Pike CT, Kessler RC. The economic burden of adults with major depressive disorder
+in the United States (2005 and 2010). J Clin Psychiatry 2015 Feb;76(2):155-162 [FREE Full text] [doi:
+10.4088/JCP.14m09298] [Medline: 25742202]
+6. Centre for Mental Health. 2010. The economic and social costs of mental health problems in 2009/10 URL: https://www.
+centreformentalhealth.org.uk/economic-and-social-costs-of-mental-health-problems[accessed 2018-08-23] [WebCite Cache
+ID 71tDUFW8c]
+7. Farmer P, Stevenson D. GOV.UK. 2017 Oct 26. Thriving at Work: a review of mental health and employers URL: https:/
+/www.gov.uk/government/publications/thriving-at-work-a-review-of-mental-health-and-employers[WebCite Cache ID
+71tDyIsy2]
+8. World Health Organization. Geneva: World Health Organization; 2018. Mental Health Atlas 2017 URL: http://www.who.int/
+mental_health/evidence/atlas/mental_health_atlas_2017/en/[WebCite Cache ID 71tEB6iJK]
+9. Cuijpers P, Sijbrandij M, Koole SL, Andersson G, Beekman AT, Reynolds CF. The efficacy of psychotherapy and
+pharmacotherapy in treating depressive and anxiety disorders: a meta-analysis of direct comparisons. World Psychiatry
+2013 Jun;12(2):137-148 [FREE Full text] [doi: 10.1002/wps.20038] [Medline: 23737423]
+10. Patel V. SUNDAR: mental health for all by all. BJPsych Int 2015 Feb;12(1):21-23 [FREE Full text] [doi:
+10.1192/S2056474000000118] [Medline: 29093840]
+11. Department of Health, UK. British Library. 2014 Sep 25. Access and waiting times standards for 2015-16 in mental health
+services: Impact Assessment URL: https://www.bl.uk/britishlibrary/~/media/bl/global/social-welfare/pdfs/non-secure/a/c/
+c/access-and-waiting-time-standards-for-201516-in-mental-health-services-impact-assessment.pdf[accessed 2018-08-23]
+[WebCite Cache ID 71tEOfm0q]
+12. British Medical Association. 2018 Feb 26. New BMA research unveils blindspot in mental healthcare URL: https://www.
+bma.org.uk/news/media-centre/press-releases/2018/february/
+new-bma-research-unveils-blindspot-in-mental-healthcare[WebCite Cache ID 71tETlIw7]
+13. Pedersen ER, Paves AP. Comparing perceived public stigma and personal stigma of mental health treatment seeking in a
+young adult sample. Psychiatry Res 2014 Sep 30;219(1):143-150 [FREE Full text] [doi: 10.1016/j.psychres.2014.05.017]
+[Medline: 24889842]
+14. Andrade LH, Alonso J, Mneimneh Z, Wells JE, Al-Hamzawi A, Borges G, et al. Barriers to mental health treatment: results
+from the WHO World Mental Health surveys. Psychol Med 2014 Apr;44(6):1303-1317 [FREE Full text] [doi:
+10.1017/S0033291713001943] [Medline: 23931656]
+15. Tindall L, Mikocka-Walus A, McMillan D, Wright B, Hewitt C, Gascoyne S. Is behavioural activation effective in the
+treatment of depression in young people? A systematic review and meta-analysis. Psychol Psychother 2017 Dec;90(4):770-796
+[FREE Full text] [doi: 10.1111/papt.12121] [Medline: 28299896]
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 12
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+16. Cuijpers P, Donker T, van Straten A, Li J, Andersson G. Is guided self-help as effective as face-to-face psychotherapy for
+depression and anxiety disorders? A systematic review and meta-analysis of comparative outcome studies. Psychol Med
+2010 Dec;40(12):1943-1957. [doi: 10.1017/S0033291710000772] [Medline: 20406528]
+17. Lucas GM, Rizzo A, Gratch J, Scherer S, Stratou G, Boberg J, et al. Reporting mental health symptoms: breaking down
+barriers to care with virtual human interviewers. Front Robot AI 2017 Oct 12;4. [doi: 10.3389/frobt.2017.00051]
+18. Callan JA, Wright J, Siegle GJ, Howland RH, Kepler BB. Use of computer and mobile technologies in the treatment of
+depression. Arch Psychiatr Nurs 2017 Dec;31(3):311-318. [doi: 10.1016/j.apnu.2016.10.002] [Medline: 28499574]
+19. Carlbring P, Andersson G, Cuijpers P, Riper H, Hedman-Lagerlöf E. Internet-based vs face-to-face cognitive behavior
+therapy for psychiatric and somatic disorders: an updated systematic review and meta-analysis. Cogn Behav Ther 2018
+Jan;47(1):1-18. [doi: 10.1080/16506073.2017.1401115] [Medline: 29215315]
+20. Ebert DD, Donkin L, Andersson G, Andrews G, Berger T, Carlbring P, et al. Does Internet-based guided-self-help for
+depression cause harm? An individual participant data meta-analysis on deterioration rates and its moderators in randomized
+controlled trials. Psychol Med 2016 Oct;46(13):2679-2693. [doi: 10.1017/S0033291716001562] [Medline: 27649340]
+21. Karyotaki E, Riper H, Twisk J, Hoogendoorn A, Kleiboer A, Mira A, et al. Efficacy of self-guided internet-based cognitive
+behavioral therapy in the treatment of depressive symptoms: a meta-analysis of individual participant data. J Am Med
+Assoc Psychiatry 2017 Apr 01;74(4):351-359. [doi: 10.1001/jamapsychiatry.2017.0044] [Medline: 28241179]
+22. Andrews G, Basu A, Cuijpers P, Craske MG, McEvoy P, English CL, et al. Computer therapy for the anxiety and depression
+disorders is effective, acceptable and practical health care: an updated meta-analysis. J Anxiety Disord 2018 Apr;55:70-78
+[FREE Full text] [doi: 10.1016/j.janxdis.2018.01.001] [Medline: 29422409]
+23. Rathbone AL, Clarry L, Prescott J. Assessing the efficacy of mobile health apps using the basic principles of cognitive
+behavioral therapy: systematic review. J Med Internet Res 2017 Nov 28;19(11):e399 [FREE Full text] [doi: 10.2196/jmir.8598]
+[Medline: 29187342]
+24. Firth J, Torous J, Nicholas J, Carney R, Pratap A, Rosenbaum S, et al. The efficacy of smartphone-based mental health
+interventions for depressive symptoms: a meta-analysis of randomized controlled trials. World Psychiatry 2017
+Oct;16(3):287-298 [FREE Full text] [doi: 10.1002/wps.20472] [Medline: 28941113]
+25. Ly KH, Topooco N, Cederlund H, Wallin A, Bergström J, Molander O, et al. Smartphone-supported versus full behavioural
+activation for depression: a randomised controlled trial. PLoS One 2015;10(5):e0126559 [FREE Full text] [doi:
+10.1371/journal.pone.0126559] [Medline: 26010890]
+26. Ly KH, Trüschel A, Jarl L, Magnusson S, Windahl T, Johansson R, et al. Behavioural activation versus mindfulness-based
+guided self-help treatment administered through a smartphone application: a randomised controlled trial. Br Med J Open
+2014;4(1):e003440 [FREE Full text] [doi: 10.1136/bmjopen-2013-003440] [Medline: 24413342]
+27. Ly KH, Janni E, Wrede R, Sedem M, Donker T, Carlbring P, et al. Experiences of a guided smartphone-based behavioral
+activation therapy for depression: a qualitative study. Internet Interv 2015 Mar;2(1):60-68. [doi: 10.1016/j.invent.2014.12.002]
+28. Ben-Zeev D, Brian RM, Jonathan G, Razzano L, Pashka N, Carpenter-Song E, et al. Mobile health (mHealth) versus
+clinic-based group intervention for people with serious mental illness: a randomized controlled trial. Psychiatr Serv 2018
+May 25:appips201800063. [doi: 10.1176/appi.ps.201800063] [Medline: 29793397]
+29. Noone C, Hogan MJ. A randomised active-controlled trial to examine the effects of an online mindfulness intervention on
+executive control, critical thinking and key thinking dispositions in a university student sample. BMC Psychol 2018 Apr
+05;6(1):13 [FREE Full text] [doi: 10.1186/s40359-018-0226-3] [Medline: 29622047]
+30. Hoermann S, McCabe KL, Milne DN, Calvo RA. Application of synchronous text-based dialogue systems in mental health
+interventions: systematic review. J Med Internet Res 2017 Jul 21;19(8):e267 [FREE Full text] [doi: 10.2196/jmir.7023]
+[Medline: 28784594]
+31. Fitzpatrick KK, Darcy A, Vierhile M. Delivering cognitive behavior therapy to young adults with symptoms of depression
+and anxiety using a fully automated conversational agent (Woebot): a randomized controlled trial. JMIR Ment Health 2017
+Jun 06;4(2):e19 [FREE Full text] [doi: 10.2196/mental.7785] [Medline: 28588005]
+32. Ly KH, Ly A, Andersson G. A fully automated conversational agent for promoting mental well-being: a pilot RCT using
+mixed methods. Internet Interv 2017 Dec;10:39-46. [doi: 10.1016/j.invent.2017.10.002]
+33. BBC Tomorrow's world. BBC. 2017. Would you trust a chatbot therapist? URL: http://www.bbc.co.uk/guides/zt8h2nb
+[accessed 2018-09-04] [WebCite Cache ID 72B9r5lgZ]
+34. Emma S. Wysa. Wysa Case Studies; 2018 Apr 18. NHS Children Services: How the North East London NHS Foundation
+Trust uses Wysa for children's mental health URL: https://www.wysa.io/blog/nhs-children-services[accessed 2018-09-04]
+[WebCite Cache ID 72BAtBWuZ]
+35. Braun A, Clarke V. Using thematic analysis in psychology. Qual Res Psychol 2006 Jan;3(2):77-101. [doi:
+10.1191/1478088706qp063oa]
+36. Braun V, Clarke V. What can “thematic analysis” offer health and wellbeing researchers? Int J Qual Stud Health Well-being
+2014;9:26152 [FREE Full text] [doi: 10.3402/qhw.v9.26152] [Medline: 25326092]
+37. Mitchell AJ, Yadegarfar M, Gill J, Stubbs B. Case finding and screening clinical utility of the Patient Health Questionnaire
+(PHQ-9 and PHQ-2) for depression in primary care: a diagnostic meta-analysis of 40 studies. BJPsych Open 2016
+Mar;2(2):127-138 [FREE Full text] [doi: 10.1192/bjpo.bp.115.001685] [Medline: 27703765]
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 13
+XSL FO (page number not for citation purposes)
+•
+RenderX
+JMIR MHEALTH AND UHEALTH Inkster et al
+38. Ruscio J. A probability-based measure of effect size: robustness to base rates and other factors. Psychol Methods 2008
+Mar;13(1):19-30. [doi: 10.1037/1082-989X.13.1.19] [Medline: 18331151]
+39. Rice ME, Harris GT. Comparing effect sizes in follow-up studies: ROC Area, Cohen's d, and r. Law Hum Behav 2005
+Oct;29(5):615-620. [doi: 10.1007/s10979-005-6832-7] [Medline: 16254746]
+40. Barnett AG, van der Pols JC, Dobson AJ. Regression to the mean: what it is and how to deal with it. Int J Epidemiol 2005
+Feb;34(1):215-220. [doi: 10.1093/ije/dyh299] [Medline: 15333621]
+41. Zimmerman DW. Invalidation of parametric and nonparametric statistical tests by concurrent violation of two assumptions.
+J Exp Educ 1998 Jan;67(1):55-68. [doi: 10.1080/00220979809598344]
+42. Wagnild GM, Young HM. Development and psychometric evaluation of the Resilience Scale. J Nurs Meas 1993;1(2):165-178.
+[Medline: 7850498]
+43. McAlpine DD, McCreedy E, Alang S. The meaning and predictive value of self-rated mental health among persons with
+a mental health problem. J Health Soc Behav 2018 Jun;59(2):200-214. [doi: 10.1177/0022146518755485] [Medline:
+29406825]
+44. Kramer J, Conijn B, Oijevaar P, Riper H. Effectiveness of a web-based solution-focused brief chat treatment for depressed
+adolescents and young adults: randomized controlled trial. J Med Internet Res 2014;16(5):e141 [FREE Full text] [doi:
+10.2196/jmir.3261] [Medline: 24874006]
+45. Kessler D, Lewis G, Kaur S, Wiles N, King M, Weich S, et al. Therapist-delivered internet psychotherapy for depression
+in primary care: a randomised controlled trial. Lancet 2009 Aug 22;374(9690):628-634. [doi:
+10.1016/S0140-6736(09)61257-5] [Medline: 19700005]
+Abbreviations
+AI: artificial intelligence
+CBT: cognitive behavioral therapy
+CL: common language effect size
+EMA: Ecological Momentary Assessment
+ESM: Experience Sampling Method
+ML: machine learning
+NHS: National Health Service
+PHQ-2: 2-item Patient Health Questionnaire
+PHQ-9: 9-item Patient Health Questionnaire
+RCT: randomized controlled trial
+WHO: World Health Organization
+Edited by G Eysenbach; submitted 05.09.18; peer-reviewed by M Mulvenna, KL Ong; comments to author 26.09.18; revised version
+received 09.10.18; accepted 09.10.18; published 23.11.18
+Please cite as:
+Inkster B, Sarda S, Subramanian V
+An Empathy-Driven, Conversational Artificial Intelligence Agent (Wysa) for Digital Mental Well-Being: Real-World Data Evaluation
+Mixed-Methods Study
+JMIR Mhealth Uhealth 2018;6(11):e12106
+URL: http://mhealth.jmir.org/2018/11/e12106/
+doi: 10.2196/12106
+PMID: 30470676
+©Becky Inkster, Shubhankar Sarda, Vinod Subramanian. Originally published in JMIR Mhealth and Uhealth
+(http://mhealth.jmir.org), 23.11.2018. This is an open-access article distributed under the terms of the Creative Commons Attribution
+License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and reproduction in any
+medium, provided the original work, first published in JMIR mhealth and uhealth, is properly cited. The complete bibliographic
+information, a link to the original publication on http://mhealth.jmir.org/, as well as this copyright and license information must
+be included.
+http://mhealth.jmir.org/2018/11/e12106/ JMIR Mhealth Uhealth 2018 | vol. 6 | iss. 11 | e12106 | p. 14
+XSL FO (page number not for citation purposes)
+•
+RenderX

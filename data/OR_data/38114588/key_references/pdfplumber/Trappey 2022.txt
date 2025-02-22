@@ -1,0 +1,1014 @@
+processes
+Article
+Development of an Empathy-Centric Counseling Chatbot
+System Capable of Sentimental Dialogue Analysis
+AmyJ.C.Trappey1,* ,AislynP.C.Lin1,KevinY.K.Hsu2,CharlesV.Trappey3andKevinL.K.Tu1
+1 DepartmentofIndustrialEngineeringandEngineeringManagement,NationalTsingHuaUniversity,
+Hsinchu30013,Taiwan;s109034608@m109.nthu.edu.tw(A.P.C.L.);s106034002@m106.nthu.edu.tw(K.L.K.T.)
+2 DepartmentofEducationalPsychologyandCounseling,NationalTsingHuaUniversity,
+Hsinchu30013,Taiwan;ykhsu@mx.nthu.edu.tw
+3 DepartmentofManagementScience,NationalYangMingChiaoTungUniversity,Hsinchu30093,Taiwan;
+trappey@nycu.edu.tw
+* Correspondence:trappey@ie.nthu.edu.tw;Tel.:+886-3-5742651
+Abstract:Collegestudentsencountervarioustypesofstressesinschoolduetoschoolwork,personal
+relationships,healthissues,andfuturecareerconcerns.Somestudentsaresusceptibletothestrikes
+offailuresandareinexperiencedwithorfearfulofdealingwithsetbacks. Whenthesenegative
+emotionsgraduallyaccumulatewithoutresolution,theycancauselong-termnegativeeffectsonstu-
+dents’physicalandmentalhealth.Somepotentialhealthproblemsincludedepression,anxiety,and
+disorderssuchaseatingdisorders.Universitiescommonlyoffercounselingservices;however,the
+demandoftenexceedsthecounselingcapacitiesduetolimitednumbersofcounsellors/psychologists.
+Thus,studentsmaynotreceiveimmediatecounselingortreatments.Ifstudentsarenottreated,some
+repercussionsmayleadtosevereabnormalbehaviorandevensuicide. Inthisstudy,combining
+immersivevirtualreality(VR)techniquewithpsychologicalknowledgebase,wedevelopedaVR
+empathy-centriccounselingchatbot(VRECC)thatcancomplementarilysupporttroubledstudents
+whencounsellorscannotprovideimmediatesupport. Throughmulti-turn(verbalortext)conver-
+Citation:Trappey,A.J.C.;Lin,A.P.C.;
+sationswiththechatbot,thesystemcandemonstrateempathyandgivetherapist-likeresponsesto
+Hsu,K.Y.K.;Trappey,C.V.;Tu,K.L.K.
+theusers.Duringthestudy,morethan120studentswererequiredtocompleteaquestionnaireand
+DevelopmentofanEmpathy-Centric
+CounselingChatbotSystemCapable 34subjectswithanabove-medianstresslevelwererandomlydrawnfortheVRECCexperiment.We
+ofSentimentalDialogueAnalysis. observeddecreasingaveragestresslevelandpsychologicalsensitivityscoresamongsubjectsafterthe
+Processes2022,10,930. https:// experiment.Althoughthesystemdidnotyieldimprovementinlife-impactscores(e.g.,behavioral
+doi.org/10.3390/pr10050930 andphysicalimpacts),thesignificantoutcomesofloweringstresslevelandpsychologicalsensitivity
+havegivenusaverypositiveoutlookforcontinuingtointegrateVR,AIsentimentalnaturallanguage
+AcademicEditor:Raul
+process,andcounselingchatbotforadvancedVRECCresearchinhelpingstudentsimprovetheir
+D.S.G.Campilho
+psychologicalwell-beingandlifequalityatschools.
+Received:22April2022
+Accepted:2May2022
+Keywords:counseling;chatbot;schoolstress;sentimentunderstanding;virtualtherapy
+Published:8May2022
+Publisher’sNote:MDPIstaysneutral
+withregardtojurisdictionalclaimsin
+publishedmapsandinstitutionalaffil- 1. Introduction
+iations.
+AccordingtoTaiwanSuicidePreventionCenterstatistics,approximately4000people
+aged15to24inTaiwanattemptedsuicideperyearduringtheyearsof2012to2016[1].
+Thenumbershavecontinuedtogrowinthepastfiveyears,andreachedanall-timehigh
+(10,659) in 2020, among which 2371 were students [1]. Some studies depicted that the
+Copyright: © 2022 by the authors.
+psychologicaldisturbancesofcollegestudentscomefromacademicpressure,interpersonal
+Licensee MDPI, Basel, Switzerland.
+relationships,personalitytraits,careerplans,familyissues,etc. Academicpressureisthe
+This article is an open access article
+mostreportedfactorthatleadstomentaldistress,followedbyinterpersonalrelationships
+distributed under the terms and
+andpersonalitytraits[1].
+conditionsoftheCreativeCommons
+Attribution(CCBY)license(https:// Startingin2020, theoutbreakofCOVID-19hasdrasticallychangedthelifestyleof
+creativecommons.org/licenses/by/ society. According to the survey conducted by the John Tung Foundation, more than
+4.0/). 1/5 of participants were dissatisfied with the changes caused by the pandemic. The
+Processes2022,10,930.https://doi.org/10.3390/pr10050930 https://www.mdpi.com/journal/processes
+Processes2022,10,930 2of19
+top four negative emotions participants experienced were worry (38%), anxiety (23%),
+nervousness(22%),andpanic(9%),whichcanleadtolong-termpsychologicalillnesses,
+e.g.,hopelessness,depression,andanxiety,ifnottreatedintime.Thesementalhealthissues
+mayincreasesuicidaltendencies. Thus,itiscrucialthatschools,especiallyuniversities,
+provide sufficient counseling services to those in need [2]. However, most universities’
+therapist–studentratiosarelow. Thestudentsmustwaitinlineforanappointment,and
+someofthemarenotawareofhowtoconsultotherhealthcenterstopreventthesyndrome
+from worsening. Inorder tocope withthe shortagesofcounsellors/therapists, several
+companieshavelaunchedonlinesolutionstoprovidein-timeconsultationaimingtoassist
+incomplementarycounselingsupportstostudents. CompaniessuchasWoebot,Wysa,X2,
+andYouperarestartupscurrentlyinthemarkettoprovidesuchservices. Theirsystems
+adoptartificialintelligenceintegratedwithbackground(psychotherapy)knowledgerelated
+tomentalhealthissues. Despiteprovidingtheabovementionedone-on-onecounseling
+solutions,thesesystemscurrentlylackthefunctionsofinteractingandsharingdistresswith
+othersinagroupcounselingsetting.Eveninaone-on-onecounselingsetting,althoughthey
+havetheabilitytounderstandusers’basicconcernsandquestions,thesesystems’abilityto
+understandnaturallanguageinsentimentaldialogsandtoanswerusers’questionswith
+empathy-centric responses are very limited. Thus, this research focuses on closing the
+researchgapbydevelopinganempathy-centriccounselingchatbotsystemthatiscapable
+ofsentimentaldialogueanalysis.
+Inshort,thisresearchaimstoalleviatestudents’distressesandpsychologicalsymp-
+toms by providing empathy-centric counseling using the chatbot system and making
+studentsfeelrelievedthroughthevirtualinteractiveconversations. Inthisresearch,we
+adopted a VR group-counseling chatbot (VRGCC) framework, preliminarily presented
+inourrecentpublication[3]. WefurtherimprovedtheoriginalVRGCCsystembyincor-
+porating the empathy-centric counseling knowledge for the chatbot development. The
+newlydevelopedsystem,namelytheVRempathy-centriccounselingchatbot(VRECC),
+recognizes sentiments of questions and is capable of empathy-centric dialogues. BERT
+modelsforsentiment-andissue-relatedclassificationsofquestionsentencesandthedi-
+alog management module were trained and developed to accomplish empathy-centric
+counselingtasks. VRECCwastestedandverifiedthroughpre-andpost-experimentpsycho-
+logicalquestionnaires. Theexperimentresultsshowedthatstresslevelsandpsychological
+sensitivityweresignificantlyreducedafterthesubjectsreceivedVRECCtreatments.
+2. LiteratureReview
+Thischapterreviewspastliteratureonrelatedtopics. Section2.1explorescommon
+psychotherapyapproachesappliedtostudentstress. Section2.2reviewstheapplicationsof
+immersivetechnology(AR/VR)inhealth-relatedsectors. InSection2.3,chatbotapplica-
+tionsincounselingandrelatedVR-enabledchatbotsarebrieflyintroducedandreviewed.
+2.1. Psychotherapy
+Thissectionreviewscommonpsychotherapyapproachesandhowtheycanbeapplied
+toalleviatestudentstress.TheAmericanPsychologicalAssociationclassifiespsychotherapy
+approachesintofivecategories,includingpsychoanalysisandpsychodynamictherapies,
+behaviortherapy,cognitivetherapy,humanistictherapy,andintegrativeorholisticther-
+apy[4]. PsychodynamictherapywasoriginallyconceptualizedbyAustrianpsychologist
+SigmundFreud. Itemphasizesthesubconsciousmindandexploreshowpastexperiences
+and personalities influence present thoughts, feelings, relationships, and behaviors [5].
+Behaviortherapy,alsoknownas“behaviormodification”,usesfindingsandmethodsfrom
+experimentalpsychology’sstudyoflearningprocessestochangemaladaptivebehaviors.
+Theabnormalbehaviorsmanifestedinpsychologicaldisorderscanbeacquiredasnormal
+behaviors,andthedisorderscanbecorrectedthroughthebasicprinciplesofconditioning,
+learning,andobservationallearning[6]. Cognitivetherapyisbasedontheoreticalassump-
+tionsabouthumancognitiveprocessesthatinfluenceemotionsandbehaviors,anduses
+Processes2022,10,930 3of19
+cognitiveandbehavioraltechniquestochangemaladaptivecognitions. Itutilizescognitive
+reconstruction,psychologicalcoping,andproblem-solvingtechniquesforcounselingand
+treatment[7]. Humanistictherapyisanextensionofperson-centeredtherapy,whichfo-
+cusesonexploringthenatureofhumanbeings. Itisawaytoexplorethemind,body,and
+spirit,includingthoughts,emotions,andbehaviors,andtointegratehealthyrelationships
+withothersandsocietytomakelifemorefulfilling. Theemphasisisonpositivegrowthand
+developmentandthetherapist’sownattitudessuchascongruence,genuineness,uncondi-
+tionalpositiveregard,andempathicunderstandingratherthantherapeutictechniques.[8].
+Integrative or holistic therapy means that the therapist integrates elements of multiple
+approaches to tailor the treatment plan to the needs of each client. Therapists instruct
+patientsonhowtosolveproblemsbycorrectingtheirthinkingandbehavioralreactions[9].
+Collegestudentsface(andbear)manysourcesofpressurefromteachers,peers(class-
+mates), and other personal relations (e.g., families, significant others, etc.). DeAnnah’s
+researchdividesthefactorsaffectingstudents’mentalhealthintothreelevels,i.e.,individ-
+ual,interpersonal,andinstitutional. Theindividuallevelissimilartothecopingabilitiesof
+students,andtheinterpersonal,includingintergroupawareness,andinstitutionallevels
+arerelatedtotheschoolorganization,i.e.,thetensionoftheentirecampus. Thedatacome
+from2203studentsenrolledintheuniversity. Theresultsshowthatthecomprehensive
+impactsoftheindividualandinstitutionallevelsarerelatedtothementalhealthofstudents.
+Therefore,thestudents’limitedcopingabilitiesandthetensecampusatmospherehave
+ledtopsychologicaldistressforcollegestudents[10]. Inordertoexplorewhethergeneral
+lifesatisfactionisnegativelyrelatedtocollegestudents’stress,Weinsteinconductedthree
+surveysonasampleofcollegestudents, includingasimpledemographicsurvey, alife
+satisfactionscale[11],andacollegestudentstressscale[12].Thelifesatisfactionandcollege
+student stress scores were significantly negatively correlated within the sample, which
+indicatesthatcollegestudents’lifesatisfactionisadverselyaffectedbycollegepressure[13].
+Anotherstudy attempted toexplore theassociationbetweenstudent stressand mental
+disorders. Atotalof20,842respondentsfromtheWorldHealthOrganizationWorldMental
+HealthInternationalCollegeStudentInitiativewerecollected, includingstudentsfrom
+24universitiesin9countries. Thestudyputforwardsixissuesthatmaycausestressin
+students,includingfinancialstatus,health,lovelife,familyrelations,work/schoolrelations,
+andfamilyexperience. Atthesametime,mentaldisordersweredividedintosixcategories:
+majordepressivedisorder,bipolardisorder,generalizedanxietydisorder,panicdisorder,
+alcoholusedisorder,anddrugusedisorder. Therelationshipbetweenstressissuesand
+mental disorders was evaluated based on the stress perception of students’ responses.
+Theresultsshowedthat93.7%ofstudentssaidtheyfeltstressinatleastonearea,anda
+significantcorrelationwasfoundbetweenthedegreeofstressandtheincreasedchance
+ofmentalillness[14]. Forstress-leveldetermination,Tonacci’sstudyshowedthatusing
+machinelearningtoanalyzephysiologicalsignalsrelatedtoautonomicnervoussystem
+(ANS)activity,suchaselectrocardiograms(ECG)andgalvanicskinresponse(GSR),can
+yieldthesameresultsasself-reporting[15].
+Inordertoreducestudentstressandimprovetheeffectivenessofcounseling,many
+studies have proposed various counseling services. Several studies have investigated
+the effects of biofeedback on the treatment of stress and anxiety. Results showed that
+participants who received biofeedback and counseling had more reductions in anxiety
+symptomsthanthosewhoonlyreceivedcounseling[16,17]. Anotherstudyoncomplemen-
+taryalternativetherapyresourcessuggeststhatyogacanbeeffectiveinhelpingwithstress
+management[18]. Inaddition,severalstudieshaveexaminedtheimpactofcounseling
+onstudents’schooling. Studieshaveshownasignificantcorrelationbetweencounseling
+experiences and student retention [19,20], demonstrating the importance of counseling
+servicesforstudents.
+Processes2022,10,930 4of19
+2.2. ImmersiveTechnology: AR/VR
+This section reviews the advantages of immersive technology in health care appli-
+cationsandsomeimplementationsofaugmentedrealityand/orvirtualreality(AR/VR)
+forpsychotherapysystems. Thebenefitsofimmersivevirtualenvironmentsinthefield
+ofpsychotherapyhavebeendemonstratedinanumberofstudies. Forexample,Persky’s
+studyusedtheScopusdatabaseforliteratureretrievalandanalysisandshowedthatimmer-
+sivetechnologieshavemoreadvantagesthantraditionalprocessingmethods,includinga
+higherdegreeofuserrealismandeasierexperimentalcontrol[21].
+AnotherstudywasdoneinanARenvironmentsetting[22],whereaKinectsensor
+was connected with an iPad to establish a clinical consulting system. Patients can take
+advantageofthisARsystemaslongastheywanttoseekmedicalconsultationathome.
+Becauseofitslowcostandportability,theARsystemcangreatlybenefitpatientsandallow
+physicianstovisuallyexplaincomplexmedicalconditionstothepatients[22].
+PriorresearchconductedexposuretherapyinaVRenvironmentsettinganddesigned
+sevenVRdrivingconditionscenariossuchasdayandnight,mountainroad,highway,etc.
+Theexperimentswouldsimultaneouslycollectphysiologicalsignalsofsubjectsthrough
+biosensors. By meticulously designing multiple experiments, VR can simulate many
+differentdriving-relatedanxietyscenariosforbettertreatment. Thesubjectsprovideda
+decentevaluationoftheimmersiveexperiencesTheresultsshowedthattheVRsystem
+wasaneffectivedrivingphobiatreatment[23]. Inaddition,otherresearchperformedmeta-
+analysesandfoundthatVRcanbeusedasaneffectiveinterventiontodistractpatients
+withneedle-relatedsurgeryandrelievepaininchildren[24]. Whileagingproblemshave
+occurredinmanycountriesacrosstheglobe,emphasisonthehealthcareoftheelderlyusing
+immersivetechnologieshasbecomeanewresearcharea. Elderlypeoplearesusceptive
+tofalling,whichdamagestheirbodiesandmind. Inonestudy,theresultsshowedthat
+VRcanbeservedasauxiliarymeansofphysicaltherapyforfallpreventionandremote
+rehabilitationfortheelderlypopulation[25].
+2.3. RelatedChatbotApplications
+ThissectionreviewsexistingcounselingchatbotsandsomerelatedVR-enabledchatbot
+applications. Woebotisachatbotthatcaterstotheusers’mentalhealth. Itsfoundationis
+rootedinCognitiveBehavioralTherapy(CBT),InterpersonalPsychotherapy(IPT),and
+DialecticalBehavioralTherapy(DBT).Thecompanyclaimedthatuserscanestablishclose
+bondswithWoebotwithinthreetofivedays, andthebonddidnotappeartodiminish
+overtime[26]. Oftheexperimentalsubjects, 85%werewillingtointeractwithWoebot
+daily,and76%feltbetteraftertakingmeasuressuggestedbyWoebot. Therewasalsoa22%
+averagereductionindepressionsymptomsintwoweeks[27]. Consequently,chatbotshave
+demonstratedthemselvesaseffectivetoolsforcombatingcertaintypesofpsychological
+diseases. MinjeongKang’sresearchcustomizesthechatbottoprocesspersonalitiessuch
+assteadinessandconscientiousness[28]. Otherstudiesbuiltanonlinechatbotthatcan
+distinguish emotions from conversations. It can extract useful words and analyze any
+depressionoranxietyindicationtopreventfuturementalillness[29].
+AmajortrendistocombinechatbotswithVRhuman–computerinterface(HCI)fordif-
+ferentapplications. Forinstance,Tsaramirsisetal. developedaVRasynchronousdistance
+learningsoftwareandfoundthatstudentsusingthesoftwareforlearningoutperformed
+thoseusingtraditionalvideosusedforlearning[30]. VRchatbotscanalsobeusedforjob
+interviewsimulations. Thechatbotistrainedinadvanceusingquestionsandanswersand
+associatedwordpairs,andthengeneratesconversationsbasedontheuser’sresponsesto
+provideahuman-likeexperience[31].
+3. Methodology
+ThegoalofthisstudyistodevelopaplatformthatcombinesVRandempathy-centric
+psychologicalcounseling. StudentscanuseVRdevicestoconnecttothesystem,register
+for an account, and then start using the counseling services. Our system consists of
+Processes2022,10,930 5of19
+threecomponents,includingaquestionnairetomeasureusers’stressstatus,achatbotto
+talkwithusers,andachatroomwhereuserscaninteractwitheachotherandtalkfreely
+withcounselors. Anadditionalofflinequestionnairewasaddedtothestudytocollectthe
+stresslevelsandareasinneedofassistancefromuniversitystudentsbeforehand,which
+wasusedasareferenceforthesystemconstruction. Wefirstdesignedthequestionnaire
+and built the platform, and then invited the higher scorers of the offline questionnaire
+toparticipateintheVRplatformtesttoverifytheeffectivenessoftheplatform. Inorder
+to protect the rights of the users, a professional psychological counselor was involved
+throughouttheentireprocess,andtheuserscouldstoptheexperimentvoluntarilyifthey
+were uncomfortable. The counselor could also stop the experiment depending on the
+user’scondition.
+3.1. Module1: QuestionnaireDesign
+The structure of the questionnaire design is shown in Figure 1. Stress is a normal
+physicalandpsychologicalresponsetothevariousdemandsweplaceonourselves. Stress
+is a subjective feeling, and different people react differently to the same event. Some
+studiesmentionthatstresshasaneffectonpeople’spsychology,behavior,physicality,and
+cognition[32–35],andsomestudieshaveusedthesefactorsasaspectsofstressscales[36].
+American addiction centers suggests that stress can also have an impact on a person’s
+social level [37]. In this study, these factors [32–37] were combined and categorized to
+comprehensivelyconsiderthestresssituationofstudents. OnecanalsorefertotheQues-
+tionPro Survey Software website [38] for more details on questionnaire design. In this
+research,thequestionnaire“Surveyforschoolstress—VirtualRealityCounselingChatbot
+System” consisted of three aspects, i.e., the Stress Level, Psychological Sensitivity, and
+LifeImpactofsubjects. TheStressLevelparthadscaledquestionsusinga10-pointLikert
+scaletomeasureeachsubject’sstresslevelsandstresscopingabilities. ThePsychological
+Sensitivity(thediversityofemotionaleffects)andLifeImpactparts,whichcontaineda
+seriesofquestionsutilizinga5-pointLikertscale,weredevelopedtomeasuretheimpactof
+stressonmindsetandvariouscrucialeffectsonlife(e.g.,thebehavioral,physical,cognitive,
+andsocialeffects).
+Figure1.Structureofthequestionnairedesign.
+3.2. Module2: Empathy-CentricCounselingChatbot
+This section will introduce the essential parts of the counseling chatbot methodol-
+ogy,includingSection3.2.1thedescriptionofempathy-centricpsychologicalknowledge,
+Section3.2.2thechatbottechnologyandmoduleimplementation,andSection3.2.3theissue
+andsentimentclassification(ofquestionsentences)usinganNLPmachinelearningmodel.
+Processes 2022, 10, 930 6 of 19
+This section will introduce the essential parts of the counseling chatbot methodology,
+including Section 3.2.1 the description of empathy-centric psychological knowledge, Sec-
+tion 3.2.2 the chatbot technology and module implementation, and Section 3.2.3 the issue
+and sentiment classification (of question sentences) using an NLP machine learning
+Processes2022,10,930 model. 6of19
+3.2.1. Empathy-Centric Psychological Knowledge
+3.2.1P.eErmsopna-cthenyt-eCreedn ttrhicerPaspyyc whoalso dgeicvaelloKpneodw blye dCgaerl Rogers [39]. It is a non-directive ori-
+entation that emphasizes the client’s nature toward self-actualization, their own creation
+Person-centered therapy was developed by Carl Rogers [39]. It is a non-directive
+of self-growth, and their ability to actively heal themselves. Rogers believed that the atti-
+orientationthatemphasizestheclient’snaturetowardself-actualization,theirowncreation
+tude of the therapist, the personality traits, and the relationship between the therapist and
+ofself-growth,andtheirabilitytoactivelyhealthemselves.Rogersbelievedthattheattitude
+the client are the main factors in the effectiveness of therapy. The counseling process is
+ofthetherapist,thepersonalitytraits,andtherelationshipbetweenthetherapistandthe
+client-centered, focusing on the client’s tendency to self-actualize, which is believed to be
+clientarethemainfactorsintheeffectivenessoftherapy. Thecounselingprocessisclient-
+the spontaneous force that leads to change. The counselor’s skills are not the main focus;
+centered, focusingontheclient’stendencytoself-actualize, whichisbelievedtobethe
+rather, the human attitude and stance are more important. In counseling, empathy ex-
+spontaneousforcethatleadstochange. Thecounselor’sskillsarenotthemainfocus;rather,
+presses the advisor’s respect and regard for the client, whose experience may be com-
+thehumanattitudeandstancearemoreimportant. Incounseling,empathyexpressesthe
+pletely different from that of the advisor. Clients need to feel supported, understood, and
+advisor’srespectandregardfortheclient,whoseexperiencemaybecompletelydifferent
+respected.
+fromthatoftheadvisor. Clientsneedtofeelsupported,understood,andrespected.
+Roger divided empathy into four levels, as in Figure 2. The primary level of empathy
+Rogerdividedempathyintofourlevels,asinFigure2.Theprimarylevelofempathyis
+is defined as responding to the client’s explicitly expressed meaning and feelings with a
+definedasrespondingtotheclient’sexplicitlyexpressedmeaningandfeelingswithasimple
+simple repetition of basic understanding. The second level of empathy is to respond to the
+irmeppelitcititio, hnaolff-bexapsircesusnedde, rosrt aimndpilniegd. Tfeheelisnegcso onfd thleev pelerosfoenm wpiathth cyoirsretosproenspdoinngd etmoothtieoinmalp licit,
+whaolrfd-es xtpo raecsksneodw,olerdigmep thlieemd faenedli nbgrisngo fththeier ptreures ofenewlinigths tcoo rthrees spuornfadcien. gTheem tohtiirodn laelvwel oorfd sto
+eamckpnaothwyl eisd fgoer trheecmognanizdinbgr tinheg ctlhieenirt’tsr ucoenffeuesliinngg santod tchoenstruardfaiccteo.rTy hfeeetlhinirgds ltehvaet lsuofbceomnp-athy
+sicsiofourslrye coobgscnuizrein wghthate tchleie cnlite’sntc orenaflulys incagreasn adbcoount,t raanddi ctthoerny cfaepetluinrginsgt hthaet scuorbec oonf stchieo usly
+eombsoctuiorne awnhda rtetshpeocnldieinngt rteoa tlhlye ccalireenst’asb doeusti,rea nwditthh aefnficrmapattuiorninsg. Tthhee hcoigrheeosft tlheveeelm ofo etimon- and
+preasthpyo nisd fionrg wthoetnh ethcel ipeenrts’osnd iess siureppwrietshsianfgfi trhmeiart ifoeenlsin.gTsh oer hniogth feeestlinlegv tehleomf einm tphea tchoyn-is for
+vwehrseantitohne, apnedrs gouneisssisnugp tphreeirs sinintegntthioenirs ffereolmin wgshoart tnhoetyf aereel idnegscthriebmingin, ctahpetucorinnvge trhsea tcioorne, and
+ogfu tehses einmgotthioenir, ainntde nretisopnosndfrionmg two ihta dtitrhecetylya orer idnedsicrreicbtilny gin, caa wptauyr itnhgat tihs eacccoerpetoabflteh teoe tmheo tion,
+paenrdsorne s[p40o]n. dingtoitdirectlyorindirectlyinawaythatisacceptabletotheperson[40].
+FFiigguurree 22. .FFoouur rlelveevlesl sofo EfmEmpapthatyh. y.
+TThhisis sstutuddyy rerfeefresr stot oRoRgoegre’sr ’csoncocenpcte poft eomf epmatphya tahsy tahse tbhaesibs afsoirs tfhoer ctohuencsoeulinngs erlein-g re-
+ssppoonnsseess. .TTheh esyssytsetmem usuesse as calacslsaisfsieifir etor tcolacslsaifsys itfhyet hueseur’sse ru’tsteurattnecreasn fcoers ifnotrenintitoenn tainodn and
+sseennttiimmeennt tinin oordrdere rtot oacahciheiveev tehteh peuprupropsoe soef oisfsiuses udeetdeecttieocnti oannda snedntsiemnetinmt reenstproensspeo. nse.
+3.2.2. ChatbotTechnologyandImplementation
+ThearchitectureofthechatbotinthisstudyisshowninFigure3.Aftertheuserspeaks,
+theAutomaticSpeechRecognition(ASR)moduleconvertsspeechintotextasinputtothe
+NaturalLanguageUnderstanding(NLU)module. TheNLUmoduleconvertsthetextinto
+usefulinformationandsendsittotheDialogManagement(DM)module. TheDMmodule
+functionsincludeDialogStateTrackingandgeneratingdialogPolicy. TheDialogState
+willbesavedandupdatedinTracker,andthePolicymodulecandeterminetheAction
+basedontheDialogStatesavedinTracker. TheActioncangenerateamessage(Natural
+LanguageGeneration,NLG)tobeexportedtotheuser. Finally,theText-To-Speech(TTS)
+modulereadsthetextmessage(invoice)totheuser,completingoneiterationofchatbot.
+Thedetailsofindividualmoduleoperationsaredescribedinthefollowingparagraph. For
+detailed implementations of the chatbot modules described above, please refer to web
+resourcesdescribingGoogleCloudPlatform(GCP)[41],CloudSpeech(-to-text)API[42],
+Processes 2022, 10, 930 7 of 19
+Processes 2022, 10, 930 7 of 19
+3.2.2. Chatbot Technology and Implementation
+The architecture of the chatbot in this study is shown in Figure 3. After the user
+3.2.2. Chatbot Technology and Implementation
+speaks, the Automatic Speech Recognition (ASR) module converts speech into text as in-
+putT thoe t haerc Nhiatetuctruarl eL aonf gtuhae gceh Uatnbdoet risnt atnhdisin sgt u(dNyL Uis) smhoowdunl ei.n T Fhieg uNrLe U3 . mAofdteurl eth ceo nuvseerr ts
+sptehaek tse,x tth ien tAo uutsoemfualt iinc fSoprmeeacthio Rne acnogdn sietniodns (iAt tSoR t)h me Dodiauloleg cMonavneargtesm speenetc (hD iMnt)o m teoxdtu alse .i Tn-he
+puDtM to mthoed Nulaet ufuranlc Ltiaonngs uiangcleu Uden dDeirasltoagn dSitnagte (TNrLaUck)i nmgo adnudle .g Tenheer aNtiLnUg mdioadlougl eP coolincvye. rTtsh e
+thDe itaelxotg i nSttoa tues wefiulll binef osarmveadti aonnd a nudp dseantedds iint t To rtahcek Deri,a alongd M thaen Pagoleimcye nmto (dDuMle) cmaond dueltee.r Tmhien e
+DtMhe m Aocdtiuolne bfausnecdti oonn st hine cDluiadleo gD Siataloteg s Satvaetde iTnr aTcrkaicnkge ra. nTdh eg Aencetiroanti ncagn d giaelnoegr aPteo laic my.e Tsshaeg e
+D(iNaloatgu Sratal tLe awnigllu baeg es aGveedn earnadti ounp, dNatLeGd )i nto T rbaec keexrp, oarntedd t htoe Pthoeli cuys emr.o dFiunlael clya,n t dheet eTremxti-nTeo -
+thSep Aeecctiho n(T bTaSs)e dm oond uthlee rDeiaadlos gth Set atteex st amveedss iang eT r(ainck veori. cTeh) eto A tchteio uns cearn, c goemnperleattien ag moneses iatgerea -
+(Ntiaotnu roafl c Lhaantbgouta. Tgeh eG deentearilast ioofn i,n dNiLviGd)u taol mbeo deuxlpeo orpteedr attoio tnhse a rues edre. sFcrinibaeldly i, nt hthee T foexllto-wToin-g
+Sppeaercahg r(aTpThS.) Fmoro dduetlea irleedad ims tphlee mteexnt tmateiossnasg oef (tihne v cohiacetb) otot mthoed uusleers, dceosmcrpibleetdin agb oonvee ,i tpelreaa-se
+Processes2022,10,930 tiorenf eorf ctoh awtbeobt .r Teshoeu drceetasi ldse osfc rinibdinivgi dGuoaol gmleo dCuloleu odp Pelraattfioornms a(rGeC dPe)s c[r4i1b]e, dC ilno uthde S fpoelleocwh7i on(f-gt1o9 -
+pateraxgt)r aApPhI. [F4o2r] ,d Cetlaoiuledd T iemxpt-lteom-Sepneteactiho nAsP oIf [t4h3e] ,c ohpaetbno pt ymthoodnu lleisb rdaersyc rRibaesad Caboorve ea, npdle NasLeU
+re[f4e4r] t, oa nwde bSp raeCsoyu orcpeesn d-seosucrrcibei nNgL GP oliobgrlaer yC [l4o5u]d. Platform (GCP) [41], Cloud Speech (-to-
+teCxlto)u AdPTIe [x4t2-t]o, -CSlpoeuedch TAexPtI-t[o4-3S]p,eoepcehn ApPytIh [o4n3]l,i borpaerny pRyatshaoCno lriberaanrdy NRaLsUa C[4o4r]e, aanndd SNpaLCUy
+[4o4p]e, na-nsdou SrpcaeCNyL oPpleibnr-saoryur[c4e5 ]N. LP library [45].
+Figure 3. Architecture and process of the chatbot modules.
+Figure3.Architectureandprocessofthechatbotmodules.
+Fi3g.u2r.e3 .3 I. sAsurcehsi taenctdu rSee anntdim peronctess os fo Qf tuhee scthioatnbso’t Cmlaosdsuilfeics.a tion
+3.2.3.IInss ouredsearn tdo Seexnptliomree nutsseorsf’ Qemueosttiioonn sa’nCdl ausnsdifiecrasttiaonnd users’ concern, machine learning
+3.2.3. Issues and Sentiments of Questions’ Classification
+is apInploierdde trot otheex pclloarsesiufisceartsi’oenm ooft isoennatinmdeunnt daenrdst aisnsdueu.s eTrhs’erceo nacreer nfi,vme asctheipnse olefa mrnainchgiinse
+alpeparlI inn ei dnorgtod, e tahrs e tosch le aox swp silnfio criaent iu oFs niegr ous fr’ see e m4n:to iDmtioeenfni ntaean ndPd ruoin sbsdluee emr .s T,t a hBn eud rie ludas reDersafi’tv ac esoesnttc,e e pTr srnao, ifmnm aMac chohidn ineele ,l e lEea avr rnanliuin nag gt ,e
+is a Msa spohpdolei wle, d na nit nod FUth igseeu cMrl eao4sds :ieDfli.c e a fi t nio en P o rof bs le en mti ,m Be un ilt d a Dnd a ti as ss eu te ,. T rT ah iner Me a or de e lf ,iv Ee v as lt uep ats e o Mf om da ec lh ,ain ne d
+learning, as shown in Figure 4: Define Problem, Build Dataset, Train Model, Evaluate
+UseModel.
+Model, and Use Model.
+Define Build Train Evaluate Use
+Problem Dataset Model Model Model
+Define Build Train Evaluate Use
+FPigroubrleem4.FivestepDsaotafsmetachineleaMrnoindegl. Model Model
+Figure 4. Five steps of machine learning.
+• Defineproblem
+Fi•g ure D4. eFfiivnee s pterposb olef mma chine learning.
+Inthisstage,weclearlydefinethespecificproblem,identifywhattasktheproblem
+In this stage, we clearly define the specific problem, identify what task the problem
+•b elo Dng es finto
+e
+i pn rm oba lc eh min elearning,andselectthecorrespondingmachinelearningmodel. In
+belongs to in machine learning, and select the corresponding machine learning model. In
+thisstudy,wewantedtoinvestigatetheuser’ssentimentandissueduringtheconversation,
+thisI ns ttuhdisy ,s twage ew, wanet ecdle ator liyn dveesfitnigea tthe et hsep eucsiefirc’ sp sreonbtliemme,n itd aenndti fiys swueh adtu traisnkg tthhee pcroonbvleermsa -
+andthesentimentandissuecanbedefinedinadvance;therefore,wechoseSupervised
+betlioonng, sa ntod itnh em saecnhtiinmee lneat rannidn gi,s sauned csaenle bcte tdheef cinoerrde sinp oanddvianngc em; athcheirneefo lreea,r wnien gch mosoed eSlu. pIne r-
+Learningandpre-definedthelabelofthedata.
+thvisis setdu dLye,a rwnein wg aanntded p rtoe- idnevfeinsteidg atthee tlhaeb euls oefr ’tsh see dnatitma.e nt and issue during the conversa-
+ti• on, aBnudil dthde asteansetitment and issue can be defined in advance; therefore, we chose Super-
+• Build dataset
+vised TLheeardnaintags aentdu sperde-dineftihniesds tthued lyabwela osfo tbhtea dinaetad. from the CounselChat website [46].
+•T heBCuoiludn dsealtCasheatt website is a website that matches users with counselors. Users can
+anonymously post their concerns or questions for help on the site, and counselors can
+respond publicly (with their clinic and contact numbers), allowing users to choose a
+counselor who is suitable for them based on the responses. A study obtained all the
+data from the founder of the CounselChat website [47], which was used as the dataset
+for training the model in this study. The data were cleaned and labeled. The cleaned
+dataconsistedoffourcolumns,namelyuserquestionsandcounselorresponsesfromthe
+CounselChat website, and manually added sentiment and issue labels. User questions
+werecategorizedintosixissues,namelyStudies,Family,Relationship,Finance,Work,and
+Health.Sentimentlabelswerecompiledfromthreepreviousstudies,asdescribedandlisted
+inTable1,namelyNRC[48],PANAS[49],andAEQ[50]. Inordertoclassifysentiments
+comprehensively,thisstudyorganizesandintegratesthesentimentsindescriptiveterms
+fromthesestudiesasthesentimentcategories. Nonetheless,thesentimentcategoriesand
+analysisforcounselingdialogscanbefurtherinvestigatedinfutureresearch.
+Processes 2022, 10, 930 8 of 19
+The dataset used in this study was obtained from the CounselChat website [46]. The
+CounselChat website is a website that matches users with counselors. Users can anony-
+mously post their concerns or questions for help on the site, and counselors can respond
+publicly (with their clinic and contact numbers), allowing users to choose a counselor who
+is suitable for them based on the responses. A study obtained all the data from the founder
+of the CounselChat website [47], which was used as the dataset for training the model in
+this study. The data were cleaned and labeled. The cleaned data consisted of four columns,
+namely user questions and counselor responses from the CounselChat website, and man-
+ually added sentiment and issue labels. User questions were categorized into six issues,
+namely Studies, Family, Relationship, Finance, Work, and Health. Sentiment labels were
+compiled from three previous studies, as described and listed in Table 1, namely NRC
+[48], PANAS [49], and AEQ [50]. In order to classify sentiments comprehensively, this
+study organizes and integrates the sentiments in descriptive terms from these studies as
+the sentiment categories. Nonetheless, the sentiment categories and analysis for counsel-
+Processes2022,10,930 ing dialogs can be further investigated in future research. 8of19
+Table 1. Sentiment categories in descriptive terms.
+Table1.Sentimentcategoriesindescriptiveterms.
+Referred Studies Types of Sentiments in Descriptive Terms
+RNeRfeCr r[e4d8]S tudies Anger, anticipatTioynp,e dsiosfguSesnt,t fiemaern, tjosyin, sDadesncersips,t isvuerTperrimses, trust.
+NRC[48] DistresAs, nugpesr,eat,n htiocisptialteio, nir,rditiasbgules,t ,sfceaarre,djo, yj,itstaedryne, sasf,rsauidrp, raisshe,atmruesdt., guilty,
+PANAS [49]
+nervous.
+Distress,upset,hostile,irritable,scared,jittery,afraid,ashamed,
+PANAS[49]
+AEQ [50] Anger, gaunixltiye,tnye, rhvoopues.lessness, shame, and boredom
+Anger, anxiety (fear, scared, jittery, nervous), hopelessness, shame, upset
+AEQ[50] Anger,anxiety,hopelessness,shame,andboredom
+Our research
+(sadness), distress, guilty, boredom, indifference
+Anger,anxiety(fear,scared,jittery,nervous),hopelessness,
+Ourresearch
+shame,upset(sadness),distress,guilty,boredom,indifference
+The negative sentiments in this study were categorized as Anger, Anxiety (fear,
+scared, jittery, nervous), Hopelessness, Shame, Upset (sadness), Distress, Guilty, Bore-
+ThenegativesentimentsinthisstudywerecategorizedasAnger,Anxiety(fear,scared,
+dom, and Indifference. For further simplifying the sentiments, circular space of the cir-
+jittery,nervous),Hopelessness,Shame,Upset(sadness),Distress,Guilty,Boredom,and
+Icnudmiffperleexn cme.odFeolr [f5u1r]t haenrds tihmep dliifsytirnibgutthieons eonft 1im97e netms,octiirocnusla prrsoppaocseeodf btyh eLicuir c[5u2m] pwleexre used.
+mCoirdceull[a5r1 ]sapnadcet hoef dtihster icbiurctiuomnopfle1x9 7memodoetilo inss sphroowpons eidn bFyigLuiure[ 552.] Twheer esupsaecde. iCs irdciuvliadred into
+sfpoaucre qoufatdhreacnitrsc,u wmipthle xthme yod-aexlisis rsehporwesnenintinFgig tuhree a5r.ouTshael lsepvaecle ainsdd tihvied xe-daxinist orefporuersenting
+qtuhaed vraanletns,cwe ipthosthiteivye- aoxri snreegparteisveen.t iNnginteh eneagroautisvael lseevnetliamnedntthse cxo-rarxeissproepnrde steon ftiivnge tchaetegories
+voanle tnhcee lpeofts istiidvee oorf ntheeg actiirvceu.laNri nspeanceeg oatfi vthees ecnirtcimumenptlsecxo mrreosdpeoln. Idnt osufimvemcaartyeg, othriee sproendefined
+theleftsideofthecircularspaceofthecircumplexmodel. Insummary, thepredefined
+categories of issues and sentiments in this study are shown in Figure 6.
+categoriesofissuesandsentimentsinthisstudyareshowninFigure6.
+Arousal
+Anxiety
+High
+Anger Tense Excited
+Angry Delighted
+Guilty Frustrated Happy
+Shame
+Negative Neutral Positive Valence
+Hopelessness
+Depressed Content
+Distress
+Upset
+Bored Relaxed
+Tired Calm
+Boredom
+Indifference Low
+FFigiguurere5 .5C. Circirucluarlasrp sapceacoef tohfe tchierc cuimrcpulmexpmleoxd mel.odel.
+Figure6.Classesofissuesandsentiments.
+Processes2022,10,930 9of19
+• Trainmodel
+Pre-trainedBERT
+Inthisstudy,weusedpre-trainedBERTasthebasisfortwo-stagemigrationlearning,
+usingthemodelforfine-tuningthefollowingsupervisedtasks. ThefullnameofBERT
+isBidirectionalEncoderRepresentationsfromTransformers,whichisalanguagerepre-
+sentationmodeltrainedbyGoogleinanunsupervisedmannerusingalargeamountof
+unmarkedtext;itsarchitectureistheEncoderinTransformer. Googlepre-trainedBERT
+toperformtwotasks: theMaskedLanguageModel(MLM)andNextSentencePrediction
+(NSP).TheMLMistrainedinsuchawaythatitcanpredictthemissingpartsofasen-
+tence. ComparedtothetraditionalLanguageModel(LM),theMLMimplementstwo-way
+contextualwordrepresentation.
+ThetraditionalLMaimstoestimatetheprobabilitydistributionofthenextwordgiven
+previouswords. Theobjectivefunctionisasfollow:
+(cid:12)
+P(wi(cid:12)w1,...,wi−1)
+(1)
+(cid:12)
+Giventhe1stto(i−1)thwords,theLMwillestimatetheprobabilitydistributionPof
+the(i)thwords.
+BERTusestheconceptoftheMLMandtheframeworkoftheTransformerEncoderto
+getridofthedilemmathatpreviouslanguagemodelscanonlyestimatetheprobabilityof
+thenextwordfromasingledirection(left-to-rightorright-to-left)andtrainabidirectional
+languagerepresentationmodelwiththefollowingequationastheobjectivefunction:
+(cid:12)
+P(wi(cid:12)w1,...,wi−1,wi+1,...,wn)
+(2)
+(cid:12)
+Given the 1st to (i − 1)th and (i + 1)th to (n)th words, the MLM will estimate the
+probabilitydistributionPofthe(i)thwords.
+BERTusesthetransformerencodertoconstructadeepbidirectionalmodelsothatthe
+representationofeachtokenoutputfromBERTcontainsbothpre-andpost-training.
+Thesecondtaskofpre-trainingBERT,NSP,istodeterminewhetherthesecondsentence
+isconnectedtothefirstsentenceintheoriginaltext. Insummary,intheMLMtask,learning
+tofillinthemissingwordsallowsBERTtobettermodeltherepresentationofeachword
+in different contexts, while the NSP task helps BERT model the relationship between
+twosentences.
+BertForSequenceClassification
+For fine-tuning the model, bert-base-uncased tokenizer, which consists of about
+30,000tokens,andBertForSequenceClassificationisapplied. Thedropoutandlinearclas-
+sifier are added to BERT, with the logits for predicting categories as output. Then, the
+objectivefunctionofthedownstreamtaskisusedtotraintheclassifierfromscratchand
+fine-tunetheparametersofBERT.TheAdamoptimizerwaschosenfortraining,andthe
+hyperparameterswereassuggestedbytheauthorsofBERT:Batchsize=16,Learningrate
+=2×10−5,Epochs=4,andepsilon=1×10−8.
+• Evaluatemodel
+Sincethedistributionofdatasetcategoriesinthisstudyisheterogeneous,theMathews
+Correlation Coefficient (MCC) was used to evaluate the test set performance. In the
+multiclasscase,theMatthewscorrelationcoefficientcanbedefinedbasedontheconfusion
+matrixofKclasses.Tosimplifythedefinition,considerthefollowingintermediatevariables:
+t = ∑KC ,thenumberoftimeskclassesactuallyoccurred,
+k i ik
+p = ∑KC ,thenumberoftimesclasskwaspredicted,
+k i ki
+c = ∑KC ,thetotalnumberofcorrectlypredictedsamples,
+k kk
+s = ∑K∑KC ,thetotalnumberofsamples.
+i j ij
+Processes2022,10,930 10of19
+MulticlassMCCisdefinedas:
+c×s−∑K p ×t
+MCC = (cid:114) k k k (3)
+(cid:16) (cid:17) (cid:16) (cid:17)
+s2−∑K p2 × s2−∑Kt2
+k k k k
+Afterfine-tuning,theMCCofthisstudyreached0.8570.
+3.3. Module3: Avatar-BasedChatroomJoinedbyaCounselorandStudent(s)
+Wedesignedamoduletosatisfytheneedforvariouscommunicationtaskswithreal
+therapistsinoursystem. Therapistscanjointhischatroomtocounseltheuserone-on-one
+orleadalltheuserstoparticipateingrouptherapy. Thecommunicationcapabilitieswere
+implementedusingthePhotonengine,whichisanonlineserverproviderthatcanbeinte-
+gratedwithUnity. Real-timeverbalortextinteractionswitheachuseraresupportedand
+realizedwiththehelpofaPhotonengine. Eachuser,includingthetherapist,isrepresented
+asanindividual-chosenavatarinthevirtualclassroom. Bychoosinganavatar,peoplecan
+expresstheirthoughtsmuchmorefreelywithoutworryingaboutbeingrecognized.
+3.4. SystemVerification
+To verify the effectiveness of the system, participants were invited to use the VR
+chatbotsystem,andtheirscoresonpre-andpost-testquestionnaireswerecomparedto
+measurewhetherthesystemcouldhelpthemreducetheirstress. Eachparticipantfilled
+outaquestionnaireinadvance,andiftheywerescreenedtoparticipateintheVRchatbot
+experiment,theparticipantunderwenttwosessionsoftheVRchatbotexperimentatleast
+oneweekapart. Duringtheexperiments,participantswereabletologintotheplatform
+asavirtualavatarandinteractwiththechatbot. Aftertwosessionsofusingthechatbot,
+theparticipantsfilledoutthequestionnaireagaintoassessthedifferenceinquestionnaire
+score before and after using the chatbot as an evaluation of the effectiveness of the VR
+chatbotcounseling.
+The participant selection process included two filters. First, subjects with incom-
+pletequestionnaireswereexcluded. Thesubjectswerethensplitaccordingtotheirstress
+levelsinthefirstpartofthequestionnaireusingamediansplit,andthegroupwiththe
+higherscoreswasrandomlyinvitedtoparticipateinthevirtualrealitycounselingchatbot
+(VRECC)experiment.
+4. SystemArchitectureandCaseDemonstration
+ThesystemframeworkisillustratedinFigure7. Thecoremoduleconsistsofthree
+components: astressquestionnairetomeasuretheuser’sstress,mentalstate,andlifeprob-
+lems,acounselingchatbottotalktotheuser,andachatroomfortheusertocommunicate
+witharealcounselor.Thesethreemodulesareimplementedinaninterfacecreatedbyunity
+andconnectedtoaserver. Duringtheuseofthemodules,thesystemcollects,analyzes,
+andstorestheuserinputinadatabase.
+Theparticipants’selectionflowinthisexperimentisshowninFigure8,withatotal
+of176validquestionnairescollected(i.e.,178questionnairessurveyedand2incomplete
+questionnaires excluded). The median split was applied to screen subjects with above-
+medianstresslevels(n=101)[53]. Subjectswithabove-medianstresslevelscoreswere
+randomlydrawnandinvitedtoparticipateinthetwo-time/sessionVRECCexperiments.
+Processes 2022, 10, 930 11 of 19
+municate with a real counselor. These three modules are implemented in an interface cre-
+ated by unity and connected to a server. During the use of the modules, the system col-
+lects, analyzes, and stores the user input in a database.
+Processes 2022, 10, 930 11 of 19
+municate with a real counselor. These three modules are implemented in an interface cre-
+Processes2022,10,930 11of19
+ated by unity and connected to a server. During the use of the modules, the system col-
+lects, analyzes, and stores the user input in a database.
+Figure 7. The system framework integrating the online questionnaire, counseling chatbot, and
+group counseling chatroom.
+The participants’ selection flow in this experiment is shown in Figure 8, with a total
+of 176 valid questionnaires collected (i.e., 178 questionnaires surveyed and 2 incomplete
+questionnaires excluded). The median split was applied to screen subje cts with above-
+Figumree d7i.a nT hset rseyssst elmev efrlas m(new =o 1rk0 1i)n t[e5g3r]a. tiSnugb jtehcet so nwliinthe qaubeosvtieo-nmneaidriea, nc osutrnessesli nlegv cehl astcboort,e sa nwde re
+Figure7.Thesystemframeworkintegratingtheonlinequestionnaire,counselingchatbot,andgroup
+groruapn cdooumnsleyl idngra cwhant raonodm .i nvited to participate in the two-time/session VRECC experiments.
+counselingchatroom.
+The participants’ selection flow in this experiment is shown in Figure 8, with a total
+of 176 valid questionnaires collected (i.e., 178 questionnaires surveyed and 2 incomplete
+questionnaires excluded). The median split was applied to screen subjects with above-
+median stress levels (n = 101) [53]. Subjects with above-median stress level scores were
+randomly drawn and invited to participate in the two-time/session VRECC experiments.
+FFiigguurree8 8..V VRRECECCCsu sbujebcjtescetl escetlieocntiporno cpersoscfleosws .flow.
+ThissectionintroducestheexperimentprocedureshowninFigure9. First,wecon-
+This section introduces the experiment procedure shown in Figure 9. First, we con-
+ductedapre-testquestionnairesurveytodifferentbackgroundsofstudentsinuniversityto
+ducted a pre-test questionnaire survey to different backgrounds of students in university
+evaluatetheirscoresintermsofstresslevel,psychologicalsensitivity,andlifeimpact. This
+rteos eeavrachlueavtael uthateeidr tshceosrteusd ienn ttsewrmhos soefs tsrtersesslse vleevlsewl, epresyhcighhoelrotghiacnalt hseenmseitdiivaintysc, oarnedo fliaflel impact.
+tThheiqsu reesstieoanrncahi reevtaakluerast.eNd etxht,et hseturdanednotsm wlyhseolseec testdresussb jelecvtse/lps awrtiecriep ahnitgshweern tththarno uthghe median
+Figtushcreoe ir8ne.t rVooRfd EuaCcltlCi ot hnsueab nqjeducdte sissetclileoacnitminoeanri rpoerf ottchaeikssesV rfsRlo.E wNC.C exetx, ptehreim reanntd. Aomftelryw saerdlesc,ttehdey ssutabrjteecdtsu/spinagrticipants
+twheenVtR tEhCrCoucghhat bthotes yinstteromd.uTchteiopna ratincidp adnitssculanidmeerwr eonft tsheivse rValRrEoCunCd sexofpaesrkiminegnatn. dAafnte-rwards,
+s tw hTee yhri in ssg t asq reu tceetdisot uino s niisnn.tgTr oth hde eyu VccoeRusE ltd CheeCi t eh cxhepr aei tn brtioemtr aesc ynt stw tpei mtrho.ct h Teedhuc eh rpaeat bsrohtitoct iwh prnao n uitng sh uFsinpgdeua erk rei w n9g e. noFtri rstseytvp, i ewn rg ae. l crooun-nds
+duTcoth fe edac s hak a ipntbrgeo -t atwensdotu qald nused wsitr eieoc rnit ntnh gae iqrp uea erst sui tcrii ovp neaysn . t ts Tot h odetiyaff lek croaeubnlotdu b t eat ich thkei egr rrr oe inuce tnendrt asp cos tyf w cshtiuo thldo eg thnic etas l c id hni a suttr bne oisvts ,etrhsriotyu gh
+and they could work on how to relieve the symptoms together. During the interaction
+to esvpaelaukaitneg t hoeri rty spcoinrges. Tinh ete crmhast boof ts twreosusl dle vdeirl,e pcts ythche oploargtiiccaipl asenntss ittoiv tiatylk, aanbdo ulitf et himeirp arcetc.e nt
+process,theusercanfeelconsolationbecauseofthesympathyandencouragementdialogue
+Thipss ryecsheoalrocghi ceavl adluisattreedss t, haen dst uthdeeyn tcso wulhdo wseo srtkr eosns hleovwel st ow reerleie vheig thheer styhmanp ttohme sm teodgieatnh er.
+providedbythechatbot. Wethenaskedtheusertore-testthechatbotsystemagainafter
+score of all the questionnaire takers. Next, the randomly selected subjects/participants
+oneweek. Theone-weekintervalwasdesignedtoensurebettertherapyreflectionand
+went through the introduction and disclaimer of this VRECC experiment. Afterwards,
+experienceofthechatbotsystem. Whentheparticipantshadaccomplishedoperatingthe
+thecyh asttbaorttesdy sutesmingtw thicee ,VthReEyCcCom chplaettbeodtt shyespteomst-.t Teshteq pueasrttiiocnipnaainrtes. uThnidserrewseeanrcth seanvaelryazle rdounds
+of tahsekpinegrf oarnmda nanceswofeursiningg qthueessytisotenms. iTnhtheey fcoolluowldi negitsheecrt ioinntse.ract with the chatbot through
+speaking or typing. The chatbot would direct the participants to talk about their recent
+psychological distress, and they could work on how to relieve the symptoms together.
+Processes 2022, 10, 930 12 of 19
+During the interaction process, the user can feel consolation because of the sympathy and
+encouragement dialogue provided by the chatbot. We then asked the user to re-test the
+chatbot system again after one week. The one-week interval was designed to ensure better
+therapy reflection and experience of the chatbot system. When the participants had ac-
+complished operating the chatbot system twice, they completed the post-test question-
+Processes2022,10,930 12of19
+naire. This research analyzed the performance of using the system in the following sec-
+tions.
+FFiigguurree9 9..T ThheeV VRREECCCCe exxppeerriimmeennttp prree--a annddp poosst-te-exxppeerrimimeenntts suurrvveeyyfl foloww..
+55.. DDaattaa AAnnaallyyssiiss aanndd DDiissccuussssiioonn
+IInnt hthisiss tsutuddy,ya, tao ttaoltoalf 1o7f 61v7a6l ivdailnidit iianliqtiuael sqtuioensntiaoinrensawireerse wcoelrlee cctoeldle.cTthede.s uTbhjee cstusbwjeecrtes
+splitusingthemedianstresslevelinthequestionnaireandthegroupwithabove-median
+were split using the median stress level in the questionnaire and the group with above-
+scores(101subjects)wasidentified. Fromtheabove-median(stresslevelscore≥6)group,
+median scores (101 subjects) was identified. From the above-median (stress level score ≥
+17maleparticipantsand17femaleparticipantswererandomlydrawnandrecruitedfor
+6) group, 17 male participants and 17 female participants were randomly drawn and re-
+theVRECCexperiments. Theyalsocompletedthepost-experimentquestionnairesafter
+cruited for the VRECC experiments. They also completed the post-experiment question-
+thetwo-timeVRECCexperiment. Thissectionreportstheanalyticalresultsofthesubjects’
+naires after the two-time VRECC experiment. This section reports the analytical results of
+questionnairescoresinvariousaspects(e.g.,stresslevel,psychologicalsensitivity,andlife
+the subjects’ questionnaire scores in various aspects (e.g., stress level, psychological sen-
+impact)toevaluatetheeffectivenessoftheVRECCsystem.
+sitivity, and life impact) to evaluate the effectiveness of the VRECC system.
+5.1. QuestionnaireResult
+5.1. Questionnaire Result
+Total of 178 randomly selected subjects completed the Student Stress Survey, and
+Total of 178 randomly selected subjects completed the Student Stress Survey, and
+twoincompletequestionnaireswereexcluded(i.e.,176validquestionnaireswerecollected).
+two incomplete questionnaires were excluded (i.e., 176 valid questionnaires were col-
+Usingthestresslevelasacriterion,thesesubjectsweredividedintotwogroups:101subjects
+lected). Using the stress level as a criterion, these subjects were divided into two groups:
+wereintheabove-medianstressscoregroup,and75wereinthebelow-medianscoregroup.
+101 subjects were in the above-median stress score group, and 75 were in the below-me-
+Ofthe101subjectsintheabove-medianstressscoregroup,34wererandomlyselectedand
+dian score group. Of the 101 subjects in the above-median stress score group, 34 were
+recruitedasthetreatmentgroup(TG)toparticipateinVRECCexperiments. The75subjects
+randomly selected and recruited as the treatment group (TG) to participate in VRECC
+withbelow-medianstressscoresweretreatedasthecontrolgroup(CG).
+experiments. The 75 subjects with below-median stress scores were treated as the control
+The demographic information of participants in the TG (Table 2) shows that the
+group (CG).
+average age of the participants was 22.77 years old, with the youngest being 20 years
+The demographic information of participants in the TG (Table 2) shows that the av-
+oldandtheoldestbeing26yearsold. AmongtheVRECCparticipants, halfweremale
+aenrdaghea alfgew oefr ethfee mpaalreti.ciTphaentms wajoarsi t2y2.o7f7 tyheearpsa rotlidc,i pwaintths twhee ryeoiunntgheesitr bfierisntgy 2e0a ryeoafrtsh oeilrd
+manadst ethr’es odledgersete b(e4i1n.g18 2%6 )y,feoalrlso woledd. Abymtohnegs etchoen VdRyEeCarCo pfathrteiicripmaanstste, rh’saldf ewgereree (m20a.l5e9 a%n)d,
+ihnadlifc awtienrge ftehmatamleo. rTehteh mana6jo0r%ityo fofth teher epsaprotnicdipeanntstsw wereerei ning trhadeiur aftiersstc yheoaorl .oIfn thteerirm msaosfttehre’s
+ddeepgarretem (e4n1t.s1,8I%nd),u fsotlrlioawlEendg binye tehrein sgecaocncodu ynetaerd offo trhtehier mmoassttepra’srt diceipgraenet s(2(703.5.593%%),) ,infodlilcoawtiendg
+btyhatth emSocriee nthcaena n6d0%M oafn tahgee mreesnptonDdeepnatrst mweenret (i5n. 8g8r%ad).uAatse fsocrhsotorel.s sInl etveerml,1s 7opf athrtei cdipepanartst-
+(m50e.0n0t%s, )Inradtuedsttrhiaeli rEsntrgeisnseleervinelga asc6c,o1u6npteadrt ifcoipr athnets m(4o7s.0t 6p%a)rtriactiepdanthtse i(r7s3t.r5e3s%sl)e, vfoelllaosw7e,dan bdy
+tthheer eSmcieanincien gan2dp aMrtainciapgaenmtsen(5t. 8D8e%p)arratmteedntth e(5ir.8s8t%re)s.s Alesv efolra sst8r.eFsso rlesvtreels, s1c7o ppianrgticaibpialintyts,
+t(h5e0.h0i0g%he) srtanteudm tbheeriro sftsruesbsj elcetvse(l3 a2s.3 65,% 1)6 rpaaterdtictihpeamntsse l(v4e7s.0a6s%7), rfoatlelodw tehdeibr yst5re(s2s3 .l5e3v%el) .as 7,
+and Tthhee 9re5m%acionninfigd e2n pcearitnicteiprvaanltss f(o5r.8th8%em) reaatnedv athlueeirs ostfrTesGs_ lPeRveEl, aTsG 8_.P FOoSrT s,tarnesds CcGopainreg
+shownintheintervalplotsforeachaspectofthequestionnaire. Theresultsshowedthat
+intheintervalplotsofStresslevelandPsychologicalsensitivity,TG_PRE,TG_POST,and
+CG showed a decreasing trend as shown in Figures 10 and 11. However, there was no
+decreasingtrendinLifeimpactinFigure12.
+Processes 2022, 10, 930 13 of 19
+ability, the highest number of subjects (32.35%) rated themselves as 7, followed by 5
+(23.53%).
+Table 2. Demographic information of participants.
+# of
+Attributes Variables Percentage Mean S.D. Min Max
+Participants
+Age - 34 100.00 22.76 1.5775 20 26
+Male 17 50.00
+Sex
+Processes2022,10,930 Female 17 50.00 13of1 9
+Undergraduate (2nd) 2 5.88
+Undergraduate (3rd) 2 5.88
+Table2.DemograUphnidceirngfroardmuaattieo n(4othf)p articipants.6 17.65
+Year
+Graduate(1st) 14 41.18
+Attributes GrVadaruiaabtele(2snd) #of 7 Percenta2g0e.59 Mean S.D. Min Max
+Participants
+Doctorate 3 8.82
+Age - 34 100.00 22.76 1.5775 20 26
+Industrial engineering 25 73.53
+TechnologMy amleanagement 17 2 50.005.88
+Sex
+Female 17 50.00
+Chemical engineering 1 2.94
+UndeErgleracdtruoanteic(s2 nd) 2 1 5.88 2.94
+Major/De- Undergraduate(3rd) 2 5.88
+Economics 1 2.94
+partment Undergraduate(4th) 6 17.65
+Year EnginGereardiunagt esy(1ss ts)cience 14 1 41.182.94
+Early cGhrialdduhaoteod(2 nedd)ucation 7 1 20.592.94
+Doctorate 3 8.82
+Computer science 1 2.94
+IndustriOaltehnegrisn eering 25 1 73.532.94
+Technologymanagement 2 5.88
+Stress level 6 17 50.00
+Chemicalengineering 1 2.94
+Electr7o nics 1 16 2.9447.06
+Major/De-
+Econo8m ics 1 2 2.94 5.88
+partment
+Engineeringsysscience 1 2.94
+Earlychildhoodeducation 1 2.94
+The 95% confidence intervals for the mean values of TG_PRE, TG_POST, and CG are
+Computerscience 1 2.94
+shown in the intervalO pthleortss for each aspec1t of the qu2e.9s4tionnaire. The results showed that
+inSt rtehses lienvteelrval plots of S6tress level and Ps1y7chologica5l0 s.0e0nsitivity, TG_PRE, TG_POST, and
+CG showed a decreasin7g trend as shown16 in Figure4s7 .0160 and 11. However, there was no
+8 2 5.88
+decreasing trend in Life impact in Figure 12.
+Processes 2022, 10, 930 14 of 19
+FFigiguurere1 100..I nIntetervrvaallp plolottf oforrS Strteressssl elevveello offT TGG__PPRREE,,T TGG__PPOOSSTT,a, nanddC CGG..
+FFigiguurree1 111..I Inntteerrvvaallp plolottf foorrP Pssyycchhoolologgicicaalls seennssitiitvivitiytyo offT TGG__PPRREE,,T TGG__PPOOSSTT,,a annddC CGG..
+Figure 12. Interval plot for Life impact of TG_PRE, TG_POST, and CG.
+According to the questionnaire design, Life impact can be further divided into Be-
+havioral impact, Physical impact, Cognitive change, and “Social mode change”. The re-
+spective interval plots are shown in Figure 13.
+(a) Behavioral impact (b) Physical impact
+Processes 2022, 10, 930 14 of 19
+Processes 2022, 10, 930 14 of 19
+Figure 11. Interval plot for Psychological sensitivity of TG_PRE, TG_POST, and CG.
+Processes2022,10,930 14of19
+Figure 11. Interval plot for Psychological sensitivity of TG_PRE, TG_POST, and CG.
+Figure 12. Interval plot for Life impact of TG_PRE, TG_POST, and CG.
+FFigiguurere1 122..I nIntetervrvaallp plolottf oforrL Lifiefei mimppaacctto offT TGG__PPRREE,,T TGG__PPOOSSTT,a, nanddC CGG..
+According to the questionnaire design, Life impact can be further divided into Be-
+AAccccoordrdininggt otot hteheq uqeusetisotinonnaniraeirde edsiegsnig,nL,i fLeifime ipmacptaccat ncabne fbuer tfhuerrthdeirv iddievdidiendto iBnteoh aBve--
+havioral impact, Physical impact, Cognitive change, and “Social mode change”. The re-
+iohraavliiomrapla icmt,pPahcyts, iPcahlyismicpaal citm,Cpoagctn, iCtivoegnchitaivneg ec,haanndge“,S oancida l“mSoocdiealc hmaondgee ”c.hTahnegere”s. pTehctei vree-
+spective interval plots are shown in Figure 13.
+inspteercvtaivlep ilnottseravrael sphloowtsn arine sFhigouwrne 1in3 .Figure 13.
+(a) Behavioral impact (b) Physical impact
+Processes 2022, 10, 930 15 of 19
+(a) Behavioral impact (b) Physical impact
+(c) Cognitive change (d) Social mode change
+Figure 13. (a) Interval pFilgout rfeo1r3 .B(ae)hIantveirovarlapl loimtfopraBceth oavfi oTrGal_imPpRaEct, oTfGTG__PPORES,TT,G a_nPOdS CT,Gan;d (CbG) ;I(nbt)eIrnvtearvl apllpolot tfor
+for Physical impact ofP hTyGsi_caPlRimEp, acTtGof_TPGO_PSRTE, ,aTnGd_P OCSGT,; an(cd) CIGn;t(ecr)vInatle rpvalolpt loftofro rCCooggnniititviveech acnhgaenogfeT Go_fP RE,
+TG_PRE, TG_POST, anTdG C_PGO;S (Td,)a nIndtCeGrv;(adl) pInltoetr vfaolrp “loStofocria“Sl omcioaldmeo cdheacnhagneg”e ”ooff TTGG__PPRREE,T, GT_GPO_PSTO,aSnTd, CaGn.d
+CG.
+To examine the effectiveness of the experiment on both Stress level and Psychological
+sensitivity, further analysis was conducted. The paired sample t-test was used to examine
+the difference in mean questionnaire scores between the TG before and after the experi-
+ment. That is, TG_PRE and TG_POST. The independent sample t-test was used to examine
+the difference in mean questionnaire scores between TG_PRE and CG, and TG_POST and
+CG. The results show that there is a significant difference in Stress level between TG_PRE
+and CG, TG_PRE and TG_POST, and TG_POST and CG (p-value = 0.000). As for Psycho-
+logical sensitivity, there was no significant difference between TG_PRE and CG, TG_PRE
+and TG_POST, or TG_POST and CG.
+5.2. Discussion of Experiment Outcome
+The interval graphs (Figures 10 and 11) of stress level and psychological sensitivity
+illustrate that the counseling chatbot system helped reduce the stress level and psycho-
+logical sensitivity of the participants, which demonstrated the effectiveness of VRECC
+adoption in the experiment. The t-test results also showed that there was a significant
+reduction in the Stress level of participants after VRECC sessions (i.e., after the psycho-
+therapy counseling interventions), although the average stress score of the TG remained
+higher than the average score of the CG. Chen’s study showed that the more counseling
+sessions participants received, the higher their level of self-involvement (and improve-
+ment may follow) [54]. In Orlinsky’s study, it was further found that participants’ self-
+involvement was directly proportional to the effectiveness of the counseling interventions
+[55]. That is, although there was a decrease in participants’ stress, participating in only a
+few counseling sessions (in our experiments, only two sessions per subject) will not lower
+stress to the level of the CG’s, which was proven in our survey analytical results.
+However, according to the interval plot of Life impact, the intervention has not been
+effective on the subjects’ overall Life impact aspects (e.g., behavioral, physical, and cogni-
+tive measures). Judging from these aspects (behavioral, physical, and cognitive questions)
+of Life impact, the test results of people that had a higher pressure score before the exper-
+iment were not improving and even somewhat deteriorating after receiving VRECC treat-
+ment. Part of the reason might be the side effects of receiving psychotherapy. Treatment
+of anxiety and trauma is well-known for having the risk of temporarily worsening symp-
+toms [56]. As a result, some of the subjects might experience unpleasant side effects. Lo-
+renz has performed experiments that further investigated the specific side effects after
+receiving counseling. In the study, 14% of participants reported feeling ashamed of using
+therapy, and 6% of participants reported new symptoms emerging [57]. In addition, dis-
+closing thoughts and feelings to instant messengers was demonstrated to be not as effec-
+tive as face-to-face disclosure [58]. It can be inferred that VRECC might not be as helpful
+as receiving face-to-face therapy for these people; therefore, they did not improve their
+Processes2022,10,930 15of19
+ToexaminetheeffectivenessoftheexperimentonbothStresslevelandPsychological
+sensitivity,furtheranalysiswasconducted. Thepairedsamplet-testwasusedtoexamine
+thedifferenceinmeanquestionnairescoresbetweentheTGbeforeandaftertheexperiment.
+Thatis,TG_PREandTG_POST.Theindependentsamplet-testwasusedtoexaminethe
+differenceinmeanquestionnairescoresbetweenTG_PREandCG,andTG_POSTandCG.
+TheresultsshowthatthereisasignificantdifferenceinStresslevelbetweenTG_PREand
+CG,TG_PREandTG_POST,andTG_POSTandCG(p-value=0.000). AsforPsychological
+sensitivity, there was no significant difference between TG_PRE and CG, TG_PRE and
+TG_POST,orTG_POSTandCG.
+5.2. DiscussionofExperimentOutcome
+Theintervalgraphs(Figures10and11)ofstresslevelandpsychologicalsensitivityil-
+lustratethatthecounselingchatbotsystemhelpedreducethestresslevelandpsychological
+sensitivityoftheparticipants,whichdemonstratedtheeffectivenessofVRECCadoptionin
+theexperiment. Thet-testresultsalsoshowedthattherewasasignificantreductioninthe
+StresslevelofparticipantsafterVRECCsessions(i.e.,afterthepsychotherapycounseling
+interventions),althoughtheaveragestressscoreoftheTGremainedhigherthantheaver-
+agescoreoftheCG.Chen’sstudyshowedthatthemorecounselingsessionsparticipants
+received,thehighertheirlevelofself-involvement(andimprovementmayfollow)[54].
+InOrlinsky’sstudy,itwasfurtherfoundthatparticipants’self-involvementwasdirectly
+proportionaltotheeffectivenessofthecounselinginterventions[55]. Thatis, although
+therewasadecreaseinparticipants’stress,participatinginonlyafewcounselingsessions
+(inourexperiments,onlytwosessionspersubject)willnotlowerstresstothelevelofthe
+CG’s,whichwasproveninoursurveyanalyticalresults.
+However,accordingtotheintervalplotofLifeimpact,theinterventionhasnotbeen
+effectiveonthesubjects’overallLifeimpactaspects(e.g.,behavioral,physical,andcognitive
+measures). Judgingfromtheseaspects(behavioral,physical,andcognitivequestions)of
+Lifeimpact,thetestresultsofpeoplethathadahigherpressurescorebeforetheexperiment
+werenotimprovingandevensomewhatdeterioratingafterreceivingVRECCtreatment.
+Partofthereasonmightbethesideeffectsofreceivingpsychotherapy. Treatmentofanxiety
+andtraumaiswell-knownforhavingtheriskoftemporarilyworseningsymptoms[56].
+As a result, some of the subjects might experience unpleasant side effects. Lorenz has
+performedexperimentsthatfurtherinvestigatedthespecificsideeffectsafterreceiving
+counseling. Inthestudy,14%ofparticipantsreportedfeelingashamedofusingtherapy,
+and 6% of participants reported new symptoms emerging [57]. In addition, disclosing
+thoughtsandfeelingstoinstantmessengerswasdemonstratedtobenotaseffectiveasface-
+to-facedisclosure[58]. ItcanbeinferredthatVRECCmightnotbeashelpfulasreceiving
+face-to-facetherapyforthesepeople;therefore,theydidnotimprovetheirratinginthe
+questionnaire. Inaddition,accordingtoKim’sresearch,theagent’svoiceinpsychological
+counselingaffectstheeffectivenessofcounseling. Theresultsofthestudyshowedthat
+theresponseswitholdervoicesconvincedusersthatthecounselorwasmoreprofessional
+thanthosewithyoungervoices[59]. Theuseofyoungfemalevoicesinthisstudymay
+beoneofthereasonswhythesystemwasnoteffective,andfuturestudiesmaytryusing
+oldervoiceresponses. However,thereisnoresearchthatclearlyindicatestheeffectiveness
+ofcounselingfordifferentorientations,sotheineffectivenessofthethreeaspectsofLife
+impact(behavioral,physical,andcognitivequestions)inthisstudycannotbeexplained,
+andfollow-upstudiescanbeconductedinthisdirection.
+Concerningthechatbotimplementation,applyingtheemotionalunderstandingof
+wordsaspartoftheempathicresponsesintothechatbotdialogdatasetpresentsanimi-
+tationpatternclosertothein-personcounselingsessions. Theparticipants’stresslevels
+decreasedintheexperiment,reflectingthattheempathicconversationseffectivelycreateda
+supportiveenvironment. Anotherinterestingoutcomeisthattheirpsychologicalsensitivity
+droppedslightly(butnotsignificantly),whichindicatesapossibleneedformorecounsel-
+ingsessionsinvolvingarealcounselorin-personoronline(suchasourstudyinVRgroup
+Processes2022,10,930 16of19
+counseling[3])whensubjectsarenottotallyateaseinanimitatingsessionwithavirtual
+counselor(chatbot). Further,theremaybemoreelementsinthecounselinglanguage,such
+asthevariablesandeffectivenessofcertainemotionalandempathicvocabularyusages,to
+beconsideredinfurtherstudy.
+Lastly,theparticipantsofVRECCwholackedimprovementswerelargelymale(more
+thantwicethenumberoffemalesubjects). Thisfindingalsocoincideswithsomeresearch
+showingthatfemalepatientsgenerallyexperiencemoreeffectiveimprovementthanmale
+patientsduringinternet-basedcognitivebehaviortherapies[60]. Thiscouldimplythat
+women may be more willing to express their feelings and receive feedback than men.
+Again,futureresearchshouldbecarriedouttoinvestigatetheclinicaladoptionsofeffective
+VRECCtopatientswithdiversifieddemographicbackgrounds.
+6. Conclusions
+Sentimentanalysisandresponseprovidesanewwayforcounselingchatbotstohelp
+studentsreducestress. Virtualrealityallowstheusertobedistantortonotshowupin
+person, reducingthedifficultyofcounseling. Thestudyalloweduserstochatwiththe
+counselingchatbotandfeelempathizedwithandhealedbytheprocess,thusachieving
+thegoalofcounseling. ThestrengthoftheVRECCsystemisthatitallowsuserstoreceive
+counselingatanytimeandinanyplace,makingitaflexibleaidforcounselors.
+WecompletedtheinitialdevelopmentoftheVRECCsystem,includingthequestion-
+nairemodule,thecounselingchatbotmodule,andthechatroommodule,andconducted
+anexperimenttoverifytheeffectivenessofthesystem. Theexperimentexaminedwhether
+TGparticipantsexperiencedareductioninstressburdenafterVRECC.Twogroupswere
+createdfromthequestionnaireresultsof176subjectsusingmedianstresslevels: onegroup
+withhigherstresslevelsandtheotherwithlowerstresslevels. Fromthe101peopleonthe
+waitinglistwithhigherstresslevels,34wererandomlyselectedtoparticipateintheVRECC
+experimentasTG.Attheendoftheexperiment, theparticipantsintheTGwereasked
+tofilloutthesamestressquestionnaire. Accordingtotheresults,therewasasignificant
+improvement in stress level after VRECC, but it still could not be reduced to the same
+level as that of the CG. For Psychological sensitivity and Social impact, although there
+wasnosignificantdifference,therewasadecreasingtrend. However,therewasnoeffect
+inotheraspectsofLifeimpactsuchasBehavioral,Physical,andCognitivemeasures. In
+conclusion,theresultsofthisstudydemonstratetheeffectivenessofVRECCinreducing
+students’ stress levels. Despite the significant progress made in this study on student
+stressreduction,VRECCisstillfarfromsatisfactoryintermsofLifeimpact. Forfuture
+research,itisachallengetoexploretheeffectivenessofcounselingondifferentaspectsand
+tointroducemorecounselingmaterialsandtechniquesintotheVRECCsystem. Although
+VRECC shows promising effectiveness in counseling treatments, this study still has its
+limitations and requires further research. For some people, there is still a gap between
+counselingperformedbyaVRchatbotandhavingrealconversationswithacounselor. Itis
+alwaysachallengetoovercometheauthenticityissueofVRapplications,andVRECCis
+noexception. Welookforwardtofurtherexpandingthecounselingknowledgebaseand
+adoptingmoresophisticatedNLPlanguagemodelingtechniquestoimprovetherapist-like
+dialogsforhandlingdifferentpsychologicallyinducedscenarios. Inaddition,wewillcon-
+tinuetheresearcheffortsofimprovingarealisticVRenvironmentandpresentanauthentic
+psychotherapyexperienceforusers. Mostimportantly,wewillincreasetheeffectiveness
+ofadoptingVRECCasasupportingtoolfortheincreasingneedforstudentcounseling
+practicesoncampus. Furthermore,intheplanforacomprehensiveVRECCdevelopment,
+theadvancedmodulesandtheirseamlessintegrationoftheVRempathy-centricchatbot,
+virtual group counselling, and the psychological online survey will be the continuing
+researchfocus. Theintelligentandintegratedsystemwillserveasavirtualassistantto
+thetherapistswhowillleadthegrouptherapiesandperformcounselingvirtually(online),
+eliminatingconstraintssuchaslocation,scheduling,andprivacyissues. Theconversations
+andunderlyingemotionsofgrouptherapyparticipantsduringthesessioncanbesimul-
+Processes2022,10,930 17of19
+taneouslyinputintothesupportingempathychatbottosupportthetherapistwithbetter
+counselingdialogs.
+AuthorContributions:Conceptualization,A.J.C.T.andC.V.T.;methodology,A.J.C.T.,A.P.C.L.,C.V.T.
+and K.Y.K.H.; software, A.P.C.L. and K.L.K.T.; validation, C.V.T. and K.Y.K.H.; formal analysis,
+A.P.C.L.,K.Y.K.H.andA.J.C.T.;investigation,A.P.C.L.andK.L.K.T.;resources,A.J.C.T.;datacuration,
+A.P.C.L.andK.L.K.T.;writing—originaldraftpreparation,A.J.C.T.andA.P.C.L.;writing—review
+andediting,C.V.T.andK.Y.K.H.;visualization,A.P.C.L.andK.L.K.T.;supervision,A.J.C.T.;project
+administration,A.J.C.T.;fundingacquisition,A.J.C.T.andC.V.T.Allauthorshavereadandagreedto
+thepublishedversionofthemanuscript.
+Funding: ThisresearchwasfundedbytheMinistryofScienceandTechnologygrant(MOST-110-
+2221-E-007-113-MY3)andtheNationalTsingHuaUniversitymulti-disciplinaryresearchgrant.
+InstitutionalReviewBoardStatement: Thisclinicalexperimentdesignwasthoroughlyreviewed
+andapprovedbytheResearchEthicsCommitteeofNationalTsingHuaUniversity. Theapproval
+numberis11009HE102.
+InformedConsentStatement:Notapplicable.
+DataAvailabilityStatement:Notapplicable.
+ConflictsofInterest:Theauthorsdeclarenoconflictofinterest.
+References
+1. Cohen,M.StudentGuidetoSurvivingStressandAnxietyinCollege&Beyond.Availableonline:https://www.learnpsychology.
+org/student-stress-anxiety-guide/(accessedon10May2021).
+2. Ye,Y.X.; Dai,Y.J.; Xie,B.T.; Jian,D.K.SurveyofLifeChangesandMoodduringtheCOVID-19Epidemic. Availableonline:
+http://www.etmh.org/CustomPage/HtmlEditorPage.aspx?MId=1346&ML=3(accessedon20May2021).
+3. Lin,A.P.;Trappey,C.V.;Luan,C.-C.;Trappey,A.J.;Tu,K.L.ATestPlatformforManagingSchoolStressUsingaVirtualReality
+GroupChatbotCounselingSystem.Appl.Sci.2021,11,9071.[CrossRef]
+4. APA. Different Approaches to Psychotherapy. Available online: https://www.apa.org/topics/psychotherapy/approaches
+(accessedon8November2021).
+5. Summers,R.F.;Barber,J.P.PsychodynamicTherapy:AGuidetoEvidence-BasedPractice;GuilfordPress:NewYork,NY,USA,2010.
+6. Wolpe,J.ThePracticeofBehaviorTherapy;PergamonPress:Oxford,UK,1990.
+7. Beck,A.T.;Weishaar,M.Cognitivetherapy.InComprehensiveHandbookofCognitiveTherapy;Springer:Berlin/Heidelberg,Germany,
+1989;pp.21–36.
+8. Raskin,N.J.;Rogers,C.R.Person-CenteredTherapy;AmericanPsychologicalAssociation:Washington,DC,USA,2005.
+9. Craske,M.G.;Meuret,A.E.;Ritz,T.;Treanor,M.;Dour,H.J.Treatmentforanhedonia:Aneurosciencedrivenapproach.Depress.
+Anxiety2016,33,927–938.[CrossRef][PubMed]
+10. Byrd,D.R.; McKinney,K.J.Individual,Interpersonal,andInstitutionalLevelFactorsAssociatedWiththeMentalHealthof
+CollegeStudents.J.Am.Coll.Health2012,60,185–193.[CrossRef][PubMed]
+11. Diener,E.;Emmons,R.A.;Larsen,R.J.;Griffin,S.Thesatisfactionwithlifescale.J.Personal.Assess.1985,49,71–75.[CrossRef]
+12. Feldt,R.C.Developmentofabriefmeasureofcollegestress:Thecollegestudentstressscale.Psychol.Rep.2008,102,855–860.
+[CrossRef]
+13. Weinstein,L.;Laverghetta,A.Collegestudentstressandsatisfactionwithlife.Coll.Stud.J.2009,43,1161–1162.
+14. Karyotaki,E.;Cuijpers,P.;Albor,Y.;Alonso,J.;Auerbach,R.P.;Bantjes,J.;Bruffaerts,R.;Ebert,D.D.;Hasking,P.;Kiekens,G.
+Sourcesofstressandtheirassociationswithmentaldisordersamongcollegestudents:Resultsoftheworldhealthorganization
+worldmentalhealthsurveysinternationalcollegestudentinitiative.Front.Psychol.2020,11,1759.[CrossRef]
+15. Tonacci,A.;Dellabate,A.;Dieni,A.;Bachi,L.;Sansone,F.;Conte,R.;Billeci,L.CanMachineLearningPredictStressReduction
+BasedonWearableSensors’DataFollowingRelaxationatWorkplace?APilotStudy.Processes2020,8,448.[CrossRef]
+16. Ratanasiripong,P.; Sverduk,K.; Prince,J.; Hayashino,D.Biofeedbackandcounselingforstressandanxietyamongcollege
+students.J.Coll.Stud.Dev.2012,53,742–749.[CrossRef]
+17. Wyner,D.R.Pilotstudyofauniversitycounselingcenterstressmanagementprogramemployingmindfulnessandcompassion-
+basedrelaxationtrainingwithbiofeedback.Biofeedback2015,43,121–128.[CrossRef]
+18. Milligan,C.K.Yogaforstressmanagementprogramasacomplementaryalternativecounselingresourceinauniversitycounseling
+center.J.Coll.Couns.2006,9,181–187.[CrossRef]
+19. Lee,D.;Olson,E.A.;Locke,B.;Michelson,S.T.;Odes,E.Theeffectsofcollegecounselingservicesonacademicperformanceand
+retention.J.Coll.Stud.Dev.2009,50,305–319.[CrossRef]
+20. Wilson, S.B.; Mason, T.W.; Ewing, M.J.Evaluatingtheimpactofreceivinguniversity-basedcounselingservicesonstudent
+retention.J.Couns.Psychol.1997,44,316.[CrossRef]
+Processes2022,10,930 18of19
+21. Persky,S.Employingimmersivevirtualenvironmentsforinnovativeexperimentsinhealthcarecommunication.PatientEduc.
+Couns.2011,82,313–317.[CrossRef][PubMed]
+22. Zhang,Q.;Karunanithi,M.;Kang,C.ImmersiveAugmentedReality(IAmReal)—RemoteClinicalConsultation.InProceedings
+ofthe2019IEEEEMBSInternationalConferenceonBiomedical&HealthInformatics(BHI),Chicago, IL,USA,19–22May
+2019;pp.1–4.[CrossRef]
+23. Trappey,A.;Trappey,C.V.;Chang,C.-M.;Tsai,M.-C.;Kuo,R.R.;Lin,A.P.Virtualrealityexposuretherapyfordrivingphobia
+disorder(2):Systemrefinementandverification.Appl.Sci.2021,11,347.[CrossRef]
+24. Czech,O.;Wrzeciono,A.;Rutkowska,A.;Guzik,A.;Kiper,P.;Rutkowski,S.VirtualRealityInterventionsforNeedle-Related
+ProceduralPain,FearandAnxiety—ASystematicReviewandMeta-Analysis.J.Clin.Med.2021,10,3248.[CrossRef]
+25. Piech,J.;Czernicki,K.VirtualRealityRehabilitationandExergames—PhysicalandPsychologicalImpactonFallPrevention
+amongtheElderly—ALiteratureReview.Appl.Sci.2021,11,4098.[CrossRef]
+26. Darcy,A.;Daniels,J.;Salinger,D.;Wicks,P.;Robinson,A.EvidenceofHuman-LevelBondsEstablishedWithaDigitalConversa-
+tionalAgent:Cross-sectional,RetrospectiveObservationalStudy.JMIRForm.Res.2021,5,e27868.[CrossRef]
+27. Fitzpatrick,K.K.;Darcy,A.;Vierhile,M.DeliveringCognitiveBehaviorTherapytoYoungAdultsWithSymptomsofDepression
+andAnxietyUsingaFullyAutomatedConversationalAgent(Woebot):ARandomizedControlledTrial.JMIRMent.Health2017,
+4,e19.[CrossRef]
+28. Minjeong,K.AStudyofChatbotPersonalitybasedonthePurposesofChatbot.J.KoreaContentsAssoc.2018,18,319–329.
+29. Yin,J.;Chen,Z.;Zhou,K.;Yu,C.ADeepLearningBasedChatbotforCampusPsychologicalTherapy.arXiv2019,arXiv:1910.06707.
+30. Tsaramirsis, G.; Buhari, S.M.; Al-Shammari, K.O.; Ghazi, S.; Nazmudeen, M.S.; Tsaramirsis, K. Towards simulation of the
+classroomlearningexperience:Virtualrealityapproach.InProceedingsofthe20163rdInternationalConferenceonComputing
+forSustainableGlobalDevelopment(INDIACom),NewDelhi,India,16–18March2016;pp.1343–1346.
+31. Stanica,I.;Dascalu,M.;Bodea,C.N.;Moldoveanu,A.D.B.VRJobInterviewSimulator:WhereVirtualRealityMeetsArtificial
+IntelligenceforEducation.InProceedingsofthe2018ZoomingInnovationinConsumerTechnologiesConference(ZINC),Novi
+Sad,Serbia,30–31May2018;pp.9–12.
+32. DepartmentofHealth, TheGovernmentoftheHongKongAdministrativeRegion. PsychosocialHealth. Availableonline:
+https://www.studenthealth.gov.hk/tc_chi/health/health_ph/health_ph_stress.html(accessedon21April2022).
+33. Schneiderman,N.;Ironson,G.;Siegel,S.D.Stressandhealth:Psychological,behavioral,andbiologicaldeterminants.Annu.Rev.
+Clin.Psychol.2005,1,607–628.[CrossRef][PubMed]
+34. Scott,S.B.;Graham-Engeland,J.E.;Engeland,C.G.;Smyth,J.M.;Almeida,D.M.;Katz,M.J.;Lipton,R.B.;Mogle,J.A.;Munoz,E.;
+Ram,N.;etal.TheEffectsofStressonCognitiveAging,PhysiologyandEmotion(ESCAPE)Project.BMCPsychiatry2015,15,146.
+[CrossRef][PubMed]
+35. Marks,H.StressSymptoms.Availableonline:https://www.webmd.com/balance/stress-management/stress-symptoms-effects_
+of-stress-on-the-body(accessedon21April2022).
+36. Fan,H.-C.ExplanationofFan’sStressScale.Wu-NanBookInc.(Publisher):Taipei,Taiwan.Availableonline:http://ocw.lib.ntnu.
+edu.tw/course/view.php?id=276(accessedon21April2022).
+37. Friedman,W.J.TypesofStressandTheirSymptoms.Availableonline:https://www.mentalhelp.net/blogs/types-of-stress-and-
+their-symptoms/(accessedon21April2022).
+38. QuestionPro.18StudentStressSurveyQuestionsForQuestionnaire+Template.Availableonline:https://www.questionpro.
+com/survey-templates/student-stress/(accessedon13April2021).
+39. Corey,G.TheoriesandPracticeofCounseling&Psychotherapy,10thed.;Brooks/Cole:SaltLakeCity,UT,USA,2020.
+40. Ho,P.C.-C.;Lin,Y.-H.TheoryandPracticeofCounselingandPsychotherapy;Wu-NanBookInc.(Publisher):Tappei,Taiwan,2013.
+41. CloudComputingServices.Availableonline:https://cloud.google.com/(accessedon19April2022).
+42. AutomaticSpeechRecognition.Availableonline:https://cloud.google.com/speech-to-text(accessedon19April2022).
+43. LifelikeSpeechSynthesis.Availableonline:https://cloud.google.com/text-to-speech(accessedon19April2022).
+44. RASA.Availableonline:https://rasa.com/(accessedon19April2022).
+45. Industrial-StrengthNaturalLanguageProcessingINPYTHON.Availableonline:https://spacy.io/(accessedon19April2022).
+46. CounselChat.Availableonline:https://counselchat.com/(accessedon28November2021).
+47. Bertagnolli,N.CounselChat:BootstrappingHigh-QualityTherapyData.Availableonline:https://towardsdatascience.com/
+counsel-chat-bootstrapping-high-quality-therapy-data-971b419f33da(accessedon8August2021).
+48. NRCWord-EmotionAssociationLexicon.Availableonline:https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm
+(accessedon8August2021).
+49. Khodarahimi,S.;Rasti,A.;Khajehie,M.;Sattar,R.Students’MentalHealth: PersonalandUniversityDeterminants. Online
+Submiss.2009,6,31–38.
+50. Pekrun,R.;Goetz,T.;Perry,R.P.AchievementEmotionsQuestionnaire(AEQ).User’sManual;UnpublishedManuscript;Universityof
+Munich:Munich,Germany,2005.
+51. Russell,J.A.Acircumplexmodelofaffect.J.Personal.Soc.Psychol.1980,39,1161.[CrossRef]
+52. Liu,Z.;Xu,A.;Guo,Y.;Mahmud,J.;Liu,H.;Akkiraju,R.Seemo:AComputationalApproachtoSeeEmotions.InProceedings
+ofthe2018CHIConferenceonHumanFactorsinComputingSystems,Montreal,QC,Canada,21–27April2018; pp. 1–12.
+[CrossRef]
+Processes2022,10,930 19of19
+53. Iacobucci,D.; Posavac,S.S.; Kardes,F.R.; Schneider,M.J.; Popovich,D.L.Themediansplit: Robust,refined,andrevived. J.
+Consum.Psychol.2015,25,690–704.[CrossRef]
+54. Chen, P.-H. Effectiveness of Counseling Skill Training and Relationships Amon Level of Counseling Skill, Helpee’s Self-
+engagementandCounselingOutcome.Bull.Educ.Psychol.1991,24,117–143.
+55. Orlinsky,D.E.;Howard,K.J.Processandoutcomeinpsychotherapy.InHandbookofPsychotherapyandBehaviorChange;JohnWiley
+&Sons,Inc:Hoboken,NJ,USA,1986.
+56. Barlow, D.AnxietyandItsDisorders: TheNatureandTreatmentofAnxietyandPanic, 2nded.; GuilfordPress: NewYork, NY,
+USA,2002.
+57. Lorenz,T.K.Predictorsandimpactofpsychotherapysideeffectsinyoungadults. Couns. Psychother. Res. 2021,21,237–243.
+[CrossRef]
+58. Iacovelli,A.M.;Johnson,C.Disclosurethroughface-to-faceandinstantmessagingmodalities:Psychologicalandphysiological
+effects.J.Soc.Clin.Psychol.2012,31,225–250.[CrossRef]
+59. Kim,H.C.;Cha,M.C.;Ji,Y.G.TheImpactofanAgent’sVoiceinPsychologicalCounseling:SessionEvaluationandCounselor
+Rating.Appl.Sci.2021,11,2893.[CrossRef]
+60. Spek,V.;Nyklícˇek,I.;Cuijpers,P.;Pop,V.Predictorsofoutcomeofgroupandinternet-basedcognitivebehaviortherapy.J.Affect.
+Disord.2008,105,137–145.[CrossRef][PubMed]
