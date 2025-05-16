@@ -1,3 +1,27 @@
+def generate_search_prompt(data):
+    prompt = (
+        """You are a medical expert.\n"""
+        f"""You are going to write a meta-analysis with the title "{data['title']}".\n"""
+        f"""Generate a search query to find relevant papers in {data['platform']}.\n"""
+        """Your search query should be broad and designed to retrieve a significant number of papers, while being relevant and adhere to the given inclusion and exclusion criteria.\n"""
+
+        """Inclusion and exclusion criteria:\n"""
+        f"""{data['criteria']}\n\n"""
+
+        """Only return the search query."""
+    )
+
+    return prompt
+
+def generate_refine_search_prompt(num):
+    prompt = (
+        f"""The search result only has {num} papers.\n"""
+        """Please refine your search query so that it is broad enough to search for a significant number of papers.\n"""
+        """Only return the search query."""
+    )
+
+    return prompt
+
 def generate_b2k_prompt(data):
     prompt = (
         "You are a medical expert.\n"
@@ -14,6 +38,26 @@ def generate_b2k_prompt(data):
         f"{data['abstract']}\n\n"
 
         f"""Only return "True" or "False".\n"""
+    )
+
+    return prompt
+
+def genereate_char_prompt(data):
+    prompt = (
+        "You are a medical expert."
+        f"""You are going to write a meta-analysis with the title "{data['title']}"\n\n"""
+
+        "You are going to make the Characteristics Table for the meta-analysis.\n"
+        "You will be given the content of an included study and the columns you need to fill in.\n"
+        "Extract the relevant information based on the given content.\n"
+        f"Columns in the Characteristics Table: {data['columns']}\n\n"
+        
+        "There are some things you need to note:\n"
+        """1. You are only allowed to fill in the content of each cell separated by "|" without any explanation.\n"""
+        "2. Your result should only include the summarized result, and should not include the column title.\n"
+        "3. If you cannot find the result in the given string, just return NR.\n"
+        "4. Some results may need to be calculated from the information.\n"
+        """5. You should focus on the "Methods" and "Results" section.\n"""
     )
 
     return prompt
@@ -69,6 +113,33 @@ def generate_qa_prompt(data):
     )
 
     return prompt
+
+def generate_extract_section_prompt(data):
+    return [
+        {
+            'role': "system",
+            'content': (
+                "You are a helpful assistant.\n"
+                f"You will be given an article, please help me extract the \"{data['section']}\" section.\n"
+                "You must not modify the content."
+            )
+        },
+        {
+            "role": "user",
+            "content": data['full_text'],
+        }
+    ]
+
+def generate_summary_prompt(data):
+    return (
+        'You are a medical expert.\n'
+        f"You are writing a meta-analysis with the title {data['ma_title']}\n."
+        'You are going to conduct GRADE assessment in the meta-analysis and you are reviewing one of the included studies.\n'
+        'Summarize the key points from the given study based on its title, abstract and discussion, which will be used for GRADE assessment.\n\n'
+        f"Title: {data['title']}\n"
+        f"Abstract: {data['abstract']}\n"
+        f"Discussion: {data['discussion']}"
+    )
 
 def generate_grade_prompt(data):
     tiab_list = []
