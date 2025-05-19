@@ -14,6 +14,8 @@ evaluate_b2k(dir)
 # evaluate_qa(dir)
 # predict_grade(model, dir)
 # evaluate_grade(dir)
+# predict_fr(model, dir)
+# evaluate_fr(dir)
 
 from evaluation.find_ratio import generate_prediction, llamaIndex_default
 from prediction.find_ratio import evaluate_result

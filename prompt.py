@@ -170,3 +170,29 @@ def generate_grade_prompt(data):
     )
 
     return prompt
+
+def generate_fr_prompt(data):
+    prompt = (
+        "You are a medical expert that excels in extracting context specific statistic odds ratio (OR), risk ratio (RR), hazard ratio (HR) from clinical literatures. The derived ratios should be strictly selected under the analytic goal of each specified medical meta-analysis. Find the best matching ratio that related to the clinical aim of the forest_plot_title and meta_abstract. Detailly check the Abstract, Methods, Results and Conclusion and don't make up any value as the output. \n\n"
+
+        "Information Provided: \n"
+        f"(1) Meta-Analysis Abstract: \n"
+        f"{data['meta_abstract']} \n\n"
+
+        f"(2) Forest Plot Table Title: \n"
+        f"{data['forest_plot_title']} \n\n"
+
+        f"(3) Additional Information: \n"
+        f"{data['additional_information']} \n\n"
+
+        f"(4) Key Reference Full Text: \n"
+        f"{data['key_full_text']} \n\n"
+
+        "To enable the best alignment between extracted ratio and the specific clinical aim. You are strictly regulated by the following principles: \n"
+        "1: Extract the ratio as numeric form without additional commentary or explanation. \n"
+        "2: You should only return value that is from the key reference. \n"
+        "3: If no relevant ratio is found, return the most closely related numerical value available from the provided content and the output should be a single, standalone number e.g 1.50, 2.00, 3.52, etc. \n"
+        "4: No additional text should be included in the output. \n"
+    )
+
+    return prompt

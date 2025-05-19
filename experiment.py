@@ -6,3 +6,5 @@ from prediction.qa import predict_qa
 from evaluation.qa import evaluate_qa
 from prediction.grade import predict_grade
 from evaluation.grade import evaluate_grade
+from prediction.fr import predict_fr
+from evaluation.fr import evaluate_fr
