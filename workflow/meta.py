@@ -6,7 +6,8 @@ from prompt import (
     generate_b2k_prompt,
     generate_qa_prompt,
     generate_cc_prompt,
-    generate_grade_prompt
+    generate_grade_prompt,
+    generate_fr_prompt
 )
 from workflow.sr import (
     search_pubmed_pmids,
@@ -15,6 +16,7 @@ from workflow.sr import (
 )
 from workflow.char import extract_characteristics
 from workflow.qa import RubricsColumn
+from workflow.fr import extract_ratio
 from workflow.grade import (
     format_grade_characteristics,
     format_quality_table,
@@ -328,7 +330,7 @@ class MetaAnalysis():
                 
     def find_ratio(self, model: Bot):
         for subgroup in self.subgroups:
-            subgroup.set_ratio([1.1])
+            subgroup.set_ratio(extract_ratio(model, subgroup))
 
     def grade_assessment(self, model: Bot):
         for subgroup in self.subgroups:
