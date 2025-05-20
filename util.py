@@ -115,4 +115,3 @@ def fixed_effects_pooled_estimate(effect_sizes, weights):
         
     pooled_estimate = np.sum(weights * effect_sizes) / sum_weights
     return pooled_estimate
-

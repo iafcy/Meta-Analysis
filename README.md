@@ -36,6 +36,7 @@ pip install -r requirements.txt
 │   ├── b2k_test.json     # Base to Key
 │   ├── qa_test.json      # Quality Assessment
 │   ├── cc_test.json      # Characteristics Classification
+│   ├── fr_test.json      # Find Ratio
 │   └── grade_test.json   # GRADE
 ├── evaluation            # For calculating performance
 ├── prediction            # For generating predictions
@@ -98,6 +99,15 @@ dir = 'test'
 
 predict_cc(model, dir) # predictions saved in ./test/cc.json
 evaluate_cc(dir) # performance will be printed and saved to ./test/cc.json
+
+```
+##### Find Ratio
+```python
+from experiment import *
+dir = 'test'
+
+predict_fr(model, dir) # predictions saved in ./test/fr.json
+evaluate_fr(dir) # performance will be printed and saved to ./test/fr.json
 ```
 
 ##### GRADE
